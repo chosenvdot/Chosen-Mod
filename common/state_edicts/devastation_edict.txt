@@ -1,0 +1,28 @@
+edict_devastation_edict = {
+	potential = {
+		always = yes
+	}
+	
+	allow = {
+		NOT = {
+			FROM = {
+				any_province_in_state  = {
+					has_province_modifier = PR_manpower_edict_province
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		local_monthly_devastation = -0.25
+		local_autonomy = -0.025
+	}
+	
+	color = {  46 187 508  }
+	
+	
+	ai_will_do = {
+		factor = 0
+	}
+	
+}

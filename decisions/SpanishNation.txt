@@ -1,0 +1,79 @@
+country_decisions = {
+
+	spanish_nation = {
+		major = yes
+		potential = {
+			tag = CAS
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = aragon_area
+				area = valencia_area
+				area = catalonia_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = SPA }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			aragon_area = { type = all country_or_non_sovereign_subject_holds = ROOT }
+			valencia_area = { type = all country_or_non_sovereign_subject_holds = ROOT  }
+			catalonia_area = { type = all country_or_non_sovereign_subject_holds = ROOT  }
+		}
+		effect = {
+			change_tag = SPA
+			if = {
+				limit = {
+					NOT = { 
+						AND = {
+							has_dlc = "Golden Century" 
+							OR = {
+								tag = ARA
+								tag = CAT
+								tag = VAL
+							}
+						}
+					}
+				}
+				swap_non_generic_missions = yes
+			}
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_government_reform = gc_imperial_spain_reform
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			custom_tooltip = spanish_unification_effect.tooltip
+			hidden_effect = {
+				iberia_region = {
+					limit = {
+						NOT = { area = alentejo_area }
+						NOT = { area = beieras_area }
+					}
+					add_permanent_claim = SPA
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_spain_flag
+			add_prestige = 25
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

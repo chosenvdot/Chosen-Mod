@@ -1,0 +1,488 @@
+gc_growing_economy = {
+	build_cost = -0.10
+	build_time = -0.25
+	great_project_upgrade_cost = -0.25
+}
+
+gc_habsburg_bohemia = {
+	local_development_cost = -0.10
+}
+
+gc_defeated_byzantine_empire = {
+	legitimacy = 1
+	global_tax_modifier = 0.15
+}
+
+hungary_unleashed = {
+	ae_impact = -0.2
+	province_warscore_cost = -0.1
+}
+
+rule_britannia = {
+	prestige = 1
+	legitimacy = 1
+	republican_tradition = 0.6
+	devotion = 1
+	global_ship_recruit_speed = -0.25
+	global_ship_cost = -0.25
+	heavy_ship_power = 0.1
+}
+
+burgundy_subjects_placated = {
+	reduced_liberty_desire = 50
+	vassal_forcelimit_bonus = 1
+}
+
+succesful_bid_for_imperial_crown = {
+	ae_impact = -0.2
+	province_warscore_cost = -0.1
+}
+
+norman_resurgence = {
+	#ae_impact = -0.3
+	province_warscore_cost = -0.1
+	land_morale = 0.1
+}
+
+silk_road_restored = {
+	trade_goods_size_modifier = 0.1
+}
+
+hab_victory_over_ottomans = {
+	global_manpower_modifier = 0.2
+}
+
+hun_bulwark_of_christianity = {
+	global_manpower_modifier = 0.2
+}
+
+isles_secured = {
+	land_morale = 0.1
+}
+
+fra_into_germany = {
+	land_morale = 0.1
+}
+
+grand_armee = {
+	land_forcelimit_modifier = 0.2
+}
+	
+angevin_supremacy = {
+	global_manpower_modifier = 0.25
+}
+
+united_scandinavia = {
+	land_morale = 0.10
+}
+
+swedish_empire = {
+	land_morale = 0.10
+}
+
+kaiser_of_europe = {
+	governing_capacity_modifier = 0.2
+	manpower_recovery_speed = 0.2
+}
+
+third_rome = {
+	land_forcelimit_modifier = 0.20
+}
+
+mor_barbary_pirate_coast = {
+	production_efficiency = 0.2
+}
+
+adler_von_lubeck_modifier = {
+	naval_morale = 0.1
+	naval_maintenance_modifier = -0.10
+}
+
+mam_african_market = {
+	merchants = 1
+	trade_steering = 0.33
+}
+
+mam_slave_soldiers = {
+	local_manpower_modifier = 0.33
+}
+
+ethiopian_integration = {
+	local_unrest = -2
+	local_autonomy = -0.1
+}
+
+gc_anatolia_eyalet = {
+	cavalry_cost = -0.1
+	manpower_recovery_speed = 0.2
+}
+
+gc_at_the_gates_of_europe = {
+	prestige = 1
+	manpower_recovery_speed = 0.2
+	#interest = -0.25
+	build_cost = -0.05
+}
+
+gc_mediterranean_ambition = {
+	trade_efficiency = 0.10
+}
+
+gc_beyliks_subjugated = {
+	manpower_recovery_speed = 0.2
+	#discipline = 0.025
+	cavalry_cost = -0.1
+	#land_forcelimit_modifier = 0.10
+}
+
+gc_mlo_lombard_renaissance = {
+	development_cost = -0.05
+	build_cost = -0.1
+}
+
+gc_hun_strong_economy = {
+	build_time = -0.25
+	build_cost = -0.1
+	great_project_upgrade_cost = -0.25
+}
+
+gc_bur_realm_united_mod = {
+	local_production_efficiency = 0.2
+	local_autonomy = -0.05
+	trade_goods_size_modifier = 0.2
+}
+
+pap_papal_swiss_guard = {
+	mercenary_discipline = 0.05
+}
+
+mlo_the_swiss_mercs = {
+	mercenary_cost = -0.1
+	mercenary_discipline = 0.05
+}
+
+prester_john_discovered = {
+	infantry_power = 0.15
+}
+
+cape_trade_established = {
+	trade_efficiency = 0.05
+}
+
+france_united = {
+	fire_damage = 0.10
+}
+lowland_conquest = {
+	artillery_fire = 0.5
+	production_efficiency = 0.2
+}
+caliphate_proclaimed = {
+	fire_damage = 0.10
+}	
+
+gecko_cannon_foundries = {
+	artillery_power = 0.05
+	army_tradition = 0.25
+}
+
+gecko_mysorean_rockets = {
+	artillery_fire = 0.25
+}
+
+gecko_cannon_institute = {
+	mil_tech_cost_modifier = -0.1
+	idea_cost = -0.05
+}
+
+gecko_handheld_rockets = {
+	infantry_fire = 0.25
+}
+
+gecko_mysore_encourage_production = {
+	production_efficiency = 0.10
+}
+
+gecko_mysore_expand_ports = {
+	global_trade_power = 0.1
+}
+
+gecko_mysore_navy = {
+	naval_morale = 0.1
+}
+
+gecko_mysore_industrial_expansion = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+gecko_south_indian_empire = {
+	prestige = 1
+	governing_capacity_modifier = 0.10
+}
+
+gecko_entrepreneural_spirit = {
+	trade_efficiency = 0.1
+}
+
+gecko_marathas_subdued = {
+	cavalry_power = 0.1
+	cavalry_cost = -0.1
+}
+
+gc_ven_mercenaries_paid_with_land = {
+	mercenary_cost = -0.1
+	merc_maintenance_modifier = -0.2
+	mercenary_discipline = 0.05
+}
+
+gc_ven_venture_captain_recruitment = {
+	land_forcelimit_modifier = 0.10
+	free_leader_pool = 3
+}
+
+gc_ven_genoese_humiliation = {
+	trade_steering = 0.2
+	trade_efficiency = 0.1
+}
+
+gc_ven_urban_renewal = {
+	development_cost = -0.05
+}
+
+gc_ven_la_francocrazia = {
+	naval_morale = 0.1
+	trade_efficiency = 0.05
+}
+
+bng_sufi_mystic_settlers = {
+	build_cost = -0.15
+	religious_unity = 0.1
+}
+
+bedouins_pacified = {
+	shock_damage = 0.1
+}
+
+spa_rb_italian_ambition_mod = {
+	artillery_fire = 0.5
+	galley_power = 0.25
+}
+
+#Country modifier
+son_professional_songhaian_army = {	#As long as the ruler lives
+	army_tradition = 0.5
+	discipline = 0.025
+	#yearly_army_professionalism = 0.005
+	manpower_recovery_speed = -0.1
+}
+
+#Country modifier
+son_focus_on_professional_armies = {	#As long as the ruler lives, renewable through decision
+	army_tradition = 0.5
+	discipline = 0.025
+	#yearly_army_professionalism = 0.005
+	manpower_recovery_speed = -0.1
+}
+
+empowered_junkers = {
+	monthly_militarized_society = 0.02
+}
+
+turks_defeated = {
+	global_monthly_devastation = -1
+	global_tax_modifier = 0.1
+	reduced_liberty_desire = 25
+	inflation_reduction = 0.5
+}
+
+mamluks_subjugated = {
+	global_monthly_devastation = -1
+	inflation_reduction = 0.5
+	reduced_liberty_desire = 25
+	global_tax_modifier = 0.1
+}
+
+hun_supreme_black_army = {
+	mercenary_discipline = 0.05
+	core_creation = -0.1
+}
+
+gc_investment = {
+	build_cost = -0.10
+	build_time = -0.25
+	great_project_upgrade_cost = -0.25
+}
+
+increased_janissary_recruitment = {
+	local_manpower_modifier = 0.2
+}
+
+baghdad_restored = {
+	all_power_cost = -0.02
+}
+
+# Mongol missions
+
+mongol_religion_unity = {
+	global_tax_modifier = 0.1
+}
+
+tibetan_missionaries = {
+	tolerance_heathen = 3
+	missionary_maintenance_cost = -0.5
+}
+gc_mongol_rule_tibet = {
+	local_autonomy = -0.05
+	local_development_cost = -0.25
+}
+
+pax_mongolica = {
+	global_unrest = -3
+	stability_cost_modifier = -0.15
+	discipline = 0.05
+}
+
+mongol_european_conquest = {
+	province_warscore_cost = -0.15
+}
+
+genghis_khan_reborn = {
+	prestige = 1
+	land_morale = 0.05
+}
+
+reorganized_mongols = {
+	num_accepted_cultures = 3
+}
+
+defense_of_france = {
+	land_morale = 0.05
+	discipline = 0.05
+	land_forcelimit_modifier = 0.1
+	merc_maintenance_modifier = -0.5
+	mercenary_cost = -0.25
+	mercenary_manpower = 0.5
+}
+
+defense_of_burgundy = {
+	land_morale = 0.05
+	discipline = 0.05
+	land_forcelimit_modifier = 0.1
+	merc_maintenance_modifier = -0.5
+	mercenary_cost = -0.25
+	mercenary_manpower = 0.5
+	interest = -0.5
+	global_tax_modifier = 0.1
+	defensiveness = 0.2
+}
+
+defense_of_anatolia = {
+	land_morale = 0.05
+	discipline = 0.05
+	land_forcelimit_modifier = 0.5
+	merc_maintenance_modifier = -0.25
+	mercenary_cost = -0.25
+	mercenary_manpower = 0.5
+	defensiveness = 0.5
+	interest = -0.5
+	global_tax_modifier = 0.1
+	global_monthly_devastation = -5
+}	
+
+eth_coptic_offense = {
+	land_morale = 0.05
+}
+
+eth_increased_gold_mining = {
+	trade_goods_size = 1
+}
+
+zan_conversion_of_fetishist = {
+	land_morale = 0.1
+}
+
+berber_fury = {
+	land_morale = 0.1
+}
+
+berber_fury_2 = {
+	province_warscore_cost = -0.35
+}
+
+mor_privateering = {
+	production_efficiency = 0.15
+}
+
+nap_italian_wars_modifier = {
+	infantry_power = 0.1
+}
+
+naples_dotf_modifier = {
+	manpower_in_true_faith_provinces = 0.1
+}
+
+nap_barbary_pirates = {
+	naval_morale = 0.1
+}
+
+nap_liberty_desire = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+norman_legacy = {
+	cavalry_cost = -0.10
+	cavalry_power = 0.05
+}
+
+royal_hungary = {
+	land_morale = 0.1
+}
+
+gc_yemeni_trade_modifier = {
+	trade_efficiency = 0.1
+}
+
+consolidated_russia = {
+	trade_value_modifier = 0.1
+}
+
+iberian_trade = {
+	trade_value_modifier = 0.1
+}
+
+mongol_consolidation = {
+	trade_value_modifier = 0.1
+}
+
+lowland_integration = {
+	diplomatic_annexation_cost = -0.2
+}
+
+swabian_trade  = {
+	trade_value_modifier = 0.2
+}
+
+turkmen_recruitment = {
+	shock_damage = 0.1
+	cavalry_cost = -0.1
+}
+
+gc_mecca_agreement = {
+	land_morale = 0.1
+}
+
+gc_nap_italian_wars_modifier = {
+	mercenary_discipline = 0.05
+}
+
+gc_Letat_cest_moi = {
+	global_manpower_modifier = 0.1
+}
+
+gc_mug_formation_hope = {
+	land_morale = 0.05
+}
+
+gc_west_african_integration = {
+	 	num_accepted_cultures = 1
+		culture_conversion_cost = -0.1
+}

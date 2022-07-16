@@ -1,0 +1,1365 @@
+# INSTRUCTIONS:
+#
+# condition				A diplomatic action can have any number of condition blocks, each with its own
+#						tooltip, potential and allow section
+#
+# 	tooltip					Sets a custom text string similar to the hardcoded limits
+# 							If no tooltip is scripted, the tooltip for the actual trigger will be shown
+#							Note that the custom tooltip is only shown if the allow trigger is NOT met
+#
+# 	potential				Determines if the trigger is applicable or not
+# 	allow					Determines if the action is valid or not
+#
+# effect				A diplomatic action can only have one effect block
+
+# ROOT					actor
+# FROM					target
+
+########################################
+# DIPLOMATIC ACTIONS
+########################################
+# royal_marriage
+# declarewar
+# requestpeace
+# support_independence_action
+# allianceaction
+# embargoaction
+# annexationaction
+# integrationaction
+# vassalaction
+# guaranteeaction
+# warningaction
+# threaten_war
+# milaccess
+# fleet_access
+# offer_fleet_access
+# offermilaccess
+# insultaction
+# giftaction
+# claimaction
+# callaction
+# offerloan
+# warsubsidy
+# sellprov
+# imperial_relations_action
+# imperial_realm_war_action
+# religious_unity_action
+# grant_electorate
+# remove_electorate
+# grant_freecity
+# remove_freecity
+# demand_unlawful_territory_action
+# call_crusade_action
+# excommunicate_action
+# enforce_peace
+# improve_relation
+# fabricate_claim
+# justify_trade_conflict
+# transfer_trade_power
+# infiltrate_administration
+# sabotage_reputation
+# support_rebels
+# sow_discontent
+# agitate_for_liberty
+# form_coalition
+# request_to_join_federation
+# invite_to_federation
+# support_heir
+# break_marriage
+# designate_march
+# ask_for_march
+# sell_ships_action
+# abandon_union
+# takeondebt
+# influence_nation
+# claim_states
+# steer_trade
+# stealmap
+# spy_network
+# invite_to_trade_league
+# request_to_join_trade_league
+# sharemap
+# intervene_in_war
+# break_alliance
+# tributary_state_action
+# ask_for_tributary_state_action
+# knowledge_sharing
+
+
+tributary_state_action = {
+	condition = {
+		potential = {
+			ROOT = {
+				ai = yes
+			}
+		}
+		allow = {
+			always = no
+		}	
+	}
+
+
+}
+
+#callaction = {
+#	condition = {
+#			tooltip = mid_war
+#				potential = {
+#					ai = no
+#				}
+#				allow = {
+#					ROOT = {
+#							war_score = -49
+#							}
+#					}
+##				}
+#}
+
+declarewar = {
+	condition = {
+		tooltip = h_tooltip_cn_declarewar
+		potential = {
+			is_colonial_nation = yes
+		}
+		allow = {
+			FROM = { same_continent = ROOT }
+		}
+	}
+	condition = {
+		tooltip = gecko_stability
+		potential = {
+		}
+		allow = {
+			stability = 0
+		}
+	}
+	condition = {
+		tooltip = gc_may_not_declare_war_yet
+		potential = {
+			ROOT = { ai = no }
+			NOT = { is_year = 1450 }
+		}
+		allow = {
+				FROM = { 
+					NOT = {
+						OR = {
+							ai = no
+							is_subject_of = FROM
+						}
+					
+					}
+				}
+		}
+	}	
+	#condition = {
+	#	tooltip = gc_may_not_declare_war_yet_empswi
+	#	potential = {
+	#		is_emperor = yes
+	#		NOT = { is_year = 1465 }
+	#		ai = no
+	#	}
+	#	allow = {
+	#			FROM = { 
+	#				NOT = {
+	#					OR = {
+	#						tag = SWI
+	#						is_subject_of = SWI
+	#					}
+	#				}
+	#			}
+	#	}
+	#}
+	#condition = {
+	#	tooltip = gc_may_not_declare_war_yet_brahsa
+	#	potential = {
+	#		OR = { 
+	#			 tag = HSA
+	#			 tag = BRA
+	#		}
+	#		NOT = { is_year = 1460 }
+	#		ai = no
+	#	}
+	#	allow = {
+	#		FROM = {
+	#			NOT = {
+	#				OR = {
+	#					tag = BRA
+	#					tag = HSA 
+	#					is_subject_of = BRA
+	#					is_subject_of = HSA
+	#				}
+	#			}
+	#		}
+	#	}
+	#}	
+	#condition = {
+	#	tooltip = gc_may_not_declare_war_yet_polcrimos
+	#	potential = {
+	#		OR = { 
+	#			 tag = POL
+	#			 tag = MOS
+	#			 tag = CRI
+	#		}
+	#		NOT = { is_year = 1460 }
+	#		ai = no
+	#	}
+	#	allow = {
+	#		FROM = {
+	#			NOT = {
+	#				OR = {
+	#					tag = MOS
+	#					tag = CRI 
+	#					tag = POL
+	#					is_subject_of = MOS
+	#					is_subject_of = CRI 
+	#					is_subject_of = POL
+	#				}
+	#			}
+	#		}
+	#	}
+	#}
+	#condition = {
+	#	tooltip = gc_may_not_declare_war_yet_papsic
+	#	potential = {
+	#		OR = { 
+	#			 tag = PAP
+	#			 tag = SIC
+	#		}
+	#		NOT = { is_year = 1455 }
+	#		ai = no
+	#	}
+	#	allow = {
+	#		FROM = {
+	#			NOT = {
+	#				OR = {
+	#					tag = PAP
+	#					tag = SIC
+	#					is_subject_of = PAP
+	#					is_subject_of = SIC
+	#				}
+	#			}
+	#		}
+	#	}
+	#}
+	#condition = {
+	#	tooltip = gc_may_not_declare_war_yet_mamorm
+	#	potential = {
+	#		tag = MAM
+	#		NOT = { is_year = 1460 }
+	#		ai = no
+	#	}
+	#	allow = {
+	#		FROM = { 
+	#			NOT = {
+	#				OR = {
+	#					tag = ORM
+	#					is_subject_of = ORM
+	#				}	
+	#			}
+	#		}	
+	#	}
+	#}
+	#condition = {
+	#	tooltip = gc_may_not_declare_war_yet_mormal
+	#	potential = {
+	#		tag = MOR
+	#		NOT = { is_year = 1460 }
+	#		ai = no
+	#	}
+	#	allow = {
+	#		FROM = { 
+	#			NOT = {
+	#				OR = {
+	#					tag = MAL
+	#					is_subject_of = MAL
+	#				}	
+	#			}
+	#		}
+	#	}
+	#}
+}
+	
+threaten_war = {
+	condition = {
+		tooltip = gc_may_not_declare_war_yet
+		potential = {
+			ROOT = { ai = no }
+			NOT = { is_year = 1450 }
+		}
+		allow = {
+				FROM = { 
+					NOT = {
+						OR = {
+							ai = no
+							is_subject_of = FROM
+						}
+					
+					}
+				}
+		}
+	}
+}	
+royal_marriage = {
+	condition = {
+		tooltip = MARWAR
+		potential = {
+		}
+		allow = {
+			NOT = { war_with = FROM }
+		}
+	}
+}
+annexationaction = {
+	condition = {
+		tooltip = ANNEX_TOO_LOW
+		potential = {
+			FROM = {
+				vassal_of = ROOT
+			}
+		}
+		allow = {
+			FROM = {
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+	}
+	#condition = {
+	#	tooltip = ANNEXINVALID
+	#	potential = {
+	#		FROM = {
+	#			vassal_of = ROOT
+	#		}
+	#	}
+	#	allow = {
+	#		FROM = {
+	#			years_in_vassalage_under = {
+	#				who = ROOT
+	#				years = 10
+	#			}
+	#		}
+	#	}
+	#}
+}
+
+integrationaction = {
+	condition = {
+		tooltip = INTEGRATETOOLOWDESC
+		potential = {
+			senior_union_with = FROM
+		}
+		allow = {
+			FROM = {
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+	}
+	#condition = {
+	#	tooltip = INTEGRATEINVALID
+	#	potential = {
+	#		senior_union_with = FROM
+	#	}
+	#	allow = {
+	#		FROM = {
+	#			years_in_union_under = {
+	#				who = ROOT
+	#				years = 50
+	#			}
+	#		}
+	#	}
+	#}
+}
+
+vassalaction = {
+	condition = {
+		tooltip = VASSALINVALID
+		potential = {
+		}
+		allow = {
+			alliance_with = FROM
+			FROM = {
+				has_opinion = {
+					who = ROOT
+					value = 190
+				}
+			}
+			FROM = { is_at_war = no }
+		}
+	}
+	condition = {
+		tooltip = h_tooltip_vassalize
+		potential = {
+		}
+		allow = {
+			FROM = { ai = yes }
+		}
+	}
+}
+
+abandon_union_action = {
+	condition = {
+		potential = {
+		}
+		allow = {
+			ROOT = {
+				senior_union_with = FROM
+				is_at_war = no
+			}
+		}
+	}
+}
+
+form_coalition = {
+	condition = {
+		tooltip = MINAGGRESSIVEEXPANSION
+		potential = {	
+		}
+		allow = {
+			has_opinion_modifier = {
+				modifier = aggressive_expansion
+				who = FROM
+			}		
+			NOT = {
+				has_opinion_modifier = {
+					modifier = aggressive_expansion
+					who = FROM
+					value = -50
+				}
+			}
+		}
+	}
+}
+
+request_to_join_trade_league = {
+	condition = {
+		tooltip = NOT_RELEVANT_TRADE_REGION_FROM
+		potential = {
+		}
+		allow = {
+			home_trade_node = {
+				trade_share = {
+					country = from
+					share = 1
+				}
+			}
+		}
+	}
+}
+
+invite_to_trade_league = {
+	condition = {
+		tooltip = NOT_RELEVANT_TRADE_REGION
+		potential = {
+		}
+		allow = {
+			from = {
+				home_trade_node = {
+					trade_share = {
+						country = root
+						share = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+guaranteeaction = {
+	condition = {
+		tooltip = GUARANTEEINVALID
+		potential = {
+		}
+		allow = {
+			alliance_with = FROM
+			FROM = {
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+			FROM = { is_at_war = no }
+		}
+	}
+}
+
+allianceaction = {
+
+	condition = {
+		tooltip = h_tooltip_cn_ally
+		potential = {
+			is_colonial_nation = no
+		}
+		allow = {
+			FROM = { is_colonial_nation = no }
+		}
+	}
+	condition = {
+		tooltip = h_tooltip_many_allies
+		potential = {
+			ROOT = { ai = yes }
+		}
+		allow = {
+			ROOT = {
+				NOT = {
+					num_of_allies = 1
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = h_tooltip_from_many_allies
+		potential = {
+			ROOT = { ai = yes }
+		}
+		allow = {
+			FROM = {
+				NOT = {
+					num_of_allies = 1
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = gc_truce_with_ally
+		potential = {
+			ROOT = { ai = no }
+		}
+		allow = {
+			ROOT = {
+				NOT = { 
+					has_opinion_modifier = {
+						modifier = break_alliance_war
+						who = FROM
+					}
+				}
+			}	
+		}
+	}
+	condition = {
+		tooltip = gc_truce_with_ally
+		potential = {
+			FROM = { ai = no }
+		}
+		allow = {
+			FROM = {
+				NOT = { 
+					has_opinion_modifier = {
+						modifier = break_alliance_war
+						who = ROOT
+					}
+				}
+			}	
+		}
+	}
+	condition = {
+		tooltip = gc_truce_with_ally
+		potential = {
+			FROM = { ai = no }
+		}
+		allow = {
+			FROM = {
+				NOT = { 
+					has_opinion_modifier = {
+						modifier = break_alliance
+						who = ROOT
+					}
+				}
+			}	
+		}
+	}
+	condition = {
+		tooltip = gc_truce_with_ally
+		potential = {
+			ROOT = { ai = no }
+		}
+		allow = {
+			ROOT = {
+				NOT = { 
+					has_opinion_modifier = {
+						modifier = break_alliance
+						who = FROM
+					}
+				}
+			}	
+		}
+	}
+	condition = {
+		tooltip = gc_naples
+		potential = {
+			ROOT = { tag = NAP}
+			NOT = {
+				is_year = 1450
+			}
+		}	
+		allow = {
+			always = no
+		}
+	}
+	
+	condition = {
+		tooltip = gc_to_naples
+		potential = {
+			ROOT = { ai = yes }
+			NOT = {
+				is_year = 1450
+			}
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = NAP				
+					}
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = gc_denmark
+		potential = {
+			ROOT = { tag = DAN}
+			NOT = {
+				is_year = 1450
+			}
+		}	
+		allow = {
+			always = no
+		}
+	}
+	
+	condition = {
+		tooltip = gc_to_denmark
+		potential = {
+			ROOT = { ai = yes }
+			NOT = {
+				is_year = 1450
+			}
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = DAN			
+					}
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = sm_tooltip_mamottoally
+		potential = {
+			ROOT = {
+				OR = {
+					tag = MAM
+					tag = EGY
+				}	
+				
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = TUR					
+					}
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = sm_tooltip_ottomamally
+		potential = {
+			ROOT = {
+				AND = {
+					tag = TUR
+					has_reform = ottoman_government
+				}
+			}	
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = MAM					
+					}
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = sm_tooltip_mamhunally
+		potential = {
+			ROOT = {
+				OR = {
+					tag = MAM
+					tag = EGY
+				}
+				
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = HUN					
+					}
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = sm_tooltip_hunmamally
+		potential = {
+			ROOT = {
+				tag = HUN
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}	
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = MAM					
+					}
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = sm_tooltip_ottohunally
+		potential = {
+			ROOT = {
+				tag = TUR
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = HUN					
+					}
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = sm_tooltip_hunottoally
+		potential = {
+			ROOT = {
+				tag = HUN
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}	
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = TUR					
+					}
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = sm_tooltip_ottoethally
+		potential = {
+			ROOT = {
+					tag = TUR
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = ETH					
+					}
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = sm_tooltip_ethottoally
+		potential = {
+			ROOT = {
+				tag = ETH
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}	
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = TUR					
+					}
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = sm_tooltip_fraengally
+		potential = {
+			ROOT = {
+					tag = FRA
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = ENG				
+					}
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = sm_tooltip_engfraally
+		potential = {
+			ROOT = {
+				tag = ENG
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}	
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = FRA				
+					}
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = sm_tooltip_fraburally
+		potential = {
+			ROOT = {
+					tag = FRA
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}	
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = BUR				
+					}
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = sm_tooltip_burfraally
+		potential = {
+			ROOT = {
+				tag = BUR
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}	
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = FRA				
+					}
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = sm_tooltip_burengally
+		potential = {
+			ROOT = {
+				tag = BUR
+				NOT = {
+				has_reform = clergy_in_administration_reform
+				has_reform = of_noble_bearing_reform
+				has_reform = meritocratic_focus_reform
+				}
+			}
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = ENG				
+					}
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = sm_tooltip_engburally
+		potential = {
+			ROOT = {
+				tag = ENG
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}	
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = BUR				
+					}
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = sm_tooltip_moscrially
+		potential = {
+			ROOT = {
+				tag = MOS
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = CRI				
+					}
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = sm_tooltip_crimosally
+		potential = {
+			ROOT = {
+				tag = CRI
+				NOT = {
+					has_reform = retain_tribal_hierarchy_reform
+					has_reform = decentralize_reform
+					has_reform = centralize_reform
+				}
+			}	
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = MOS			
+					}
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = sm_tooltip_polcrially
+		potential = {
+			ROOT = {
+					tag = POL
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = CRI				
+					}
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = sm_tooltip_cripolally
+		potential = {
+			ROOT = {
+				tag = CRI
+				NOT = {
+					has_reform = retain_tribal_hierarchy_reform
+					has_reform = decentralize_reform
+					has_reform = centralize_reform
+				}
+			}
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = POL			
+					}
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = sm_tooltip_muspolally
+		potential = {
+			ROOT = {
+					tag = MOS
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}	
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = POL				
+					}
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = sm_tooltip_polmosally
+		potential = {
+			ROOT = {
+				tag = POL
+				NOT = {
+					has_reform = clergy_in_administration_reform
+					has_reform = of_noble_bearing_reform
+					has_reform = meritocratic_focus_reform
+				}
+			}	
+		}	
+		allow = {
+			FROM = {
+				NOT = { 
+					OR = {
+						tag = MOS			
+					}
+				}
+			}
+		}
+	}
+}	
+ask_for_march = {
+	condition = {
+		tooltip = h_tooltip_ask_march
+		potential = {
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+
+designate_march = {
+	condition = {
+		tooltip = h_tooltip_many_marches_influence
+		potential = {
+			
+		}
+		allow = {
+			NOT = {
+				ROOT = {
+					march = 4
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = gc_take_influence_ideas_for_marches
+		potential = {
+			ROOT = { NOT = {has_idea = marcher_lords } }
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+
+support_independence_action = {
+	condition = {
+		tooltip = h_tooltip_cn_support
+		potential = {
+			ROOT = {
+				OR = {
+					is_colonial_nation = yes
+					ai = yes
+				}
+			}	
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+
+sabotage_reputation = {
+	condition = {
+		tooltip = h_tooltip_cn_espionage
+		potential = {
+			ROOT = {
+				is_colonial_nation = yes
+			}
+		}
+		allow = {
+			FROM = { same_continent = ROOT }
+		}
+	}
+}
+support_rebels = {
+	condition = {
+		tooltip = h_tooltip_cn_espionage
+		potential = {
+			ROOT = {
+				is_colonial_nation = yes
+			}	
+		}
+		allow = {
+			FROM = { same_continent = ROOT }
+		}
+	}
+}
+sow_discontent = {
+	condition = {
+		tooltip = h_tooltip_cn_espionage
+		potential = {
+			ROOT = {
+				is_colonial_nation = yes
+			}	
+		}
+		allow = {
+			FROM = { same_continent = ROOT }
+		}
+	}
+}
+study_technology = {
+	condition = {
+		tooltip = h_tooltip_cn_espionage
+		potential = {
+			ROOT = {
+				is_colonial_nation = yes
+			}	
+		}
+		allow = {
+			FROM = { same_continent = ROOT }
+		}
+	}
+}
+agitate_for_liberty = {
+	condition = {
+		tooltip = h_tooltip_cn_espionage
+		potential = {
+			ROOT = {
+				is_colonial_nation = yes
+			}	
+		}
+		allow = {
+			FROM = { same_continent = ROOT }
+		}
+	}
+}
+slander_merchants = {
+	condition = {
+		tooltip = h_tooltip_cn_espionage
+		potential = {
+			ROOT = {
+				is_colonial_nation = yes
+			}	
+		}
+		allow = {
+			FROM = { same_continent = ROOT }
+		}
+	}
+}
+sabotage_recruitment = {
+	condition = {
+		tooltip = h_tooltip_cn_espionage
+		potential = {
+			ROOT = {
+				is_colonial_nation = yes
+			}	
+		}
+		allow = {
+			FROM = { same_continent = ROOT }
+		}
+	}
+}
+corrupt_officials = {
+	condition = {
+		tooltip = h_tooltip_cn_espionage
+		potential = {
+			ROOT = {
+				is_colonial_nation = yes
+			}	
+		}
+		allow = {
+			FROM = { same_continent = ROOT }
+		}
+	}
+}
+warsubsidy = {
+	condition = {
+		tooltip = h_tooltip_cn_money
+		potential = {
+			ROOT = {
+				is_colonial_nation = yes
+			}	
+		}
+		allow = {
+			FROM = { is_colonial_nation = yes }
+		}
+	}
+	condition = {
+		tooltip = h_tooltip_money_to_cn
+		potential = {
+			ROOT = {
+				is_colonial_nation = no
+			}	
+		}
+		allow = {
+			OR = {
+				FROM = { is_colonial_nation = no }
+				FROM = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+offerloan = {
+	condition = {
+		tooltip = h_tooltip_cn_money
+		potential = {
+			ROOT = {
+				is_colonial_nation = yes
+			}
+		}
+		allow = {
+			FROM = { is_colonial_nation = yes }
+		}
+	}
+	condition = {
+		tooltip = h_tooltip_money_to_cn
+		potential = {
+			ROOT = {
+				is_colonial_nation = no
+			}	
+		}
+		allow = {
+			OR = {
+				FROM = { is_colonial_nation = no }
+				FROM = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
+
+giftaction = {
+	condition = {
+		tooltip = h_tooltip_cn_money
+		potential = {
+			ROOT = {
+				is_colonial_nation = yes
+			}	
+		}
+		allow = {
+			FROM = { is_colonial_nation = yes }
+		}
+	}
+	condition = {
+		tooltip = h_tooltip_money_to_cn
+		potential = {
+			ROOT = {
+				is_colonial_nation = no
+			}	
+		}
+		allow = {
+			OR = {
+				FROM = { is_colonial_nation = no }
+				FROM = { is_subject_of = ROOT }
+			}
+		}
+	}
+}
