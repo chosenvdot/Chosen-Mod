@@ -3,8 +3,8 @@
 #Region - Germany
 #Area - Westphalia
 
-owner = MND
-controller = MND
+owner = TCK
+controller = TCK
 culture = lower_saxon
 religion = catholic
 trade_goods = livestock
@@ -14,7 +14,7 @@ base_production = 2
 base_manpower = 2 
 hre = yes
 is_city = yes
-add_core = MND
+add_core = TCK
 
 discovered_by = western
 discovered_by = muslim

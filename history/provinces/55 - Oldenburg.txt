@@ -3,8 +3,8 @@
 #Region - Germany
 #Area - Weser
 
-owner = OLD
-controller = OLD
+owner = MUN
+controller = MUN
 culture = lower_saxon
 religion = catholic
 capital = "Oldenburg"
@@ -14,7 +14,7 @@ base_tax = 4
 base_production = 4 
 base_manpower = 3 
 is_city = yes
-add_core = OLD
+add_core = MUN
 
 discovered_by = western
 discovered_by = muslim

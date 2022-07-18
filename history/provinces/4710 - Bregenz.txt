@@ -3,9 +3,9 @@
 #Region - Germany
 #Area - Tirol
 
-owner = MBZ
-controller = MBZ
-add_core = MBZ
+owner = KMP
+controller = KMP
+add_core = KMP
 culture = swiss
 religion = catholic
 base_tax = 3

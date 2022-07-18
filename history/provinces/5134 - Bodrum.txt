@@ -1,9 +1,9 @@
  
 # No previous file for Beyond Typus or Beyond the Pale Legacy province
 
-owner = KNI			#The Knights Hospitaller (Knights of St. John) were given permission to build it by the Ottoman sultan Mehmed I, after Tamerlane had destroyed their previous fortress located in Izmir's inner bay.
-controller = KNI
-add_core = KNI
+owner = TUR			#The Knights Hospitaller (Knights of St. John) were given permission to build it by the Ottoman sultan Mehmed I, after Tamerlane had destroyed their previous fortress located in Izmir's inner bay.
+controller = TUR
+add_core = TUR
 add_core = MEN
 culture = greek
 religion = orthodox

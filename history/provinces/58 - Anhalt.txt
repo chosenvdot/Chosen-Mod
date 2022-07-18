@@ -3,8 +3,8 @@
 #Region - Germany
 #Area - Northern Saxony
 
-owner = ANH
-controller = ANH 
+owner = MAG
+controller = MAG 
 culture = markish
 religion = catholic
 capital = "Dessau"
@@ -14,7 +14,7 @@ base_tax = 5
 base_production = 4
 base_manpower = 3 
 is_city = yes
-add_core = ANH
+add_core = MAG
 
 discovered_by = western
 discovered_by = muslim

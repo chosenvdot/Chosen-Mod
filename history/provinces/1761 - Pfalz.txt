@@ -7,13 +7,13 @@ capital = "Worms"
 culture = hessian
 religion = catholic
 trade_goods = wine
-owner = WOR
+owner = PAL
 base_tax = 6
 base_production = 5
 base_manpower = 4
 is_city = yes
-controller = WOR
-add_core = WOR
+controller = PAL
+add_core = PAL
 hre = yes
 center_of_trade = 2
 

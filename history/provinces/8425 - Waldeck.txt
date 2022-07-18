@@ -5,8 +5,8 @@
 #Core Details
 capital = "Waldeck"
 is_city = yes
-owner = WLD
-controller = WLD
+owner = TCK
+controller = TCK
 
 #Demographics
 culture = hessian
@@ -19,7 +19,7 @@ base_manpower = 2
 trade_goods = naval_supplies
 
 #Cores and Occupation (Alphabetical after current)
-add_core = WLD
+add_core = TCK
 
 #Other Political
 hre = yes
