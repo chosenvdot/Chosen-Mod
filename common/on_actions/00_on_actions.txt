@@ -2,6 +2,7 @@
 
 # country
 on_startup = {
+	CAS = { country_event = { id = flavor_spa.3716 days = 9855 } } # Castile gets Iberian wedding no matter what in 1471
 	if = {
 		limit = {
 			current_age = age_of_discovery

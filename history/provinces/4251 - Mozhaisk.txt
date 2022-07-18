@@ -1,8 +1,8 @@
  
 #4251 - Mozhaisk
 
-owner = MOZ
-controller = MOZ
+owner = MOS
+controller = MOS
 culture = russian
 religion = orthodox
 hre = no
@@ -12,7 +12,7 @@ trade_goods = wool
 base_manpower = 6
 capital = "Mozhaisk"
 is_city = yes
-add_core = MOZ
+add_core = MOS
 fort_15th = yes
 
 discovered_by = eastern

@@ -3,8 +3,8 @@
 #Region - Russia
 #Area - Moscow
 
-owner = MOZ			#As far as I can tell, the majority of this province including the capital was under the de facto control of the Mozhayskiy princes
-controller = MOZ  
+owner = MOS			#As far as I can tell, the majority of this province including the capital was under the de facto control of the Mozhayskiy princes
+controller = MOS 
 culture = russian
 religion = orthodox
 hre = no
@@ -14,7 +14,7 @@ trade_goods = grain
 base_manpower = 2 
 capital = "Kaluga"
 is_city = yes
-add_core = MOZ
+add_core = MOS
 
 discovered_by = eastern
 discovered_by = western

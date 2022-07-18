@@ -1,8 +1,8 @@
  
 
-owner = MLA # changed from MLG
-controller = MLA # changed from MLG
-add_core = MLA # changed from MLG
+owner = YAR # changed from MLG
+controller = YAR # changed from MLG
+add_core = YAR # changed from MLG
 culture = russian
 religion = orthodox
 capital = "Mologa"

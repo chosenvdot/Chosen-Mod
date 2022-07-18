@@ -3,8 +3,8 @@
 #Region - Russia
 #Area - Moscow
 
-owner = RSO
-controller = RSO
+owner = MOS
+controller = MOS
 culture = russian
 religion = orthodox
 hre = no
@@ -14,7 +14,7 @@ trade_goods = grain
 base_manpower = 6
 capital = "Rostov"
 is_city = yes
-add_core = RSO
+add_core = MOS
 
 discovered_by = eastern
 discovered_by = western

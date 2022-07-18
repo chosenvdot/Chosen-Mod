@@ -832,19 +832,26 @@ guarantee = {
 	end_date = 1475.1.1 #Khanate becomes a protectorate of the Ottoman Empire, essentially.
 } #Agreement between Crimea and Lithuania against Great Horde, Crimea gaining protection in exchange for the Yedisan area.
 
-vassal = {
-	first = TVE
-	second = ZBT
-	start_date = 1444.1.1
-	end_date = 1460.1.1
-} #Tver's autonomous vassal principality
+# vassal = {
+# 	first = TVE
+# 	second = ZBT
+# 	start_date = 1444.1.1
+# 	end_date = 1460.1.1
+# } #Tver's autonomous vassal principality
+
+# vassal = {
+# 	first = RYA
+# 	second = PRS
+# 	start_date = 1444.1.1
+# 	end_date = 1483.1.1
+# } #Ryazan's autonomous vassal principality and bitter rival for most of its existance. Weakened greatly by this point.
 
 vassal = {
-	first = RYA
-	second = PRS
+	first = MOS
+	second = RYA
 	start_date = 1444.1.1
-	end_date = 1483.1.1
-} #Ryazan's autonomous vassal principality and bitter rival for most of its existance. Weakened greatly by this point.
+	end_date = 1446.2.13
+}
 
 vassal = {
 	first = MOS
@@ -860,19 +867,19 @@ royal_marriage = {
 	end_date = 1446.2.13
 } #Moscow's vassal, Serpukhov breaks vassalage when Shemyaka takes the throne, backing the exiled Vasily II
 
-alliance = {
-	first = GLC
-	second = VYA
-	start_date = 1444.1.1
-	end_date = 1446.2.13 #Shemyaka takes Moscow
-}
+# alliance = {
+# 	first = GLC
+# 	second = VYA
+# 	start_date = 1444.1.1
+# 	end_date = 1446.2.13 #Shemyaka takes Moscow
+# }
 
-alliance = {
-	first = GLC
-	second = MOZ
-	start_date = 1444.1.1
-	end_date = 1446.2.13 #Shemyaka takes Moscow
-}
+# alliance = {
+# 	first = GLC
+# 	second = MOZ
+# 	start_date = 1444.1.1
+# 	end_date = 1446.2.13 #Shemyaka takes Moscow
+# }
 
 vassal = {
 	first = LIT

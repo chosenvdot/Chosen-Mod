@@ -1,8 +1,8 @@
  
 #4249 - Zubtsov
 
-owner = ZBT
-controller = ZBT  
+owner = MOS
+controller = MOS
 culture = russian
 religion = orthodox
 hre = no
@@ -12,7 +12,7 @@ trade_goods = cloth
 base_manpower = 2 
 capital = "Zubtsov"
 is_city = yes
-add_core = ZBT
+add_core = MOS
 
 discovered_by = eastern
 discovered_by = western
