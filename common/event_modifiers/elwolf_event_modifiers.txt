@@ -1,6 +1,6 @@
 mingsplosion = {
 	global_unrest = 80
-	land_morale = -0.5
+	land_morale = -0.9
 	discipline = -0.1
 	land_forcelimit = -80
 }
