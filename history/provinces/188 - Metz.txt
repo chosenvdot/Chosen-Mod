@@ -7,8 +7,8 @@ latent_trade_goods = {
 	coal
 }
 
-owner = MTZ			#Like Koeln, seems to be trouble between Bishohric and imperial free city wiki quote -During the 12th century, Metz rose to the status of Republic and the Republic of Metz ruled until the 15th century.
-controller = MTZ 
+owner = BUR			#Like Koeln, seems to be trouble between Bishohric and imperial free city wiki quote -During the 12th century, Metz rose to the status of Republic and the Republic of Metz ruled until the 15th century.
+controller = BUR 
 capital = "Metz"
 is_city = yes
 culture = lorraine_culture
@@ -18,7 +18,7 @@ base_tax = 7
 base_production = 7			#Centre of population in Gall, with a population of 40k all the way back in 1st century, but seemed to shrink with the fall of Rome. Wiki (I know) estimates population well under 10k until at least 18th century, grows more important later, though
 trade_goods = bt_trade_good_fruit
 base_manpower = 6
-add_core = MTZ
+add_core = BUR
 
 discovered_by = western
 discovered_by = muslim

@@ -1,9 +1,9 @@
 
 #BT's Western Europe Overhaul in 12.0
 
-owner = LXL
-controller = LXL
-add_core = LXL
+owner = BUR
+controller = BUR
+add_core = BUR
 add_core = FCM
 culture = burgundian
 religion = catholic

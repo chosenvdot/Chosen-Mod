@@ -3,9 +3,9 @@
 #Region - Low Countries
 #Area - Wallonia
 
-owner = CMB
-controller = CMB
-add_core = CMB
+owner = HAI
+controller = HAI
+add_core = HAI
 capital = "Cambray"
 is_city = yes
 culture = picard_culture

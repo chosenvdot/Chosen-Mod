@@ -1,9 +1,9 @@
  
 #BT's Western Europe Overhaul in 12.0
 
-owner = MTZ
-controller = MTZ
-add_core = MTZ
+owner = LOR
+controller = LOR
+add_core = LOR
 culture = lorraine_culture
 religion = catholic
 capital = "Sarrebourg"			

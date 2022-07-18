@@ -3,8 +3,8 @@
 #Region - Low Countries
 #Area - Frisia
 
-owner = GRN
-controller = GRN
+owner = FRI
+controller = FRI
 capital = "Groningen"
 is_city = yes
 culture = lower_saxon
@@ -14,7 +14,7 @@ base_tax = 5			#Population/economic centre of the Northern Netherlands (probably
 base_production = 5
 trade_goods = bt_trade_good_beer 
 base_manpower = 2 
-add_core = GRN
+add_core = FRI
 
 discovered_by = western
 discovered_by = muslim
