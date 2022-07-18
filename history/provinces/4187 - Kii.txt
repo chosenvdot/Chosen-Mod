@@ -1,8 +1,8 @@
  
 #4187 - Kii
 
-owner = HTK
-controller = HTK
+owner = ASK
+controller = ASK
 culture = japanese
 religion = shinto
 capital = "Wakayama"
@@ -12,7 +12,7 @@ base_tax = 4
 base_manpower = 4
 base_production = 6
 is_city = yes
-add_core = HTK
+add_core = ASK
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }

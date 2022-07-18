@@ -1,8 +1,8 @@
  
 #4359 - Ise
 
-owner = KTB
-controller = KTB
+owner = ASK
+controller = ASK
 culture = japanese
 religion = shinto
 capital = "Kiriyama"
@@ -12,8 +12,7 @@ base_tax = 6
 base_manpower = 2 
 base_production = 4
 is_city = yes
-add_core = KTB
-add_core = ISK
+add_core = ASK
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }

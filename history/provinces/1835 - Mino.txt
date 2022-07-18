@@ -1,8 +1,8 @@
  
 #1835 - Mino
 
-owner = TKI
-controller = TKI
+owner = ASK
+controller = ASK
 culture = togoku
 religion = shinto
 capital = "Inabayama"
@@ -12,7 +12,7 @@ base_tax = 8
 base_manpower = 6
 base_production = 8
 is_city = yes
-add_core = TKI
+add_core = ASK
 fort_15th = yes #Inabayama Castle
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }

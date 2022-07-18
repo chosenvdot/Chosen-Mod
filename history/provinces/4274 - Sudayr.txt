@@ -1,9 +1,9 @@
  
 #4274 - Sudayr
 
-owner = ANZ
-controller = ANZ
-add_core = ANZ
+owner = ALH
+controller = ALH
+add_core = ALH
 capital = "Al Majma'ah"
 culture = bedouin_arabic
 religion = sunni

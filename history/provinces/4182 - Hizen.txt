@@ -1,8 +1,8 @@
  
 #4182 - Hizen
 
-owner = SHN
-controller = SHN
+owner = ITO
+controller = ITO
 culture = kyushuan
 religion = shinto
 capital = "Nagasaki"
@@ -12,7 +12,7 @@ base_tax = 10
 base_manpower = 4
 base_production = 4
 is_city = yes
-add_core = SHN
+add_core = ITO
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }

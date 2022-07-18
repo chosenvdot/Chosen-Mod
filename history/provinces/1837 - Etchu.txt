@@ -1,8 +1,8 @@
  
 #1837 - Etchu
 
-owner = HTK
-controller = HTK
+owner = ODA
+controller = ODA
 culture = togoku
 religion = shinto
 capital = "Kanazawa"
@@ -12,7 +12,7 @@ base_tax = 6
 base_production = 6
 base_manpower = 6
 is_city = yes
-add_core = SBA
+add_core = ODA
 fort_15th = yes #Nanao Castle
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }

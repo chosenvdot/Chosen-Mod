@@ -1,8 +1,8 @@
  
 #1026 - Mutsu
 
-owner = DTE
-controller = DTE
+owner = UES
+controller = UES
 culture = togoku
 religion = shinto
 capital = "Aizu"
@@ -12,7 +12,7 @@ base_tax = 6
 base_manpower = 6
 base_production = 6
 is_city = yes
-add_core = DTE
+add_core = UES
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }

@@ -1,9 +1,9 @@
  
 #New Province
 
-owner = FDI
-controller = FDI
-add_core = FDI
+owner = HDR
+controller = HDR
+add_core = HDR
 capital = "Shuqrah"
 culture = yemeni_culture
 religion = sunni

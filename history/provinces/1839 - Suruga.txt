@@ -1,8 +1,8 @@
  
 #1839 - Suruga
 
-owner = IMG
-controller = IMG
+owner = ODA
+controller = ODA
 culture = togoku
 religion = shinto
 capital = "Sunpu"
@@ -12,7 +12,7 @@ base_tax = 8
 base_production = 8
 base_manpower = 6
 is_city = yes
-add_core = IMG
+add_core = ODA
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }
