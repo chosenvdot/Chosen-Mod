@@ -1,9 +1,9 @@
  
 # ex 8579
 
-owner = PAT
-controller = PAT
-add_core = PAT
+owner = MLC
+controller = MLC
+add_core = MLC
 culture = malayan
 religion = sunni
 capital = "Gerik"

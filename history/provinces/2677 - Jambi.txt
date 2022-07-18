@@ -1,8 +1,8 @@
  
 #2677 - Jambi
 
-owner = JMB
-controller = JMB
+owner = MLC
+controller = MLC
 culture = musi
 religion = hinduism
 capital = "Jambi"
@@ -12,7 +12,7 @@ base_tax = 6
 base_production = 6
 base_manpower = 3
 is_city = yes
-add_core = JMB
+add_core = MLC
 
 discovered_by = chinese
 discovered_by = indian

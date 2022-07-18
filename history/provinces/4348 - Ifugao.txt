@@ -1,8 +1,8 @@
  
 #4348 - Ifugao
 
-owner = IFG
-controller = IFG
+owner = TDO
+controller = TDO
 culture = ilocano
 religion = animism
 capital = "Ifugao"
@@ -12,7 +12,7 @@ hre = no
 base_tax = 1
 base_production = 1
 base_manpower = 1
-add_core = IFG
+add_core = TDO
 
 discovered_by = chinese
 

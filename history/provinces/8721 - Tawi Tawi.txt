@@ -20,9 +20,9 @@ discovered_by = ottoman
 
 
 1405.1.1 = {
-	owner = SUL
-	controller = SUL
-	add_core = SUL
+	owner = MGD
+	controller = MGD
+	add_core = MGD
 	is_city = yes
 	trade_goods = tropical_wood
 } # The Sulu Sultanate

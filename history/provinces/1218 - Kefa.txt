@@ -1,9 +1,9 @@
  
 #1218 - Sidamo
 
-owner = WLY
-controller = WLY
-add_core = WLY
+owner = ETH
+controller = ETH
+add_core = ETH
 culture = sidamo 
 religion = shamanism
 capital = "Irgalem"

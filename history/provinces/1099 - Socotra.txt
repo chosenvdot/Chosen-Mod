@@ -1,8 +1,8 @@
  
 #1099 - Socotra
 
-owner = SOC
-controller = SOC
+owner = MRE
+controller = MRE
 culture = mahri_culture
 religion = nestorian
 capital = "Suq"
@@ -12,7 +12,7 @@ base_tax = 3
 base_production = 3 
 base_manpower = 2 
 is_city = yes
-add_core = SOC
+add_core = MRE
 add_core = MHR
 
 discovered_by = muslim

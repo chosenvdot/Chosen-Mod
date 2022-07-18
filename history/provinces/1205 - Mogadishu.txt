@@ -1,9 +1,9 @@
  
 #1205 - Mogadishu
 
-owner = MDI
-controller = MDI
-add_core = MDI
+owner = AJU
+controller = AJU
+add_core = AJU
 culture = somali
 religion = sunni
 capital = "Maqdishu"
