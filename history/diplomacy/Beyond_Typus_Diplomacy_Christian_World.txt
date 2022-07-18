@@ -327,12 +327,12 @@ union = {
 #	end_date = 1806.7.11
 #}
 
-vassal = {
-	first = DAN
-	second = ICE
-	start_date = 1444.1.1
-	end_date = 1536.1.1
-}
+# vassal = {
+# 	first = DAN
+# 	second = ICE
+# 	start_date = 1444.1.1
+# 	end_date = 1536.1.1
+# }
 
 vassal = {
 	first = LIT

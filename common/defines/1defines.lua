@@ -37,6 +37,7 @@ NDefines.NCountry.EXPLOIT_COOLDOWN_MONTHS = 120
 
 --NMilitary
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 50
+NDefines.NMilitary.SUPPLY_DEPOT_MIL_COST = 10
 
 -- Economy
 NDefines.NEconomy.CARAVAN_POWER_MAX = 25
