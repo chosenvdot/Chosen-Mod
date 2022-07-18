@@ -1,9 +1,9 @@
  
 # No previous file for Beyond Typus or Beyond the Pale Legacy province
 
-owner = ALI
-controller = ALI
-add_core = ALI
+owner = KAR
+controller = KAR
+add_core = KAR
 culture = turkish
 religion = sunni
 capital = "Alaiye"

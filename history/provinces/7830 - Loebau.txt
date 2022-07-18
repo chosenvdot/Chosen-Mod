@@ -1,8 +1,8 @@
  
 
-owner = KUM # changed from KUL
-controller = KUM # changed from KUL
-add_core = KUM # changed from KUL
+owner = TEU # changed from KUL
+controller = TEU # changed from KUL
+add_core = TEU # changed from KUL
 culture = prussian
 religion = catholic
 capital = "Löbau"
