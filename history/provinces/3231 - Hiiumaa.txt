@@ -3,9 +3,9 @@
 #Region - Baltic
 #Area - Estonia
 
-owner = OSL
-controller = OSL
-add_core = OSL
+owner = LIV
+controller = LIV
+add_core = LIV
 add_core = EST
 culture = estonian
 religion = catholic

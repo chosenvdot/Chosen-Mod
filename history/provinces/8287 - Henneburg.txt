@@ -5,8 +5,8 @@
 #Core Details
 capital = "Henneburg"
 is_city = yes
-owner = HEN
-controller = HEN
+owner = WBG
+controller = WBG
 
 #Demographics
 culture = franconian
@@ -19,7 +19,7 @@ base_manpower = 1
 trade_goods = dyes
 
 #Cores and Occupation (Alphabetical after current)
-add_core = HEN
+add_core = WBG
 
 #Other Political
 hre = yes

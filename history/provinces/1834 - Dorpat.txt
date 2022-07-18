@@ -3,9 +3,9 @@
 #Region - Baltic
 #Area - Livonia
 
-owner = DRP
-controller = DRP
-add_core = DRP
+owner = LIV
+controller = LIV
+add_core = LIV
 culture = prussian
 religion = catholic
 hre = no

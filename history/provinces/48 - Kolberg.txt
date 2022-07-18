@@ -3,9 +3,9 @@
 #Region - Germany
 #Area - Hinterpommern
 
-owner = KMI
-controller = KMI
-add_core = KMI
+owner = STP
+controller = STP
+add_core = STP
 culture = pommeranian
 religion = catholic
 hre = yes

@@ -3,9 +3,9 @@
 #Region - Germany
 #Area - Tirol
 
-owner = GRZ
-controller = GRZ
-add_core = GRZ
+owner = HAB
+controller = HAB
+add_core = HAB
 culture = bavarian
 religion = catholic
 base_tax = 4

@@ -1,9 +1,9 @@
  
 #BT Scandinavia and Baltics reoverhaul
 
-owner = RIG
-controller = RIG
-add_core = RIG
+owner = LIV
+controller = LIV
+add_core = LIV
 culture = latvian
 religion = catholic
 capital = "Rauna"			#DE Ronneburg

@@ -1,9 +1,9 @@
 
 #BT's Western Europe Overhaul in 12.0
 
-owner = MNE
-controller = MNE
-add_core = MNE
+owner = PRO
+controller = PRO
+add_core = PRO
 culture = angevin_culture
 religion = catholic
 capital = "Laval"

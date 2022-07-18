@@ -3,9 +3,9 @@
 #Region - Germany
 #Area - Lower Bavaria
 
-owner = REG
-controller = REG
-add_core = REG
+owner = UBV
+controller = UBV
+add_core = UBV
 culture = bavarian
 religion = catholic
 base_tax = 8

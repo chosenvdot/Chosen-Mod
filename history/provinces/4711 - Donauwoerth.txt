@@ -1,6 +1,6 @@
  
-owner = NRD
-controller = NRD
+owner = ROT
+controller = ROT
 capital = "Nördlingen"
 is_city = yes
 culture = swabian
@@ -10,7 +10,7 @@ base_tax = 4
 base_production = 3
 base_manpower = 2
 trade_goods = grain
-add_core = NRD
+add_core = ROT
 
 discovered_by = eastern
 discovered_by = western

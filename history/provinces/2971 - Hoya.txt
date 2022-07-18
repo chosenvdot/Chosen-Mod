@@ -3,8 +3,8 @@
 #Region - Germany
 #Area - Lower Saxony
 
-owner = HOY
-controller = HOY
+owner = TCK
+controller = TCK
 culture = lower_saxon
 religion = catholic
 capital = "Hoya"
@@ -14,7 +14,7 @@ base_tax = 3
 base_production = 3 
 base_manpower = 3
 is_city = yes
-add_core = HOY
+add_core = TCK
 
 discovered_by = western
 discovered_by = muslim

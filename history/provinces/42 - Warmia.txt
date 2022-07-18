@@ -3,8 +3,8 @@
 #Region - Baltic
 #Area - West Prussia
 
-owner = WRM
-controller = WRM
+owner = TEU
+controller = TEU
 capital = "Heilsberg"			#Later Allenstein became bigger, renamed Olsztyn under the Poles
 culture = prussian
 religion = catholic
@@ -14,7 +14,7 @@ base_tax = 5
 base_production = 5
 base_manpower = 3
 is_city = yes
-add_core = WRM
+add_core = TEU
 
 discovered_by = western
 discovered_by = muslim

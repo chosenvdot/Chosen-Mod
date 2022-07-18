@@ -1,9 +1,9 @@
  
 #BT Balkans reoverhaul
 
-owner = FRG
-controller = FRG
-add_core = FRG
+owner = HAB
+controller = HAB
+add_core = HAB
 add_core = CLI
 culture = slovene
 religion = catholic

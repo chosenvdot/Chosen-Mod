@@ -3,9 +3,9 @@
 #Region - Baltic
 #Area - Livonia
 
-owner = RIG
-controller = RIG
-add_core = RIG
+owner = LIV
+controller = LIV
+add_core = LIV
 culture = prussian
 religion = catholic
 hre = no
