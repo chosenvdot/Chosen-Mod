@@ -1,9 +1,6 @@
  
 # No previous file for Beyond Typus province
 
-owner = OTT
-controller = OTT
-add_core = OTT
 is_city = yes
 culture = anishinabe
 religion = totemism 

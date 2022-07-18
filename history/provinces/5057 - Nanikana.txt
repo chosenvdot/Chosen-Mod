@@ -1,9 +1,6 @@
  
 # No previous file for Beyond Typus province
 
-add_core = WCR
-owner = WCR
-controller = WCR
 is_city = yes
 culture = cree					# 
 religion = totemism 

@@ -1,9 +1,6 @@
  
 # No previous file for Beyond Typus province
 
-owner = YYO			#Tongva
-controller = YYO
-add_core = YYO
 is_city = yes
 culture = takic
 religion = totemism 

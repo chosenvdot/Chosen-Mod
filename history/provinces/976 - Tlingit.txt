@@ -1,9 +1,6 @@
 
 #976 - Tlingit
 
-owner = TGI			#Tlingit
-controller = TGI
-add_core = TGI
 is_city = yes
 culture = tlingit
 religion = totemism

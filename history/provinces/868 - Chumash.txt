@@ -1,8 +1,5 @@
 #868 - Chumash
 
-owner = CHS			#Chumash
-controller = CHS
-add_core = CHS
 is_city = yes
 culture = chumash 
 religion = totemism

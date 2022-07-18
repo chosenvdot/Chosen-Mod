@@ -2,9 +2,6 @@
 # ex 5056
 # vanilla uncolonised
 
-owner = ALQ
-controller = ALQ
-add_core = ALQ
 #tribal_owner = AGQ # ??? 1.31
 culture = anishinabe # BT; algonquin
 religion = totemism

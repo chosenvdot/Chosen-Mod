@@ -1,8 +1,5 @@
 # new in 1.31
 
-owner = KSK
-controller = KSK
-add_core = KSK
 culture = illini
 religion = totemism
 capital = "Espeminkia"

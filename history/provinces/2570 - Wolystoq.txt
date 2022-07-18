@@ -1,7 +1,4 @@
 # No previous file for Wolystoq
-owner = MLS
-controller = MLS
-add_core = MLS
 culture = maliseet
 religion = totemism
 capital = "Quak'm'kagan'ik"

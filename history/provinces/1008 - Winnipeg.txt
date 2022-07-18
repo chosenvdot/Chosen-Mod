@@ -1,9 +1,6 @@
  
 #1008 - Winnipeg
 
-owner = ASI
-controller = ASI
-add_core = ASI
 is_city = yes
 culture = nakota
 religion = totemism

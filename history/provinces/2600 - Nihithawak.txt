@@ -1,9 +1,6 @@
  
 # No previous file for Nihithawak
 
-owner = BVR			#Beaver people
-controller = BVR
-add_core = BVR
 is_city = yes
 culture = athabascan
 religion = totemism

@@ -1,9 +1,6 @@
 
 #995 - Atiamekw
 
-owner = MGT			#Innu
-controller = MGT
-add_core = MGT
 is_city = yes
 culture = innu
 religion = totemism
@@ -27,9 +24,6 @@ discovered_by = north_american
 	trade_goods = unknown
 }
 1444.11.17 = { #BeyondTypus batch edit shortcut no native start date end
-	owner = MGT
-	controller = MGT
-	add_core = MGT
 	is_city = yes
 	trade_goods = fur
 }
