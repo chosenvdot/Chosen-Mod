@@ -3,8 +3,8 @@
 #Region - Germany
 #Area - Lower Saxony
 
-owner = GTT
-controller = GTT
+owner = HES
+controller = HES
 culture = lower_saxon
 religion = catholic
 capital = "Göttingen"
@@ -14,7 +14,7 @@ base_tax = 4
 base_production = 3
 base_manpower = 3
 is_city = yes
-add_core = GTT
+add_core = HES
 
 discovered_by = western
 discovered_by = muslim

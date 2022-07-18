@@ -3,9 +3,9 @@
 #Region - France
 #Area - Languedoc
 
-owner = ARA
-controller = ARA
-add_core = ARA
+owner = FOI
+controller = FOI
+add_core = FOI
 capital = "Foix"
 is_city = yes
 culture = occitain	#aquitaine vanilla
