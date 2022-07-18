@@ -1,9 +1,6 @@
  
 # No previous file for Omushkego
 
-owner = MKG			#Swampy Cree
-controller = MKG
-add_core = MKG
 is_city = yes
 culture = cree
 religion = totemism

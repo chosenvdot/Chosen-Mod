@@ -1,9 +1,6 @@
  
 # No previous file for Beyond Typus province
 
-owner = CPY			#Chipewyan
-controller = CPY
-add_core = CPY
 is_city = yes
 culture = chipewyan
 religion = totemism 

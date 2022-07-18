@@ -1,9 +1,6 @@
  
 # No previous file for Beyond Typus province
 
-owner = DNE			#Deh Cho Dene
-controller = DNE
-add_core = DNE
 is_city = yes
 culture = slavey
 religion = totemism 

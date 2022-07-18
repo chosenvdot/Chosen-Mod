@@ -1,8 +1,5 @@
 # No previous file for Wampanoag
 
-owner = WAM
-controller = WAM
-add_core = WAM
 culture = massachusset
 religion = totemism
 capital = "Wampanoag"
