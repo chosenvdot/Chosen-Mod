@@ -1,9 +1,9 @@
  
 #794 - Jujuy
 
-owner = CCQ
-controller = CCQ
-add_core = CCQ
+owner = CSU
+controller = CSU
+add_core = CSU
 culture = diaguita
 discovered_by = south_american
 discovered_by = andean

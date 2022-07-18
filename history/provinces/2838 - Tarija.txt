@@ -1,9 +1,9 @@
  
 # - Tarija
 
-owner = CCQ
-controller = CCQ
-add_core = CCQ
+owner = CSU
+controller = CSU
+add_core = CSU
 is_city = yes
 culture = aimara
 
