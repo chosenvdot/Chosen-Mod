@@ -1,8 +1,8 @@
  
 #4261 - Ustyuzhna
 
-owner = BLO
-controller = BLO
+owner = MOS
+controller = MOS
 culture = russian
 religion = orthodox
 hre = no
@@ -12,7 +12,7 @@ trade_goods = iron			#One of the most important centres for iron in early modern
 base_manpower = 2 
 capital = "Ustyuzhna"
 is_city = yes
-add_core = BLO
+add_core = MOS
 
 discovered_by = eastern
 discovered_by = western

@@ -1,9 +1,9 @@
 
 #839 - Pipil
 
-owner = CHT
-controller = CHT
-add_core = CHT
+owner = AZT
+controller = AZT
+add_core = AZT
 is_city = yes
 culture = highland_mayan 
 religion = mesoamerican_religion
