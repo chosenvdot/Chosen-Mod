@@ -1,2 +1,2 @@
-
+historical_rival = LIT
 primary_culture = russian

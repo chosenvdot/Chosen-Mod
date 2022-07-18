@@ -1,8 +1,8 @@
  
 #4255 - Pronsk
 
-owner = PRS
-controller = PRS
+owner = RYA
+controller = RYA
 culture = russian
 religion = orthodox
 hre = no
@@ -12,7 +12,7 @@ trade_goods = iron
 base_manpower = 4 
 capital = "Pronsk"
 is_city = yes
-add_core = PRS
+add_core = RYA
 fort_15th = yes
 
 discovered_by = eastern

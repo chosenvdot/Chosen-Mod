@@ -1,9 +1,9 @@
  
 #New Beyond Typus Province
 
-owner = GLC
-controller = GLC
-add_core = GLC
+owner = MOS
+controller = MOS
+add_core = MOS
 culture = russian
 religion = orthodox
 capital = "Khotshin"

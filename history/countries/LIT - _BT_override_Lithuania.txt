@@ -1,6 +1,7 @@
 
 historical_rival = TUR
 historical_rival = MOS
+historical_rival = NOV
 historical_rival = RUS
 
 

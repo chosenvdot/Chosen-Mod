@@ -3,8 +3,8 @@
 #Region - Russia
 #Area - Novgorod
 
-owner = GLC
-controller = GLC
+owner = MOS
+controller = MOS
 culture = russian #116novogorodian
 religion = orthodox
 hre = no
@@ -14,7 +14,7 @@ trade_goods = livestock
 base_manpower = 2 
 capital = "Rzhev"
 is_city = yes
-add_core = GLC
+add_core = MOS
 fort_15th = yes
 #True, contested, but I'm not sure this is the best way to represent it. Tver and Moscovy didn't get along so badly, and Novgorod had other priorities.
 #add_core = TVE			#Region bitterly contested between all the local powers
