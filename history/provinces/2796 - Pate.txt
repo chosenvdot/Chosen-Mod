@@ -1,9 +1,6 @@
  
 #2796 - Pate
 
-owner = AJU
-controller = AJU
-add_core = AJU
 culture = swahili
 religion = sunni
 capital = "Siyu"

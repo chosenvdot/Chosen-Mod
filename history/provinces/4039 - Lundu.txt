@@ -1,9 +1,6 @@
  
 #Lundu
 
-owner = LDU
-controller = LDU
-add_core = LDU
 culture = nyasa
 religion = shamanism #Fetishism
 capital = "Mbebwe"

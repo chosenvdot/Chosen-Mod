@@ -1,9 +1,6 @@
  
 #Lomwe
 
-owner = LDU
-controller = LDU
-add_core = LDU
 culture = makua
 religion = shamanism #Fetishism
 capital = "Lomwe"

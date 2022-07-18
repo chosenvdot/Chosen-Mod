@@ -1,9 +1,7 @@
  
 #1112 - Trarza
 
-owner = JOL
-controller = JOL
-add_core = JOL
+
 is_city = yes
 culture = senegambian
 capital = "Awlil"

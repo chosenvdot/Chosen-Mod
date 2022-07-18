@@ -1,9 +1,6 @@
  
 #1200 - Tanga
 
-owner = MLI
-controller = MLI
-add_core = MLI
 culture = swahili
 religion = shamanism #Fetishism
 capital = "Vumba Kuu"

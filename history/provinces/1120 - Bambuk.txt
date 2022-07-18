@@ -1,18 +1,15 @@
  
 #1120 - Bambuk
 
-owner = MAL
-controller = MAL
 culture = soninke
 is_city = yes
-base_manpower = 4
+base_manpower = 2
 religion = shamanism #Fetishism
 capital = "Bambuk"
 trade_goods = gold
 hre = no
-base_tax = 12 
-base_production = 12
-add_core = MAL
+base_tax = 1
+base_production = 1
 
 
 

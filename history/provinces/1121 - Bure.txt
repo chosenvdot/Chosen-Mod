@@ -1,8 +1,6 @@
  
 #1121 - Bure
 
-owner = MAL
-controller = MAL
 culture = mali
 is_city = yes
 base_manpower = 4
@@ -10,9 +8,8 @@ religion = shamanism #Fetishism
 capital = "Kurussa"
 trade_goods = gold
 hre = no
-base_tax = 12 
-base_production = 12
-add_core = MAL
+base_tax = 1
+base_production = 1
 
 
 

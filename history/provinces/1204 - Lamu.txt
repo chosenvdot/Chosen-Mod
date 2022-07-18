@@ -1,9 +1,6 @@
  
 #1204 - Lamu
 
-owner = MLI
-controller = MLI
-add_core = MLI
 culture = swahili
 religion = sunni
 capital = "Lamu"
