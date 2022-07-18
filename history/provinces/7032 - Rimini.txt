@@ -1,9 +1,9 @@
  
 #BT Italy reoverhaul
 
-owner = MTS
-controller = MTS
-add_core = MTS
+owner = PAP
+controller = PAP
+add_core = PAP
 culture = romagnan
 religion = catholic
 capital = "Rimini"
