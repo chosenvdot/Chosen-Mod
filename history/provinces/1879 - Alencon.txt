@@ -17,7 +17,8 @@ base_manpower = 3
 add_core = ALE
 add_core = ENG
 add_core = NRM
-add_core = FRA
+add_permanent_claim = FRA
+# add_core = FRA
 fort_15th = yes
 
 discovered_by = eastern

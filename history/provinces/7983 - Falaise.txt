@@ -4,8 +4,9 @@
 owner = ENG
 controller = ENG
 add_core = ENG
-add_core = FRA
+# add_core = FRA
 add_core = NRM
+add_permanent_claim = FRA
 culture = normand
 religion = catholic
 capital = "Falaise"
