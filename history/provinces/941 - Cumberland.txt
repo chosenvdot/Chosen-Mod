@@ -1,31 +1,23 @@
-
 #941 - Cumberland
 
-owner = CCA
-controller = CCA
-add_core = CCA
+
 culture = yuchi
 religion = totemism
-capital = "Cumberland"
+capital = "Ouasioto"
 trade_goods = fur
 hre = no
-is_city = yes
-base_tax = 1 
-base_production = 1 
-base_manpower = 1 
+base_tax = 1
+base_production = 1
+base_manpower = 1
+native_size = 5
+native_ferocity = 1
+native_hostileness = 6
 
 
 
 discovered_by = north_american
 
 
-1650.1.1 = {
-	owner = SHA
-	controller = SHA
-	add_core = SHA
-	is_city = yes
-	trade_goods = fur
-} #Shawnee migrations in the Beaver Wars
 1671.1.1 = { discovered_by = ENG } # Abraham Wood
 1672.1.1 = {
 	owner = IRO
@@ -36,29 +28,11 @@ discovered_by = north_american
 1701.8.14 = {
 	owner = ---
 	controller = ---
-	remove_core = SHA
+	remove_core = HWK
 	is_city = no
 	culture = shawnee
 } #Vast areas left deserted after the Beaver Wars and the Iroquois withdrawal
 1707.5.12 = { discovered_by = GBR }
-1710.1.1 = {
-	owner = SHA
-	controller = SHA
-	add_core = SHA
-	is_city = yes
-} #Shawnee begins drifting northward again, back toward Ohio
-1720.1.1 = {
-	owner = ---
-	controller = ---
-	is_city = no 
-	remove_core = SHA
-} #Shawnees continue drifting northward
-1750.1.1 = {
-	owner = SHA
-	controller = SHA
-	add_core = SHA
-	is_city = yes
-} #return of the Shawnee to large territories
 1774.10.19= {
 	owner = GBR
 	controller = GBR

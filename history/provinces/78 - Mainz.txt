@@ -7,13 +7,13 @@ capital = "Mainz"
 culture = hessian
 religion = catholic
 trade_goods = wine
-owner = MAI
+owner = HES
 base_tax = 8
 base_production = 7
 base_manpower = 5
 is_city = yes
-add_core = MAI
-controller = MAI
+add_core = HES
+controller = HES
 hre = yes
 center_of_trade = 2
 

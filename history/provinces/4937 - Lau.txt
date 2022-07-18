@@ -1,19 +1,16 @@
- 
-# new in 1.31
+#4937 - Lau
 
-owner = LAI
-controller = LAI
-add_core = LAI
-culture = polynesian # ??? BT; melanesian
+
+culture = melanesian
 religion = animism
-capital = "Bau"
-is_city = yes
 hre = no
+capital = "Bau"
+
+trade_goods = unknown
 base_tax = 1
 base_production = 1
 base_manpower = 1
-trade_goods = livestock
-
 discovered_by = polynesian_tech
+
 
 1643.1.1 = { discovered_by = NED } # Abel Tasman

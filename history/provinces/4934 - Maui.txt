@@ -1,25 +1,17 @@
- 
-# ex 5817
-# owned in 1.31
+#4934 - Maui
 
-owner = MAU
-controller = MAU
-add_core = MAU
-culture = hawaiian # BT; polynesian
+
+culture = polynesian
 religion = animism
-capital = "Lahaina"
-is_city = yes
 hre = no
-base_tax = 1 # BT; 2
-base_production = 1 # BT; 2
-base_manpower = 1
-trade_goods = naval_supplies
-# ??? below
-#native_size = 10
-#native_ferocity = 1
-#native_hostileness = 3
+capital = "Lahaina"
 
-discovered_by = polynesian_tech # 1.31
+trade_goods = unknown
+base_tax = 2 
+base_production = 2
+base_manpower = 1
+discovered_by = polynesian_tech
+
 
 1555.1.1 = { discovered_by = SPA }
-1778.1.1 = { discovered_by = GBR } #James Cook
+1778.1.1 = { discovered_by = GBR }

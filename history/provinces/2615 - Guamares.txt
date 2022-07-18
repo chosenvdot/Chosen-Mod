@@ -1,18 +1,14 @@
- 
 # No previous file for Guamares
 
 culture = guamares
 religion = animism
-owner = GAM
-controller = GAM
-add_core = GAM
-is_city = yes
+
 capital = "Pechichitane"
 trade_goods = gold
 hre = no
-base_tax = 2 
-base_production = 2 
-base_manpower = 2
+base_tax = 1
+base_production = 1
+base_manpower = 1
 
 
 
