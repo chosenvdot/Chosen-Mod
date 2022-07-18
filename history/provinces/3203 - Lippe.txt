@@ -3,8 +3,8 @@
 #Region - Germany
 #Area - Westphalia
 
-owner = LPP
-controller = LPP
+owner = GOS
+controller = GOS
 culture = lower_saxon
 religion = catholic
 trade_goods = wool
@@ -14,7 +14,7 @@ base_production = 4
 base_manpower = 3
 hre = yes
 is_city = yes
-add_core = LPP
+add_core = GOS
 
 discovered_by = western
 discovered_by = muslim

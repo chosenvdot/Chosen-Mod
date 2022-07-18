@@ -1,9 +1,9 @@
  
 # - Euboea
 
-owner = NEG
-controller = NEG
-add_core = NEG
+owner = NAX
+controller = NAX
+add_core = NAX
 culture = greek
 religion = orthodox
 capital = "Negroponte"

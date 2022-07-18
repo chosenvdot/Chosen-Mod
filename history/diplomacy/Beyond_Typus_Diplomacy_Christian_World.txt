@@ -93,21 +93,6 @@ vassal = {
 	end_date = 1607.1.1
 }
 
-#Burgundian Unions
-vassal = {
-	first = BUR
-	second = LXL
-	start_date = 1444.1.1
-	end_date = 1477.1.5
-}
-
-guarantee = {
-	first = BUR
-	second = CMB
-	start_date = 1444.1.1
-	end_date = 1477.1.5
-}
-
 #Other Stuff
 # Provence and Lorraine under René of Anjou
 union = {
