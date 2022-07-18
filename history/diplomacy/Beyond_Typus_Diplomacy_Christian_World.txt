@@ -159,13 +159,13 @@ guarantee = {
 	end_date = 1513.1.1		 #Occupied by English, who later restored it to direct French authority.
 }
 
-#Seperation of the Crown of Aragon
-union = {
-	first = ARA
-	second = SAR
-	start_date = 1421.1.1
-	end_date = 1516.1.22
-}
+# #Seperation of the Crown of Aragon
+# union = {
+# 	first = ARA
+# 	second = SAR
+# 	start_date = 1421.1.1
+# 	end_date = 1516.1.22
+# }
 vassal = { #marquisate of Oristano
 	first = ARA
 	second = ARR
