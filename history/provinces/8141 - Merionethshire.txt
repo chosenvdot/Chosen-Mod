@@ -6,8 +6,8 @@
 #Core Details
 capital = "Dolgelley" #Archaic English Name
 is_city = yes
-owner = WLS
-controller = WLS
+owner = ENG
+controller = ENG
 
 #Demographics
 culture = welsh
@@ -21,6 +21,7 @@ trade_goods = wool
 
 #Cores and Occupation (Alphabetical after current)
 add_core = WLS
+add_core = ENG
 
 #Other Political
 hre = no

@@ -3,9 +3,9 @@
 #Region - Ireland
 #Area - Connacht
 
-owner = GLW
-controller = GLW
-add_core = GLW
+owner = MYO
+controller = MYO
+add_core = MYO
 culture = irish
 religion = catholic
 hre = no

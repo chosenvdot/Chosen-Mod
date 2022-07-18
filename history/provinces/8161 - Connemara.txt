@@ -6,8 +6,8 @@
 #Core Details
 capital = "Annaghdown"
 is_city = yes
-owner = WCO
-controller = WCO
+owner = MYO
+controller = MYO
 
 #Demographics
 culture = irish
@@ -20,7 +20,7 @@ base_manpower = 1
 trade_goods = bt_trade_good_apiculture
 
 #Cores and Occupation (Alphabetical after current)
-add_core = WCO
+add_core = MYO
 
 #Other Political
 hre = no

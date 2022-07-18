@@ -6,8 +6,8 @@
 #Core Details
 capital = "Enniskillen"
 is_city = yes
-owner = FGH
-controller = FGH
+owner = TYR
+controller = TYR
 
 #Demographics
 culture = irish
@@ -20,7 +20,7 @@ base_manpower = 1
 trade_goods = livestock
 
 #Cores and Occupation (Alphabetical after current)
-add_core = FGH
+add_core = TYR
 
 #Other Political
 hre = no

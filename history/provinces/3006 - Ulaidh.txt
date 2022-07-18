@@ -3,9 +3,9 @@
 #Region - Ireland
 #Area - Ulster
 
-owner = CLN
-controller = CLN
-add_core = CLN
+owner = TYR
+controller = TYR
+add_core = TYR
 culture = irish
 religion = catholic
 hre = no
