@@ -324,27 +324,6 @@ vassal = {
 	end_date = 1475.1.1 #Ottoman conquest
 } #Gazaria
 
-union = {
-	first = FER
-	second = MOD
-	start_date = 1291.5.19
-	end_date = 1291.5.21
-}
-
-union = {
-	first = FER
-	second = MOD
-	start_date = 1291.5.26
-	end_date = 1308.1.1 #An independent commune gains control of Modena
-}
-
-union = {
-	first = FER
-	second = MOD
-	start_date = 1336.1.1 #Este family back in control 
-	end_date = 1516.1.1 #Papal rule interrupts Este
-}
-
 #Switzerland-Basel
 guarantee = {
 	first = SWI

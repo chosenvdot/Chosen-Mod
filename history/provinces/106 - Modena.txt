@@ -3,8 +3,8 @@
 #Region - Italy
 #Area - Emilia-Romagna
 
-owner = MOD
-controller = MOD
+owner = FER
+controller = FER
 culture = romagnan 
 religion = catholic 
 hre = yes 
@@ -14,7 +14,7 @@ trade_goods = wine # famous vinegar and Lambrusco wine
 base_manpower = 4
 capital = "Modena" 
 is_city = yes	# Estimated #wtf Paradox Modena was a city long before Swedes discovered tools -Nikicaga #Hehe Nikicaga... though you're not wrong. To be fair, they have apparently removed this note in recent versions. -Draiocht
-add_core = MOD
+add_core = FER
 
 discovered_by = western
 discovered_by = eastern

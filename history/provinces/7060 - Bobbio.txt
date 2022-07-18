@@ -1,9 +1,9 @@
  
 #BT Italy reoverhaul
 
-owner = BOB
-controller = BOB
-add_core = BOB
+owner = MLO
+controller = MLO
+add_core = MLO
 culture = romagnan
 religion = catholic
 capital = "Bobbio"
