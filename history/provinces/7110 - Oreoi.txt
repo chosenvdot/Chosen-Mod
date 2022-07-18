@@ -1,9 +1,9 @@
  
 #BT Balkans reoverhaul
 
-owner = NAX
-controller = NAX
-add_core = NAX
+owner = VEN
+controller = VEN
+add_core = VEN
 culture = greek
 religion = orthodox
 capital = "Oreoi"
