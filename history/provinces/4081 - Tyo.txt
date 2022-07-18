@@ -1,7 +1,4 @@
  
-owner = KON
-controller = KON
-add_core = KON
 culture = kongolese
 religion = shamanism #Fetishism
 capital = "Okango"
