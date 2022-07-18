@@ -1,3 +1,4 @@
+ 
 #2766 - Mendefera
 
 owner = MED
@@ -5,13 +6,13 @@ controller = MED
 add_core = MED
 culture = tigray 
 religion = coptic
-capital = "Mendefera"
+capital = "Sanhit"
 is_city = yes
-base_manpower = 2
+base_manpower = 2 
 trade_goods = grain
 hre = no
 base_tax = 2 
-base_production = 2
+base_production = 2 
 
 discovered_by = east_african
 discovered_by = muslim
@@ -21,5 +22,5 @@ discovered_by = indian
 
 1499.1.1 = { discovered_by = POR }
 1550.1.1 = { discovered_by = TUR }
-1588.1.1 = { revolt_risk = 7 } # Raids by Sarsa Dengel
-1589.1.1 = { revolt_risk = 0 }
+1588.1.1 = { unrest = 7 } # Raids by Sarsa Dengel
+1589.1.1 = { unrest = 0 }

@@ -1,23 +1,42 @@
+ 
 #1859 - Torun
+#Region - Baltic
+#Area - West Prussia
 
 owner = TEU
 controller = TEU
-capital = "Torun"
+capital = "Thorn"
 is_city = yes
-culture = polish
+culture = prussian
 religion = catholic
 trade_goods = grain
 hre = no
-base_tax = 4
-base_production = 4
-base_manpower = 2
+base_tax = 6 
+base_production = 6 
+base_manpower = 4
 add_core = TEU
+fort_15th = yes
+center_of_trade = 1
+
 discovered_by = western
-discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
+discovered_by = eastern
 
+1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
+	remove_core = TEU
+	add_core = PMS
+	owner = PMS
+	controller = PMS
+} #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
+1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
+	remove_core = PMS
+	add_core = TEU
+	owner = TEU
+	controller = TEU
+} #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
 
+#1444 onwards
 1466.10.19 = {
 	owner = POL
 	controller = POL
@@ -30,8 +49,10 @@ discovered_by = ottoman
 	remove_core = POL
 	add_core = PLC
 } # Union of Lublin
+1557.1.1 = { religion = protestant }
 1588.1.1 = { revolt = { type = revolutionary_rebels size = 0 } controller = REB } # Civil war, Polish succession
 1589.1.1 = { revolt = {} controller = PLC } # Coronation of Sigismund III
+1595.1.1 = { religion = catholic }
 1655.1.1 = { controller = SWE } # The Deluge
 1660.1.1 = { controller = PLC }
 1772.9.22 = { controller = PRU owner = PRU add_core = PRU } # First partition

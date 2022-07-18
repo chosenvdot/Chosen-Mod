@@ -1,3 +1,4 @@
+ 
 #506 - Multan
 
 owner = MUL
@@ -5,13 +6,13 @@ controller = MUL
 culture = panjabi
 religion = sunni
 capital = "Multan"
-trade_goods = cloth #Chintz
+trade_goods = paper			#formerly cloth #Chintz
 hre = no
-base_tax = 5
-base_production = 5
-base_manpower = 2
+base_tax = 10
+base_production = 10
+base_manpower = 4
 is_city = yes
-#add_core = DLH
+add_core = DLH
 add_core = MUL
 discovered_by = indian
 discovered_by = nomad_group

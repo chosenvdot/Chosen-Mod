@@ -1,98 +1,3 @@
-#estate_church_one_faith_one_culture = {
-#	icon = privilege_one_faith_one_culture
-#	max_absolutism = -5
-#	influence = 0.3
-#	loyalty = 0.1
-#	land_share = 5
-#	is_valid = {
-#		always = no
-#	}
-#	can_select = {
-#	}
-#	
-#	
-#	penalties = {
-#		tolerance_heathen = -2
-#		tolerance_heretic = -2
-#	}
-#	benefits = {
-#		global_missionary_strength = 0.01
-#	}
-#
-#}
-#estate_church_brahmins_at_court = {
-#	icon = privilege_seek_support_of_brahmins
-#	can_select = {
-#		if = {
-#			limit = {
-#				has_mission = mnd_khm_religion
-#			}
-#			mission_completed = mnd_khm_religion
-#		}
-#		else_if = {
-#			limit = {
-#				has_mission = mnd_khm_religion
-#			}
-#			mission_completed = mnd_siam_devaraja
-#		}
-#		else = {
-#			has_estate_privilege = estate_church_brahmins_at_court
-#		}
-#		religion_group = eastern
-#	}
-#	is_valid = {
-#		always = no
-#	}
-#	on_granted = {
-#		custom_tooltip = estate_brahmins_guaranteed_autonomy_effect_tooltip
-#	}
-#	on_granted_province = {
-#		if = {
-#			limit = {
-#				religion = hinduism
-#			}
-#			add_province_modifier = {
-#				name = estate_brahmins_guaranteed_autonomy_mod
-#				duration = -1
-#			}
-#		}
-#		else_if = {
-#			limit = {
-#				has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
-#			}
-#			remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
-#		}
-#	}
-#	on_revoked = {
-#		custom_tooltip = estate_brahmins_guaranteed_autonomy_revoke_effect_tooltip
-#	}
-#	on_revoked_province = {
-#		if = {
-#			limit = {
-#				has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
-#			}
-#			remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
-#		}
-#	}
-#	on_invalid = {
-#		custom_tooltip = estate_brahmins_guaranteed_autonomy_revoke_effect_tooltip
-#	}
-#	on_invalid_province = {
-#		if = {
-#			limit = {
-#				has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
-#			}
-#			remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
-#		}
-#	}
-#	penalties = {
-#	}
-#	benefits = {
-#	}
-#	ai_will_do = {
-#		factor = 1000
-#	}
-#}
 estate_brahmins_land_rights = {
 	icon = privilege_grant_autonomy
 	land_share = 5
@@ -100,14 +5,13 @@ estate_brahmins_land_rights = {
 	loyalty = 0.05
 	influence = 0.05
 	can_select = {
-	
 	}
 	on_granted = {
 	}
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 200
 	}
 	ai_will_do = {
 		factor = 5
@@ -161,8 +65,122 @@ estate_brahmins_land_rights = {
 			NOT = { has_estate_privilege = estate_brahmins_land_rights }
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				AND = {
+					governing_capacity_percentage = 0.9
+					NOT = { has_estate_privilege = estate_brahmins_land_rights }
+				}
+				#The trigger below should make sure that the AI actually keeps this privilege when enacting it early game
+				AND = {
+					governing_capacity_percentage = 0.6
+					has_estate_privilege = estate_brahmins_land_rights
+				}
+			}
+		}
+		modifier = {
 			factor = 0.8
 			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 2
+			governing_capacity_percentage = 0.9
+		}
+		modifier = {
+			factor = 3
+			governing_capacity_percentage = 1
+		}
+		modifier = {
+			factor = 10
+			governing_capacity_percentage = 1.2
+		}
+		modifier = {
+			factor = 8
+			NOT = { adm_tech = 12 }
+			governing_capacity_percentage = 0.8
+		}
+		modifier = {
+			factor = 5
+			NOT = { adm_tech = 12 }
+			NOT = { government_rank = 1 }
+			governing_capacity_percentage = 0.65
+		}
+		#Tag specific convincement - after tech 17 (+250 governing capacity) it should not play a role anymore
+		modifier = {
+			factor = 1.25
+			tag = MOS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = RUS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = TUR
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = MNG
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = FRA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = SPA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = PLC
+			NOT = { adm_tech = 17 }
+		}
+		#Has already a similar privilege active
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nobles_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_church_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_maratha_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_burghers_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_vaisyas_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_cossacks_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nomadic_tribes_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_dhimmi_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_jains_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_rajput_land_rights
 		}
 	}
 }
@@ -174,14 +192,13 @@ estate_nobles_land_rights = {
 	loyalty = 0.05
 	influence = 0.05
 	can_select = {
-	
 	}
 	on_granted = {
 	}
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 200
 	}
 	ai_will_do = {
 		factor = 5
@@ -209,8 +226,22 @@ estate_nobles_land_rights = {
 			NOT = { has_estate_privilege = estate_nobles_land_rights }
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				AND = {
+					governing_capacity_percentage = 0.9
+					NOT = { has_estate_privilege = estate_nobles_land_rights }
+				}
+				#The trigger below should make sure that the AI actually keeps this privilege when enacting it early game
+				AND = {
+					governing_capacity_percentage = 0.6
+					has_estate_privilege = estate_nobles_land_rights
+				}
+			}
+		}
+		modifier = {
 			factor = 0
-			NOT = { num_of_territories = 1 }
+			NOT = { governing_capacity_percentage = 0.5 }
 		}
 		modifier = {
 			factor = 0.8
@@ -238,6 +269,106 @@ estate_nobles_land_rights = {
 			factor = 0.8
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 2
+			governing_capacity_percentage = 0.9
+		}
+		modifier = {
+			factor = 3
+			governing_capacity_percentage = 1
+		}
+		modifier = {
+			factor = 10
+			governing_capacity_percentage = 1.2
+		}
+		modifier = {
+			factor = 8
+			NOT = { adm_tech = 12 }
+			governing_capacity_percentage = 0.8
+		}
+		modifier = {
+			factor = 5
+			NOT = { adm_tech = 12 }
+			NOT = { government_rank = 1 }
+			governing_capacity_percentage = 0.65
+		}
+		#Tag specific convincement - after tech 17 (+250 governing capacity) it should not play a role anymore
+		modifier = {
+			factor = 1.25
+			tag = MOS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = RUS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = TUR
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = MNG
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = FRA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = SPA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = PLC
+			NOT = { adm_tech = 17 }
+		}
+		#Has already a similar privilege active
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_brahmins_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_church_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_maratha_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_burghers_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_vaisyas_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_cossacks_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nomadic_tribes_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_dhimmi_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_jains_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_rajput_land_rights
+		}
 	}
 }
 
@@ -248,14 +379,13 @@ estate_church_land_rights = {
 	loyalty = 0.05
 	influence = 0.05
 	can_select = {
-	
 	}
 	on_granted = {
 	}
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 200
 	}
 	ai_will_do = {
 		factor = 5
@@ -284,7 +414,21 @@ estate_church_land_rights = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { num_of_territories = 1 }
+			NOT = { governing_capacity_percentage = 0.5 }
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				AND = {
+					governing_capacity_percentage = 0.9
+					NOT = { has_estate_privilege = estate_church_land_rights }
+				}
+				#The trigger below should make sure that the AI actually keeps this privilege when enacting it early game
+				AND = {
+					governing_capacity_percentage = 0.6
+					has_estate_privilege = estate_church_land_rights
+				}
+			}
 		}
 		modifier = {
 			factor = 0.8
@@ -312,6 +456,106 @@ estate_church_land_rights = {
 			factor = 0.8
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 2
+			governing_capacity_percentage = 0.9
+		}
+		modifier = {
+			factor = 3
+			governing_capacity_percentage = 1
+		}
+		modifier = {
+			factor = 10
+			governing_capacity_percentage = 1.2
+		}
+		modifier = {
+			factor = 8
+			NOT = { adm_tech = 12 }
+			governing_capacity_percentage = 0.8
+		}
+		modifier = {
+			factor = 5
+			NOT = { adm_tech = 12 }
+			NOT = { government_rank = 1 }
+			governing_capacity_percentage = 0.65
+		}
+		#Tag specific convincement - after tech 17 (+250 governing capacity) it should not play a role anymore
+		modifier = {
+			factor = 1.25
+			tag = MOS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = RUS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = TUR
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = MNG
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = FRA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = SPA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = PLC
+			NOT = { adm_tech = 17 }
+		}
+		#Has already a similar privilege active
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_brahmins_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nobles_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_maratha_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_burghers_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_vaisyas_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_cossacks_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nomadic_tribes_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_dhimmi_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_jains_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_rajput_land_rights
+		}
 	}
 }
 
@@ -322,15 +566,13 @@ estate_maratha_land_rights = {
 	loyalty = 0.05
 	influence = 0.05
 	can_select = {
-	
-
 	}
 	on_granted = {
 	}
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 200
 	}
 	ai_will_do = {
 		factor = 5
@@ -358,8 +600,22 @@ estate_maratha_land_rights = {
 			NOT = { has_estate_privilege = estate_maratha_land_rights }
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				AND = {
+					governing_capacity_percentage = 0.9
+					NOT = { has_estate_privilege = estate_maratha_land_rights }
+				}
+				#The trigger below should make sure that the AI actually keeps this privilege when enacting it early game
+				AND = {
+					governing_capacity_percentage = 0.6
+					has_estate_privilege = estate_maratha_land_rights
+				}
+			}
+		}
+		modifier = {
 			factor = 0
-			NOT = { num_of_territories = 1 }
+			NOT = { governing_capacity_percentage = 0.5 }
 		}
 		modifier = {
 			factor = 0.8
@@ -387,6 +643,106 @@ estate_maratha_land_rights = {
 			factor = 0.8
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 2
+			governing_capacity_percentage = 0.9
+		}
+		modifier = {
+			factor = 3
+			governing_capacity_percentage = 1
+		}
+		modifier = {
+			factor = 10
+			governing_capacity_percentage = 1.2
+		}
+		modifier = {
+			factor = 8
+			NOT = { adm_tech = 12 }
+			governing_capacity_percentage = 0.8
+		}
+		modifier = {
+			factor = 5
+			NOT = { adm_tech = 12 }
+			NOT = { government_rank = 1 }
+			governing_capacity_percentage = 0.65
+		}
+		#Tag specific convincement - after tech 17 (+250 governing capacity) it should not play a role anymore
+		modifier = {
+			factor = 1.25
+			tag = MOS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = RUS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = TUR
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = MNG
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = FRA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = SPA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = PLC
+			NOT = { adm_tech = 17 }
+		}
+		#Has already a similar privilege active
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_brahmins_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nobles_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_church_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_burghers_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_vaisyas_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_cossacks_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nomadic_tribes_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_dhimmi_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_jains_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_rajput_land_rights
+		}
 	}
 }
 
@@ -397,14 +753,13 @@ estate_burghers_land_rights = {
 	loyalty = 0.05
 	influence = 0.05
 	can_select = {
-
 	}
 	on_granted = {
 	}
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 200
 	}
 	ai_will_do = {
 		factor = 5
@@ -432,8 +787,22 @@ estate_burghers_land_rights = {
 			NOT = { has_estate_privilege = estate_burghers_land_rights }
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				AND = {
+					governing_capacity_percentage = 0.9
+					NOT = { has_estate_privilege = estate_burghers_land_rights }
+				}
+				#The trigger below should make sure that the AI actually keeps this privilege when enacting it early game
+				AND = {
+					governing_capacity_percentage = 0.6
+					has_estate_privilege = estate_burghers_land_rights
+				}
+			}
+		}
+		modifier = {
 			factor = 0
-			NOT = { num_of_territories = 1 }
+			NOT = { governing_capacity_percentage = 0.5 }
 		}
 		modifier = {
 			factor = 0.8
@@ -461,6 +830,106 @@ estate_burghers_land_rights = {
 			factor = 0.8
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 2
+			governing_capacity_percentage = 0.9
+		}
+		modifier = {
+			factor = 3
+			governing_capacity_percentage = 1
+		}
+		modifier = {
+			factor = 10
+			governing_capacity_percentage = 1.2
+		}
+		modifier = {
+			factor = 8
+			NOT = { adm_tech = 12 }
+			governing_capacity_percentage = 0.8
+		}
+		modifier = {
+			factor = 5
+			NOT = { adm_tech = 12 }
+			NOT = { government_rank = 1 }
+			governing_capacity_percentage = 0.65
+		}
+		#Tag specific convincement - after tech 17 (+250 governing capacity) it should not play a role anymore
+		modifier = {
+			factor = 1.25
+			tag = MOS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = RUS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = TUR
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = MNG
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = FRA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = SPA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = PLC
+			NOT = { adm_tech = 17 }
+		}
+		#Has already a similar privilege active
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_brahmins_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nobles_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_church_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_maratha_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_vaisyas_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_cossacks_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nomadic_tribes_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_dhimmi_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_jains_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_rajput_land_rights
+		}
 	}
 }
 
@@ -471,14 +940,13 @@ estate_vaisyas_land_rights = {
 	loyalty = 0.05
 	influence = 0.05
 	can_select = {
-
 	}
 	on_granted = {
 	}
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 200
 	}
 	ai_will_do = {
 		factor = 5
@@ -506,8 +974,22 @@ estate_vaisyas_land_rights = {
 			NOT = { has_estate_privilege = estate_vaisyas_land_rights }
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				AND = {
+					governing_capacity_percentage = 0.9
+					NOT = { has_estate_privilege = estate_vaisyas_land_rights }
+				}
+				#The trigger below should make sure that the AI actually keeps this privilege when enacting it early game
+				AND = {
+					governing_capacity_percentage = 0.6
+					has_estate_privilege = estate_vaisyas_land_rights
+				}
+			}
+		}
+		modifier = {
 			factor = 0
-			NOT = { num_of_territories = 1 }
+			NOT = { governing_capacity_percentage = 0.5 }
 		}
 		modifier = {
 			factor = 0.8
@@ -535,6 +1017,106 @@ estate_vaisyas_land_rights = {
 			factor = 0.8
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 2
+			governing_capacity_percentage = 0.9
+		}
+		modifier = {
+			factor = 3
+			governing_capacity_percentage = 1
+		}
+		modifier = {
+			factor = 10
+			governing_capacity_percentage = 1.2
+		}
+		modifier = {
+			factor = 8
+			NOT = { adm_tech = 12 }
+			governing_capacity_percentage = 0.8
+		}
+		modifier = {
+			factor = 5
+			NOT = { adm_tech = 12 }
+			NOT = { government_rank = 1 }
+			governing_capacity_percentage = 0.65
+		}
+		#Tag specific convincement - after tech 17 (+250 governing capacity) it should not play a role anymore
+		modifier = {
+			factor = 1.25
+			tag = MOS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = RUS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = TUR
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = MNG
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = FRA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = SPA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = PLC
+			NOT = { adm_tech = 17 }
+		}
+		#Has already a similar privilege active
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_brahmins_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nobles_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_church_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_maratha_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_burghers_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_cossacks_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nomadic_tribes_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_dhimmi_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_jains_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_rajput_land_rights
+		}
 	}
 }
 
@@ -551,7 +1133,7 @@ estate_cossacks_land_rights = {
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 200
 	}
 	ai_will_do = {
 		factor = 5
@@ -579,8 +1161,22 @@ estate_cossacks_land_rights = {
 			NOT = { has_estate_privilege = estate_cossacks_land_rights }
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				AND = {
+					governing_capacity_percentage = 0.9
+					NOT = { has_estate_privilege = estate_cossacks_land_rights }
+				}
+				#The trigger below should make sure that the AI actually keeps this privilege when enacting it early game
+				AND = {
+					governing_capacity_percentage = 0.6
+					has_estate_privilege = estate_cossacks_land_rights
+				}
+			}
+		}
+		modifier = {
 			factor = 0
-			NOT = { num_of_territories = 1 }
+			NOT = { governing_capacity_percentage = 0.5 }
 		}
 		modifier = {
 			factor = 0.8
@@ -608,6 +1204,293 @@ estate_cossacks_land_rights = {
 			factor = 0.8
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 2
+			governing_capacity_percentage = 0.9
+		}
+		modifier = {
+			factor = 3
+			governing_capacity_percentage = 1
+		}
+		modifier = {
+			factor = 10
+			governing_capacity_percentage = 1.2
+		}
+		modifier = {
+			factor = 8
+			NOT = { adm_tech = 12 }
+			governing_capacity_percentage = 0.8
+		}
+		modifier = {
+			factor = 5
+			NOT = { adm_tech = 12 }
+			NOT = { government_rank = 1 }
+			governing_capacity_percentage = 0.65
+		}
+		#Tag specific convincement - after tech 17 (+250 governing capacity) it should not play a role anymore
+		modifier = {
+			factor = 1.25
+			tag = MOS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = RUS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = TUR
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = MNG
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = FRA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = SPA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = PLC
+			NOT = { adm_tech = 17 }
+		}
+		#Has already a similar privilege active
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_brahmins_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nobles_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_church_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_maratha_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_burghers_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_vaisyas_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nomadic_tribes_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_dhimmi_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_jains_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_rajput_land_rights
+		}
+	}
+}
+
+estate_nomadic_tribes_land_rights = {
+	icon = privilege_grant_autonomy
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		governing_capacity = 200
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.4
+			num_of_territories = 5
+		}
+		modifier = {
+			factor = 1.5
+			num_of_territories = 10
+		}
+		modifier = {
+			factor = 1.5
+			num_of_territories = 15
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 25 }
+				estate_influence = {
+					estate = estate_nomadic_tribes
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_nomadic_tribes_land_rights }
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				AND = {
+					governing_capacity_percentage = 0.9
+					NOT = { has_estate_privilege = estate_nomadic_tribes_land_rights }
+				}
+				#The trigger below should make sure that the AI actually keeps this privilege when enacting it early game
+				AND = {
+					governing_capacity_percentage = 0.6
+					has_estate_privilege = estate_nomadic_tribes_land_rights
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { governing_capacity_percentage = 0.5 }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 40 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 60 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_nomadic_tribes_land_rights }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 30 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 50 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_nomadic_tribes_land_rights }
+		}
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 2
+			governing_capacity_percentage = 0.9
+		}
+		modifier = {
+			factor = 3
+			governing_capacity_percentage = 1
+		}
+		modifier = {
+			factor = 10
+			governing_capacity_percentage = 1.2
+		}
+		modifier = {
+			factor = 8
+			NOT = { adm_tech = 12 }
+			governing_capacity_percentage = 0.8
+		}
+		modifier = {
+			factor = 5
+			NOT = { adm_tech = 12 }
+			NOT = { government_rank = 1 }
+			governing_capacity_percentage = 0.65
+		}
+		#Tag specific convincement - after tech 17 (+250 governing capacity) it should not play a role anymore
+		modifier = {
+			factor = 1.25
+			tag = MOS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = RUS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = TUR
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = MNG
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = FRA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = SPA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = PLC
+			NOT = { adm_tech = 17 }
+		}
+		#Has already a similar privilege active
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_brahmins_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nobles_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_church_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_maratha_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_burghers_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_vaisyas_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_cossacks_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_dhimmi_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_jains_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_rajput_land_rights
+		}
 	}
 }
 
@@ -618,14 +1501,13 @@ estate_dhimmi_land_rights = {
 	loyalty = 0.05
 	influence = 0.05
 	can_select = {
-
-			}
+	}
 	on_granted = {
 	}
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 200
 	}
 	ai_will_do = {
 		factor = 5
@@ -653,8 +1535,22 @@ estate_dhimmi_land_rights = {
 			NOT = { has_estate_privilege = estate_dhimmi_land_rights }
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				AND = {
+					governing_capacity_percentage = 0.9
+					NOT = { has_estate_privilege = estate_dhimmi_land_rights }
+				}
+				#The trigger below should make sure that the AI actually keeps this privilege when enacting it early game
+				AND = {
+					governing_capacity_percentage = 0.6
+					has_estate_privilege = estate_dhimmi_land_rights
+				}
+			}
+		}
+		modifier = {
 			factor = 0
-			NOT = { num_of_territories = 1 }
+			NOT = { governing_capacity_percentage = 0.5 }
 		}
 		modifier = {
 			factor = 0.8
@@ -682,6 +1578,106 @@ estate_dhimmi_land_rights = {
 			factor = 0.8
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 2
+			governing_capacity_percentage = 0.9
+		}
+		modifier = {
+			factor = 3
+			governing_capacity_percentage = 1
+		}
+		modifier = {
+			factor = 10
+			governing_capacity_percentage = 1.2
+		}
+		modifier = {
+			factor = 8
+			NOT = { adm_tech = 12 }
+			governing_capacity_percentage = 0.8
+		}
+		modifier = {
+			factor = 5
+			NOT = { adm_tech = 12 }
+			NOT = { government_rank = 1 }
+			governing_capacity_percentage = 0.65
+		}
+		#Tag specific convincement - after tech 17 (+250 governing capacity) it should not play a role anymore
+		modifier = {
+			factor = 1.25
+			tag = MOS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = RUS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = TUR
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = MNG
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = FRA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = SPA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = PLC
+			NOT = { adm_tech = 17 }
+		}
+		#Has already a similar privilege active
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_brahmins_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nobles_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_church_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_maratha_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_burghers_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_vaisyas_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_cossacks_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nomadic_tribes_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_jains_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_rajput_land_rights
+		}
 	}
 }
 
@@ -692,14 +1688,13 @@ estate_jains_land_rights = {
 	loyalty = 0.05
 	influence = 0.05
 	can_select = {
-
 	}
 	on_granted = {
 	}
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 200
 	}
 	ai_will_do = {
 		factor = 5
@@ -727,8 +1722,22 @@ estate_jains_land_rights = {
 			NOT = { has_estate_privilege = estate_jains_land_rights }
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				AND = {
+					governing_capacity_percentage = 0.9
+					NOT = { has_estate_privilege = estate_jains_land_rights }
+				}
+				#The trigger below should make sure that the AI actually keeps this privilege when enacting it early game
+				AND = {
+					governing_capacity_percentage = 0.6
+					has_estate_privilege = estate_jains_land_rights
+				}
+			}
+		}
+		modifier = {
 			factor = 0
-			NOT = { num_of_territories = 1 }
+			NOT = { governing_capacity_percentage = 0.5 }
 		}
 		modifier = {
 			factor = 0.8
@@ -756,6 +1765,106 @@ estate_jains_land_rights = {
 			factor = 0.8
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 2
+			governing_capacity_percentage = 0.9
+		}
+		modifier = {
+			factor = 3
+			governing_capacity_percentage = 1
+		}
+		modifier = {
+			factor = 10
+			governing_capacity_percentage = 1.2
+		}
+		modifier = {
+			factor = 8
+			NOT = { adm_tech = 12 }
+			governing_capacity_percentage = 0.8
+		}
+		modifier = {
+			factor = 5
+			NOT = { adm_tech = 12 }
+			NOT = { government_rank = 1 }
+			governing_capacity_percentage = 0.65
+		}
+		#Tag specific convincement - after tech 17 (+250 governing capacity) it should not play a role anymore
+		modifier = {
+			factor = 1.25
+			tag = MOS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = RUS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = TUR
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = MNG
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = FRA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = SPA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = PLC
+			NOT = { adm_tech = 17 }
+		}
+		#Has already a similar privilege active
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_brahmins_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nobles_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_church_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_maratha_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_burghers_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_vaisyas_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_cossacks_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nomadic_tribes_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_dhimmi_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_rajput_land_rights
+		}
 	}
 }
 
@@ -772,7 +1881,7 @@ estate_rajput_land_rights = {
 	penalties = {
 	}
 	benefits = {
-		governing_capacity = 100
+		governing_capacity = 200
 	}
 	ai_will_do = {
 		factor = 5
@@ -800,8 +1909,22 @@ estate_rajput_land_rights = {
 			NOT = { has_estate_privilege = estate_rajput_land_rights }
 		}
 		modifier = {
+			factor = 3
+			OR = {
+				AND = {
+					governing_capacity_percentage = 0.9
+					NOT = { has_estate_privilege = estate_rajput_land_rights }
+				}
+				#The trigger below should make sure that the AI actually keeps this privilege when enacting it early game
+				AND = {
+					governing_capacity_percentage = 0.6
+					has_estate_privilege = estate_rajput_land_rights
+				}
+			}
+		}
+		modifier = {
 			factor = 0
-			NOT = { num_of_territories = 1 }
+			NOT = { governing_capacity_percentage = 0.5 }
 		}
 		modifier = {
 			factor = 0.8
@@ -829,6 +1952,106 @@ estate_rajput_land_rights = {
 			factor = 0.8
 			is_absolutism_active = yes
 		}
+		modifier = {
+			factor = 2
+			governing_capacity_percentage = 0.9
+		}
+		modifier = {
+			factor = 3
+			governing_capacity_percentage = 1
+		}
+		modifier = {
+			factor = 10
+			governing_capacity_percentage = 1.2
+		}
+		modifier = {
+			factor = 8
+			NOT = { adm_tech = 12 }
+			governing_capacity_percentage = 0.8
+		}
+		modifier = {
+			factor = 5
+			NOT = { adm_tech = 12 }
+			NOT = { government_rank = 1 }
+			governing_capacity_percentage = 0.65
+		}
+		#Tag specific convincement - after tech 17 (+250 governing capacity) it should not play a role anymore
+		modifier = {
+			factor = 1.25
+			tag = MOS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = RUS
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = TUR
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = MNG
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = FRA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = SPA
+			NOT = { adm_tech = 17 }
+		}
+		modifier = {
+			factor = 1.25
+			tag = PLC
+			NOT = { adm_tech = 17 }
+		}
+		#Has already a similar privilege active
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_brahmins_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nobles_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_church_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_maratha_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_burghers_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_vaisyas_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_cossacks_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_nomadic_tribes_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_dhimmi_land_rights
+		}
+		modifier = {
+			factor = 0.75
+			has_estate_privilege = estate_jains_land_rights
+		}
 	}
 }
 
@@ -844,8 +2067,6 @@ estate_nobles_nobility_primacy = {
 			tooltip = no_other_mil_privilege
 			NOT = { has_estate_privilege = estate_rajput_military }
 			NOT = { has_estate_privilege = estate_maratha_military }
-			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
-
 		}
 	}
 	on_granted = {
@@ -856,7 +2077,46 @@ estate_nobles_nobility_primacy = {
 		country_military_power = 1
 	}
 	ai_will_do = {
-		factor = 1500
+		factor = 13
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 30 }
+				estate_influence = {
+					estate = estate_nobles
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 35 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 55 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+		}
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { mil = 2 }
+		}
+		modifier = {
+			factor = 0.8
+			mil = 5
+		}
+		modifier = {
+			factor = 1000
+			has_mission = kon_reform_army
+			NOT = { mission_completed = kon_reform_army }
+		}
 	}
 }
 
@@ -873,48 +2133,91 @@ estate_nobles_officer_corp = {
 	penalties = {
 	}
 	benefits = {
-		general_cost = -0.10
+		general_cost = -0.25
 		army_tradition_decay = -0.005
 	}
 	ai_will_do = {
-		factor = 1000
+		factor = 0
 	}
 }
 
 estate_nobles_levies = {
 	icon = privilege_demand_more_troops
 	max_absolutism = -5
-	loyalty = 0.05
 	influence = 0.1
-	cooldown_years = 10
 	is_valid = {
 		NOT = { has_estate_privilege = estate_nobles_golden_liberty }
-		NOT = { has_reform = english_monarchy }
 	}
 	can_select = {
 		NOT = { has_estate_privilege = estate_nobles_golden_liberty }
-		NOT = {
-			num_of_estate_privileges = {
-			estate = estate_nobles
-			value = 4
-			}
-		}
-	}
-	on_granted = {
-		add_yearly_manpower = 1
-		add_estate_loyalty = {
-			estate = estate_nobles
-			loyalty = -20
-		}
 	}
 	modifier_by_land_ownership = {
-		global_tax_modifier = -0.05
-		global_manpower_modifier = 0.25
+		global_tax_modifier = -0.10
+		global_manpower_modifier = 0.33
 	}
 	penalties = {
 	}
+	mechanics = {
+		exempt_from_seize_land
+	}
 	ai_will_do = {
-		factor = 1000
+		factor = 5
+		modifier = {
+			factor = 1.5
+			any_rival_country = {
+				army_strength = {
+					who = root
+					value = 1.5
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = quantity_ideas
+		}
+		modifier = {
+			factor = 0.5
+			max_manpower = 200
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				estate_territory = {
+					estate = estate_nobles
+					territory = 15
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				estate_territory = {
+					estate = estate_nobles
+					territory = 10
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOT = {
+				estate_territory = {
+					estate = estate_nobles
+					territory = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { current_income_balance = 5 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { current_income_balance = 0 }
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
 	}
 }
 
@@ -923,18 +2226,22 @@ estate_nobles_advisors = {
 	max_absolutism = -5
 	influence = 0.1
 	loyalty = 0.05
-	is_valid = {
-		always = no
-	}
-
 	penalties = {
-		stability_cost_modifier = 0.05
+		stability_cost_modifier = 0.1
 	}
 	benefits = {
-		mil_advisor_cost = -0.1
+		mil_advisor_cost = -0.25
 	}
 	ai_will_do = {
-		factor = 1000
+		factor = 9
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 3
+			uses_meritocracy = yes
+		}
 	}
 }
 
@@ -943,13 +2250,12 @@ estate_nobles_right_of_counsel = {
 	max_absolutism = -10
 	loyalty = 0.1
 	influence = 0.1
-	
 	penalties = {
 	}
 	benefits = {
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 10
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
@@ -963,7 +2269,19 @@ estate_nobles_french_strong_duchies = {
 	loyalty = 0.1
 	influence = 0.1
 	is_valid = {
-		always = no
+		OR = {
+			has_estate_privilege = estate_nobles_french_strong_duchies
+			AND = {
+				tag = FRA
+				NOT = { has_estate_privilege = estate_nobles_strong_duchies }
+			}
+		}
+		OR = {
+			any_subject_country = {
+				is_march = yes
+			}
+			vassal = 1
+		}
 	}
 	can_select = {
 		if = {
@@ -994,10 +2312,30 @@ estate_nobles_french_strong_duchies = {
 		reduced_liberty_desire_on_same_continent = 10
 	}
 	ai_will_do = {
-		factor = 1
-		modifier = { #will lose it via invalid sooner or later
-			factor = 10
-			has_estate_privilege = estate_nobles_french_strong_duchies
+		factor = 2
+		modifier = {
+			factor = 3
+			calc_true_if = {
+				amount = 1
+				all_subject_country = {
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount = 2
+				all_subject_country = {
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
 		}
 	}
 }
@@ -1017,7 +2355,41 @@ estate_church_religious_state = {
 		country_admin_power = 1
 	}
 	ai_will_do = {
-		factor = 1500
+		factor = 13
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 30 }
+				estate_influence = {
+					estate = estate_church
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_church_religious_state }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 35 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 55 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_church_religious_state }
+		}
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { adm = 2 }
+		}
+		modifier = {
+			factor = 0.8
+			adm = 5
+		}
 	}
 }
 
@@ -1026,18 +2398,22 @@ estate_church_independent_inquisition = {
 	max_absolutism = -5
 	influence = 0.1
 	loyalty = 0.05
-	is_valid = {
-		always = no
-	}
-
 	penalties = {
-		stability_cost_modifier = 0.05
+		stability_cost_modifier = 0.1
 	}
 	benefits = {
-		adm_advisor_cost = -0.1
+		adm_advisor_cost = -0.25
 	}
 	ai_will_do = {
-		factor = 1000
+		factor = 9
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 3
+			uses_meritocracy = yes
+		}
 	}
 }
 
@@ -1052,7 +2428,6 @@ estate_church_new_world_mission = {
 			num_of_colonies = 1
 		}
 	}
-
 	penalties = {
 	}
 	benefits = {
@@ -1120,9 +2495,6 @@ estate_church_clerical_ministers = {
 	icon = privilege_recruit_minister
 	max_absolutism = -5
 	influence = 0.10
-	can_select = {
-		NOT = { has_estate_privilege = estate_church_negative_piety_privilege}
-	}
 	conditional_modifier = {
 		trigger = {
 			if = {
@@ -1133,6 +2505,12 @@ estate_church_clerical_ministers = {
 				NOT = { religion = buddhism }
 				NOT = { religion = vajrayana }
 				NOT = { religion = mahayana }
+			}
+			if = {
+				limit = {
+					has_dlc = "Emperor"
+				}
+				NOT = { religion = hussite }
 			}
 			if = {
 				limit = {
@@ -1158,6 +2536,12 @@ estate_church_clerical_ministers = {
 				}
 				NOT = { religion = orthodox }
 			}
+			if = {
+				limit = {
+					has_dlc = "Origins"
+				}
+				NOT = { religion = jewish }
+			}
 			NOT = { religion = anglican }
 		}
 		modifier = {
@@ -1174,13 +2558,31 @@ estate_church_clerical_ministers = {
 			}
 		}
 		modifier = {
-			yearly_karma_decay = 0.005
+			yearly_karma_decay = 0.05
 		}
 	}
 	conditional_modifier = {
 		trigger = {
 			has_dlc = "Common Sense"
 			religion = protestant
+		}
+		modifier = {
+			church_power_modifier = 0.1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_dlc = "Emperor"
+			religion = hussite
+		}
+		modifier = {
+			church_power_modifier = 0.1
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			has_dlc = "Origins"
+			religion = jewish
 		}
 		modifier = {
 			church_power_modifier = 0.1
@@ -1201,7 +2603,7 @@ estate_church_clerical_ministers = {
 			religion_group = muslim
 		}
 		modifier = {
-			monthly_piety = 0.02
+			monthly_piety = 0.001
 		}
 	}
 	conditional_modifier = {
@@ -1249,51 +2651,29 @@ estate_church_clerical_ministers = {
 			religion = protestant
 			num_of_aspects = 3
 		}
-	}
-}
-
-#smeev change
-
-estate_church_negative_piety_privilege = {
-	icon = privilege_recruit_minister
-	max_absolutism = -5
-	influence = 0.10
-	is_valid = {
-		religion_group = muslim
-	}
-	can_select = {
-		NOT = { 
-			num_of_estate_privileges = {
-			estate = estate_church
-			value = 4
-			} 
+		modifier = {
+			factor = 10
+			religion = orthodox
+			has_dlc = "Third Rome"
 		}
 	}
-	penalties = {
-	}
-	benefits = {
-		monthly_piety = -0.02
-	}
-	ai_will_do = {
-		factor = 0
-	}
 }
-
 
 estate_church_clerical_oversight = {
 	icon = privilege_tolerance_heathen
 	max_absolutism = -10
 	loyalty = 0.1
 	influence = 0.1
-	
 	penalties = {
-		global_manpower_modifier = -0.15
 	}
 	benefits = {
-		advisor_cost = -0.1
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
 	}
 }
 
@@ -1302,31 +2682,44 @@ estate_church_inwards_perfection = {
 	land_share = 5
 	max_absolutism = -5
 	loyalty = 0.1
-	influence = 0.05
+	influence = 0.2
 	is_valid = {
 		religion_group = eastern
 	}
 	can_select = {
 		NOT = { has_estate_privilege = estate_church_for_the_faith }
 	}
+	can_revoke = {
+		is_at_war = no
+	}
 	on_granted = {
 	}
 	modifier_by_land_ownership = {
-		development_cost = -0.15
+		development_cost = -0.33
+		global_tax_modifier = 0.33
+		production_efficiency = 0.33
+		manpower_in_true_faith_provinces = 0.33
+		core_creation = 1
+		province_warscore_cost = 2
 	}
 	penalties = {
 		stability_cost_to_declare_war = 1
 	}
 	benefits = {
+		tolerance_own = 2
+		war_exhaustion = -0.05
 	}
+	mechanics = {
+		exempt_from_seize_land
+	}
+	cooldown_years = 25
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 7.5
+			factor = 1000
 			tag = KOR
 			NOT = { num_of_cities = 30 }
 			religion = confucianism
-			is_absolutism_active = no
 		}
 	}
 }
@@ -1371,6 +2764,7 @@ estate_church_enforced_one_faith = {
 	can_select = {
 		NOT = { has_estate_privilege = estate_burghers_enforced_interfaith_dialogue }
 		NOT = { has_estate_privilege = estate_dhimmi_tolerance }
+		NOT = { has_estate_privilege = estate_dhimmi_guarantee_of_traditions }
 	}
 	penalties = {
 		tolerance_heathen = -2
@@ -1404,7 +2798,41 @@ estate_burghers_land_of_commerce = {
 		country_diplomatic_power = 1
 	}
 	ai_will_do = {
-		factor = 1500
+		factor = 12
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 30 }
+				estate_influence = {
+					estate = estate_burghers
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 35 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 55 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
+		}
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { dip = 2 }
+		}
+		modifier = {
+			factor = 0.8
+			dip = 5
+		}
 	}
 }
 
@@ -1421,7 +2849,7 @@ estate_burghers_admirals = {
 	penalties = {
 	}
 	benefits = {
-		admiral_cost = -0.15
+		admiral_cost = -0.25
 		navy_tradition_decay = -0.005
 	}
 	ai_will_do = {
@@ -1434,18 +2862,22 @@ estate_burghers_commercial_board_of_advice = {
 	max_absolutism = -5
 	influence = 0.1
 	loyalty = 0.05
-	is_valid = {
-		always = no
-	}
-
 	penalties = {
-		stability_cost_modifier = 0.05
+		stability_cost_modifier = 0.1
 	}
 	benefits = {
-		dip_advisor_cost = -0.1
+		dip_advisor_cost = -0.25
 	}
 	ai_will_do = {
-		factor = 1000
+		factor = 9
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 3
+			uses_meritocracy = yes
+		}
 	}
 }
 
@@ -1460,7 +2892,6 @@ estate_burghers_new_world_charter = {
 			num_of_colonies = 1
 		}
 	}
-
 	penalties = {
 		global_tariffs = -0.10
 	}
@@ -1490,132 +2921,63 @@ estate_burghers_new_world_charter = {
 }
 
 estate_burghers_indebted_to_burghers = {
-    icon = privilege_give_money
-    max_absolutism = -5
-    loyalty = 0.05
-    influence = 0.05
-    on_granted = {
-        custom_tooltip = estate_burghers_indebted_to_burghers_effect_tooltip
-        add_mercantilism = -1
-        tooltip = {
-            add_inflation = 0.5
-        }
-        hidden_effect = {
-            add_loan = {
-                fixed_interest = 2.5
-                duration = 60
-                estate_loan = yes
-            }
-            add_loan = {
-                fixed_interest = 2.5
-                duration = 60
-                estate_loan = yes
-            }
-            add_loan = {
-                fixed_interest = 2.5
-                duration = 60
-                estate_loan = yes
-            }
-            add_loan = {
-                fixed_interest = 2.5
-                duration = 60
-                estate_loan = yes
-            }
-            add_loan = {
-                fixed_interest = 2.5
-                duration = 60
-                estate_loan = yes
-            }
-        }
-    }
-    penalties = {
-        trade_efficiency = -0.05
-    }
-    benefits = {
-    }
-    cooldown_years = 15
-    ai_will_do = {
-        factor = 0
-    }
-}
-
-estate_burghers_indebted_to_burghers_2 = {
-    icon = privilege_give_money
-    max_absolutism = -5
-    loyalty = 0.05
-    influence = 0.05
-	can_select = {
-		num_of_loans = 20 
-		is_at_war = no
+	icon = privilege_give_money
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	on_granted = {
+		custom_tooltip = estate_burghers_indebted_to_burghers_effect_tooltip
+		add_mercantilism = -1
+		tooltip = {
+			add_inflation = 0.5
+		}
+		hidden_effect = {
+			add_loan = {
+				fixed_interest = 1
+				duration = 60
+				estate_loan = yes
+			}
+			add_loan = {
+				fixed_interest = 1
+				duration = 60
+				estate_loan = yes
+			}
+			add_loan = {
+				fixed_interest = 1
+				duration = 60
+				estate_loan = yes
+			}
+			add_loan = {
+				fixed_interest = 1
+				duration = 60
+				estate_loan = yes
+			}
+			add_loan = {
+				fixed_interest = 1
+				duration = 60
+				estate_loan = yes
+			}
+		}
 	}
-    on_granted = {
-        custom_tooltip = estate_burghers_indebted_to_burghers_effect_2_tooltip
-        add_mercantilism = -1
-        tooltip = {
-            add_inflation = 0.5
-        }
-        hidden_effect = {
-            add_loan = {
-                fixed_interest = 2.5
-                duration = 60
-                estate_loan = yes
-            }
-			add_loan = {
-                fixed_interest = 2.5
-                duration = 60
-                estate_loan = yes
-            }
-			add_loan = {
-                fixed_interest = 2.5
-                duration = 60
-                estate_loan = yes
-            }
-			add_loan = {
-                fixed_interest = 2.5
-                duration = 60
-                estate_loan = yes
-            }
-			add_loan = {
-                fixed_interest = 2.5
-                duration = 60
-                estate_loan = yes
-            }
-			add_loan = {
-                fixed_interest = 2.5
-                duration = 60
-                estate_loan = yes
-            }
-			add_loan = {
-                fixed_interest = 2.5
-                duration = 60
-                estate_loan = yes
-            }
-			add_loan = {
-                fixed_interest = 2.5
-                duration = 60
-                estate_loan = yes
-            }
-			add_loan = {
-                fixed_interest = 2.5
-                duration = 60
-                estate_loan = yes
-            }
-			add_loan = {
-                fixed_interest = 2.5
-                duration = 60
-                estate_loan = yes
-            }
-        }
-    }
-    penalties = {
-        trade_efficiency = -0.05
-    }
-    benefits = {
-    }
-    cooldown_years = 15
-    ai_will_do = {
-        factor = 0
-    }
+	penalties = {
+		trade_efficiency = -0.05
+	}
+	benefits = {
+	}
+	can_select = {
+		if = {
+			limit = {
+				has_estate_privilege = estate_burghers_indebted_to_burghers
+			}
+			has_estate_loan = yes
+		}
+	}
+	can_revoke = {
+		has_estate_loan = no
+	}
+	ai_will_do = {
+		factor = 0
+	}
 }
 
 estate_burghers_free_enterprise = {
@@ -1624,13 +2986,11 @@ estate_burghers_free_enterprise = {
 	loyalty = 0.1
 	influence = 0.1
 	penalties = {
-		global_manpower_modifier = -0.1
 	}
 	benefits = {
-		global_trade_goods_size_modifier  = 0.05
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 10
 		modifier = {
 			factor = 0
 			is_absolutism_active = yes
@@ -1638,168 +2998,51 @@ estate_burghers_free_enterprise = {
 	}
 }
 
-PR_estate_clergy_exploration_expedition = {
-	icon = privilege_grant_new_world_charter
-	land_share = 5
-	max_absolutism = -5
-	loyalty = 0.05
-	influence = 0.05
-	
-	is_valid = {
-			OR = {
-				tag = MOR
-				tag = BUK
-				tag = ARB
-				tag = KHA
-				tag = OIR
-				tag = MGE
-			}
-			NOT = { has_estate_privilege = estate_burghers_hydraulic_rights	}
-	}
-	
-	can_select = {
-		NOT = {
-			num_of_estate_privileges = {
-			estate = estate_church
-			value = 4
-			}
-		}
-		NOT = { has_estate_privilege = estate_burghers_hydraulic_rights	}
-	}
-	on_granted = {
-		custom_tooltip = PR_estate_clergy_exploration_expedition_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = { has_terrain = desert }
-						
-				add_province_modifier = {
-					name = PR_estate_clergy_exploration_expedition_mod
-					duration = -1
-							}
-						}
-			every_owned_province = {		
-				limit = { has_terrain = coastal_desert }	
-
-				add_province_modifier = {
-					name = PR_estate_clergy_exploration_expedition_mod
-					duration = -1
-							}
-						}
-		}
-	}	
-	on_revoked = {
-		custom_tooltip = PR_estate_clergy_exploration_expedition_mod_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = { has_province_modifier = PR_estate_clergy_exploration_expedition_mod }
-				remove_province_modifier = PR_estate_clergy_exploration_expedition_mod
-			}
-		}
-	}
-	on_invalid = {
-		custom_tooltip = PR_estate_clergy_exploration_expedition_mod_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = PR_estate_clergy_exploration_expedition_mod
-				}
-				remove_province_modifier = PR_estate_clergy_exploration_expedition_mod
-			}
-		}
-	}
-	penalties = {
-		}
-	ai_will_do = {
-		factor = 500
-		}	
-}
-
-
-smeev_mountain_dev_cost = {
-	icon = privilege_grant_new_world_charter
-	land_share = 5
-	max_absolutism = -5
-	loyalty = 0.05
-	influence = 0.05
-	is_valid = {
-		OR = {
-			tag = AFG
-			tag = MUG
-			tag = ARL
-			tag = PER
-			tag = HAB
-			tag = AHU
-			tag = SGF
-			tag = SWI
-			tag = SWA
-			} 
-	}
-	
-	on_granted = {
-		custom_tooltip = smeev_mountain_dev_cost_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = { has_terrain = mountain }		
-				add_province_modifier = {
-					name = PR_estate_clergy_exploration_expedition_mod
-					duration = -1
-				}
-			}
-		}
-	}	
-	on_revoked = {
-		custom_tooltip = smeev_mountain_dev_cost_mod_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = { has_province_modifier = PR_estate_clergy_exploration_expedition_mod }
-				remove_province_modifier = PR_estate_clergy_exploration_expedition_mod
-			}
-		}
-	}
-	
-	can_select = {
-		NOT = {
-			num_of_estate_privileges = {
-			estate = estate_church
-			value = 4
-			}
-		}	
-	}
-	penalties = {
-	}
-	ai_will_do = {
-		factor = 500
-		}
-	
-	
-}
-
 estate_cossacks_exploration_expedition = {
 	icon = privilege_grant_new_world_charter
 	land_share = 5
 	max_absolutism = -5
-	loyalty = 0.1
-	influence = 0.1
+	loyalty = 0.05
+	influence = 0.05
 	
 	on_granted = {
-		custom_tooltip = gecko_estate_cossacks_exploration_expedition_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = { has_terrain = steppe }
-				add_province_modifier = {
-					name = estate_cossacks_exploration_expedition_mod
-					duration = -1
-				}
+		custom_tooltip = estate_cossacks_exploration_expedition_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = { has_terrain = steppe }
+			add_province_modifier = {
+				name = estate_cossacks_exploration_expedition_mod
+				duration = -1
 			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_cossacks_exploration_expedition_mod
+			}
+			remove_province_modifier = estate_cossacks_exploration_expedition_mod
 		}
 	}
 	on_revoked = {
 		custom_tooltip = estate_cossacks_exploration_expedition_mod_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = { has_province_modifier = estate_cossacks_exploration_expedition_mod }
-				remove_province_modifier = estate_cossacks_exploration_expedition_mod
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_cossacks_exploration_expedition_mod
 			}
+			remove_province_modifier = estate_cossacks_exploration_expedition_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_cossacks_exploration_expedition_mod_revoke_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_cossacks_exploration_expedition_mod
+			}
+			remove_province_modifier = estate_cossacks_exploration_expedition_mod
 		}
 	}
 	penalties = {
@@ -1851,31 +3094,23 @@ estate_cossacks_cossack_self_governance = {
 
 estate_cossacks_establish_the_cossack_regiments = {
 	icon = privilege_raise_host
-	#land_share = 5
+	land_share = 5
 	max_absolutism = -5
 	influence = 0.05
-	is_valid = {
-		NOT = { 
-				OR = {
-					tag = MOS
-					tag = RUS
-				}
-			}
-	}
 	can_select = {
-				
 	}
 	on_granted = {
 	}
 	modifier_by_land_ownership = {
+		special_unit_forcelimit = 0.5
 	}
 	penalties = {
-		cavalry_power = -0.1
 	}
 	benefits = {
-		infantry_power = 0.1
 	}
 	mechanics = {
+		enables_cossack_regiments
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 1
@@ -1901,17 +3136,18 @@ estate_cossacks_establish_the_cossack_regiments = {
 
 estate_cossacks_expand_the_cossack_regiments = {
 	icon = privilege_conscript_cossack_elite
+	land_share = 5
 	max_absolutism = -5
 	influence = 0.05
 	is_valid = {
 		has_estate_privilege = estate_cossacks_establish_the_cossack_regiments
 	}
 	can_select = {
-	
 	}
 	on_granted = {
 	}
 	modifier_by_land_ownership = {
+		special_unit_forcelimit = 0.5
 	}
 	penalties = {
 	}
@@ -1951,46 +3187,76 @@ estate_dhimmi_lighter_dhimmi_taxes = {
 	}
 	on_granted = {
 		custom_tooltip = estate_dhimmi_lighter_dhimmi_taxes_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					NOT = { religion_group = root }
-				}
-				add_province_modifier = {
-					name = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
-					duration = -1
-				}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				NOT = { religion_group = root }
 			}
+			add_province_modifier = {
+				name = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
+			}
+			remove_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
 		}
 	}
 	on_revoked = {
 		custom_tooltip = estate_dhimmi_lighter_dhimmi_taxes_revoke_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
-				}
-				remove_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
 			}
+			remove_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
 		}
 	}
 	on_invalid = {
 		custom_tooltip = estate_dhimmi_lighter_dhimmi_taxes_revoke_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
-				}
-				remove_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
 			}
+			remove_province_modifier = estate_dhimmi_lighter_dhimmi_taxes_privilege_mod
 		}
 	}
 	penalties = {
 	}
 	benefits = {
 	}
-	ai_will_do = {
-		factor = 1000
+	ai_will_do = { #BT overhauled estate interactions for Dhimmi to make muslim AIs handle this estate a bit more intelligently.
+		factor = 1
+		modifier = { #To keep the estate privilege, mainly for Ottos (Revoke threshold is 5.1, this puts it at 6).
+			factor = 6
+			has_global_modifier_value = {
+				which = tolerance_heathen
+				value = 0
+			}
+			NOT = { is_absolutism_active = yes }
+		}
+		modifier = { #To dynamically put this privilege down if country has, say, picked up Humanist ideas of have some innate tolerance to heathens (Apply threshold is 9.9, this puts it at 12).
+			factor = 2
+			has_global_modifier_value = {
+				which = tolerance_heathen
+				value = 2
+			}
+			NOT = { is_absolutism_active = yes }
+		}
+		modifier = { #The AI should not try and pass this if it results in the estate becoming too influential.
+			factor = 0.5
+			estate_influence = {
+				estate = estate_dhimmi
+				influence = 75
+			}
+			NOT = { has_estate_privilege = estate_dhimmi_lighter_dhimmi_taxes }
+		}
 	}
 }
 
@@ -1999,7 +3265,6 @@ estate_dhimmi_dhimmi_nobles = {
 	max_absolutism = -5
 	loyalty = 0.1
 	influence = 0.1
-
 	penalties = {
 		church_loyalty_modifier = -0.05
 		nobles_loyalty_modifier = -0.05
@@ -2024,50 +3289,113 @@ estate_dhimmi_manpower = {
 		}
 	}
 	can_select = {
-
 	}
 	on_granted = {
 		custom_tooltip = estate_dhimmi_manpower_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					NOT = { religion_group = root }
-				}
-				add_province_modifier = {
-					name = estate_dhimmi_manpower_mod
-					duration = -1
-				}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				NOT = { religion_group = root }
 			}
+			add_province_modifier = {
+				name = estate_dhimmi_manpower_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_manpower_mod
+			}
+			remove_province_modifier = estate_dhimmi_manpower_mod
 		}
 	}
 	on_revoked = {
 		custom_tooltip = estate_dhimmi_manpower_revoke_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_dhimmi_manpower_mod
-				}
-				remove_province_modifier = estate_dhimmi_manpower_mod
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_manpower_mod
 			}
+			remove_province_modifier = estate_dhimmi_manpower_mod
 		}
 	}
 	on_invalid = {
 		custom_tooltip = estate_dhimmi_manpower_revoke_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_dhimmi_manpower_mod
-				}
-				remove_province_modifier = estate_dhimmi_manpower_mod
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_dhimmi_manpower_mod
 			}
+			remove_province_modifier = estate_dhimmi_manpower_mod
 		}
 	}
 	penalties = {
 	}
 	benefits = {
 	}
-	ai_will_do = {
-		factor = 0
+	ai_will_do = { #BT overhauled estate interactions for Dhimmi to make muslim AIs handle this estate a bit more intelligently.
+		factor = 1
+		modifier = { #To keep the estate privilege, mainly for Ottos (Revoke threshold is 5.1, this puts it at 6).
+			factor = 6
+			has_global_modifier_value = {
+				which = tolerance_heathen
+				value = 0
+			}
+			NOT = { is_absolutism_active = yes }
+		}
+		modifier = { #To dynamically put this privilege down if country has, say, picked up Humanist ideas of have some innate tolerance to heathens (Apply threshold is 9.9, this puts it at 12).
+			factor = 2
+			has_global_modifier_value = {
+				which = tolerance_heathen
+				value = 2
+			}
+			NOT = { is_absolutism_active = yes }
+		}
+		modifier = { #The AI should not try and pass this if it results in the estate becoming too influential.
+			factor = 0.5
+			estate_influence = {
+				estate = estate_dhimmi
+				influence = 75
+			}
+			NOT = { has_estate_privilege = estate_dhimmi_manpower }
+		}
+		#Some extra modifiers since this one affects crown land share, taken from land rights privileges.
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 25 }
+				estate_influence = {
+					estate = estate_dhimmi
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_dhimmi_manpower }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 40 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 60 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_dhimmi_manpower }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 30 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 50 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_dhimmi_manpower }
+		}
 	}
 }
 
@@ -2080,10 +3408,10 @@ estate_dhimmi_tolerance = {
 			NOT = { religion = root }
 		}
 		NOT = { has_estate_privilege = estate_burghers_enforced_interfaith_dialogue }
+		NOT = { has_unlocked_estate_privilege = { estate_privilege = estate_dhimmi_guarantee_of_traditions } }
 	}
 	can_select = {
 		NOT = { has_estate_privilege = estate_church_enforced_one_faith }
-
 	}
 	penalties = {
 		church_loyalty_modifier = -0.05
@@ -2092,7 +3420,7 @@ estate_dhimmi_tolerance = {
 		tolerance_heathen = 2
 	}
 	ai_will_do = {
-		factor = 1000
+		factor = 1
 		modifier = {
 			factor = 10
 			num_of_owned_provinces_with = {
@@ -2191,9 +3519,86 @@ estate_dhimmi_guaranteed_autonomy = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0
+			is_subject = yes
+			overlord = {
+				religion = ROOT
+				has_idea_group = religious_ideas
+			}
+		}
 	}
 }
 
+estate_nomadic_tribes_share_of_the_spoils = {
+	icon = privilege_supply_arms
+	max_absolutism = -5
+	loyalty = 0.05
+	penalties = {
+		available_province_loot = -0.1
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_nomadic_tribes_chieftains_autonomy = {
+	icon = privilege_grant_autonomy
+	max_absolutism = -10
+	loyalty = 0.1
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_nomadic_tribes_guaranteed_leadgership_in_host = {
+	icon = privilege_conscript_cossack_elite
+	max_absolutism = -5
+	influence = 0.05
+	can_select = {
+		army_tradition = 30
+	}
+	on_granted = {
+		add_army_tradition = -15
+	}
+	penalties = {
+	}
+	benefits = {
+		general_cost = -0.25
+		army_tradition_decay = -0.005
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_nomadic_tribes_tribal_host = {
+	icon = privilege_raise_host
+	max_absolutism = -5
+	loyalty = -0.05
+	influence = 0.1
+	benefits = {
+		global_manpower_modifier = 0.2
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}
 
 estate_brahmins_brahmin_governance = {
 	icon = privilege_admin_power
@@ -2204,7 +3609,6 @@ estate_brahmins_brahmin_governance = {
 		NOT = { religion_group = muslim }
 	}
 	can_select = {
-
 	}
 	on_granted = {
 	}
@@ -2214,7 +3618,41 @@ estate_brahmins_brahmin_governance = {
 		country_admin_power = 1
 	}
 	ai_will_do = {
-		factor = 1500
+		factor = 13
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 30 }
+				estate_influence = {
+					estate = estate_church
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 35 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 55 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_brahmins_brahmin_governance }
+		}
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { adm = 2 }
+		}
+		modifier = {
+			factor = 0.8
+			adm = 5
+		}
 	}
 }
 
@@ -2225,7 +3663,6 @@ estate_brahmins_legitimacy_to_rule = {
 	is_valid = {
 		religion_group = muslim
 	}
-	
 	penalties = {
 		church_loyalty_modifier = -0.05
 	}
@@ -2275,18 +3712,22 @@ estate_brahmins_brahmin_leadership = {
 		NOT = { religion_group = muslim }
 	}
 	loyalty = 0.05
-	is_valid = {
-		always = no
-	}
-
 	penalties = {
-		stability_cost_modifier = 0.05
+		stability_cost_modifier = 0.1
 	}
 	benefits = {
-		adm_advisor_cost = -0.1
+		adm_advisor_cost = -0.25
 	}
 	ai_will_do = {
-		factor = 1000
+		factor = 9
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 3
+			uses_meritocracy = yes
+		}
 	}
 }
 
@@ -2298,7 +3739,12 @@ estate_brahmins_flexible_deities = {
 		NOT = { religion_group = muslim }
 		has_dlc = "Wealth of Nations"
 	}
-	
+	can_select = {
+		estate_influence = {
+			estate = estate_brahmins
+			influence = 60
+		}
+	}
 	on_granted = {
 		custom_tooltip = estate_brahmins_flexible_deities_effect_tooltip
 	}
@@ -2319,7 +3765,6 @@ estate_brahmins_loyalty_privilege = {
 	max_absolutism = -10
 	loyalty = 0.1
 	influence = 0.1
-
 	penalties = {
 	}
 	benefits = {
@@ -2345,38 +3790,44 @@ estate_brahmins_guaranteed_autonomy = {
 	}
 	on_granted = {
 		custom_tooltip = estate_brahmins_guaranteed_autonomy_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					religion_group = dharmic
-				}
-				add_province_modifier = {
-					name = estate_brahmins_guaranteed_autonomy_mod
-					duration = -1
-				}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				religion_group = dharmic
 			}
+			add_province_modifier = {
+				name = estate_brahmins_guaranteed_autonomy_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
+			}
+			remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
 		}
 	}
 	on_revoked = {
 		custom_tooltip = estate_brahmins_guaranteed_autonomy_revoke_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
-				}
-				remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
 			}
+			remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
 		}
 	}
 	on_invalid = {
 		custom_tooltip = estate_brahmins_guaranteed_autonomy_revoke_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
-				}
-				remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
 			}
+			remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
 		}
 	}
 	penalties = {
@@ -2393,6 +3844,14 @@ estate_brahmins_guaranteed_autonomy = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0
+			is_subject = yes
+			overlord = {
+				religion = ROOT
+				has_idea_group = religious_ideas
+			}
+		}
 	}
 }
 
@@ -2402,9 +3861,9 @@ estate_jains_diplomacy = {
 	max_absolutism = -5
 	loyalty = -0.05
 	is_valid = {
+		NOT = { has_estate = estate_burghers }
 	}
 	can_select = {
-
 	}
 	on_granted = {
 	}
@@ -2414,7 +3873,41 @@ estate_jains_diplomacy = {
 		country_diplomatic_power = 1
 	}
 	ai_will_do = {
-		factor = 1500
+		factor = 12
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 30 }
+				estate_influence = {
+					estate = estate_jains
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_jains_diplomacy }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 35 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 55 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_jains_diplomacy }
+		}
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { dip = 2 }
+		}
+		modifier = {
+			factor = 0.8
+			dip = 5
+		}
 	}
 }
 
@@ -2431,7 +3924,7 @@ estate_jains_clerical_class = {
 	}
 	benefits = {
 		state_maintenance_modifier = -0.25
-		development_cost = -0.1
+		development_cost = -0.05
 	}
 	ai_will_do = {
 		factor = 0
@@ -2450,39 +3943,48 @@ estate_jains_indebted_to_jains = {
 		}
 		hidden_effect = {
 			add_loan = {
-				fixed_interest = 2.5
+				fixed_interest = 1
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 2.5
+				fixed_interest = 1
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 2.5
+				fixed_interest = 1
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 2.5
+				fixed_interest = 1
 				duration = 60
 				estate_loan = yes
 			}
 			add_loan = {
-				fixed_interest = 2.5
+				fixed_interest = 1
 				duration = 60
 				estate_loan = yes
 			}
 		}
 	}
-
 	penalties = {
 		trade_efficiency = -0.05
 	}
 	benefits = {
 	}
-	cooldown_years = 15
+	can_select = {
+		if = {
+			limit = {
+				has_estate_privilege = estate_jains_indebted_to_jains
+			}
+			has_estate_loan = yes
+		}
+	}
+	can_revoke = {
+		has_estate_loan = no
+	}
 	ai_will_do = {
 		factor = 0
 	}
@@ -2492,7 +3994,6 @@ estate_jains_conscientious_objection = {
 	icon = privilege_commission_jain_scripture
 	max_absolutism = -5
 	loyalty = 0.1
-
 	penalties = {
 		global_manpower_modifier = -0.1
 	}
@@ -2516,7 +4017,6 @@ estate_maratha_military = {
 			tooltip = no_other_mil_privilege
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
 		}
-
 	}
 	on_granted = {
 	}
@@ -2526,7 +4026,41 @@ estate_maratha_military = {
 		country_military_power = 1
 	}
 	ai_will_do = {
-		factor = 1500
+		factor = 13
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 30 }
+				estate_influence = {
+					estate = estate_maratha
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_maratha_military }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 35 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 55 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_maratha_military }
+		}
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { mil = 2 }
+		}
+		modifier = {
+			factor = 0.8
+			mil = 5
+		}
 	}
 }
 
@@ -2535,19 +4069,25 @@ estate_maratha_advisor = {
 	max_absolutism = -5
 	influence = 0.1
 	is_valid = {
-		always = no
+		NOT = { religion_group = muslim }
 	}
-
 	loyalty = 0.05
-
 	penalties = {
-		stability_cost_modifier = 0.05
+		stability_cost_modifier = 0.1
 	}
 	benefits = {
-		mil_advisor_cost = -0.1
+		mil_advisor_cost = -0.25
 	}
 	ai_will_do = {
-		factor = 1000
+		factor = 9
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 3
+			uses_meritocracy = yes
+		}
 	}
 }
 
@@ -2556,7 +4096,6 @@ estate_maratha_loyalty_privilege = {
 	max_absolutism = -10
 	loyalty = 0.1
 	influence = 0.1
-
 	penalties = {
 	}
 	benefits = {
@@ -2578,11 +4117,13 @@ estate_maratha_levies = {
 		NOT = { religion_group = muslim }
 	}
 	modifier_by_land_ownership = {
-		global_tax_modifier = -0.05
-		global_manpower_modifier = 0.25
+		global_tax_modifier = -0.10
+		global_manpower_modifier = 0.33
 	}
-
 	penalties = {
+	}
+	mechanics = {
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 5
@@ -2671,46 +4212,44 @@ estate_maratha_levies_for_muslims = {
 	}
 	on_granted = {
 		custom_tooltip = estate_maratha_levies_for_muslims_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					religion = hinduism
-				}
-				add_province_modifier = {
-					name = estate_maratha_levies_for_muslims_mod
-					duration = -1
-				}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				religion = hinduism
 			}
+			add_province_modifier = {
+				name = estate_maratha_levies_for_muslims_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_maratha_levies_for_muslims_mod
+			}
+			remove_province_modifier = estate_maratha_levies_for_muslims_mod
 		}
 	}
 	on_revoked = {
 		custom_tooltip = estate_maratha_levies_for_muslims_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_maratha_levies_for_muslims_mod
-				}
-				remove_province_modifier = estate_maratha_levies_for_muslims_mod
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_maratha_levies_for_muslims_mod
 			}
+			remove_province_modifier = estate_maratha_levies_for_muslims_mod
 		}
 	}
 	on_invalid = {
 		custom_tooltip = estate_maratha_levies_for_muslims_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_maratha_levies_for_muslims_mod
-				}
-				remove_province_modifier = estate_maratha_levies_for_muslims_mod
-			}
-		}
 	}
-	can_select = {
-		NOT = {
-			num_of_estate_privileges = {
-			estate = estate_maratha
-			value = 4
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_maratha_levies_for_muslims_mod
 			}
+			remove_province_modifier = estate_maratha_levies_for_muslims_mod
 		}
 	}
 	penalties = {
@@ -2732,14 +4271,15 @@ estate_maratha_special_privilege = {
 		has_reform = permanent_marathas_council_reform
 	}
 	modifier_by_land_ownership = {
-		discipline = 0.05
-		#global_tax_modifier = -0.15
+		discipline = 0.1
+		global_tax_modifier = -0.15
 	}
-	
-	
 	penalties = {
 	}
 	benefits = {
+	}
+	mechanics = {
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 10
@@ -2756,14 +4296,11 @@ estate_rajput_rajput_regiments = {
 	max_absolutism = -5
 	influence = 0.05
 	can_select = {
-		NOT = {
-			num_of_estate_privileges = {
-			estate = estate_rajput
-			value = 4
-			}
-		}
 	}
 	on_granted = {
+	}
+	modifier_by_land_ownership = {
+		special_unit_forcelimit = 0.5
 	}
 	penalties = {
 	}
@@ -2772,6 +4309,7 @@ estate_rajput_rajput_regiments = {
 	}
 	mechanics = {
 		enables_rajput_regiments
+		exempt_from_seize_land
 	}
 	ai_will_do = {
 		factor = 10
@@ -2784,7 +4322,6 @@ estate_rajput_military = {
 	max_absolutism = -5
 	loyalty = -0.05
 	is_valid = {
-		technology_group = indian
 	}
 	can_select = {
 		custom_trigger_tooltip = {
@@ -2794,14 +4331,47 @@ estate_rajput_military = {
 	}
 	on_granted = {
 	}
-
 	penalties = {
 	}
 	benefits = {
 		country_military_power = 1
 	}
 	ai_will_do = {
-		factor = 1500
+		factor = 13
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 30 }
+				estate_influence = {
+					estate = estate_rajput
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_rajput_military }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 35 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 55 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_rajput_military }
+		}
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 1.25
+			NOT = { mil = 2 }
+		}
+		modifier = {
+			factor = 0.8
+			mil = 5
+		}
 	}
 }
 
@@ -2810,19 +4380,25 @@ estate_rajput_advisor = {
 	max_absolutism = -5
 	influence = 0.1
 	is_valid = {
-		always = no
+		NOT = { religion_group = muslim }
 	}
-
 	loyalty = 0.05
-	
 	penalties = {
-		stability_cost_modifier = 0.05
+		stability_cost_modifier = 0.1
 	}
 	benefits = {
-		mil_advisor_cost = -0.1
+		mil_advisor_cost = -0.25
 	}
 	ai_will_do = {
-		factor = 1000
+		factor = 9
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 3
+			uses_meritocracy = yes
+		}
 	}
 }
 
@@ -2831,7 +4407,6 @@ estate_rajput_loyalty_privilege = {
 	max_absolutism = -10
 	loyalty = 0.1
 	influence = 0.1
-	
 	penalties = {
 	}
 	benefits = {
@@ -2851,7 +4426,6 @@ estate_rajput_officer_corp = {
 	influence = 0.05
 	can_select = {
 		army_tradition = 30
-		
 	}
 	on_granted = {
 		add_army_tradition = -15
@@ -2884,7 +4458,6 @@ estate_rajput_look_up_purbias = {
 		has_estate_privilege = estate_rajput_rajput_regiments
 	}
 	can_select = {
-
 	}
 	on_granted = {
 		if = {
@@ -2948,7 +4521,6 @@ estate_vaisyas_loyalty_privilege = {
 	max_absolutism = -10
 	loyalty = 0.1
 	influence = 0.1
-	
 	penalties = {
 	}
 	benefits = {
@@ -2967,18 +4539,22 @@ estate_vaisyas_advisor = {
 	max_absolutism = -5
 	influence = 0.1
 	loyalty = 0.05
-	is_valid = {
-		always = no
-	}
-
 	penalties = {
-		stability_cost_modifier = 0.05
+		stability_cost_modifier = 0.1
 	}
 	benefits = {
-		dip_advisor_cost = -0.1
+		dip_advisor_cost = -0.25
 	}
 	ai_will_do = {
-		factor = 1000
+		factor = 9
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+		modifier = {
+			factor = 3
+			uses_meritocracy = yes
+		}
 	}
 }
 
@@ -2986,7 +4562,6 @@ estate_vaisyas_wartaxes = {
 	icon = privilege_exempt_officers_from_jaziya
 	max_absolutism = -5
 	loyalty = -0.05
-	
 	benefits = {
 		war_taxes_cost_modifier = -0.5
 		war_exhaustion = -0.02
@@ -3009,12 +4584,11 @@ estate_burghers_patronage_of_the_arts = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
-	
 	penalties = {
-		#global_tax_modifier = -0.05
+		global_tax_modifier = -0.05
 	}
 	benefits = {
-		prestige = 0.25
+		prestige = 0.5
 	}
 	on_granted = {
 		if = {
@@ -3038,7 +4612,7 @@ estate_burghers_patronage_of_the_arts = {
 		}
 	}
 	ai_will_do = {
-		factor = 100
+		factor = 0
 	}
 }
 
@@ -3047,7 +4621,6 @@ estate_vaisyas_patronage_of_the_arts = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
-
 	penalties = {
 		global_tax_modifier = -0.05
 	}
@@ -3055,7 +4628,7 @@ estate_vaisyas_patronage_of_the_arts = {
 		prestige = 0.5
 	}
 	ai_will_do = {
-		factor = 100
+		factor = 0
 	}
 }
 
@@ -3069,11 +4642,11 @@ estate_nomadic_tribes_primacy_to_the_bannermen = {
 			primary_culture = manchu_new
 		}
 	}
-
 	penalties = {
+		amount_of_banners = -0.25
 	}
 	benefits = {
-		amount_of_banners = 0.1
+		land_morale = 0.1
 	}
 	ai_will_do = {
 		factor = 1
@@ -3082,7 +4655,6 @@ estate_nomadic_tribes_primacy_to_the_bannermen = {
 			OR = {
 				tag = MCH
 				tag = MJZ
-				
 			}
 		}
 	}
@@ -3097,8 +4669,8 @@ estate_nobles_supremacy_over_crown = {
 	loyalty = 0.1
 	is_valid = {
 		has_dlc = "Emperor"
+		NOT = { has_government_attribute = blocked_call_diet }
 	}
-
 	penalties = {
 	}
 	benefits = {
@@ -3126,17 +4698,12 @@ estate_nobles_supremacy_over_crown = {
 		jains_influence_modifier = 0.1
 		vaisyas_influence_modifier = 0.1
 		nomadic_tribes_influence_modifier = 0.1
-		qizilbash_loyalty_modifier = 0.1 #dum
-		qizilbash_influence_modifier = 0.1 #dum
-		ghilman_loyalty_modifier = 0.1 #dum
-		ghilman_influence_modifier = 0.1 #dum
-		janissary_loyalty_modifier = 0.1 #dum
-		janissary_influence_modifier = 0.1 #dum
-		mamluks_loyalty_modifier = 0.1
-		mamluks_influence_modifier = 0.1
+	}
+	mechanics = {
+		can_give_agendas_without_interaction
 	}
 	ai_will_do = {
-		factor = 1500
+		factor = 10
 	}
 }
 
@@ -3147,8 +4714,8 @@ estate_brahmins_supremacy_over_crown = {
 	loyalty = 0.1
 	is_valid = {
 		has_dlc = "Emperor"
-			NOT = { has_estate = estate_nobles }
-
+		NOT = { has_estate = estate_nobles }
+		NOT = { has_government_attribute = blocked_call_diet }
 	}
 	penalties = {
 	}
@@ -3174,8 +4741,11 @@ estate_brahmins_supremacy_over_crown = {
 		vaisyas_influence_modifier = 0.1
 		nomadic_tribes_influence_modifier = 0.1
 	}
+	mechanics = {
+		can_give_agendas_without_interaction
+	}
 	ai_will_do = {
-		factor = 1250
+		factor = 10
 	}
 }
 
@@ -3193,12 +4763,28 @@ estate_burghers_monopoly_of_textiles = {
 		}
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				OR = {
 					trade_goods = cloth
@@ -3275,12 +4861,28 @@ estate_burghers_monopoly_of_dyes = {
 		}
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = dyes
 			}
@@ -3352,12 +4954,28 @@ estate_burghers_monopoly_of_glass = {
 		}
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = glass
 			}
@@ -3429,12 +5047,28 @@ estate_burghers_monopoly_of_paper = {
 		}
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = paper
 			}
@@ -3509,12 +5143,28 @@ estate_vaisyas_monopoly_of_textiles = {
 		}
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				OR = {
 					trade_goods = cloth
@@ -3592,12 +5242,28 @@ estate_vaisyas_monopoly_of_dyes = {
 		}
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = dyes
 			}
@@ -3669,12 +5335,28 @@ estate_vaisyas_monopoly_of_glass = {
 		}
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = glass
 			}
@@ -3746,12 +5428,28 @@ estate_vaisyas_monopoly_of_paper = {
 		}
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = paper
 			}
@@ -3828,12 +5526,28 @@ estate_jains_monopoly_of_textiles = {
 		NOT = { has_estate = estate_burghers }
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				OR = {
 					trade_goods = cloth
@@ -3913,12 +5627,28 @@ estate_jains_monopoly_of_dyes = {
 		NOT = { has_estate = estate_burghers }
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = dyes
 			}
@@ -3992,12 +5722,28 @@ estate_jains_monopoly_of_glass = {
 		NOT = { has_estate = estate_burghers }
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = glass
 			}
@@ -4071,12 +5817,28 @@ estate_jains_monopoly_of_paper = {
 		NOT = { has_estate = estate_burghers }
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = paper
 			}
@@ -4151,12 +5913,28 @@ estate_nobles_monopoly_of_metals = {
 		}
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				OR = {
 					trade_goods = iron
@@ -4234,12 +6012,28 @@ estate_nobles_monopoly_of_livestock = {
 		}
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = livestock
 			}
@@ -4310,12 +6104,28 @@ estate_nobles_monopoly_of_gems = {
 		}
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = gems
 			}
@@ -4391,12 +6201,28 @@ estate_rajput_monopoly_of_metals = {
 		NOT = { has_estate = estate_nobles }
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				OR = {
 					trade_goods = iron
@@ -4475,11 +6301,28 @@ estate_rajput_monopoly_of_livestock = {
 		NOT = { has_estate = estate_nobles }
 	}
 	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = livestock
 			}
@@ -4552,12 +6395,28 @@ estate_rajput_monopoly_of_gems = {
 		NOT = { has_estate = estate_nobles }
 	}
 	can_select = {
-
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = gems
 			}
@@ -4633,12 +6492,28 @@ estate_maratha_monopoly_of_metals = {
 		NOT = { has_estate = estate_nobles }
 	}
 	can_select = {
-	
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				OR = {
 					trade_goods = iron
@@ -4716,12 +6591,28 @@ estate_maratha_monopoly_of_livestock = {
 		NOT = { has_estate = estate_nobles }
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = livestock
 			}
@@ -4793,12 +6684,28 @@ estate_maratha_monopoly_of_gems = {
 		NOT = { has_estate = estate_nobles }
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = gems
 			}
@@ -4869,12 +6776,28 @@ estate_church_monopoly_of_incense = {
 		}
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = incense
 			}
@@ -4945,12 +6868,28 @@ estate_church_monopoly_of_wool = {
 		}
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = wool
 			}
@@ -5022,12 +6961,28 @@ estate_church_monopoly_of_wine = {
 		}
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = wine
 			}
@@ -5099,12 +7054,28 @@ estate_church_monopoly_of_slaves = {
 		}
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = slaves
 			}
@@ -5176,12 +7147,28 @@ estate_brahmins_monopoly_of_incense = {
 		NOT = { has_estate = estate_church }
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = incense
 			}
@@ -5253,12 +7240,28 @@ estate_brahmins_monopoly_of_wool = {
 		NOT = { has_estate = estate_church }
 	}
 	can_select = {
-		
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
 	}
 	on_granted = {
 		add_mercantilism = 1
 		add_years_of_owned_provinces_production_income = {
-			years = 10
+			years = 8
 			trigger = {
 				trade_goods = wool
 			}
@@ -5323,17 +7326,12 @@ estate_brahmins_monopoly_of_wool = {
 estate_cossacks_recruit_cossack_generals = {
 	icon = privilege_conscript_cossack_elite
 	max_absolutism = -5
-	loyalty = 0.1
 	influence = 0.1
-	is_valid = {
-	}
-	can_select = {
-		
-	}
 	penalties = {
 	}
 	benefits = {
-		shock_damage_received = -0.10
+		army_tradition = 0.5
+		leader_land_shock = 1
 	}
 	ai_will_do = {
 		factor = 10
@@ -5357,41 +7355,46 @@ estate_cossacks_prime_herding_rights = {
 	}
 	on_granted = {
 		custom_tooltip = estate_cossacks_prime_herding_rights_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_terrain = steppe
-				}
-				add_province_modifier = {
-					name = estate_cossacks_prime_herding_rights_mod
-					duration = -1
-				}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				has_terrain = steppe
 			}
+			add_province_modifier = {
+				name = estate_cossacks_prime_herding_rights_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_cossacks_prime_herding_rights_mod
+			}
+			remove_province_modifier = estate_cossacks_prime_herding_rights_mod
 		}
 	}
 	on_revoked = {
 		custom_tooltip = estate_cossacks_prime_herding_rights_mod_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_cossacks_prime_herding_rights_mod
-				}
-				remove_province_modifier = estate_cossacks_prime_herding_rights_mod
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_cossacks_prime_herding_rights_mod
 			}
+			remove_province_modifier = estate_cossacks_prime_herding_rights_mod
 		}
 	}
 	on_invalid = {
 		custom_tooltip = estate_cossacks_prime_herding_rights_mod_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_cossacks_prime_herding_rights_mod
-				}
-				remove_province_modifier = estate_cossacks_prime_herding_rights_mod
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_cossacks_prime_herding_rights_mod
 			}
+			remove_province_modifier = estate_cossacks_prime_herding_rights_mod
 		}
 	}
-
 	penalties = {
 	}
 	benefits = {
@@ -5412,11 +7415,11 @@ estate_nobles_junker_primacy = {
 			has_reform = prussian_republic_reform
 		}
 	}
-
 	penalties = {
+		all_power_cost = 0.05
 	}
 	benefits = {
-		monthly_militarized_society = 0.10
+		monthly_militarized_society = 0.02
 	}
 	ai_will_do = {
 		factor = 1
@@ -5443,9 +7446,14 @@ estate_nobles_strong_duchies = {
 				is_march = yes
 			}
 			vassal = 1
-			canton = 1
 		}
 		NOT = { has_estate_privilege = estate_nobles_french_strong_duchies }
+		NOT = {
+			AND = {
+				tag = FRA
+				NOT = { has_estate_privilege = estate_nobles_strong_duchies }
+			}
+		}
 	}
 	can_select = {
 		if = {
@@ -5458,19 +7466,16 @@ estate_nobles_strong_duchies = {
 					amount = 2
 					all_subject_country = {
 						OR = {
-							is_subject = yes
+							is_march = yes
+							is_vassal = yes
 						}
 					}
 				}
 			}
 		}
 		else = {
-			OR = {
-				vassal = 2
-				canton = 2
-			}	
+			vassal = 2
 		}
-
 	}
 	penalties = {
 	}
@@ -5479,10 +7484,173 @@ estate_nobles_strong_duchies = {
 		reduced_liberty_desire = 10
 	}
 	ai_will_do = {
-		factor = 1
-		modifier = { #will lose it via invalid sooner or later
-			factor = 10
-			has_estate_privilege = estate_nobles_strong_duchies
+		factor = 2
+		modifier = {
+			factor = 3
+			calc_true_if = {
+				amount = 1
+				all_subject_country = {
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount = 2
+				all_subject_country = {
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+estate_maratha_subject_rights = {
+	icon = privilege_royal_authority
+	max_absolutism = -10
+	influence = 0.1
+	loyalty = 0.05
+	is_valid = {
+		OR = {
+			any_subject_country = {
+				is_march = yes
+			}
+			vassal = 1
+		}
+		NOT = { has_estate = estate_nobles }
+		NOT = { has_estate = estate_rajput }
+	}
+	can_select = {
+		if = {
+			limit = {
+				has_dlc = "Art of War"
+			}
+			custom_trigger_tooltip = {
+				tooltip = estate_nobles_strong_duchies_trigger_tooltip
+				calc_true_if = {
+					amount = 2
+					all_subject_country = {
+						OR = {
+							is_march = yes
+							is_vassal = yes
+						}
+					}
+				}
+			}
+		}
+		else = {
+			vassal = 2
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+		diplomatic_upkeep = 2
+		reduced_liberty_desire = 10
+	}
+	ai_will_do = {
+		factor = 2
+		modifier = {
+			factor = 3
+			calc_true_if = {
+				amount = 1
+				all_subject_country = {
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount = 2
+				all_subject_country = {
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+estate_rajput_subject_rights = {
+	icon = privilege_royal_authority
+	max_absolutism = -10
+	influence = 0.1
+	loyalty = 0.05
+	is_valid = {
+		OR = {
+			any_subject_country = {
+				is_march = yes
+			}
+			vassal = 1
+		}
+		NOT = { has_estate = estate_nobles }
+	}
+	can_select = {
+		if = {
+			limit = {
+				has_dlc = "Art of War"
+			}
+			custom_trigger_tooltip = {
+				tooltip = estate_nobles_strong_duchies_trigger_tooltip
+				calc_true_if = {
+					amount = 2
+					all_subject_country = {
+						OR = {
+							is_march = yes
+							is_vassal = yes
+						}
+					}
+				}
+			}
+		}
+		else = {
+			vassal = 2
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+		diplomatic_upkeep = 2
+		reduced_liberty_desire = 10
+	}
+	ai_will_do = {
+		factor = 2
+		modifier = {
+			factor = 3
+			calc_true_if = {
+				amount = 1
+				all_subject_country = {
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			calc_true_if = {
+				amount = 2
+				all_subject_country = {
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
 		}
 	}
 }
@@ -5565,11 +7733,10 @@ estate_nobles_golden_liberty = {
 			country_event = { id = estate_privileges_and_agendas_events.1 }
 		}
 	}
-
 	penalties = {
 	}
 	benefits = {
-		global_manpower_modifier = 0.25
+		global_manpower_modifier = 0.33
 	}
 	mechanics = {
 		exempt_from_seize_land
@@ -5593,7 +7760,6 @@ estate_nobles_nieszawa_privileges = {
 			always = no
 		}
 	}
-
 	penalties = {
 		technology_cost = 0.05
 	}
@@ -5619,7 +7785,6 @@ estate_nobles_pacta_conventa = {
 			always = no
 		}
 	}
-
 	penalties = {
 		war_exhaustion_cost = 0.5
 		inflation_action_cost = 0.5
@@ -5639,7 +7804,6 @@ estate_nobles_veto_heir_apparent = {
 		has_dlc = "Emperor"
 		has_reform = elective_monarchy
 	}
-	
 	penalties = {
 	}
 	benefits = {
@@ -5667,41 +7831,46 @@ estate_burghers_the_great_privilege = {
 			}
 			ROOT = { inherit = prev }
 		}
+		add_years_of_income = 2
 		custom_tooltip = estate_burghers_the_great_privilege_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = { region = low_countries_region }
-				add_province_modifier = {
-					name = estate_burghers_the_great_privilege_mod
-					duration = -1
-				}
+	}
+	on_granted_province = {
+		if = {
+			limit = { region = low_countries_region }
+			add_province_modifier = {
+				name = estate_burghers_the_great_privilege_mod
+				duration = -1
 			}
 		}
-		add_years_of_income = 2
+		else_if = {
+			limit = {
+				has_province_modifier = estate_burghers_the_great_privilege_mod
+			}
+			remove_province_modifier = estate_burghers_the_great_privilege_mod
+		}
 	}
 	on_revoked = {
 		custom_tooltip = estate_burghers_the_great_privilege_revoke_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_burghers_the_great_privilege_mod
-				}
-				remove_province_modifier = estate_burghers_the_great_privilege_mod
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_the_great_privilege_mod
 			}
+			remove_province_modifier = estate_burghers_the_great_privilege_mod
 		}
 	}
 	on_invalid = {
 		custom_tooltip = estate_burghers_the_great_privilege_revoke_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_burghers_the_great_privilege_mod
-				}
-				remove_province_modifier = estate_burghers_the_great_privilege_mod
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_the_great_privilege_mod
 			}
+			remove_province_modifier = estate_burghers_the_great_privilege_mod
 		}
 	}
-
 	penalties = {
 	}
 	cooldown_years = 20
@@ -5756,29 +7925,28 @@ estate_burghers_exclusive_trade_rights = {
 	}
 	on_revoked = {
 		custom_tooltip = estate_burghers_exclusive_trade_rights_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_burghers_exclusive_trade_rights_mod
-				}
-				remove_province_modifier = estate_burghers_exclusive_trade_rights_mod
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_exclusive_trade_rights_mod
 			}
+			remove_province_modifier = estate_burghers_exclusive_trade_rights_mod
 		}
 	}
 	on_invalid = {
 		custom_tooltip = estate_burghers_exclusive_trade_rights_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_burghers_exclusive_trade_rights_mod
-				}
-				remove_province_modifier = estate_burghers_exclusive_trade_rights_mod
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_exclusive_trade_rights_mod
 			}
+			remove_province_modifier = estate_burghers_exclusive_trade_rights_mod
 		}
 	}
 	penalties = {
 	}
-
 	benefits = {
 	}
 	ai_will_do = {
@@ -5832,27 +8000,26 @@ estate_vaisyas_exclusive_trade_rights = {
 	}
 	on_revoked = {
 		custom_tooltip = estate_burghers_exclusive_trade_rights_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_burghers_exclusive_trade_rights_mod
-				}
-				remove_province_modifier = estate_burghers_exclusive_trade_rights_mod
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_exclusive_trade_rights_mod
 			}
+			remove_province_modifier = estate_burghers_exclusive_trade_rights_mod
 		}
 	}
 	on_invalid = {
 		custom_tooltip = estate_burghers_exclusive_trade_rights_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_burghers_exclusive_trade_rights_mod
-				}
-				remove_province_modifier = estate_burghers_exclusive_trade_rights_mod
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_exclusive_trade_rights_mod
 			}
+			remove_province_modifier = estate_burghers_exclusive_trade_rights_mod
 		}
 	}
-
 	penalties = {
 	}
 	benefits = {
@@ -5909,27 +8076,26 @@ estate_jains_exclusive_trade_rights = {
 	}
 	on_revoked = {
 		custom_tooltip = estate_burghers_exclusive_trade_rights_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_burghers_exclusive_trade_rights_mod
-				}
-				remove_province_modifier = estate_burghers_exclusive_trade_rights_mod
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_exclusive_trade_rights_mod
 			}
+			remove_province_modifier = estate_burghers_exclusive_trade_rights_mod
 		}
 	}
 	on_invalid = {
 		custom_tooltip = estate_burghers_exclusive_trade_rights_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_burghers_exclusive_trade_rights_mod
-				}
-				remove_province_modifier = estate_burghers_exclusive_trade_rights_mod
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_exclusive_trade_rights_mod
 			}
+			remove_province_modifier = estate_burghers_exclusive_trade_rights_mod
 		}
 	}
-
 	penalties = {
 	}
 	benefits = {
@@ -5947,18 +8113,16 @@ estate_burghers_control_over_monetary_policy = {
 	is_valid = {
 		has_dlc = "Emperor"
 	}
-
-	
-	benefits = {
-		inflation_reduction = 0.05
+	penalties = {
+		all_power_cost = 0.05
 	}
-	
-	modifier_by_land_ownership = {
-			production_efficiency = 0.2
-			}
-			
+	benefits = {
+		inflation_reduction = 0.15
+		interest = -0.5
+		production_efficiency = 0.05
+	}
 	ai_will_do = {
-		factor = 1000
+		factor = 1
 		modifier = {
 			factor = 10
 			OR = {
@@ -5981,20 +8145,18 @@ estate_vaisyas_control_over_monetary_policy = {
 	is_valid = {
 		has_dlc = "Emperor"
 	}
-
-	
+	penalties = {
+		all_power_cost = 0.05
+	}
 	benefits = {
 		inflation_reduction = 0.15
+		interest = -0.5
+		production_efficiency = 0.05
 	}
-	
-	modifier_by_land_ownership = {
-			production_efficiency = 0.2
-			}
-			
 	ai_will_do = {
-		factor = 1000
+		factor = 1
 		modifier = {
-			factor = 1
+			factor = 10
 			OR = {
 				inflation = 15
 				num_of_loans = 15
@@ -6016,17 +8178,16 @@ estate_jains_control_over_monetary_policy = {
 		has_dlc = "Emperor"
 		NOT = { has_estate = estate_vaisyas }
 	}
-
+	penalties = {
+		all_power_cost = 0.05
+	}
 	benefits = {
 		inflation_reduction = 0.15
+		interest = -0.5
+		production_efficiency = 0.05
 	}
-	
-	modifier_by_land_ownership = {
-			production_efficiency = 0.2
-			}
-			
 	ai_will_do = {
-		factor = 1000
+		factor = 1
 		modifier = {
 			factor = 10
 			OR = {
@@ -6085,7 +8246,6 @@ estate_vaisyas_private_trade_fleets = {
 		}
 		navy_size = 1
 	}
-
 	penalties = {
 	}
 	benefits = {
@@ -6119,7 +8279,6 @@ estate_jains_private_trade_fleets = {
 		}
 		navy_size = 1
 	}
-
 	penalties = {
 	}
 	benefits = {
@@ -6145,9 +8304,7 @@ estate_church_for_the_faith = {
 	max_absolutism = -5
 	is_valid = {
 		has_dlc = "Emperor"
-		NOT = {		
-				tag = PER
-			}
+		NOT = { religion = confucianism }
 		OR = {
 			any_known_country = {
 				NOT = { religion = root }
@@ -6161,7 +8318,6 @@ estate_church_for_the_faith = {
 			NOT = { religion = root }
 		}
 		NOT = { has_estate_privilege = estate_church_inwards_perfection }
-
 	}
 	on_granted = {
 		custom_tooltip = estate_church_for_the_faith_effect_tooltip
@@ -6227,7 +8383,6 @@ estate_brahmins_for_the_faith = {
 			NOT = { religion = root }
 		}
 		NOT = { has_estate_privilege = estate_church_inwards_perfection }
-
 	}
 	on_granted = {
 		custom_tooltip = estate_brahmins_for_the_faith_effect_tooltip
@@ -6297,7 +8452,6 @@ estate_burghers_prussian_confederation = {
 			share = 20
 		}
 	}
-
 	penalties = {
 		min_autonomy = 35
 	}
@@ -6309,7 +8463,7 @@ estate_burghers_prussian_confederation = {
 			factor = 1.5
 			owns = 43
 			NOT = { num_of_cities = 6 }
-			crown_land_share = 40
+			crown_land_share = 50
 			NOT = {
 				estate_influence = {
 					estate = estate_burghers
@@ -6333,7 +8487,6 @@ estate_nobles_statutory_rights = {
 			share = -30
 		}
 	}
-
 	penalties = {
 		min_autonomy = 25
 	}
@@ -6359,7 +8512,6 @@ estate_burghers_statutory_rights = {
 			share = -30
 		}
 	}
-
 	penalties = {
 		min_autonomy = 25
 	}
@@ -6384,7 +8536,6 @@ estate_church_statutory_rights = {
 			share = -30
 		}
 	}
-
 	penalties = {
 		min_autonomy = 25
 	}
@@ -6409,14 +8560,6 @@ estate_brahmins_statutory_rights = {
 			share = -30
 		}
 	}
-	can_select = {
-		NOT = {
-			num_of_estate_privileges = {
-			estate = estate_brahmins
-			value = 4
-			}
-		}
-	}
 	penalties = {
 		min_autonomy = 25
 	}
@@ -6428,15 +8571,92 @@ estate_brahmins_statutory_rights = {
 	cooldown_years = 20
 }
 
+estate_church_brahmins_at_court = {
+	icon = privilege_seek_support_of_brahmins
+	can_select = {
+		if = {
+			limit = {
+				has_mission = mnd_khm_religion
+			}
+			mission_completed = mnd_khm_religion
+		}
+		else_if = {
+			limit = {
+				has_mission = mnd_khm_religion
+			}
+			mission_completed = mnd_siam_devaraja
+		}
+		else = {
+			has_estate_privilege = estate_church_brahmins_at_court
+		}
+		religion_group = eastern
+	}
+	is_valid = {
+		religion_group = eastern
+		OR = {
+			has_mission = mnd_khm_religion
+			has_mission = mnd_siam_devaraja
+			has_estate_privilege = estate_church_brahmins_at_court
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_brahmins_guaranteed_autonomy_effect_tooltip
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				religion = hinduism
+			}
+			add_province_modifier = {
+				name = estate_brahmins_guaranteed_autonomy_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
+			}
+			remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_brahmins_guaranteed_autonomy_revoke_effect_tooltip
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
+			}
+			remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_brahmins_guaranteed_autonomy_revoke_effect_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_brahmins_guaranteed_autonomy_mod
+			}
+			remove_province_modifier = estate_brahmins_guaranteed_autonomy_mod
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+}
 
 estate_burghers_khmer_irrigation = {
 	icon = privilege_monopoly_of_goods_livestock
 	can_select = {
-		NOT = { has_estate_privilege = estate_vaisyas_khmer_irrigation }
 		OR = {
-			tag = LNA
-			tag = KHM
-			tag = SUN
+			has_estate_privilege = estate_vaisyas_khmer_irrigation
+			mission_completed = mnd_khm_irrigation
+			mission_completed = sun_rice_production
 		}
 	}
 	is_valid = {
@@ -6445,34 +8665,50 @@ estate_burghers_khmer_irrigation = {
 			tag = LNA
 			tag = KHM
 			tag = SUN
+			has_estate_privilege = estate_vaisyas_khmer_irrigation
 		}
 	}
 	on_granted = {
 		custom_tooltip = estate_burghers_khmer_irrigation_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					trade_goods = grain
-				}
-				add_province_modifier = {
-					name = estate_burghers_khmer_irrigation_mod
-					duration = -1
-				}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				trade_goods = grain
 			}
+			add_province_modifier = {
+				name = estate_burghers_khmer_irrigation_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_burghers_khmer_irrigation_mod
+			}
+			remove_province_modifier = estate_burghers_khmer_irrigation_mod
 		}
 	}
 	on_revoked = {
 		custom_tooltip = estate_burghers_khmer_irrigation_revoke_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_burghers_khmer_irrigation_mod
-				}
-				remove_province_modifier = estate_burghers_khmer_irrigation_mod
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_khmer_irrigation_mod
 			}
+			remove_province_modifier = estate_burghers_khmer_irrigation_mod
 		}
 	}
 	on_invalid = {
+		custom_tooltip = estate_burghers_khmer_irrigation_revoke_effect_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_khmer_irrigation_mod
+			}
+			remove_province_modifier = estate_burghers_khmer_irrigation_mod
+		}
 	}
 	penalties = {
 	}
@@ -6486,11 +8722,9 @@ estate_burghers_khmer_irrigation = {
 estate_vaisyas_khmer_irrigation = {
 	icon = privilege_monopoly_of_goods_livestock
 	can_select = {
-		NOT = { has_estate_privilege = estate_burghers_khmer_irrigation }
 		OR = {
-			tag = LNA
-			tag = KHM
-			tag = SUN
+			mission_completed = mnd_khm_irrigation
+			has_estate_privilege = estate_vaisyas_khmer_irrigation
 		}
 	}
 	is_valid = {
@@ -6498,35 +8732,50 @@ estate_vaisyas_khmer_irrigation = {
 		OR = {
 			tag = LNA
 			tag = KHM
-			tag = SUN
+			has_estate_privilege = estate_vaisyas_khmer_irrigation
 		}
 	}
 	on_granted = {
 		custom_tooltip = estate_burghers_khmer_irrigation_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					trade_goods = grain
-				}
-				add_province_modifier = {
-					name = estate_burghers_khmer_irrigation_mod
-					duration = -1
-				}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				trade_goods = grain
 			}
+			add_province_modifier = {
+				name = estate_burghers_khmer_irrigation_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_burghers_khmer_irrigation_mod
+			}
+			remove_province_modifier = estate_burghers_khmer_irrigation_mod
 		}
 	}
 	on_revoked = {
 		custom_tooltip = estate_burghers_khmer_irrigation_revoke_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_burghers_khmer_irrigation_mod
-				}
-				remove_province_modifier = estate_burghers_khmer_irrigation_mod
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_khmer_irrigation_mod
 			}
+			remove_province_modifier = estate_burghers_khmer_irrigation_mod
 		}
 	}
 	on_invalid = {
+		custom_tooltip = estate_burghers_khmer_irrigation_revoke_effect_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_khmer_irrigation_mod
+			}
+			remove_province_modifier = estate_burghers_khmer_irrigation_mod
+		}
 	}
 	penalties = {
 	}
@@ -6537,7 +8786,32 @@ estate_vaisyas_khmer_irrigation = {
 	}
 }
 
-
+estate_church_karma_temples = {
+	icon = privilege_build_jain_temple
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.1
+	is_valid = {
+		has_dlc = "Common Sense"
+		OR = {
+			religion = buddhism
+			religion = mahayana
+			religion = vajrayana
+		}
+	}
+	can_select = {
+	}
+	on_granted = {
+		custom_tooltip = estate_church_karma_temples_tt
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
 
 estate_church_influence_temples = {
 	icon = privilege_promoto_dhimmi_nobles
@@ -6558,7 +8832,7 @@ estate_church_influence_temples = {
 	benefits = {
 	}
 	ai_will_do = {
-		factor = 100
+		factor = 10
 	}
 }
 
@@ -6580,27 +8854,44 @@ estate_burghers_tropical_nation = {
 	}
 	on_granted = {
 		custom_tooltip = estate_burghers_tropical_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_climate = tropical
-				}
-				add_province_modifier = {
-					name = estate_burghers_tropical_mod
-					duration = -1
-				}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				has_climate = tropical
 			}
+			add_province_modifier = {
+				name = estate_burghers_tropical_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_burghers_tropical_mod
+			}
+			remove_province_modifier = estate_burghers_tropical_mod
 		}
 	}
 	on_revoked = {
 		custom_tooltip = estate_burghers_tropical_revoke_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_burghers_tropical_mod
-				}
-				remove_province_modifier = estate_burghers_tropical_mod
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_tropical_mod
 			}
+			remove_province_modifier = estate_burghers_tropical_mod
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_burghers_tropical_revoke_effect_tooltip
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_tropical_mod
+			}
+			remove_province_modifier = estate_burghers_tropical_mod
 		}
 	}
 	ai_will_do = {
@@ -6627,38 +8918,44 @@ estate_church_lao_animism = {
 	}
 	on_granted = {
 		custom_tooltip = estate_church_lao_animism_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					religion = animism
-				}
-				add_province_modifier = {
-					name = estate_church_lao_animism_mod
-					duration = -1
-				}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				religion = animism
 			}
+			add_province_modifier = {
+				name = estate_church_lao_animism_mod
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_church_lao_animism_mod
+			}
+			remove_province_modifier = estate_church_lao_animism_mod
 		}
 	}
 	on_revoked = {
 		custom_tooltip = estate_church_lao_animism_revoke_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_church_lao_animism_mod
-				}
-				remove_province_modifier = estate_church_lao_animism_mod
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_church_lao_animism_mod
 			}
+			remove_province_modifier = estate_church_lao_animism_mod
 		}
 	}
 	on_invalid = {
 		custom_tooltip = estate_church_lao_animism_revoke_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_church_lao_animism_mod
-				}
-				remove_province_modifier = estate_church_lao_animism_mod
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_church_lao_animism_mod
 			}
+			remove_province_modifier = estate_church_lao_animism_mod
 		}
 	}
 	penalties = {
@@ -6674,24 +8971,24 @@ estate_church_lao_animism = {
 
 estate_nobles_command_of_the_military = {
 	icon = privilege_promote_purbias
-	#land_share = 5
+	land_share = 10
 	max_absolutism = -10
-	loyalty = 0.1
-	influence = 0.2
+	influence = 0.3
 	is_valid = {
 	}
 	can_select = {
 	}
 	on_granted = {
+		custom_tooltip = estate_nobles_command_of_the_military_tt
 	}
 	penalties = {
-		leader_cost = 0.1
+		leader_cost = 0.2
 	}
 	benefits = {
-		yearly_army_professionalism = 0.00250
+		army_tradition = 1
 	}
 	ai_will_do = {
-		factor = 100
+		factor = 0
 	}
 }
 
@@ -6713,10 +9010,10 @@ estate_burghers_orang_laut_alliances = {
 	penalties = {
 	}
 	benefits = {
-		global_own_trade_power = 0.2
+		global_own_trade_power = 0.25
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 5
 	}
 }
 
@@ -6730,7 +9027,6 @@ estate_nobles_better_integration = {
 			OR = {
 				is_subject_of_type = vassal
 				is_subject_of_type = client_vassal
-				is_subject_of_type = canton
 				is_subject_of_type = daimyo_vassal
 				is_subject_of_type = personal_union
 			}
@@ -6748,10 +9044,89 @@ estate_nobles_better_integration = {
 		enable_annexation_penalty = yes
 	}
 	penalties = {
-		reduced_liberty_desire = -5
+		reduced_liberty_desire = -15
 	}
 	benefits = {
-		diplomatic_annexation_cost = -0.1
+		diplomatic_annexation_cost = -0.05
+	}
+	cooldown_years = 10
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+estate_maratha_better_integration = {
+	icon = privilege_better_integration
+	max_absolutism = -10
+	influence = 0.15
+	loyalty = 0.05
+	is_valid = {
+		any_subject_country = {
+			OR = {
+				is_subject_of_type = vassal
+				is_subject_of_type = client_vassal
+				is_subject_of_type = daimyo_vassal
+				is_subject_of_type = personal_union
+			}
+		}
+		NOT = { has_estate = estate_nobles }
+		NOT = { has_estate = estate_rajput }
+	}
+	can_select = {
+	}
+	on_granted = {
+		disable_annexation_penalty = yes
+	}
+	on_revoked = {
+		enable_annexation_penalty = yes
+	}
+	on_invalid = {
+		enable_annexation_penalty = yes
+	}
+	penalties = {
+		reduced_liberty_desire = -15
+	}
+	benefits = {
+		diplomatic_annexation_cost = -0.05
+	}
+	cooldown_years = 10
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+estate_rajput_better_integration = {
+	icon = privilege_better_integration
+	max_absolutism = -10
+	influence = 0.15
+	loyalty = 0.05
+	is_valid = {
+		any_subject_country = {
+			OR = {
+				is_subject_of_type = vassal
+				is_subject_of_type = client_vassal
+				is_subject_of_type = daimyo_vassal
+				is_subject_of_type = personal_union
+			}
+		}
+		NOT = { has_estate = estate_nobles }
+	}
+	can_select = {
+	}
+	on_granted = {
+		disable_annexation_penalty = yes
+	}
+	on_revoked = {
+		enable_annexation_penalty = yes
+	}
+	on_invalid = {
+		enable_annexation_penalty = yes
+	}
+	penalties = {
+		reduced_liberty_desire = -15
+	}
+	benefits = {
+		diplomatic_annexation_cost = -0.05
 	}
 	cooldown_years = 10
 	ai_will_do = {
@@ -6782,13 +9157,355 @@ estate_church_religious_diplomats = {
 	benefits = {
 	}
 	ai_will_do = {
-		factor = 100	#The privilege is a little bit too niche to be really usable for the AI
+		factor = 0	#The privilege is a little bit too niche to be really usable for the AI
 	}
 }
 
+estate_brahmins_religious_diplomats = {
+	icon = privilege_religious_diplomats
+	max_absolutism = -10
+	influence = 0.15
+	loyalty = 0.05
+	is_valid = {
+		NOT = { has_estate = estate_church }
+	}
+	can_select = {
+	}
+	on_granted = {
+		add_increase_same_religion_opinion = yes
+	}
+	on_revoked = {
+		remove_increase_same_religion_opinion = yes
+	}
+	on_invalid = {
+		remove_increase_same_religion_opinion = yes
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0	#The privilege is a little bit too niche to be really usable for the AI
+	}
+}
 
+estate_church_one_faith_one_culture = {
+	icon = privilege_one_faith_one_culture
+	max_absolutism = -5
+	influence = 0.2
+	loyalty = 0.1
+	land_share = 5
+	is_valid = {
+	}
+	can_select = {
+	}
+	on_granted = {
+		custom_tooltip = estate_church_one_faith_one_culture_gta
+		custom_tooltip = estate_church_one_faith_one_culture_gtb
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					religion = ROOT
+					AND = {
+						religion = THIS
+						owner = {
+							has_harmonized_with = PREV
+						}
+					}
+					AND = {
+						religion = THIS
+						owner = {
+							secondary_religion = PREV
+						}
+					}
+				}
+				OR = {
+					has_owner_accepted_culture = yes
+					culture_group = ROOT
+				}
+			}
+			add_province_modifier = {
+				name = estate_church_united_faith_and_culture
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_church_united_faith_and_culture
+			}
+			remove_province_modifier = estate_church_united_faith_and_culture
+		}
+		if = {
+			limit = {
+				NOT = { culture_group = ROOT }
+				has_owner_accepted_culture = no
+			}
+			add_province_modifier = {
+				name = estate_church_false_culture
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_church_false_culture
+			}
+			remove_province_modifier = estate_church_false_culture
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_church_one_faith_one_culture_rta
+		custom_tooltip = estate_church_one_faith_one_culture_rtb
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_church_united_faith_and_culture
+			}
+			remove_province_modifier = estate_church_united_faith_and_culture
+		}
+		if = {
+			limit = {
+				has_province_modifier = estate_church_false_culture
+			}
+			remove_province_modifier = estate_church_false_culture
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_church_one_faith_one_culture_rta
+		custom_tooltip = estate_church_one_faith_one_culture_rtb
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_church_united_faith_and_culture
+			}
+			remove_province_modifier = estate_church_united_faith_and_culture
+		}
+		if = {
+			limit = {
+				has_province_modifier = estate_church_false_culture
+			}
+			remove_province_modifier = estate_church_false_culture
+		}
+	}
+	penalties = {
+		tolerance_heathen = -2
+		tolerance_heretic = -2
+	}
+	benefits = {
+		global_missionary_strength = 0.01
+	}
+	cooldown_years = 15
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { dominant_religion = ROOT }
+		}
+		modifier = {
+			factor = 0
+			NOT = { dominant_culture = ROOT }
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion = confucianism }
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion = confucianism }
+		}
+		modifier = {
+			factor = 100
+			NOT = { average_autonomy = 15 }
+			dominant_religion = ROOT
+			dominant_culture = ROOT
+		}
+		modifier = {
+			factor = 0.1
+			is_absolutism_active = yes
+		}
+	}
+}
 
+estate_brahmins_one_faith_one_culture = {
+	icon = privilege_one_faith_one_culture
+	max_absolutism = -5
+	influence = 0.25
+	loyalty = 0.1
+	land_share = 5
+	is_valid = {
+		NOT = { has_estate = estate_church }
+	}
+	can_select = {
+	}
+	on_granted = {
+		custom_tooltip = estate_church_one_faith_one_culture_gta
+		custom_tooltip = estate_church_one_faith_one_culture_gtb
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					religion = ROOT
+					AND = {
+						religion = THIS
+						owner = {
+							has_harmonized_with = PREV
+						}
+					}
+					AND = {
+						religion = THIS
+						owner = {
+							secondary_religion = PREV
+						}
+					}
+				}
+				OR = {
+					has_owner_accepted_culture = yes
+					culture_group = ROOT
+				}
+			}
+			add_province_modifier = {
+				name = estate_church_united_faith_and_culture
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_church_united_faith_and_culture
+			}
+			remove_province_modifier = estate_church_united_faith_and_culture
+		}
+		if = {
+			limit = {
+				NOT = { culture_group = ROOT }
+				has_owner_accepted_culture = no
+			}
+			add_province_modifier = {
+				name = estate_church_false_culture
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_church_false_culture
+			}
+			remove_province_modifier = estate_church_false_culture
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_church_one_faith_one_culture_rta
+		custom_tooltip = estate_church_one_faith_one_culture_rtb
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_church_united_faith_and_culture
+			}
+			remove_province_modifier = estate_church_united_faith_and_culture
+		}
+		if = {
+			limit = {
+				has_province_modifier = estate_church_false_culture
+			}
+			remove_province_modifier = estate_church_false_culture
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_church_one_faith_one_culture_rta
+		custom_tooltip = estate_church_one_faith_one_culture_rtb
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_church_united_faith_and_culture
+			}
+			remove_province_modifier = estate_church_united_faith_and_culture
+		}
+		if = {
+			limit = {
+				has_province_modifier = estate_church_false_culture
+			}
+			remove_province_modifier = estate_church_false_culture
+		}
+	}
+	penalties = {
+		tolerance_heathen = -2
+		tolerance_heretic = -2
+	}
+	benefits = {
+		global_missionary_strength = 0.01
+	}
+	cooldown_years = 15
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { dominant_religion = ROOT }
+		}
+		modifier = {
+			factor = 0
+			NOT = { dominant_culture = ROOT }
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion = confucianism }
+		}
+		modifier = {
+			factor = 0
+			NOT = { religion = confucianism }
+		}
+		modifier = {
+			factor = 100
+			NOT = { average_autonomy = 15 }
+			dominant_religion = ROOT
+			dominant_culture = ROOT
+		}
+		modifier = {
+			factor = 0.1
+			is_absolutism_active = yes
+		}
+	}
+}
 
+estate_nobles_neighbor_raids = {
+	icon = privilege_demand_more_troops
+	max_absolutism = -10
+	influence = 0.2
+	loyalty = 0
+	is_valid = {
+		NOT = { has_country_modifier = the_abolish_slavery_act }
+		has_dlc = "Origins"
+		OR = {
+			technology_group = east_african
+			technology_group = central_african
+			technology_group = sub_saharan
+			has_reform = steppe_horde
+			has_reform = great_mongol_state_reform
+		}
+	}
+	can_select = {
+		NOT = { has_country_modifier = the_abolish_slavery_act }
+	}
+	on_granted = {
+		enable_capital_slave_raid = yes
+	}
+	on_revoked = {
+		disable_capital_slave_raid = yes
+	}
+	on_invalid = {
+		disable_capital_slave_raid = yes
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
 
 ###FETISHIST PRIVILEGES###
 #Privilege to enable cults for heirs
@@ -6863,6 +9580,7 @@ estate_church_embrace_singluar_cult = {
 	penalties = {
 	}
 	benefits = {
+		no_stability_loss_on_monarch_death = yes
 	}
 	ai_will_do = {
 		factor = 1000
@@ -6904,6 +9622,40 @@ estate_church_flexible_cults = {
 	}
 }
 
+###MUSLIM PRIVILEGES###
+#Privilege to remove adm cost of scholars
+estate_church_scholar_connections = {
+	icon = privilege_recruit_minister
+	max_absolutism = -5
+	influence = 0.1
+	loyalty = 0.05
+	is_valid = {
+		religion_group = muslim
+		has_dlc = "Cradle of Civilization"
+	}
+	can_select = {
+	}
+	on_granted = {
+		disable_scholar_cost = yes
+	}
+	on_revoked = {
+		enable_scholar_cost = yes
+	}
+	on_invalid = {
+		enable_scholar_cost = yes
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 15
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
 
 #Privilege to remove the diplo requirement for one school
 estate_church_integrated_school = {
@@ -6913,7 +9665,6 @@ estate_church_integrated_school = {
 	loyalty = 0
 	is_valid = {
 		religion_group = muslim
-		always = no
 		has_dlc = "Cradle of Civilization"
 	}
 	can_select = {
@@ -7182,6 +9933,95 @@ estate_nobles_cawa_offensive_fighters = {
 	}
 }
 
+estate_burghers_control_over_the_mint = {
+	icon = privilege_gold_mint
+	max_absolutism = -30
+	influence = 0.15
+	loyalty = 0.05
+	land_share = 5
+	is_valid = {
+		has_unlocked_estate_privilege = { estate_privilege = estate_burghers_control_over_the_mint }
+		gold = 1
+	}
+	can_select = {
+	}
+	on_granted = {
+		custom_tooltip = estate_burghers_control_over_the_mint_gt
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				trade_goods = gold
+			}
+			add_province_modifier = {
+				name = estate_burghers_control_over_gold_mine
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = estate_burghers_control_over_gold_mine
+			}
+			remove_province_modifier = estate_burghers_control_over_gold_mine
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_control_over_the_mint_rt
+	}
+	on_revoked_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_control_over_gold_mine
+			}
+			remove_province_modifier = estate_burghers_control_over_gold_mine
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_burghers_control_over_the_mint_rt
+	}
+	on_invalid_province = {
+		if = {
+			limit = {
+				has_province_modifier = estate_burghers_control_over_gold_mine
+			}
+			remove_province_modifier = estate_burghers_control_over_gold_mine
+		}
+	}
+	penalties = {
+		all_power_cost = 0.05
+	}
+	benefits = {
+		monthly_gold_inflation_modifier = -0.75
+		gold_depletion_chance_modifier = -0.75
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { gold_income_percentage = 0.2 }
+		}
+		modifier = {
+			factor = 4
+			gold_income_percentage = 0.4
+		}
+		modifier = {
+			factor = 4
+			gold_income_percentage = 0.6
+		}
+		modifier = {
+			factor = 4
+			gold_income_percentage = 0.8
+		}
+		modifier = {
+			factor = 1000
+			gold_income_percentage = 1
+		}
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}
 
 estate_dhimmi_guarantee_of_traditions = {
 	icon = privilege_promoto_dhimmi_nobles
@@ -7258,7 +10098,7 @@ estate_dhimmi_guarantee_of_traditions = {
 		tolerance_heathen = 2
 	}
 	ai_will_do = {
-		factor = 1000
+		factor = 100
 		modifier = {
 			factor = 10
 			num_of_owned_provinces_with = {
@@ -7286,6 +10126,38 @@ estate_dhimmi_guarantee_of_traditions = {
 				}
 			}
 		}
+	}
+}
+
+estate_dhimmi_grant_liberties = {
+	icon = privilege_tolerance_heathen
+	max_absolutism = -10
+	influence = 0.1
+	loyalty = 0.1
+	is_valid = {
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_jains_grant_liberties = {
+	icon = privilege_tolerance_heathen
+	max_absolutism = -10
+	influence = 0.1
+	loyalty = 0.1
+	is_valid = {
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 1
 	}
 }
 
@@ -7326,6 +10198,11 @@ estate_church_yakobs_churches = {
 		modifier = {
 			factor = 2
 			NOT = { dominant_religion = ROOT }
+		}
+		modifier = {
+			factor = 1000
+			has_mission = eth_reform_the_negusa_government
+			NOT = { mission_completed = eth_reform_the_negusa_government }
 		}
 	}
 }

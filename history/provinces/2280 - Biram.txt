@@ -1,3 +1,4 @@
+ 
 # No previous file for Biram
 
 owner = KAN
@@ -8,10 +9,10 @@ religion = sunni
 capital = "Biram"
 trade_goods = dyes
 hre = no
-base_tax = 2 
-base_production = 2
-base_manpower = 1
-is_city = yes
+base_tax = 4  
+base_production = 4
+base_manpower = 2 
+
 
 
 discovered_by = sub_saharan
@@ -21,4 +22,5 @@ discovered_by = sub_saharan
 	owner = SOK
 	controller = SOK
 	add_core = SOK
+	is_city = yes
 } # The Fulani Empire

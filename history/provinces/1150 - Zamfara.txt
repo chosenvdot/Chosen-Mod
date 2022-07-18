@@ -1,3 +1,4 @@
+ 
 #1150 - Zamfara
 
 owner = ZZZ
@@ -5,13 +6,13 @@ controller = ZZZ
 add_core = ZZZ
 culture = hausa
 is_city = yes
-base_manpower = 1
+base_manpower = 2 
 religion = shamanism #Fetishism
 capital = "Dutsi"
 trade_goods = grain
 hre = no
-base_tax = 3 
-base_production = 3
+base_tax = 6 
+base_production = 6
 
 
 

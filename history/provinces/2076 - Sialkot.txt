@@ -1,3 +1,4 @@
+ 
 #2076 - Sialkot
 
 owner = SRH
@@ -5,14 +6,14 @@ controller = SRH
 culture = panjabi
 religion = hinduism
 capital = "Sialkot"
-trade_goods = paper
+trade_goods = bt_trade_good_books
 hre = no
-base_tax = 4
-base_production = 4
-base_manpower = 2
+base_tax = 8
+base_production = 8
+base_manpower = 4
 is_city = yes
 add_brahmins_or_church_effect = yes
-#add_core = DLH
+add_core = DLH
 add_core = PUN
 add_core = SRH
 discovered_by = indian

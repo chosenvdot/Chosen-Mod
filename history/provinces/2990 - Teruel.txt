@@ -1,4 +1,11 @@
-#214 - Teruel
+ 
+#2990 - Teruel
+#Region - Iberia
+#Area - Aragon
+
+latent_trade_goods = {
+	coal
+}
 
 owner = ARA		# Alfons V of Aragon
 controller = ARA
@@ -6,17 +13,17 @@ add_core = ARA
 culture = aragonese
 religion = catholic
 hre = no
-base_tax = 3
-base_production = 3
-trade_goods = cloth
-base_manpower = 3
+base_tax = 1 
+base_production = 1 
+trade_goods = iron
+base_manpower = 1 
 capital = "Teruel"
 is_city = yes
+
 discovered_by = western
-discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
-fort_15th = yes
+discovered_by = eastern
 
 1516.1.23 = {
 	controller = SPA

@@ -1,6 +1,7 @@
+ 
 # No previous file for Mayaimi
 
-culture = arawak
+culture = yamasee			
 religion = totemism
 capital = "Mayaimi"
 trade_goods = unknown

@@ -1,9 +1,11 @@
 government = monarchy
 add_government_reform = mandala_reform
 primary_culture = central_thai
+add_accepted_culture = northern_thai
+add_accepted_culture = lao
 religion = buddhism
 technology_group = chinese
-capital = 600 # Ayutthaya
+capital = 8556 #Bangkok
 
 
 1395.1.1 = {
@@ -39,7 +41,8 @@ capital = 600 # Ayutthaya
 		mil = 4
 		leader = { 
 			name = "Borommaracha II"
-			type = general
+			type = general
+
 			fire = 2	
 			shock = 4	
 			manuever = 3	
@@ -56,7 +59,7 @@ capital = 600 # Ayutthaya
 		adm = 3
 		dip = 2
 		mil = 4
-		leader = { name = "Borommaracha II"      	type = general	fire = 2	shock = 4	manuever = 3	siege = 1 }
+		leader = { name = "Borommaracha II"	type = general	fire = 2	shock = 4	manuever = 3	siege = 1 }
 	}
 }
 
@@ -119,7 +122,7 @@ capital = 600 # Ayutthaya
 		adm = 2
 		dip = 1
 		mil = 1
-		leader = { name = "Ramathibodi II"      type = general	fire = 1	shock = 3	manuever = 4	siege = 0 }
+		leader = { name = "Ramathibodi II"	type = general	fire = 1	shock = 3	manuever = 4	siege = 0 }
 	}
 }
 
@@ -130,7 +133,7 @@ capital = 600 # Ayutthaya
 		adm = 2
 		dip = 1
 		mil = 1
-		leader = { name = "Ramathibodi II"      type = general	fire = 1	shock = 3	manuever = 4	siege = 0 }
+		leader = { name = "Ramathibodi II"	type = general	fire = 1	shock = 3	manuever = 4	siege = 0 }
 	}
 }
 

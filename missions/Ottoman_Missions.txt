@@ -1,3 +1,4 @@
+#Updated and scriptified by Dub.
 tur_conquerors_of_the_near_east = {
 	slot = 1 #upper left column
 	generic = no #if a mission without generic = yes wants this slot then it overrides this.
@@ -7,7 +8,6 @@ tur_conquerors_of_the_near_east = {
 			tag = TUR
 			tag = RUM
 		}
-		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
@@ -24,24 +24,31 @@ tur_conquerors_of_the_near_east = {
 		}
 		effect = {
 			add_country_modifier = {
-				name = "ottoman_naval_expansion"
+				name = "defeated_byzantine_empire"
 				duration = 5475
 			}
-			every_province = {
+			#Claims
+			thrace_area = {
 				limit = {
-					OR = {
-						province_id = 145
-						province_id = 146
-						province_id = 1773
-						province_id = 4701
-						province_id = 4699
-						province_id = 4698
-						province_id = 6120
-						province_id = 3003
-					}
+					NOT = { owned_by = ROOT	}
+					NOT = { is_claim = ROOT	}
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
+			northern_thrace_area = {
+				limit = {
+					NOT = { owned_by = ROOT	}
+					NOT = { is_claim = ROOT	}
+				}
+				add_claim = ROOT
+			}
+			give_permaclaims_for_mission = { mission=conquer_southern_greece }
+		}
+		ai_priority = {
+			factor = 1000
+		}
+		ai_weight = {
+			factor = 1000
 		}
 	}
 	conquer_southern_greece = {
@@ -49,54 +56,36 @@ tur_conquerors_of_the_near_east = {
 		required_missions = { defeat_the_byzantine_empire }
 		position = 3
 		provinces_to_highlight = {
-			OR = {
-				area = morea_area
-				area = XMP_central_greece_area
-			}
+			conquer_southern_greece_provinces = yes
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			morea_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=conquer_southern_greece_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
-			XMP_central_greece_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-
 		}
 		completed_by = 1460.1.1
 		effect = {
 			add_country_modifier = {
-				name = "gc_defeated_byzantine_empire"
-				duration = 10950
+				name = "ottoman_naval_expansion"
+				duration = 5475
 			}
-			rascia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			serbia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
+			#Claims
+			give_permaclaims_for_mission = { mission=conquer_serbia }
+			#Vanilla claims extra.
 			albania_area = {
 				limit = {
+					NOT = { owned_by = ROOT	}
 					NOT = { is_claim = ROOT	}
-					NOT = { is_core = ROOT	}
 				}
 				add_claim = ROOT
 			}
-			every_province = {
+			aegean_archipelago_area = {
 				limit = {
-					area = aegean_archipelago_area
+					NOT = { owned_by = ROOT	}
 					NOT = { is_claim = ROOT	}
-					NOT = { is_core = ROOT	}
 					NOT = { province_id = 320 }
 				}
 				add_claim = ROOT
@@ -116,50 +105,48 @@ tur_conquerors_of_the_near_east = {
 		}
 		completed_by = 1460.1.1
 		provinces_to_highlight = {
-			OR = {
-				area = rascia_area
-				area = serbia_area
-			}
-			ROOT = {
-				NOT = {
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 8 #all but those owned by Hungary and Venice
-						OR = {
-							area = rascia_area
-							area = serbia_area
-						}
-					}
-				}
-			}
+			conquer_serbia_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 7
-				OR = {
-					area = rascia_area
-					area = serbia_area
-				}
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=conquer_serbia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "gc_at_the_gates_of_europe"
+				name = "at_the_gates_of_europe"
 				duration = 3650
 			}
-			bosnia_area = {
+			#Claims
+			give_permaclaims_for_mission = { mission=conquer_bosnia }
+			montenegro_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { owned_by = ROOT	}
+					NOT = { is_claim = ROOT	}
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
-			wallachia_area = {
+			
+			if = { #BT re-adding vassalization for Wallachia.
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					exists = WAL
+					is_subject = no
+					WAL = {
+						is_subject = no
+					}
 				}
-				add_permanent_claim = ROOT
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					months = 300
+					target = WAL
+				}
+			}
+			else = {
+				#Claims
+				give_permaclaims_for_mission = { mission=vassalize_wallachia }
 			}
 		}
 	}
@@ -174,34 +161,31 @@ tur_conquerors_of_the_near_east = {
 		}
 		completed_by = 1463.1.1
 		provinces_to_highlight = {
-			area = bosnia_area
+			conquer_bosnia_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			bosnia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=conquer_bosnia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
-			alfold_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
+			#Claims
+			give_permaclaims_for_mission = { mission=conquer_hungary }
+			#Vanilla extra claims
 			east_adriatic_coast_area = {
 				limit = {
+					NOT = { owned_by = ROOT	}
 					NOT = { is_claim = ROOT	}
-					NOT = { is_core = ROOT	}
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 		}
 	}
 	conquer_hungary = {
-		icon = mission_eastern_european_city
+		icon = mission_unite_home_region
 		required_missions = { conquer_bosnia }
 		ai_weight = {
 			factor = 2
@@ -209,14 +193,16 @@ tur_conquerors_of_the_near_east = {
 		ai_priority = {
 			factor = 1
 		}
+		completed_by = 1542.1.1
 		provinces_to_highlight = {
-			area = alfold_area
+			conquer_hungary_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			alfold_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=conquer_hungary_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
@@ -224,87 +210,37 @@ tur_conquerors_of_the_near_east = {
 				name = "ottoman_hungary"
 				duration = 7300
 			}
+			#Vanilla claims, unchanged.
 			austria_proper_area = {
 				limit = {
+					NOT = { owned_by = ROOT	}
 					NOT = { is_claim = ROOT	}
-					NOT = { is_core = ROOT	}
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 			transdanubia_area = {
 				limit = {
+					NOT = { owned_by = ROOT	}
 					NOT = { is_claim = ROOT	}
-					NOT = { is_core = ROOT	}
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 			croatia_area = {
 				limit = {
+					NOT = { owned_by = ROOT	}
 					NOT = { is_claim = ROOT	}
-					NOT = { is_core = ROOT	}
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 			slavonia_area = {
 				limit = {
+					NOT = { owned_by = ROOT	}
 					NOT = { is_claim = ROOT	}
-					NOT = { is_core = ROOT	}
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 		}
 	}
-	conquer_habsburgs = {
-		icon = mission_eastern_european_city
-		required_missions = {
-		conquer_hungary
-		vassalize_transylvania 
-		}
-		ai_weight = {
-			factor = 2
-		}
-		ai_priority = {
-			factor = 1
-		}
-		provinces_to_highlight = {
-			OR = {
-				area = austria_proper_area
-				area = transdanubia_area
-				area = croatia_area
-				area = slavonia_area
-				area = slovakia_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			austria_proper_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			transdanubia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			croatia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			slavonia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			slovakia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "kaiser_of_europe"
-				duration = 36500
-			}
-		}
-	}	
 }
 
 tur_eastern_balkans = {
@@ -316,13 +252,12 @@ tur_eastern_balkans = {
 			tag = TUR
 			tag = RUM
 		}
-		NOT = { map_setup = map_setup_random }
 	}
 	
 	has_country_shield = yes
 	
 	vassalize_wallachia = {
-		icon = mission_impaled_soldies
+		icon = mission_cannons_firing
 		position = 6
 		
 		ai_weight = {
@@ -334,34 +269,40 @@ tur_eastern_balkans = {
 		completed_by = 1462.11.1
 		required_missions = { conquer_serbia }
 		provinces_to_highlight = {
-			area = wallachia_area
+			vassalize_wallachia_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			wallachia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=vassalize_wallachia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
-			transylvania_area = {
+			if = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					exists = TRA
+					is_subject = no
+					TRA = {
+						is_subject = no
+					}
 				}
-				add_permanent_claim = ROOT
-			}
-			southern_transylvania_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					months = 300
+					target = TRA
 				}
-				add_permanent_claim = ROOT
 			}
+			else = {
+				#Claims
+				give_permaclaims_for_mission = { mission=vassalize_transylvania }
+			}
+		
 		}
 	}
 	vassalize_transylvania = {
-		icon = mission_eastern_european_city
+		icon = mission_alliances
 		required_missions = { vassalize_wallachia }
 		ai_weight = {
 			factor = 3
@@ -371,20 +312,14 @@ tur_eastern_balkans = {
 		}
 		completed_by = 1599.3.17
 		provinces_to_highlight = {
-			OR = {
-				area = transylvania_area
-				area = southern_transylvania_area
-			}
+			vassalize_transylvania_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			transylvania_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			southern_transylvania_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=vassalize_transylvania_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
@@ -392,12 +327,21 @@ tur_eastern_balkans = {
 				name = "principality_of_transylvania"
 				duration = 5475
 			}
+			#Vanilla claims
 			slovakia_area = {
 				limit = {
+					NOT = { owned_by = ROOT	}
 					NOT = { is_claim = ROOT	}
-					NOT = { is_core = ROOT	}
 				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
+			}
+			#BT added
+			carpathian_ruthenia_area = {
+				limit = {
+					NOT = { owned_by = ROOT	}
+					NOT = { is_claim = ROOT	}
+				}
+				add_claim = ROOT
 			}
 		}
 	}
@@ -412,7 +356,6 @@ tur_conquest_of_middle_east = {
 			tag = TUR
 			tag = RUM
 		}
-		NOT = { map_setup = map_setup_random }
 	}
 	
 	has_country_shield = yes
@@ -420,7 +363,7 @@ tur_conquest_of_middle_east = {
 	army_reforms_of_mehemed_II = {
 		icon = mission_non-western_soldiers
 		required_missions = {  }
-		completed_by = 1514.8.23
+		completed_by = 1514.8.23 #What. Are they for real?
 		ai_weight = {
 			factor = 5
 		}
@@ -428,75 +371,14 @@ tur_conquest_of_middle_east = {
 			army_size_percentage = 0.85
 		}
 		effect = {
-			karaman_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			kastamonu_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			rum_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			germiyan_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			ankara_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			aydin_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			hudavendigar_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			dulkadir_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			cukurova_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
+			#Claims
+			give_permaclaims_for_mission = { mission=consolidate_asia_minor }
 		}
 	}
 	consolidate_asia_minor = {
-		icon = mission_ottoman_harem
+		icon = mission_non-western_cavalry_raid
 		required_missions = { army_reforms_of_mehemed_II }
-		position = 5
+		position = 3
 		completed_by = 1469.1.1
 		ai_weight = {
 			factor = 3
@@ -505,111 +387,37 @@ tur_conquest_of_middle_east = {
 			factor = 5
 		}
 		provinces_to_highlight = {
-			OR = {
-				area = hudavendigar_area
-				area = aydin_area
-				area = ankara_area
-				area = karaman_area
-				area = germiyan_area
-				area = rum_area
-				area = kastamonu_area
-				province_id = 2302
-			}
+			consolidate_asia_minor_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			hudavendigar_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			aydin_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ankara_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			karaman_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			germiyan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			rum_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kastamonu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			2302 = {
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=consolidate_asia_minor_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "gc_anatolia_eyalet"
-				duration = 7300
+				name = "anatolia_eyalet"
+				duration = 3650
 			}
-			north_kurdistan_area = {
+			#Claims
+			give_permaclaims_for_mission = { mission=safeguard_eastern_anatolia }
+			imereti_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { owned_by = ROOT	}
+					NOT = { is_claim = ROOT	}
 				}
-				add_permanent_claim = ROOT
-			}
-			delta_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			bahari_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			erzurum_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			aleppo_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			syria_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			palestine_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
+				
 			}
 		}
 	}
 	safeguard_eastern_anatolia = {
 		icon = mission_unite_home_region
 		required_missions = { consolidate_asia_minor }
-		position = 6	
+		position = 5
 		
 		ai_weight = {
 			factor = 6
@@ -619,138 +427,64 @@ tur_conquest_of_middle_east = {
 		}
 		completed_by = 1514.8.23
 		provinces_to_highlight = {
-			OR = {
-				area = dulkadir_area
-				area = cukurova_area
-			}	
+			safeguard_eastern_anatolia_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-
-			dulkadir_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			cukurova_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=safeguard_eastern_anatolia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
-			330 = {
-				if = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			iraq_arabi_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			al_jazira_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			shahrizor_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
+			#Claims
+			give_permaclaims_for_mission = { mission=conquer_levant }
+			give_permaclaims_for_mission = { mission=conquer_trebizond }
+			give_permaclaims_for_mission = { mission=conquer_mesopotamia }
 		}
 	}
 	conquer_mesopotamia = {
-		icon = mission_persian_soldiers
+		icon = mission_non-western_cavalry_raid
 		required_missions = { safeguard_eastern_anatolia }
 		completed_by = 1536.1.1
 		provinces_to_highlight = {
-			OR = {
-				area = iraq_arabi_area
-				area = al_jazira_area
-				area = shahrizor_area
-			}
+			conquer_mesopotamia_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			iraq_arabi_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			al_jazira_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			shahrizor_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=conquer_mesopotamia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
-			bahrain_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			basra_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			khuzestan_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
+			#Claims
+			give_permaclaims_for_mission = { mission=conquer_haasa }
 		}
 	}
 	conquer_haasa = {
-		icon = mission_bedouins
+		icon = mission_invade_island
 		required_missions = { conquer_mesopotamia }
 		completed_by = 1549.1.1
 		provinces_to_highlight = {
-			OR = {
-				area = basra_area
-				area = bahrain_area
-				area = khuzestan_area
-			}
+			conquer_haasa_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			basra_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			bahrain_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			khuzestan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=conquer_haasa_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
-			1335 = {
+			408 = {
 				add_trade_modifier = {
 					who = root
 					duration = 7300
-					power = 50
+					power = 20
 					key = indian_ocean_ambition
 				}
 				add_unit_construction = {
@@ -758,6 +492,72 @@ tur_conquest_of_middle_east = {
 					type = galley
 					speed = 0.5
 					cost = 0
+				}
+				add_unit_construction = {
+					amount = 5
+					type = light_ship
+					speed = 0.5
+					cost = 0
+				}
+			}
+		}
+	}
+}
+
+tur_black_sea = {
+	slot = 4
+	potential = {
+		OR = {
+			tag = TUR
+			tag = RUM
+		}
+	}
+	
+	has_country_shield = yes
+	
+	conquer_trebizond = {
+		icon = mission_conquer_50_development
+		required_missions = { safeguard_eastern_anatolia }
+		position = 6
+		completed_by = 1461.1.1
+		provinces_to_highlight = {
+			conquer_trebizond_provinces = yes
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_highlighted 
+				provinces=conquer_trebizond_provinces
+				owner_type=owned_by
+			}
+		}
+		effect = {
+			#Claims
+			give_permaclaims_for_mission = { mission=take_kaffa }
+		}
+	}
+	take_kaffa = {
+		icon = mission_war_chest
+		required_missions = { conquer_trebizond }
+		completed_by = 1475.5.1
+		provinces_to_highlight = {
+			take_kaffa_provinces = yes
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_highlighted 
+				provinces=take_kaffa_provinces
+				owner_type=owned_by
+			}
+		}
+		effect = {
+			285 = {
+				add_trade_modifier = {
+					who = root
+					duration = 7300
+					power = 35
+					key = black_sea_ambition
 				}
 			}
 		}
@@ -773,14 +573,13 @@ tur_eastern_mediterrenean_missions = {
 			tag = TUR
 			tag = RUM
 		}
-		NOT = { map_setup = map_setup_random }
 	}
 	
 	has_country_shield = yes
 	
 	conquer_levant = {
 		icon = mission_arabian_fort
-		required_missions = { consolidate_asia_minor }
+		required_missions = { safeguard_eastern_anatolia }
 		completed_by = 1516.8.24
 		position = 6
 		ai_weight = {
@@ -790,25 +589,14 @@ tur_eastern_mediterrenean_missions = {
 			factor = 4
 		}
 		provinces_to_highlight = {
-			OR = {
-				area = aleppo_area
-				area = syria_area
-				area = palestine_area
-			}
+			conquer_levant_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			aleppo_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			syria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			palestine_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=conquer_levant_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
@@ -816,59 +604,12 @@ tur_eastern_mediterrenean_missions = {
 				name = "conquest_of_the_levant"
 				duration = 5475
 			}
-			delta_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			bahari_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			said_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			vostani_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			al_wahat_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			gulf_of_arabia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			cyrenaica_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
+			#Claims
+			give_permaclaims_for_mission = { mission=conquer_egypt }
 		}
 	}
 	conquer_egypt = {
-		icon = mission_egyptian_mamluk_soldier
+		icon = mission_empire
 		required_missions = { conquer_levant }
 		position = 6
 		completed_by = 1517.1.1
@@ -879,20 +620,14 @@ tur_eastern_mediterrenean_missions = {
 			factor = 5
 		}
 		provinces_to_highlight = {
-			OR = {
-				area = delta_area
-				area = bahari_area
-			}
+			conquer_egypt_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			delta_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			bahari_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=conquer_egypt_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
@@ -903,74 +638,46 @@ tur_eastern_mediterrenean_missions = {
 					duration = 5475
 				}
 			}
-			#Hejaz:
-			mecca_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			tabuk_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			medina_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			#Rhodes
+			#Claims
+			give_permaclaims_for_mission = { mission=conquer_hedjaz }
+			give_permaclaims_for_mission = { mission=defeat_the_knights }
 			if = {
 				limit = {
-					320 = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					exists = TRP
+					is_subject = no
+					TRP = {
+						is_subject = no
 					}
 				}
-				320 = {
-					add_permanent_claim = ROOT
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					months = 300
+					target = TRP
 				}
 			}
-			#Tripolitania
-			tripolitania_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			djerba_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			add_country_modifier = {
-				name = "caliphate_proclaimed"
-				duration = -1
+			else = {
+				give_permaclaims_for_mission = { mission=conquer_tripolitania }
 			}
 		}
 	}
 	defeat_the_knights = { #Conquer Rhodes
-		icon = mission_teutonic_knights
+		icon = mission_conquer_50_development
 		required_missions = { conquer_egypt }
 		completed_by = 1522.12.21
 		provinces_to_highlight = {
-			province_id = 320
+			defeat_the_knights_provinces = yes
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			owns = 320
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_highlighted 
+				provinces=defeat_the_knights_provinces
+				owner_type=owned_by
+			}
 		}
 		effect = {
-			add_permanent_claim = 163
+			#Claims
+			give_permaclaims_for_mission = { mission=take_crete_from_venice }
 			add_country_modifier = {
 				name = "ottoman_naval_dominance"
 				duration = 7300
@@ -982,51 +689,24 @@ tur_eastern_mediterrenean_missions = {
 		completed_by = 1669.9.26
 		required_missions = { defeat_the_knights }
 		provinces_to_highlight = {
-			province_id = 163
+			take_crete_from_venice_provinces = yes
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			owns = 163
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_highlighted 
+				provinces=take_crete_from_venice_provinces
+				owner_type=owned_by
+			}
 		}
 		effect = {
+			add_claim = 122 #Dubious
+			add_claim = 126
 			add_claim = 142
-			naples_area = {
-						limit = {
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
-						}
-						add_permanent_claim = root
-					}
-					apulia_area = {
-						limit = {
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
-						}
-						add_permanent_claim = root
-					}
-					calabria_area = {
-						limit = {
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
-						}
-						add_permanent_claim = root
-					}
-					sicily_area = {
-						limit = {
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
-						}
-						add_permanent_claim = root
-					}
-					western_sicily_area = {
-						limit = {
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
-						}
-						add_permanent_claim = root
-					}
+			#BT added Cephalonia as it's a separate provinces in BT
+			add_claim = 4698
 			add_country_modifier = {
-				name = "gc_mediterranean_ambition"
+				name = "mediterranean_ambition"
 				duration = 7300 #20 Years
 			}
 		}
@@ -1041,7 +721,6 @@ tur_conquer_western_mediterrenean = {
 			tag = TUR
 			tag = RUM
 		}
-		NOT = { map_setup = map_setup_random }
 	}
 	
 	has_country_shield = yes
@@ -1052,36 +731,34 @@ tur_conquer_western_mediterrenean = {
 		completed_by = 1524.1.1
 		position = 8
 		provinces_to_highlight = {
-			OR = {
-				area = tripolitania_area
-				area = djerba_area
-			}
+			conquer_tripolitania_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			tripolitania_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			djerba_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=conquer_tripolitania_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
-			tunisia_area = {
+			if = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					exists = TUN
+					is_subject = no
+					TUN = {
+						is_subject = no
+					}
 				}
-				add_permanent_claim = ROOT
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					months = 300
+					target = TUN
+				}
 			}
-			kabylia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
+			else = {
+				#Claims
+				give_permaclaims_for_mission = { mission=conquer_tunisia }
 			}
 		}
 	}
@@ -1090,52 +767,67 @@ tur_conquer_western_mediterrenean = {
 		required_missions = { conquer_tripolitania }
 		completed_by = 1534.8.16
 		provinces_to_highlight = {
-			OR = {
-				area = tunisia_area
-				area = kabylia_area
-			}
+			conquer_tunisia_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			tunisia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kabylia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=conquer_tunisia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
-			algiers_area = {
+			if = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					exists = ALG
+					is_subject = no
+					ALG = {
+						is_subject = no
+					}
 				}
-				add_permanent_claim = ROOT
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					months = 300
+					target = ALG
+				}
 			}
+			else = {
+				#Claims
+				give_permaclaims_for_mission = { mission=subjugate_algiers }
+			}
+			#Random vanilla claim to Malta. OK.
 			add_claim = 126
 		}
 	}
-	
 	subjugate_algiers = { #Conquer Algiers
-		icon = mission_ottoman_harem
+		icon = mission_sea_battles
 		required_missions = { conquer_tunisia }
 		completed_by = 1534.8.16
 		provinces_to_highlight = {
-			area = algiers_area
+			subjugate_algiers_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			algiers_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=subjugate_algiers_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
-		effect = {
-			add_country_modifier = {
-				name = "tur_barbary_pirates"
-				duration = 9125
+		effect = { #Idea, change to do the Tunisian event from GC?
+			if = {
+				limit = { has_dlc = "Golden Century" }
+				# Barbarossa event, make Algiers a pirate march
+				country_event = {
+					id = flavor_tun.1
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = "tur_barbary_pirates"
+					duration = 9125
+				}
 			}
 		}
 	}
@@ -1148,135 +840,28 @@ tur_indian_ocean = {
 			tag = TUR
 			tag = RUM
 		}
-		NOT = { map_setup = map_setup_random }
 	}
 	
 	has_country_shield = yes
-	conquer_kurdistan = { 
-		icon = mission_mosque
-		required_missions = { consolidate_asia_minor }
-		position = 6
-		provinces_to_highlight = {
-			OR = {
-				area = north_kurdistan_area
-				area = erzurum_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-			north_kurdistan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			erzurum_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					NOT = {is_year = 1490 }
-				}	
-				add_yearly_manpower = 2	
-				set_global_flag = erzincan_copper
-				add_country_modifier = {
-					name = "turkmen_recruitment"
-					duration = 5475
-				}
-				caucasia_region = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}				
-			} 
-			else = {
-				set_global_flag = erzincan_copper
-				add_country_modifier = {
-				name = "turkmen_recruitment"
-					duration = 5475
-				}	
-				caucasia_region = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-		}
-	}
 	
-	conquer_caucasia = {
-		icon = mission_non-western_soldiers
-		required_missions = { conquer_kurdistan }
-		position = 7
-		provinces_to_highlight = {
-				region = caucasia_region
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			}
-		trigger = {
-				caucasia_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			add_prestige = 30
-			caucasia_region = {
-					limit = {
-						owned_by = ROOT
-					}
-					add_province_modifier = {
-						name = "increased_janissary_recruitment"
-						duration = 18250 }
-				}
-		}
-	}
 	conquer_hedjaz = { #Conquer Hejaz
 		icon = mission_mosque
 		required_missions = { conquer_egypt }
 		completed_by = 1517.1.1
 		position = 8
 		provinces_to_highlight = {
-			OR = {
-				area = mecca_area
-				area = tabuk_area
-				area = medina_area
-			}
+			conquer_hedjaz_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			mecca_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tabuk_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			medina_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=conquer_hedjaz_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
-			tihama_al_yemen_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			yemen_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
+			give_permaclaims_for_mission = { mission=conquer_mocha }
 		}
 	}
 	conquer_mocha = { #Conquer Mocha
@@ -1284,208 +869,27 @@ tur_indian_ocean = {
 		required_missions = { conquer_hedjaz }
 		completed_by = 1538.1.1
 		provinces_to_highlight = {
-			OR = {
-				area = tihama_al_yemen_area
-				area = yemen_area
-			}
+			conquer_mocha_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			tihama_al_yemen_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			yemen_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=conquer_mocha_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
-			arabia_region = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+			387 = {
+				add_trade_modifier = {
+					who = root
+					duration = 7300
+					power = 25
+					key = indian_ocean_ambition
 				}
-				add_permanent_claim = ROOT
 			}
+			add_claim = 517 #Surat
+			add_claim = 4457 #Khambhat
 		}
 	}
-	
-}	
-gecko_tur_events = {
-	slot = 3
-	ai = yes
-	generic = yes #if a mission without generic = yes wants this slot then it overrides this.
-	potential = {
-		OR = {
-			tag = TUR
-			tag = RUM
-		}
-		NOT = { map_setup = map_setup_random }
-	}
-	
-	has_country_shield = yes
-	
-	military_reforms = {
-		icon = mission_non-western_soldiers
-		required_missions = {  }
-		position = 1
-		trigger = {
-			OR ={
-				tag = TUR
-				tag = RUM
-			}
-		is_year = 1450
-		NOT = { is_year = 1550 }
-		MIL = 3
-		}
-		effect = {
-			country_event = {
-					id = flavor_tur.3354
-				}
-				custom_tooltip = g_military_reforms_of_mehmet
-		}		
-	}
-
-	enderun_academy = {
-		icon = mission_cossack_cavalry
-		required_missions = {  }
-		position = 2
-		trigger = {
-			OR ={
-				tag = TUR
-				tag = RUM
-			}
-		has_idea = timariot_system
-		has_country_modifier = the_devshirme_system
-		}
-		effect = {
-			country_event = {
-					id = flavor_tur.3357
-				}	
-					custom_tooltip = g_enderun_academy	
-		}
-	}
-	Great_Naval_Reform = {
-		icon = mission_establish_high_seas_navy
-		required_missions = {  }
-		position = 3
-		trigger ={
-		OR ={
-				tag = TUR
-				tag = RUM
-			}
-		is_year = 1500
-		any_owned_province = {
-			has_port = yes
-		}
-		OR = {
-				num_of_heavy_ship = 10 
-				num_of_galley = 30
-			}
-		}
-		effect = {
-			country_event = {
-					id = flavor_tur.3367
-				}
-			add_country_modifier = {
-				name = "naval_enthusiasm_mission"
-				duration = 9125 #25 years
-			}				
-			custom_tooltip = g_naval_reform		
-		}
-	}
-	Mimar_Sinans_Great_Constructions = {
-		icon = mission_golden_century
-		required_missions = {  }
-		position = 4
-		trigger = {
-		OR ={
-				tag = TUR
-				tag = RUM
-			}
-		is_year = 1520
-		owns = 151
-	}
-		effect = {
-			country_event = {
-					id = flavor_tur.3374
-				}
-			custom_tooltip = g_constructions			
-		}
-	}
-	repulse_gank = {
-        icon = mission_non-western_soldiers
-        required_missions = {  }
-		position = 5
-        trigger = {
-				NOT = {
-					is_year = 1485
-				}
-				OR = {
-					AND = {
-						is_in_war = {
-							attackers = HUN
-						}
-						is_in_war = {
-							defenders = MAM
-						}
-						MAM = {
-							ai = no
-						}
-						HUN = {
-							ai = no
-						}
-					}
-
-					AND = {
-						is_in_war = {
-							attackers = HUN
-						}
-						is_in_war = {
-							attackers = MAM
-						}
-						MAM = {
-							ai = no
-						}
-						HUN = {
-							ai = no
-						}
-					}
-					AND = {
-						is_in_war = {
-							attackers = HUN
-						}
-						is_in_war = {
-							attackers = HAB
-						}
-						HAB = {
-							ai = no
-						}
-						HUN = {
-							ai = no
-						}
-					}
-				}	
-		}
-        effect = {
-            define_general = {
-					shock = 5
-					fire = 5
-					manuever = 5
-					siege = 0
-					name = "Skanderbeg"
-            }
-			add_country_modifier = {
-					name = "defense_of_anatolia"
-					duration = 1825
-			}
-			#add_country_modifier = {
-			#		name = "geckoavailablemercs"
-			#		duration = 1825
-			#		hidden = yes
-			#}
-			add_yearly_manpower = 3	
-        }
-	}	
 }

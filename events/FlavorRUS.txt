@@ -12,7 +12,7 @@ country_event = {
 	desc = "flavor_rus.EVTDESC3401"
 	picture = REFORM_eventPicture
 
-	is_triggered_only = yes
+	fire_only_once = yes
 
 	trigger = {
 		is_year = 1450
@@ -26,6 +26,9 @@ country_event = {
 		}
 	}
 
+	mean_time_to_happen = {
+		months = 300
+	}
 	
 
 	option = {		# Let us reform
@@ -92,13 +95,18 @@ country_event = {
 		add_adm_power = 40
 		add_dip_power = 40
 		add_mil_power = 40
-		define_advisor = {
+		if = {
+			limit = {
+				NOT = { advisor_exists = 1026 }
+			}
+			define_advisor = {
 				type = spymaster
 				name = "Malyuta Skuratov"
 				discount = yes
 				location = 295
 				skill = 3
 			}
+		}
 	}
 }
 
@@ -543,7 +551,15 @@ country_event = {
 	fire_only_once = yes
 	
 	
-	is_triggered_only = yes
+	trigger = {
+		tag = RUS
+		is_year = 1600
+		NOT = { is_year = 1700 }
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
 	
 
 
@@ -625,6 +641,10 @@ country_event = {
 		name = "EXCELLENTMINISTER"
 		
 		add_adm_power = 50
+		if = {
+			limit = {
+				NOT = { advisor_exists = 1038 }
+			}
 			
 			define_advisor = {
 				type = treasurer
@@ -633,7 +653,7 @@ country_event = {
 				location = 295
 				skill = 2
 			}
-		
+		}
 	}
 }
 
@@ -647,7 +667,16 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	is_triggered_only = yes
+	trigger = {
+		tag = RUS
+		is_year = 1650
+		NOT = { is_year = 1750 }
+		government = monarchy
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
 	
 	option = {		# Enforce
 		name = "flavor_rus.EVTOPTA3417"
@@ -1133,7 +1162,7 @@ country_event = {
 						owned_by = ROOT
 					}
 				}
-				total_development = 1000
+				total_development = 2000 # BT; 1000
 			}
 			QNG = {
 				NOT = { war_with = ROOT }
@@ -1143,7 +1172,7 @@ country_event = {
 						owned_by = ROOT
 					}
 				}
-				total_development = 1000
+				total_development = 2000 # BT; 1000
 			}
 		}
 	}
@@ -1288,7 +1317,7 @@ country_event = {
 		NOT = { is_year = 1730 }
 		SWE = {
 			is_free_or_tributary_trigger = yes
-			total_development = 200
+			total_development = 400 # BT; 200
 			is_neighbor_of = RUS
 			NOT = {
 				alliance_with = RUS
@@ -2494,6 +2523,7 @@ country_event = {
 				hidden = yes
 			}
 		}
+		enact_revolution_effect = yes
 
 		random_list = {
 			25 = {

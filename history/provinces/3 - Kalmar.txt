@@ -1,4 +1,7 @@
-#Eastern and Northern Småland - Includes parts under Östgötalag
+ 
+#Småland, also contains Öland. Kalmar, Jönköping etc..
+#Region - Scandinavia
+#Area - Gotaland
 
 add_core = SWE
 owner = SWE
@@ -6,18 +9,52 @@ controller = SWE
 culture = swedish
 religion = catholic
 hre = no
-base_tax = 2
-base_production = 1
-trade_goods = naval_supplies
-base_manpower = 1
+base_tax = 3 
+base_production = 3 
+trade_goods = fish
+base_manpower = 2 
 capital = "Kalmar"
 is_city = yes
 fort_15th = yes # Kalmar Slott
+add_core = GTA
+
 discovered_by = western
-discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
+discovered_by = eastern
 
+extra_cost = 10
+center_of_trade = 1
+
+
+#Province history completed by - Draiocht
+1291.5.21 = { #BeyondTypus batch edit shortcut the first shattering begins
+	owner = GTA
+	controller = GTA
+	remove_core = SWE
+} #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
+1291.5.23 = { #BeyondTypus batch edit shortcut the first shattering ends
+	owner = SWE
+	controller = SWE
+	add_core = SWE
+} #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
+#1st Performance Start Unused
+
+#1291 - 1444
+
+1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
+	owner = GTA
+	controller = GTA
+	remove_core = SWE
+} #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
+1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
+	owner = SWE
+	controller = SWE
+	add_core = SWE
+} #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
+#2nd Performance Start Unused
+
+#1444 on
 1469.12.10 = { owner = DAN controller = DAN }
 1472.6.1 = { owner = SWE controller = SWE } # date unknown
 1487.1.1 = { revolt = { type = revolutionary_rebels size = 0 } controller = REB } # The Axelsson Tott Family
@@ -33,5 +70,4 @@ discovered_by = ottoman
 1599.5.12 = { controller = SWE } # Duke Karl get it back
 1611.8.3 = { controller = DAN } # The War of Kalmar-Captured by Christian IV
 1613.1.20 = { controller = SWE }# The Peace of Knäred
-1623.1.1 = { base_manpower = 4 } # Småland did a huge contribution in number of regiments
 

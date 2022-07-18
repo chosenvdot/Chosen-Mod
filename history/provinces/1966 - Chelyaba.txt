@@ -1,3 +1,4 @@
+ 
 #1966 - Chelyaba
 
 owner = NOG
@@ -7,9 +8,9 @@ culture = bashkir
 religion = sunni
 trade_goods = fur
 hre = no
-base_tax = 3 
-base_production = 3
-base_manpower = 3
+base_tax = 6 
+base_production = 6
+base_manpower = 6
 is_city = yes
 add_core = NOG
 add_core = SIB
@@ -22,6 +23,20 @@ discovered_by = muslim
 
 unrest = 15
 
+1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
+	remove_core = NOG
+	remove_core = SIB
+	owner = BSH
+	controller = BSH
+} #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
+1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
+	add_core = NOG
+	add_core = SIB
+	owner = NOG
+	controller = NOG
+} #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
+
+#1444 onwards
 1468.1.1 = {
 	owner = SIB
 	controller = SIB 

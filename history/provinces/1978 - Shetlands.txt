@@ -1,25 +1,25 @@
+ 
 #1978 - Shetlands
+#Region - Scandinavia
+#Area - Northern Isles
 
-owner = ICE
-controller = ICE
+owner = NOR
+controller = NOR
 culture = norwegian
 religion = catholic
 hre = no
-base_tax = 1 
-base_production = 1
+base_tax = 1  
+base_production = 1 
 trade_goods = fish
 base_manpower = 1
 capital = "Lerwick"
 is_city = yes # Estimated
-add_core = ICE
-
-
+add_core = NOR
 
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern
-
 
 1472.2.20 = {
 	owner = SCO

@@ -1,3 +1,7 @@
+#Updated by C1CK 31-01-2020
+#All areas up-to-date but the dev numbers hadn't been updated for doubling
+#Has no changes besides updating claims for BT
+
 lithuanian_missions_1 = {
 	slot = 1
 	generic = no
@@ -8,7 +12,7 @@ lithuanian_missions_1 = {
 	}
 	has_country_shield = yes
 	
-	develop_ukraine_1 = {
+	develop_ukraine_1 = { #Updated by C1CK
 		icon = mission_colonial
 		required_missions = {  }
 		provinces_to_highlight = {
@@ -21,7 +25,7 @@ lithuanian_missions_1 = {
 			num_of_owned_provinces_with = {
 				region = ruthenia_region
 				development = 10
-				value = 10
+				value = 20
 			}
 		}
 		effect = {
@@ -38,6 +42,8 @@ lithuanian_missions_1 = {
 		icon = mission_luther_theses
 		required_missions = { develop_ukraine_1 }
 		trigger = {
+			NOT = { current_age = age_of_discovery }
+			NOT = { current_age = age_of_reformation }
 			religious_unity = 1
 		}
 		effect = {
@@ -53,7 +59,7 @@ lithuanian_missions_1 = {
 					culture = lithuanian
 					type = theologian
 					skill = 3
-					cost_multiplier = 0.67
+					cost_multiplier = 0.5
 				}
 				add_country_modifier = {
 					name = "lit_conferedation_on_religion"
@@ -69,20 +75,20 @@ lithuanian_missions_1 = {
 					culture = lithuanian
 					type = inquisitor
 					skill = 3
-					cost_multiplier = 0.67
+					cost_multiplier = 0.25
 				}
 			}
 		}
 	}
-	lit_ukraine_2 = {
+	lit_ukraine_2 = { #Updated by C1CK
 		icon = mission_eastern_european_city
 		required_missions = { lit_religious_unity }
 		provinces_to_highlight = {
 			province_id = 280
 		}
 		trigger = {
-			280 = {
-				development = 20
+			280 = { #Kyyiv
+				development = 30 #Adjusted down from 40 because it feels a bit high.
 			}
 			if = {
 				limit = {
@@ -110,7 +116,7 @@ lithuanian_missions_1 = {
 			}
 		}
 	}
-	lit_develop_sluck = {
+	lit_develop_sluck = { #Updated by C1CK
 		icon = mission_noble_council
 		required_missions = { lit_ukraine_2 }
 		provinces_to_highlight = {
@@ -143,7 +149,7 @@ lithuanian_missions_1 = {
 				}
 			}
 			4545 = {
-				add_base_production = 3
+				add_base_production = 6
 				add_province_modifier = {
 					name = "sluck_sashes"
 					duration = -1
@@ -171,7 +177,15 @@ lithuanian_missions_2 = {
 			OR = {
 				area = malopolska_area
 				area = mazovia_area
-				area = west_prussia_area
+				#area = lublin_area
+				area = central_poland_area
+				area = sandomierz_area
+				area = kuyavia_area
+				area = podlasie_area
+				#area = central_galicia_area
+				area = red_ruthenia_area
+				area = eastern_volhynia_area
+				#area = western_podolia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -192,10 +206,42 @@ lithuanian_missions_2 = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
-					west_prussia_area = {
+					# lublin_area = {
+						# type = all
+						# country_or_non_sovereign_subject_holds = ROOT
+					# }
+					central_poland_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
+					sandomierz_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					kuyavia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					podlasie_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					# central_galicia_area = {
+						# type = all
+						# country_or_non_sovereign_subject_holds = ROOT
+					# }
+					red_ruthenia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					eastern_volhynia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					# western_podolia_area = {
+						# type = all
+						# country_or_non_sovereign_subject_holds = ROOT
+					# }
 				}
 			}
 		}
@@ -309,74 +355,41 @@ lithuanian_missions_slot = {
 			}
 		}
 		effect = {
-			zaporizhia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+			custom_tooltip = bt_wild_fields_perm_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						bt_trigger_wild_fields_areas = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
-			}
-			yedisan_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			crimea_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			azov_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
 			}
 		}
 	}
-	lit_conquer_crimea = {
+	lit_conquer_crimea = { #Updated by C1CK
 		icon = mission_crusade_for_varna
 		required_missions = { mission_lit_cossacks }
 		provinces_to_highlight = {
 			OR = {
-				area = zaporizhia_area
-				area = yedisan_area
-				area = crimea_area
-				area = azov_area
+				region = crimea_region
+				province_id = 3268 #Elets
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			zaporizhia_area = {
+			crimea_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			yedisan_area = {
-				type = all
+			3268 = { #Elets
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			crimea_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			azov_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			owns_core_province = 285
 		}
 		effect = {
-			add_country_modifier = {
-				name = "PR_LIT_mission"
-				duration = -1
-			}
 			add_mercantilism = 2
 			if = {
 				limit = {
@@ -392,7 +405,7 @@ lithuanian_missions_slot = {
 				}
 			}
 			else = {
-				285 = {
+				1322 = {
 					add_trade_modifier = {
 						who = root
 						duration = 7300
@@ -445,10 +458,24 @@ lithuanian_missions_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
+			latgallia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			north_livonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
-	defeat_the_livonian_order = {
+	defeat_the_livonian_order = { #Updated by C1CK (Updated for below changes)
 		icon = mission_teutonic_knights
 		required_missions = { polish_alliance_lit }
 		position = 5
@@ -457,6 +484,8 @@ lithuanian_missions_slot = {
 				area = livonia_area
 				area = estonia_ingria_area
 				area = curonia_area
+				area = latgallia_area
+				area = north_livonia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -472,6 +501,14 @@ lithuanian_missions_slot = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			curonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			latgallia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			north_livonia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -511,13 +548,69 @@ lithuanian_missions_slot = {
 					}
 					add_permanent_claim = ROOT
 				}
-				west_prussia_area = {
+				# lublin_area = {
+					# limit = {
+						# NOT = { is_permanent_claim = ROOT }
+						# NOT = { is_core = ROOT	}
+					# }
+					# add_permanent_claim = ROOT
+				# }
+				central_poland_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
 					}
 					add_permanent_claim = ROOT
 				}
+				sandomierz_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				kuyavia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				podlasie_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				# central_galicia_area = {
+					# limit = {
+						# NOT = { is_permanent_claim = ROOT }
+						# NOT = { is_core = ROOT	}
+					# }
+					# add_permanent_claim = ROOT
+				# }
+				red_ruthenia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				eastern_volhynia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				# western_podolia_area = {
+					# limit = {
+						# NOT = { is_permanent_claim = ROOT }
+						# NOT = { is_core = ROOT	}
+					# }
+					# add_permanent_claim = ROOT
+				# }
 			}
 			if = {
 				limit =  {
@@ -534,17 +627,36 @@ lithuanian_missions_slot = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
+						NOT = { province_id = 7879 } #Valday
+					}
+					add_permanent_claim = ROOT
+				}
+				pskov_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				toropets_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
 					}
 					add_permanent_claim = ROOT
 				}
 			}
 		}
 	}
-	lit_conquer_novgorod = {
+	lit_conquer_novgorod = { #Updated by C1CK (Removed Valday from required provinces)
 		icon = mission_assemble_an_army
 		required_missions = { defeat_the_livonian_order }
 		provinces_to_highlight = {
-			area = novgorod_area
+			OR = {
+				area = novgorod_area
+				area = pskov_area
+				area = toropets_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -552,6 +664,17 @@ lithuanian_missions_slot = {
 		trigger = {
 			OR = {
 				novgorod_area = {
+					type = all
+					OR = {
+						country_or_non_sovereign_subject_holds = ROOT
+						province_id = 7879 #Valday
+					}
+				}
+				pskov_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT	
+				}
+				toropets_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT	
 				}
@@ -594,35 +717,7 @@ lithuanian_missions_slot = {
 				}
 			}
 			else = {
-				moscow_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-				oka_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-				vladimir_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-				suzdal_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-				ryazan_area = {
+				russia_region = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
@@ -636,35 +731,13 @@ lithuanian_missions_slot = {
 		icon = mission_conquer_5_states
 		required_missions = { lit_conquer_novgorod }
 		provinces_to_highlight = {
-			OR = {
-				area = moscow_area
-				area = oka_area
-				area = vladimir_area
-				area = suzdal_area
-				area = ryazan_area
-			}
+			region = russia_region
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			moscow_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			oka_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}			
-			vladimir_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			suzdal_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			ryazan_area = {
+			russia_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

@@ -1,3 +1,4 @@
+ 
 #4496 - Kora
 
 owner = JNP
@@ -7,9 +8,9 @@ religion = hinduism
 capital = "Kora"
 trade_goods = cotton
 hre = no
-base_tax = 4
-base_production = 4
-base_manpower = 2
+base_tax = 8
+base_production = 8
+base_manpower = 4
 is_city = yes
 add_core = JNP
 discovered_by = indian
@@ -18,7 +19,11 @@ discovered_by = ottoman
 discovered_by = nomad_group
 discovered_by = chinese
 
-
+1486.1.1 = {
+	owner = DLH
+	controller = DLH
+	add_core = DLH
+} # Bahlul Lodi places his eldest surviving son Barbak Shah Lodi on the throne of Jaunpur, slowly integrated into Delhi's domains after this
 1517.11.21 = {
 	controller = REB
 	revolt = {

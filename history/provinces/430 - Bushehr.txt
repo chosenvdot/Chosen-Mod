@@ -1,3 +1,4 @@
+ 
 #430 - Bushehr
 
 owner = FRS
@@ -7,13 +8,13 @@ religion = shiite
 capital = "Bushehr"
 trade_goods = silk
 hre = no
-base_tax = 3
-base_production = 3
-base_manpower = 1
+base_tax = 6
+base_production = 6
+base_manpower = 2 
 is_city = yes
 add_core = FRS
 add_core = MSY
-#add_core = TIM
+add_core = TIM
 discovered_by = east_african
 discovered_by = muslim
 discovered_by = ottoman

@@ -19,10 +19,10 @@ noble_rebels = {
 	smart = yes
 	
 	artillery = 0.0
-	infantry = 0.8
-	cavalry = 0.2
+	infantry = 0.7 #From 0.6
+	cavalry = 0.3 #From 0.4 to account for Misc's cav rebalance.
 	
-	morale = 0.75
+	morale = 1.0
 	
 	# Possible handle actions
 	handle_action_negotiate = yes
@@ -252,7 +252,7 @@ noble_rebels = {
 			limit = {
 				has_country_modifier = recently_repealed_elective_monarchy_timer
 				NOT = {
-					has_reform = pope_reform
+					has_reform = papacy_reform
 					has_reform = steppe_horde
 					has_reform = celestial_empire
 					has_reform = iqta

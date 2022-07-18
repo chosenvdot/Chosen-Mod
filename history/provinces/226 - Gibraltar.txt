@@ -1,25 +1,25 @@
+ 
 #226 - Gibraltar
+#Region - Iberia
+#Area - Upper Andalucia
 
 owner = GRA		# Mustapha Sa'd King of Granada
 controller = GRA
 add_core = GRA
-culture = andalucian
+culture = andalusi_culture
 religion = sunni
 hre = no
 base_tax = 1 
-base_production = 1
+base_production = 1 
 trade_goods = fish 
-base_manpower = 1
+base_manpower = 1 
 capital = "Gibraltar" 
 is_city = yes
-
-
 
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern
-
 
 1462.1.1 = { owner = CAS controller = CAS add_core = CAS } # Conquest of Gibraltar by King Enrique of Castilla
 1499.12.1 = { unrest = 2 } # The Inquisition forces Spanish muslims to convert back to Christianity. Occasional revolts occur.

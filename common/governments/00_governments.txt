@@ -1,3 +1,9 @@
+#Beyond Typus Note -
+#Unfortunately, it appears there is no way to modify the new gov system without overriding it, an odd and somewhat disappointing choice of Paradox's end, to be honest.
+#I'll try to document the file well and keep things as organised as possible, but any submods or addons wanting to add their own content will be forced to update 
+#fresh each BT update as far as I can tell, sadly. I'm afraid the matter appears to be completely out of my hands, but if you have a suggestion to improve cross compatibility, please do share.
+# -This file contains several legacy governments added to each of the types, new reforms, and the legacy governments at the very bottom.
+
 
 monarchy = {
 	reform_levels = {
@@ -11,6 +17,7 @@ monarchy = {
 				misl_confederacy_reform
 				rajput_kingdom
 				#Specific:
+				chinese_warlord
 				grand_duchy_reform
 				daimyo
 				indep_daimyo
@@ -30,13 +37,18 @@ monarchy = {
 				revolutionary_empire_reform
 				holy_state_reform
 				austrian_archduchy_reform
-				persian_theocracy #dum
-				mughal_government #smeev
-				silk_road_empire #smeev
-				gc_imperial_spain_reform
-				empire_of_hungary_reform
-				gc_greater_hungary_reform
-				gc_french_empire
+				siamese_absolutism
+				confucian_bureaucracy
+				musa_rule
+				mossi_federal_kingdom
+				#Added by Beyond Typus
+				irish_clann_reform
+				provincial_kingdom_reform
+				norman_lordship_reform
+				norman_duchy_reform
+				anglo_irish_monarchy_reform
+				tanistry_reform
+				bt_ayyubid_sultanate_reform
 			}
 		}
 		hereditary_vs_nobility = {
@@ -49,11 +61,11 @@ monarchy = {
 				poligar_reform
 				khalsa_reform
 				deccani_society_reform
+				mughal_government
 				black_army_reform
 				legion_of_honor_reform
 				imperial_nobility_reform
-				establish_qurchi_corps_reform #dum
-				upgrade_janissary_weaponry_reform #dum
+				uparaja_reform
 			}
 		}
 		bureaucracy = {
@@ -61,13 +73,13 @@ monarchy = {
 				centralize_reform
 				decentralize_reform
 				sidhi_recruitment
+				mansabdari_reform
 				council_of_the_indies_reform
 				penal_colonies_reform
 				liberte_reform
 				fraternite_reform
-				foreign_ghilman_reform #smeevdum
-				derbend_organization_reform #dum
-				zabt_reform #smeev
+				examination_system_reform
+				corvee_reform
 			}
 		}
 		growth_of_administration = {
@@ -76,14 +88,13 @@ monarchy = {
 				of_noble_bearing_reform
 				meritocratic_focus_reform
 				dakhni_culture_reform
-				mansabdari_reform #smeev
+				zabt_reform
 				permanent_marathas_council_reform
 				governmental_purbias_register_reform
 				revolutionary_principle_reform
 				equality_principle_reform
 				imperial_principle_reform
-				qizilbash_in_officer_corps_reform #dum
-				establish_auxiliary_support_system_reform #dum
+				sakdina_system_reform
 			}
 		}
 		deliberative_assembly = {
@@ -98,8 +109,6 @@ monarchy = {
 				feuillant_reform
 				two_chamber_reform
 				imperial_decree_reform
-				reforms_of_abbas_i_reform #dum
-				janissary_administrative_positions_reform #dum
 			}
 		}
 		absolute_rule_vs_constitutional = {
@@ -108,8 +117,6 @@ monarchy = {
 				regional_representation_reform
 				consulate_reform
 				military_electorate_reform
-				ghilman_administrative_positions_reform #dum
-				reform_the_janissaries_reform #dum
 			}
 		}
 		separation_of_power = {
@@ -121,8 +128,6 @@ monarchy = {
 				emperor_of_the_revolution_reform
 				enlightened_monarchy_reform
 				become_rev_republic_reform
-				gecko_noble_regiments_reform
-				gecko_professional_army_reform
 			}
 		}
 	}
@@ -150,6 +155,19 @@ monarchy = {
 		principality_legacy
 		tsardom_legacy
 		holy_state_legacy
+		negusa_nagast_legacy
+		solomonic_empire_legacy
+		musa_rule_legacy
+		mossi_federal_kingdom_legacy
+		#Added by Beyond Typus
+		irish_clann_legacy
+		norman_lordship_legacy
+		provincial_kingdom_legacy
+		norman_duchy_legacy
+		high_kingship_legacy
+		anglo_irish_monarchy_legacy
+		florence_republic_legacy
+		lithuanian_grand_duchy_legacy
 	}
 
 	# Each group of exclusive reforms are mutually exclusive to each other
@@ -164,6 +182,8 @@ monarchy = {
 		parliamentary_reform
 		english_monarchy
 		states_general_reform
+		#Added by Beyond Typus
+		anglo_irish_monarchy_reform
 	}
 	
 	# Dictatorships etc
@@ -188,6 +208,9 @@ monarchy = {
 		prussian_monarchy
 		elective_monarchy
 		celestial_empire
+		#Added by Beyond Typus
+		tanistry_reform
+		anglo_irish_monarchy_reform
 	}
 
 	#Flavor
@@ -241,6 +264,9 @@ republic = {
 		protectorate_parliament_legacy
 		prussian_republic
 		united_cantons_legacy
+		#Added by Beyond Typus
+		puppet_kingdom_of_ireland
+		transitional_government_ireland_legacy
 	}
 	reform_levels = {
 		oligarchy_merchant_class_noble_elite = {
@@ -257,6 +283,9 @@ republic = {
 				american_republic
 				federal_republic
 				colonial_government
+				crown_colony_government
+				private_enterprise_colony_government
+				self_governing_colony_government
 				dutch_republic
 				peasants_republic
 				revolutionary_republic_reform
@@ -268,6 +297,11 @@ republic = {
 				protectorate_parliament_reform
 				prussian_republic_reform
 				united_cantons_reform
+				kongsi_federation
+				millenarian_theocracy_reform
+				#Added by Beyond Typus
+				puppet_kingdom_reform
+				transitional_government_reform
 			}
 		}
 		republican_virtues = {
@@ -339,7 +373,6 @@ republic = {
 			reforms = {
 				landholders_reform
 				citizenry_reform
-				gecko_professional_army_reform
 				admiralty_reform
 				equal_electorate_reform
 				three_classes_reform
@@ -379,6 +412,9 @@ republic = {
 		pirate_republic_reform
 		protectorate_parliament_reform
 		prussian_republic_reform
+		#Added by Beyond Typus
+		puppet_kingdom_reform
+		transitional_government_reform
 	}
 	exclusive_reforms = {
 		lottery_reform
@@ -388,6 +424,9 @@ republic = {
 		admiralty_reform
 		prussian_republic_reform
 		military_dictatorship_reform
+		#Added by Beyond Typus
+		puppet_kingdom_reform
+		transitional_government_reform
 	}
 	exclusive_reforms = {
 		free_city
@@ -414,6 +453,12 @@ tribal = {
 		tribal_federation_legacy
 		steppe_horde_legacy
 		siberian_native_council
+		sacred_kingdom_legacy
+		tribal_confederacy_legacy
+		shaka_regime_legacy
+		matrilineal_system_legacy
+		feudal_tribe_legacy
+		great_man_legacy
 	}
 
 	reform_levels = {
@@ -426,6 +471,15 @@ tribal = {
 				siberian_tribe
 				gond_kingdom
 				great_mongol_state_reform
+				stateless_society
+				polynesian_kingdom
+				polynesian_tribe
+				sacred_kingdom
+				tribal_confederacy
+				shaka_regime
+				matrilineal_system
+				feudal_tribe
+				great_man
 			}
 		}
 		tribal_cultural_values = {
@@ -436,31 +490,26 @@ tribal = {
 		}
 		tribal_religion = {
 			reforms = {
+				religious_societies_reform
 				lip_service_reform
-				centralize_tribal_power_reform
 			}
 		}
 		tribal_modernization = {
 			reforms = {
+				centralize_tribal_power_reform
 				retain_tribal_hierarchy_reform
-				decentralize_reform
-				centralize_reform
-			}
-		}
-		tribal_innovation = {
-			reforms = {
-				horde_barbaric_despoilers_reform
-				horde_tribal_unity_reform
-				religious_societies_reform
 			}
 		}
 		tribal_reformation = {
-			reforms = {		
+			reforms = {
+				horde_barbaric_despoilers_reform
+				horde_tribal_unity_reform
 				tribe_becomes_monarchy_reform
 				tribe_becomes_republic_reform
 				tribe_becomes_theocracy_reform
-				gc_tribe_becomes_horde_reform
-				gecko_professional_army_reform
+				tribe_becomes_horde_reform
+				tribe_remain_tribal_reform
+				tribe_tribal_unity
 			}
 		}
 	}
@@ -473,6 +522,51 @@ native = {
 		native_council_legacy
 	}
 	color = { 194 127 209 }
+
+	reform_levels = {
+		tribe_organization = {
+			reforms = {
+				native_chiefdom_reform
+				native_federation_reform
+				native_clan_council_reform
+				native_hereditary_reform
+			}
+		}
+
+		story_tradition = {
+			reforms = {
+				native_martial_tradition_reform
+				native_oral_tradition_reform
+				native_land_tradition_reform
+			}
+		}
+
+		agricultural_revolution = {
+			reforms = {
+				native_war_band_reform
+				native_settle_down_reform
+				native_seasonal_travel_reform
+			}
+		}
+
+		legal_basis = {
+			reforms = {
+				native_codified_power_reform
+				native_diplomatic_cermonies_reform
+				native_trading_with_foreigners_reform
+			}
+		}
+
+		national_identity = {
+			reforms = {
+				native_becomes_horde_reform
+				native_becomes_monarchy_reform
+				native_becomes_republic_reform
+				native_becomes_theocracy_reform
+				native_remain_being_native_reform
+			}
+		}
+	}
 }
 
 
@@ -481,7 +575,7 @@ theocracy = {
 	basic_reform = theocracy_mechanic
 
 	legacy_government = {
-		#papal_government
+		papal_government
 		theocratic_government
 		monastic_order_government
 		holy_state_legacy
@@ -491,9 +585,10 @@ theocracy = {
 			reforms = {
 				leading_clergy_reform
 				monastic_order_reform
+				papacy_reform
 				holy_state_reform
 				united_cantons_reform
-				pope_reform
+				imperial_abbey_reform
 			}
 		}
 		internal_vs_external_mission = {
@@ -508,7 +603,6 @@ theocracy = {
 			reforms = {
 				safeguard_holy_sites_reform
 				combat_heresy_reform
-				gecko_professional_army_reform
 				expel_heathens_reform
 				guru_advisors_reform
 				kingdom_of_god_reform
@@ -634,10 +728,10 @@ pre_dharma_mapping = {
 		government = theocracy
 		legacy_government = monastic_order_government
 	}
-#	papal_government = {
-#		government = theocracy
-#		legacy_government = papal_government
-#	}
+	papal_government = {
+		government = theocracy
+		legacy_government = papal_government
+	}
 	steppe_horde = {
 		government = tribal
 		legacy_government = steppe_horde_legacy
@@ -762,4 +856,49 @@ pre_dharma_mapping = {
 		government = monarchy
 		legacy_government = despotic_monarchy
 	}
+	#Added by Beyond Typus
+	irish_clann = {
+		government = monarchy
+		legacy_government = irish_clann_legacy
+	}
+	norman_lordship = {
+		government = monarchy
+		legacy_government = norman_lordship_legacy
+	}
+	provincial_kingdom = {
+		government = monarchy
+		legacy_government = provincial_kingdom_legacy
+	}
+	norman_duchy = {
+		government = monarchy
+		legacy_government = norman_duchy_legacy
+	}
+	high_kingship = {
+		government = monarchy
+		legacy_government = high_kingship_legacy
+	}
+	anglo_irish_monarchy = {
+		government = monarchy
+		legacy_government = anglo_irish_monarchy_legacy
+	}
+	florence_republic = {
+		government = monarchy
+		legacy_government = florence_republic_legacy
+	}
+	regnum_dei = {
+		government = theocracy
+		legacy_government = regnum_dei_legacy
+	}
+	puppet_kingdom_of_ireland = {
+		government = republic
+		legacy_government = puppet_kingdom_of_ireland_legacy
+	}
+	transitional_government_ireland = {
+		government = republic
+		legacy_government = transitional_government_ireland_legacy
+	}
+	lithuanian_grand_duchy = {
+		government = monarchy
+		legacy_government = lithuanian_grand_duchy_legacy
+	}	#This is probably not needed, though I also don't expect it will hurt.
 }

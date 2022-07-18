@@ -1,13 +1,17 @@
-#9001 - Twsana
+ 
+# No previous file for Beyond Typus province
 
-culture = khoisan
-religion = shamanism #Fetishism
-capital = "Vryburg"
+culture = tswana_culture
+religion = shamanism 
+capital = "Huhudi" 
 trade_goods = unknown
-hre = no
+hre = no 
 base_tax = 1
 base_production = 1
 base_manpower = 1
-native_size = 10
-native_ferocity = 2
-native_hostileness = 2
+native_size = 60
+native_ferocity = 20
+native_hostileness = 10
+
+
+

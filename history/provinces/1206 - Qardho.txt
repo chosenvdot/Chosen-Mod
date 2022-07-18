@@ -1,3 +1,4 @@
+ 
 #1206 - Qardho
 
 owner = MRE
@@ -10,9 +11,9 @@ capital = "Qardho"
 trade_goods = incense
 is_city = yes
 hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 1
+base_tax = 2  
+base_production = 2 
+base_manpower = 2 
 discovered_by = east_african
 discovered_by = indian
 discovered_by = muslim

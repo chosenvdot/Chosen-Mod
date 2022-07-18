@@ -1,4 +1,5 @@
-
+#Updated by C1CK 18/07/2020
+#All missions updated with Dub's scipted system
 
 emp_bav_prestige_branch = {
 	slot = 2
@@ -19,21 +20,21 @@ emp_bav_prestige_branch = {
 	}
 	has_country_shield = yes
 	
-	emp_bav_cultural_center = {
+	emp_bav_cultural_center = { #Doubled dev needed
 		icon = develop_our_capital
 		required_missions = { }
 		provinces_to_highlight = {
 			owned_by = root
 			is_capital = yes
 			OR = {
-				NOT = { development = 25 }
+				NOT = { development = 50 } #Doubled dev
 				NOT = { num_of_buildings_in_province = 5 }
 			}
 		}
 		trigger = {
 			capital_scope = {
-				development = 20
-				num_of_buildings_in_province = 4
+				development = 50 #Doubled dev
+				num_of_buildings_in_province = 5
 			}
 		}
 		effect = {
@@ -51,15 +52,15 @@ emp_bav_prestige_branch = {
 					}
 					center_of_trade = 1
 				}
-				else = {
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
+				else = { #Doubled dev
+					add_base_tax = 2
+					add_base_production = 2
+					add_base_manpower = 2
 				}
 			}
 		}
 	}
-	emp_bav_splendour = {
+	emp_bav_splendour = { #Doubled dev
 		icon = regal_splendour
 		required_missions = { emp_bav_cultural_center }
 		trigger = {
@@ -67,7 +68,7 @@ emp_bav_prestige_branch = {
 				limit = { has_dlc = "Common Sense" }
 				government_rank = 2
 			}
-			else = { total_development = 300 }
+			else = { total_development = 600 } #Doubled dev
 			is_subject = no
 			if = {
 				limit = {
@@ -102,14 +103,15 @@ emp_bav_prestige_branch = {
 			}
 		}
 	}
-	emp_bav_oktoberfest_mission = {
+	emp_bav_oktoberfest_mission = { #Added Beer to list of trade goods accepted
 		icon = establish_oktoberfest
 		required_missions = { emp_bav_splendour }
 		provinces_to_highlight = {
 			OR = {
 				AND = {
 					owned_by = root
-					OR = {	
+					OR = {
+						trade_goods = bt_trade_good_beer #Added BT beer
 						trade_goods = grain
 						trade_goods = livestock
 						trade_goods = wine
@@ -121,7 +123,8 @@ emp_bav_prestige_branch = {
 						NOT = {
 							num_of_owned_provinces_with = {
 								value = 5
-								OR = {	
+								OR = {
+									trade_goods = bt_trade_good_beer #Added BT beer
 									trade_goods = grain
 									trade_goods = livestock
 									trade_goods = wine
@@ -129,7 +132,8 @@ emp_bav_prestige_branch = {
 							}
 						}
 					}
-					OR = {	
+					OR = {
+						trade_goods = bt_trade_good_beer #Added BT beer
 						trade_goods = grain
 						trade_goods = livestock
 						trade_goods = wine
@@ -148,10 +152,7 @@ emp_bav_prestige_branch = {
 				value = 5 #eligible Bavarian starting provs (of all three duchies)
 				has_building = farm_estate
 			}
-			trade_goods_produced_amount = {
-				trade_goods = grain
-				amount = 25
-			}
+			production_leader = { trade_goods = bt_trade_good_beer }
 		}
 		effect = {
 			capital_scope = {
@@ -197,13 +198,7 @@ emp_bav_missions_conquest = {
 		required_missions = { bav_expand_in_bavaria }
 		completed_by = 1777.12.30
 		provinces_to_highlight = {
-			OR = {
-				owned_by = PAL
-				province_id = 77
-				province_id = 1757
-				province_id = 1761
-				province_id = 4767
-			}
+			emp_bav_union_with_palatinate_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		ai_weight = {
@@ -216,29 +211,16 @@ emp_bav_missions_conquest = {
 		trigger = {
 			OR = {
 				senior_union_with = PAL
-				AND = {
-					owns_or_non_sovereign_subject_of = 77
-					owns_or_non_sovereign_subject_of = 1757
-					owns_or_non_sovereign_subject_of = 1761
-					owns_or_non_sovereign_subject_of = 4767
+				has_fulfiled_province_requirement_for_mission_trigger = {
+					tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+					provinces=emp_bav_union_with_palatinate_provinces
+					owner_type=country_or_non_sovereign_subject_holds
 				}
 			}
 		}
 		effect = {
-			tirol_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			north_rhine_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			give_permaclaims_for_mission = { mission=emp_bav_conquer_tirol }
+			give_permaclaims_for_mission = { mission=emp_bav_sway_cologne }
 			if = {
 				limit = {
 					NOT = {
@@ -372,20 +354,7 @@ emp_bav_missions_conquest = {
 				}
 			}
 			else = {
-				berlin_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				neumark_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
+				give_permaclaims_for_mission = { mission=emp_bav_tame_brandenburg }
 			}
 			
 			if = {
@@ -468,25 +437,22 @@ emp_bav_missions_conquest_2 = {
 	}
 	has_country_shield = yes
 	
-	emp_bav_tame_brandenburg = {
+	emp_bav_tame_brandenburg = { #Adapted to allow a union with Brandenburg, /or/ owning the provinces if HAB doesn't exist like the Palatine mission
 		icon = tame_brandenburg
 		position = 7
 		required_missions = { emp_bav_sway_cologne }
 		provinces_to_highlight = {
-			OR = {
-				area = neumark_area
-				area = berlin_area
-			}
+			emp_bav_tame_brandenburg_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			neumark_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			berlin_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				senior_union_with = BRA
+				has_fulfiled_province_requirement_for_mission_trigger = {
+					tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+					provinces=emp_bav_tame_brandenburg_provinces
+					owner_type=country_or_non_sovereign_subject_holds
+				}
 			}
 		}
 		effect = {
@@ -517,7 +483,7 @@ emp_bav_missions_military = {
 	}
 	has_country_shield = yes
 	
-	emp_bav_standing_army = {
+	emp_bav_standing_army = { #Untouched
 		icon = establish_a_standing_army
 		position = 2
 		required_missions = { emp_bav_cultural_center }
@@ -591,7 +557,7 @@ emp_bav_cultural_dominance_branch = {
 	}
 	has_country_shield = yes
 	
-	emp_bav_cultural_dominance = {
+	emp_bav_cultural_dominance = { #Untouched
 		icon = bavarian_cultural_dominance
 		required_missions = { emp_bav_oktoberfest_mission emp_bav_center_of_counter_reformation }
 		position = 4
@@ -668,7 +634,7 @@ emp_bav_missions_religious = {
 	}
 	has_country_shield = yes
 	
-	emp_bav_be_good_at_religion = {
+	emp_bav_be_good_at_religion = { #Untouched
 		icon = show_piety
 		required_missions = { }
 		trigger = {
@@ -727,7 +693,7 @@ emp_bav_missions_religious = {
 		}
 	}
 	
-	emp_bav_center_of_counter_reformation = {
+	emp_bav_center_of_counter_reformation = { #Untouched
 		icon = spread_piety
 		required_missions = { emp_bav_be_good_at_religion }
 		position = 3
@@ -801,7 +767,7 @@ emp_bav_missions_illuminati = {
 	}
 	has_country_shield = yes
 	
-	emp_bav_illuminati_mission = {
+	emp_bav_illuminati_mission = { #Untouched
 		icon = deal_with_the_illuminati
 		position = 5
 		required_missions = { emp_bav_center_of_counter_reformation }
@@ -1014,24 +980,15 @@ emp_bav_missions_conquer_austria = {
 		required_missions = { emp_bav_union_with_palatinate }
 		position = 5
 		provinces_to_highlight = {
-			area = tirol_area
-			OR = {
-				NOT = {
-					ROOT = {
-						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 2
-							area = tirol_area
-						}
-					}
-				}
-				owned_by = HAB
-			}
+			emp_bav_conquer_tirol_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 2
-				area = tirol_area
+			has_fulfiled_num_of_province_requirement_for_mission_trigger = {
+				tooltip = country_holds_or_non_sovereign_subject_holds_highlighted_num
+				provinces = emp_bav_conquer_tirol_provinces
+				owner_type = country_or_non_sovereign_subject_holds
+				value = 3 #3 of 7 (2 of 5 in vanilla)
 			}
 			OR = {
 				custom_trigger_tooltip = {
@@ -1039,7 +996,7 @@ emp_bav_missions_conquer_austria = {
 					NOT = {
 						HAB = {
 							any_owned_province = {
-								area = tirol_area
+								emp_bav_conquer_tirol_provinces = yes
 							}
 						}
 					}
@@ -1048,8 +1005,8 @@ emp_bav_missions_conquer_austria = {
 			}
 		}
 		effect = {
-			tirol_area = {
-				limit = { owned_by = ROOT }
+			every_owned_province = {
+				limit = { emp_bav_conquer_tirol_provinces = yes }
 				add_local_autonomy = -15
 				add_nationalism = -10
 			}
@@ -1069,96 +1026,33 @@ emp_bav_missions_conquer_austria = {
 				}
 			}
 			else = {
-				austria_proper_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				inner_austria_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
+				give_permaclaims_for_mission = { mission=emp_bav_union_with_austria }
 			}
 		}
 	}
 
-	emp_bav_union_with_austria = {
+	emp_bav_union_with_austria = { #Adapted to allow a union with Austria, /or/ owning the provinces if HAB doesn't exist like the Palatine mission
 		icon = mission_the_austrian_succession
 		required_missions = { emp_bav_conquer_tirol }
 		provinces_to_highlight = {
-			OR = {
-				area = austria_proper_area
-				area = inner_austria_area
-			}
+			emp_bav_union_with_austria_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = root }
 		}
 		trigger = {
-			austria_proper_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = root
-			}
-			inner_austria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = root
+			OR = {
+				senior_union_with = HAB
+				has_fulfiled_province_requirement_for_mission_trigger = {
+					tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+					provinces=emp_bav_union_with_austria_provinces
+					owner_type=country_or_non_sovereign_subject_holds
+				}
 			}
 		}
 		effect = {
 			add_prestige = 20
 
-			frisia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			east_frisia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			holland_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			brabant_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			north_brabant_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			venetia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			carinthia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+			give_permaclaims_for_mission = { mission=emp_bav_italian_sun }
+			give_permaclaims_for_mission = { mission=emp_bav_netherlands }
 		}
 	}
 }
@@ -1183,35 +1077,24 @@ emp_bav_missions_conquer_italy = {
 	}
 	has_country_shield = yes
 	
-	emp_bav_italian_sun = {
+	emp_bav_italian_sun = { #Added a check for owning an Adriatic port
 		icon = mission_control_venice
 		position = 7
 		required_missions = { emp_bav_union_with_austria }
 		provinces_to_highlight = {
-			OR = {
-				area = venetia_area
-				area = carinthia_area
-			}
-			NOT = {
-				ROOT = {
-					num_of_owned_provinces_with = {
-						value = 8
-						OR = {
-							area = venetia_area
-							area = carinthia_area
-						}
-					}
-				}
-			}
+			emp_bav_italian_sun_provinces = yes
 			NOT = { owned_by = root }
 		}
 		trigger = {
-			num_of_owned_provinces_with = {
-				value = 8
-				OR = {
-					area = venetia_area
-					area = carinthia_area
-				}
+			has_fulfiled_num_of_province_requirement_for_mission_trigger = {
+				tooltip = country_holds_highlighted_num
+				provinces = emp_bav_italian_sun_provinces
+				owner_type = owned_by
+				value = 14 #14 of 22 (8 of 10 in vanilla) (Lowered as this requires direct ownership, and significant amounts are owned by HAB, who've just been unioned, per the mission preceding)
+			}
+			any_owned_province = { #Check for an actual Adriatic port (Doesn't actually need to be in the provinces needed, something like Pflaum or Zara will validate this)
+				has_port = yes
+				sea_zone = { province_id = 1308 } #Gulf of Venice
 			}
 		}
 		effect = {
@@ -1260,36 +1143,15 @@ emp_bav_missions_netherlands = {
 		position = 7
 		required_missions = { emp_bav_sway_cologne emp_bav_union_with_austria }
 		provinces_to_highlight = {
-			OR = {
-				area = frisia_area
-				area = holland_area
-				area = brabant_area
-				area = north_brabant_area
-			}
-			NOT = {
-				ROOT = {
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 12
-						OR = {
-							area = frisia_area
-							area = holland_area
-							area = brabant_area
-							area = north_brabant_area
-						}
-					}
-				}
-			}
+			emp_bav_netherlands_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = root }
 		}
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 12
-				OR = {
-					area = frisia_area
-					area = holland_area
-					area = brabant_area
-					area = north_brabant_area
-				}
+			has_fulfiled_num_of_province_requirement_for_mission_trigger = {
+				tooltip = country_holds_or_non_sovereign_subject_holds_highlighted_num
+				provinces = emp_bav_netherlands_provinces
+				owner_type = country_or_non_sovereign_subject_holds
+				value = 20 #20 of 24 (12 of 15 in vanilla)
 			}
 		}
 		effect = {

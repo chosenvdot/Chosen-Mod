@@ -1,3 +1,4 @@
+ 
 # - Neiva
 
 
@@ -10,6 +11,7 @@ discovered_by = andean
 
 religion = inti
 capital = "Neiva"
+is_city = yes
 trade_goods = unknown
 hre = no
 base_tax = 4 

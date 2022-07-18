@@ -1,30 +1,30 @@
-#1831 - Travunia # now Herzegovina
+ 
+#1831 - Travunia
 
 owner = HRZ
 controller = HRZ
-culture = bosnian
+culture = serbian
 religion = orthodox
-capital = "Herceg Novi"
-trade_goods = wool
+capital = "Onogost"
+trade_goods = bt_trade_good_beer
 hre = no
-base_tax = 2 
-base_production = 3
-base_manpower = 2
+base_tax = 1 
+base_production = 1 
+base_manpower = 1 
 is_city = yes
 add_core = HRZ
-add_core = BOS
-discovered_by = KAZ
-discovered_by = CRI
-discovered_by = GOL
-discovered_by = AST
-discovered_by = QAS
+
+1444.1.1 = { discovered_by = KAZ }
+1444.1.1 = { discovered_by = CRI }
+1444.1.1 = { discovered_by = GOL }
+1444.1.1 = { discovered_by = AST }
+1444.1.1 = { discovered_by = QAS }
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
 
-
-1482.1.1 = {
+1521.1.1 = {
 	owner = TUR
 	controller = TUR
 	add_core = TUR

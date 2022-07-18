@@ -1,14 +1,15 @@
+ 
 #4760 - Innbaiern
 
-owner = HAB
-controller = HAB
-add_core = HAB
+owner = LBV
+controller = LBV
+add_core = LBV
 culture = bavarian
 religion = catholic
-base_tax = 3
+base_tax = 4
 base_production = 3
 trade_goods = wine
-base_manpower = 2
+base_manpower = 3
 capital	= "Braunau am Inn" 
 is_city = yes
 hre = yes

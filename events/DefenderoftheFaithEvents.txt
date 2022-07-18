@@ -108,28 +108,6 @@ country_event = {
 					}
 				}
 			}
-			358 = { # Alexandria
-				has_discovered = ROOT
-				owner = {
-					NOT = {
-						religion_group = muslim
-					}
-					any_neighbor_country = {
-						religion = ROOT
-					}
-				}
-			}
-			361 = { # Cairo
-				has_discovered = ROOT
-				owner = {
-					NOT = {
-						religion_group = muslim
-					}
-					any_neighbor_country = {
-						religion = ROOT
-					}
-				}
-			}
 		}
 		NOT = { has_global_flag = active_jihad }
 	}
@@ -203,52 +181,6 @@ country_event = {
 					}
 				}
 				385 = {
-					save_event_target_as = jihad_target_province
-					set_province_flag = jihad_target_province_flag
-					owner = {
-						save_event_target_as = jihad_target_country
-						set_country_flag = jihad_target_country_flag
-					}
-				}
-			}	
-			else_if = {
-				limit = {
-					358 = { # Alexandria
-						has_discovered = ROOT
-						owner = {
-							NOT = {
-								religion_group = muslim
-							}
-							any_neighbor_country = {
-								religion = ROOT
-							}
-						}
-					}
-				}
-				358 = {
-					save_event_target_as = jihad_target_province
-					set_province_flag = jihad_target_province_flag
-					owner = {
-						save_event_target_as = jihad_target_country
-						set_country_flag = jihad_target_country_flag
-					}
-				}
-			}	
-			else_if = {
-				limit = {
-					361 = { # Cairo
-						has_discovered = ROOT
-						owner = {
-							NOT = {
-								religion_group = muslim
-							}
-							any_neighbor_country = {
-								religion = ROOT
-							}
-						}
-					}
-				}
-				361 = {
 					save_event_target_as = jihad_target_province
 					set_province_flag = jihad_target_province_flag
 					owner = {
@@ -382,10 +314,10 @@ country_event = {
 		every_country = {
 			limit = {
 				capital_scope = {
-					has_discovered = ROOT
-				}				
+				has_discovered = ROOT
+				}
 				religion = catholic
-				total_development = 200
+				total_development = 400 # BT; 200
 				NOT = {
 					tag = event_target:catholic_rival
 				}
@@ -697,7 +629,7 @@ country_event = {
 				religion_group = ROOT
 				NOT = { religion = ROOT }
 				NOT = {
-					total_development = 150
+					total_development = 300 # BT; 150
 				}
 			}
 			country_event = { id = dotf.10 days = 3 }

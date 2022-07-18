@@ -10,28 +10,77 @@
 east_indian_trade_route = {
 	potential = {
 		num_of_ports = 1
-		NOT = {
-			capital_scope = {
-				continent = asia
-			}
-		}
+		#bt_downstream_of_india = yes # XXX
+		has_discovered = 1460 # Cape of Good Hope			#BT moved from trigger, now required to even see it.
+		#NOT = { capital_scope = { continent = asia } }			#BT removed, replaced with home node check
+		#NOT = { capital_scope = { continent = oceania } }			#BT removed, replaced with home node check
 	}
 
 	trigger = {
-		has_discovered = 1460 # Cape of Good Hope
-		num_of_ports = 4
-		#has_idea = quest_for_the_new_world
-		any_active_trade_node = {
-			has_merchant = ROOT
+		custom_trigger_tooltip = {
+			tooltip = bt_route_to_india_tooltip_1
 			OR = {
-				province_id = 1343 # Ganges Delta
-				province_id = 504 # Sind
-				province_id = 1340 # Comorin Cape
+				AND = {
+					504 = { has_merchant = ROOT }			#Gujarat
+					1448 = { has_merchant = ROOT }			#Zanzibar
+				}
+				1340 = { has_merchant = ROOT }			#Coromandel
 			}
 		}
+		custom_trigger_tooltip = {
+			tooltip = bt_route_to_india_tooltip_2
+			1460 = { has_merchant = ROOT }			#Cape of Good Hope
+		}
+		custom_trigger_tooltip = {
+			tooltip = bt_route_to_india_tooltip_3
+			1466 = { has_merchant = ROOT }			#Ivory Coast
+		}
+		custom_trigger_tooltip = {
+			tooltip = bt_route_to_india_tooltip_4
+			OR = {
+				AND = {
+					345 = { has_merchant = ROOT }			#Safi
+					227 = { has_merchant = ROOT }			#Lisbon
+				}
+				AND = {
+					345 = { has_merchant = ROOT }			#Safi
+					224 = { has_merchant = ROOT }			#Seville
+				}
+				AND = {
+					1516 = { has_merchant = ROOT }			#Caribbean
+					224 = { has_merchant = ROOT }			#Seville
+				}
+				AND = {
+					1516 = { has_merchant = ROOT }			#Caribbean
+					174 = { has_merchant = ROOT }			#Bordeaux
+				}
+				AND = {
+					1516 = { has_merchant = ROOT }			#Caribbean
+					1269 = { has_merchant = ROOT }			#English Channel
+				}
+				AND = {
+					1516 = { has_merchant = ROOT }			#Caribbean
+					1500 = { has_merchant = ROOT }			#Chesapeake Bay
+					1490 = { has_merchant = ROOT }			#St Lawrence
+					1284 = { has_merchant = ROOT }			#Irish Sea
+				}
+			}
+		}
+		#num_of_ports = 4			#BT requirement removed. Why do you need 4 ports? One rich port will do.
+		#has_idea = quest_for_the_new_world			#BT requirement removed. Don't need to be colonial for Old World trade. Though good luck fufilling other reqs without exploration.
+		#any_active_trade_node = {
+		#	has_merchant = ROOT
+		#	OR = {
+		#		province_id = 1361 # Straits of Johor
+		#		province_id = 1343 # Ganges Delta
+		#		province_id = 504 # Sind
+		#		province_id = 1340 # Comorin Cape
+		#	}
+		#}			#BT rewriting this req to account for different trade setup
 	}
-
-	trade_efficiency = 0.05	
+	trade_efficiency = 0.1			#BT increased from 0.05 to reward meeting somewhat more difficult requirements
+	trade_steering = 0.1			#BT new bonus to reward meeting somewhat more difficult requirements
+	global_ship_trade_power = 0.05			#BT new bonus to reward meeting somewhat more difficult requirements
 }
 
 #########################################################
@@ -254,11 +303,11 @@ custodian_of_the_two_holy_mosques = {
 
 	trigger = {
 		is_free_or_tributary_trigger = yes
-		owns = 385
-		owns = 384
+		owns_or_vassal_of = 385
+		owns_or_vassal_of = 384
 	}
 
-	prestige = 0.5
+	legitimacy = 0.5
 	missionaries = 1
 }
 ###########################################
@@ -290,31 +339,21 @@ catholic_rome = {
 	potential = {
 		normal_or_historical_nations = yes
 		has_discovered = 118	# Roma
-		#religion = catholic
+		religion = catholic
 		NOT = { tag = PAP }
-		NOT  = { is_year = 1550}
+		any_owned_province = { region = italy_region }			#BT added. Doesn't spam everyone unless they actually have some land in Italy. Might cause very rare situation of Rome taken in the first war.... but I like it organised.
 	}
 
 	trigger = {	
 		NOT = { overlord_of = PAP }
-		#owns_or_vassal_of = 118 # Roma
-		num_of_owned_provinces_with = {
-				value = 20
-				region = italy_region
-				is_core = root
-			}
+		owns_or_vassal_of = 118 # Roma		
 		NOT = { tag = ITA }
 		NOT = { tag = ROM }
-		NOT = { tag = VEN }
-		NOT = { tag = MLO }
-		NOT = { tag = SIC }
-		NOT = { tag = TTS }
+		NOT = { tag = ITL }			#BtP
 	}
 
-	#papal_influence = -10
-	production_efficiency = 0.1
-	global_tax_modifier = 0.1
-	global_manpower_modifier = 0.1
+	papal_influence = -10
+	diplomatic_reputation = -2			#BT changed from -1. Harsh penalties, but a Catholic shouldn't occupy Rome.
 	#icon = 9
 }
 
@@ -324,14 +363,16 @@ papal_subjugation = {
 		has_discovered = 118	# Roma
 		religion = catholic
 		NOT = { tag = PAP }
+		any_owned_province = { region = italy_region }			#BT added. Doesn't spam everyone unless they actually have some land in Italy. Might cause very rare situation of Rome taken in the first war.... but I like it organised.
 	}
 
 	trigger = {	
 		overlord_of = PAP
 		NOT = { tag = ITA }
+		NOT = { tag = ITL }			#BtP
 	}
 
-	diplomatic_reputation = -2
+	diplomatic_reputation = -1			#BT changed from -2. Subjugating isn't worse than outright occupying, at least subjects have the illusion of self determination.
 	#icon = 9
 }
 
@@ -368,6 +409,7 @@ rapid_collapse_of_society = {
 	
 }
 
+
 ######################################
 # Italian - Submission to Emperor
 ######################################
@@ -382,6 +424,7 @@ submission_to_emperor = {
 	trigger = {
 		is_emperor = no
 		NOT = { tag = ITA }
+		NOT = { tag = ITL } # BT
 		capital_scope = {
 			is_part_of_hre = yes
 		}
@@ -403,11 +446,13 @@ counter_revolution = {
 	potential = {
 		revolution_target_exists = yes
 		is_revolutionary = no
-		always = no
 		any_country = {
 			is_revolution_target = yes
+			OR = {
 			capital_scope = {
 				continent = ROOT
+			}
+				is_neighbor_of = ROOT
 			}
 		}
 	}
@@ -441,7 +486,6 @@ reaction = {
 	potential = {
 		revolution_target_exists = yes
 		is_revolutionary = no
-		always = no
 		any_country = {
 			is_revolution_target = yes
 			capital_scope = {
@@ -489,11 +533,9 @@ crusader = {
 		land_maintenance = 1.0
 	}
 
-	global_unrest = -2
-	manpower_recovery_speed = 0.25
-	#global_manpower_modifier = 0.3
+	global_manpower_modifier = 0.3
 	global_tax_modifier = 0.1
-	land_morale = 0.05
+	land_morale = 0.10
 	prestige = 1
 	papal_influence = 1
 	devotion = 0.25
@@ -591,6 +633,30 @@ the_mandate_of_heaven_lost = {
 	global_unrest = 10
 }
 
+ai_wants_chinese_capitals = {
+	potential = {
+		ai = yes
+		OR = {
+			owns = 1816
+			owns = 1821
+			owns = 667
+		}
+		has_dlc = "Mandate of Heaven"
+		capital_scope = {
+			superregion = china_superregion
+		}
+	}
+	trigger = {
+		owns = 1816
+		owns = 1821
+		owns = 667
+	}
+
+	ai_weight = {
+		factor = 100 # Makes AI try to conquer the cities
+	}
+}
+
 lost_control_of_beijing = {
 	potential = {
 		has_reform = celestial_empire
@@ -602,6 +668,10 @@ lost_control_of_beijing = {
 			NOT = { owns = 1816 }
 			NOT = { controls = 1816 }
 		}
+	}
+	
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
 	}
 
 	imperial_mandate = -0.05
@@ -620,6 +690,10 @@ lost_control_of_nanjing = {
 		}
 	}
 
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
+	}
+
 	imperial_mandate = -0.05
 }
 
@@ -634,6 +708,10 @@ lost_control_of_canton = {
 			NOT = { owns = 667 }
 			NOT = { controls = 667 }
 		}
+	}
+
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
 	}
 
 	imperial_mandate = -0.05
@@ -667,7 +745,10 @@ hre_dominant_catholic = {
 			religion = catholic
 			religion = protestant
 			religion = reformed
+			religion = hussite # BT
 		}
+		is_part_of_hre = yes			#BT added. This prevents the bonuses for non-HRE tags. Sure, HRE taking a side religiously was significant, but not THAT significant, especially to foreigners outside HRE sphere.
+		is_religion_enabled = protestant			#BT added. Doesn't show up until there is actually reformation religions around.
 	}
 
 	trigger = {
@@ -691,7 +772,10 @@ hre_dominant_protestant = {
 			religion = catholic
 			religion = protestant
 			religion = reformed
+			religion = hussite # BT
 		}
+		is_part_of_hre = yes			#BT added. This prevents the bonuses for non-HRE tags. Sure, HRE taking a side religiously was significant, but not THAT significant, especially to foreigners outside HRE sphere.
+		is_religion_enabled = protestant			#BT added. Doesn't show up until there is actually reformation religions around.
 	}
 
 	trigger = {
@@ -715,7 +799,11 @@ hre_dominant_reformed = {
 			religion = catholic
 			religion = protestant
 			religion = reformed
+			religion = hussite # BT
 		}
+		is_part_of_hre = yes			#BT added. This prevents the bonuses for non-HRE tags. Sure, HRE taking a side religiously was significant, but not THAT significant, especially to foreigners outside HRE sphere.
+		is_religion_enabled = reformed			#BT added. Doesn't show up until there is actually reformation religions around.
+	
 	}
 
 	trigger = {
@@ -748,22 +836,21 @@ synthetic_remnants = {
 # The Golden Age of Piracy
 ######################################
 
-#golden_age_of_piracy = {
-#	potential = {
-#		always = no
-#		has_global_flag = golden_age_of_piracy
-#		NOT = { # lasts 50 years
-#			had_global_flag = { flag = golden_age_of_piracy days = 18250 }
-#		}
-#		1516 = { has_discovered = ROOT }
-#	}
-#	trigger = {
-#		1516 = {
-#			privateer_power = { country = ROOT share = 1 }
-#		}
-#	}
-#	privateer_efficiency = 0.2
-#}
+golden_age_of_piracy = {
+	potential = {
+		has_global_flag = golden_age_of_piracy
+		NOT = { # lasts 50 years
+			had_global_flag = { flag = golden_age_of_piracy days = 18250 }
+		}
+		1516 = { has_discovered = ROOT }
+	}
+	trigger = {
+		1516 = {
+			privateer_power = { country = ROOT share = 1 }
+		}
+	}
+	privateer_efficiency = 0.2
+}
 
 ######################################
 # The Great Peasants' War
@@ -777,11 +864,10 @@ great_peasants_war_triggered_modifier = {
 		}
 	}
 	trigger = {
-		always = no
 		is_part_of_hre = yes
 		NOT = { has_reform = peasants_republic }
 	}
-	global_unrest = 1
+	global_unrest = 6
 }
 
 great_peasants_war_concessions_triggered_modifier = {
@@ -795,7 +881,6 @@ great_peasants_war_concessions_triggered_modifier = {
 		}
 	}
 	trigger = {
-		always = no
 		is_part_of_hre = yes
 		NOT = { has_reform = peasants_republic }
 	}
@@ -806,18 +891,18 @@ great_peasants_war_concessions_triggered_modifier = {
 # Pope is in the empire
 ######################################
 
-#pope_in_hre_triggered_modifier = {
-#	potential = {
-#		PAP = { is_part_of_hre = yes }
-#		religion = catholic
-#	}
-#	trigger = {
-#		PAP = { is_part_of_hre = yes }
-#		religion = catholic
-#		NOT = { is_part_of_hre = yes }
-#	}
-#	prestige = 0
-#}
+pope_in_hre_triggered_modifier = {
+	potential = {
+		PAP = { is_part_of_hre = yes }
+		religion = catholic
+	}
+	trigger = {
+		PAP = { is_part_of_hre = yes }
+		religion = catholic
+		NOT = { is_part_of_hre = yes }
+	}
+	prestige = -0.5
+}
 
 ######################################
 # The Italian Wars
@@ -839,12 +924,12 @@ italian_wars_triggered_modifier = {
 					war_with = ROOT
 					religion_group = christian
 					capital_scope = { continent = europe }
-					total_development = 150
+					total_development = 300 # BT; 150
 				}
 			}
 			AND = {
 				NOT = { capital_scope = { region = italy_region } }
-				total_development = 150
+				total_development = 300 # BT; 150
 				any_country = {
 					war_with = ROOT
 					capital_scope = { region = italy_region }

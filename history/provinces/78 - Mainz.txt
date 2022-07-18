@@ -1,25 +1,27 @@
+ 
 # 78 - Mainz
+#Region - Germany
+#Area - Palatinate
+
 capital = "Mainz"
 culture = hessian
 religion = catholic
-trade_goods = paper
+trade_goods = wine
 owner = MAI
-base_tax = 4 
-base_production = 4
-base_manpower = 2
+base_tax = 8
+base_production = 7
+base_manpower = 5
 is_city = yes
 add_core = MAI
 controller = MAI
 hre = yes
-discovered_by = eastern
+center_of_trade = 2
+
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-extra_cost = 8
-center_of_trade = 1
+discovered_by = eastern
 
-
-1556.4.19 = { religion = protestant } # Ottheinrich converts the country to Calvinism
 1560.1.1 = { fort_15th = yes }
 1631.12.22 = { controller = SWE }
 1635.1.1 = {
@@ -33,21 +35,15 @@ center_of_trade = 1
 }
 1792.10.1 = { controller = FRA } # Occupied by French troops
 1792.12.3 = { controller = MAI } # Prussian troops take control
-1800.2.17 = { owner = FRA controller = FRA } # France creates the Département du Mont-Tonnerre
+1797.10.17 = {	
+	controller = FRA
+	owner = FRA
+	add_core = FRA
+} # The Treaty of Campo Formio
 1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
-1810.1.1 = {
-	owner = FRN
-	controller = FRN
-	add_core = FRN
-	remove_core = MAI
-} # The Grand Duchy of Frankfurt, established after the Treaty of Schönbrunn
-1813.12.1 = {
-	owner = MAI
-	controller = MAI
-	add_core = MAI
-	remove_core = FRN
-} # The end of the Duchy
-1816.1.1 = {	owner = HES
-	controller = HES
-	add_core = HES
+1816.1.1 = {
+	owner = DRM
+	controller = DRM
+	add_core = DRM
+	remove_core = FRA
 } # Given to Hesse-Darmstadt

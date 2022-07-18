@@ -1,65 +1,41 @@
-#
+# BT; regiments_per_development = 50% in comparison to vanilla
 # Example mercenary companies
 #
 
 merc__local_free_company = {
-    regiments_per_development = 0.025
-    cavalry_weight = 0
-    artillery_weight = 0.0
+    regiments_per_development = 0.0125
+    cavalry_weight = 0.1
+    artillery_weight = 0.1
     cavalry_cap = 2
     cost_modifier = 0.75
     trigger = {
-		always = no
-        total_development = 201
-		NOT = {has_country_modifier = merc_spawn_timer }
-		NOT = {
-					check_variable = {
-						which = geckomercvalue
-						which = geckomercFL
-					}
-		}
+        total_development = 300 # BT; 150
     }
     # No home province means local mercenary company
 }
 
 merc__local_small_company = {
-    regiments_per_development = 0.04
-    cavalry_weight = 0
-    artillery_weight = 0.0
+    regiments_per_development = 0.035
+    cavalry_weight = 0.1
+    artillery_weight = 0.1
     cavalry_cap = 2
     trigger = {
-		NOT = {has_country_modifier = merc_spawn_timer }
-        NOT = { total_development = 200 }
-		NOT = { is_emperor = yes }
-		NOT = {
-					check_variable = {
-						which = geckomercvalue
-						which = geckomercFL
-					}
-		}
+        NOT = { total_development = 300 } # BT; 150
     }
     cost_modifier = 0.3
     modifier = {
         reinforce_speed = -0.25
         recover_army_morale_speed = -0.1
-		
     }
     # No home province means local mercenary company
 }
 
 merc__local_free_city_company = {
-    regiments_per_development = 0.04
-    cavalry_weight = 0
-    artillery_weight = 0.0
+    regiments_per_development = 0.05
+    cavalry_weight = 0.1
+    artillery_weight = 0.1
     cavalry_cap = 2
     trigger = {
-		NOT = {has_country_modifier = merc_spawn_timer }
-		 NOT = {
-				check_variable = {
-						which = geckomercvalue
-						which = geckomercFL
-					}
-		}
         has_reform = free_city
     }
     cost_modifier = 0.3
@@ -71,62 +47,35 @@ merc__local_free_city_company = {
 }
 
 merc__local_grand_company = {
-    regiments_per_development = 0.04
-    cavalry_weight = 0
-    artillery_weight = 0.0
+    regiments_per_development = 0.025
+    cavalry_weight = 0.1
+    artillery_weight = 0.1
     cavalry_cap = 2
     cost_modifier = 0.75
     trigger = {
-        total_development = 100
-			always = no
-		#is_year = 1470
-		 NOT = { has_country_modifier = gecko_b }
-		 NOT = {has_country_modifier = merc_spawn_timer }
-		 NOT = {
-					check_variable = {
-						which = geckomercvalue
-						which = geckomercFL
-					}
-		}
+        total_development = 300 # BT; 150
     }
     # No home province means local mercenary company
 }
 
 merc__local_independent_army = {
-    regiments_per_development = 0.04
-    cavalry_weight = 0
-    artillery_weight = 0.0
+    regiments_per_development = 0.0375
+    cavalry_weight = 0.1
+    artillery_weight = 0.1
     cavalry_cap = 2
     cost_modifier = 0.75
     trigger = {
-        total_development = 100
-			always = no
-		#is_year = 1470
-		 NOT = { has_country_modifier = gecko_b }
-		 NOT = {has_country_modifier = merc_spawn_timer }
-		 NOT = {
-					check_variable = {
-						which = geckomercvalue
-						which = geckomercFL
-					}
-		}
+        total_development = 300 # BT; 150
     }
     # No home province means local mercenary company
 }
 
 merc_local_all_female_company = {
-	regiments_per_development = 0.025
-	cavalry_weight = 0
-    artillery_weight = 0.0
+	regiments_per_development = 0.0125
+	cavalry_weight = 0.1
+    artillery_weight = 0.1
     cavalry_cap = 2
 	trigger = {
-		NOT = {has_country_modifier = merc_spawn_timer }
-		 NOT = {
-				check_variable = {
-						which = geckomercvalue
-						which = geckomercFL
-					}
-		}
 		has_country_flag = female_mercs
 	}
 	modifier = {
@@ -136,20 +85,13 @@ merc_local_all_female_company = {
 }
 
 twenty_good_men = {
-    regiments_per_development = 0.01
+    regiments_per_development = 0.005
     cavalry_weight = 0.2
-	artillery_weight = 0.0
+	artillery_weight = 0.1
     cavalry_cap = 4
 	cost_modifier = 1.5
     home_province = 4365
 	trigger = {
-		NOT = {has_country_modifier = merc_spawn_timer }
-		 NOT = {
-				check_variable = {
-						which = geckomercvalue
-						which = geckomercFL
-					}
-		}
 		capital_scope = {
 			province_id = 4365
 		}
@@ -158,4 +100,3 @@ twenty_good_men = {
 		land_morale = 0.15
 	}
 }
-

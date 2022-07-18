@@ -1,20 +1,21 @@
+ 
 #76 - Salzburg
+#Region - Germany
+#Area - Upper Bavaria
 
-owner = HAB
-controller = HAB
-culture = bavarian
+owner = SLZ
+controller = SLZ 
+culture = bavarian #Bugfixes changed from Austrian. It was Bavarian in every possible sense in this time period. Though the difference between Austrian & Bavarian is literally the division of the Imperial Circles, it was even part of the Bavarian Imperial circle. Hence, it becomes Bavarian.
 religion = catholic
 capital = "Salzburg"
 trade_goods = salt
 hre = yes
-base_tax = 5 
-base_production = 5
-base_manpower = 4
+base_tax = 6
+base_production = 7
+base_manpower = 7
 is_city = yes
-add_core = HAB
-center_of_trade = 2
-
-fort_15th = yes
+add_core = SLZ
+center_of_trade = 1
 
 
 
@@ -30,7 +31,7 @@ discovered_by = ottoman
 	owner = ETR
 	controller = ETR
 	add_core = ETR
-	} # Given to Ferdinand III of Tuscany
+} # Given to Ferdinand III of Tuscany
 1805.12.26 = {	owner = HAB
 	controller = HAB
 	add_core = HAB
@@ -42,10 +43,11 @@ discovered_by = ottoman
 	controller = BAV
 	add_core = BAV
 	remove_core = HAB
-} # Treaty of Schï¿½nbrunn
+} # Treaty of Schönbrunn
 1814.5.30 = {
 	owner = HAB
 	controller = HAB
 	add_core = HAB
 	remove_core = BAV
-} # Treaty of Paris
+	change_culture = austrian
+} # Treaty of Paris (Pretty sure this should be Treaty of Munich in 1816)

@@ -1,3 +1,4 @@
+ 
 #2229 - Bust
 
 owner = SIS
@@ -7,9 +8,9 @@ religion = sunni
 capital = "Bust"
 trade_goods = livestock
 hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 3
+base_tax = 2  
+base_production = 2 
+base_manpower = 6
 is_city = yes
 add_core = SIS
 add_core = AFG
@@ -25,7 +26,8 @@ discovered_by = nomad_group
 1461.1.1 = {
 	controller = SIS
 }
-1507.7.1 = { owner = BUK controller = BUK add_core = BUK } # Shaybanids
+1507.1.1 = { controller = BUK }
+1507.7.1 = { owner = BUK } # Shaybanids
 1510.1.1 = {
 	owner = PER
 	controller = PER

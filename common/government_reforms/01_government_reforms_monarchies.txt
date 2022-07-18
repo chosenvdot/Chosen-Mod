@@ -1,3 +1,9 @@
+#Beyond Typus Note -
+#Unfortunately, it appears there is no way to modify the new gov system without overriding it, an odd and somewhat disappointing choice of Paradox's end, to be honest.
+#I'll try to document the file well and keep things as organised as possible, but any submods or addons wanting to add their own content will be forced to update 
+#fresh each BT update as far as I can tell, sadly. I'm afraid the matter appears to be completely out of my hands, but if you have a suggestion to improve cross compatibility, please do share.
+# -This file contains new reforms at the bottom.
+
 
 monarchy_mechanic = {
 	monarchy = yes
@@ -22,7 +28,7 @@ feudalism_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	modifiers = {
-		vassal_income = 0.1
+		vassal_income = 0.25
 		nobles_influence_modifier = 0.05
 		maratha_exclusive_influence_modifier = 0.05
 		rajput_exclusive_influence_modifier = 0.05
@@ -40,7 +46,6 @@ autocracy_reform = {
 	nation_designer_cost = 0
 	modifiers = {
 		unjustified_demands = -0.1
-		governing_capacity = 100
 	}
 	ai = {
 		factor = 0.5 #generic
@@ -79,13 +84,37 @@ plutocratic_reform = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
 	}
-		boost_income = yes
+	boost_income = yes
 	conditional = {
 		allow = {
 			has_dlc = "Leviathan"
 		}
 		allow_draft_transport_ships = yes
-	}		   
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
 	ai = {
 		factor = 0.75 #generic
 	}
@@ -128,11 +157,16 @@ grand_duchy_reform = {
 			}
 		}
 	}
-	legacy_equivalent = despotic_monarchy
+	legacy_equivalent = lithuanian_grand_duchy_legacy # BT ???; despotic_monarchy
+	fixed_rank = 1
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	modifiers = {
-		governing_capacity = 100
+		diplomatic_upkeep = 2 # BT ???
+		min_autonomy_in_territories = -0.25 # BT ???
+		land_maintenance_modifier = -0.25 # BT ???
+		num_accepted_cultures = 2 # BT ???
+		governing_capacity = 250 # BT; 100
 	}
 }
 
@@ -222,6 +256,7 @@ daimyo = {
 		NOT = { has_country_flag = formed_japan_flag }
 		overlord = { has_reform = shogunate }
 	}
+	replacement_on_independence_war = indep_daimyo
 	legacy_equivalent = daimyo_legacy
 	fixed_rank = 1
 	maintain_dynasty = yes
@@ -246,11 +281,13 @@ indep_daimyo = {
 	icon = "samurai"
 	allow_normal_conversion = no
 	potential = {
+		NOT = { has_country_flag = formed_japan_flag }
 		OR = {
 			AND = {
 				OR = {
+					#overlord = { NOT = { has_reform = shogunate } }
 					is_subject = no
-					overlord = { NOT = { has_reform = shogunate } }
+					is_subject_of_type = tributary_state
 				}
 				capital_scope = { region = japan_region }
 				culture_group = japanese_g
@@ -274,7 +311,7 @@ indep_daimyo = {
 	modifiers = {
 		land_morale = 0.1
 		infantry_power = 0.1
-		governing_capacity = -150
+		governing_capacity = -300 # BT; -150
 	}
 	custom_attributes = {
 		locked_government_type = yes
@@ -300,6 +337,7 @@ celestial_empire = {
 				}
 			}
 		}
+		NOT = { has_global_flag = empire_of_china_dismantled }
 	}
 	legacy_equivalent = celestial_empire_legacy
 	maintain_dynasty = yes
@@ -332,7 +370,7 @@ celestial_empire = {
 		church_influence_modifier = -0.1
 		nobles_influence_modifier = -0.1
 		burghers_influence_modifier = -0.1
-		governing_capacity = 300
+		governing_capacity = 800 # BT; 300 #(JP) It was not enough, Ming was immediately releasing Xi every single game. They were 233 over, this makes them just 33 over
 	}
 	
 	ai = {
@@ -341,6 +379,7 @@ celestial_empire = {
 
 	custom_attributes = {
 		locked_government_type = yes
+		has_unify_china_cb = yes
 	}
 
 	conditional = {
@@ -349,6 +388,7 @@ celestial_empire = {
 		factions = {}
 	}
 }
+
 chinese_warlord = {
 	icon = "samurai"
 	allow_normal_conversion = no
@@ -361,11 +401,18 @@ chinese_warlord = {
 		}
 		OR = {
 			AND = {
-				NOT = { primary_culture = manchu_new }
+				OR = {
+					primary_culture = miao
+					primary_culture = yi
+				}
+				religion = animist
 			}
-			is_playing_custom_nation = yes
+			AND = {
+				primary_culture = bai
+				religion = buddhism
+			}
+			religion = confucianism
 		}
-		religion = confucianism
 		technology_group = chinese
 		capital_scope = {
 			OR = {
@@ -381,9 +428,27 @@ chinese_warlord = {
 	nation_designer_cost = 10
 	lock_level_when_selected = yes
 	nation_designer_trigger = {
-		culture_group = east_asian
+		OR = {
+			primary_culture = bai
+			primary_culture = miao
+			primary_culture = yi
+			culture_group = east_asian
+		}
 		technology_group = chinese
-		religion = confucianism
+		OR = {
+			AND = {
+				OR = {
+					primary_culture = miao
+					primary_culture = yi
+				}
+				religion = animist
+			}
+			AND = {
+				primary_culture = bai
+				religion = buddhism
+			}
+			religion = confucianism
+		}
 		capital_scope = {
 			OR = {
 				region = north_china_region
@@ -396,6 +461,8 @@ chinese_warlord = {
 
 	modifiers = {
 		manpower_recovery_speed = 0.1
+		relation_with_same_culture = -100
+		relation_with_same_culture_group = -100
 		governing_capacity = 100
 	}
 	
@@ -404,10 +471,10 @@ chinese_warlord = {
 	}
 
 	custom_attributes = {
-		locked_government_type = yes
 		has_unify_china_cb = yes
 	}
 }
+
 elective_monarchy = {
 	icon = "elective_monarchy"
 	allow_normal_conversion = yes
@@ -428,10 +495,11 @@ elective_monarchy = {
 		has_dlc = "Res Publica"
 	}
 	modifiers = {
-		vassal_income = 0.1
-		global_unrest = -1
+		vassal_income = 0.25
+		tolerance_heretic = 3			#New in BT. Yeah, I know Lithuanian trads & Polish ambitions both give this, but Heretic unrest is a serious issue in this little corner of land.
+		#global_unrest = -1			#Replacing -1 global unrest with tolerance to heretics. PLC has a pretty spectacular amount of land and dev, and most of it is Orthodox.
 		max_absolutism = -30
-		governing_capacity = 100
+		governing_capacity = 200 # BT; 100
 	}
 
 	conditional = {
@@ -458,7 +526,7 @@ iqta = {
 	legacy_equivalent = iqta_legacy
 	queen = no
 	modifiers = {
-		vassal_income = 0.1
+		vassal_income = 0.33
 		global_tax_modifier = 0.05
 	}
 
@@ -485,18 +553,21 @@ english_monarchy = {
 	legacy_equivalent = english_monarchy_legacy
 	start_territory_to_estates = 0.3
 	modifiers = {
-		governing_capacity = 50
+		governing_capacity = 100 # BT; 50
 		legitimacy = 0.5
 		global_unrest = -1
 		max_absolutism = -30
-		vassal_income = 0.1
 	}
 
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
-	}
 
+		custom_attributes = {
+			blocked_call_diet = yes
+			#disables_nobility = yes			#Added vanilla 1.33, BT cuts it because we have noble Englishmen. -D
+		}
+	}
 }
 
 ottoman_government = {
@@ -531,20 +602,17 @@ ottoman_government = {
 		unjustified_demands = -0.1
 		legitimacy = 0.5
 		max_absolutism = 5
-		governing_capacity = 150
-		vassal_income = 0.25
+		governing_capacity = 300 # BT; 150
 	}
 
 	custom_attributes = {
 		locked_government_type = yes
 	}
-	custom_attributes = {
-		enables_janissary_estate = yes #used for localization of estate privilege #dum
-		}
+
 	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }
-		has_pashas = yes 		
-	}	
+		has_pashas = yes
+	}
 	conditional = {
 		allow = { has_dlc = "Rights of Man" }
 		has_harem = yes
@@ -552,25 +620,16 @@ ottoman_government = {
 }
 
 prussian_monarchy = {
-	lock_level_when_selected = yes
 	icon = "prussian_monarchy"
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
-			AND = {
-				tag = BRA
-				NOT = { map_setup = map_setup_random }
-			}
 			AND = {
 				tag = PRU
 				NOT = { map_setup = map_setup_random }
 			}
 			AND = {
 				tag = GER
-				have_had_reform = prussian_monarchy
-			}
-			AND = {
-				tag = NGF
 				have_had_reform = prussian_monarchy
 			}
 			AND = {
@@ -581,12 +640,8 @@ prussian_monarchy = {
 	}
 	trigger = {
 		OR = {
-			tag = BRA
 			is_playing_custom_nation = yes
-			religion = protestant
-			religion = reformed
-			religion = hussite
-			religion = anglican		 
+			religion_group = christian # BT; van. 4 denom.
 		}
 	}
 	valid_for_nation_designer = yes
@@ -596,11 +651,11 @@ prussian_monarchy = {
 	modifiers = {
 		war_exhaustion = -0.02
 		global_unrest = -2
+		global_autonomy = -0.075
 		max_absolutism = 10
-		monarch_military_power = 1
+		monarch_military_power = 3
 		nobles_loyalty_modifier = 0.1
-		governing_capacity_modifier = -0.25
-		expand_administration_cost = 2
+		governing_capacity_modifier = -0.5
 	}
 
 	conditional = {
@@ -649,7 +704,7 @@ principality = {
 			}
 		}
 	}
-	#fixed_rank = 1
+	fixed_rank = 1
 	legacy_equivalent = principality_legacy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 5
@@ -660,7 +715,7 @@ principality = {
 	modifiers = {
 		global_unrest = -1
 		global_tax_modifier = 0.05
-		governing_capacity = 100
+		governing_capacity = 300 # BT; 150
 	}
 
 	conditional = {
@@ -676,6 +731,7 @@ tsardom = {
 	allow_normal_conversion = yes
 	potential = {
 		religion = orthodox
+		culture_group = east_slavic
 		OR = {
 			AND = {
 				tag = RUS
@@ -702,10 +758,10 @@ tsardom = {
 	}
 
 	modifiers = {
-		global_manpower_modifier = 0.1
+		global_manpower_modifier = 0.20
 		yearly_absolutism = 0.5
 		global_autonomy = -0.05
-		governing_capacity = 150
+		governing_capacity = 500 # BT; 250
 	}
 
 	conditional = {
@@ -730,7 +786,6 @@ mamluk_government = {
 			have_had_reform = mamluk_government
 		}
 	}
-	lock_level_when_selected = yes
 	legacy_equivalent = mamluk_government_legacy
 	queen = no
 
@@ -740,15 +795,15 @@ mamluk_government = {
 	nation_designer_trigger = {
 		religion_group = muslim
 	}
-	
+
 	modifiers = {
 		num_accepted_cultures = 3
 		#-50% cost to promote cultures
 		global_autonomy = -0.025
 		monarch_admin_power = 2
-		same_culture_advisor_cost = -0.15
+		same_culture_advisor_cost = -0.25
 		promote_culture_cost = -0.5
-		governing_capacity = 50
+		governing_capacity = 100 # BT; 50
 		nobles_influence_modifier = 0.1
 	}
 
@@ -757,9 +812,6 @@ mamluk_government = {
 		government_abilities = {
 			mamluk_mechanic
 		}
-		has_pashas = yes 
-	}
-	custom_attributes = {
 		heir = no
 		foreign_slave_rulers = yes
 	}
@@ -771,8 +823,14 @@ feudal_theocracy = {
 	potential = {
 		OR = {
 			AND = {
+				OR = {
 				religion_group = muslim
+					religion_group = zoroastrian_group
+				}
+				OR = {
 				has_reform = feudal_theocracy
+					have_had_reform = feudal_theocracy
+				}
 			}
 			AND = {
 				is_playing_custom_nation = yes
@@ -781,7 +839,10 @@ feudal_theocracy = {
 		}
 	}
 	nation_designer_trigger = {
+		OR = {
 		religion_group = muslim
+			religion_group = zoroastrian_group
+		}
 	}
 	legacy_equivalent = feudal_theocracy_legacy
 	valid_for_nation_designer = yes
@@ -790,7 +851,7 @@ feudal_theocracy = {
 		missionaries = 1
 		global_missionary_strength = 0.01
 		tolerance_own = 2
-		governing_capacity = 50
+		governing_capacity = 100 # BT; 50
 		brahmins_hindu_loyalty_modifier = 0.05
 		church_loyalty_modifier = 0.05
 	}
@@ -801,163 +862,209 @@ feudal_theocracy = {
 			feudal_theocracy_mechanic
 		}
 	}
+	custom_attributes = {
+		enables_divine_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
 }
 
-#mughal_government = {
-#	icon = "peacock_throne"
-#	allow_normal_conversion = yes
-#	potential = {
-#		has_dlc = "Dharma"
-#		AND = {
-#			tag = MUG
-#			NOT = { map_setup = map_setup_random }
-#		}
-#	}
-#	lock_level_when_selected = yes
-#	legacy_equivalent = feudal_monarchy
-#
-#	modifiers = {
-#		tolerance_own = 1
-#		governing_capacity = 150
-#	}
-#
-#	assimilation_cultures = {
-#		altaic = {
-#			artillery_cost = -0.1
-#		}
-#		baltic = {
-#			naval_forcelimit_modifier = 0.05
-#		}
-#		british = {
-#			ship_durability = 0.05
-#		}
-#		burman = {
-#			free_leader_pool = 1
-#		}
-#		byzantine = {
-#			legitimacy = 0.25
-#		}
-#		carpathian = {
-#			mercenary_cost = -0.1
-#		}
-#		caucasian = {
-#			mercenary_discipline = 0.05
-#		}
-#		gaelic = {
-#			shock_damage = 0.05
-#		}
-#		central_indic = {
-#			land_attrition = -0.1
-#		}
-#		east_asian = {
-#			state_maintenance_modifier = -0.2
-#		}
-#		kongo_group = {
-#			heir_chance = 0.5
-#		}
-#		cushitic = {
-#			missionaries = 1
-#		}
-#		dravidian = {
-#			global_trade_goods_size_modifier = 0.05
-#		}
-#		african = {
-#			global_tax_income = 10
-#		}
-#		east_slavic = {
-#			land_forcelimit_modifier = 0.1
-#		}
-#		eastern_aryan = {
-#			production_efficiency = 0.05
-#		}
-#		evenks = {
-#			cavalry_flanking = 0.2
-#		}
-#		french = {
-#			diplomats = 1
-#		}
-#		germanic = {
-#			global_institution_spread = 0.15
-#		}
-#		great_lakes_group = {
-#			loot_amount = 0.5
-#		}
-#		hindusthani = {
-#			core_creation = -0.1
-#		}
-#		iberian = {
-#			global_colonial_growth = 10
-#		}
-#		iranian = {
-#			advisor_cost = -0.1
-#		}
-#		japanese_g = {
-#			land_morale = 0.1
-#		}
-#		korean_g = {
-#			idea_cost = -0.05
-#		}
-#		latin = {
-#			embracement_cost = -0.1
-#		}
-#		lost_cultures_group = {
-#			discipline = 0.05
-#		}
-#		turko_semitic = {
-#			cavalry_power = 0.1
-#		}
-#		maghrebi = {
-#			privateer_efficiency = 0.25
-#		}
-#		malay = {
-#			merchants = 1
-#		}
-#		mande = {
-#			tolerance_heretic = 1
-#		}
-#		mon_khmer = {
-#			build_cost = -0.05
-#		}
-#		pacific = {
-#			global_sailors_modifier = 0.1
-#		}
-#		sahelian = {
-#			movement_speed = 0.1
-#		}
-#		scandinavian = {
-#			mil_advisor_cost = -0.1
-#		}
-#		south_slavic = {
-#			warscore_cost_vs_other_religion = -0.1
-#		}
-#		southern_african = {
-#			inflation_reduction = 0.05
-#		}
-#		sudanese = {
-#			caravan_power = 0.1
-#		}
-#		tartar = {
-#			cavalry_cost = -0.15
-#		}
-#		southeastasian_group = {
-#			development_cost = -0.05
-#		}
-#		tibetan_group = {
-#			prestige_per_development_from_conversion = 0.5
-#		}
-#		finno_ugric = {
-#			prestige_decay = -0.01
-#		}
-#		west_african = {
-#			global_autonomy = -0.01
-#		}
-#		west_slavic = {
-#			leader_land_fire = 1
-#		}
-#		western_aryan = {
-#		trade_efficiency = 0.05
-#		}#	}
-#}
+mughal_government = {
+	icon = "peacock_throne"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Dharma"
+		AND = {
+			tag = MUG
+			NOT = { map_setup = map_setup_random }
+		}
+	}
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+
+	modifiers = {
+		tolerance_own = 1
+		governing_capacity = 300 # BT; 150
+	}
+
+	assimilation_cultures = {
+		altaic = {
+			artillery_cost = -0.1
+		}
+		baltic = {
+			naval_forcelimit_modifier = 0.05
+		}
+		british = {
+			ship_durability = 0.05
+		}
+		burman = {
+			free_leader_pool = 1
+		}
+		byzantine = {
+			legitimacy = 0.25
+		}
+		carpathian = {
+			mercenary_cost = -0.1
+		}
+		caucasian = {
+			mercenary_discipline = 0.05
+		}
+		gaelic = {
+			shock_damage = 0.05
+		}
+		central_indic = {
+			land_attrition = -0.1
+		}
+		east_asian = {
+			state_maintenance_modifier = -0.2
+		}
+		kongo_group = {
+			heir_chance = 0.5
+		}
+		cushitic = {
+			missionaries = 1
+		}
+		dravidian = {
+			global_trade_goods_size_modifier = 0.05
+		}
+		african = {
+			global_tax_income = 10
+		}
+		east_slavic = {
+			land_forcelimit_modifier = 0.1
+		}
+		eastern_aryan = {
+			production_efficiency = 0.05
+		}
+		evenks = {
+			cavalry_flanking = 0.2
+		}
+		french = {
+			diplomats = 1
+		}
+		germanic = {
+			global_institution_spread = 0.15
+		}
+		great_lakes_group = {
+			loot_amount = 0.5
+		}
+		hindusthani = {
+			core_creation = -0.1
+		}
+		iberian = {
+			global_colonial_growth = 10
+		}
+		iranian = {
+			advisor_cost = -0.1
+		}
+		japanese_g = {
+			land_morale = 0.1
+		}
+		kamchatkan_g = {
+			hostile_attrition = 1
+		}
+		korean_g = {
+			idea_cost = -0.05
+		}
+		latin = {
+			embracement_cost = -0.1
+		}
+		lost_cultures_group = {
+			discipline = 0.05
+		}
+		turko_semitic = {
+			cavalry_power = 0.1
+		}
+		maghrebi = {
+			privateer_efficiency = 0.05			# BT; Modifier reduced, as group basically unused.
+		}
+		malay = {
+			merchants = 1
+		}
+		mande = {
+			tolerance_heretic = 1
+		}
+		#mon_khmer = {
+		#	build_cost = -0.05
+		#}
+		pacific = {
+			global_sailors_modifier = 0.1
+		}
+		sahelian = {
+			movement_speed = 0.1
+		}
+		scandinavian = {
+			mil_advisor_cost = -0.1
+		}
+		southeastasian_group = {
+			development_cost = -0.05
+		}
+		south_slavic = {
+			warscore_cost_vs_other_religion = -0.1
+		}
+		southern_african = {
+			inflation_reduction = 0.05
+		}
+		sudanese = {
+			caravan_power = 0.1
+		}
+		tartar = {
+			cavalry_cost = -0.15
+		}
+		thai_group = {
+			build_cost = -0.05
+		}
+		tibetan_group = {
+			prestige_per_development_from_conversion = 0.5
+		}
+		finno_ugric = {
+			prestige_decay = -0.01
+		}
+		west_african = {
+			global_autonomy = -0.01
+		}
+		west_slavic = {
+			leader_land_fire = 1
+		}
+		western_aryan = {
+			trade_efficiency = 0.05
+		}
+		#BT culture groups
+		#Khoisan removed, as it is in a colonial region.
+		turkish_g = {
+			siege_ability = 0.1			#Current modifier courtesy of Imperatrix Helena
+		}
+		brythonic = { 
+			defensiveness = 0.10			#Current modifier courtesy of Imperatrix Helena
+		}
+		illyrian = {
+			recover_army_morale_speed = 0.05			#Current modifier courtesy of Imperatrix Helena
+		}
+		aquitanian = {
+			hostile_attrition = 0.5			#Current modifier courtesy of Imperatrix Helena
+		}
+		dacian = {
+			harsh_treatment_cost = -0.10			#Current modifier courtesy of Imperatrix Helena
+		}
+		egyptian = {
+			tolerance_heathen = 0.5			#Current modifier courtesy of Imperatrix Helena
+		}
+		saharan_group = {
+			stability_cost_modifier = -0.05			#Current modifier courtesy of Imperatrix Helena
+		}
+		berber_group = {
+			privateer_efficiency = 0.25
+		}
+		miao_g = {
+			global_trade_goods_size_modifier = 0.05
+		}
+		unified_celtic_group = {
+			defensiveness = 0.25
+		}
+		syriac_group  = {
+			core_decay_on_your_own = -0.05
+		}
+	}
+}
 
 revolutionary_empire_reform = {
 	lock_level_when_selected = yes
@@ -975,12 +1082,47 @@ revolutionary_empire_reform = {
 		global_manpower_modifier = 0.25
 		land_morale = 0.10
 		global_autonomy = -0.2
-		governing_capacity = 150
+		governing_capacity = 300 # BT; 150
 		max_revolutionary_zeal = 50
 	}
 
 	custom_attributes = {
 		locked_government_type = yes
+	}
+
+	removed_effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_china_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_china_flag
+				restore_country_name = yes
+				override_country_name = CHINA_STRING
+				set_country_flag = is_china_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_turkey_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_turkey_flag
+				restore_country_name = yes
+				override_country_name = TURKEY_STRING
+				set_country_flag = is_turkey_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_gurkani_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_gurkani_flag
+				restore_country_name = yes
+				override_country_name = GURKANI_EMPIRE_STRING
+				set_country_flag = is_gurkani_flag
+			}
+		}
 	}
 }
 
@@ -1022,8 +1164,9 @@ mandala_reform = {
 	modifiers = {
 		vassal_income = 0.15
 		vassal_forcelimit_bonus = 1
-		governing_capacity = 50
-	}						   
+		governing_capacity_modifier = -0.33
+	}
+	free_concentrate_development = yes
 }
 
 nayankara_reform = {
@@ -1115,25 +1258,7 @@ rajput_kingdom = {
 	}
 }
 
-gond_kingdom = {
-	icon = "chieftain"
-	allow_normal_conversion = yes
-	potential = {
-		has_dlc = "Dharma"
-		technology_group = indian
-		primary_culture = gondi
-	}
-	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-	nation_designer_trigger = {
-		technology_group = indian
-		primary_culture = gondi
-	}
-	legacy_equivalent = tribal_kingdom_legacy
-	modifiers = {
-		defensiveness = 0.2
-	}
-}
+#Vanilla cut Gond kingdom from here.... hate outright cuts because it has some bug & crash risks, but I guess if they're good with it. -D
 
 siamese_absolutism = {
 	icon = "indian_crown"
@@ -1161,12 +1286,14 @@ confucian_bureaucracy = {
 		OR = {
 			religion = confucianism
 			primary_culture = vietnamese
+			primary_culture = vietnamese_new
 		}
 	}
 	potential = {
 		OR = {
 			religion = confucianism
 			primary_culture = vietnamese
+			primary_culture = vietnamese_new
 		}
 	}
 	valid_for_nation_designer = yes
@@ -1237,188 +1364,6 @@ uparaja_reform = {
 	}
 }
 
-#Hereditary vs Nobility
-enforce_privileges_reform = {
-	icon = "people_walking"
-	allow_normal_conversion = yes
-	potential = {
-		is_revolutionary = no
-	}
-	modifiers = {
-		global_manpower_modifier = 0.15
-		church_influence_modifier = -0.1
-	}
-	conditional = {
-		allow = {
-		}
-		claim_states = yes
-	}
-
-	ai = {
-		factor = 1
-		modifier = {
-			factor = 2
-			NOT = { max_manpower = 12 }
-		}
-	}
-}
-
-quash_noble_power_reform = {
-	icon = "king_2"
-	allow_normal_conversion = yes
-	potential = {
-		is_revolutionary = no
-	}
-	modifiers = {
-		global_tax_modifier = 0.15
-		nobles_influence_modifier = -0.1
-		maratha_exclusive_influence_modifier = -0.1
-		rajput_exclusive_influence_modifier = -0.1
-	}
-	conditional = {
-		allow = {
-		}
-		claim_states = yes
-	}
-	ai = {
-		factor = 1
-		modifier = {
-			factor = 1.5
-			is_in_deficit = yes
-		}
-	}
-}
-
-enforce_trader_privileges_reform = {
-	icon = "paper_money_map"
-	allow_normal_conversion = yes
-	potential = {
-		is_reform_available = plutocratic_reform
-		OR = {
-			technology_group = indian
-			technology_group = muslim
-			technology_group = chinese
-			technology_group = east_african
-		}
-	}
-	trigger = {
-		has_reform = plutocratic_reform
-	}
-	modifiers = {
-		trade_range_modifier = 0.3
-		trade_efficiency = 0.05
-	}
-	conditional = {
-		allow = {
-		}
-		claim_states = yes
-	}
-	ai = {
-		factor = 2
-		modifier = {
-			factor = 1.5
-			trade_income_percentage = 0.35
-		}
-		modifier = {
-			factor = 0.5
-			NOT = {
-				trade_income_percentage = 0.25
-			}
-		}
-	}
-}
-
-bengali_reform = {
-	icon = "merchant_ship"
-	allow_normal_conversion = yes
-	potential = {
-		has_dlc = "Dharma"
-		primary_culture = bengali
-		religion_group = muslim
-	}
-	modifiers = {
-		merchants = 1
-		trade_efficiency = 0.1
-	}
-	conditional = {
-		allow = {
-		}
-		claim_states = yes
-	}
-	ai = {
-		factor = 5
-	}
-}
-
-sufi_syncretism_reform = {
-	icon = "muslim"
-	allow_normal_conversion = yes
-	potential = {
-		has_dlc = "Dharma"
-		primary_culture = bengali
-		religion_group = muslim
-	}
-	modifiers = {
-		global_missionary_strength = 0.01
-		development_cost = -0.05
-	}
-	conditional = {
-		allow = {
-		}
-		claim_states = yes
-	}
-	ai = {
-		factor = 3
-	}
-}
-
-poligar_reform = {
-	icon = "indian_crown"
-	allow_normal_conversion = yes
-	potential = {
-		has_dlc = "Dharma"
-		technology_group = indian
-		OR = {
-			culture_group = dravidian
-			primary_culture = oriya
-			primary_culture = sinhala
-		}
-	}
-	modifiers = {
-		infantry_power = 0.1
-		development_cost = -0.05
-	}
-	conditional = {
-		allow = {
-		}
-		claim_states = yes
-	}
-	ai = {
-		factor = 3
-	}
-}
-
-khalsa_reform = {
-	icon = "strength_of_the_khalsa"
-	allow_normal_conversion = yes
-	potential = {
-		has_dlc = "Dharma"
-		religion = sikhism
-	}
-	modifiers = {
-		tolerance_heathen = 1
-		tolerance_heretic = 1
-		land_morale = 0.05
-	}
-	conditional = {
-		allow = {
-		}
-		claim_states = yes
-	}
-	ai = {
-		factor = 5
-	}
-}
 negusa_nagast = {
 	icon = "chieftain"
 	allow_normal_conversion = yes
@@ -1467,12 +1412,16 @@ solomonic_empire = {
 	allow_normal_conversion = yes
 	lock_level_when_selected = yes
 	potential = {
+		OR = {
 			have_had_reform = solomonic_empire
-
+			has_country_flag = unlocked_solomid_empire_reform
+		}
 	}
 	trigger = {
+		OR = {
 			have_had_reform = solomonic_empire
-		
+			has_country_flag = unlocked_solomid_empire_reform
+		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 50
@@ -1493,6 +1442,7 @@ solomonic_empire = {
 		allow_cawa = yes
 	}
 }
+
 mossi_federal_kingdom = {
 	icon = "native_war_band_reform"
 	allow_normal_conversion = yes
@@ -1573,6 +1523,182 @@ mossi_federal_kingdom = {
 		factor = 1
 	}
 }
+
+musa_rule = {
+	icon = "chieftain"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 30
+	legacy_equivalent = musa_rule_legacy
+	potential = {
+		OR = {
+			tag = MAL
+			have_had_reform = musa_rule
+		}
+	}
+	trigger = {
+		OR = {
+			tag = MAL
+			have_had_reform = musa_rule
+		}
+	}
+	modifiers = {
+		advisor_pool = 1
+		stability_cost_modifier = -0.05
+		legitimacy = 0.5
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+
+#Hereditary vs Nobility
+enforce_privileges_reform = {
+	icon = "people_walking"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+	}
+	modifiers = {
+		global_manpower_modifier = 0.15
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 2
+			NOT = { max_manpower = 12 }
+		}
+	}
+}
+
+quash_noble_power_reform = {
+	icon = "king_2"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = no
+	}
+	modifiers = {
+		global_tax_modifier = 0.1
+		nobles_influence_modifier = -0.1
+		maratha_exclusive_influence_modifier = -0.1
+		rajput_exclusive_influence_modifier = -0.1
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			is_in_deficit = yes
+		}
+	}
+}
+
+enforce_trader_privileges_reform = {
+	icon = "paper_money_map"
+	allow_normal_conversion = yes
+	potential = {
+		is_reform_available = plutocratic_reform
+		OR = {
+			technology_group = indian
+			technology_group = muslim
+			technology_group = chinese
+			technology_group = east_african
+		}
+	}
+	trigger = {
+		has_reform = plutocratic_reform
+	}
+	modifiers = {
+		trade_range_modifier = 0.3
+		trade_efficiency = 0.05
+	}
+	ai = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			trade_income_percentage = 0.35
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				trade_income_percentage = 0.25
+			}
+		}
+	}
+}
+
+bengali_reform = {
+	icon = "merchant_ship"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Dharma"
+		primary_culture = bengali
+		religion_group = muslim
+	}
+	modifiers = {
+		merchants = 1
+		trade_efficiency = 0.1
+	}
+	ai = {
+		factor = 5
+	}
+}
+
+sufi_syncretism_reform = {
+	icon = "muslim"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Dharma"
+		primary_culture = bengali
+		religion_group = muslim
+	}
+	modifiers = {
+		global_missionary_strength = 0.01
+		development_cost = -0.05
+	}
+	ai = {
+		factor = 3
+	}
+}
+
+poligar_reform = {
+	icon = "indian_crown"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Dharma"
+		technology_group = indian
+		OR = {
+			culture_group = dravidian
+			primary_culture = oriya
+			primary_culture = sinhala
+		}
+	}
+	modifiers = {
+		infantry_power = 0.1
+		development_cost = -0.05
+	}
+	ai = {
+		factor = 3
+	}
+}
+
+khalsa_reform = {
+	icon = "strength_of_the_khalsa"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Dharma"
+		religion = sikhism
+	}
+	modifiers = {
+		tolerance_heathen = 1
+		tolerance_heretic = 1
+		land_morale = 0.05
+	}
+	ai = {
+		factor = 5
+	}
+}
+
 deccani_society_reform = {
 	icon = "noble_indian"
 	allow_normal_conversion = yes
@@ -1589,11 +1715,6 @@ deccani_society_reform = {
 	modifiers = {
 		free_dip_policy = 1
 	}
-	conditional = {
-		allow = {
-		}
-		claim_states = yes
-	}
 	ai = {
 		factor = 3
 	}
@@ -1608,15 +1729,9 @@ black_army_reform = {
 		is_revolutionary = no
 	}
 	modifiers = {
-		global_manpower_modifier = 0.15
 		merc_maintenance_modifier = -0.15
 		mercenary_discipline = 0.025
 		nobles_loyalty_modifier = -0.1
-	}
-	conditional = {
-		allow = {
-		}
-		claim_states = yes
 	}
 	ai = {
 		factor = 3
@@ -1635,11 +1750,6 @@ legion_of_honor_reform = {
 		maratha_exclusive_loyalty_modifier = 0.1
 		rajput_exclusive_loyalty_modifier = 0.1
 	}
-	conditional = {
-		allow = {
-		}
-		claim_states = yes
-	}
 	ai = {
 		factor = 2.5
 	}
@@ -1656,11 +1766,6 @@ imperial_nobility_reform = {
 		nobles_influence_modifier = -0.2
 		maratha_exclusive_influence_modifier = -0.2
 		rajput_exclusive_influence_modifier = -0.2
-	}
-	conditional = {
-		allow = {
-		}
-		claim_states = yes
 	}
 	ai = {
 		factor = 2.5
@@ -1679,7 +1784,7 @@ centralize_reform = {
 		}
 	}
 	modifiers = {
-		global_autonomy = -0.025
+		global_autonomy = -0.05
 	}
 }
 
@@ -1723,7 +1828,7 @@ sidhi_recruitment = {
 	}
 	modifiers = {
 		fort_maintenance_modifier = -0.1
-		governing_capacity = 100
+		governing_capacity = 200 # BT; 100
 	}
 	ai = {
 		factor = 2
@@ -1740,7 +1845,7 @@ mansabdari_reform = {
 	}
 	modifiers = {
 		army_tradition_decay = -0.003
-		governing_capacity = 150
+		governing_capacity = 300 # BT; 150
 	}
 	ai = {
 		factor = 10
@@ -1754,6 +1859,7 @@ examination_system_reform = {
 		OR = {
 			religion = confucianism
 			primary_culture = vietnamese
+			primary_culture = vietnamese_new
 		}
 	}
 	trigger = {
@@ -1791,7 +1897,8 @@ corvee_reform = {
 	ai = {
 		factor = 10
 	}
-}							 
+}
+
 #Growth of Administration
 
 clergy_in_administration_reform = {
@@ -1804,8 +1911,13 @@ clergy_in_administration_reform = {
 		}
 	}
 	modifiers = {
-		monthly_reform_progress_modifier = 0.05
-		governing_capacity_modifier = -0.05
+		free_adm_policy = 1
+		
+		brahmins_hindu_influence_modifier = 0.1
+		brahmins_hindu_loyalty_modifier = 0.05
+
+		church_influence_modifier = 0.1
+		church_loyalty_modifier = 0.05
 	}
 	ai = {
 		factor = 1
@@ -1852,8 +1964,13 @@ of_noble_bearing_reform = {
 		}
 	}
 	modifiers = {
-		governing_capacity_modifier = 0.05
-		monthly_reform_progress_modifier = -0.05
+		leader_cost = -0.1
+		nobles_influence_modifier = 0.1
+		maratha_exclusive_influence_modifier = 0.1
+		rajput_exclusive_influence_modifier = 0.1
+		nobles_loyalty_modifier = 0.05
+		maratha_exclusive_loyalty_modifier = 0.05
+		rajput_exclusive_loyalty_modifier = 0.05
 	}
 	ai = {
 		factor = 1
@@ -1961,7 +2078,7 @@ zabt_reform = {
 		tag = MUG
 	}
 	modifiers = {
-		governing_capacity = 150
+		governing_capacity = 300 # BT; 150
 	}
 	ai = {
 		factor = 5
@@ -1979,7 +2096,7 @@ royal_decree_reform = {
 		is_revolutionary = no
 	}
 	modifiers = {
-		diplomatic_reputation = 3
+		max_absolutism = 5
 	}
 	ai = {
 		factor = 1
@@ -1990,7 +2107,7 @@ aristocratic_court_reform = {
 	icon = "soldiers_2"
 	allow_normal_conversion = yes
 	modifiers = {
-		yearly_army_professionalism = 0.00250
+		army_tradition_decay = -0.003
 	}
 	ai = {
 		factor = 1
@@ -2009,7 +2126,8 @@ states_general_reform = {
 	}
 
 	modifiers = {
-		#stability_cost_modifier = -0.1
+		stability_cost_modifier = -0.1
+		no_stability_loss_on_monarch_death = yes
 	}
 
 	ai = {
@@ -2126,7 +2244,7 @@ letat_cest_moi_reform = {
 	icon = "queen"
 	allow_normal_conversion = yes
 	modifiers = {
-		governing_capacity = 150
+		governing_capacity = 500 # BT; 250
 	}
 	ai = {
 		factor = 1.5
@@ -2141,7 +2259,7 @@ regional_representation_reform = {
 	icon = "assembly_hall"
 	allow_normal_conversion = yes
 	modifiers = {
-		possible_policy = 1
+		min_autonomy_in_territories = -0.10
 	}
 }
 
@@ -2153,7 +2271,7 @@ consulate_reform = {
 	}
 	modifiers = {
 		global_autonomy = -0.05
-		governing_capacity = 150
+		governing_capacity = 300 # BT; 150
 	}
 	ai = {
 		factor = 2.5
@@ -2238,6 +2356,7 @@ emperor_of_the_revolution_reform = {
 	icon = "emperor_of_the_revolution_reform"
 	allow_normal_conversion = yes
 	potential = {
+		has_dlc = "Emperor"
 		is_revolutionary = yes
 	}
 	modifiers = {
@@ -2296,3 +2415,197 @@ become_rev_republic_reform = {
 		factor = 0
 	}
 }
+
+
+# New Beyond Typus Reforms
+
+#Irish-cultured minors government reform tree.
+irish_clann_reform = { #T1
+	icon = "chieftain"
+	allow_normal_conversion = no
+	potential = {
+		culture_group = gaelic
+		capital_scope = { region = ireland_region } # Brian; changed from _area
+		NOT = { government_rank = 2 }
+		NOT = { has_reform = provincial_kingdom_reform }
+	}
+	lock_level_when_selected = yes
+	legacy_equivalent = irish_clann_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = -10
+	nation_designer_trigger = { culture_group = gaelic }
+	fixed_rank = 1
+	modifiers = {
+		stability_cost_modifier = -0.1
+		global_manpower_modifier = 0.25
+		global_institution_spread = -0.1
+		max_absolutism = -10
+	}
+}
+
+provincial_kingdom_reform = { #T2
+	icon = "chieftain"
+	allow_normal_conversion = no
+	legacy_equivalent = provincial_kingdom_legacy
+	valid_for_nation_designer = no
+	fixed_rank = 1
+	potential = {
+		culture_group = gaelic
+		capital_scope = { region = ireland_region } # Brian; changed from _area
+		NOT = { has_reform = tanistry_reform }
+	}
+	modifiers = {
+		stability_cost_modifier = -0.1
+		global_manpower_modifier = 0.25
+		global_institution_spread = -0.05
+		max_absolutism = -10
+	}
+}
+
+tanistry_reform = { #T3
+	icon = "crown"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			culture_group = gaelic
+			#BT Bugfixes added Celtic versions of Gaelic.
+			primary_culture = celtic_irish_culture
+			primary_culture = celtic_highland_scottish_culture
+		}
+		has_reform = tanistry_reform
+	}
+	lock_level_when_selected = yes
+	legacy_equivalent = high_kingship_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 75
+	nation_designer_trigger = { culture_group = gaelic }
+	modifiers = {
+		prestige = 1.0
+		legitimacy = 1.0
+		#monarch_admin_power = 1
+		#monarch_diplomatic_power = 1			#Might redo the system later and replace the complicated events with something simpler, using the new 1.26 modifiers here. Not for the moment, though.
+		#monarch_military_power = 1
+	}
+}
+
+#Old English/Hiberno-Norman minors government reform tree.
+norman_lordship_reform = { #T1
+	icon = "castle"
+	allow_normal_conversion = no
+	potential = {
+		NOT = { culture_group = gaelic }
+		capital_scope = { region = ireland_region } # Brian; changed from _area
+		NOT = { has_reform = norman_duchy_reform }
+	}
+	lock_level_when_selected = yes
+	legacy_equivalent = norman_lordship_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 20
+	nation_designer_trigger = {
+		NOT = { culture_group = gaelic }
+		capital_scope = { region = ireland_region } # Brian; changed from _area
+	}
+	fixed_rank = 1
+	modifiers = {
+		production_efficiency = 0.15
+		global_tax_modifier = 0.15
+		diplomatic_reputation = -2
+		max_absolutism = 10
+	}
+}
+
+norman_duchy_reform = { #T2
+	icon = "castle"
+	allow_normal_conversion = no
+	legacy_equivalent = provincial_kingdom_legacy
+	valid_for_nation_designer = no
+	fixed_rank = 1
+	potential = {
+		NOT = { culture_group = gaelic }
+		capital_scope = { region = ireland_region } # Brian; changed from _area
+		NOT = { has_reform = anglo_irish_monarchy_reform }
+	}
+	modifiers = {
+		production_efficiency = 0.15
+		global_tax_modifier = 0.15
+		diplomatic_reputation = -1
+		max_absolutism = 10
+	}
+}
+
+anglo_irish_monarchy_reform = { #T3
+	icon = "british_queen"
+	allow_normal_conversion = no
+	potential = {
+		capital_scope = { region = ireland_region } # Brian; changed from _area
+		has_reform = anglo_irish_monarchy_reform
+	}
+	lock_level_when_selected = yes
+	legacy_equivalent = anglo_irish_monarchy_legacy
+	valid_for_nation_designer = no
+	start_territory_to_estates = 0.3
+	modifiers = {
+		production_efficiency = 0.1
+		global_tax_modifier = 0.1
+		global_autonomy = -0.05		
+		max_absolutism = 10
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+
+	custom_attributes = {
+		blocked_call_diet = yes
+	}
+}
+
+
+#Ayyubids mission reward
+bt_ayyubid_sultanate_reform = {
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
+	icon = "ottoman_government"
+	potential = {
+		religion_group = muslim
+		OR = {
+			AND = {
+				tag = HSN
+				NOT = { map_setup = map_setup_random }
+				OR = {
+					has_reform = bt_ayyubid_sultanate_reform
+					have_had_reform = bt_ayyubid_sultanate_reform	
+				}
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = bt_ayyubid_sultanate_reform
+			}
+		}
+	}
+	fixed_rank = 3
+	valid_for_nation_designer = no
+	nation_designer_cost = 20
+	nation_designer_trigger = {
+		religion_group = muslim
+	}
+	#legacy_equivalent = ottoman_government_legacy
+	maintain_dynasty = yes
+	modifiers = {
+		unjustified_demands = -0.1
+		legitimacy = 0.5
+		max_absolutism = 5
+		monarch_admin_power = 1
+		governing_capacity = 200
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		has_harem = yes
+	}
+}
+

@@ -1,28 +1,29 @@
+ 
 #161 - Tîrgoviste
 
 owner = WAL
 controller = WAL 
-culture = romanian
-religion = orthodox
+culture = transylvanian_saxons
+religion = catholic
 capital = "Tîrgoviste"
-trade_goods = livestock
+trade_goods = cloth
 hre = no
-base_tax = 5
-base_production = 5
-base_manpower = 3
+base_tax = 4
+base_production = 3
+base_manpower = 2 
 is_city = yes
+#fort_15th = yes
 add_core = WAL
-discovered_by = KAZ
-discovered_by = CRI
-discovered_by = GOL
-discovered_by = AST
-discovered_by = QAS
+
+1444.1.1 = { discovered_by = KAZ }
+1444.1.1 = { discovered_by = CRI }
+1444.1.1 = { discovered_by = GOL }
+1444.1.1 = { discovered_by = AST }
+1444.1.1 = { discovered_by = QAS }
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
-extra_cost = 8
-center_of_trade = 1
 
 1593.1.1 = { unrest = 7 } # Wallachian rising, the Turks & Tatars are expelled
 1595.1.1 = { unrest = 0 } # The Turks take control of most of Wallachia again
@@ -30,13 +31,12 @@ center_of_trade = 1
 1658.1.1 = { revolt = {} controller = WAL }
 1663.1.1 = { unrest = 7 } # Cantacuzino is murdered, struggle for power between the boyars
 1688.1.1 = { unrest = 0 } # Period of stability, Constantine Brancoveanu reigns
-1718.1.1 = {
-	owner = HAB 
+1718.1.1 = {	owner = HAB 
 	controller = HAB
 	add_core = HAB
+	remove_core = TUR
 } # Ceded to Austria
-1739.1.1 = {
-	owner = WAL 
+1739.1.1 = {	owner = WAL 
 	controller = WAL
 	remove_core = HAB
 	add_core = TUR

@@ -1,3 +1,4 @@
+ 
 #4497 - Qannauj
 
 owner = JNP
@@ -7,9 +8,9 @@ religion = hinduism
 capital = "Qannauj"
 trade_goods = grain
 hre = no
-base_tax = 4
-base_production = 4
-base_manpower = 2
+base_tax = 8
+base_production = 8
+base_manpower = 4
 is_city = yes
 add_core = JNP
 add_core = DLH
@@ -22,7 +23,7 @@ discovered_by = chinese
 extra_cost = 8
 center_of_trade = 1
 
-1444.1.1 = {
+1486.1.1 = {
 	owner = DLH
 	controller = DLH
 } # Bahlul Lodi places his eldest surviving son Barbak Shah Lodi on the throne of Jaunpur, slowly integrated into Delhi's domains after this

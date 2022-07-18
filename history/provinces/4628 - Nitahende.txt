@@ -1,9 +1,10 @@
+ 
 # No previous file for Nitahende
 
-culture = mescalero
+culture = navajo
 religion = totemism
-capital = "Nitahendï¿½"
-trade_goods = unknown
+capital = "Nitahendé"
+trade_goods = grain
 hre = no
 base_tax = 1 
 base_production = 1
@@ -11,6 +12,7 @@ base_manpower = 1
 native_size = 6
 native_ferocity = 2
 native_hostileness = 8
+
 
 
 discovered_by = north_american

@@ -1,3 +1,4 @@
+ 
 #4329 - Fasa and Jahrum
 
 owner = FRS
@@ -7,12 +8,12 @@ religion = sunni
 capital = "Fasa"
 trade_goods = silk #And Paper in Jahrum
 hre = no
-base_tax = 4
-base_production = 4
-base_manpower = 1
+base_tax = 8
+base_production = 8
+base_manpower = 2 
 is_city = yes
 add_core = FRS
-#add_core = TIM
+add_core = TIM
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = indian

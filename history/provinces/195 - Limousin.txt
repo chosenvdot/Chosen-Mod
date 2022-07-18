@@ -1,24 +1,40 @@
+ 
 # 195 Limousin - Principal cities: Limoges
+#Region - France
+#Area - Massif Central
 
 owner = FRA
 controller = FRA
 capital = "Limoges"
 is_city = yes
-culture = gascon
+culture = occitain	#aquitaine vanilla
 religion = catholic
 hre = no
-base_tax = 3
-base_production = 3
-trade_goods = livestock
-base_manpower = 2
+base_tax = 5 
+base_production = 5 
+trade_goods = glass
+base_manpower = 3 
 add_core = FRA
-add_core = GUY
-discovered_by = eastern
+
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
+discovered_by = eastern
 
+1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
+	remove_core = FRA
+	add_core = AUV
+	owner = AUV
+	controller = AUV
+} #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
+1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
+	remove_core = AUV
+	add_core = FRA
+	owner = FRA
+	controller = FRA
+} #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
 
+#1444 onwards
 1560.1.1 = { religion = reformed }
 1565.1.1 = { unrest = 8 } # France is restless once again as ultra-catholic intentions become clear
 1568.9.1 = { unrest = 15 } # Catherine de Medici and Charles IX side with the Guise faction, religious intolerance peaks
@@ -27,8 +43,8 @@ discovered_by = ottoman
 1574.5.1 = { unrest = 7 } # Charles IX dies, situation cools a bit	
 1584.1.1 = { unrest = 12 } # Situation heats up again
 1588.12.1 = { unrest = 15 } # Henri de Guise assassinated at Blois, Ultra-Catholics into a frenzy
-1589.1.1 = { base_tax = 5 
-base_production = 5 } # At the walls of Paris - French War of Religion
+1589.1.1 = { base_tax = 8 
+base_production = 8 } # At the walls of Paris - French War of Religion
 1594.1.1 = { unrest = 10 } # 'Paris vaut bien une messe!', Henri converts to Catholicism
 1598.4.13 = { unrest = 3 } # Edict of Nantes, alot more freedom to the protestants
 1598.5.2 = { unrest = 0 } # Peace of Vervins, formal end to the Wars of Religion

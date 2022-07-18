@@ -104,7 +104,7 @@ leader_names = {
 	"de Bragança" "de Braganza" "de Brito" "de Carvalho" "de Castelo-Branco" "de Castro"
 	"de Correia" "de Faria" "da Gama" "de Guimarães" "de Lemos" "de Magalhães"
 	"de Marialva" "de Melo" "de Mendonça" "de Meneses" "de Noronha"
-	"de Oliveira" "de Paiva" "de Penamacor" "de Pimentel" "de Queiróz"
+	"de Oliveira" "de Paiva" "de Penamacor" "de Pimentel" "de Queirós"
 	"de Sá" "de Sampaio" "de Sequeira" "de Sousa" "de Souto" "de Tavares"
 	"de Távora" "de Vilhena" Dias
 	Eanes
@@ -117,6 +117,22 @@ leader_names = {
 	Rebelo Rodrigues
 	Sarmento
 	Teixeira "Teles de Meneses"
+	"da Silva" Santos Ferreira Martins Jesus Silva Sousa Oliveira Almeida Costa Andrade
+	Guimarães Correira Faria Farias Mendonça Paiva Pimentel Queirós Fernandes Lopes
+	Marques Alves Ribeiro Pinto Carvalho Moreira Mendes Nunes Soares Vieira Monteiro
+	Cardoso Rocha Raposo Neves Coelho "da Cruz" Cunha Pires "de Neves" Ramos Reis
+	Vilas-Boas Simões Antunes Matos Fonseca Machado "da Fonseca" "de Mato" Araújo
+	Barbosa Tavares Lourenço Castro Figueiredo Azevedo Freitas "de Freitas" Magalhães
+	Henriques "de Lima" Guerreiro Batista Pinheiro Miranda Barros "de Miranda" Morais
+	Nogueira Esteves Anjos Campos "de Campos" Mota Andrade Brito Nascimento Leite
+	Abreu Borges "Vaz de Melo" Vaz Pinho Vicente Gaspar Assunção Maia Moura Valente
+	Domingues Garcia Carneiro Loureiro Neto Filho "de Amaral" Amaral Branco Leal Pacheco
+	Macedo Paiva Matias Amorim Torres Lisboa "de Alencar" "de Morais" Vitória Luz 
+	Junqueira Peçanha "da Silveira" Silveira Rosa "da Rosa" Ávila Dávila Toledo 
+	Castilhos Vargas Padilha Barroso Lobato Peixoto Evangelista "de Deus" "de Pádia" 
+	"Nepomuceno" "de Assis" "de Paula" Sales Loiola Aquino Cupertino "da Penha" Bonfim 
+	"de Chagas" Trindade Pascoal Ramos Dantas Leão Aleixo Siqueira Segismundo Mil-Homens 
+	"Santa Rita" Sena
 }
 
 ship_names = {

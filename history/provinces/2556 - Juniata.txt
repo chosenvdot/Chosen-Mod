@@ -1,3 +1,4 @@
+ 
 # No previous file for Juniata
 
 culture = susquehannock
@@ -5,15 +6,26 @@ religion = totemism
 capital = "Juniata"
 trade_goods = unknown
 hre = no
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 1 
+base_production = 1 
+base_manpower = 1 
 native_size = 5
 native_ferocity = 1
 native_hostileness = 2
+
+
+
 discovered_by = north_american
 
-#1444.1.1 = { tribal_owner = SUS }
+1444.1.1 = { tribal_owner = SUS }
+
+1650.1.1 = {
+	owner = SUS
+	controller = SUS
+	add_core = SUS
+	is_city = yes
+	trade_goods = grain 
+} #Full extent of the Susquehannock at start of the Beaver Wars
 1656.1.1 = {
  	owner = IRO
 	controller = IRO

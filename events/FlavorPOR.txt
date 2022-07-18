@@ -15,7 +15,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		colony = 1
 	}
 
@@ -67,7 +73,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		has_regency = no #Regency has to have ended
 		NOT = { is_year = 1460 }
 	}
@@ -103,9 +115,15 @@ country_event = {
 
 
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		any_active_trade_node = {
-			province_id = 4346	# Gulf of Aden
+			province_id = 1331 # BT; 4346
 			has_merchant = prev
 		}
 	}
@@ -120,7 +138,7 @@ country_event = {
 		ai_chance = { factor = 10 }
 		random_active_trade_node = {
 			limit = {
-				province_id = 4346	# Gulf of Aden
+				province_id = 1331 # BT; 4346
 			}
 			
 			add_trade_modifier = {
@@ -138,7 +156,7 @@ country_event = {
 		hidden_effect = {
 			random_active_trade_node = {
 				limit = {
-					province_id = 4346	# Gulf of Aden
+					province_id = 1331 # BT; 4346
 				}
 				every_trade_node_member_country = {
 					add_opinion = {
@@ -163,7 +181,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		religion = catholic
 		exists = PAP
 		is_year = 1500
@@ -208,7 +232,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		is_year = 1530
 		NOT = { is_year = 1580 }
 		brazil_region = {
@@ -230,7 +260,7 @@ country_event = {
 	}
 }
 
-# King Sebasti?o's Expedition to North Africa
+# King Sebastião's Expedition to North Africa
 country_event = {
 	id = flavor_por.3272
 	title = "flavor_por.EVTNAME3272"
@@ -241,7 +271,13 @@ country_event = {
 
 
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		is_year = 1500
 		religion = catholic
 		is_free_or_tributary_trigger = yes
@@ -250,9 +286,19 @@ country_event = {
 			num_of_ports = 1
 			religion_group = muslim
 			is_free_or_tributary_trigger = yes
-			NOT = { war_with = POR }
-			NOT = { truce_with = POR }
-			NOT = { alliance_with = POR }
+			OR = {
+				AND = {
+					NOT = { war_with = POR }
+					NOT = { truce_with = POR }
+					NOT = { alliance_with = POR }
+				}
+				AND = { # BT
+					NOT = { exists = POR }
+					NOT = { war_with = IBE }
+					NOT = { truce_with = IBE }
+					NOT = { alliance_with = IBE }
+				}
+			}
 		}
 	}
 
@@ -266,23 +312,45 @@ country_event = {
 		ai_chance = { factor = 90 }
 		
 		add_papal_influence = 10
-		MOR = {
-			every_owned_province = {
-				limit = {
-					is_in_capital_area = yes
-					has_port = yes
+		#MOR = { # Brian removed; see below
+		#	every_owned_province = {
+		#		limit = {
+		#			is_in_capital_area = yes
+		#			has_port = yes
+		#		}
+		#		add_claim = POR
+		#	}
+		#}
+		if = {
+			limit = { tag = POR } # BT
+			MOR = {
+				every_owned_province = {
+					limit = {
+						is_in_capital_area = yes
+						has_port = yes
+					}
+					add_claim = POR
 				}
-				add_claim = POR
 			}
 		}
-	
-		
-		MOR = {
-			add_opinion = {
-				who = ROOT
-				modifier = prepares_crusade
+		if = { # BT
+			limit = { tag = IBE }
+			MOR = {
+				every_owned_province = {
+					limit = {
+						is_in_capital_area = yes
+						has_port = yes
+					}
+					add_claim = IBE
+				}
 			}
 		}
+		#MOR = { # ??? BT removed
+		#	add_opinion = {
+		#		who = ROOT
+		#		modifier = prepares_crusade
+		#	}
+		#}
 	}
 	option = {		# We should focus elsewhere
 		name = "flavor_por.EVTOPTB3272"
@@ -301,7 +369,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		num_of_cities = 4
 		iberia_region = {
 			owned_by = ROOT
@@ -334,7 +408,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		is_year = 1650
 		is_at_war = no
 		OR = {
@@ -434,7 +514,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		is_year = 1662
 		NOT = { is_year = 1690 }
 	}
@@ -448,7 +534,7 @@ country_event = {
 		add_dip_power = 100
 		define_advisor = {
 			type = statesman
-			name = "Dom Lu?s de Meneses"
+			name = "Dom Luís de Meneses"
 			culture = portugese
 			discount = yes
 			skill = 2
@@ -466,7 +552,13 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		owns = 227	# Lisboa
 		is_year = 1700
 	}
@@ -480,6 +572,7 @@ country_event = {
 	option = {		# 
 		name = "flavor_por.EVTOPTA3278"
 		227 = {
+			add_devastation = 100
 			add_province_modifier = {
 				name = earthquake
 				duration = 3650
@@ -488,7 +581,7 @@ country_event = {
 	}
 }
 
-# Marqu?s de Pombal
+# Marquês de Pombal
 country_event = {
 	id = flavor_por.3279
 	title = "flavor_por.EVTNAME3279"
@@ -498,7 +591,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		is_year = 1729
 		NOT = { is_year = 1777 }
 	}
@@ -530,9 +629,20 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = POR
-		iberia_region = {
-			owned_by = POR
+		OR = {
+			AND = {
+				tag = POR
+				iberia_region = {
+					owned_by = POR
+				}
+			}
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+				iberia_region = {
+					owned_by = IBE
+				}
+			}
 		}
 		had_country_flag = {
 			flag = POR_de_pombal
@@ -567,7 +677,7 @@ country_event = {
 	}
 }
 
-# The Expulsion of Marqu?s de Pombal
+# The Expulsion of Marquês de Pombal
 country_event = {
 	id = flavor_por.3281
 	title = "flavor_por.EVTNAME3281"
@@ -578,9 +688,20 @@ country_event = {
 	
 
 	trigger = {
-		tag = POR
-		iberia_region = {
-			owned_by = POR
+		OR = {
+			AND = {
+				tag = POR
+				iberia_region = {
+					owned_by = POR
+				}
+			}
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+				iberia_region = {
+					owned_by = IBE
+				}
+			}
 		}
 		
 		had_country_flag = {
@@ -605,7 +726,7 @@ country_event = {
 			duration = -1
 		}
 	}
-	option = {		# Let the 'Great Marqu?s' rule
+	option = {		# Let the 'Great Marquês' rule
 		name = "flavor_por.EVTOPTB3281"
 		ai_chance = { factor = 25 }
 		every_owned_province = {
@@ -629,10 +750,17 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			AND = { # BT
+				owns = 227 #Lisbon
+				NOT = { exists = POR }
+			}
+		}
 		exploration_ideas = 2
 		NOT = { has_global_flag = columbus_happened }
-		is_year = 1470
+		is_year = 1470 # Date of Florentine astronomer Paolo dal Pozzo Toscanelli's proposal, inspiring Columbus to seek a westward route to Cathay
+		NOT = { is_year = 1506 } # BT; Columbus died in 1506... should NOT be able to hire him after that.
 		OR = {
 			NOT = {
 				north_america = {
@@ -659,7 +787,10 @@ country_event = {
 		if = {
 			limit = {
 				exists = SPA
-				SPA = { has_idea = quest_for_the_new_world }
+				SPA = {
+					has_idea = quest_for_the_new_world
+					num_of_ports = 1 # BT
+				}
 			}
 			SPA = {
 				country_event = { id = flavor_spa.1 days = 10 }
@@ -669,7 +800,10 @@ country_event = {
 			limit = {
 				NOT = { exists = SPA }
 				exists = CAS
-				CAS = { has_idea = quest_for_the_new_world }
+				CAS = {
+					has_idea = quest_for_the_new_world
+					num_of_ports = 1 # BT
+				}
 			}
 			CAS = {
 				country_event = { id = flavor_spa.1 days = 10 }
@@ -696,6 +830,7 @@ country_event = {
 				limit = {
 					NOT = { has_country_flag = turned_down_columbus }
 					religion = catholic
+					num_of_ports = 1 # BT
 					has_idea = quest_for_the_new_world
 				}
 				country_event = { id = flavor_spa.1 }
@@ -708,11 +843,15 @@ country_event = {
 		set_global_flag = columbus_happened
 		add_years_of_income = -0.10
 		define_explorer = {
-			name = "Crist?v?o Colombo"
-			fire = 2
-			shock = 2
-			manuever = 6
+			name = "Cristóvão Colombo"
+			fire = 1 # BT; 2
+			shock = 1 # BT; 2
+			manuever = 5 # BT; 6
 			siege = 0
+		}
+		add_country_modifier = { # BT
+			name = bt_daring_navigator
+			duration = 3650
 		}
 	}
 }
@@ -728,7 +867,13 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		colony = 1
 		south_america = {
 			country_or_vassal_holds = ROOT
@@ -774,7 +919,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			tag = IBE # BT
+		}
 		is_year = 1500
 		has_discovered = 646	# Ambon
 		religion = catholic
@@ -823,7 +971,13 @@ country_event = {
 		OR = {
 			AND = {
 				NOT = { has_dlc = "Golden Century" }
-				tag = POR
+				OR = {
+					tag = POR
+					AND = { # BT
+						tag = IBE
+						NOT = { exists = POR }
+					}
+				}
 				has_country_modifier = india_trade_co
 			}
 			has_country_flag = por_india_mission_flag
@@ -857,7 +1011,13 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		num_of_ports = 1
 		exists = NED
 
@@ -934,16 +1094,40 @@ country_event = {
 		name = "flavor_por.EVTOPTA6"
 		ai_chance = { factor = 90 }
 		add_years_of_income = 0.5
-		hidden_effect = {
-			POR = {country_event = { id = flavor_por.8 days = 10 } }
+		if = {
+			limit = { exists = POR } # BT
+			hidden_effect = {
+				POR = {country_event = { id = flavor_por.8 days = 10 } }
+			}
+		}
+		if = { # BT
+			limit = { 
+				NOT = { exists = POR }
+				exists = IBE
+			}
+			hidden_effect = {
+				IBE = {country_event = { id = flavor_por.8 days = 10 } }
+			}
 		}
 	}
 	option = {		# Return the cargo
 		name = "flavor_por.EVTOPTB6"
 		ai_chance = { factor = 10 }
 		add_prestige = -10
-		hidden_effect = {
-			POR = { country_event = { id = flavor_por.7 days = 10 } }
+		if = {
+			limit = { exists = POR } # BT
+			hidden_effect = {
+				POR = {country_event = { id = flavor_por.7 days = 10 } }
+			}
+		}
+		if = { # BT
+			limit = { 
+				NOT = { exists = POR }
+				exists = IBE
+			}
+			hidden_effect = {
+				IBE = {country_event = { id = flavor_por.7 days = 10 } }
+			}
 		}
 	}
 }
@@ -982,8 +1166,76 @@ country_event = {
 	}
 }
 
+# The Tower of Belém
+country_event = {
+	id = flavor_por.9
+	title = "flavor_por.EVTNAME9"
+	desc = "flavor_por.EVTDESC9"
+	picture = FORT_eventPicture
+	
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = POR
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
+		owns = 227 # Lisboa
+		is_year = 1490
+		NOT = { is_year = 1520 }
+	}
 
-# Jer?nimos Monastery
+	mean_time_to_happen = {
+		months = 100
+	}
+	
+
+	option = {		# It must be built
+		name = "flavor_por.EVTOPTA9"
+		ai_chance = { 
+			factor = 90 
+			modifier = {
+				factor = 0
+				AND = {
+					NOT = { treasury = 500 }
+					has_dlc = "Leviathan"
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_dlc = "Leviathan"
+			}
+			add_treasury = -500
+			227 = {
+				add_great_project_tier = {
+					type = belem_tower
+					tier = 1
+				}
+			}
+		}
+		else = {
+		add_treasury = -50
+		227 = {
+			add_permanent_province_modifier = {
+				name = the_tower_or_belem
+				duration = -1
+			}
+		}
+	}
+	}
+	option = {		# We have other priorities
+		name = "flavor_por.EVTOPTB9"
+		ai_chance = { factor = 10 }
+		add_prestige = -1
+	}
+}
+
+# Jerónimos Monastery
 country_event = {
 	id = flavor_por.10
 	title = "flavor_por.EVTNAME10"
@@ -995,7 +1247,13 @@ country_event = {
 	
 	
 	trigger = {
-		tag = POR
+		OR = {
+			tag = POR
+			AND = { # BT
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		is_year = 1490
 		NOT = { is_year = 1520 }
 	}
@@ -1043,9 +1301,18 @@ country_event = {
 				overextension_percentage = 1.5
 			}
 		}
-		2030 = { cede_province = POR }
-		add_claim = 2030
-		add_prestige = 10
+		if = {
+			limit = { tag = POR } # BT
+			2030 = { cede_province = POR }
+			add_claim = 2030
+			add_prestige = 10
+		}
+		if = { # BT
+			limit = { tag = IBE }
+			2030 = { cede_province = IBE }
+			add_claim = 2030
+			add_prestige = 10
+		}
 	}
 	option = {		# Glorious!
 		name = "flavor_por.EVTOPTB11"

@@ -1,40 +1,55 @@
+ 
 #Dorpat
+#Region - Baltic
+#Area - Livonia
 
-owner = LIV
-controller = LIV
-add_core = LIV
-add_core = LVA
-add_core = EST
-culture = estonian
+owner = DRP
+controller = DRP
+add_core = DRP
+culture = prussian
 religion = catholic
 hre = no
-base_tax = 3 
-base_production = 3
-trade_goods = naval_supplies
-base_manpower = 2
+base_tax = 5
+base_production = 5
+trade_goods = cloth
+base_manpower = 3 
 capital = "Dorpat"
 is_city = yes
-discovered_by = KAZ
-discovered_by = CRI
-discovered_by = GOL
-discovered_by = AST
-discovered_by = QAS
+
+1444.1.1 = { discovered_by = KAZ }
+1444.1.1 = { discovered_by = CRI }
+1444.1.1 = { discovered_by = GOL }
+1444.1.1 = { discovered_by = AST }
+1444.1.1 = { discovered_by = QAS }
 discovered_by = western
 discovered_by = eastern
 
+extra_cost = 10
+center_of_trade = 1
 
-1542.1.1 = { religion = protestant} # Unknown date
-1558.7.18 = { controller = RUS } # Russian conquest
-1561.1.1 = {
-	owner = LIT
-	add_core = LIT
+1444.11.16 = { #BeyondTypus batch edit shortcut no vassal start date begin
+	owner = LIV
+	controller = LIV
+	add_core = LIV
+}
+1444.11.18 = { #BeyondTypus batch edit shortcut no vassal start date end
+	owner = DRP
+	controller = DRP
 	remove_core = LIV
-} # Livonia ceases to exist
-1569.7.1 = {
+}
+
+#1444 onward
+1558.7.18 = { 
+	owner = RUS
+	controller = RUS
+	add_core = RUS
+} # Russian conquest
+1582.1.15 = { 
 	owner = PLC
+	controller = PLC 
 	add_core = PLC
-} # Union of Lublin
-1582.1.15 = { controller = PLC } # Peace of Jam-Zapolski
+	remove_core = RUS
+} # Peace of Jam-Zapolski
 1600.12.31 = { controller = SWE } # 2nd Polish War-Captured by Duke Karl
 1603.4.5 = { controller = PLC } # 2nd Polish War-Captured by Chodkiewicz
 1625.8.21 = { controller = SWE } # 2nd Polish War-Captured by Jakob de la Gardie

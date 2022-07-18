@@ -1,3 +1,4 @@
+ 
 #2063 - Etawah
 
 owner = DLH
@@ -7,9 +8,9 @@ religion = hinduism
 capital = "Etawah"
 trade_goods = dyes
 hre = no
-base_tax = 5
-base_production = 5
-base_manpower = 3
+base_tax = 10
+base_production = 10
+base_manpower = 6
 is_city = yes
 add_core = JNP
 add_core = DLH
@@ -20,10 +21,10 @@ discovered_by = nomad_group
 discovered_by = chinese
 
 
-#1437.1.1 = {
-#	owner = JNP
-#	controller = JNP
-#}
+1437.1.1 = {
+	owner = JNP
+	controller = JNP
+}
 1478.1.1 = {
 	owner = DLH
 	controller = DLH
@@ -63,7 +64,7 @@ discovered_by = chinese
 } # Battle of Samugarh, Aurangzeb defeats the army of Dara Shukoh
 1658.6.8 = { controller = MUG revolt = { } } #Shah Jahan surrenders and becomes the prisoner of his son Aurangzeb
 1690.1.1 = { discovered_by = ENG }
-1691.1.1 = { revolt_risk = 0 }
+1691.1.1 = { unrest = 0 }
 1707.3.1 = {
 	controller = REB
 	revolt = { type = pretender_rebels leader = "Muhammad Azam Shah Timurid" }

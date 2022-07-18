@@ -1192,7 +1192,7 @@ guiTypes = {
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "LEDGER_SAILORS"
-				maxWidth = 100
+				maxWidth = 128
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1218,7 +1218,7 @@ guiTypes = {
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "LEDGER_MANPOWER"
-				maxWidth = 100
+				maxWidth = 128
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1243,7 +1243,7 @@ guiTypes = {
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "SUPPLY_LIMIT"
-				maxWidth = 100
+				maxWidth = 128
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1443,7 +1443,7 @@ guiTypes = {
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "TRADE_POWER"
-				maxWidth = 100
+				maxWidth = 128
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1468,7 +1468,7 @@ guiTypes = {
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "TRADE_VALUE"
-				maxWidth = 100
+				maxWidth = 128
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1493,7 +1493,7 @@ guiTypes = {
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "TRADE_GOODS_LBL"
-				maxWidth = 100
+				maxWidth = 128
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1672,7 +1672,7 @@ guiTypes = {
 				}
 			}
 
-		### BUILD ARMY VIEW
+			### BUILD ARMY VIEW
 			windowType = {
 				name = "build_army_view"
 				backGround=""
@@ -1766,7 +1766,6 @@ guiTypes = {
 					text = "Army force limit: xx/xx"
 				}
 			}
-
 
 			### BUILD NAVY VIEW
 			windowType = {
@@ -2593,7 +2592,7 @@ guiTypes = {
 			}
 			guiButtonType = {
 				name = "sort_state_province_culture"
-				quadTextureSprite = "GFX_sort_button_90"
+				quadTextureSprite = "GFX_sort_94"
 				position = { x = 265 y = 230 }
 				buttonFont = "vic_18"
 				buttonText = "CULTURE"
@@ -2601,17 +2600,17 @@ guiTypes = {
 			guiButtonType = {
 				name = "sort_state_unrest"
 				quadTextureSprite = "GFX_sort_state_unrest"
-				position = { x = 357 y = 231 }
+				position = { x = 361 y = 231 }
 			}
 			guiButtonType = {
 				name = "sort_state_fort"
 				quadTextureSprite = "GFX_sort_state_fort"
-				position = { x = 415 y = 231 }
+				position = { x = 399 y = 231 }
 			}
 			guiButtonType = {
 				name = "sort_state_devastation"
 				quadTextureSprite = "GFX_sort_state_devastation"
-				position = { x = 448 y = 231 }
+				position = { x = 432 y = 231 }
 			}
 
 
@@ -2619,7 +2618,7 @@ guiTypes = {
 				name = "provinces_listbox"
 				backGround = ""
 				position = { x= 20 y = 250 }
-				size = { x=220 y=250 }
+				size = { x=450 y=160 }
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
 				scrollbartype = "standardlistbox_slider"
@@ -2662,7 +2661,6 @@ guiTypes = {
 				maxHeight = 20
 				format = right
 			}
-
 
 			# Cawa
 			iconType = {
@@ -2871,13 +2869,13 @@ guiTypes = {
 
 				guiButtonType = {
 					name = "center_of_trade_button"
-					position = { x=174 y=180 }
+					position = { x=174 y=244 }
 					spriteType = "GFX_center_of_trade_inland_1"
 				}
 
 				iconType = {
 					name = "center_of_trade_icon"
-					position = { x=174 y=180 }
+					position = { x=174 y=244 }
 					spriteType = "GFX_center_of_trade_inland_1"
 				}
 
@@ -2897,7 +2895,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "province_values_label"
-					position = { x = 30 y = 0 }
+					position = { x = 40 y = 65 }
 					textureFile = ""
 					font = "vic_22"
 					borderSize = {x = 2 y = 2}
@@ -2906,11 +2904,11 @@ guiTypes = {
 					maxHeight = 32
 					format = left
 				}
-
+                
 				guiButtonType =
 				{
 					name ="expand_infrastructure_button"
-					position = { x= 240 y = 5 }
+					position = { x= 240 y = 70 }
 					quadTextureSprite ="GFX_exploit_button_expand_infrastructure"
 					tooltip = ""
 					tooltipText =""
@@ -2923,7 +2921,7 @@ guiTypes = {
 				guiButtonType =
 				{
 					name ="reduce_infrastructure_button"
-					position = { x= 280 y = 5 }
+					position = { x= 280 y = 70 }
 					quadTextureSprite ="GFX_exploit_button_reduce_infrastructure"
 					tooltip = ""
 					tooltipText =""
@@ -2937,13 +2935,13 @@ guiTypes = {
 				{
 					name ="naval_forcelimit_icon"
 					spriteType = "GFX_naval_forcelimit_icon"
-					position = { x= 33 y = 82 }
+					position = { x= 33 y = 147 }
 					Orientation = "UPPER_LEFT"
 				}
 
 				instantTextBoxType = {
 					name = "naval_forcelimit_value"
-					position = { x = 72 y = 87 }
+					position = { x = 72 y = 152 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -2957,13 +2955,13 @@ guiTypes = {
 				{
 					name ="land_forcelimit_icon"
 					spriteType = "GFX_land_forcelimit_icon"
-					position = { x= 130 y = 82 }
+					position = { x= 130 y = 147 }
 					Orientation = "UPPER_LEFT"
 				}
 
 				instantTextBoxType = {
 					name = "land_forcelimit_value"
-					position = { x = 148 y = 87 }
+					position = { x = 148 y = 152 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -2973,26 +2971,6 @@ guiTypes = {
 					format = right
 				}
 				
-				iconType =
-				{
-					name = "province_governing_cost_icon"
-					spriteType = "GFX_province_governing_cost"
-					position = { x= 224 y = 82  }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name = "capacity_value"
-					position = { x = 253 y = 87 }
-					textureFile = ""
-					font = "vic_18"
-					borderSize = {x = 2 y = 2}
-					text = "200"
-					maxWidth = 50
-					maxHeight = 20
-					format = right
-				}
-
 				iconType =
 				{
 					name = "center_of_revolution"
@@ -3082,17 +3060,40 @@ guiTypes = {
 					format = left
 				}
 	
+				
+				
+				iconType =
+				{
+					name = "province_governing_cost_icon"
+					spriteType = "GFX_province_governing_cost"
+					position = { x= 224 y = 147  }
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "capacity_value"
+					position = { x = 253 y = 152 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 2 y = 2}
+					text = "200"
+					maxWidth = 50
+					maxHeight = 20
+					format = right
+				}
+
+
 				iconType =
 				{
 					name ="build_allowed_icon"
 					spriteType = "GFX_technologyView_show_buildings"
-					position = { x= 32 y = 35 }
+					position = { x= 32 y = 100 }
 					Orientation = "UPPER_LEFT"
 				}
 
 				instantTextBoxType = {
 					name = "build_allowed_value"
-					position = { x = 66 y = 40}
+					position = { x = 66 y = 105}
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -3107,13 +3108,13 @@ guiTypes = {
 				{
 					name ="build_cost_modifier_icon"
 					spriteType = "GFX_build_cost"
-					position = { x= 129 y = 39 }
+					position = { x= 129 y = 100 }
 					Orientation = "UPPER_LEFT"
 				}
 
 				instantTextBoxType = {
 					name = "build_cost_modifier"
-					position = { x = 150 y = 40 }
+					position = { x = 150 y = 105 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -3127,13 +3128,13 @@ guiTypes = {
 				{
 					name ="build_time_modifier_icon"
 					spriteType = "GFX_build_time"
-					position = { x= 224 y = 36 }
+					position = { x= 224 y = 100 }
 					Orientation = "UPPER_LEFT"
 				}
 
 				instantTextBoxType = {
 					name = "build_time_modifier"
-					position = { x = 245 y = 40 }
+					position = { x = 245 y = 105 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -4130,7 +4131,7 @@ guiTypes = {
 			spriteType = "GFX_unit_types_strip"
 			position = { x= 5 y = -4 }
 			Orientation = "UPPER_LEFT"
-			#	alwaystransparent = yes
+		#	alwaystransparent = yes
 		}
 
 		instantTextBoxType = {
@@ -4148,7 +4149,7 @@ guiTypes = {
 		}
 
 
-	instantTextBoxType = {
+		instantTextBoxType = {
 			name = "unit_cost"
 			position = { x = 55 y = 19 }
 			textureFile = ""
@@ -4585,6 +4586,213 @@ guiTypes = {
 		position = { x=-32 y = 0}
 	}
 
+
+	#### GREAT PROJECT ENTRY
+	windowType = 
+	{
+		name = "great_project_entry"
+		backGround=""
+		position = { x=0 y=0 }
+		size = { x=300 y=150 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+		iconType = 
+		{
+			name ="great_project_pic"
+			spriteType = "GFX_great_project_place_holder"
+			position = { x = 0 y = 0 }
+		}
+		
+
+		instantTextBoxType = {
+			name = "name_label"
+			position = { x = 17 y = 11 }
+			textureFile = ""
+			font = "vic_20"
+			borderSize = { x = 0 y = 0 }
+			text = "NAME HERE"
+			maxWidth = 300
+			maxHeight = 30
+			format = left
+		}
+
+		windowType =
+		{
+			name = "progress_bar_window"
+			backGround=""
+			position = { x=180 y=113 }
+			size = { x=130 y=40 }
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+			moveable = 0
+			Orientation = "UPPER_LEFT"
+
+			guiButtonType =
+			{
+				name ="great_project_cancel"
+				quadTextureSprite = "GFX_alerticon_dismiss_always"
+				position = { x = 10 y = -7 }
+			}
+
+			iconType =
+			{
+				name ="great_project_progress"
+				spriteType = "GFX_provinceView_progressbar"
+				position = { x = 10 y = 19 }
+			}
+
+			iconType =
+			{
+				name ="great_project_progress_frame"
+				spriteType = "GFX_provinceView_morale_frame_long"
+				position = { x = 0 y = 15 }
+			}
+		}
+
+		guiButtonType =
+		{
+			name ="build_upgrade_button"
+			position = { x= 224 y = 26 }
+			quadTextureSprite ="GFX_great_project_level_icon_upgrade_build"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType =
+		{
+			name ="use_money_to_boost_button"
+			position = { x= 224 y = 60 }
+			quadTextureSprite ="GFX_great_project_level_icon_upgrade_money"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType =
+		{
+			name ="use_manpower_to_boost_button"
+			position = { x= 224 y = 94 }
+			quadTextureSprite ="GFX_great_project_level_icon_upgrade_manpower"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+		}
+
+		guiButtonType =
+		{
+			name ="move_button"
+			position = { x= 145 y = 108 }
+			quadTextureSprite ="GFX_great_project_level_icon_move"
+			tooltip = ""
+			tooltipText =""
+			delayedTooltipText = ""
+			buttonText = ""
+			buttonFont = "vic_18"
+			Orientation = "UPPER_LEFT"
+		}
+
+		### TIER ICONS
+		windowType =
+		{
+			name = "tier_0_icon"
+			backGround=""
+			position = { x=5 y=108 }
+			size = { x=32 y= 32 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_great_project_level_icon_tier_0"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+
+		windowType =
+		{
+			name = "tier_1_icon"
+			backGround=""
+			position = { x=40 y=108 }
+			size = { x=32 y= 32 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_great_project_level_icon_tier_1"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+
+		windowType =
+		{
+			name = "tier_2_icon"
+			backGround=""
+			position = { x=75 y=108 }
+			size = { x=32 y= 32 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_great_project_level_icon_tier_2"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+
+		windowType =
+		{
+			name = "tier_3_icon"
+			backGround=""
+			position = { x=110 y=108 }
+			size = { x=32 y= 32 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder= ""
+			verticalBorder= ""
+			fullScreen = no
+
+			iconType =
+			{
+				name ="bg"
+				spriteType = "GFX_great_project_level_icon_tier_3"
+				position = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+	}
+	
 	### UNIQUE BUILDING ENTRY
 
 	positionType = {
@@ -5596,7 +5804,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		checkboxType = {
@@ -5612,7 +5820,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		iconType = {
@@ -5634,7 +5842,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		iconType = {
@@ -5679,7 +5887,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		checkboxType = {
@@ -5695,7 +5903,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		iconType = {
@@ -5717,7 +5925,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 
@@ -5760,7 +5968,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		checkboxType = {
@@ -5776,7 +5984,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		iconType = {
@@ -5798,7 +6006,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		checkboxType = {
@@ -5814,7 +6022,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		iconType = {
@@ -5859,7 +6067,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		checkboxType = {
@@ -5875,7 +6083,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		iconType = {
@@ -5924,7 +6132,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		checkboxType = {
@@ -5940,7 +6148,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		iconType = {
@@ -5962,7 +6170,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		checkboxType = {
@@ -5978,7 +6186,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		iconType = {
@@ -6023,7 +6231,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		checkboxType = {
@@ -6039,7 +6247,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		iconType = {
@@ -6088,7 +6296,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		checkboxType = {
@@ -6104,7 +6312,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		iconType = {
@@ -6126,7 +6334,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		iconType = {
@@ -6148,7 +6356,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		iconType = {
@@ -6195,7 +6403,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		checkboxType = {
@@ -6211,7 +6419,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		iconType = {
@@ -6259,7 +6467,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		checkboxType = {
@@ -6275,7 +6483,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		checkboxType = {
@@ -6291,7 +6499,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		checkboxType = {
@@ -6307,7 +6515,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000ï¿½"
+			text = "2000¤"
 		}
 
 		checkboxType = {
@@ -6323,7 +6531,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000Â¤"
+			text = "2000¤"
 		}
 
 		checkboxType = {
@@ -6339,7 +6547,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}
 			maxWidth = 128
 			maxHeight = 18
-			text = "2000ï¿½"
+			text = "2000¤"
 		}
 
 	}
@@ -6511,19 +6719,19 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "sp_unrest"
-			position = { x = 338 y = 8 }
+			position = { x = 340 y = 8 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = "99.9%"
-			maxWidth = 56
+			maxWidth = 36
 			maxHeight = 20
 			format = center
 		}
 
 		instantTextBoxType = {
 			name = "fort_level"
-			position = { x = 395 y = 6 }
+			position = { x = 375 y = 6 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 2 y = 2}
@@ -6535,7 +6743,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "sp_devastation"
-			position = { x = 430 y = 8 }
+			position = { x = 410 y = 8 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
@@ -6608,7 +6816,7 @@ guiTypes = {
 				spriteType = "GFX_edicts_bg_overlay"
 				position = { x = 484 y = -20 }
 			}
-			
+
 			instantTextBoxType = {
 				name = "edicts_list_title"
 				position = { x = 520 y = 14 }
@@ -6625,7 +6833,7 @@ guiTypes = {
 				name = "edicts_listbox"
 				backGround = ""
 				position = { x = 500 y = 51 }
-				size = { x = 380 y = 450 }
+				size = { x = 380 y = 400 }
 				horizontal = 0
 				scrollbartype = "standardlistbox_slider"
 				borderSize = {x = 0 y = 0}

@@ -1,20 +1,21 @@
-# No previous file for Mamaceqtaw
-
+ 
+# new in 1.31
 
 culture = anishinabe
 religion = totemism
 capital = "Mamaceqtaw"
-trade_goods = unknown
 hre = no
 base_tax = 3
 base_production = 2
 base_manpower = 1
+trade_goods = unknown
 native_size = 5
 native_ferocity = 1
 native_hostileness = 6
 
 discovered_by = north_american
 
+1444.1.1 = { tribal_owner = OJI }
 1671.1.1 = {
 	owner = FRA
 	controller = FRA

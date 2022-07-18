@@ -22,10 +22,10 @@ pretender_rebels = {
 	
 	
 	artillery = 0.1
-	infantry = 0.8
-	cavalry = 0.1
+	infantry = 0.6 #From 0.5
+	cavalry = 0.3 #From 0.4 to account for Misc's cav rebalance.
 	
-	morale = 0.75
+	morale = 1.25
 	
 	# Possible handle actions
 	handle_action_negotiate = no
@@ -38,7 +38,7 @@ pretender_rebels = {
 		modifier = {
 			factor = 0
 			owner = {
-				has_reform = pope_reform
+				has_reform = papacy_reform
 			}
 		}
 		modifier = {

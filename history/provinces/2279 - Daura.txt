@@ -1,3 +1,4 @@
+ 
 # No previous file for Daura
 
 owner = KTS
@@ -9,12 +10,12 @@ religion = sunni
 capital = "Daura"
 trade_goods = dyes
 hre = no
-base_tax = 3 
-base_production = 3
+base_tax = 6 
+base_production = 6
 native_size = 40
 native_ferocity = 4
 native_hostileness = 9
-base_manpower = 1
+base_manpower = 2 
 
 
 

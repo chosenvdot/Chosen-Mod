@@ -36,7 +36,7 @@ country_event = {
 		add_dip_power = 100
 		if = {
 			limit = {
-				#NOT = { advisor_exists = 225 }
+				NOT = { advisor_exists = 225 }
 			}
 			define_advisor = {
 				type = philosopher
@@ -66,7 +66,7 @@ country_event = {
 			is_year = 1645
 		}
 
-		owns = 97
+		owns = 4383 # BT; 97
 	}
 	
 	mean_time_to_happen = {
@@ -86,7 +86,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				#NOT = { advisor_exists = 895 }
+				NOT = { advisor_exists = 895 }
 			}		
 			
 			define_advisor = {
@@ -95,7 +95,7 @@ country_event = {
 				culture = dutch
 				discount = yes
 				skill = 3
-				location = 97 #Holland
+				location = 4383 # BT; 97
 			}
 			add_innovativeness_small_effect = yes
 		}
@@ -117,7 +117,7 @@ country_event = {
 		NOT = {
 			is_year = 1687
 		}
-		owns = 97
+		owns = 4383 # BT; 97
 	}
 	
 	mean_time_to_happen = {
@@ -130,15 +130,15 @@ country_event = {
 		add_reform_progress_small_effect = yes
 		if = {
 			limit = {
-				#NOT = { advisor_exists = 905 }
+				NOT = { advisor_exists = 905 }
 			}			
 			define_advisor = {
-				type = natural_scientist
+				type = treasurer
 				name = "Christiaan Huygens"
 				culture = dutch
 				discount = yes
 				skill = 2
-				location = 97
+				location = 4383 # BT; 97
 			}
 			add_innovativeness_small_effect = yes
 		}
@@ -172,7 +172,7 @@ country_event = {
 		add_mil_power = 100
 		if = {
 			limit = {
-				#NOT = { advisor_exists = 887 }
+				NOT = { advisor_exists = 887 }
 			}			
 			define_advisor = {
 				type = navigator
@@ -201,11 +201,11 @@ country_event = {
 		NOT = {	has_reform = dutch_republic }
 		NOT = { has_reform = celestial_empire }
 		is_revolutionary = no
-		is_subject = no
+		#is_subject = no # ??? BT removed
 	}
 	
 	mean_time_to_happen = {
-		months = 1
+		months = 96
 	}
 	
 	option = {
@@ -539,7 +539,7 @@ country_event = {
 		tag = NED
 		is_year = 1575
 		NOT = { is_year = 1600 }
-		owns = 97
+		owns = 4383 # BT; 97
 	}
 	
 	mean_time_to_happen = {
@@ -652,9 +652,9 @@ country_event = {
 		NOT = {
 			is_year = 1620
 		}
-		#NOT = { advisor_exists = 893 }
-		#NOT = { is_advisor_employed = 893 }
-		owns = 97
+		NOT = { advisor_exists = 893 }
+		NOT = { is_advisor_employed = 893 }
+		owns = 4383 # BT; 97
 	}
 	
 	mean_time_to_happen = {
@@ -670,7 +670,7 @@ country_event = {
 			culture = flemish
 			discount = yes
 			skill = 3
-			location = 97
+			location = 4383 # BT; 97
 		}
 		add_innovativeness_small_effect = yes
 	}
@@ -762,7 +762,7 @@ country_event = {
 		#is_year = 1580
 		has_institution = printing_press
 		NOT = { is_year = 1595 }
-		owns = 97
+		owns = 4383 # BT; 97
 	}
 	
 	mean_time_to_happen = {
@@ -798,13 +798,32 @@ country_event = {
 		is_year = 1590
 		NOT = { is_year = 1640 }
 		is_free_or_tributary_trigger = yes
-		POR = {
-			NOT = { alliance_with = NED }
-			any_owned_province = {
-				OR = {
-					continent = north_america
-					continent = south_america
-					continent = africa
+		OR = {
+			AND = {
+				exists = POR # BT
+				POR = {
+					NOT = { alliance_with = NED }
+					any_owned_province = {
+						OR = {
+							continent = north_america
+							continent = south_america
+							continent = africa
+						}
+					}
+				}
+			}
+			AND = { # BT
+				NOT = { exists = POR }
+				exists = IBE
+				IBE = {
+					NOT = { alliance_with = NED }
+					any_owned_province = {
+						OR = {
+							continent = north_america
+							continent = south_america
+							continent = africa
+						}
+					}
 				}
 			}
 		}
@@ -816,23 +835,54 @@ country_event = {
 	
 	option = {
 		name = flavor_hol.8.a #Sounds like a grand plan!
-		every_province = {
-			limit = {
-				OR = {
-					owned_by = POR
-					owner = { is_colonial_nation_of = POR }
+		if = {
+			limit = { exists = POR } # BT
+			every_province = {
+				limit = {
+					OR = {
+						owned_by = POR
+						owner = { is_colonial_nation_of = POR }
+					}
+					OR = {
+						continent = south_america
+						continent = africa
+					}
 				}
-				OR = {
-					continent = south_america
-					continent = africa
+
+
+
+				add_claim = NED
+			}
+			POR = {
+				add_opinion = { who = NED modifier = ned_grand_design }
+				every_ally = {
+					add_opinion = { who = NED modifier = ned_grand_design }
 				}
 			}
-			add_claim = NED
 		}
-		POR = {
-			add_opinion = { who = NED modifier = ned_grand_design }
-			every_ally = {
+		if = { # BT
+			limit = { 
+				NOT = { exists = POR }
+				exists = IBE
+			}
+			every_province = {
+				limit = {
+					OR = {
+						owned_by = IBE
+						owner = { is_colonial_nation_of = IBE }
+					}
+					OR = {
+						continent = south_america
+						continent = africa
+					}
+				}
+				add_claim = NED
+			}
+			IBE = {
 				add_opinion = { who = NED modifier = ned_grand_design }
+				every_ally = {
+					add_opinion = { who = NED modifier = ned_grand_design }
+				}
 			}
 		}
 	}
@@ -1500,7 +1550,7 @@ country_event = {
 		add_prestige = 5
 		if = {
 			limit = {
-				#NOT = { advisor_exists = 922 }
+				NOT = { advisor_exists = 922 }
 			}
 			define_advisor = {
 				type = philosopher
@@ -1517,4 +1567,4 @@ country_event = {
 }
 
 
-### Dutch Dejima chain
+# Dutch Dejima chain (GOOD JOB PARADOX!!!)

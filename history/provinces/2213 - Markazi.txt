@@ -1,16 +1,18 @@
+ 
 #2213 - Qom
 
-#owner = TIM
-#controller = TIM
+owner = TIM
+controller = TIM
 culture = persian
 religion = shiite
 capital = "Qom"
 trade_goods = cloth
 hre = no
-base_tax = 3
-base_production = 3
-base_manpower = 2
-#add_core = TIM
+base_tax = 6
+base_production = 6
+base_manpower = 4
+is_city = yes
+add_core = TIM
 add_core = QOM
 discovered_by = muslim
 discovered_by = ottoman

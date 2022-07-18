@@ -1,3 +1,4 @@
+
 #951 - Kanawha
 
 latent_trade_goods = {
@@ -9,19 +10,33 @@ religion = totemism
 capital = "Kanawha"
 trade_goods = unknown
 hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 1
+base_tax = 1  
+base_production = 1 
+base_manpower = 1 
 native_size = 5
 native_ferocity = 1
 native_hostileness = 4
 
 
+
 discovered_by = north_american
 
-#1444.1.1 = { tribal_owner = HWK }
+1444.1.1 = { tribal_owner = HWK }
+
+1650.1.1 = {
+	owner = SHA
+	controller = SHA
+	add_core = SHA
+	is_city = yes
+	trade_goods = iron 
+} #Extent of the Shawnee at start of the Beaver Wars
 1671.1.1 = { discovered_by = ENG } # Abraham Wood
-1707.5.12 = { discovered_by = GBR }
+1700.1.1 = {
+	owner = IRO
+	controller = IRO
+	culture = iroquois 
+} #Driven off by Iroquois in Beaver Wars
+1707.5.12 = { discovered_by = GBR } 
 1768.11.5 = {
 	owner = GBR
 	controller = GBR

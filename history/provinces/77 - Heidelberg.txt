@@ -1,14 +1,14 @@
+ 
 #77 - Heidelberg
 
 capital = "Heidelberg"
 culture = hessian
 religion = catholic
-trade_goods = wine
+trade_goods = bt_trade_good_books #the greatest university of mainland Europe
 owner = PAL
-base_tax = 5
+base_tax = 4
 base_production = 4
-base_manpower = 4
-fort_15th = yes
+base_manpower = 3
 is_city = yes
 controller = PAL
 add_core = PAL
@@ -22,13 +22,9 @@ discovered_by = ottoman
 
 
 1546.4.19 = { religion = protestant } # #Friedrich II converts the coutnry to protestant
-1689.8.1 = { base_tax = 5 
-base_production = 5 controller = FRA } # French troops burn, pillage and destroy in the succession wars.
+1689.8.1 = { base_tax = 8 
+base_production = 8 controller = FRA } # French troops burn, pillage and destroy in the succession wars.
 1697.4.19 = { owner = PAL controller = PAL } # Peace of Rijswijk strengthens the catholics
-1720.1.1 = { # Karl Philip moves his court to Mannheim. Known artists like Mozart, Schiller, Goethe, are his guests.
-	capital = "Mannheim"
-	change_province_name = "Mannheim"
-}
 1777.12.30 = {	owner = BAV
 	controller = BAV
 	add_core = BAV

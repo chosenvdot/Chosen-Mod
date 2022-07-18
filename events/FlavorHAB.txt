@@ -16,10 +16,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1550
 		NOT = { is_year = 1650 }
 		
@@ -133,10 +130,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1600
 		NOT = { is_year = 1650 }
 		exists = BOH
@@ -191,10 +185,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1600
 		NOT = { is_year = 1650 }
 		NOT = { has_country_flag = royal_letter_of_bohemia }
@@ -270,13 +261,20 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1600
 		NOT = { is_year = 1650 }
 		NOT = { stability = 3 }
+		num_of_owned_provinces_with = {
+			value = 1
+			AND = {
+				region = south_german_region
+				OR = {
+					culture = austrian
+					culture = bavarian
+				}
+			}
+		}
 	}
 
 	mean_time_to_happen = {
@@ -287,6 +285,13 @@ country_event = {
 		name = "flavor_hab.EVTOPTA3195"
 		add_stability = -1
 		random_owned_province = {
+			limit = {
+				region = south_german_region
+				OR = {
+					culture = austrian
+					culture = bavarian
+				}
+			}
 			spawn_rebels = {
 				type = anti_tax_rebels
 				size = 2
@@ -305,17 +310,14 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		any_owned_province = {
 			OR = {
 				area = transdanubia_area
-				area = transylvania_area
-				area = southern_transylvania_area
+				#area = transylvania_area # ??? BT removed
+				#area = southern_transylvania_area # ??? BT removed
 				area = alfold_area
-				area = slovakia_area
+				#area = slovakia_area # ??? BT removed
 			}
 		}
 		NOT = { stability = 1 }
@@ -332,10 +334,10 @@ country_event = {
 				limit = {
 					OR = {
 						area = transdanubia_area
-						area = transylvania_area
-						area = southern_transylvania_area
+						#area = transylvania_area # ??? BT removed
+						#area = southern_transylvania_area # ??? BT removed
 						area = alfold_area
-						area = slovakia_area
+						#area = slovakia_area # ??? BT removed
 					}
 					development = 10
 				}
@@ -364,10 +366,10 @@ country_event = {
 			limit = {
 				OR = {
 					area = transdanubia_area
-					area = transylvania_area
+					#area = transylvania_area # ??? BT removed
 					area = alfold_area
-					area = slovakia_area
-					area = southern_transylvania_area
+					#area = slovakia_area # ??? BT removed
+					#area = southern_transylvania_area # ??? BT removed
 				}
 			}	
 			add_unrest = 5
@@ -379,10 +381,10 @@ country_event = {
 			limit = {
 				OR = {
 					area = transdanubia_area
-					area = transylvania_area
-					area = southern_transylvania_area
+					#area = transylvania_area # ??? BT removed
+					#area = southern_transylvania_area # ??? BT removed
 					area = alfold_area
-					area = slovakia_area
+					#area = slovakia_area # ??? BT removed
 				}
 				is_capital = no
 			}	
@@ -405,10 +407,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1700
 		NOT = { exists = SLZ }
 		religion = catholic
@@ -447,10 +446,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1741
 		NOT = { is_year = 1794 }
 		government = monarchy
@@ -487,10 +483,7 @@ country_event = {
 	picture = ADVISOR_eventPicture
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1803
 		government = monarchy
 	}
@@ -527,16 +520,14 @@ country_event = {
 	picture = ANGRY_MOB_eventPicture
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		NOT = { exists = HUN }
 		NOT = { religion = protestant }
-		any_owned_province = {
-			region = carpathia_region
-			NOT = { area = wallachia_area }
-			NOT = { area = moldavia_area }
+		any_owned_province = { # BT modif.
+			OR = {
+				area = transdanubia_area
+				area = alfold_area
+			}
 			religion = protestant
 		}
 	}
@@ -552,19 +543,21 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = HAB_had_event_3099
 			random_owned_province = {
-				limit = {
-					region = carpathia_region
-					NOT = { area = wallachia_area }
-					NOT = { area = moldavia_area }
+				limit = { # BT modif.
+					OR = {
+						area = transdanubia_area
+						area = alfold_area
+					}
 					religion = protestant
 				}
 				set_province_flag = hungarian_revolt
 			}
 			random_owned_province = {
-				limit = {
-					region = carpathia_region
-					NOT = { area = wallachia_area }
-					NOT = { area = moldavia_area }
+				limit = { # BT modif.
+					OR = {
+						area = transdanubia_area
+						area = alfold_area
+					}
 					religion = protestant
 					NOT = { has_province_flag = second_hungarian_revolt }
 				}
@@ -583,7 +576,7 @@ country_event = {
 			spawn_rebels = {
 				type = nationalist_rebels
 				size = 3
-				leader = "Istv?n Bocskay"
+				leader = "István Bocskay"
 				friend = HUN
 			}
 			clr_province_flag = hungarian_revolt
@@ -625,10 +618,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1750
 		NOT = { is_year = 1800 }
 	}
@@ -663,10 +653,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1480
 		NOT = { has_country_modifier = reichshofrat }
 	}
@@ -706,10 +693,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		NOT = { exists = HUN }
 		any_owned_province = {
 			OR = {
@@ -792,7 +776,7 @@ country_event = {
 	}
 }
 
-# The Insurrection of Duke Imre Th?k?ly
+# The Insurrection of Duke Imre Thököly
 country_event = {
 	id = flavor_hab.3333
 	title = "flavor_hab.EVTNAME3333"
@@ -803,18 +787,16 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1650
 		NOT = { is_year = 1700 }
 		
 		NOT = { exists = HUN }
-		any_owned_province = {
-			region = carpathia_region
-			NOT = { area = wallachia_area }
-			NOT = { area = moldavia_area }
+		any_owned_province = { # BT modif.
+			OR = {
+				area = transdanubia_area
+				area = alfold_area
+			}
 		}
 		NOT = { accepted_culture = hungarian }
 		NOT = {
@@ -833,10 +815,11 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
-				limit = {
-					region = carpathia_region
-					NOT = { area = wallachia_area }
-					NOT = { area = moldavia_area }
+				limit = { # BT modif.
+					OR = {
+						area = transdanubia_area
+						area = alfold_area
+					}
 				}
 				set_province_flag = hungarian_revolt
 			}
@@ -850,18 +833,19 @@ country_event = {
 			limit = {
 				NOT = { area = wallachia_area }
 				NOT = { area = moldavia_area }
+				NOT = { area = silistria_area } # BT
 			}
 			add_core = HUN
 		}
-		carpathia_region = {
-			limit = {
-				NOT = { area = wallachia_area }
-				NOT = { area = moldavia_area }
-				NOT = { area = transylvania_area }
-				NOT = { area = southern_transylvania_area }
-			}
-			change_culture = hungarian
-		}
+		#carpathia_region = { # BT removed
+		#	limit = {
+		#		NOT = { area = wallachia_area }
+		#		NOT = { area = moldavia_area }
+		#		NOT = { area = transylvania_area }
+		#		NOT = { area = southern_transylvania_area }
+		#	}
+		#	change_culture = hungarian
+		#}
 		random_owned_province = {
 			limit = {
 				has_province_flag = hungarian_revolt
@@ -870,25 +854,27 @@ country_event = {
 				type = nationalist_rebels
 				size = 3
 				friend = HUN
-				leader = "Imre Th?k?ly"
+				leader = "Imre Thököly"
 			}
 			
 
 		}
 		if = {
 			limit = {
-				any_owned_province = {
-					region = carpathia_region
-					NOT = { area = wallachia_area }
-					NOT = { area = moldavia_area }
+				any_owned_province = { # BT modif.
+					OR = {
+						area = transdanubia_area
+						area = alfold_area
+					}
 					NOT = { has_province_flag = hungarian_revolt }
 				}
 			}
 			random_owned_province = {
-				limit = {
-					region = carpathia_region
-					NOT = { area = wallachia_area }
-					NOT = { area = moldavia_area }
+				limit = { # BT modif.
+					OR = {
+						area = transdanubia_area
+						area = alfold_area
+					}
 					NOT = { has_province_flag = hungarian_revolt }
 				}
 				spawn_rebels = {
@@ -920,10 +906,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1750
 		
 	}
@@ -964,10 +947,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1790
 		
 		any_owned_province = {
@@ -1091,10 +1071,7 @@ country_event = {
 #	
 #	fire_only_once = yes
 #	trigger = {
-#		OR = {
-#			tag = HAB
-#			tag = AHU
-#		}
+#		tag = HAB
 #		NOT = { is_year = 1500 }
 #		is_emperor = yes
 #		dynasty = "von Habsburg"
@@ -1145,10 +1122,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_emperor = yes
 		owns = 73		# Tirol
 		is_year = 1480
@@ -1181,10 +1155,7 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1500
 		NOT = { is_year = 1550 }
 		is_emperor = yes
@@ -1221,10 +1192,7 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1450
 		NOT = { is_year = 1550 }
 		owns = 1863		# Graz
@@ -1257,10 +1225,7 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1450
 		NOT = { is_year = 1550 }
 		
@@ -1291,10 +1256,7 @@ country_event = {
 	
 	
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		has_heir = no
 		has_government_attribute = heir
 		is_free_or_tributary_trigger = yes
@@ -1361,9 +1323,9 @@ country_event = {
 				define_heir = {
 					dynasty = "von Habsburg"
 					culture = austrian
-					change_adm = 5
-					change_dip = 1
-					change_mil = 1					
+					ADM = 5
+					DIP = 1
+					MIL = 1					
 					claim = 80
 				}
 				clr_country_flag = habsburg_adm_heir
@@ -1375,9 +1337,9 @@ country_event = {
 				define_heir = {
 					dynasty = "von Habsburg"
 					culture = austrian
-					change_dip = 5
-					change_adm = 1
-					change_mil = 1
+					DIP = 5
+					ADM = 1
+					MIL = 1
 					claim = 80
 				}
 				clr_country_flag = habsburg_dip_heir
@@ -1389,9 +1351,9 @@ country_event = {
 				define_heir = {
 					dynasty = "von Habsburg"
 					culture = austrian
-					change_mil = 5
-					change_adm = 1
-					change_dip = 1
+					MIL = 5
+					ADM = 1
+					DIP = 1
 					claim = 80
 				}
 				clr_country_flag = habsburg_mil_heir
@@ -1411,9 +1373,9 @@ country_event = {
 					dynasty = "von Habsburg"
 					female = yes
 					culture = austrian
-					change_adm = 5
-					change_dip = 1
-					change_mil = 1
+					ADM = 5
+					DIP = 1
+					MIL = 1
 					claim = 80
 				}
 				clr_country_flag = habsburg_adm_heir
@@ -1426,9 +1388,9 @@ country_event = {
 					dynasty = "von Habsburg"
 					culture = austrian
 					female = yes
-					change_dip = 5
-					change_adm = 1
-					change_mil = 1
+					DIP = 5
+					ADM = 1
+					MIL = 1
 					claim = 80
 				}
 				clr_country_flag = habsburg_dip_heir
@@ -1441,9 +1403,9 @@ country_event = {
 					dynasty = "von Habsburg"
 					culture = austrian
 					female = yes
-					change_mil = 5
-					change_adm = 1
-					change_dip = 1
+					MIL = 5
+					ADM = 1
+					DIP = 1
 					claim = 80
 				}
 				clr_country_flag = habsburg_mil_heir
@@ -1468,10 +1430,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1790
 		NOT = { is_year = 1821 }
 	}
@@ -1498,10 +1457,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1774
 		NOT = { is_year = 1791 }
 	}
@@ -1546,10 +1502,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		exists = FRA
 		is_year = 1490
 		NOT = { is_year = 1590 }
@@ -1701,10 +1654,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		NOT = { exists = HUN }
 		is_year = 1700
 		NOT = {
@@ -1760,7 +1710,7 @@ country_event = {
 	trigger = {
 		owns = 73
 		is_year = 1460
-		NOT = { is_year = 1820 }
+		NOT = { is_year = 1480 }
 		73 = {
 			NOT = { has_province_modifier = hab_schwaz_mine }
 		}
@@ -1792,10 +1742,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1480
 		NOT = { is_year = 1530 }
 	}
@@ -1829,10 +1776,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		capital = 134
 		is_year = 1575
 		NOT = { is_year = 1620 }
@@ -1856,7 +1800,7 @@ country_event = {
 	}
 }
 
-# The Pests?ule of Vienna.
+# The Pestsäule of Vienna.
 country_event = {
 	id = flavor_hab.14
 	title = flavor_hab.14.t
@@ -1866,10 +1810,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		has_country_flag = hab_had_plague_of_vienna
 		owns = 134
 		134 = { NOT = { has_province_modifier = hab_plague_of_vienna } }
@@ -1901,10 +1842,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1670
 		NOT = { is_year = 1700 }
 	}
@@ -1934,10 +1872,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1670
 		NOT = { is_year = 1700 }
 	}
@@ -1966,7 +1901,7 @@ country_event = {
 	}
 }
 
-# The M?hlviertel Textile Production
+# The Mühlviertel Textile Production
 country_event = {
 	id = flavor_hab.17
 	title = flavor_hab.17.t
@@ -1976,10 +1911,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1650
 		NOT = { is_year = 1700 }
 		owns = 133
@@ -2015,10 +1947,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		is_year = 1700
 		NOT = { is_year = 1730 }
 		owns = 90
@@ -2079,10 +2008,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
-			tag = HAB
-			tag = AHU
-		}
+		tag = HAB
 		has_country_modifier = hab_ostende_company
 	}
 
@@ -2147,28 +2073,13 @@ country_event = {
 	option = {# Yes
 		name = flavor_hab.20.A
 		add_government_reform = austrian_dual_monarchy
-		change_tag = AHU
-		if = {
-			limit = { NOT = { government_rank = 3 } }
-			set_government_rank = 3
-		}
-		country_event = {
-			id = ideagroups.1
-		}
-		add_prestige = 50
 		ai_chance = {
-			factor = 1000
+			factor = 1
 		}
 	}
-
-	option = { #We may not abandon our German roots
-		name = flavor_hab.20.gc
-		add_government_reform = austrian_dual_monarchy
-		if = {
-			limit = { NOT = { government_rank = 3 } }
-			set_government_rank = 3
-		}
-		add_prestige = 25
+	
+	option = {# No
+		name = flavor_hab.20.B
 		add_country_modifier = {
 			name = hab_tolerant_society
 			duration = -1
@@ -2189,6 +2100,10 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	major = yes
+
+	trigger = {
+		always = no
+	}
 
 	immediate = {
 		hidden_effect = {

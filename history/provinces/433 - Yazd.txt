@@ -1,17 +1,19 @@
+ 
 #433 - Yadz
 
-owner = YZD
-controller = YZD
+owner = TIM
+controller = TIM
 culture = persian
 religion = zoroastrian
 capital = "Yazd"
-trade_goods = paper
+trade_goods = bt_trade_good_books
 hre = no
-base_tax = 2 
-base_production = 2
-base_manpower = 2
+base_tax = 4 
+base_production = 4
+base_manpower = 4
 is_city = yes
 add_core = YZD
+add_core = TIM
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = indian
@@ -45,8 +47,8 @@ center_of_trade = 1
 	religion = shiite
 } # The Safavids took over
 1550.1.1 = { discovered_by = TUR }
-1597.12.1 = { base_tax = 4
-base_production = 4 } # The Reforms of Abbas the Great
+1597.12.1 = { base_tax = 8
+base_production = 8 } # The Reforms of Abbas the Great
 1673.1.1 = { discovered_by = ENG }
 1707.5.12 = { discovered_by = GBR }
 1747.1.1 = { unrest = 3 } # Shah Nadir is killed, local khanates emerged

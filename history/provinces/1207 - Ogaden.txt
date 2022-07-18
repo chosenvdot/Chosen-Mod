@@ -2,17 +2,15 @@
 owner = OGD
 controller = OGD
 add_core = OGD
+
 culture = somali
 religion = sunni
 capital = "Bale"
-native_size = 40
-native_ferocity = 4
-native_hostileness = 9 
 trade_goods = incense
 hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 1
+base_tax = 2  
+base_production = 2 
+base_manpower = 2 
 
 discovered_by = east_african
 

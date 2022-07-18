@@ -7,38 +7,39 @@ estate_burghers =
 		NOT = { has_estate = estate_vaisyas }
 		NOT = { has_estate = estate_jains }
 		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_government_attribute = is_merchant_republic }
 		NOT = { has_reform = veche_republic }
 		NOT = { has_reform = trading_city }
 		NOT = { is_revolutionary_republic_trigger = yes }
+		NOT = { has_reform = cossacks_reform }
 		NOT = { government = native }
 		NOT = { has_reform = siberian_tribe }
 		OR = {
 			NOT = { has_reform = celestial_empire }
 			has_dlc = "Mandate of Heaven"
 		}
+		is_nomad = no
 		is_colonial_nation = no
 		NOT = { has_reform = revolutionary_empire_reform }
-		OR = {
-			NOT = { is_nomad = yes }
-			tag = CRI
-			tag = HET
-			tag = OIR
-			tag = KHA
-			tag = MGE
-		}
 	}
 
 	# These scale with loyalty & power
 	country_modifier_happy = {
-		trade_efficiency = 0.1
-		development_cost = -0.10
+		production_efficiency = 0.2			#BTAddOn new - estates rebalancing
+		trade_efficiency = 0.2
+		#development_cost = -0.1			#BTAddOn removed - estates rebalancing
+		republican_tradition = 0.5			#BTAddOn new - estates rebalancing
 	}
 	country_modifier_neutral = {
-		trade_efficiency = 0.1
+		#trade_efficiency = 0.2			#BTAddOn removed - estates rebalancing
+		production_efficiency = 0.1			#BTAddOn new - estates rebalancing
 	}	
 	country_modifier_angry = {
-		trade_efficiency = -0.1
-		development_cost = 0.1
+		production_efficiency = -0.2			#BTAddOn new - estates rebalancing
+		trade_efficiency = -0.2			#BTAddOn changed from -0.1 - estates rebalancing
+		#development_cost = 0.1			#BTAddOn removed - estates rebalancing
+		republican_tradition = -0.5			#BTAddOn new - estates rebalancing
+		stability_cost_modifier = 0.33			#BTAddOn new - estates rebalancing
 		global_unrest = 2
 	}
 	land_ownership_modifier = {
@@ -79,7 +80,7 @@ estate_burghers =
 			has_province_modifier = thankful_guilds
 		}
 	}
-
+	
 	# Influence modifiers
 	base_influence = 10
 	influence_modifier = {	
@@ -206,6 +207,32 @@ estate_burghers =
 		}
 		loyalty = -20
 	}
+	#Custom Names
+	custom_name = {
+		desc = estate_bourgeoisie
+		trigger = {
+			culture_group = french
+		}
+	}
+	custom_name = {
+		desc = estate_shangbang
+		trigger = {
+			culture_group = east_asian
+		}
+	}
+	custom_name = {
+		desc = estate_neoconfucian_reformers
+		trigger = {
+			tag = KOR
+			religion = confucianism
+		}
+	}
+	custom_name = {
+		desc = estate_merchant_guilds
+		trigger = {
+			NOT = { religion_group = christian } #Diversify a bit more.
+		}
+	}
 
 	color = { 35 35 150 }
 
@@ -217,7 +244,6 @@ estate_burghers =
 		estate_burghers_commercial_board_of_advice
 		estate_burghers_new_world_charter
 		estate_burghers_indebted_to_burghers
-		estate_burghers_indebted_to_burghers_2
 		estate_burghers_free_enterprise
 		estate_burghers_the_great_privilege
 		estate_burghers_exclusive_trade_rights
@@ -233,7 +259,7 @@ estate_burghers =
 		estate_burghers_prussian_confederation
 		estate_burghers_statutory_rights
 		estate_burghers_orang_laut_alliances
-		estate_gecko_ethiopia_highlands_and_mountains
+		estate_burghers_control_over_the_mint
 		estate_burghers_hydraulic_rights
 	}
 
@@ -245,8 +271,6 @@ estate_burghers =
 		estate_burghers_build_university_in_y
 		estate_burghers_build_manufactory_in_y
 		estate_burghers_pay_off_loans
-		estate_burghers_pay_off_loans_2
-		estate_burghers_pay_off_loans_3
 		estate_burghers_restore_republican_tradition
 		estate_burghers_restore_currency
 		estate_burghers_recovery_from_hyperinflation

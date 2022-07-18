@@ -1,3 +1,4 @@
+ 
 
 
 owner = BON
@@ -9,9 +10,9 @@ religion = shamanism #Fetishism
 capital = "Amanvi"
 trade_goods = coffee #Kola nuts
 hre = no
-base_tax = 2 
-base_production = 2
-base_manpower = 1
+base_tax = 4  
+base_production = 4
+base_manpower = 2 
 
 
 

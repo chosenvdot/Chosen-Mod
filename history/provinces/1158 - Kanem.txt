@@ -1,3 +1,4 @@
+ 
 #1158 - Kanem
 
 owner = YAO
@@ -9,10 +10,10 @@ religion = sunni
 capital = "Ngala"
 is_city = yes
 base_manpower = 4
-trade_goods = paper #Producer of paper and exporter of Qurans throughout the Islamic world.
+trade_goods = bt_trade_good_books #Producer of paper and exporter of Qurans throughout the Islamic world.
 hre = no
-base_tax = 5
-base_production = 5
+base_tax = 6 
+base_production = 6
 discovered_by = sub_saharan
 extra_cost = 8
 center_of_trade = 1

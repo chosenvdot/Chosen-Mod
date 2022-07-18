@@ -1,3 +1,4 @@
+ 
 #1213 - Shoa
 
 owner = ETH
@@ -7,12 +8,12 @@ culture = amhara
 religion = sunni
 capital = "Badeqe"
 is_city = yes
-base_manpower = 3
+base_manpower = 6
 trade_goods = grain
 hre = no
 fort_15th = yes
-base_tax = 3
-base_production = 3
+base_tax = 6
+base_production = 6
 add_local_autonomy = 10
 add_core = SOA
 discovered_by = east_african

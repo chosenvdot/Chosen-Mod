@@ -1,3 +1,4 @@
+ 
 #507 - Lahore
 
 owner = SRH
@@ -7,12 +8,12 @@ religion = hinduism
 capital = "Lahore"
 trade_goods = silk
 hre = no
-base_tax = 10
-base_production = 10
-base_manpower = 3
+base_tax = 17
+base_production = 17
+base_manpower = 8
 is_city = yes
 add_core = MUL
-#add_core = DLH
+add_core = DLH
 add_core = PUN
 add_core = SRH
 fort_15th = yes #Lahore Fort

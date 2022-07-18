@@ -2,13 +2,13 @@
 # scriptable and usable for event-system below.
 ##################################################################################################
 
-#national_bank_interest = {
-#	interest = -0.5
-#}
+national_bank_interest = {
+	interest = -0.5
+}
 
-#national_bank_inflation = {
-#	inflation_reduction = 0.05
-#}
+national_bank_inflation = {
+	inflation_reduction = 0.05
+}
 
 the_proper_old_ways = {
 	raze_power_gain = 0.20
@@ -16,11 +16,13 @@ the_proper_old_ways = {
 	global_trade_goods_size_modifier = -0.25
 }
 
-#eth_mil_aid_from_portugal = {
-#	land_morale = 0.05
-#	mil_tech_cost_modifier = -0.05
-#	global_manpower_modifier = 0.05
-#}
+eth_mil_aid_from_portugal = {
+	land_morale = 0.25
+	mil_tech_cost_modifier = -0.25
+	discipline = 0.05
+	global_manpower_modifier = 0.25
+}
+
 incompetent_fabrication = {
 	fabricate_claims_cost = 0.5
 	ae_impact = 0.05
@@ -822,11 +824,11 @@ hire_privateers = {
 }
 
 counter_reformation = {
-	global_heretic_missionary_strength = 0.03
+	global_heretic_missionary_strength = 0.02			#BTAddOn changed from 0.03 - weakening bonuses as I also removed the penalties
 	papal_influence = 0.5
-	missionaries = 2
-	#technology_cost = 0.05
-	#idea_cost = 0.05
+	missionaries = 1			#BTAddOn changed from 2 - weakening bonuses as I also removed the penalties
+	#technology_cost = 0.05			#BTAddOn removed - So the Catholic church admits the need for reform, makes the first effort to compromise in centuries, and gets.... a tech penalty? C'mon... I'm starting to see why EU4 fans joke about Protestant master faiths. Catholics in this period were cutting edge in practical tech just as much as Protestants were.
+	#idea_cost = 0.05			#BTAddOn removed - So the Catholic church admits the need for reform, makes the first effort to compromise in centuries, and gets.... a tech penalty? C'mon... I'm starting to see why EU4 fans joke about Protestant master faiths. Catholics in this period were cutting edge in practical tech just as much as Protestants were.
 	religion = yes
 }
 
@@ -988,18 +990,12 @@ dutch_india_trade_co = {
 	range = 0.25
 }
 
-scottish_india_trade_co = {
+
+portuguese_india_trade_co = {
 	trade_efficiency = 0.10
 }
 
-amur_estuary_modifier = {
-	province_trade_power_value = 10
-	picture = "estuary_icon"
-}
-
-portuguese_india_trade_co = {
-	#merchants = 1
-	#global_trade_power = 0.05
+scottish_india_trade_co = {
 	trade_efficiency = 0.10
 }
 
@@ -1166,15 +1162,15 @@ navigator_boost = {
 }
 
 grand_captain_boost = {
-	land_morale = 0.10
+	land_morale = 0.20
 }
 
 army_organiser_boost = {
-	land_forcelimit_modifier = 0.2
+	land_forcelimit_modifier = 0.1
 }
 
 commandant_boost = {
-	discipline = 0.05
+	discipline = 0.1
 }
 
 quartermaster_boost = {
@@ -1182,7 +1178,7 @@ quartermaster_boost = {
 }
 
 recruitmaster_boost = {
-	global_manpower_modifier = 0.2
+	global_manpower_modifier = 0.1
 }
 
 fortification_expert_boost = {
@@ -1460,10 +1456,10 @@ krantor_crane = {
 }
 
 adler_von_lubeck = {
-	heavy_ship_cost = -0.1
-	dip_tech_cost_modifier = -0.05
+	heavy_ship_cost = -0.02
+	dip_tech_cost_modifier = -0.02
 	global_ship_recruit_speed = -0.1
-	trade_efficiency = 0.1
+	naval_morale = 0.2
 }
 
 south_german_organ_tradition = {
@@ -1471,30 +1467,9 @@ south_german_organ_tradition = {
 }
 
 rome_reborn = {
-	picture = "imperial_authority"
-	prestige = 3
-	technology_cost = -0.05
-	global_institution_spread = 0.1
+	prestige = 1
 	global_tax_modifier = 0.05
-	spy_offence = 0.1
-	advisor_pool = 1
-	free_leader_pool = 1
-	diplomats = 1
-	diplomatic_reputation = 3
-	diplomatic_upkeep = 1
-	land_forcelimit = 50
-	global_manpower = 50
-	tax_income = 50
-	build_cost = -0.05
-	build_time = -0.05
-	global_unrest = -2
-	state_maintenance_modifier = -0.25
-	core_creation = -0.1
-	stability_cost_modifier = -0.1
-	legitimacy = 0.25
-	tolerance_own = 1
-	global_missionary_strength = 0.01
-	mercenary_cost = -0.25}
+}
 
 rebel_sentiment = {
 	local_unrest = 15
@@ -1507,11 +1482,12 @@ conversion_zeal = {
 }
 
 religious_zeal_at_conv = {
-	local_missionary_strength = -0.1
+	local_missionary_strength = -1
 }
 
 papal_sanction_for_church_taxes = {
 	global_tax_modifier = 0.15
+	build_cost = -0.1
 	religion = yes
 }
 
@@ -1528,6 +1504,7 @@ papal_indulgence = {
 usury_forgiven = {
 	interest = -0.25
 	inflation_reduction = 0.1
+	yearly_corruption = -0.04
 	religion = yes
 }
 
@@ -1537,7 +1514,7 @@ severe_tax_reduction = {
 
 papal_blessing = {
 	prestige = 1
-	land_morale = 0.05
+	land_morale = 0.1
 	religion = yes
 }
 
@@ -1677,7 +1654,7 @@ braveheart = {
 
 #for the toll
 bosphorous_sound_toll = {
-	province_trade_power_value = 30
+	province_trade_power_value = 10
 }
 
 sound_toll = {
@@ -1773,7 +1750,7 @@ spread_of_enlightenment_ideals = {
 
 #Special places
 stora_kopparberget_modifier = { #Great Copper Mountain
-	trade_goods_size = 5.0
+	trade_goods_size = 3.0			#BTAddOn changed from 5.0 - Was overpowered to begin with, but reworking to builings' effects made this obscene. Nerfing
 }
 
 spice_islands_modifier = { #Main entrepots of the Mollucas, point of origin for a large portion of the worlds spices
@@ -1794,7 +1771,7 @@ ven_murano_glass_industry = {
 }
 
 diamond_mines_of_golconda_modifier = { #The only major source of diamonds in the world for most of the game.
-	trade_goods_size = 4.0
+	trade_goods_size = 3.0			#BTAddOn changed from 4.0 - Was overpowered to begin with, but reworking to builings' effects made this obscene. Nerfing
 }
 
 jingdezhen_kilns = {
@@ -1825,7 +1802,7 @@ perfume_capital = {
 }
 
 comet_ore_modifier = { #RNW Comet Mine
-	trade_goods_size = 5.0
+	trade_goods_size = 3.0			#BTAddOn changed from 5.0 - Was overpowered to begin with, but reworking to builings' effects made this obscene. Nerfing
 }
 
 paradise_modifier = { #RNW Paradise
@@ -1848,9 +1825,9 @@ atlantean_remnants_modifier = {
 # Important Natural Harbor
 important_natural_harbor = {
 	province_trade_power_value = 10
-	naval_forcelimit = 1
+	#naval_forcelimit = 1			#BTAddOn removed - cutting naval bonuses to natural habour. It gets those when it becomes a true CoT
 	local_development_cost = -0.05
-	local_sailors_modifier = 0.25
+	#local_sailors_modifier = 0.50			#BTAddOn removed - cutting naval bonuses to natural habour. It gets those when it becomes a true CoT
 	picture = "province_trade_power_value"
 }
 
@@ -2162,6 +2139,7 @@ amur_estuary_modifier = {
 	province_trade_power_value = 10
 	picture = "estuary_icon"
 }
+
 # England flavor modifiers
 
 lollards = {
@@ -2311,24 +2289,24 @@ church_reduction = {
 	religion = yes
 }
 
-#wallon_immigrants = {
-#	trade_goods_size = 0.2
-#}
+wallon_immigrants = {
+	trade_goods_size = 0.2
+}
 
-#swedish_military_reforms = {
-#	infantry_cost = -0.1
-#	land_morale = 0.05
-#}
+swedish_military_reforms = {
+	infantry_cost = -0.1
+	land_morale = 0.05
+}
 
-#swedish_mercenary_core = {
-#	merc_maintenance_modifier = -0.1
-#	mercenary_manpower = 0.5
-#}
+swedish_mercenary_core = {
+	merc_maintenance_modifier = -0.1
+	mercenary_manpower = 0.5
+}
 
-#swedish_naval_reforms = {
-#	heavy_ship_cost = -0.1
-#	naval_morale = 0.05
-#}
+swedish_naval_reforms = {
+	heavy_ship_cost = -0.1
+	naval_morale = 0.05
+}
 
 swedish_mercantile_reforms = {
 	global_prov_trade_power_modifier = 0.10
@@ -2452,17 +2430,20 @@ local_free_trade = {
 }
 
 dhimmi_building_restrictions = {
-	religion = yes
 	tolerance_own = 0.5
 	tolerance_heathen = -0.5
 }
 
 grain_bonus_prod = {
-	local_production_efficiency = 0.5
+	local_production_efficiency = 0.5 # BT ???; 0.75
 }
 
 wine_bonus_prod = {
 	local_production_efficiency = 0.5
+}
+
+fruit_bonus_prod = { #BT-unique
+	local_production_efficiency = 0.75
 }
 
 global_holy_war_released_modifier = {
@@ -2944,7 +2925,7 @@ janissaries_denied_reward = {
 
 strictly_enforced_janissary_discipline = {
 	is_janissary_modifier = yes
-	discipline = 0.05
+	discipline = 0.015
 }
 
 non_christian_janissaries = {
@@ -2986,6 +2967,7 @@ tur_janissary = {
 }
 
 hun_black_army = {
+	land_forcelimit_modifier = -0.05
 	nobles_influence_modifier = -0.1
 }
 
@@ -3015,8 +2997,7 @@ hun_poorly_maintained_fortifications = {
 
 hun_frontier_fortresses = {
 	defensiveness = 0.25
-	#global_tax_modifier = -0.1
-	max_attrition = 1
+	global_tax_modifier = -0.1
 }
 
 hun_reformed_colleges = {
@@ -3026,7 +3007,7 @@ hun_reformed_colleges = {
 }
 
 hun_counter_reformation = {
-	global_missionary_strength = 0.01
+	global_missionary_strength = 0.01 
 	papal_influence = 2
 }
 
@@ -3358,6 +3339,7 @@ pol_zebrzydowski_rebellion_flag = {
 plc_polish_lithuanian_union = {
 	num_accepted_cultures = 1
 }
+
 economic_development_of_mazovia = {
 	local_development_cost = -0.1
 }
@@ -3421,7 +3403,7 @@ hol_tulip_crisis = {
 }
 
 holland_polders = {
-	local_development_cost = -0.25
+	local_development_cost = -0.35			#BTAddOn changed from -0.25 - increased bonus because terrain overhaul made marsh terrain harder to develope, yet farmland easier.
 }
 
 #Ayutthaya
@@ -3699,10 +3681,9 @@ hsa_economic_reform = {
 	advisor_cost = -0.1
 }
 hsa_military_reform = {
-	army_tradition = 0.5
-	navy_tradition = 0.5
+	army_tradition = 0.1
+	navy_tradition = 0.1
 	global_regiment_cost = -0.1
-	land_morale = 0.05
 }
 hsa_adler_ship = {
 	global_ship_cost = -0.10
@@ -4069,10 +4050,6 @@ eth_itinerant_capital = {
 	global_unrest = -0.5
 }
 
-eth_accepted_society = {
-	local_religious_unity_contribution = -1
-	local_missionary_strength = -1
-}
 eth_independent_church = {
 	stability_cost_modifier = 0.1
 	idea_cost = -0.05
@@ -4089,6 +4066,7 @@ eth_mount_geshen = {
 }
 
 eth_negusa_nagast_issues = {
+	global_autonomy = 0.2
 }
 #Bahmanis
 bah_bidriware_boom = {
@@ -4172,9 +4150,10 @@ guj_hardline_rel_policy = {
 }
 
 #Persia
-#per_abbas_advisors = {
-#	technology_cost = -0.20
-#}
+per_abbas_advisors = {
+	technology_cost = -0.20
+
+}
 
 per_political_turmoil_timer = { }
 per_political_fragmentation_timer = { }
@@ -4372,7 +4351,11 @@ ven_recover_from_plague = {
 }
 
 ven_arsenal_marines = {
-	allowed_marine_fraction = 0.1
+	allowed_marine_fraction = 0.25
+}
+
+ven_arsenal_marines = {
+	allowed_marine_fraction = 0.05
 }
 
 venice_ghetto = {
@@ -4384,7 +4367,7 @@ fortezza_di_sant_andrea = {
 }
 
 ven_monte_nuovo = {
-	#interest = -0.5
+	interest = -0.5
 }
 
 ven_venetian_first = {
@@ -4405,7 +4388,7 @@ venice_galley_conscription = {
 }
 
 ven_ministers_of_waterways = {
-	local_development_cost = -0.25
+	local_development_cost = -0.35			#BTAddOn changed from -0.25 - adjusted to farmland levels from marsh modifiers in terrain addon
 }
 
 ven_black_gondolas = {
@@ -4757,7 +4740,7 @@ dan_ulfeldt_deposed = {
 #Timurids
 
 shahrukhs_empire = {
-	reduced_liberty_desire = 50
+	reduced_liberty_desire = 30 #BT reduced to account for new estate privileges
 }
 
 # Argonese Decisions
@@ -4866,7 +4849,7 @@ true_mahdi = {
 }
 
 unified_islam = {
-	land_morale = 0.1
+	stability_cost_modifier = -0.2
 	global_missionary_strength = 0.02
 	tolerance_own = 2
 	tolerance_heretic = 1
@@ -4928,8 +4911,8 @@ vassals_feel_safe = {
 }
 
 firm_hand = {
-	vassal_income = 0.1
-	vassal_forcelimit_bonus = 0.5
+	vassal_income = 0.25
+	vassal_forcelimit_bonus = 1
 }
 
 emissary_authority = {
@@ -6458,7 +6441,7 @@ black_shamanism_modifier = {
 }
 
 yellow_shamanism_modifier = {
-	tolerance_heathen = 3
+	tolerance_heathen = 2
 	religion = yes
 }
 
@@ -6813,15 +6796,15 @@ pap_sistinechapel_decorated = {
 	global_missionary_strength = 0.01
 }
 
-#pap_indulgences = {
-#	global_tax_income = 5
-#}
-#pap_simony = {
-#	global_tax_income = 5
-#}
-#pap_veneration_relics = {
-#	global_tax_income = 5
-#}
+pap_indulgences = {
+	global_tax_income = 5
+}
+pap_simony = {
+	global_tax_income = 5
+}
+pap_veneration_relics = {
+	global_tax_income = 5
+}
 pap_condemn_slavery = {
 	global_tariffs = -0.05
 }
@@ -6961,9 +6944,6 @@ alhambra_decree = {
 	tolerance_own = 1
 }
 
-alhambra_working_force = {
-	great_project_upgrade_cost = -0.25
-}
 unification_of_spain = {
 	global_autonomy = -0.05
 	stability_cost_modifier = 0.05
@@ -8692,11 +8672,11 @@ dissatisfied_jews = {
 }
 
 #Consort Events
-#domain_of_spouses_family = {
-#	local_autonomy = 0.1
-#	local_missionary_strength = -0.05
-#	local_unrest = -3
-#}
+domain_of_spouses_family = {
+	local_autonomy = 0.1
+	local_missionary_strength = -0.05
+	local_unrest = -3
+}
 
 angered_nobles = {
 	local_unrest = 3
@@ -9048,6 +9028,13 @@ harmonized_christian = {
 	stability_cost_modifier = -0.1
 	religion = yes
 }
+
+#BT Added
+harmonized_mandaean_group = {
+	same_culture_advisor_cost = -0.05
+	religion = yes
+}
+
 #On the route to Harmonization:
 
 harmonization_classics_translated = {
@@ -9635,9 +9622,9 @@ urban_decay = {
 	local_development_cost = 0.5
 }
 
-#upkeep_of_holy_cities = {
-#	global_tax_modifier = -0.2
-#}
+upkeep_of_holy_cities = {
+	global_tax_modifier = -0.2
+}
 
 expanded_madrasah = {
 	local_development_cost = -0.15
@@ -9700,21 +9687,21 @@ good_pious_mufti_modifier = {
 	yearly_corruption = -0.05
 }
 
-#bad_sufi_modifier = {
-#	religion = yes
-#	legitimacy = 0.5
-#}
+bad_sufi_modifier = {
+	religion = yes
+	legitimacy = 0.5
+}
 
-#ok_sufi_modifier = {
-#	religion = yes
-#	legitimacy = 1
-#}
+ok_sufi_modifier = {
+	religion = yes
+	legitimacy = 1
+}
 
-#good_sufi_modifier = {
-#	religion = yes
-#	legitimacy = 1
-#	global_missionary_strength = 0.02
-#}
+good_sufi_modifier = {
+	religion = yes
+	legitimacy = 1
+	global_missionary_strength = 0.02
+}
 
 #Trade Policy Events
 
@@ -9954,7 +9941,7 @@ cairo_defences = {
 
 monuments_of_cairo = {
 	legitimacy = 0.5
-	local_development_cost = -0.15
+	local_development_cost = 0.15
 }
 
 bedouin_amir_al_hajj = {
@@ -9994,10 +9981,10 @@ loyal_mamluks_in_high_positions = {
 	state_maintenance_modifier = 0.1
 }
 
-#purification_of_tax_laws = {
-#	global_tax_modifier = -0.15
-#	global_unrest = -1
-#}
+purification_of_tax_laws = {
+	global_tax_modifier = -0.15
+	global_unrest = -1
+}
 
 furusiyya = {
 	cavalry_power = 0.1
@@ -10341,7 +10328,7 @@ look_up_purbias = {
 
 look_up_purbias_upgraded = {
 	is_rajput_modifier = yes
-	infantry_power = 0.1
+	discipline = 0.05
 	fire_damage = 0.1
 }
 
@@ -10358,7 +10345,7 @@ marathi_poet_saint_suppressed = {
 }
 
 bargi_giri = {
-	cavalry_power = 0.10
+	cavalry_power = 0.15
 	movement_speed = 0.15
 }
 
@@ -10900,7 +10887,6 @@ borgia_diplomacy = {
 	diplomatic_reputation = 1
 }
 
-
 #Estate Privileges
 
 estate_dhimmi_lighter_dhimmi_taxes_privilege_mod = {
@@ -10910,7 +10896,7 @@ estate_dhimmi_lighter_dhimmi_taxes_privilege_mod = {
 
 estate_dhimmi_manpower_mod = {
 	religion = yes
-	local_manpower_modifier = 0.15
+	local_manpower_modifier = 0.3
 }
 
 estate_maratha_levies_for_muslims_mod = {
@@ -10924,7 +10910,6 @@ estate_dhimmi_guaranteed_autonomy_mod = {
 }
 
 estate_brahmins_guaranteed_autonomy_mod = {
-	religion = yes
 	local_missionary_strength = -1
 	local_religious_unity_contribution = -1
 }
@@ -10936,7 +10921,6 @@ estate_burghers_the_great_privilege_mod = {
 estate_burghers_exclusive_trade_rights_mod = {
 	min_local_autonomy = 20
 	local_development_cost = -0.15
-	province_trade_power_value = 5
 }
 
 estate_burghers_monopoly_of_textiles_mod = {
@@ -11205,11 +11189,11 @@ mercs_not_allowed_to_loot_morale = {
 
 elephants_in_europe_mercs = {
 	is_mercenary_modifier = yes
-	cavalry_power = 0.10
+	cavalry_power = 0.15
 }
 
 elephants_in_europe = {
-	cavalry_power = 0.10
+	cavalry_power = 0.15
 }
 
 popular_mercs_prosperity = {
@@ -11264,8 +11248,7 @@ just_had_revolution_bringing_someone_to_power_timer = { }
 
 wotr_rebels_resurgent = { }
 
-just_lost_war_timer = {
-}
+just_lost_war_timer = { }
 
 recent_rt_spread_revolution_to_colonies_event_timer = { }
 
@@ -11348,14 +11331,14 @@ colony_inspired_by_revolution = {
 	liberty_desire = 30
 }
 
-#estate_cossacks_prime_herding_rights_mod = {
-#	local_tax_modifier = -0.15
-#	local_manpower_modifier = 0.25
-#}
+estate_cossacks_prime_herding_rights_mod = {
+	local_tax_modifier = -0.5
+	local_manpower_modifier = 1
+}
 
-#estate_cossacks_exploration_expedition_mod = {
-#	local_development_cost = -0.15
-#}
+estate_cossacks_exploration_expedition_mod = {
+	local_development_cost = -0.15
+}
 
 shortage_of_officers = {
 	army_tradition = -0.5
@@ -11682,7 +11665,7 @@ tot_ceramics_discovered = {
 }
 
 tot_dedicated_ruler = {
-	#tribal_development_growth = 0.02
+	tribal_development_growth = 0.02
 }
 
 tot_shameful_ruler = {
@@ -12154,19 +12137,19 @@ estate_burghers_control_over_gold_mine = {
 }
 
 estate_burghers_hydraulic_rights_desert = {
-	local_development_cost = -0.15
+	local_development_cost = -0.375
 }
 
 estate_burghers_hydraulic_rights_coastal_desert = {
-	local_development_cost = -0.15
+	local_development_cost = -0.325
 }
 
 estate_burghers_hydraulic_rights_steppes = {
-	local_development_cost = -0.10
+	local_development_cost = -0.125
 }
 
 estate_burghers_hydraulic_rights_savanna = {
-	local_development_cost = -0.05
+	local_development_cost = -0.15
 }
 
 estate_nobles_neighbor_raids_fort = {
@@ -12177,12 +12160,14 @@ estate_nobles_neighbor_raids_fort = {
 estate_church_united_faith_and_culture = {
 	religion = yes
 	local_unrest = -1
-	local_tax_modifier = 0.1
+	local_tax_modifier = 0.05
+	local_production_efficiency = 0.05
+	local_manpower_modifier = 0.05
 }
 
 #Province modifier
 estate_church_false_culture = {
-	local_unrest = 3
+	local_unrest = 4
 	local_culture_conversion_cost = -0.1
 	picture = "global_unrest_opposite"
 }
@@ -12269,7 +12254,7 @@ third_temple_provincial_modifier = {
 }
 third_temple_country_modifier = {
 	prestige = 0.5
-	global_missionary_strength = 0.03
+	global_heretic_missionary_strength = 0.03
 	missionaries = 1
 	religion = yes
 }

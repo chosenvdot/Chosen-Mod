@@ -1,27 +1,41 @@
+ 
 #47 - Stralsund
+#Region - Germany
+#Area - Vorpommern
 
-owner = WOL
-controller = WOL
-add_core = WOL
+owner = RUG
+controller = RUG			#Danish vassal until 1325
+add_core = RUG
+add_core = POM
 culture = pommeranian
 religion = catholic
-hre = yes
-base_tax = 2 
-base_production = 2
-trade_goods = fish
-base_manpower = 2
+hre = no
+base_tax = 7
+base_production = 6
+trade_goods = bt_trade_good_beer
+base_manpower = 2 
 capital = "Stralsund"
 is_city = yes
-discovered_by = eastern
+center_of_trade = 1
+
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-extra_cost = 8
-center_of_trade = 1
+discovered_by = eastern
+
+
+
+1325.1.1 = {
+	owner = WOL
+	controller = WOL
+	add_core = WOL
+	remove_core = POM
+	hre = yes
+}	#House of Wizlaw dies out. Rugen inherited by the Griffins and goes with them to Pomerania. Specifically Wartislaw IV of Wolgast.
 
 1529.1.1 = { add_core = BRA }
 1534.1.1 = { religion = protestant  }
-1630.1.1 = { base_tax = 4 } # Devastating population losses in Thirty Years War
+1630.1.1 = { base_tax = 8 } # Devastating population losses in Thirty Years War
 1648.10.24 = {
 	owner = SWE
 	controller = SWE

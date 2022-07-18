@@ -9,9 +9,9 @@ religion = shamanism #Fetishism
 capital = "Gursi"
 trade_goods = livestock
 hre = no
-base_tax = 3 
-base_production = 3
-base_manpower = 2
+base_tax = 6
+base_production = 6
+base_manpower = 4
 discovered_by = sub_saharan
 
 1460.1.1 = { unrest = 3 native_size = 40 } #Songhai raids devastate region

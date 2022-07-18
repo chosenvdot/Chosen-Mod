@@ -1,18 +1,17 @@
 # No previous file for Haayre
 
-owner = MSI
-controller = MSI
-add_core = MSI
+owner = YAT
+controller = YAT
 add_core = YAT
 is_city = yes
-culture = mossi 
+culture = bozo 
 religion = shamanism #Fetishism
 capital = "Douentza"
 trade_goods = ivory
 hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 1
+base_tax = 2 
+base_production = 2
+base_manpower = 2
 
 
 

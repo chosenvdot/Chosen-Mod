@@ -1,3 +1,4 @@
+ 
 #417 - Lahijan
 
 latent_trade_goods = {
@@ -11,9 +12,9 @@ religion = shiite
 capital = "Lahijan"
 trade_goods = silk
 hre = no
-base_tax = 5
-base_production = 5
-base_manpower = 2
+base_tax = 10
+base_production = 10
+base_manpower = 4
 is_city = yes
 add_core = KRY
 discovered_by = muslim

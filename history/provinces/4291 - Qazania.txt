@@ -1,18 +1,18 @@
-#4391 - Qazaniya
+#4391 - Mandali
 
 owner = IRQ
 controller = IRQ
-culture = al_iraqiya_arabic
+culture = kurdish
 religion = sunni
-capital = "Qazaniya"
-trade_goods = cotton
+capital = "Mandali"
+trade_goods = livestock
 hre = no
-base_tax = 3
-base_production = 3
-base_manpower = 1
+base_tax = 1
+base_production = 1
+base_manpower = 2
 is_city = yes
+add_core = QAR
 add_core = IRQ
-#add_core = QAR
 discovered_by = east_african
 discovered_by = muslim
 discovered_by = ottoman
@@ -20,10 +20,11 @@ discovered_by = eastern
 discovered_by = indian
 discovered_by = nomad_group
 
-1443.2.4 = {
+1469.2.4 = {
 	owner = AKK
 	controller = AKK
 	add_core = AKK
+	remove_core = QAR
 }
 1474.1.1 = { unrest = 4 } # Rebellion
 1475.1.1 = { unrest = 0 }

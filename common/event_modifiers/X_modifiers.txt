@@ -1,3 +1,0 @@
-X_full_state_prosperity_pmod = {
-	local_prosperity_growth = -1
-}

@@ -1,17 +1,17 @@
-#2311 - Samawah
+#2311 - Najaf
 
 owner = IRQ
 controller = IRQ
 culture = al_iraqiya_arabic
 religion = shiite
 capital = "Najaf"
-trade_goods = spices #Dates
+trade_goods = bt_trade_good_books #(JP) Shia Religious Centre
 hre = no
-base_tax = 3 
+base_tax = 3
 base_production = 3
-base_manpower = 2
+base_manpower = 3
 is_city = yes
-#add_core = BSR
+add_core = QAR
 add_core = IRQ
 discovered_by = muslim
 discovered_by = ottoman
@@ -21,10 +21,9 @@ discovered_by = east_african
 
 add_province_triggered_modifier = religious_center
 
-1443.2.4 = {
-	owner = AKK
-	controller = AKK
-	add_core = AKK
+1447.1.1 = {
+	owner = MSY
+	controller = MSY
 }
 1508.1.1 = {
 	owner = PER

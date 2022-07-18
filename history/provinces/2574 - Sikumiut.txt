@@ -1,8 +1,9 @@
+ 
 # No previous file for Sikumiut
 
 culture = inuit
 religion = totemism
-capital = "Sikumiut"
+capital = "Nunajnguk"
 trade_goods = unknown
 hre = no
 base_tax = 1 
@@ -21,6 +22,7 @@ discovered_by = north_american
 	owner = GBR
 	controller = GBR
 	add_core = GBR
+	capital = "Naina"
 	trade_goods = fish
 	culture = english
 	religion = protestant

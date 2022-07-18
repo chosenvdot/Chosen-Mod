@@ -1,18 +1,25 @@
+ 
 # 178 Anjou - Principal cities: Angers
+#Region - France
+#Area - Loire
 
 owner = PRO
 controller = PRO 
 capital = "Angers"
 is_city = yes
-culture = cosmopolitan_french
+culture = angevin_culture
 religion = catholic
 hre = no
-base_tax = 5
-base_production = 5
-trade_goods = cloth
+base_tax = 8
+base_production = 8			#Old centre of Angevin powers, and a considerable power in and off itself. Going slightly more that what is probably historical because pro tag lost vassal dev
+trade_goods = bt_trade_good_books			#Major university, and an important cultural and literary centre
 base_manpower = 5
 add_core = PRO
 fort_15th = yes
+
+extra_cost = 20
+center_of_trade = 2
+
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

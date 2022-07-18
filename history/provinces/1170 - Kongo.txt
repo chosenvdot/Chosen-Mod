@@ -1,3 +1,4 @@
+ 
 #1170 - Kongo
 
 owner = KON
@@ -7,9 +8,9 @@ religion = shamanism #Fetishism
 capital = "M'banza Kongo"
 trade_goods = iron
 hre = no
-base_tax = 6 
-base_production = 6
-base_manpower = 3
+base_tax = 8 
+base_production = 8
+base_manpower = 4
 is_city = yes
 add_core = KON
 discovered_by = central_african

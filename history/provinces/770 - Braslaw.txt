@@ -1,22 +1,26 @@
-#770 - Braslaw
+ 
+# - Braslaw
+#Region - Baltic
+#Area - Lithuania
 
 owner = LIT
 controller = LIT
-capital = "Breslauja"
+capital = "Kreva"
 is_city = yes
 culture = lithuanian
 religion = catholic
-trade_goods = livestock
+trade_goods = bt_trade_good_beer
 hre = no
-base_tax = 3
-base_production = 3
-base_manpower = 2
+base_tax = 1 
+base_production = 2 
+base_manpower = 1 
 add_core = LIT
+
+discovered_by = nomad_group
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
-discovered_by = nomad_group
 
 1543.1.1 = { unrest = 3 } # Counter reformation
 1569.7.1 = {

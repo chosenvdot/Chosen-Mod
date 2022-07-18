@@ -1,3 +1,4 @@
+ 
 #1166 - Loango
 
 owner = LOA
@@ -8,9 +9,9 @@ religion = shamanism #Fetishism
 capital = "Loango"
 trade_goods = gems
 hre = no
-base_tax = 3 
-base_production = 3
-base_manpower = 3
+base_tax = 6 
+base_production = 6
+base_manpower = 6
 is_city = yes
 discovered_by = central_african
 discovered_by = sub_saharan

@@ -1,2 +1,4 @@
-discovered_by = aboriginal_tech
+
+discovered_by = aboriginal_tech # 1.31
+
 1773.1.17 = { discovered_by = GBR }

@@ -1575,24 +1575,22 @@ estate_nobles_vassalise_vulnerable_country = {
 	can_select = {
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
-		always = no
 		num_of_cities = 12
 		any_neighbor_country = {
 			NOT = { has_reform = free_city }
 			is_free_or_tributary_trigger = yes
 			OR = {
 				NOT = { num_of_cities = 4 }
-				NOT = { total_development = 100 }
+				NOT = { total_development = 200 } #BT Dev Doubling
 			}
 			OR = {
 				NOT = { num_of_cities = 3 }
-				NOT = { total_development = 50 }
-				ROOT = { total_development = 500 }
+				NOT = { total_development = 100 } #BT Dev Doubling
+				ROOT = { total_development = 1000 } #BT Dev Doubling
 			}
 			NOT = { is_subject_of = root }
 			NOT = { overlord_of = root }
 			NOT = { alliance_with = root }
-			NOT = { historical_rival_with = root } #Should prevent historical rivals
 			NOT = { ROOT = { truce_with = prev } }
 			NOT = {
 				has_opinion = {
@@ -1652,12 +1650,12 @@ estate_nobles_vassalise_vulnerable_country = {
 				is_free_or_tributary_trigger = yes
 				OR = {
 					NOT = { num_of_cities = 4 }
-					NOT = { total_development = 100 }
+					NOT = { total_development = 200 } #BT Dev Doubling
 				}
 				OR = {
 					NOT = { num_of_cities = 3 }
-					NOT = { total_development = 50 }
-					ROOT = { total_development = 500 }
+					NOT = { total_development = 100 } #BT Dev Doubling
+					ROOT = { total_development = 1000 } #BT Dev Doubling
 				}
 				NOT = { is_subject_of = root }
 				NOT = { overlord_of = root }
@@ -2219,7 +2217,7 @@ estate_nobles_complete_conquest_of_x = {
 			area_for_scope_province = {
 				type = all
 				OR = {
-					owned_by = root
+				owned_by = root
 					owner = {
 						is_subject_of = root
 					}
@@ -2280,7 +2278,7 @@ estate_nobles_annex_subject = {
 		is_at_war = no
 		diplomatic_reputation = 0
 		any_subject_country = {
-			NOT = { total_development = 300 }
+			NOT = { total_development = 600 } #BT Dev Doubling
 			OR = {
 				AND = {
 					is_vassal = yes
@@ -2305,7 +2303,7 @@ estate_nobles_annex_subject = {
 	pre_effect = {
 		random_subject_country = {
 			limit = {
-				NOT = { total_development = 300 }
+				NOT = { total_development = 600 } #BT Dev Doubling
 				OR = {
 					AND = {
 						is_vassal = yes

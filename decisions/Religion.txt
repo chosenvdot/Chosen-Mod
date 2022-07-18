@@ -19,7 +19,7 @@ country_decisions = {
 				name = "the_societas_jesu"
 				duration = -1
 			}
-			add_reform_desire = -0.02
+			add_reform_desire = -0.01 # BT; -0.02
 		}
 		ai_will_do = {
 			factor = 1
@@ -30,7 +30,7 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_modifier = de_heretico_comburendo }
 			religion = catholic
-			reform_desire = 0.10
+			reform_desire = 0.20			#BeyondTypus - More catholic tag means more reform desire. Increasing reform desire criteria from 10 to match
 		}
 		allow = {
 			adm_tech = 6
@@ -385,7 +385,7 @@ country_decisions = {
 				name = "khalifah"
 				duration = -1
 			}
-			add_piety = 0.2
+			add_piety = 0.10
 		}
 		ai_will_do = {
 			factor = 1
@@ -410,7 +410,7 @@ country_decisions = {
 				name = "sect_practices"
 				duration = -1
 			}
-			add_piety = 0.2
+			add_piety = 0.10
 		}
 		ai_will_do = {
 			factor = 1
@@ -436,7 +436,7 @@ country_decisions = {
 				name = "islamic_scholarly_centre"
 				duration = -1
 			}
-			add_piety = 0.50
+			add_piety = 0.25
 		}
 		ai_will_do = {
 			factor = 1
@@ -1104,30 +1104,30 @@ country_decisions = {
 		}
 	}
 	
-	#tengri_black_shamanism = {
-	#	potential = {
-	#		NOT = { has_country_modifier = black_shamanism_modifier }
-	#		religion = tengri_pagan_reformed
-	#		NOT = { has_secondary_religion = yes }
-	#	}
-	#	allow = {
-	#		ADM = 3
-	#		NOT = { has_country_modifier = yellow_shamanism_modifier }
-	#	}
-	#	effect = {	
-	#		add_country_modifier = {
-	#			name = "black_shamanism_modifier"
-	#			duration = -1
-	#		}
-	#	}
-	#	ai_will_do = {
-	#		factor = 1
-	#		modifier = {
-	#			has_idea_group = humanist_ideas
-	#			factor = 0
-	#		}
-	#	}
-	#}
+	tengri_black_shamanism = {
+		potential = {
+			NOT = { has_country_modifier = black_shamanism_modifier }
+			religion = tengri_pagan_reformed
+			NOT = { has_secondary_religion = yes }
+		}
+		allow = {
+			ADM = 3
+			NOT = { has_country_modifier = yellow_shamanism_modifier }
+		}
+		effect = {	
+			add_country_modifier = {
+				name = "black_shamanism_modifier"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_idea_group = humanist_ideas
+				factor = 0
+			}
+		}
+	}
 	
 	tengri_expel_the_khojas = {
 		potential = {
@@ -1725,7 +1725,7 @@ country_decisions = {
 			stability = 1
 		}
 		effect = {
-			#add_prestige = -100
+			add_prestige = -100
 			add_stability = -2
 			change_religion = sikhism
 			if = {
@@ -1916,45 +1916,6 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 0
-		}
-	}
-	build_the_third_temple = {
-		potential = {
-			religion = jewish
-			NOT = {
-				379 = {
-					has_province_flag = third_temple_built
-				}
-			}
-			NOT = { has_country_flag = has_third_temple_event_going }
-		}
-		provinces_to_highlight = {
-			province_id = 379
-			OR = {
-				NOT = { is_core = ROOT }
-				NOT = { owned_by = ROOT }
-				NOT = { religion = jewish }
-			}
-		}
-		allow = {
-			religion = jewish
-			379 = {
-				owned_by = ROOT
-				is_core = ROOT
-				religion = jewish	
-			}
-		}
-		effect = {
-			country_event = { 
-				id = jewish_flavor.5
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = { treasury = 6000 }
-			}
 		}
 	}	
 }

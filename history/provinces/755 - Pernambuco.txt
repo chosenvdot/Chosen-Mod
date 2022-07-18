@@ -1,3 +1,4 @@
+ 
 #755 - Pernambuco
 
 culture = tupinamba
@@ -8,7 +9,7 @@ trade_goods = unknown
 hre = no
 base_tax = 3
 base_production = 5
-base_manpower = 2
+base_manpower = 1
 native_size = 15
 native_ferocity = 1
 native_hostileness = 2

@@ -1,3 +1,4 @@
+ 
 #4503 - Mansura
 
 owner = SND
@@ -5,12 +6,12 @@ controller = SND
 culture = sindhi
 religion = sunni
 capital = "Mansura"
-trade_goods = cloth
+trade_goods = paper
 add_brahmins_or_church_effect = yes
 hre = no
-base_tax = 4
-base_production = 4
-base_manpower = 2
+base_tax = 8
+base_production = 8
+base_manpower = 4
 is_city = yes
 add_core = SND
 discovered_by = indian

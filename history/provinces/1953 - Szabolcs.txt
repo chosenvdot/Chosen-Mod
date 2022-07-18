@@ -1,28 +1,46 @@
+ 
 #1953 - Szabolcs
 
 owner = HUN
 controller = HUN 
 culture = hungarian
 religion = catholic
-capital = "Debrecen"
+capital = "Nyíregyháza"
 trade_goods = livestock
 hre = no
-base_tax = 3
-base_production = 3
-base_manpower = 2
+base_tax = 1
+base_production = 2
+base_manpower = 1
 is_city = yes
 add_core = HUN
-discovered_by = KAZ
-discovered_by = CRI
-discovered_by = GOL
-discovered_by = AST
-discovered_by = QAS
+add_core = UHU
+
+1444.1.1 = { discovered_by = KAZ }
+1444.1.1 = { discovered_by = CRI }
+1444.1.1 = { discovered_by = GOL }
+1444.1.1 = { discovered_by = AST }
+1444.1.1 = { discovered_by = QAS }
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
-center_of_trade = 1
 
+1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
+	remove_core = HUN
+	remove_core = UHU
+	add_core = CUM
+	owner = CUM
+	controller = CUM
+} #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
+1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
+	remove_core = CUM
+	add_core = HUN
+	add_core = UHU
+	owner = HUN
+	controller = HUN
+} #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
+
+#1444 onwards
 1506.1.1 = { revolt = { type = anti_tax_rebels size = 1.5 } controller = REB } # Szekely rebellion
 1507.1.1 = { revolt = {} controller = HUN } # Estimated
 1514.4.1 = { revolt = { type = anti_tax_rebels size = 1 } controller = REB } # Peasant rebellion against Hungary's magnates
@@ -44,31 +62,14 @@ center_of_trade = 1
 } # Ferdinand gains Transylvania from Treaty of Weissenburg
 1556.10.1 = { owner = TRA controller = TRA } # Isabella Jagiello is restored as queen of Transylvania
 1567.1.1 = { religion = reformed } # Synod of Debrecen
-1599.1.1 = {
-	owner = WAL
-	controller = WAL
-	add_core = WAL
-} # Battle of Selimbar, Michael the brave gained control
-1601.1.1 = {
-	owner = TRA
-	controller = TRA
-	remove_core = WAL
-} # Michael is assasinated
-1604.1.1 = { owner = HAB controller = HAB }
-1604.10.1 = { revolt = { type = nationalist_rebels size = 0 } controller = REB } # Estimated, rebellion (Stephen Bocskai) against Austrian rule
-1606.6.23 = { revolt = {} owner = TRA controller = TRA } # Stephen becomes prince of Transylvania
-1664.8.1 = { #Peace of Vasvár
-	owner = TUR
-	controller = TUR
-	add_core = TUR
-}
-1685.1.1 = {
-	controller = HAB
-} # Conquered/liberated by Charles of Lorraine, the Ottoman Turks are driven out of Hungary
-1699.1.26 = {
+1570.1.1 = {
+	remove_core = TRA
 	owner = HAB
 	controller = HAB
-	remove_core = TUR
-} # Treaty of Karlowitz
+} # Treaty of Speyer
+1619.1.1 = { revolt = { type = nationalist_rebels size = 1 } controller = REB } # Occupied by Gabriel Bethlen
+1620.1.1 = { revolt = {} controller = HAB }
+1678.1.1 = { revolt = { type = nationalist_rebels size = 1 } controller = REB } # Kuruc rebellion
+1690.1.1 = { owner = HAB controller = HAB } # Estimated
 1703.1.1 = { unrest = 6 } # Kuruc rebellion, lead by Francisc Rakoczy
 1711.1.1 = { unrest = 0 } # The treaty of Szatmar

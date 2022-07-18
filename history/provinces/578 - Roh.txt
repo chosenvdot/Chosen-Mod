@@ -1,3 +1,4 @@
+ 
 #578 - Roh
 
 owner = AFG
@@ -8,11 +9,13 @@ religion = sunni
 capital = "Peshawar"
 trade_goods = livestock
 hre = no
-base_tax = 4 
-base_production = 4
-base_manpower = 2
+base_tax = 8 
+base_production = 8
+base_manpower = 4
 is_city = yes
-discovered_by = KAS
+fort_15th = yes # Bala Hissar
+add_core = AFG
+1444.1.1 = { discovered_by = KAS }
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
@@ -23,7 +26,6 @@ center_of_trade = 1
 1449.2.1 = { #Conquered by Babur bin Baysunkur
 	owner = KHO
 	controller = KHO
-	add_core = KHO
 	remove_core = TIM
 }
 1507.7.1 = {

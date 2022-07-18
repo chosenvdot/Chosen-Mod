@@ -1,3 +1,4 @@
+ 
 # No previous file for Michigamea
 
 culture = illini
@@ -5,18 +6,25 @@ religion = totemism
 capital = "Michigamea"
 trade_goods = unknown
 hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 1
+base_tax = 1  
+base_production = 1 
+base_manpower = 1 
 native_size = 5
 native_ferocity = 1
 native_hostileness = 2
-#tribal_owner = KSK
+
 
 
 discovered_by = north_american
 
+1444.1.1 = { tribal_owner = KSK }
 
+1650.1.1 = {
+	owner = ILL
+	controller = ILL
+	add_core = ILL
+	is_city = yes 
+}
 1659.1.1 = { discovered_by = FRA } # Médard Chouart Des Groseilliers
 1701.8.14 = {
 	owner = ---

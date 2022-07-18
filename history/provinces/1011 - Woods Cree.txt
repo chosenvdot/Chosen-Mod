@@ -1,8 +1,9 @@
+ 
 #1011 - Woods Cree
 
-culture = plains_cree
+culture = cree
 religion = totemism
-capital = "Woods cree"
+capital = "Misipawastik"
 trade_goods = unknown
 hre = no
 base_tax = 1 
@@ -16,24 +17,12 @@ native_hostileness = 3
 
 discovered_by = north_american
 
-1692.1.1 = { discovered_by = ENG } #Henry Kelsey
-1707.5.12 = { discovered_by = GBR }
-1732.1.1 = { discovered_by = FRA } # Pierre Gaultier de Varennes
-1753.1.1 = {
- 	owner = FRA 
-	controller = FRA
-	add_core = FRA
-	is_city = yes
-	culture = cosmopolitan_french
-	religion = catholic
-	trade_goods = fur 
-} #Fort a la Corne
-1763.2.10 = {
-	owner = GBR
-	controller = GBR
-	add_core = GBR
-	is_city = yes
-	culture = english
-	religion = protestant
+1755.1.1 = { discovered_by = GBR } #Henday
+
+1760.1.1 = {
+	owner = BLA
+	controller = BLA
+	add_core = BLA
 	trade_goods = fur
-} # Treaty of Paris
+	is_city = yes 
+} #Great Plain tribes spread over vast territories

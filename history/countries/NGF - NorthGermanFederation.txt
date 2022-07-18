@@ -1,7 +1,0 @@
-government = monarchy
-add_government_reform = feudalism_reform
-government_rank = 3
-primary_culture = prussian
-religion = protestant
-technology_group = western
-capital = 50 #Berlin

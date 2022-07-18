@@ -1,25 +1,45 @@
+ 
 #102 - Nice
+#Region - Italy
+#Area - Liguria
 
-owner = SAV
-controller = SAV
-add_core = SAV
+owner = NZZ
+controller = NZZ
+add_core = NZZ
 culture = ligurian
 religion = catholic
 hre = yes
-base_tax = 4 
+base_tax = 4
 base_production = 4
-trade_goods = fish
+trade_goods = naval_supplies
 base_manpower = 2
 capital = "Nice"
 is_city = yes
 
-
+extra_cost = 8
+center_of_trade = 1
 
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 
+
+1356.1.1 = {
+	owner = SAV
+	controller = SAV
+	add_core = SAV
+} # Random, finish later
+1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
+	remove_core = SAV
+	owner = NZZ
+	controller = NZZ
+} #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
+1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
+	add_core = SAV
+	owner = SAV
+	controller = SAV
+} #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
 
 1495.1.1 = { hre = no }
 1713.4.12 = {

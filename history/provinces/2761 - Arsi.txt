@@ -1,17 +1,18 @@
+ 
 #2761 - Arsi
 
-owner = ETH
-controller = ETH
-add_core = ETH
+owner = HDY
+controller = HDY
+add_core = HDY
 culture = amhara 
 religion = sunni
 capital = "Assela"
 is_city = yes
-base_manpower = 2
+base_manpower = 4
 trade_goods = coffee
 hre = no
-base_tax = 1 
-base_production = 1
+base_tax = 2  
+base_production = 2 
 add_local_autonomy = 25
 
 discovered_by = east_african

@@ -7,6 +7,221 @@
 namespace = flavor_eth
 normal_or_historical_nations = yes
 
+	
+# Pero da Covilha
+country_event = {
+	id = flavor_eth.1
+	title = flavor_eth.1.t
+	desc = flavor_eth.1.d
+	picture = SHIP_SAILING_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = ETH
+		NOT = { is_year = 1550 }
+		religion_group = christian
+		OR = { # BT; added IBE, adjusted
+			AND = {
+				exists = POR
+				any_owned_province = { has_discovered = POR }
+
+				NOT = { war_with = POR }
+			}
+			AND = {
+				NOT = { exists = POR }
+				exists = IBE
+				any_owned_province = { has_discovered = IBE }
+				NOT = { war_with = IBE }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 30
+	}
+	
+	
+	option = { 
+		name = flavor_eth.1.a
+		ai_chance = { factor = 90 }
+		add_prestige = 5
+		custom_tooltip = flavor_eth.1.a.desc
+		set_country_flag = portuguese_embassy
+		hidden_effect = {
+			capital_scope = {
+				POR = {
+					discover_province = PREV
+				}
+			}
+		}
+	}
+	option = {
+		name = flavor_eth.1.b	
+		ai_chance = { factor = 5 }
+		add_legitimacy = 5
+		hidden_effect = {
+			capital_scope = {
+				POR = {
+					discover_province = PREV
+				}
+			}
+		}
+	}
+	option = {
+		name = flavor_eth.1.c
+		ai_chance = { factor = 5 }
+		if = {
+			limit = { exists = POR }
+			reverse_add_casus_belli = {
+				target = POR
+				type = cb_insult
+				months = 60
+			}
+			hidden_effect = { #Problem add IBE tag
+				capital_scope = {
+					POR = {
+						discover_province = PREV
+					}
+				}
+			}
+		}
+		if = { # BT; added IBE, adjusted
+			limit = { 
+				exists = IBE
+				NOT = { exists = POR }
+			}
+			reverse_add_casus_belli = {
+				target = IBE
+				type = cb_insult
+				months = 60
+			}
+			hidden_effect = { #Problem add IBE tag
+				capital_scope = {
+					IBE = {
+						discover_province = PREV
+					}
+				}
+			}
+		}
+	}	
+	
+	
+}
+
+#An Embassy Is Here!
+country_event = {
+	id = flavor_eth.2
+	title = flavor_eth.2.t
+	desc = flavor_eth.2.d
+	picture = DIPLOMACY_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = ETH
+		has_country_flag = portuguese_embassy
+		OR = { # BT; added IBE, adjusted
+			AND = {
+				exists = POR
+				NOT = { war_with = POR }
+			}
+			AND = {
+				NOT = { exists = POR }
+				exists = IBE
+				NOT = { war_with = IBE }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 90
+	}
+	
+	
+	option = { 
+		name = flavor_eth.2.a
+		trigger = {
+			is_neighbor_of = MAM
+		}
+		if = {
+			limit = { exists = POR }
+			POR = {
+				country_event = {
+					id = flavor_eth.3
+					days = 180
+					tooltip = flavor_eth.2.3
+				}
+			}
+		}
+		if = { # BT; added IBE, adjusted
+			limit = {
+				NOT = { exists = POR }
+				exists = IBE
+			}
+			IBE = {
+				country_event = {
+					id = flavor_eth.3
+					days = 180
+					tooltip = flavor_eth.2.3
+				}
+			}
+		}
+		add_mil_power = 25
+	}
+	option = {
+		name = flavor_eth.2.b	
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
+	}
+	option = {
+		name = flavor_eth.2.c
+		add_years_of_income = 1.0
+	}	
+
+}
+
+
+#Prester John?
+country_event = {
+	id = flavor_eth.3
+	title = flavor_eth.3.t
+	desc = flavor_eth.3.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	
+	
+	option = { 
+		name = flavor_eth.3.a
+		ai_chance = { factor = 90 }
+		hidden_effect = {
+			ETH = {
+				country_event = {
+					id = flavor_eth.4
+					days = 180
+				}
+			}
+		}
+		add_mil_power = -50
+		add_papal_influence = 10
+		reverse_add_opinion = { who = ETH modifier = opinion_military_aid }
+			
+	}
+	option = {
+		name = flavor_eth.3.b
+		add_prestige = -5
+		hidden_effect = {
+			ETH = {
+				country_event = {
+					id = flavor_eth.5
+					days = 1825
+				}
+			}
+		}
+		reverse_add_opinion = { who = ETH modifier = opinion_refused_military_aid }
+	}
+
+}
+
 # aid given
 country_event = {
 	id = flavor_eth.4
@@ -18,6 +233,24 @@ country_event = {
 	option = { 
 		name = flavor_eth.4.a
 		reverse_add_opinion = { who = POR modifier = opinion_military_aid }
+		add_country_modifier = {
+			name = eth_mil_aid_from_portugal
+			duration = 3650
+		}
+	}
+}
+
+# aid refused
+country_event = {
+	id = flavor_eth.5
+	title = flavor_eth.5.t
+	desc = flavor_eth.5.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	
+	option = { 
+		name = flavor_eth.5.a
+		add_legitimacy = -10
 	}
 }
 
@@ -134,7 +367,6 @@ country_event = {
 		set_capital = 1213
 		1213 = {
 			rename_capital = "Debre Berhan"
-			add_building = temple
 		}
 		every_owned_province = {
 			limit = {
@@ -254,16 +486,16 @@ country_event = {
 		is_year = 1450
 		NOT = { is_year = 1480 }
 		exists = MAM
-		NOT = { vassal_of = MAM }
-		NOT = { overlord_of = MAM }
-		NOT = { alliance_with = MAM }
-		NOT = { war_with = MAM }
-
+		NOT = {
+			vassal_of = MAM
+			overlord_of = MAM
+			alliance_with = MAM
+			war_with = MAM
+		}
 		MAM = {
 			religion_group = muslim
 			owns = 358
 		}
-		religion = coptic
 	}
 
 	mean_time_to_happen = {
@@ -456,10 +688,12 @@ country_event = {
 			NOT = { has_country_flag = eth_autonomous_church }
 			religion = coptic
 		}
-		NOT = { vassal_of = ETH }
-		NOT = { overlord_of = ETH }
-		NOT = { alliance_with = ETH }
-		NOT = { war_with = ETH }
+		NOT = {
+			vassal_of = ETH
+			overlord_of = ETH
+			alliance_with = ETH
+			war_with = ETH
+		}
 	}
 
 	mean_time_to_happen = {
@@ -807,7 +1041,7 @@ province_event = {
 		NOT = { has_global_flag = end_of_oromo_migrations }
 		region = horn_of_africa_region
 		NOT = { area = red_sea_coast_area }
-		NOT = { area = dongola_area }
+		#NOT = { area = dongola_area } # ??? BT
 		NOT = { area = upper_nubia_area }
 		any_neighbor_province = {
 			has_province_modifier = eth_oromo_migration
@@ -820,7 +1054,7 @@ province_event = {
 			name = "eth_oromo_migration"
 			duration = 3650
 		}
-		change_culture = oromo
+		#change_culture = oromo # ??? BT
 		change_religion = shamanism
 	}
 }
@@ -893,13 +1127,13 @@ country_event = {
 			}
 			remove_province_modifier = eth_oromo_migration
 		}
-		random_province = {
-			limit = {
-				culture = oromo
-				NOT = { is_core = JIM }
-			}
-			add_core = JIM
-		}
+		#random_province = { # ??? BT
+		#	limit = {
+		#		culture = oromo
+		#		NOT = { is_core = JIM }
+		#	}
+		#	add_core = JIM
+		#}
 	}
 }
 
@@ -934,7 +1168,7 @@ country_event = {
 		is_lesser_in_union = no
 		has_heir = no
 		government = monarchy
-		has_government_attribute = heir
+		#has_government_attribute = heir # ??? BT
 	}
 	
 	mean_time_to_happen = {
@@ -1007,11 +1241,11 @@ country_event = {
 		if = {
 			limit = {
 				has_dlc = "Rights of Man"
-				has_government_attribute = queen
+				#has_government_attribute = queen # ??? BT
 			}
 			define_consort = {
 				name = "Eleni"
-				country_of_origin = HDY
+				#country_of_origin = HDY # ??? BT
 				dynasty = "Hadiya"
 				culture = sidamo
 				religion = coptic #But was muslim
@@ -1021,7 +1255,7 @@ country_event = {
 				female = yes
 			}
 			hidden_effect = {
-				add_queen_personality = righteous_personality
+				add_queen_personality_ancestor = { key = righteous }
 				add_queen_personality = intricate_web_weaver_personality
 			}
 		}
@@ -1061,7 +1295,45 @@ country_event = {
 # written by Ogulcan Yildirim
 ########################################
 
+#The many troubles of the Negusa Nagast
+country_event = {
+	id = flavor_eth.29
+	title = flavor_eth.29.t
+	desc = flavor_eth.29.desc
+	picture = NEGUSA_NAGAST_eventPicture
+	
+	trigger = {
+		has_dlc = "Origins"
+		has_mission = eth_reform_the_negusa_government
+		NOT = { has_country_modifier = eth_negusa_nagast_issues }
+		has_reform = negusa_nagast
+		NOT = { has_country_flag = has_negusa_event }
+		NOT = { mission_completed = eth_reform_the_negusa_government }
+	}
 
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		hidden_effect = { set_country_flag = has_negusa_event }
+	}
+
+	option = {
+		name = flavor_eth.29.a
+		add_country_modifier = {
+			name = eth_negusa_nagast_issues
+			duration = -1
+		}
+		hidden_effect = {
+			clr_country_flag = has_negusa_event
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
 
 #Permanent Cities for Ethiopia
 country_event = {
@@ -1289,27 +1561,16 @@ country_event = {
 		}
 
 		ai_chance = {
-			factor = 0
+			factor = 100
 		}
 	}
 	
 	option = {	#We should not create a bigger rift between our people
 		name = flavor_eth.40.b
 		add_stability = 1
-		2771 = {
-			add_province_modifier = {
-				name = eth_accepted_society
-				duration = 9125
-			}
-		}
-		2772 = {
-			add_province_modifier = {
-				name = eth_accepted_society
-				duration = 9125
-			}
-		}
+
 		ai_chance = {
-			factor = 100
+			factor = 0
 		}
 	}
 }
@@ -2081,6 +2342,7 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				continent = ROOT
+				controlled_by = ROOT
 				is_state = yes 
 				NOT = { has_province_modifier = itinerant_capital_area }
 				NOT = { has_province_flag = is_itinerent_capital }
@@ -2090,40 +2352,116 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				continent = ROOT
+				controlled_by = ROOT
 				is_state = yes 
 				NOT = { has_province_modifier = itinerant_capital_area }
 				NOT = { has_province_flag = is_itinerent_capital }
-				development = 10
+				OR = {
+					local_autonomy = 20
+					development = 10
+				}
 			}
 			save_event_target_as = eth_new_capital
 		}
 		random_owned_province = {
 			limit = {
 				continent = ROOT
+				controlled_by = ROOT
 				is_state = yes 
 				NOT = { has_province_modifier = itinerant_capital_area }
 				NOT = { has_province_flag = is_itinerent_capital }
-				development = 20
+				OR = {
+					local_autonomy = 40
+					development = 20
+				}
 			}
 			save_event_target_as = eth_new_capital
 		}
 		random_owned_province = {
 			limit = {
 				continent = ROOT
+				controlled_by = ROOT
 				is_state = yes 
 				NOT = { has_province_modifier = itinerant_capital_area }
 				NOT = { has_province_flag = is_itinerent_capital }
-				development = 30
+				OR = {
+					local_autonomy = 60
+					development = 30
+				}
 			}
 			save_event_target_as = eth_new_capital
 		}
 		random_owned_province = {
 			limit = {
 				continent = ROOT
+				controlled_by = ROOT
 				is_state = yes 
 				NOT = { has_province_modifier = itinerant_capital_area }
 				NOT = { has_province_flag = is_itinerent_capital }
-				development = 40
+				OR = {
+					local_autonomy = 80
+					development = 40
+				}
+			}
+			save_event_target_as = eth_new_capital
+		}
+		random_owned_province = {
+			limit = {
+				continent = ROOT
+				controlled_by = ROOT
+				is_state = yes 
+				NOT = { has_province_modifier = itinerant_capital_area }
+				NOT = { has_province_flag = is_itinerent_capital }
+				OR = {
+					local_autonomy = 20
+					development = 10
+				}
+				religion = ROOT
+			}
+			save_event_target_as = eth_new_capital
+		}
+		random_owned_province = {
+			limit = {
+				continent = ROOT
+				controlled_by = ROOT
+				is_state = yes 
+				NOT = { has_province_modifier = itinerant_capital_area }
+				NOT = { has_province_flag = is_itinerent_capital }
+				OR = {
+					local_autonomy = 40
+					development = 20
+				}
+				religion = ROOT
+			}
+			save_event_target_as = eth_new_capital
+		}
+		random_owned_province = {
+			limit = {
+				continent = ROOT
+				controlled_by = ROOT
+				is_state = yes 
+				NOT = { has_province_modifier = itinerant_capital_area }
+				NOT = { has_province_flag = is_itinerent_capital }
+				OR = {
+					local_autonomy = 60
+					development = 30
+				}
+				religion = ROOT
+			}
+			save_event_target_as = eth_new_capital
+		}
+		random_owned_province = {
+			limit = {
+				continent = ROOT
+				controlled_by = ROOT
+				is_state = yes 
+				NOT = { has_province_modifier = itinerant_capital_area }
+				NOT = { has_province_flag = is_itinerent_capital }
+				OR = {
+					local_autonomy = 80
+					development = 40
+				}
+				religion = ROOT
 			}
 			save_event_target_as = eth_new_capital
 		}

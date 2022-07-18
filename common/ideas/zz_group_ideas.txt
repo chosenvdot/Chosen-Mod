@@ -41,12 +41,12 @@ client_ideas = {
 
 colonial_ideas = {
 	start = {
-		colonists = 2
+		development_cost = -0.1
 		no_religion_penalty = yes
 	}
 	
 	bonus = {
-		development_cost = -0.1
+		land_morale = 0.10
 	}
 	
 	trigger = {
@@ -131,7 +131,7 @@ pirate_ideas = {
 	}
 	trigger = {
 		OR = {
-			has_reform = pirate_republic_reform
+		has_reform = pirate_republic_reform
 			tag = NSS
 			tag = PRY
 			tag = TOR
@@ -203,11 +203,10 @@ cossack_ideas = {
 	}
 }
 
-
 berber_ideas = {
 	start = {
 		naval_attrition = -0.25
-		global_sailors_modifier = 0.2
+		may_perform_slave_raid = yes
 	}
 	
 	bonus = {
@@ -215,7 +214,13 @@ berber_ideas = {
 	}
 	
 	trigger = {
-		culture_group = maghrebi
+		OR = {
+			tag = OTN # BT
+			tag = TUN # BT
+			tag = TLC # BT
+			tag = ALG # BT
+			culture_group = berber_group			#BTPL added because of culture change
+		}
 	}
 	free = yes
 	
@@ -563,7 +568,7 @@ horde_ideas = {
 		#land_attrition = -0.20 (effect taken in OIR_ideas)
 	}
 	traditions_of_the_great_khan = {
-		cavalry_power = 0.1
+		cavalry_power = 0.20
 	}
 	horse_supplies = {
 		land_maintenance_modifier = -0.05
@@ -647,7 +652,7 @@ anatolian_beyliks_ideas = {
 		global_manpower_modifier = 0.10
 	}
 	akinci_cavalry = {
-		cavalry_power = 0.1
+		cavalry_power = 0.15
 		loot_amount = 0.10
 	}
 	ghazi = {
@@ -707,7 +712,44 @@ daimyo_ideas = {
 	}
 }
 
-
+BAV_ideas = {
+	start = {
+		cavalry_power = 0.1
+		heir_chance = 0.5
+	}
+	
+	bonus = {
+		development_cost = -0.1
+	}
+	
+	trigger = {
+		primary_culture = bavarian
+	}
+	free = yes
+	
+	everlating_succeession = {
+		legitimacy = 1
+	}
+	bavarian_purity_law = {
+		production_efficiency = 0.1
+	}
+	bavarian_state_orchestra = {
+		prestige = 1
+	}
+	geistlicher_rat = {
+		global_heretic_missionary_strength = 0.03
+		papal_influence = 1
+	}
+	brewmaster_general = {
+		global_tax_modifier = 0.1
+	}
+	professional_army = {
+		discipline = 0.05
+	}
+	royal_order_of_st_george = {
+		army_tradition = 0.5
+	}
+}
 
 swabian_ideas = {
 	start = {
@@ -798,7 +840,7 @@ malayan_ideas = {
 	
 	trigger = {
 		OR = {
-			religion_group = muslim
+		religion_group = muslim
 			tag = PAH
 		}
 		culture_group = malay
@@ -874,24 +916,19 @@ arabian_ideas = {
 }
 
 
-latin_ideas = {
+latin_ideas = { #Take another look?
 	start = {
 		papal_influence = 2
-		trade_efficiency = 0.1
+		production_efficiency = 0.1					#Vanilla   trade_efficiency = 0.1
 	}
 	
 	bonus = {
-		legitimacy = 1
-		republican_tradition = 0.3
+		discipline = 0.05					#Vanilla   legitimacy = 1   and   republican_tradition = 0.005
 	}
 	
 	trigger = {
-		OR = {
-			culture_group = latin
-			capital_scope = { region = italy_region }
-			tag = RIM
-			tag = STI
-		}
+		culture_group = latin
+		capital_scope = { region = italy_region }
 	}
 	free = yes
 	
@@ -902,7 +939,8 @@ latin_ideas = {
 		merc_maintenance_modifier = -0.15
 	}
 	italian_aristocracy = {
-		global_spy_defence = 0.2
+		legitimacy = 1					#Vanilla   enemy_core_creation = 0.25
+		republican_tradition = 0.3					#Vanilla   global_spy_defence = 0.05
  	}
 	tracee_italienne = {
 		defensiveness = 0.05
@@ -1049,40 +1087,42 @@ central_indic_ideas = { #Gond Ideas
 }
 
 swahili_ideas = {
-	start = {  
-		land_morale = 0.1
-		infantry_cost = -0.1
+	start = {
+		trade_range_modifier = 0.25
+		light_ship_cost = -0.2
 	}
-  
+
 	bonus = {
-		shock_damage_received = -0.1
+		global_trade_power = 0.1
 	}
-  
+
 	trigger = {
-		tag = ZAN
+		primary_culture = swahili
 	}
 	free = yes
-  
-	rzw_legacy_of_zimbabwe = {
-		build_cost = -0.1
-	}
-	rzw_strict_gold_regulations = {
-		inflation_reduction = 0.1
-	}
-	rzw_empowering_the_rozwi = {
-		infantry_power = 0.1
-	}
-	rzw_hierarchical_tax_organization = {
-		global_tax_modifier = 0.1
-	}
-	rzw_discipline_and_traning = {
-		army_tradition_from_battle = 0.5
-	}
-	rzw_mwari_cult = {
-		global_unrest = -1
-	}
-	rzw_vashambadzi = {
+
+	swa_indian_ocean_trade = {
 		trade_efficiency = 0.1
+		sailor_maintenance_modifer = -0.1
+	}
+	monsoon_season = {
+		leader_naval_manuever = 1
+	}
+	great_mosque_of_kilwa = {
+		tolerance_own = 1
+	}
+	indian_ocean_melting_pot = {
+		idea_cost = -0.05
+	}
+	recruit_the_unbelievers = {
+		merc_maintenance_modifier = -0.15
+	}
+	ivory_trade = {
+		production_efficiency = 0.1
+	}
+	familiar_presence_abroad = {
+		diplomatic_reputation = 1
+		diplomatic_upkeep = 1
 	}
 }
 
@@ -1349,14 +1389,17 @@ TIB_ideas = {
 		OR = {
 			tag = TIB
 			AND = {
-				primary_culture = tibetan
+				OR = {
+					primary_culture = tibetan
+					primary_culture = tibetan_new
+				}
 				religion = vajrayana 
 			}
 		}
 	}
 	free = yes       #will be added at load.
 	
-	vajrayana_buddhism  = {                    
+	vajrayana_buddhism = {                    
 		stability_cost_modifier = -0.10
 	}
 	bon_influence = {                
@@ -1394,6 +1437,7 @@ west_african_ideas = {
 		technology_group = sub_saharan
 		NOT = {
 			tag = LOA
+			tag = NDO
 		}
 	}
 	free = yes
@@ -1549,8 +1593,9 @@ caucasus_ideas = {
 	
 	trigger = {
 		OR = {
-			#culture_group = caucasian
+			culture_group = caucasian
 			primary_culture = azerbaijani
+			tag = SHE					#BTP new tag
 		}
 	}
 	free = yes
@@ -1581,8 +1626,8 @@ caucasus_ideas = {
 
 ruthenian_ideas = {
 	start = {
-		land_morale = 0.10
-		num_accepted_cultures = 2
+		manpower_recovery_speed = 0.1
+		global_manpower_modifier = 0.15
 	}
 
 	bonus = {
@@ -1593,33 +1638,31 @@ ruthenian_ideas = {
 		OR = {
 			primary_culture = ruthenian
 			primary_culture = byelorussian
-			tag = UKR
 		}
 	}
 	free = yes
  
 	mother_of_russian_cities = { #Mother of Russian States
-		legitimacy = 1
-		prestige = 1
+		legitimacy = 0.5
+		prestige = 0.5
 	}
 	international_influences = {
-		tolerance_heretic = 3
-		tolerance_heathen = 3
+		tolerance_heretic = 2
 	}
 	zaporizhian_cossacs = {
-		infantry_power = 0.15
+		cavalry_power = 0.15
 	}
 	east_and_west = {
-		production_efficiency = 0.1
+		global_trade_power = 0.1
 	}
 	legacy_of_ancient_rus = {
-		stability_cost_modifier = -0.15
+		stability_cost_modifier = -0.1
 	}
 	reuniting_rus = {
-		reinforce_speed = 0.15
+		years_of_nationalism = -5
 	}
 	birth_of_russian_orthodoxy = {
-		manpower_recovery_speed = 0.2
+		tolerance_own = 1
 	}
 }
 
@@ -1713,7 +1756,8 @@ chinese_ideas = {
 	
 	trigger = {
 		OR = {
-			culture_group = east_asian #Chinese
+			culture_group = east_asian 		#Chinese
+			culture_group = miao_g 		#BTPL added because of culture change
 			tag = CGS #Changsheng
 		}
 	}
@@ -2430,7 +2474,10 @@ highland_scottish_ideas = {
 	}
 	
 	trigger = {
-		primary_culture = highland_scottish
+		OR = {
+			primary_culture = highland_scottish
+			primary_culture = gallgaidheil # BT
+		}
 	}
 	
 	free = yes
@@ -2672,10 +2719,17 @@ nw_native_ideas = {
 	
 	trigger = {
 		OR = {
-			primary_culture = athabascan
-			primary_culture = chinook
+			#primary_culture = athabascan
+			#primary_culture = chinook
 			primary_culture = haida
-			primary_culture = salish
+			#primary_culture = salish
+			#primary_culture = salish #Duplicate
+			culture_group = na_dene
+			culture_group = salish_group
+			culture_group = hokan
+			culture_group = chumash_group
+			culture_group = penutian
+			culture_group = wakashan_group
 		}
 	}
 	free = yes
@@ -3204,7 +3258,7 @@ central_algonquian_federation_ideas = {
 		global_manpower_modifier = 0.2
 	}
 	calg_teaching_scrolls = {
-		idea_cost = -0.1
+		idea_cost = 0.1
 	}
 	calg_seven_fires_prophecy = {
 		technology_cost = -0.1
@@ -3301,46 +3355,5 @@ generic_federation_ideas = {
 	}
 	fed_sunrise_invasion = {
 		global_colonial_growth = 30
-	}
-}
-
-horn_of_african_ideas = {
-	start = {
-		stability_cost_modifier = -0.1
-		global_tax_modifier = 0.1
-	}
-	
-	bonus = {
-		prestige = 1
-	}
-	
-	trigger = {
-		culture_group = cushitic
-		NOT = { primary_culture = somali }
-		NOT = { primary_culture = tigray }
-		NOT = { tag = ETH }
-	}
-	free = yes
-	
-	horn_of_african_aksumite_legacy = {
-		global_unrest = -1
-	}
-	horn_of_african_punt_legend = {
-		trade_range_modifier = 0.2
-	}
-	horn_of_african_highland_cultivation = {
-		development_cost = -0.05
-	}
-	horn_of_african_oromon_warriors = {
-		infantry_power = 0.1
-	}
-	horn_of_african_religious_melting_pot = {
-		tolerance_heathen = 1
-	}
-	horn_of_african_cushitic_language = {
-		improve_relation_modifier = 0.15
-	}
-	horn_of_african_religious_defensive_nature = {
-		defensiveness = 0.2
 	}
 }

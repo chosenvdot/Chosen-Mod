@@ -1,3 +1,4 @@
+ 
 # No previous file for Kotoko
 
 owner = YAO
@@ -9,10 +10,10 @@ religion = sunni
 capital = "Kotoko"
 trade_goods = grain
 hre = no
-base_tax = 3 
-base_production = 3
+base_tax = 6 
+base_production = 6
 is_city = yes
-base_manpower = 1
+base_manpower = 2 
 
 
 

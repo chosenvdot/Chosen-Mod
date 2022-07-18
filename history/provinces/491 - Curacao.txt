@@ -1,56 +1,40 @@
+ 
 #491 - Curacao
 
-culture = arawak
+culture = guajiro
 religion = animism
-capital = "Curacao"
+capital = "Bonay"
 trade_goods = unknown
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 1
+base_production = 1
 base_manpower = 1
-native_size = 5
+native_size = 10
 native_ferocity = 1
-native_hostileness = 6
-discovered_by = CAB
-discovered_by = ARW
-extra_cost = 8
-center_of_trade = 1
+native_hostileness = 3
 
-1499.1.1 = {
-	discovered_by = CAS
-	owner = CAS
-	controller = CAS
-	culture = castillian
-	add_core = CAS
-	religion = catholic
-	is_city = yes
-	trade_goods = sugar
-} # Christopher Columbus 
-1516.1.23 = {
-	discovered_by = SPA
-	owner = SPA
+1444.1.1 = { discovered_by = CAB }
+1444.1.1 = { discovered_by = ARW }
+
+
+1499.6.1 = { discovered_by = CAS } # Alonso de Ojeda
+1526.1.1 = {
+	owner = SPA 
 	controller = SPA
 	add_core = SPA
-	remove_core = CAS
-}
+	culture = guajiro
+	religion = catholic
+	is_city = yes
+	capital = "Rincon"
+	trade_goods = wool
+} # Juan de Ampies brings back some of the original inhabitants and makes the island into a ranch
 1634.1.1 = {
-	owner = NED
+	owner = NED 
 	controller = NED
 	add_core = NED
 	culture = dutch
-	religion = reformed
+	religion = protestant
+	is_city = yes
 	capital = "Punda"
-	remove_core = SPA
-} # Dutch occupation, Punda is founded ( later: Willemstad )
-1807.1.1 = {
-	owner = GBR
-	controller = GBR
-	add_core = GBR
-	remove_core = NED
-} # Occupied by British forces
-1815.6.9 = {
-	owner = NED
-	controller = NED
-	add_core = NED
-	remove_core = GBR
-} # Restored to the Netherlands
+	trade_goods = tropical_wood
+} # Dutch take the ABC islands after losing Sint Marten

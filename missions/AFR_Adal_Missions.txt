@@ -51,7 +51,7 @@ adal_conquest_missions_slot = {
 			ETH = {
 				OR = {
 					exists = no
-					NOT = { num_of_cities = 4 }
+					NOT = { num_of_cities = 2 }
 				}
 			}
 		}
@@ -102,16 +102,17 @@ adal_conquest_missions_slot = {
 				NOT = { religion = ROOT }
 			}
 			OR = {
-				area = dongola_area
+				area = lower_nubia_area
 				area = upper_nubia_area
 				area = sennar_area
+				area = white_nile_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = ada_push_further_north_ct
-				dongola_area = {
+				lower_nubia_area = {
 					owner = {
 						OR = {
 							religion = ROOT
@@ -130,6 +131,15 @@ adal_conquest_missions_slot = {
 					type = all
 				}
 				sennar_area = {
+					owner = {
+						OR = {
+							religion = ROOT
+							is_subject_of = ROOT
+						}
+					}
+					type = all
+				}
+				white_nile_area = {
 					owner = {
 						OR = {
 							religion = ROOT
@@ -189,14 +199,14 @@ adal_conquest_missions_slot = {
 		}
 		effect = {
 			kurdufan_area = {
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
 			}
 			darfur_central_sahara_area = {
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
 			}
 		}
 	}
@@ -228,19 +238,19 @@ adal_alliances_missions_slot = {
 				NOT = { owned_by = ROOT }
 				has_tax_building_trigger = no
 				NOT = { is_core = ROOT }
-				NOT = { development = 10 }
+				NOT = { development = 20 }
 			}
 		}
 		trigger = {
 			owns_core_province = 1212
 			1212 = {
-				development = 10
+				development = 20
 				has_tax_building_trigger = yes
 			}
 		}
 		effect = {
 			1212 = {
-				add_base_tax = 4
+				add_base_tax = 8
 				add_building = cathedral
 			}
 		}
@@ -613,6 +623,9 @@ adal_unification_missions_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
+			ogaden_area = {
+				discover_country = ADA
+			}
 		}
 	}
 
@@ -630,11 +643,11 @@ adal_unification_missions_slot = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			somaliland_area = {
+			ajuuran_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
 			}
-			majarteen_area = {
+			mogadishu_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
 			}
@@ -681,7 +694,7 @@ adal_unification_missions_slot = {
 			owns_or_non_sovereign_subject_of = 385
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				region = arabia_region
-				value = 8
+				value = 10
 			}
 		}
 		effect = {
@@ -736,7 +749,7 @@ adal_unification_missions_slot = {
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			total_development = 600
+			total_development = 750
 			stability = 3
 			prestige = 50
 			legitimacy_equivalent = 90

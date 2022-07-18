@@ -1,3 +1,4 @@
+ 
 # No previous file for Logone
 
 owner = YAO
@@ -9,10 +10,10 @@ religion = shamanism #Fetishism
 capital = "Logone"
 trade_goods = ivory
 hre = no
-base_tax = 2 
-base_production = 2
+base_tax = 4  
+base_production = 4
 is_city = yes
-base_manpower = 1
+base_manpower = 2 
 
 
 

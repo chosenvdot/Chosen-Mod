@@ -1,17 +1,23 @@
+ 
 #1761 - Pfalz
+#Region - Germany
+#Area - Palatinate
 
 capital = "Worms"
 culture = hessian
 religion = catholic
 trade_goods = wine
-owner = PAL
-base_tax = 4
-base_production = 4
-base_manpower = 2
+owner = WOR
+base_tax = 6
+base_production = 5
+base_manpower = 4
 is_city = yes
-controller = PAL
-add_core = PAL
+controller = WOR
+add_core = WOR
 hre = yes
+center_of_trade = 2
+
+
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
@@ -19,8 +25,8 @@ discovered_by = ottoman
 
 
 1546.4.19 = { religion = protestant } # #Friedrich II converts the coutnry to protestant
-1689.8.1 = { base_tax = 5 
-base_production = 5 controller = FRA } # French troops burn, pillage and destroy in the succession wars.
+1689.8.1 = { base_tax = 10 
+base_production = 10 controller = FRA } # French troops burn, pillage and destroy in the succession wars.
 1697.4.19 = { owner = PAL controller = PAL } # Peace of Rijswijk strengthens the catholics
 1777.12.30 = {
 	owner = BAV

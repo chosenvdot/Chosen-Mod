@@ -1,3 +1,8 @@
+#Updated by C1CK 28-01-2020, updated again by Dub on 29/07-2020
+#Was Mostly up-to-date except for unaccounted Ireland Region, and new Northumbria area
+#Has no changes besides updating claims for BT
+#Now has major changes in that you need to form Ireland, AngloIreland or TirNanGael to get the majority of the tree.
+
 ire_conquest_1 = {
 	slot = 1
 	generic = no
@@ -22,6 +27,20 @@ ire_conquest_1 = {
 			tag = DMS
 			tag = MCM
 			tag = IRE
+			#Mod added tags
+			tag = ANR
+			tag = CLN
+			tag = MYO
+			tag = GLW
+			tag = THO
+			tag = WEX
+			tag = LGN # changed from LAI
+			tag = ANI
+			tag = TNA
+			tag = WTF
+			tag = WCO
+			tag = BIF
+			tag = IVE
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -49,7 +68,7 @@ ire_conquest_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			4379 = {
+			8165 = {
 				if = {
 					limit = {
 						NOT = {
@@ -72,6 +91,17 @@ ire_conquest_1 = {
 				}
 			}
 			374 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			4379 = {
 				if = {
 					limit = {
 						NOT = {
@@ -110,6 +140,20 @@ ire_conquest_main = {
 			tag = DMS
 			tag = MCM
 			tag = IRE
+			#Mod added tags
+			tag = ANR
+			tag = CLN
+			tag = MYO
+			tag = GLW
+			tag = THO
+			tag = WEX
+			tag = LGN # changed from LAI
+			tag = ANI
+			tag = TNA
+			tag = WTF
+			tag = WCO
+			tag = BIF
+			tag = IVE
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -121,13 +165,17 @@ ire_conquest_main = {
 		provinces_to_highlight = {
 			area = munster_area
 			NOT = {
+				province_id = 8164 #Me being lazy
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			munster_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					province_id = 8164 #Me being lazy
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		effect = {
@@ -138,7 +186,7 @@ ire_conquest_main = {
 				}
 				add_permanent_claim = ROOT
 			}
-			4379 = {
+			8165 = {
 				if = {
 					limit = {
 						NOT = {
@@ -161,6 +209,17 @@ ire_conquest_main = {
 				}
 			}
 			374 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			4379 = {
 				if = {
 					limit = {
 						NOT = {
@@ -182,9 +241,10 @@ ire_conquest_main = {
 				area = ulster_area
 				area = connacht_area
 				area = munster_area
-				province_id = 4379
+				province_id = 8165
 				province_id = 4120
 				province_id = 374
+				province_id = 4379
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -203,13 +263,16 @@ ire_conquest_main = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			4379 = {
+			8165 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			4120 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			374 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4379 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -229,19 +292,82 @@ ire_conquest_main = {
 					add_permanent_claim = ROOT
 				}
 			}
+			8163 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3009 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			8164 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 	}
+}	
+
+ire_conquest_main_united = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		has_dlc = "Rule Britannia"
+		OR = {
+			tag = IRE
+			tag = ANI
+			tag = TNA
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
 	beyond_the_pale = {
 		icon = mission_rb_beyond_the_pale
+		position = 3
 		required_missions = { unite_the_clans_ire }
 		provinces_to_highlight = {
 			province_id = 373
+			province_id = 8163
+			province_id = 3009
+			province_id = 8164
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			373 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			8163 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3009 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			8164 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -251,6 +377,20 @@ ire_conquest_main = {
 				duration = 7300
 			}
 			wales_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			powys_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			deheubarth_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -273,17 +413,29 @@ ire_conquest_main = {
 			}
 		}
 	}
-	conquer_wales = {
+	conquer_wales = { #Updated by C1CK
 		icon = mission_rb_conquer_wales
 		required_missions = { beyond_the_pale }
 		provinces_to_highlight = {
-			area = wales_area
+			OR = {
+				area = wales_area
+				area = powys_area
+				area = deheubarth_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			wales_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			powys_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			deheubarth_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -303,9 +455,16 @@ ire_conquest_main = {
 				}
 				add_permanent_claim = ROOT
 			}
+			# cornwall_area = { #Added by C1CK, used to be part of Wessex
+				# limit = {
+					# NOT = { is_permanent_claim = ROOT	}
+					# NOT = { is_core = ROOT	}
+				# }
+				# add_permanent_claim = ROOT
+			# }
 		}
 	}
-	conquer_west_england = {
+	conquer_west_england = { #Updated by C1CK
 		icon = mission_rb_invade_england
 		required_missions = { conquer_wales }
 		provinces_to_highlight = {
@@ -371,6 +530,20 @@ ire_conquest_2 = {
 			tag = DMS
 			tag = MCM
 			tag = IRE
+			#Mod added tags
+			tag = ANR
+			tag = CLN
+			tag = MYO
+			tag = GLW
+			tag = THO
+			tag = WEX
+			tag = LGN # changed from LAI
+			tag = ANI
+			tag = TNA
+			tag = WTF
+			tag = WCO
+			tag = BIF
+			tag = IVE
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -408,6 +581,26 @@ ire_conquest_2 = {
 			}
 		}
 	}
+}
+
+ire_conquest_2_united = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Rule Britannia"
+	}
+	potential = {
+		has_dlc = "Rule Britannia"
+		OR = {
+			tag = IRE
+			tag = ANI
+			tag = TNA
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+		
 	ire_conquer_isles = {
 		icon = mission_rb_conquer_the_highlands
 		position = 4
@@ -422,13 +615,19 @@ ire_conquest_2 = {
 			}
 		}
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 2
-				area = kingdom_of_the_isles_area
+			custom_trigger_tooltip = {
+				tooltip = ire_koi_tooltip
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 2
+					area = kingdom_of_the_isles_area
+				}
 			}
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 4
-				area = highlands_area
+			custom_trigger_tooltip = {
+				tooltip = ire_highlands_tooltip
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 4
+					area = highlands_area
+				}
 			}
 		}
 		effect = {
@@ -457,13 +656,31 @@ ire_conquest_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			scottish_marches_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			grampians_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
-	ire_conquer_scotland = {
+	ire_conquer_scotland = { #Updated by C1CK
 		icon = mission_rb_conquer_scotland
 		required_missions = { ire_conquer_isles }
 		provinces_to_highlight = {
-			area = lowlands_area
+			OR = {
+				area = lowlands_area
+				area = scottish_marches_area
+				area = grampians_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -473,16 +690,17 @@ ire_conquest_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			scottish_marches_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			grampians_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_army_tradition = 10
-			scottish_marches_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 			east_midlands_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -497,13 +715,23 @@ ire_conquest_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			northern_england_area = { #Northumbria, Added by C1CK
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
-	ire_rule_britannia = {
+	ire_rule_britannia = { #Updated by C1CK
 		icon = mission_rb_rule_britannia_irish_version
 		required_missions = { ire_conquer_scotland conquer_west_england }
 		provinces_to_highlight = {
-			region = british_isles_region
+			OR = {
+				region = british_isles_region
+				region = ireland_region # Brian; changed from _area; #Added by C1CK
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -513,12 +741,16 @@ ire_conquest_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			ireland_region = { # Brian; changed from _area; #Added by C1CK
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_prestige = 25
 			add_country_modifier = {
 				name = "rule_britannia"
-				duration = 3650
+				duration = 14600
 			}
 		}
 	}
@@ -548,6 +780,20 @@ ire_conquest_4 = {
 			tag = DMS
 			tag = MCM
 			tag = IRE
+			#Mod added tags
+			tag = ANR
+			tag = CLN
+			tag = MYO
+			tag = GLW
+			tag = THO
+			tag = WEX
+			tag = LGN # changed from LAI
+			tag = ANI
+			tag = TNA
+			tag = WTF
+			tag = WCO
+			tag = BIF
+			tag = IVE
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -558,22 +804,26 @@ ire_conquest_4 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 4379
+				province_id = 8165
 				province_id = 4120
 				province_id = 374
+				province_id = 4379
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			4379 = {
+			3009 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			4120 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			374 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4379 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -594,6 +844,26 @@ ire_conquest_4 = {
 			}
 		}
 	}
+}
+
+ire_conquest_4_united = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Rule Britannia"
+	}
+	potential = {
+		has_dlc = "Rule Britannia"
+		OR = {
+			tag = IRE
+			tag = ANI
+			tag = TNA
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
 	trinity_college_ire = {
 		icon = mission_rb_trinity_college_dublin
 		required_missions = { beyond_the_pale }
@@ -612,6 +882,7 @@ ire_conquest_4 = {
 		}
 	}
 }
+
 ire_colonial_missions = {
 	slot = 5
 	generic = no
@@ -622,7 +893,7 @@ ire_colonial_missions = {
 	potential = {
 		has_dlc = "Rule Britannia"
 		is_random_new_world = no
-		OR = {
+		OR = { #Not changing because it would make European generics appear in the tree, which is undesirable.
 			tag = ULS
 			tag = TRY
 			tag = TYR
@@ -637,6 +908,20 @@ ire_colonial_missions = {
 			tag = DMS
 			tag = MCM
 			tag = IRE
+			#Mod added tags
+			tag = ANR
+			tag = CLN
+			tag = MYO
+			tag = GLW
+			tag = THO
+			tag = WEX
+			tag = LGN # changed from LAI
+			tag = ANI
+			tag = TNA
+			tag = WTF
+			tag = WCO
+			tag = BIF
+			tag = IVE
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -653,9 +938,13 @@ ire_colonial_missions = {
 			has_discovered = ROOT
 		}
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 5
-				colonial_region = colonial_eastern_america
+			custom_trigger_tooltip = {
+				tooltip = irish_america.tooltip
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					colonial_region = colonial_eastern_america
+					is_city = yes
+				}
 			}
 		}
 		effect = {
@@ -679,11 +968,15 @@ ire_colonial_missions = {
 			has_discovered = ROOT
 		}
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 15
-				OR = {
-					continent = new_world
-					continent = north_america
+			custom_trigger_tooltip = {
+				tooltip = irish_potatoes.tooltip
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 15
+					OR = {
+						continent = new_world
+						continent = north_america
+					}
+					is_city = yes
 				}
 			}
 		}

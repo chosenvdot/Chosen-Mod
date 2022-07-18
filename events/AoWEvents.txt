@@ -597,13 +597,13 @@ country_event = {
 	}
 
 	# We can ease the tax burden on the bereaved.
-	#option = {
-	#	name = "aow_events.15.a"
-	#	add_country_modifier = {
-	#		name = "post_war_tax_relief"
-	#		duration = 1825
-	#	}
-	#}
+	option = {
+		name = "aow_events.15.a"
+		add_country_modifier = {
+			name = "post_war_tax_relief"
+			duration = 1825
+		}
+	}
 
 	# Let us be more lenient drafting for the army in the future.
 	option = {
@@ -615,13 +615,13 @@ country_event = {
 	}
 
 	# This is the price that must be paid for our glorious nation.
-	#option = {
-	#	name = "aow_events.15.c"
-	#	add_country_modifier = {
-	#		name = "suffering_bereaved"
-	#		duration = 1825
-	#	}
-	#}
+	option = {
+		name = "aow_events.15.c"
+		add_country_modifier = {
+			name = "suffering_bereaved"
+			duration = 1825
+		}
+	}
 }
 
 # Witchcraft
@@ -1815,6 +1815,15 @@ country_event = {
 				create_revolt = 2
 			}
 		}
+		if = { # Brian
+			limit = {
+				FROM = { religion = hussite }
+			}
+			random_owned_province = {
+				limit = { likely_rebels = hussite_rebels }
+				create_revolt = 2
+			}
+		}
 		add_casus_belli = {
 			target = FROM
 			type = cb_insult
@@ -1954,7 +1963,7 @@ province_event = {
 				type = cb_insult
 				months = 32
 			}
-			add_corruption = 0.1
+			add_corruption = 1
 			add_opinion = {
 				who = FROM
 				modifier = bribed_cardinal

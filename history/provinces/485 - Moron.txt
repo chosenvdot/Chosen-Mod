@@ -1,28 +1,32 @@
+ 
 #485 - Moron
 
-culture = arawak
+culture = west_taino
 religion = animism
-capital = "Moron"
+capital = "Cumanayagua"
 trade_goods = unknown 
 hre = no
 base_tax = 2
 base_production = 3
-base_manpower = 1
-native_size = 10
+base_manpower = 2
+native_size = 30
 native_ferocity = 1
-native_hostileness = 3
-discovered_by = CAB
-discovered_by = ARW
+native_hostileness = 1
 
-1492.10.24 = { discovered_by = CAS } # Christopher Columbus's arrival
-1511.1.1 = {
+1444.1.1 = { discovered_by = CAB }
+1444.1.1 = { discovered_by = ARW }
+
+
+1494.1.1 = { discovered_by = CAS } # Christopher Columbus's second voyage
+1514.12.23 = {
 	owner = CAS
 	controller = CAS
 	add_core = CAS
-	is_city = yes
 	culture = castillian
 	religion = catholic
-	trade_goods = coffee 
+	is_city = yes
+	capital = "Trinidad"
+	trade_goods = sugar
 } # Founded by Diego Velázquez
 1516.1.23 = {
 	discovered_by = SPA
@@ -31,5 +35,3 @@ discovered_by = ARW
 	add_core = SPA
 	remove_core = CAS
 }
-1522.1.1 = { unrest = 2 } # Relatively small attack against the conquistadors
-1532.1.1 = { unrest = 0 } # Guama is killed

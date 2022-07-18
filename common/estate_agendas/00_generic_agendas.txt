@@ -6228,7 +6228,6 @@ estate_nobles_build_manufactory_in_y = {
 			root_can_build_manufactory_here_trigger = yes
 			has_nobles_trade_good_trigger = yes
 		}
-		adm_tech = 16
 		monthly_income = 30
 	}
 	selection_weight = {
@@ -6321,6 +6320,7 @@ estate_nobles_build_manufactory_in_y = {
 								trade_goods = cloth
 								trade_goods = silk
 								trade_goods = dyes
+								trade_goods = bt_trade_good_books
 							}
 						}
 						has_building = textile
@@ -6344,6 +6344,9 @@ estate_nobles_build_manufactory_in_y = {
 								trade_goods = grain
 								trade_goods = livestock
 								trade_goods = wine
+								trade_goods = bt_trade_good_beer
+								trade_goods = bt_trade_good_fruit
+								trade_goods = bt_trade_good_apiculture
 							}
 						}
 						has_building = farm_estate
@@ -6417,7 +6420,6 @@ estate_rajput_build_manufactory_in_y = {
 			has_nobles_trade_good_trigger = yes
 		}
 		monthly_income = 30
-		adm_tech = 16
 	}
 	selection_weight = {
 		factor = 1
@@ -6509,6 +6511,7 @@ estate_rajput_build_manufactory_in_y = {
 								trade_goods = cloth
 								trade_goods = silk
 								trade_goods = dyes
+								trade_goods = bt_trade_good_books
 							}
 						}
 						has_building = textile
@@ -6532,6 +6535,9 @@ estate_rajput_build_manufactory_in_y = {
 								trade_goods = grain
 								trade_goods = livestock
 								trade_goods = wine
+								trade_goods = bt_trade_good_beer
+								trade_goods = bt_trade_good_fruit
+								trade_goods = bt_trade_good_apiculture
 							}
 						}
 						has_building = farm_estate
@@ -6605,7 +6611,6 @@ estate_maratha_build_manufactory_in_y = {
 			has_nobles_trade_good_trigger = yes
 		}
 		monthly_income = 30
-		adm_tech = 16
 	}
 	selection_weight = {
 		factor = 1
@@ -6697,6 +6702,7 @@ estate_maratha_build_manufactory_in_y = {
 								trade_goods = cloth
 								trade_goods = silk
 								trade_goods = dyes
+								trade_goods = bt_trade_good_books
 							}
 						}
 						has_building = textile
@@ -6720,6 +6726,9 @@ estate_maratha_build_manufactory_in_y = {
 								trade_goods = grain
 								trade_goods = livestock
 								trade_goods = wine
+								trade_goods = bt_trade_good_beer
+								trade_goods = bt_trade_good_fruit
+								trade_goods = bt_trade_good_apiculture
 							}
 						}
 						has_building = farm_estate
@@ -6794,7 +6803,6 @@ estate_burghers_build_manufactory_in_y = {
 			has_burghers_trade_good_trigger = yes
 		}
 		monthly_income = 30
-	adm_tech = 16	
 	}
 	selection_weight = {
 		factor = 2
@@ -6886,6 +6894,7 @@ estate_burghers_build_manufactory_in_y = {
 								trade_goods = cloth
 								trade_goods = silk
 								trade_goods = dyes
+								trade_goods = bt_trade_good_books
 							}
 						}
 						has_building = textile
@@ -6909,6 +6918,9 @@ estate_burghers_build_manufactory_in_y = {
 								trade_goods = grain
 								trade_goods = livestock
 								trade_goods = wine
+								trade_goods = bt_trade_good_beer
+								trade_goods = bt_trade_good_fruit
+								trade_goods = bt_trade_good_apiculture
 							}
 						}
 						has_building = farm_estate
@@ -6982,7 +6994,6 @@ estate_vaisyas_build_manufactory_in_y = {
 			has_burghers_trade_good_trigger = yes
 		}
 		monthly_income = 30
-		adm_tech = 16	
 	}
 	selection_weight = {
 		factor = 2
@@ -7074,6 +7085,7 @@ estate_vaisyas_build_manufactory_in_y = {
 								trade_goods = cloth
 								trade_goods = silk
 								trade_goods = dyes
+								trade_goods = bt_trade_good_books
 							}
 						}
 						has_building = textile
@@ -7097,6 +7109,9 @@ estate_vaisyas_build_manufactory_in_y = {
 								trade_goods = grain
 								trade_goods = livestock
 								trade_goods = wine
+								trade_goods = bt_trade_good_beer
+								trade_goods = bt_trade_good_fruit
+								trade_goods = bt_trade_good_apiculture
 							}
 						}
 						has_building = farm_estate
@@ -7170,7 +7185,6 @@ estate_jains_build_manufactory_in_y = {
 			has_burghers_trade_good_trigger = yes
 		}
 		monthly_income = 30
-		adm_tech = 16
 	}
 	selection_weight = {
 		factor = 2
@@ -7262,6 +7276,7 @@ estate_jains_build_manufactory_in_y = {
 								trade_goods = cloth
 								trade_goods = silk
 								trade_goods = dyes
+								trade_goods = bt_trade_good_books
 							}
 						}
 						has_building = textile
@@ -7285,6 +7300,9 @@ estate_jains_build_manufactory_in_y = {
 								trade_goods = grain
 								trade_goods = livestock
 								trade_goods = wine
+								trade_goods = bt_trade_good_beer
+								trade_goods = bt_trade_good_fruit
+								trade_goods = bt_trade_good_apiculture
 							}
 						}
 						has_building = farm_estate
@@ -7358,7 +7376,6 @@ estate_church_build_manufactory_in_y = {
 			has_church_trade_good_trigger = yes
 		}
 		monthly_income = 30
-		adm_tech = 16
 	}
 	selection_weight = {
 		factor = 1
@@ -7454,6 +7471,7 @@ estate_church_build_manufactory_in_y = {
 								trade_goods = cloth
 								trade_goods = silk
 								trade_goods = dyes
+								trade_goods = bt_trade_good_books
 							}
 						}
 						has_building = textile
@@ -7477,6 +7495,9 @@ estate_church_build_manufactory_in_y = {
 								trade_goods = grain
 								trade_goods = livestock
 								trade_goods = wine
+								trade_goods = bt_trade_good_beer
+								trade_goods = bt_trade_good_fruit
+								trade_goods = bt_trade_good_apiculture
 							}
 						}
 						has_building = farm_estate
@@ -7550,7 +7571,6 @@ estate_brahmins_build_manufactory_in_y = {
 			has_church_trade_good_trigger = yes
 		}
 		monthly_income = 30
-		adm_tech = 16
 	}
 	selection_weight = {
 		factor = 1
@@ -7646,6 +7666,7 @@ estate_brahmins_build_manufactory_in_y = {
 								trade_goods = cloth
 								trade_goods = silk
 								trade_goods = dyes
+								trade_goods = bt_trade_good_books
 							}
 						}
 						has_building = textile
@@ -7669,6 +7690,9 @@ estate_brahmins_build_manufactory_in_y = {
 								trade_goods = grain
 								trade_goods = livestock
 								trade_goods = wine
+								trade_goods = bt_trade_good_beer
+								trade_goods = bt_trade_good_fruit
+								trade_goods = bt_trade_good_apiculture
 							}
 						}
 						has_building = farm_estate
@@ -8674,7 +8698,6 @@ estate_church_develop_x = {
 						area_for_scope_province = {
 							is_capital_of = root
 						}
-						NOT = { has_province_modifier = gc_african_corridor } #Gecko African corridor
 					}
 					save_event_target_as = agenda_province
 				}
@@ -8712,7 +8735,6 @@ estate_church_develop_x = {
 						region_for_scope_province = {
 							is_capital_of = root
 						}
-						NOT = { has_province_modifier = gc_african_corridor } #Gecko African corridor
 					}
 					save_event_target_as = agenda_province
 				}
@@ -8721,7 +8743,6 @@ estate_church_develop_x = {
 				random_owned_province = {
 					limit = {
 						is_state_core = root
-						NOT = { has_province_modifier = gc_african_corridor } #Gecko African corridor
 					}
 					save_event_target_as = agenda_province
 				}
@@ -8972,7 +8993,6 @@ estate_nobles_develop_x = {
 						area_for_scope_province = {
 							is_capital_of = root
 						}
-						NOT = { has_province_modifier = gc_african_corridor } #Gecko African corridor
 					}
 					save_event_target_as = agenda_province
 				}
@@ -9010,7 +9030,6 @@ estate_nobles_develop_x = {
 						region_for_scope_province = {
 							is_capital_of = root
 						}
-						NOT = { has_province_modifier = gc_african_corridor } #Gecko African corridor
 					}
 					save_event_target_as = agenda_province
 				}
@@ -9019,7 +9038,6 @@ estate_nobles_develop_x = {
 				random_owned_province = {
 					limit = {
 						is_state_core = root
-						NOT = { has_province_modifier = gc_african_corridor } #Gecko African corridor
 					}
 					save_event_target_as = agenda_province
 				}
@@ -9365,7 +9383,6 @@ estate_burghers_develop_x = {
 						area_for_scope_province = {
 							is_capital_of = root
 						}
-						NOT = { has_province_modifier = gc_african_corridor } #Gecko African corridor
 					}
 					save_event_target_as = agenda_province
 				}
@@ -9403,7 +9420,6 @@ estate_burghers_develop_x = {
 						region_for_scope_province = {
 							is_capital_of = root
 						}
-						NOT = { has_province_modifier = gc_african_corridor } #Gecko African corridor
 					}
 					save_event_target_as = agenda_province
 				}
@@ -9412,7 +9428,6 @@ estate_burghers_develop_x = {
 				random_owned_province = {
 					limit = {
 						is_state_core = root
-						NOT = { has_province_modifier = gc_african_corridor } #Gecko African corridor
 					}
 					save_event_target_as = agenda_province
 				}

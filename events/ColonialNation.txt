@@ -513,21 +513,23 @@ country_event = {
 	}
 	
 	immediate = {
-		random_country = {
-			limit = {
-				is_colonial_nation_of = ROOT
-				OR = {
-					NOT = { has_country_flag = restricted_colonial_expansion }
-					had_country_flag = { flag = restricted_colonial_expansion days = 10950 }
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					OR = {
+						NOT = { has_country_flag = restricted_colonial_expansion }
+						had_country_flag = { flag = restricted_colonial_expansion days = 10950 }
+					}
+					any_owned_province = {
+						is_colony = yes
+					}
+					any_neighbor_country = {
+						primitives = yes
+					}
 				}
-				any_owned_province = {
-					is_colony = yes
-				}
-				any_neighbor_country = {
-					primitives = yes
-				}
+				save_event_target_as = restricted_colonial_expansion_country
 			}
-			save_event_target_as = restricted_colonial_expansion_country
 		}
 	}
 	
@@ -4492,7 +4494,6 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		always = no
 		has_dlc = "Leviathan"
 		is_subject_of_type = crown_colony
 		corruption = 3
@@ -4538,7 +4539,6 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		always = no
 		has_dlc = "Leviathan"
 		is_subject_of_type = crown_colony
 		NOT = { dip = 3 }
@@ -4555,9 +4555,9 @@ country_event = {
 		exile_ruler_as = colonial_exiled_governor
 		define_ruler = {
 			culture = ROOT
-			ADM = 4
-			DIP = 3
-			MIL = 3
+			change_adm = 4
+			change_dip = 3
+			change_mil = 3
 		}
 		random = {
 			chance = 50
@@ -4591,8 +4591,148 @@ country_event = {
 	}
 }
 
+# Company Is in Debt!
+country_event = {
+	id = colonial_nation.184
+	title = colonial_nation.184.t
+	desc = colonial_nation.184.d
+	picture = BANKRUPCY_eventPicture
+
+	is_triggered_only = yes
 	
+	trigger = {
+		has_dlc = "Leviathan"
+		is_subject_of_type = private_enterprise
+		NOT = { treasury = 150 }
+		OR = {
+			num_of_loans = 3
+			is_in_large_debt = yes
+		}
+		NOT = { stability = 0 }
+		NOT = { has_country_flag = colonial_company_in_debt }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = colonial_company_in_debt 
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { #take care of it
+		name = colonial_nation.184.a
+		add_adm_power = -100
+		add_dip_power = -100
+		add_corruption = -2
+		ai_chance = {
+			factor = 0
+		}
+	}	
+	
+	option = { #it's surely nothing
+		name = colonial_nation.184.b
+		capital_scope = {
+			area = {
+				limit = { owned_by = ROOT }
+				add_unrest = 1
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+	
+# Revoke Royal Charter
+country_event = {
+	id = colonial_nation.185
+	title = colonial_nation.185.t
+	desc = colonial_nation.185.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "Leviathan"
+		is_subject_of_type = private_enterprise
+		NOT = { treasury = 200 }
+		num_of_loans = 5
+		NOT = { stability = 1 }
+		has_country_flag = colonial_company_in_debt
+		NOT = { has_country_flag = revoked_royal_charter }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { #okay...
+		name = colonial_nation.185.a
+		change_subject_type = {
+			subject_type = crown_colony 
+		}
+		capital_scope = {
+			add_unrest = 1
+		}
+		add_liberty_desire = 10
+		add_stability = -1
+		set_country_flag = revoked_royal_charter
+	}
+}
+
 # Colonist Incentives
+country_event = {
+	id = colonial_nation.186
+	title = colonial_nation.186.t
+	desc = colonial_nation.186.d
+	picture = {
+		trigger = { has_dlc = "Mandate of Heaven" }
+		picture = CITY_DEVELOPMENT_eventPicture
+	}	
+	picture = {
+		trigger = { NOT = { has_dlc = "Mandate of Heaven" } }
+		picture = ELECTION_REPUBLICAN_eventPicture
+	}
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "Leviathan"
+		OR = {
+			is_subject_of_type = private_enterprise
+			is_subject_of_type = crown_colony
+			is_subject_of_type = self_governing_colony
+		}
+		NOT = { total_development = 70 }
+		NOT = { manpower_percentage = 0.9 }
+		stability = 0
+		has_adm_advisor = yes
+		NOT = { has_country_flag = colonist_incentives }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = colonial_nation.186.a
+		add_country_modifier = {
+			name = colonist_incentives
+			duration = 3650
+		}
+		if = {
+			limit = {
+				NOT = { manpower_percentage = 1 }
+			}
+			add_manpower = 1
+		}
+		add_years_of_income = -0.2
+		set_country_flag = colonist_incentives
+	}
+}
 
 # Burghers Are Unhappy With the Noble Oligarchy
 country_event = {
@@ -4604,7 +4744,6 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		always = no
 		has_dlc = "Leviathan"
 		is_subject_of_type = self_governing_colony
 		estate_influence = {
@@ -4677,7 +4816,6 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		always = no
 		has_dlc = "Leviathan"
 		is_subject_of_type = self_governing_colony
 		estate_influence = {
@@ -4748,7 +4886,6 @@ country_event = {
 	}
 	
 	trigger = {
-		always = no
 		has_dlc = "Leviathan"
 		is_subject_of_type = private_enterprise
 		unrest = 3
@@ -4835,6 +4972,46 @@ country_event = {
 	}
 }
 
+# Absent Governor
+country_event = {
+	id = colonial_nation.190
+	title = colonial_nation.190.t
+	desc = colonial_nation.190.d
+	picture = REVOLUTION_eventPicture
+	goto = absent_governor_province
+
+	trigger = {
+		any_owned_province = {
+			is_colony = yes
+			NOT = { has_province_flag = absent_governor }
+		}
+		has_dlc = "Leviathan"		
+		is_colonial_nation = yes
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_colony = yes
+				}
+				save_event_target_as = absent_governor_province
+				set_province_flag = absent_governor
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {
+		name = colonial_nation.190.a
+		event_target:absent_governor_province = {
+			add_unrest = 2
+		}
+	}
+}
 
 # Miracle in Colonial Province
 province_event = {
@@ -4845,7 +5022,6 @@ province_event = {
 	goto = ROOT
 
 	trigger = {
-		always = no
 		has_dlc = "Leviathan"
 		OR = {
 			is_colony = yes
@@ -4922,7 +5098,6 @@ country_event = {
 	picture = HARBOUR_eventPicture
 
 	trigger = {
-		always = no
 		has_dlc = "Leviathan"
 		is_colonial_nation = yes
 		OR = {
@@ -4949,7 +5124,6 @@ country_event = {
 	hidden = yes
 	
 	option = { #exploit the pilgrims
-		name = colonial_nation.192.a
 
 		if = {
 			limit = {

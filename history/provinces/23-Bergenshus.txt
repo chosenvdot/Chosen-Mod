@@ -1,4 +1,7 @@
-#Bergenshus, 
+ 
+#Bergenshus, incl. Bergen, 
+#Region - Scandinavia
+#Area - Western Norway
 
 owner = NOR
 controller = NOR
@@ -6,16 +9,37 @@ add_core = NOR
 culture = norwegian
 religion = catholic
 hre = no
-base_tax = 1
-base_production = 2
+base_tax = 7
+base_production = 7
 trade_goods = naval_supplies
-base_manpower = 1
+base_manpower = 4 
 is_city = yes
 capital = "Bergen"
+
 discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
 discovered_by = eastern
-extra_cost = 16
+
+extra_cost = 15
+
 center_of_trade = 2
+
+
+#Province history completed by - Draiocht
+#1st Shattering unused
+#1st Performance Start Unused
+
+1299.1.1 = {
+	base_tax = 5
+	base_production = 5
+	base_manpower = 3 
+}	#The capital until 1299. It remained an important Hanseatic town and trade centre, but after losing its status as capital, it faded into Oslo's shadow a bit.
+
+#2nd Shattering unused
+#2nd Performance Start Unused
+
+#1444 on
 
 1531.11.5 = { revolt = { type = revolutionary_rebels size = 1 } controller = REB } # The Return of Christian II
 1532.7.15 = { revolt = {} controller = NOR } # The Capture of Christian II

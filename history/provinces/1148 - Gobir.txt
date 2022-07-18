@@ -1,3 +1,4 @@
+ 
 #1148 - Gobir
 
 owner = KTS
@@ -5,13 +6,13 @@ controller = KTS
 add_core = KTS
 culture = hausa
 is_city = yes
-base_manpower = 3
+base_manpower = 6
 religion = sunni
 capital = "Birnin Lalle"
 trade_goods = iron
 hre = no
-base_tax = 3 
-base_production = 3
+base_tax = 6 
+base_production = 6
 
 
 

@@ -1,3 +1,4 @@
+ 
 #1149 - Katsina
 
 owner = KTS
@@ -5,13 +6,13 @@ controller = KTS
 add_core = KTS
 culture = hausa
 is_city = yes
-base_manpower = 3
+base_manpower = 6
 religion = sunni
 capital = "Katsina"
 trade_goods = cloth
 hre = no
-base_tax = 6 
-base_production = 6
+base_tax = 12 
+base_production = 12
 discovered_by = sub_saharan
 extra_cost = 16
 center_of_trade = 2

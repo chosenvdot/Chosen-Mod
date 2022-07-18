@@ -1,13 +1,16 @@
+#Re-checked/updated by Nuq for BT15 March 4th '22
+#Updated and scriptified by Dub.
 prussian_missions_main_slot = {
 	slot = 1
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { has_dlc = "Emperor" }
-		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BRA
 			tag = PRU
+		}
+		NOT = {
+			has_dlc = "Emperor"
 		}
 	}
 	has_country_shield = yes
@@ -16,166 +19,133 @@ prussian_missions_main_slot = {
 		icon = mission_have_two_subjects
 		required_missions = { }
 		provinces_to_highlight = {
-			province_id = 49
+			reclaim_neumark_provinces = yes
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			owns_core_province = 49
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_highlighted 
+				provinces=reclaim_neumark_provinces
+				owner_type=owned_by
+			}
 		}
 		effect = {
+			#Claims
+			custom_tooltip = pru_conquer_pomerania_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						pru_conquer_pomerania_provinces = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			#BT adjusted, this area was moved outside of requirements for next mission as Brandenburg never directly controlled this until 1815.
 			vorpommern_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = ROOT
-			}
-			hinter_pommern_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
+				add_claim = ROOT
 			}
 		}
 	}
 	pru_conquer_pomerania = {
-		icon = mission_hanseatic_city
+		icon = mission_conquer_50_development
 		required_missions = { reclaim_neumark }
 		position = 3
 		provinces_to_highlight = {
-			OR = {
-				area = vorpommern_area
-				area = hinter_pommern_area
-			}
+			pru_conquer_pomerania_provinces = yes
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			vorpommern_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			hinter_pommern_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=pru_conquer_pomerania_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
 			add_legitimacy = 10
-			west_prussia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+			
+			#Claims
+			custom_tooltip = connect_the_prussian_lands_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						connect_the_prussian_lands_provinces = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
-			}
-			east_prussia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			mittelmark_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
 			}
 		}
 	}
-	connect_the_prussian_lands = {
-		icon = mission_teutonic_knights
+	connect_the_prussian_lands = { #Mission repurposed - Connection of Prussian lands was not done historically until first partition of Poland. Instead this is now to take east Prussia and consolidate Brandenburg.
+		icon = mission_unite_home_region
 		required_missions = { pru_conquer_pomerania }
 		position = 5
 		provinces_to_highlight = {
-			OR = {
-				area = west_prussia_area
-				area = east_prussia_area
-				area = mittelmark_area
-				area = berlin_area
-			}
+			connect_the_prussian_lands_provinces = yes
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			west_prussia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			east_prussia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			mittelmark_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			berlin_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=connect_the_prussian_lands_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
 			add_mil_power = 100
-			silesia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+			#Claims
+			custom_tooltip = pru_conquer_silesia_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						pru_conquer_silesia_provinces = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
 			}
-			wielkopolska_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+			custom_tooltip = prussia_partitions_poland_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						prussia_partitions_poland_provinces = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
-			}
-			kuyavia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
 			}
 		}
 	}
 	pru_conquer_silesia = {
-		icon = mission_eastern_european_city
+		icon = mission_assemble_an_army
 		required_missions = { connect_the_prussian_lands }
 		provinces_to_highlight = {
-			area = silesia_area
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			area = breg_area
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			area = opole_area
+			pru_conquer_silesia_provinces = yes
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			silesia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			breg_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			opole_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=pru_conquer_silesia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
@@ -183,29 +153,66 @@ prussian_missions_main_slot = {
 				name = "prussian_ambition"
 				duration = 7300
 			}
-			north_rhine_area = {
+			
+			#Copying from Austria to add PU CB to Cleves (& Julich if Cleves does not exist). This was a crownland, after all.
+			if = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					exists = KLE
+					is_subject = no
+					KLE = {
+						is_subject = no
+					}
 				}
-				add_permanent_claim = ROOT
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					months = 300
+					target = KLE
+				}
+			}
+			else_if = {
+				limit = {
+					exists = JUL
+					is_subject = no
+					JUL = {
+						is_subject = no
+					}
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					months = 300
+					target = JUL
+				}
+			}
+			else = {
+				#Claims
+				custom_tooltip = pru_duchy_of_cleves_claims
+				hidden_effect = {
+					every_province = {
+						limit = {
+							pru_duchy_of_cleves_provinces = yes
+							NOT = { is_core = ROOT }
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
 			}
 		}
 	}
-
 	pru_duchy_of_cleves = {
 		icon = mission_cannons_firing
 		required_missions = { pru_conquer_silesia }
 		provinces_to_highlight = {
-			area = north_rhine_area
+			pru_duchy_of_cleves_provinces = yes
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			north_rhine_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=pru_duchy_of_cleves_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
@@ -213,17 +220,18 @@ prussian_missions_main_slot = {
 				name = "prussian_rhine"
 				duration = 7300
 			}
-			westphalia_area = {
+			#BT added.
+			north_rhine_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_claim = ROOT
 			}
-			north_westphalia_area = {
+			westphalia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_claim = ROOT
 			}
@@ -236,11 +244,12 @@ prussian_missions_slot_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		NOT = { has_dlc = "Emperor" }
-		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BRA
 			tag = PRU
+		}
+		NOT = {
+			has_dlc = "Emperor"
 		}
 	}
 	has_country_shield = yes
@@ -249,28 +258,54 @@ prussian_missions_slot_2 = {
 		required_missions = { connect_the_prussian_lands }
 		position = 6
 		provinces_to_highlight = {
-			OR = {
-				area = kuyavia_area
-				area = wielkopolska_area
-			}
+			prussia_partitions_poland_provinces = yes
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			kuyavia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			wielkopolska_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=prussia_partitions_poland_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		effect = {
 			add_country_modifier = {
 				name = "polish_partitions"
 				duration = 7300
+			}
+			
+			#Claims, to mirror further Polish partitions.
+			#2nd Partition provinces (Except 256 & 4525 in Mazovia)
+			kuyavia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+			central_poland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+			#3rd Partition provinces (Including 256 & 4525 in Mazovia, plus the part of the 257 & 3220 that technically went to the Habsburgs.)
+			mazovia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+			yotvingia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
 			}
 		}
 	}

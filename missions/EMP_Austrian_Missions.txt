@@ -10,9 +10,11 @@ emp_hab_poland_branch = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		OR = {
+		or = { 
 			tag = HAB
-			tag = AHU
+			tag = STY
+			tag = TIR
+			tag = VOR
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -128,27 +130,16 @@ emp_hab_empire_branch = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		OR = {
+		or = { 
 			tag = HAB
-			tag = AHU
+			tag = STY
+			tag = TIR
+			tag = VOR
 		}
 		NOT = { map_setup = map_setup_random }
 	}
 	
 	has_country_shield = yes
-	
-	hab_high_income_mission = {
-		icon = mission_high_income
-		required_missions = {  } #None
-		position = 1
-		trigger = { share_of_starting_income = 1.5 }
-		effect = {
-			add_country_modifier = {
-				name = "gc_growing_economy"
-				duration = 9125 #25 years
-			}
-		}
-	}
 	
 	emp_hab_no_one_to_threaten_us = {
 		icon = imperial_ascendancy
@@ -161,7 +152,7 @@ emp_hab_empire_branch = {
 				OR = {
 					AND = {
 						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 20
+							value = 25
 							continent = europe
 						}
 						is_part_of_hre = yes
@@ -172,19 +163,18 @@ emp_hab_empire_branch = {
 		}
 		trigger = {
 			is_emperor = yes
-			imperial_influence = 40
 			OR = {
 				hre_reform_passed = emperor_privilegia_de_non_appelando
 				AND = {
 					custom_trigger_tooltip = {
-						tooltip = gecko_emp_hab_no_one_to_threaten_us_trigger_tooltip
+						tooltip = emp_hab_no_one_to_threaten_us_trigger_tooltip
 						NOT = {
 							any_country = {
 								NOT = { tag = root }
 								NOT = { is_subject_of = ROOT }
 								is_part_of_hre = yes
 								num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-									value = 30
+									value = 25
 									continent = europe
 								}
 							}
@@ -192,7 +182,7 @@ emp_hab_empire_branch = {
 					}
 					calc_true_if = {
 						desc = emp_hab_no_one_to_threaten_us_trigger2_tooltip
-						amount = 10
+						amount = 20
 						all_country = {
 							has_reform = free_city
 						}
@@ -204,7 +194,7 @@ emp_hab_empire_branch = {
 			add_dip_power = 50
 			add_country_modifier = {
 				name = hab_ascendancy_in_empire
-				duration = -1
+				duration = 7300
 			}
 		}
 	}
@@ -236,20 +226,17 @@ emp_hab_empire_branch = {
 			is_emperor = yes
 			custom_trigger_tooltip = {
 				tooltip = no_hre_province_owned_by_non_hre_member_or_overlord_trigger
-				europe = {
-					type = all
-					OR = {
-						is_part_of_hre = no
-						AND = {
+				any_province = {
+					is_part_of_hre = no
+					AND = {
+						is_part_of_hre = yes
+						owner = {
 							is_part_of_hre = yes
-							owner = {
-								is_part_of_hre = yes
-								OR = {
-									is_subject = no
-									AND = {
-										is_subject = yes
-										overlord = { is_part_of_hre = yes }
-									}
+							OR = {
+								is_subject = no
+								AND = {
+									is_subject = yes
+									overlord = { is_part_of_hre = yes }
 								}
 							}
 						}
@@ -487,20 +474,17 @@ emp_hab_empire_branch = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = no_hre_province_owned_by_non_hre_member_or_overlord_trigger
-				europe = {
-					type = all
-					OR = {
-						is_part_of_hre = no
-						AND = {
+				any_province = {
+					is_part_of_hre = no
+					AND = {
+						is_part_of_hre = yes
+						owner = {
 							is_part_of_hre = yes
-							owner = {
-								is_part_of_hre = yes
-								OR = {
-									is_subject = no
-									AND = {
-										is_subject = yes
-										overlord = { is_part_of_hre = yes }
-									}
+							OR = {
+								is_subject = no
+								AND = {
+									is_subject = yes
+									overlord = { is_part_of_hre = yes }
 								}
 							}
 						}
@@ -533,9 +517,11 @@ emp_hab_prestige_branch = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		OR = {
+		or = { 
 			tag = HAB
-			tag = AHU
+			tag = STY
+			tag = TIR
+			tag = VOR
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -546,7 +532,7 @@ emp_hab_prestige_branch = {
 		icon = balance_the_estates
 		required_missions = {  }
 		trigger = {
-			crown_land_share = 0.1
+			crown_land_share = 30
 			if = {
 				limit = {
 					has_estate = estate_nobles
@@ -643,7 +629,7 @@ emp_hab_prestige_branch = {
 				ROOT = {
 					NOT = {
 						development_in_provinces = {
-							value = 150 #start:122
+							value = 240 # Up from 180. Starts with 157, 60ish can be conquered.
 							culture = austrian
 						}
 					}
@@ -665,7 +651,7 @@ emp_hab_prestige_branch = {
 		}
 		trigger = {
 			development_in_provinces = {
-				value = 180 #start:122
+				value = 240
 				culture = austrian
 			}
 			num_of_owned_provinces_with = {
@@ -679,26 +665,6 @@ emp_hab_prestige_branch = {
 				name = hab_prosperity_windfall
 				duration = 7300
 			}
-			krain_area = {
-				limit = { country_or_non_sovereign_subject_holds = ROOT }
-					add_base_manpower = 1
-				}
-			inner_austria_area = {
-				limit = { country_or_non_sovereign_subject_holds = ROOT }
-					add_base_manpower = 1
-				}
-			outer_austria_area= {
-				limit = { country_or_non_sovereign_subject_holds = ROOT }
-					add_base_manpower = 1
-				}
-			austria_proper_area= {
-				limit = { country_or_non_sovereign_subject_holds = ROOT }
-					add_base_manpower = 1
-				}
-			tirol_area = {
-				limit = { country_or_non_sovereign_subject_holds = ROOT }
-					add_base_manpower = 1
-				}			
 		}
 	}
 	
@@ -716,14 +682,14 @@ emp_hab_prestige_branch = {
 					owned_by = root
 					development = 20
 					OR = {
-						NOT = { development = 30 }
+						NOT = { development = 50 }
 						is_part_of_hre = no
 					}
 					NOT = {
 						ROOT = {
 							num_of_owned_provinces_with = {
 								value = 5
-								development = 30
+								development = 50
 								is_part_of_hre = yes
 							}
 						}
@@ -739,14 +705,14 @@ emp_hab_prestige_branch = {
 				is_emperor = yes
 				num_of_owned_provinces_with = {
 					value = 5
-					development = 30
+					development = 50
 					is_part_of_hre = yes
 				}
 			}
 			else = {
 				num_of_owned_provinces_with = {
 					value = 5
-					development = 30
+					development = 50
 				}
 			}
 		}
@@ -766,14 +732,14 @@ emp_hab_prestige_branch = {
 			province_id = 134
 			OR = {
 				NOT = { owned_by = root }
-				NOT = { development = 50 }
+				NOT = { development = 80 }
 				NOT = { num_of_buildings_in_province = 6 }
 			}
 		}
 		trigger = {
 			134 = {
 				owned_by = root
-				development = 50
+				development = 80
 				num_of_buildings_in_province = 6
 			}
 			has_adm_advisor_3 = yes
@@ -802,9 +768,11 @@ emp_hab_minorities_branch = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		OR = {
+		or = { 
 			tag = HAB
-			tag = AHU
+			tag = STY
+			tag = TIR
+			tag = VOR
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -821,15 +789,28 @@ emp_hab_minorities_branch = {
 					OR = {
 						area = slovakia_area
 						area = transdanubia_area
+						area = alfold_area
+						area = upper_hungary_area
+					}
+					OR = {
+						NOT = { owned_by = root }
+						NOT = { unrest = 1 }
+						NOT = { nationalism = 1 }
+						NOT = { local_autonomy = 1 }
 					}
 					ROOT = {
 						NOT = {
 							num_of_owned_provinces_with = {
-								value = 10 #out of 14
+								value = 32 #Vanilla: 12/14, BT 32/37
 								OR = {
 									area = slovakia_area
 									area = transdanubia_area
+									area = alfold_area
+									area = upper_hungary_area
 								}
+								NOT = { unrest = 1 }
+								NOT = { nationalism = 1 }
+								NOT = { local_autonomy = 1 }
 							}
 						}
 					}
@@ -854,11 +835,16 @@ emp_hab_minorities_branch = {
 			owns_core_province = 153
 			owns_core_province = 1772
 			num_of_owned_provinces_with = {
-				value = 10 #out of 14
+				value = 32 #Vanilla: 12/14. BT 32/37
 				OR = {
 					area = slovakia_area
 					area = transdanubia_area
+					area = alfold_area
+					area = upper_hungary_area
 				}
+				NOT = { unrest = 1 }
+				NOT = { nationalism = 1 }
+				NOT = { local_autonomy = 1 }
 			}
 		}
 		effect = {
@@ -917,111 +903,49 @@ emp_hab_minorities_branch = {
 		icon = multicultural_empire
 		required_missions = { emp_hab_the_hungarian_question }
 		provinces_to_highlight = {
+			owned_by = root
+			NOT = { culture_group = root }
 			OR = {
-				area = erzgebirge_area
-				area = bohemia_area
-				area = hradecko_area
-				area = moravia_area
-				area = slovakia_area
-				province_id = 135
-				province_id = 4240
-				province_id = 1864
-				province_id = 6099
-				area = carinthia_area
-				area = venetia_area
-				area = tirol_area
-				area = inner_austria_area
-				area = krain_area
-				area = austria_proper_area
-				area = outer_austria_area
-				area = carinthia_area
+				unrest = 1
+				nationalism = 1
+				local_autonomy = 1
 			}
-			NOT = {
-				owned_by = ROOT
+			ROOT = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						value = 75 #~2.5x density. Should require just Bohemia and Hungary (and their vassals/Croatia) to complete easily anyways.
+						NOT = { culture_group = root }
+						NOT = { unrest = 1 }
+						NOT = { nationalism = 1 }
+						NOT = { local_autonomy = 1 }
+					}
+				}
 			}
 		}
 		trigger = {
 			adm_tech = 10
-			OR = {
-				HUN = {
-					NOT = {
-						total_development = 200
-					}
-				}
-				NOT = {
-					exists = HUN
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = gecko_habsburg_empire_requirements_tooltip
-				erzgebirge_area = {
-					type = all
-					owned_by = ROOT
-				}
-				bohemia_area = {
-					type = all 
-					owned_by = ROOT
-				}
-				hradecko_area = {
-					type = all 
-					owned_by = ROOT
-				}
-				moravia_area = {
-					type = all 
-					owned_by = ROOT
-				}
-				slovakia_area = {
-					type = all 
-					owned_by = ROOT
-				}
-				135 = {
-					owned_by = ROOT
-				}
-				4240 = {
-					owned_by = ROOT
-				}
-				1864 = {
-					owned_by = ROOT
-				}
-				6099 = {
-					owned_by = ROOT
-				}
-				carinthia_area = {
-					type = all 
-					owned_by = ROOT
-				}
-				venetia_area = {
-					type = all 
-					owned_by = ROOT
-				}
-				tirol_area = {
-					type = all 
-					owned_by = ROOT
-				}
-				inner_austria_area = {
-					type = all 
-					owned_by = ROOT
-				}
-				krain_area = {
-					type = all 
-					owned_by = ROOT
-				}
-				austria_proper_area = {
-					type = all 
-					owned_by = ROOT
-				}
-				outer_austria_area = {
-					type = all 
-					owned_by = ROOT
-				}
-				carinthia_area = {
-					type = all 
-					owned_by = ROOT
-				}
+			num_of_owned_provinces_with = {
+				value = 75
+				NOT = { culture_group = root }
+				NOT = { unrest = 1 }
+				NOT = { nationalism = 1 }
+				NOT = { local_autonomy = 1 }
 			}
 		}
 		effect = {
-			country_event = { id = flavor_hab.20 }
+			if = {
+				limit = { 
+					government = monarchy
+					is_revolutionary = no 
+				}
+				country_event = { id = flavor_hab.20 }
+			}
+			else = {
+				add_country_modifier = {
+					name = hab_tolerant_society
+					duration = -1
+				}
+			}
 		}
 	}
 }
@@ -1037,9 +961,11 @@ emp_hab_german_expansion_branch = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		OR = {
+		or = { 
 			tag = HAB
-			tag = AHU
+			tag = STY
+			tag = TIR
+			tag = VOR
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1053,36 +979,15 @@ emp_hab_german_expansion_branch = {
 		
 		required_missions = {  }
 		provinces_to_highlight = {
-			OR = {
-				province_id = 110
-				province_id = 76
-				province_id = 4709
-				province_id = 1868
-			}
-			ROOT = {
-				NOT = {
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 2
-						OR = {
-							province_id = 110
-							province_id = 76
-							province_id = 4709
-							province_id = 1868
-						}
-					}
-				}
-			}
+			austrian_take_the_bishoprics_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 2
-				OR = {
-					province_id = 110
-					province_id = 76
-					province_id = 4709
-					province_id = 1868
-				}
+			has_fulfiled_num_of_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted_num
+				provinces=austrian_take_the_bishoprics_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+				value=7 #Vanilla: 2/4, BT 7/19: forces at least 2 wars to take enough provinces.
 			}
 		}
 		effect = {
@@ -1099,28 +1004,28 @@ emp_hab_german_expansion_branch = {
 					months = 300
 					target = BAV
 				}
+				hidden_effect = {
+					every_province = {
+						limit = {
+							austrian_bayern_provinces = yes
+							NOT = { owned_by = BAV }
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
 			}
 			else = {
-				upper_bavaria_area = {
-					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+				custom_tooltip = austrian_bayern_claims
+				hidden_effect = {
+					every_province = {
+						limit = {
+							austrian_bayern_provinces = yes
+							NOT = { is_core = ROOT }
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = root
-				}
-				lower_bavaria_area = {
-					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
-					}
-					add_permanent_claim = root
-				}
-				east_bavaria_area = {
-					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
-					}
-					add_permanent_claim = root
 				}
 			}
 		}
@@ -1131,33 +1036,15 @@ emp_hab_german_expansion_branch = {
 		
 		required_missions = { emp_hab_take_salzburg }
 		provinces_to_highlight = {
-			OR = {
-				area = east_bavaria_area
-				area = upper_bavaria_area
-				area = lower_bavaria_area
-			}
-			ROOT = {
-				NOT = {
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 8 #out of 12
-						OR = {
-							area = east_bavaria_area
-							area = upper_bavaria_area
-							area = lower_bavaria_area
-						}
-					}
-				}
-			}
+			austrian_bayern_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 8 #out of 12
-				OR = {
-					area = east_bavaria_area
-					area = upper_bavaria_area
-					area = lower_bavaria_area
-				}
+			has_fulfiled_num_of_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted_num
+				provinces=austrian_bayern_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+				value=18 #Vanilla: 8/11, BT, straight scale up: 18/25
 			}
 		}
 		effect = {
@@ -1174,36 +1061,26 @@ emp_hab_german_expansion_branch = {
 		
 		required_missions = { emp_hab_union_bayern emp_hab_connect_further_austria }
 		provinces_to_highlight = {
-			OR = {
-				area = upper_swabia_area
-				area = lower_swabia_area
-				area = upper_rhineland_area
-			}
-			ROOT = {
-				NOT = {
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 8 #of 10 (you can spare the FCs)
-						OR = {
-							area = upper_swabia_area
-							area = lower_swabia_area
-							area = upper_rhineland_area
-						}
-					}
-				}
-			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			austrian_swabia_provinces = yes
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 8 #of 10 (you can spare the FCs)
-				OR = {
-					area = upper_swabia_area
-					area = lower_swabia_area
-					area = upper_rhineland_area
-				}
+			has_fulfiled_num_of_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted_num
+				provinces=austrian_swabia_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+				value=17 #of 26, sparing all free cities in claimed areas.
 			}
 		}
 		effect = {
+			upper_rhineland_area = {
+				limit = { country_or_non_sovereign_subject_holds = root }
+				add_nationalism = -5
+				add_province_modifier = {
+					name = hab_holdings_in_swabia
+					duration = 10950
+				}
+			}
 			upper_swabia_area = {
 				limit = { country_or_non_sovereign_subject_holds = root }
 				add_nationalism = -5
@@ -1212,7 +1089,7 @@ emp_hab_german_expansion_branch = {
 					duration = 10950
 				}
 			}
-			lower_swabia_area = {
+			east_bavaria_area = {
 				limit = { country_or_non_sovereign_subject_holds = root }
 				add_nationalism = -5
 				add_province_modifier = {
@@ -1220,7 +1097,7 @@ emp_hab_german_expansion_branch = {
 					duration = 10950
 				}
 			}
-			upper_rhineland_area = {
+			lower_swabia_area = {
 				limit = { country_or_non_sovereign_subject_holds = root }
 				add_nationalism = -5
 				add_province_modifier = {
@@ -1242,9 +1119,11 @@ emp_hab_german_expansion_branch_2 = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		OR = {
+		or = { 
 			tag = HAB
-			tag = AHU
+			tag = STY
+			tag = TIR
+			tag = VOR
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1259,7 +1138,7 @@ emp_hab_german_expansion_branch_2 = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					area = berlin_area
+					area = mittelmark_area
 					NOT = { country_or_non_sovereign_subject_holds = root }
 				}
 				AND = {
@@ -1274,7 +1153,7 @@ emp_hab_german_expansion_branch_2 = {
 			}
 			OR = {
 				NOT = {
-					berlin_area = {
+					mittelmark_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = root
 					}
@@ -1342,7 +1221,7 @@ emp_hab_german_expansion_branch_2 = {
 					exists = BRA
 				}
 				OR = {
-					berlin_area = {
+					mittelmark_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = root
 					}
@@ -1404,7 +1283,7 @@ emp_hab_german_expansion_branch_2 = {
 				}
 			}
 			else = {
-				berlin_area = {
+				mittelmark_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = root
 				}
@@ -1419,7 +1298,7 @@ emp_hab_german_expansion_branch_2 = {
 					define_advisor = {
 						type = army_reformer
 						skill = 5
-						cost_multiplier = 0.67
+						cost_multiplier = 0.25
 						culture = prussian
 						religion = PRU
 					}
@@ -1428,7 +1307,7 @@ emp_hab_german_expansion_branch_2 = {
 					define_advisor = {
 						type = army_reformer
 						skill = 3
-						cost_multiplier = 0.67
+						cost_multiplier = 0.25
 						culture = prussian
 						religion = PRU
 					}
@@ -1439,7 +1318,7 @@ emp_hab_german_expansion_branch_2 = {
 				define_advisor = {
 					type = army_reformer
 					skill = 5
-					cost_multiplier = 0.67
+					cost_multiplier = 0.25
 					culture = saxon
 				}
 			}
@@ -1447,7 +1326,7 @@ emp_hab_german_expansion_branch_2 = {
 				define_advisor = {
 					type = army_reformer
 					skill = 3
-					cost_multiplier = 0.67
+					cost_multiplier = 0.25
 					culture = saxon
 				}
 			}
@@ -1465,9 +1344,11 @@ emp_hab_western_expansion_branch = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		OR = {
+		or = { 
 			tag = HAB
-			tag = AHU
+			tag = STY
+			tag = TIR
+			tag = VOR
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1505,6 +1386,13 @@ emp_hab_western_expansion_branch = {
 			}
 		}
 		effect = {
+			swiss_alps_area = {
+				limit = {
+					NOT = { is_core = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
 			switzerland_area = {
 				limit = {
 					NOT = { is_core = root }
@@ -1519,40 +1407,16 @@ emp_hab_western_expansion_branch = {
 				}
 				add_permanent_claim = root
 			}
-			bern_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+			custom_tooltip = austrian_swabia_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						austrian_swabia_provinces = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = root
-			}
-			grisons_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
-			upper_swabia_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
-			lower_swabia_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
-			upper_rhineland_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
 			}
 		}
 	}
@@ -1567,19 +1431,17 @@ emp_hab_western_expansion_branch = {
 					OR = {
 						area = romandie_area
 						area = switzerland_area
-						area = bern_area
-						area = grisons_area
+						area = swiss_alps_area
 					}
 					NOT = { country_or_non_sovereign_subject_holds = root }
 					ROOT = {
 						NOT = {
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-								value = 7 #Switzerland + Three Leagues
+								value = 14 #Switzerland + Three Leagues
 								OR = {
 									area = romandie_area
 									area = switzerland_area
-									area = bern_area
-									area = grisons_area
+									area = swiss_alps_area
 								}
 							}
 						}
@@ -1593,12 +1455,11 @@ emp_hab_western_expansion_branch = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 7 #Switzerland + Three Leagues
+				value = 14 #Switzerland + Three Leagues
 				OR = {
 					area = romandie_area
 					area = switzerland_area
-					area = bern_area
-					area = grisons_area
+					area = swiss_alps_area
 				}
 			}
 			OR = {
@@ -1607,7 +1468,14 @@ emp_hab_western_expansion_branch = {
 			}
 		}
 		effect = {
-			bourgogne_area = {
+			west_burgundy_area  = {
+				limit = {
+					NOT = { is_core = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			barrois_area = {
 				limit = {
 					NOT = { is_core = root }
 					NOT = { is_permanent_claim = root }
@@ -1624,8 +1492,9 @@ emp_hab_western_expansion_branch = {
 			every_province = {
 				limit = {
 					region = france_region
-					NOT = { area = bourgogne_area }
+					NOT = { area = west_burgundy_area }
 					NOT = { area = lorraine_area }
+					NOT = { area = barrois_area }
 					is_part_of_hre = yes
 					owner = {
 						OR = {
@@ -1648,19 +1517,58 @@ emp_hab_western_expansion_branch = {
 		required_missions = { emp_hab_conquer_switzerland }
 		provinces_to_highlight = {
 			OR = {
-				area = bourgogne_area
+				area = west_burgundy_area
+				area = barrois_area
 				area = lorraine_area
+			} 
+			owner = {
+				OR = {
+					is_part_of_hre = no
+					AND = {
+						is_subject = yes
+						overlord = { is_part_of_hre = no }
+					}
+				}		
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
 		}
 		trigger = {
-			bourgogne_area = {
+			west_burgundy_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				owner = {
+					OR = {
+						is_part_of_hre = yes
+						AND = {
+							is_subject = yes
+							overlord = { is_part_of_hre = yes }
+						}
+					}	
+				}				
+			}
+			barrois_area = {
+				type = all
+				owner = {
+					OR = {
+						is_part_of_hre = yes
+						AND = {
+							is_subject = yes
+							overlord = { is_part_of_hre = yes }
+						}
+					}
+					
+				}	
 			}
 			lorraine_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				owner = {
+					OR = {
+						is_part_of_hre = yes
+						AND = {
+							is_subject = yes
+							overlord = { is_part_of_hre = yes }
+						}
+					}
+					
+				}	
 			}
 		}
 		effect = {
@@ -1668,7 +1576,13 @@ emp_hab_western_expansion_branch = {
 				name = hab_empire_in_the_west
 				duration = 7300
 			}
-			bourgogne_area = {
+			west_burgundy_area = {
+				add_province_modifier = {
+					name = hab_back_into_empire
+					duration = 7300
+				}
+			}
+			barrois_area = {
 				add_province_modifier = {
 					name = hab_back_into_empire
 					duration = 7300
@@ -1741,9 +1655,11 @@ emp_hab_balkans = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		OR = {
+		or = { 
 			tag = HAB
-			tag = AHU
+			tag = STY
+			tag = TIR
+			tag = VOR
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1764,42 +1680,16 @@ emp_hab_balkans = {
 		
 		required_missions = { austrian_croatia }
 		provinces_to_highlight = {
-			OR = {
-				AND = {
-					province_id = 3002
-					NOT = { owned_by = root }
-				}
-				AND = {
-					OR = {
-						area = serbia_area
-						area = rascia_area
-						area = bosnia_area
-					}
-					NOT = {
-						ROOT = {
-							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-								value = 12 #out of 15
-								OR = {
-									area = serbia_area
-									area = rascia_area
-									area = bosnia_area
-								}
-							}
-						}
-					}
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-			}
+			austrian_defeat_the_serbs_provinces = yes
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			3002 = { owned_by = root }
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 12 #out of 15
-				OR = {
-					area = serbia_area
-					area = rascia_area
-					area = bosnia_area
-				}
+			has_fulfiled_num_of_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted_num
+				provinces=austrian_defeat_the_serbs_provinces
+				owner_type=country_or_non_sovereign_subject_holds
+				value=29 #Vanilla: 12/14, 29/34
 			}
 		}
 		effect = {
@@ -1815,8 +1705,21 @@ emp_hab_balkans = {
 				name = hab_conquered_serbia
 				duration = 7300
 			}
-
+			vidin_area = {
+				limit = {
+					NOT = { is_core = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
 			bulgaria_area = {
+				limit = {
+					NOT = { is_core = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			upper_thrace_area = {
 				limit = {
 					NOT = { is_core = root }
 					NOT = { is_permanent_claim = root }
@@ -1837,9 +1740,11 @@ emp_hab_balkans_2 = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		OR = {
+		or = { 
 			tag = HAB
-			tag = AHU
+			tag = STY
+			tag = TIR
+			tag = VOR
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1861,22 +1766,47 @@ emp_hab_balkans_2 = {
 		required_missions = { emp_hab_take_serbia conquer_transylvania }
 		provinces_to_highlight = {
 			OR = {
-				area = wallachia_area
-				area = silistria_area
+				area = vidin_area
 				area = bulgaria_area
+				area = upper_thrace_area
+				area = oltenia_area
+				area = upper_muntenia_area
+				area = wallachia_area
+				area = danubian_plain_area
+				area = silistria_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			wallachia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			silistria_area = {
+			vidin_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			bulgaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			oltenia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_muntenia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			wallachia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			danubian_plain_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			silistria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1891,8 +1821,9 @@ emp_hab_balkans_2 = {
 			}
 			custom_tooltip = emp_hab_take_wallachia_bulgaria_effect_tooltip
 			hidden_effect = {
-				europe = {
+				every_province = {
 					limit = {
+						continent = europe
 						owned_by = TUR
 						NOT = { is_core = root }
 						NOT = { is_permanent_claim = root }
@@ -1927,9 +1858,10 @@ emp_hab_balkans_2 = {
 		}
 		trigger = {
 			NOT = {
-				europe = {
+				any_province = {
 					custom_trigger_tooltip = {
 						tooltip = emp_hab_scourge_of_europe_trigger_tooltip
+						continent = europe
 						owned_by = TUR
 						NOT = { region = anatolia_region }
 						NOT = { region = caucasia_region }
@@ -1964,9 +1896,11 @@ emp_hab_more_italy_branch = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		OR = {
+		or = { 
 			tag = HAB
-			tag = AHU
+			tag = STY
+			tag = TIR
+			tag = VOR
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1997,7 +1931,7 @@ emp_hab_more_italy_branch = {
 					ROOT = {
 						NOT = {
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-								value = 5
+								value = 7 #5/8 -> 7/11
 								OR = {
 									area = lombardy_area
 									area = po_valley_area
@@ -2012,7 +1946,7 @@ emp_hab_more_italy_branch = {
 		trigger = {
 			owns_or_non_sovereign_subject_of = 104
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 5
+				value = 7 #5/8 -> 7/11
 				OR = {
 					area = lombardy_area
 					area = po_valley_area
@@ -2050,6 +1984,13 @@ emp_hab_more_italy_branch = {
 				}
 			}
 			else = {
+				abruzzo_area = {
+					limit = {
+						NOT = { is_core = root }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = root
+				}
 				naples_area = {
 					limit = {
 						NOT = { is_core = root }
@@ -2093,6 +2034,7 @@ emp_hab_more_italy_branch = {
 				province_id = 121
 				AND = {
 					OR = {
+						area = abruzzo_area
 						area = naples_area
 						area = apulia_area
 						area = calabria_area
@@ -2100,8 +2042,9 @@ emp_hab_more_italy_branch = {
 					ROOT = {
 						NOT = {
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-								value = 8
+								value = 20 #20/26
 								OR = {
+									area = abruzzo_area
 									area = naples_area
 									area = apulia_area
 									area = calabria_area
@@ -2116,8 +2059,9 @@ emp_hab_more_italy_branch = {
 		trigger = {
 			owns_or_non_sovereign_subject_of = 121
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 8
+				value = 20
 				OR = {
+					area = abruzzo_area
 					area = naples_area
 					area = apulia_area
 					area = calabria_area
@@ -2152,9 +2096,11 @@ emp_hab_diplo_branch = {
 	}
 	potential = {
 		has_dlc = "Emperor"
-		OR = {
+		or = { 
 			tag = HAB
-			tag = AHU
+			tag = STY
+			tag = TIR
+			tag = VOR
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -2481,7 +2427,7 @@ emp_hab_diplo_branch = {
 			NOT = {
 				ROOT = {
 					calc_true_if = {
-						amount = 500
+						amount = 1000
 						europe = {
 							type = all
 							NOT = { region = anatolia_region }
@@ -2517,9 +2463,9 @@ emp_hab_diplo_branch = {
 		trigger = {
 			calc_true_if = {
 				desc = emp_hab_our_balance_of_power_tooltip
-				amount = 500
-				europe = {
-					type = all
+				amount = 1000
+				all_province = {
+					continent = europe
 					NOT = { region = anatolia_region }
 					NOT = { region = caucasia_region }
 					OR = {
@@ -2571,10 +2517,41 @@ emp_hab_diplo_branch = {
 			}
 		}
 		trigger = {
+			OR = {
+				has_reform = revolutionary_empire_reform
+				has_reform = revolutionary_republic_reform
+				custom_trigger_tooltip = {
+					tooltip = center_of_revolution.3000.A.tt
+					has_global_flag = no_more_revolutions_ever
+				}
+				any_known_country = {
+					is_revolution_target = yes
+					war_with = ROOT
+					capital_scope = {
+						controlled_by = ROOT
+					}
+				}
+			}
 		}
 		effect = {
+			if = {
+				limit = {
+					NOT = { 
+						OR = {
+							has_reform = revolutionary_empire_reform
+							has_reform = revolutionary_republic_reform
+						}
+					}
+				}
+				add_country_modifier = {
+					name = "hab_reactionary_zeal"
+					duration = 7300
+				}
+			}
+			else = {
 				add_mil_power = 300
-			}	
+			}
+		}
 	}
 
 	emp_hab_power_to_habsburg = {

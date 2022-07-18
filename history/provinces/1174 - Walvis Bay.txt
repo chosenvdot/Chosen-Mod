@@ -1,15 +1,16 @@
+ 
 #1174 - Angra Pequena
 
-culture = khoisan
-religion = shamanism #Fetishism
-capital = "Walvis Bay"
+culture = kama_culture
+religion = shamanism 
+capital = "Tsoakhaub" 
 trade_goods = unknown
-hre = no
+hre = no 
 base_tax = 1 
-base_production = 1
-base_manpower = 1
-native_size = 40
-native_ferocity = 2
-native_hostileness = 6
+base_production = 1 
+base_manpower = 1 
+native_size = 10
+native_ferocity = 10
+native_hostileness = 5
 
 1487.1.1 = { discovered_by = POR } # Bartolomeu Dias

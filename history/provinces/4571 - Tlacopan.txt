@@ -1,20 +1,21 @@
+ 
 # No previous file for Tlacopan
 
-#owner = AZT
-#controller = AZT
-#add_core = AZT
+owner = AZT
+controller = AZT
+add_core = AZT
 culture = aztek 
 religion = nahuatl
 capital = "Tlacopan" 
-trade_goods = gold
+trade_goods = paper			#Amate paper was used most extensively during the Triple Alliance Empire.[11] This paper was manufactured in over 40 villages in territory controlled by the Aztecs and then handed over as tribute by the conquered peoples. This amounted to about 480,000 sheets annually. Most of the production was concentrated in the modern state of Morelos, where Ficus trees are abundant because of the climate.
 hre = no 
-base_tax = 5
-base_production = 5
-base_manpower = 2 
+base_tax = 10
+base_production = 10
+base_manpower = 4 
 is_city = yes
-discovered_by = AZT
-discovered_by = MAY
-discovered_by = ZAP
+1444.1.1 = { discovered_by = AZT }
+1444.1.1 = { discovered_by = MAY }
+1444.1.1 = { discovered_by = ZAP }
 discovered_by = mesoamerican
 
 1519.1.1 = { discovered_by = SPA }

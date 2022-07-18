@@ -1,3 +1,4 @@
+ 
 #2209 - Ilam
 
 owner = TIM
@@ -7,11 +8,11 @@ religion = shiite
 capital = "Ilam"
 trade_goods = wool
 hre = no
-base_tax = 2
-base_production = 2
-base_manpower = 1
+base_tax = 4 
+base_production = 4
+base_manpower = 2 
 is_city = yes
-#fort_15th = yes
+fort_15th = yes
 add_core = LRI
 discovered_by = muslim
 discovered_by = ottoman
@@ -19,9 +20,9 @@ discovered_by = nomad_group
 discovered_by = indian
 
 1411.1.1 = {
-	owner = ARD
-	controller = ARD
-	add_core = ARD		
+	owner = QAR
+	controller = QAR
+	add_core = QAR		
 } # Qara Koyunlu
 1458.9.1 = { unrest = 5 } # Civil war
 1458.12.1 = { unrest = 0 }

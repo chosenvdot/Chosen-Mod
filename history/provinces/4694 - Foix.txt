@@ -1,24 +1,27 @@
-owner = FRA
-controller = FRA
+ 
+#4694 - Foix
+#Region - France
+#Area - Languedoc
+
+owner = FOI
+controller = FOI
+add_core = FOI
 capital = "Foix"
 is_city = yes
-culture = gascon
+culture = occitain	#aquitaine vanilla
 religion = catholic
 hre = no
-base_tax = 2 
-base_production = 2
+base_tax = 2  
+base_production = 2 
 trade_goods = wool
-base_manpower = 2
-add_core = FOI
-add_core = GUY
-add_core = AMG
-add_core = FRA
-discovered_by = eastern
+base_manpower = 2 
+#add_local_autonomy = 25
+fort_15th = yes #Chateau de Foix
+
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-add_local_autonomy = 50
-
+discovered_by = eastern
 
 1479.2.13 = {	owner = NAV
 	controller = NAV
@@ -32,7 +35,7 @@ add_local_autonomy = 50
 1574.5.1 = { unrest = 7 } # Charles IX dies, situation cools a bit	
 1584.1.1 = { unrest = 12 } # Situation heats up again
 1588.12.1 = { unrest = 15 } # Henri de Guise assassinated at Blois, Ultra-Catholics into a frenzy
-1589.8.2 = { owner = FRA controller = FRA remove_core = NAV add_core = FRA } # Death of Henri III
+1589.8.2 = { owner = FRA controller = FRA remove_core = NAV } # Death of Henri III
 1594.1.1 = { unrest = 10 } # 'Paris vaut bien une messe!', Henri converts to Catholicism
 1598.4.13 = { unrest = 3 } # Edict of Nantes, alot more freedom to the protestants
 1598.5.2 = { unrest = 0 } # Peace of Vervins, formal end to the Wars of Religion

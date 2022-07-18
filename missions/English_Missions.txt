@@ -1,5 +1,5 @@
+#Fixed by Dub.
 eng_british_conquest = {
-
 	slot = 1
 	generic = no
 	ai = yes
@@ -9,7 +9,6 @@ eng_british_conquest = {
 			tag = ENG
 			tag = GBR
 		}
-		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
@@ -21,69 +20,13 @@ eng_british_conquest = {
 		
 		trigger = {
 			army_size_percentage = 1
+			manpower_percentage = 0.6
 			num_of_generals = 1
 		}
 		
 		effect = {
-			munster_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			connacht_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			ulster_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			leinster_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			lowlands_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			
-			4361 = {
-				add_permanent_claim = ROOT
-			}
-			
-			4362 = {
-				add_permanent_claim = ROOT
-			}
-			
-			250 = { 
-				add_permanent_claim = ROOT
-			}
-			4363 = { 
-				add_permanent_claim = ROOT
-			}
-			4364 = {
-				add_permanent_claim = ROOT
-			}
-			252 = { 
-				add_permanent_claim = ROOT
-			}
-			4110 = { 
-				add_permanent_claim = ROOT
-			}
+			give_permaclaims_for_mission = { mission=conquer_ireland }
+			give_permaclaims_for_mission = { mission=conquer_scotland }
 			if = {
 				limit = {
 					exists = SCO
@@ -108,7 +51,6 @@ eng_british_conquest_ire = {
 			tag = ENG
 			tag = GBR
 		}
-		NOT = { map_setup = map_setup_random }
 	}
 	
 	has_country_shield = yes
@@ -120,41 +62,28 @@ eng_british_conquest_ire = {
 		completed_by = 1603.1.1
 		
 		provinces_to_highlight = {
-			OR = {
-				area = munster_area
-				area = connacht_area
-				area = ulster_area
-				area = leinster_area
-			}
-			NOT = { owned_by = ROOT }
+			conquer_ireland_provinces = yes
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } #Changing from owned_by because BT introduces the Irish Viceroyalty and I didn't want to make the mission incompletable on that basis.
 		}
 		
 		trigger = {
-			munster_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			connacht_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ulster_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			leinster_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=conquer_ireland_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		
 		effect = {
-			add_country_modifier = {
-				name = "isles_secured"
-				duration = 5475
+			ireland_region = { # Brian; changed from _area
+				add_province_modifier = {
+					name = "eng_irish_revolts"
+					duration = 5475
 				}
+			}
 		}
-	}	
+	
+	}
 }
 
 eng_british_conquest_scotland = {
@@ -168,7 +97,6 @@ eng_british_conquest_scotland = {
 			tag = ENG
 			tag = GBR
 		}
-		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
@@ -179,33 +107,15 @@ eng_british_conquest_scotland = {
 		completed_by = 1603.1.1
 		
 		provinces_to_highlight = {
-			OR = {
-				area = lowlands_area
-				province_id = 250
-				province_id = 4363
-				province_id = 252
-				province_id = 4110
-			}
+			conquer_scotland_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			250 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4363 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-
-			252 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4110 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			lowlands_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=conquer_scotland_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		
@@ -218,32 +128,16 @@ eng_british_conquest_scotland = {
 			if = {
 				limit = {
 					has_dlc = "Rule Britannia"
+					tag = GBR
 				}
-				369 = {
-					add_permanent_claim = ROOT
+				give_permaclaims_for_mission = { mission=eng_rb_take_shetland_and_faro_isles }
+				iceland_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+					}
+					add_claim = ROOT
 				}
-				1978 = {
-					add_permanent_claim = ROOT
-				}
-				1979 = {
-					add_permanent_claim = ROOT
-				}
-				370 = {add_claim = ROOT }
-				371 = {add_claim = ROOT }
-				western_norway = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-				eastern_norway = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 			}
 		}
 	
@@ -261,7 +155,6 @@ eng_french_conquest = {
 			tag = ENG
 			tag = GBR
 		}
-		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
@@ -282,52 +175,18 @@ eng_french_conquest = {
 						has_country_flag = rb_gave_up_maine
 					}
 				}
-			}
-			else_if = {
-				limit = { 
-					NOT = { exists = FRA }
-				}
-				OR = {
+				else = {
 					183 = {
 						owner = {
 							war_with = ROOT
 						}
-					}
-					183 = {
-						owned_by = ROOT
-						is_core = ROOT
 					}
 				}
 			}
 		}
 		
 		effect = {
-			ile_de_france_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			champagne_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			236 = {
-				western_longbow =  ROOT
-				western_longbow =  ROOT
-				western_longbow =  ROOT
-				western_longbow =  ROOT
-				western_longbow =  ROOT
-				western_longbow =  ROOT
-				western_longbow =  ROOT
-				western_longbow =  ROOT
-				western_longbow =  ROOT
-				western_longbow =  ROOT
-			}
+			give_permaclaims_for_mission = { mission=vassalize_france }
 		}
 	}
 	
@@ -362,29 +221,12 @@ eng_french_conquest = {
 					capital_scope = {
 						OR = {
 							controlled_by = ROOT
-							AND = {
-								controller = {
-									OR = {
-										is_subject_of = ROOT
+							controller = {
+								OR = {
+									is_subject_of = ROOT
+									alliance_with = ROOT
+									overlord = {
 										alliance_with = ROOT
-										overlord = {
-											alliance_with = ROOT
-										}
-									}
-									custom_trigger_tooltip = {
-										tooltip = joint_war_with_root_vs_france
-										OR = {
-											is_in_war = {
-												attackers = root
-												attackers = this
-												defenders = FRA
-											}
-											is_in_war = {
-												defenders = root
-												defenders = this
-												attackers = FRA
-											}
-										}
 									}
 								}
 							}
@@ -415,13 +257,7 @@ eng_french_conquest = {
 				limit = {
 					has_dlc = "Rule Britannia"
 				}
-				brittany_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
+				give_permaclaims_for_mission = { mission=eng_rb_brittany }
 			}
 		}
 	}
@@ -432,29 +268,15 @@ eng_french_conquest = {
 		position = 5
 		
 		provinces_to_highlight = {
-			OR = {
-				area = ile_de_france_area
-				province_id = 186
-				province_id = 4390
-			}
+			vassalize_france_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			OR = {
-				FRA = { is_subject_of = ROOT }
-				AND = {
-					ile_de_france_area = {
-						type = all
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					186 = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					4390 = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
+				provinces=vassalize_france_provinces
+				owner_type=country_or_non_sovereign_subject_holds
 			}
 		}
 		
@@ -480,7 +302,6 @@ eng_exploration_americas = {
 			tag = GBR
 		}
 		is_random_new_world = no
-		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	
@@ -497,7 +318,7 @@ eng_exploration_americas = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_caribbean
-				colonial_the_carribean = { has_discovered = ROOT }
+				carribeans_region = { has_discovered = ROOT }
 			}
 		}
 		
@@ -512,7 +333,7 @@ eng_exploration_americas = {
 	}
 	
 	english_colony_in_north_america = {
-		icon = mission_settlers_north_america
+		icon = mission_colonial
 		required_missions = { eng_discover_america_caribbean }
 		completed_by = 1610.1.1
 		
@@ -541,7 +362,7 @@ eng_exploration_americas = {
 	}
 	
 	english_colony_in_the_carribean = {
-		icon = mission_iberian_conquistador
+		icon = mission_trade_company_region_abroad
 		required_missions = { english_colony_in_north_america }
 		completed_by = 1610.1.1
 		
@@ -552,12 +373,34 @@ eng_exploration_americas = {
 		}
 		
 		trigger = { 
-			custom_trigger_tooltip = {
-			tooltip = english_colony_in_the_carribean.tooltip
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 5
-					colonial_region = colonial_the_carribean
-					is_city = yes
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = miss_colonize_caribbean
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 5
+						colonial_region = colonial_the_carribean
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = bt_mission_tooltip_hispaniola_colonisation
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 5
+						colonial_region = colonial_hispaniola
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = bt_mission_tooltip_cuba_colonisation
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 5
+						colonial_region = colonial_cuba
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = bt_mission_tooltip_bahamas_colonisation
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 5
+						colonial_region = colonial_bahamas
+					}
 				}
 			}
 		}
@@ -571,7 +414,7 @@ eng_exploration_americas = {
 	}
 }
 
-eng_chesapeake_dominance = {
+eng_chesapeake_dominance = { #Overwritten by RB, not fixing.
 
 	slot = 2
 	ai = yes
@@ -585,7 +428,6 @@ eng_chesapeake_dominance = {
 		NOT = {
 			has_dlc = "Rule Britannia"
 		}
-		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 
@@ -593,7 +435,6 @@ eng_chesapeake_dominance = {
 		icon = mission_dominate_home_trade_node
 		required_missions = { english_colony_in_north_america }
 		position = 7
-		completed_by = 1618.5.1
 		
 		provinces_to_highlight = {
 			province_id = 1500
@@ -611,7 +452,7 @@ eng_chesapeake_dominance = {
 				name = "eng_chesapeake_dominance"
 				duration = 7300
 			}
-			if = {
+			if = { #What. This mission isn't even available if you have Rule Britannia! Get out of here, PDX, or whoever is responsible for this..
 				limit = {
 					has_dlc = "Rule Britannia"
 				}
@@ -624,9 +465,136 @@ eng_chesapeake_dominance = {
 
 }
 
+eng_indian_ocean_exploration = {
+	
+	slot = 5
+	ai = yes
+	
+	potential = {
+		OR = {
+			tag = ENG
+			tag = GBR
+		}
+	}
+	has_country_shield = yes
+	
+	england_discovers_india = {
+		icon = mission_trade_company_region_abroad
+		required_missions = { }
+		position = 7
+		completed_by = 1680.1.1
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = england_discovers_india.tooltip
+				west_india_region = { has_discovered = ROOT }
+				bengal_region = { has_discovered = ROOT }
+				coromandel_region = { has_discovered = ROOT }
+				deccan_region = { has_discovered = ROOT }
+			}
+		}
+		
+		effect = {
+			add_dip_power = 100
+			add_navy_tradition = 20
+		}
+	}
+	
+	england_discovers_australia = {
+		icon = mission_establish_high_seas_navy
+		required_missions = { england_discovers_india }
+		completed_by = 1788.1.1
+		
+		provinces_to_highlight = {
+			colonial_region = colonial_australia
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			has_discovered = ROOT
+		}
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = miss_discover_australia
+				colonial_australia = { has_discovered = ROOT }
+			}
+			custom_trigger_tooltip = {
+				tooltip = england_discovers_australia.tooltip
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					colonial_region = colonial_australia
+					is_city = yes
+				}
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "eng_australian_colony"
+				duration = 5475
+			}
+		}
+	
+	}
 
+}
 
-eng_british_cot_dominance = {
+eng_indian_cot_dominance = { #Overwritten by RB, not fixing.
+
+	slot = 4
+	ai = yes
+	
+	potential = {
+		OR = {
+			tag = ENG
+			tag = GBR
+		}
+		NOT = {
+			has_dlc = "Rule Britannia"
+		}
+	}
+	has_country_shield = yes
+
+	establish_trade_in_indian_cot = {
+		icon = mission_war_chest
+		required_missions = { england_discovers_india }
+		position = 7
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 504
+				province_id = 1340
+				province_id = 1343
+				province_id = 2030
+			}
+		}
+		
+		trigger = { 
+			OR = {
+				504 = {		# Sind
+					is_strongest_trade_power = ROOT
+				}
+				1340 = {	# Comorin Cape
+					is_strongest_trade_power = ROOT
+				}
+				1343 = {	# Ganges Delta
+					is_strongest_trade_power = ROOT
+				}
+				2030 = {	# Goa
+					is_strongest_trade_power = ROOT
+				}
+			}
+		}
+	
+		effect = {
+			add_country_modifier = {
+				name = "east_india_trade_rush"
+				duration = 5475
+			}
+		}
+	}
+
+}
+
+eng_british_cot_dominance = { #Overwritten by RB, not fixing.
 
 	slot = 3
 	ai = yes
@@ -640,7 +608,6 @@ eng_british_cot_dominance = {
 			has_dlc = "Rule Britannia"
 		}
 		is_random_new_world = no
-		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 
@@ -648,6 +615,7 @@ eng_british_cot_dominance = {
 		icon = mission_high_income
 		required_missions = { 
 			establish_trade_in_american_cot
+			establish_trade_in_indian_cot
 		}
 		position = 8
 		

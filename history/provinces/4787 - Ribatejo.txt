@@ -1,4 +1,7 @@
+ 
 #4787 - Ribatejo
+#Region - Iberia
+#Area - Alentejo
 
 owner = POR
 controller = POR
@@ -7,11 +10,12 @@ religion = catholic
 capital = "Santarém"
 trade_goods = grain
 hre = no
-base_tax = 4 
+base_tax = 3 
 base_production = 3
-base_manpower = 3
+base_manpower = 2 
 is_city = yes
 add_core = POR
+
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman

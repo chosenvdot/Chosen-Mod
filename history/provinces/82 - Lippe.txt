@@ -1,26 +1,29 @@
-#Lippe
+
+#Westphalia
+#Region - Germany
+#Area - Westphalia
 
 latent_trade_goods = {
 	coal
 }
 
-owner = HES
-controller = HES
-culture = hannoverian
+owner = KOL
+controller = KOL
+culture = lower_saxon
 religion = catholic
 trade_goods = wool
 capital = "Arnsberg"
-base_tax = 3 
+base_tax = 3
 base_production = 3
-base_manpower = 1
+base_manpower = 2 
 hre = yes
 is_city = yes
-add_core = HES
-discovered_by = eastern
+add_core = KOL
+
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-
+discovered_by = eastern
 
 1453.1.1 = { add_core = MUN }
 1566.1.1 = { religion = reformed }
@@ -30,9 +33,9 @@ discovered_by = ottoman
 1661.1.1 = { owner = MUN controller = MUN  }
 1724.1.1 = { owner = KOL controller = KOL }
 1802.1.1 = {
-	owner = HAN
-	controller = HAN
-	add_core = HAN
+	owner = HES
+	controller = HES
+	add_core = HES
 } # Taken into possession of Hannover
 1805.12.15 = {
 	owner = PRU
@@ -48,8 +51,8 @@ discovered_by = ottoman
 	remove_core = PRU
 } # The Second Treaty of Tilsit, the kingdom of Westfalia
 1813.10.13 = {
-	owner = HAN
-	controller = HAN
+	owner = HES
+	controller = HES
 	remove_core = WES
 } # Westfalia is dissolved after the Battle of Leipzig
 1814.4.11 = {

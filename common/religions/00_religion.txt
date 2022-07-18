@@ -17,8 +17,6 @@ christian = {
 	
 	
 	catholic = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 204 204 0 }
 		icon = 1
 		allowed_conversion = {
@@ -27,9 +25,13 @@ christian = {
 		}
 		country = {
 			tolerance_own = 1
-			land_morale = 0.05
+			global_heathen_missionary_strength = 0.01
 		}
-		can_have_secondary_religion = yes
+		
+		country_as_secondary = {
+			diplomatic_reputation = 1
+			advisor_pool = 1
+		}
 		
 		hre_religion = yes
 		
@@ -58,7 +60,7 @@ christian = {
 			
 			#Council of Trent Positions
 			harsh = {
-				relation_with_heretics = -20
+				relation_with_heretics = -10
 				global_religious_conversion_resistance = 0.25
 				global_institution_spread = -0.25
 				global_missionary_strength = 0.02
@@ -67,7 +69,7 @@ christian = {
 				global_religious_conversion_resistance = -0.33
 			}
 			concilatory = {
-				relation_with_heretics = 10
+				relation_with_heretics = 5
 				global_religious_conversion_resistance = 0.25
 				global_heretic_missionary_strength = -0.05
 				improve_relation_modifier = 0.25
@@ -77,41 +79,41 @@ christian = {
 			concessions = {
 				first_concession = {
 					harsh = {
-						relation_with_heretics = -20
+						relation_with_heretics = -10
 						global_heretic_missionary_strength  = 0.02
 					}	
 					concilatory = {
-						relation_with_heretics = 10
+						relation_with_heretics = 5
 						tolerance_heretic = 2
 					}
 				}
 				second_concession = {
 					harsh = {
-						relation_with_heretics = -20
+						relation_with_heretics = -10
 						institution_spread_from_true_faith = 0.30
 					}	
 					concilatory = {
-						relation_with_heretics = 10
+						relation_with_heretics = 5
 						global_institution_spread = 0.10
 					}
 				}
 				third_concession = {
 					harsh = {
-						relation_with_heretics = -20
-						manpower_in_true_faith_provinces  = 0.15
+						relation_with_heretics = -10
+						manpower_in_true_faith_provinces  = 0.1
 					}	
 					concilatory = {
-						relation_with_heretics = 10
-						global_manpower_modifier = 0.10
+						relation_with_heretics = 5
+						global_manpower_modifier = 0.05
 					}
 				}
 				fourth_concession = {
 					harsh = {
-						relation_with_heretics = -20
+						relation_with_heretics = -10
 						warscore_cost_vs_other_religion  = -0.10
 					}	
 					concilatory = {
-						relation_with_heretics = 10
+						relation_with_heretics = 5
 						curia_powers_cost = -0.10
 					}
 				}
@@ -151,7 +153,6 @@ christian = {
 				}
 				allow = {
 					NOT = { war_with = PAP }
-
 					NOT = { has_country_modifier = papal_blessing }
 				}
 				effect = {
@@ -167,12 +168,10 @@ christian = {
 			indulgence_for_sins = {
 				cost = 50
 				potential = {
-
 					NOT = { tag = PAP }
 				}
 				allow = {
 					NOT = { war_with = PAP }
-
 					NOT = { has_country_modifier = papal_indulgence }
 				}
 				effect = {
@@ -279,13 +278,10 @@ christian = {
 				}
 				allow = {
 					NOT = { war_with = PAP }
-					NOT = { has_country_modifier = commercial_monopoly }
+					NOT = { mercantilism = 100 }
 				}
 				effect = {
-					add_country_modifier = {
-						name = "commercial_monopoly"
-						duration = 7300
-					}
+					add_mercantilism = 1
 				}
 				ai_will_do = {
 					factor = 1
@@ -318,41 +314,39 @@ christian = {
 	}
 
 	anglican = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
-		can_have_secondary_religion = yes
 		color = { 135 77 255 }
 		icon = 28
+		allow_female_defenders_of_the_faith = yes
 
 		allowed_center_conversion = {
 			catholic
 		}
 		country = {
-			fire_damage = 0.10
-			innovativeness_gain = 1
+			development_cost = -0.1
+			innovativeness_gain = 0.5
 		}
 		
+		country_as_secondary = {
+			idea_cost = -0.1
+		}
 		
-		#uses_anglican_power = yes				# Uses church power/aspect mechanics
+		uses_anglican_power = yes				# Uses church power/aspect mechanics
 		
-		#aspects = {
-		#	divorce_consort_aspect
-		#	gain_consort_aspect
-		#	dissolve_monasteries_aspect
-		#	monopoly_aspect
-		#	stability_aspect
-		#}
-		#aspects_name = ANGLICAN_ASPECTS
-		fervor = yes
+		aspects = {
+			divorce_consort_aspect
+			gain_consort_aspect
+			dissolve_monasteries_aspect
+			monopoly_aspect
+			stability_aspect
+		}
+		aspects_name = ANGLICAN_ASPECTS
+		
 		heretic = { PENTECOSTAL PURITAN CONGREGATIONALIST }
 		
 		date = 1534.11.3 # act of supremacy
 	}
 	
 	hussite = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
-		can_have_secondary_religion = yes
 		color = { 244 55 9 }
 		icon = 22
 
@@ -364,6 +358,9 @@ christian = {
 			global_heretic_missionary_strength = 0.02
 		}
 		
+		country_as_secondary = {
+			shock_damage_received = -0.025
+		}
 		
 		uses_hussite_power = yes				# Uses church power/aspect mechanics
 		
@@ -385,9 +382,6 @@ christian = {
 	}
 	
 	protestant = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
-		can_have_secondary_religion = yes
 		color = { 0 0 178 }
 		icon = 2
 
@@ -399,11 +393,14 @@ christian = {
 			catholic
 		}
 		country = {
-			global_tax_modifier = 0.2
+			global_tax_modifier = 0.1
 			improve_relation_modifier = 0.15
 			church_loyalty_modifier = 0.1
 		}
 		
+		country_as_secondary = {
+			idea_cost = -0.1
+		}
 		
 		uses_church_power = yes				# Uses church power/aspect mechanics
 		aspects = {
@@ -453,7 +450,7 @@ christian = {
 								religion = protestant
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 5			#BT increased to 5 CoR to accomodate the increased number of provinces & tags
 						}
 					}
 				}
@@ -479,7 +476,7 @@ christian = {
 								religion = protestant
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 5			#BT increased to 5 CoR to accomodate the increased number of provinces & tags
 						}
 					}
 				}
@@ -523,9 +520,6 @@ christian = {
 	}
 
 	reformed = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
-		can_have_secondary_religion = yes
 		color = { 76 76 229 }
 		icon = 3
 		allowed_conversion = {
@@ -537,9 +531,13 @@ christian = {
 		}
 		country = {
 			tolerance_heretic = 2
-			advisor_cost = -0.1
+			advisor_pool = 1
 		}
 		
+		country_as_secondary = {
+			global_unrest = -1
+			advisor_cost = -0.1
+		}
 
 		will_get_center = { #Refered to even for initial CoR Spawn
 			any_owned_province = {
@@ -570,7 +568,7 @@ christian = {
 								religion = reformed
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 5			#BT increased to 5 CoR to accomodate the increased number of provinces & tags
 						}
 					}
 				}
@@ -596,7 +594,7 @@ christian = {
 								religion = reformed
 								is_reformation_center = yes
 							}
-							amount = 3
+							amount = 5			#BT increased to 5 CoR to accomodate the increased number of provinces & tags
 						}
 					}
 				}
@@ -641,16 +639,18 @@ christian = {
 	}
 
 	orthodox = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
-		can_have_secondary_religion = yes
 		color = { 178 127 0 }
 		icon = 4
 		country = {
 			stability_cost_modifier = -0.1
-			global_tax_modifier = 0.15
+			tolerance_own = 1
+		}
+		country_as_secondary = {
+			global_colonial_growth = 10
+			tolerance_own = 1
 		}
 		province = {
+			local_missionary_strength = -0.01
 		}
 		
 		
@@ -664,12 +664,13 @@ christian = {
 
 			icon_michael = {
 				discipline = 0.05
-				land_morale = 0.05
+				manpower_recovery_speed = 0.1
+				
 				allow = {
 					always = yes
 				}
 				ai_will_do = {
-					factor = 1
+					factor = 0.05
 					modifier = {
 						factor = 0
 						is_at_war = no
@@ -682,13 +683,14 @@ christian = {
 			}
 
 			icon_eleusa = {
-				interest = -0.25
+				global_unrest = -3
+				harsh_treatment_cost = -0.25
 				
 				allow = {
 					always = yes
 				}
 				ai_will_do = {
-					factor = 1
+					factor = 0.02
 					modifier = {
 						factor = 0
 						NOT = {
@@ -713,7 +715,7 @@ christian = {
 			}
 
 			icon_pancreator = {
-				development_cost = -0.05
+				development_cost = -0.10
 				build_cost = -0.1
 				
 				allow = {
@@ -725,12 +727,13 @@ christian = {
 			}
 	
 			icon_nicholas = {
-				production_efficiency = 0.1
+				improve_relation_modifier = 0.25
+				ae_impact = -0.1
 				allow = {
 					always = yes
 				}
 				ai_will_do = {
-					factor = 0.5
+					factor = 0.01
 				}
 			}
 
@@ -741,7 +744,7 @@ christian = {
 					always = yes
 				}
 				ai_will_do = {
-					factor = 0.8
+					factor = 0.02
 					modifier = {
 						factor = 0
 						NOT = {
@@ -770,9 +773,7 @@ christian = {
 	}
 	
 	coptic = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
-		can_have_secondary_religion = yes
+	
 		flags_with_emblem_percentage = 20
 		flag_emblem_index_range = { 1 4 }
 
@@ -782,13 +783,20 @@ christian = {
 			defensiveness = 0.1
 			tolerance_own = 1
 		}
-
+		country_as_secondary = {
+			siege_ability = 0.1
+			defensiveness = 0.1
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
 		
 		heretic = { ZAMIKAELITES STEPHANITES EUSTATHIANS }
 		
 		misguided_heretic = yes
 		
-		holy_sites = { 1234 1227 385 358 388 }
+		#holy_sites = { 358 1227 2313 1234 419 }			#The once & future set of holy sites
+		holy_sites = { 358 1227 2313 1234 379 }			#With Jerusalem for now, while apostolic is seperate
 		
 		blessings = {
 			legitimize_government
@@ -798,6 +806,66 @@ christian = {
 			will_of_the_martyrs
 		}
 	}
+
+	#Added in the first unofficial BT, 13.0
+	apostolic = {
+	
+		flags_with_emblem_percentage = 20
+		flag_emblem_index_range = { 1 4 }
+
+		color = { 179 128 204 }
+		icon = 30
+		country = {
+			global_tax_modifier = 0.1
+			tolerance_own = 2
+		}
+		country_as_secondary = {
+			global_tax_modifier = 0.25
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		
+		heretic = { EUTYCHIAN DYOPHYSITE }
+	
+		misguided_heretic = yes
+		
+		holy_sites = { 419 5154 329 379 151 }
+		
+		blessings = {
+			strength_of_the_first_church
+			encourage_use_of_the_septuagint
+			stability_of_the_catholicosate
+			reaffirm_independence_of_the_church
+			fortify_the_monasteries
+		}
+	}
+	
+	#Added in BT 15.0. Please note the extremely limited distribution of Nestorian, encompassing perhaps 5-10 provinces.
+	nestorian = {
+	
+		flags_with_emblem_percentage = 20
+		flag_emblem_index_range = { 1 4 }
+
+		color = { 225 50 255 }
+		icon = 31
+		country = {
+			stability_cost_modifier = -0.1
+			tolerance_own = 1
+		}
+		country_as_secondary = {
+			global_colonial_growth = 10
+			tolerance_own = 1
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		
+		heretic = { ICONOGRAPHERS SHIMUN }
+				
+		fervor = yes
+		misguided_heretic = yes
+	}
 	
 	harmonized_modifier = harmonized_christian
 	
@@ -805,7 +873,6 @@ christian = {
 }
 
 muslim = {
-	#allow_female_defenders_of_the_faith = yes
 	defender_of_faith = yes
 	
 	center_of_religion = 385 # Mecca
@@ -837,6 +904,7 @@ muslim = {
 					limit = {
 						NOT = { religion = sunni }
 						NOT = { religion = ibadi }
+						NOT = { religion = druze }
 					}
 					NOT = { piety = -0.5 }
 				}
@@ -860,6 +928,7 @@ muslim = {
 					NOT = { has_country_modifier = has_invited_scholar_recently }
 				}
 				NOT = { has_country_modifier = hanafi_scholar_modifier }
+				NOT = { religion = alawite }
 			}
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
@@ -887,7 +956,7 @@ muslim = {
 			picture = "GFX_icon_muslim_school_hanafi"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			adm_tech_cost_modifier = -0.1
+			adm_tech_cost_modifier = -0.05
 		}
 		hanbali_school = {
 			potential_invite_scholar = {
@@ -910,6 +979,7 @@ muslim = {
 					limit = {
 						NOT = { religion = sunni }
 						NOT = { religion = ibadi }
+						NOT = { religion = druze }
 					}
 					NOT = { piety = -0.5 }
 				}
@@ -933,6 +1003,7 @@ muslim = {
 					NOT = { has_country_modifier = has_invited_scholar_recently }
 				}
 				NOT = { has_country_modifier = hanbali_scholar_modifier }
+				NOT = { religion = alawite }
 			}
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
@@ -959,7 +1030,7 @@ muslim = {
 
 			picture = "GFX_icon_muslim_school_hanbali"
 
-			interest = -0.25
+			ae_impact = -0.1
 		}
 		maliki_school = {
 			potential_invite_scholar = {
@@ -982,6 +1053,7 @@ muslim = {
 					limit = {
 						NOT = { religion = sunni }
 						NOT = { religion = ibadi }
+						NOT = { religion = druze }
 					}
 					NOT = { piety = -0.5 }
 				}
@@ -1005,6 +1077,7 @@ muslim = {
 					NOT = { has_country_modifier = has_invited_scholar_recently }
 				}
 				NOT = { has_country_modifier = maliki_scholar_modifier }
+				NOT = { religion = alawite }
 			}
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
@@ -1031,7 +1104,7 @@ muslim = {
 
 			picture = "GFX_icon_muslim_school_maliki"
 
-			development_cost = -0.05
+			development_cost = -0.1
 		}
 		shafii_school = {
 			potential_invite_scholar = {
@@ -1054,6 +1127,7 @@ muslim = {
 					limit = {
 						NOT = { religion = sunni }
 						NOT = { religion = ibadi }
+						NOT = { religion = druze }
 					}
 					NOT = { piety = -0.5 }
 				}
@@ -1077,6 +1151,7 @@ muslim = {
 					NOT = { has_country_modifier = has_invited_scholar_recently }
 				}
 				NOT = { has_country_modifier = shafii_scholar_modifier }
+				NOT = { religion = alawite }
 			}
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
@@ -1127,6 +1202,7 @@ muslim = {
 					limit = {
 						NOT = { religion = shiite }
 						NOT = { religion = ibadi }
+						NOT = { religion = druze }
 					}
 					NOT = { piety = -0.5 }
 				}
@@ -1150,6 +1226,7 @@ muslim = {
 					NOT = { has_country_modifier = has_invited_scholar_recently }
 				}
 				NOT = { has_country_modifier = ismaili_scholar_modifier }
+				NOT = { religion = alawite }
 			}
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
@@ -1202,6 +1279,7 @@ muslim = {
 					limit = {
 						NOT = { religion = shiite }
 						NOT = { religion = ibadi }
+						NOT = { religion = druze }
 					}
 					NOT = { piety = -0.5 }
 				}
@@ -1225,6 +1303,7 @@ muslim = {
 					NOT = { has_country_modifier = has_invited_scholar_recently }
 				}
 				NOT = { has_country_modifier = jafari_scholar_modifier }
+				NOT = { religion = alawite }
 			}
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
@@ -1274,6 +1353,7 @@ muslim = {
 					limit = {
 						NOT = { religion = shiite }
 						NOT = { religion = ibadi }
+						NOT = { religion = druze }
 					}
 					NOT = { piety = -0.5 }
 				}
@@ -1297,6 +1377,7 @@ muslim = {
 					NOT = { has_country_modifier = has_invited_scholar_recently }
 				}
 				NOT = { has_country_modifier = zaidi_scholar_modifier }
+				NOT = { religion = alawite }
 			}
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
@@ -1323,52 +1404,263 @@ muslim = {
 
 			picture = "GFX_icon_muslim_school_zaidi"
 
-			shock_damage_received = -0.10
+			shock_damage_received = -0.1
+		}
+		
+		#New 'Tribal' ?? Schools for Alawites introduced in BT 15.0
+		haddadin_school = {
+			potential_invite_scholar = {
+				knows_of_scholar_country_capital_trigger = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				adm_power_cost = 50
+				religion = alawite
+				reverse_has_opinion = { who = FROM value = 150 }
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+				NOT = { has_country_modifier = haddadin_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				adm_power_cost = 50
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = haddadin_scholar_modifier duration = 7300 }
+			}
+			
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = haddadin_scholar_modifier
+
+			picture = "GFX_icon_muslim_school_haddadin"
+
+			prestige_from_naval = 0.2
+		}
+		kalbiyya_school = {
+			potential_invite_scholar = {
+				knows_of_scholar_country_capital_trigger = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				adm_power_cost = 50
+				religion = alawite
+				reverse_has_opinion = { who = FROM value = 150 }
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+				NOT = { has_country_modifier = kalbiyya_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				adm_power_cost = 50
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = kalbiyya_scholar_modifier duration = 7300 }
+			}
+			
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = kalbiyya_scholar_modifier
+
+			picture = "GFX_icon_muslim_school_kalbiyya"
+
+			garrison_size = 0.05
+		}
+		khayatin_school = {
+			potential_invite_scholar = {
+				knows_of_scholar_country_capital_trigger = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				adm_power_cost = 50
+				religion = alawite
+				reverse_has_opinion = { who = FROM value = 150 }
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+				NOT = { has_country_modifier = khayatin_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				adm_power_cost = 50
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = khayatin_scholar_modifier duration = 7300 }
+			}
+			
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = khayatin_scholar_modifier
+
+			picture = "GFX_icon_muslim_school_khayatin"
+
+			missionary_maintenance_cost = -0.1
+		}
+		matawira_school = {
+			potential_invite_scholar = {
+				knows_of_scholar_country_capital_trigger = yes
+			}
+
+			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
+			can_invite_scholar = {
+				adm_power_cost = 50
+				religion = alawite
+				reverse_has_opinion = { who = FROM value = 150 }
+				OR = {
+					alliance_with = FROM
+					is_subject_of = FROM
+					overlord_of = FROM
+				}
+				hidden_progressive_opinion_for_scholar_trigger = yes
+				NOT = { has_country_modifier = matawira_scholar_modifier }
+			}
+
+			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
+			on_invite_scholar = {
+				adm_power_cost = 50
+				clear_religious_scholar_modifiers_effect = yes
+				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
+				add_country_modifier = { name = matawira_scholar_modifier duration = 7300 }
+			}
+			
+			# If you don't set this it will expand on_invite_scholar effect which might be super big
+			invite_scholar_modifier_display = matawira_scholar_modifier
+
+			picture = "GFX_icon_muslim_school_matawira"
+
+			global_own_trade_power = 0.1
 		}
 		
 	}
+	
 	sunni = {
-		declare_war_in_regency = yes
 		color = { 0 153 0 }
 		icon = 5
 		country = {
-			trade_efficiency = 0.10
+			cav_to_inf_ratio = 0.10
 			heir_chance = 1.0
 		}
+		country_as_secondary = {
+			trade_efficiency = 0.1
+			heir_chance = 1.0
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
 		
-		heretic = { BEKTASHI AHMADI ZIKRI YAZIDI }
+		heretic = { BEKTASHI AHMADI ZIKRI }			#Yazidi made its own religion
 		
 		uses_piety = yes				# Uses piety mechanics
-		can_have_secondary_religion = yes
 	}
 
 	shiite = {
-		declare_war_in_regency = yes
-		can_have_secondary_religion = yes
 		color = { 0 204 0 }
 		icon = 6
 		country = {
 			heir_chance = 1.0
 			land_morale = 0.05
 		}
-		heretic = { DRUZE HURUFI ZAIDI }
+		country_as_secondary = {
+			land_morale = 0.05
+			advisor_cost = -0.1
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		
+		heretic = { HURUFI ZAIDI }			#Druze made its own religion
 		
 		uses_piety = yes				# Uses piety mechanics
 	}
 	
 	ibadi = {
-		declare_war_in_regency = yes
-		can_have_secondary_religion = yes
 		color = { 0 102 0 }
 		icon = 16
 		country = {
-			tolerance_heretic = 2
+			heir_chance = 1.0
 			global_trade_goods_size_modifier = 0.1
+		}
+		country_as_secondary = {
+			global_ship_cost = -0.1
+			advisor_cost = -0.1
+		}
+		province = {
+			local_missionary_strength = -0.02
 		}
 		
 		heretic = { HARURI SUFRI NAJADAT AZRAQI }
 		
 		uses_piety = yes				# Uses piety mechanics
+	}
+	
+	#New Muslim religions introduced in BT 15.0
+	druze = {
+		color = { 0 229 102 }
+		icon = 33
+		country = {
+			heir_chance = 1.0
+			dip_tech_cost_modifier = -0.1 # Promoted intellectualism
+			tolerance_heretic = -1 # Renounced 'false' belief
+		}
+		country_as_secondary = {
+			diplomats = 1
+			dip_tech_cost_modifier = -0.05
+		}
+		province = {
+			local_missionary_strength = -0.03
+		}
+		
+		heretic = { SECTARIST }	
+		
+		uses_piety = yes				# Uses piety mechanics
+	}
+	
+	alawite = {
+		color = { 101 148 70 }
+		icon = 32
+		country = {
+			heir_chance = 1.0
+			global_spy_defence = 0.25
+		}
+		country_as_secondary = {
+			land_morale = 0.05
+			defensiveness = 0.10
+		}
+		province = {
+			local_missionary_strength = -0.03
+		}
+		
+		uses_church_power = yes				# Uses church power/aspect mechanics
+		aspects = {
+			followers_of_ali_aspect
+			manifestations_of_god_aspect
+			philosophical_thought_aspect
+			pillars_of_islam_aspect
+			taqiyya_aspect
+			reincarnation_aspect
+			mass_aspect
+			fortified_coasts_aspect
+			unite_tribes_aspect
+			feast_days_aspect
+		}
+		aspects_name = ALAWITE_ASPECTS
+		
+		heretic = { HANBALI JAFARI }
+		
 	}
 	
 	harmonized_modifier = harmonized_muslim
@@ -1377,14 +1669,11 @@ muslim = {
 }
 
 eastern = {
-	defender_of_faith = yes
 
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 58 80 }
 
 	buddhism = { #Theravada
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 204 76 0 }
 		icon = 24
 		allowed_conversion = {
@@ -1394,6 +1683,10 @@ eastern = {
 		country = {
 			tolerance_heretic = 2
 			advisor_cost = -0.1
+		}
+		country_as_secondary = {
+			development_cost = -0.1
+			diplomats = 1
 		}
 		on_convert = {
 			add_prestige = -100
@@ -1412,9 +1705,6 @@ eastern = {
 	}
 	
 	vajrayana = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
-		can_have_secondary_religion = yes
 		color = { 204 76 76 }
 		icon = 25
 		allowed_conversion = {
@@ -1424,6 +1714,10 @@ eastern = {
 		country = {
 			tolerance_heretic = 1
 			land_morale = 0.05
+		}
+		country_as_secondary = {
+			horde_unity = 1
+			tolerance_own = 1
 		}
 		on_convert = {
 			add_prestige = -100
@@ -1442,9 +1736,6 @@ eastern = {
 	}
 	
 	mahayana = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
-		can_have_secondary_religion = yes
 		color = { 204 76 127 }
 		icon = 23
 		allowed_conversion = {
@@ -1454,6 +1745,10 @@ eastern = {
 		country = {
 			tolerance_heretic = 2
 			idea_cost = -0.05
+		}
+		country_as_secondary = {
+			global_tax_modifier = 0.1
+			tolerance_heathen = 2
 		}
 		on_convert = {
 			add_prestige = -100
@@ -1472,30 +1767,34 @@ eastern = {
 	}
 
 	confucianism = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 214 229 140 }
 		icon = 9
 		country = {
 			tolerance_heretic = 2
 			adm_tech_cost_modifier = -0.1
 		}
+		country_as_secondary = {
+			adm_tech_cost_modifier = -0.1
+			stability_cost_modifier = -0.1
+		}
 		heretic = { TAOIST }
 		uses_harmony = yes
 	}
 
 	shinto = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 204 0 0 }
 		icon = 10
 		country = {
 			land_morale = 0.1
+			tolerance_heathen = 1
 		}
 		province = {
 			local_missionary_strength = -0.02
 		}
-
+		country_as_secondary = {
+			discipline = 0.05
+			global_unrest = -1
+		}
 		heretic = { SHUGENDO }
 		uses_isolationism = yes
 		
@@ -1508,15 +1807,11 @@ eastern = {
 }
 
 dharmic = {
-	defender_of_faith = yes
 
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 61 82 } #Many shared with Eastern
 
 	hinduism = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
-		can_have_secondary_religion = yes
 		color = { 0 204 204 }
 		icon = 8
 		allowed_conversion = {
@@ -1527,7 +1822,10 @@ dharmic = {
 			tolerance_own = 1
 			brahmins_hindu_influence_modifier = 0.2
 		}
-
+		country_as_secondary = {
+			tolerance_heretic = 1
+			tolerance_heathen = 2
+		}
 		
 		personal_deity = yes
 		
@@ -1545,7 +1843,6 @@ dharmic = {
 	}
 
 	sikhism = {
-		allow_female_defenders_of_the_faith = yes
 		color = { 0 153 153 }
 		icon = 15
 		allowed_conversion = {
@@ -1555,7 +1852,11 @@ dharmic = {
 		}
 		country = {
 			mil_tech_cost_modifier = -0.1
-			land_morale = 0.15
+			land_morale = 0.1
+		}
+		country_as_secondary = {
+			land_morale = 0.05
+			global_unrest = -1
 		}
 		province = {
 			local_missionary_strength = -0.01
@@ -1572,19 +1873,19 @@ dharmic = {
 		}
 
 		heretic = { MASANDIS }
-		declare_war_in_regency = yes
+
 		date = 1499.01.01
 
 		gurus = {
 			guru_nanak = {
 				trigger = {
-					always = yes
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 1000
 				}
 				modifier = {
-					adm_advisor_cost = -0.1
+					country_admin_power = 1
 				}
 				teachings = {
 					share_and_consume = {
@@ -1603,7 +1904,7 @@ dharmic = {
 						type = MIL
 						cost = 50
 
-						global_regiment_cost = -0.05
+						global_regiment_cost = -0.025
 					}
 				}
 			}
@@ -1611,6 +1912,7 @@ dharmic = {
 				trigger = {
 					is_year = 1539
 					is_month = 9
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -1636,26 +1938,26 @@ dharmic = {
 					}
 				}
 				modifier = {
-					mil_advisor_cost = -0.1
+					country_military_power = 1
 				}
 				teachings = {
 					gurmukhi_script_teaching = {
 						type = ADM
 						cost = 50
 
-						technology_cost = -0.05
+						technology_cost = -0.025
 					}
 					temple_langar = {
 						type = DIP
 						cost = 50
 
-						build_cost = -0.05
+						church_loyalty_modifier = 0.05
 					}
 					wrestling_akhara = {
 						type = MIL
 						cost = 50
 
-						yearly_army_professionalism = 0.002
+						yearly_army_professionalism = 0.005
 					}
 				}
 			}
@@ -1663,6 +1965,7 @@ dharmic = {
 				trigger = {
 					is_year = 1552
 					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -1688,14 +1991,14 @@ dharmic = {
 					}
 				}
 				modifier = {
-					dip_advisor_cost = -0.1
+					country_diplomatic_power = 1
 				}
 				teachings = {
 					dasvandh_collection = {
 						type = ADM
 						cost = 50
 
-						global_tax_modifier = 0.1
+						global_tax_modifier = 0.05
 					}
 					anand_karaj = {
 						type = DIP
@@ -1717,6 +2020,7 @@ dharmic = {
 				trigger = {
 					is_year = 1574
 					is_month = 9
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -1742,7 +2046,7 @@ dharmic = {
 					}
 				}
 				modifier = {
-					adm_advisor_cost = -0.1
+					country_admin_power = 1
 				}
 				teachings = {
 					legitimize_inheritance = {
@@ -1773,6 +2077,7 @@ dharmic = {
 				trigger = {
 					is_year = 1581
 					is_month = 9
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -1798,7 +2103,7 @@ dharmic = {
 					}
 				}
 				modifier = {
-					dip_advisor_cost = -0.1
+					country_diplomatic_power = 1
 				}
 				teachings = {
 					adi_granth = {
@@ -1817,7 +2122,7 @@ dharmic = {
 						type = MIL
 						cost = 50
 
-						defensiveness = 0.075
+						land_morale = 0.05
 					}
 				}
 			}
@@ -1825,6 +2130,7 @@ dharmic = {
 				trigger = {
 					is_year = 1606
 					is_month = 6
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -1850,7 +2156,7 @@ dharmic = {
 					}
 				}
 				modifier = {
-					mil_advisor_cost = -0.1
+					country_military_power = 1
 				}
 				teachings = {
 					throne_of_the_timeless_one = {
@@ -1873,7 +2179,7 @@ dharmic = {
 						type = MIL
 						cost = 50
 
-						siege_ability = 0.05
+						discipline = 0.025
 					}
 				}
 			}
@@ -1881,6 +2187,7 @@ dharmic = {
 				trigger = {
 					is_year = 1644
 					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -1906,14 +2213,14 @@ dharmic = {
 					}
 				}
 				modifier = {
-					dip_advisor_cost = -0.1
+					country_diplomatic_power = 1
 				}
 				teachings = {
 					impartial_manjis = {
 						type = ADM
 						cost = 50
 
-						yearly_corruption = -0.1
+						yearly_corruption = -0.05
 					}
 					the_fragrance_of_a_flower = {
 						type = DIP
@@ -1935,6 +2242,7 @@ dharmic = {
 				trigger = {
 					is_year = 1661
 					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -1960,26 +2268,26 @@ dharmic = {
 					}
 				}
 				modifier = {
-					dip_advisor_cost = -0.1
+					country_diplomatic_power = 1
 				}
 				teachings = {
 					treat_the_sick = {
 						type = ADM
 						cost = 50
 
-						reform_progress_growth = 0.1
+						monarch_admin_power = 1
 					}
 					illiterate_recites_saloks = {
 						type = DIP
 						cost = 50
 
-						monthly_splendor = 1
+						monarch_diplomatic_power = 1
 					}
 					young_humility = {
 						type = MIL
 						cost = 50
 
-						army_tradition = 1
+						monarch_military_power = 1
 					}
 				}
 			}
@@ -1987,6 +2295,7 @@ dharmic = {
 				trigger = {
 					is_year = 1665
 					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -2012,7 +2321,7 @@ dharmic = {
 					}
 				}
 				modifier = {
-					adm_advisor_cost = -0.1
+					country_admin_power = 1
 				}
 				teachings = {
 					the_word_of_sikh = {
@@ -2039,6 +2348,7 @@ dharmic = {
 				trigger = {
 					is_year = 1675
 					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -2064,7 +2374,7 @@ dharmic = {
 					}
 				}
 				modifier = {
-					adm_advisor_cost = -0.1
+					country_admin_power = 1
 				}
 				teachings = {
 					pluralism = {
@@ -2083,7 +2393,7 @@ dharmic = {
 						type = MIL
 						cost = 50
 
-						yearly_army_professionalism = 0.003
+						yearly_army_professionalism = 0.005
 					}
 				}
 			}
@@ -2091,6 +2401,7 @@ dharmic = {
 				trigger = {
 					is_year = 1708
 					is_month = 3
+					NOT = { has_global_flag = guru_event_happening }
 				}
 				chance = {
 					factor = 5
@@ -2124,19 +2435,19 @@ dharmic = {
 						type = ADM
 						cost = 50
 
-						development_cost = -0.05
+						development_cost = -0.1
 					}
 					divine_justice = {
 						type = DIP
 						cost = 50
 
-						trade_efficiency = 0.05
+						trade_efficiency = 0.1
 					}
 					the_unchanging_writing = {
 						type = MIL
 						cost = 50
 
-						drill_gain_modifier = 0.25
+						drill_gain_modifier = 0.5
 					}
 				}
 			}
@@ -2149,21 +2460,21 @@ dharmic = {
 }
 
 pagan = {
-	defender_of_faith = yes
 
 	flags_with_emblem_percentage = 10
 	flag_emblem_index_range = { 83 96 }
 
 	animism = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 127 0 0 }
 		icon = 11
 		country = {
 			tolerance_own = 1
 			global_unrest = -1
 		}
-
+		country_as_secondary = {
+			tolerance_own = 2
+			loot_amount = 0.25
+		}
 		province = {
 			local_missionary_strength = 0.02
 		}
@@ -2171,41 +2482,41 @@ pagan = {
 		heretic = { SNAKE_CLAN }
 	}
 	shamanism = { #Fetishism, tag kept to avoid breaking saves.
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 127 76 76 }
 		icon = 12
 		country = {
 			tolerance_heathen = 2
 			diplomatic_reputation = 1
 		}
-		province = {
-			local_missionary_strength = 0.02
+		country_as_secondary = {
+			tolerance_own = 2
+			loot_amount = 0.25
 		}
 
 		fetishist_cult = yes
 		heretic = { GOAT_SKULL }
 	}
 	totemism = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 127 115 115 }
 		icon = 13
 		country = {
 			tolerance_own = 1
 			global_unrest = -1
 		}
+		country_as_secondary = {
+			tolerance_own = 2
+			loot_amount = 0.25
+		}
 		province = {
 			local_missionary_strength = 0.02
 		}
+
 		ancestors = yes
 		
 		heretic = { BEAR_SPIRIT }	
 	}
 	
 	inti = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		color = { 64 115 115 }
 		icon = 18
 		country = {
@@ -2213,6 +2524,10 @@ pagan = {
 			global_autonomy = -0.05
 		}
 
+		country_as_secondary = {
+			tolerance_own = 1
+			global_autonomy = -0.05
+		}
 		
 		province = {
 			local_missionary_strength = 0.02
@@ -2226,13 +2541,16 @@ pagan = {
 	}
 	
 	nahuatl = {
-		allow_female_defenders_of_the_faith = yes
 		color = { 64 115 64 }
 		icon = 17
 		country = {
 			land_morale = 0.1
 			global_unrest = -2
 			burghers_influence_modifier = -0.05
+		}
+		country_as_secondary = {
+			land_morale = 0.05
+			raze_power_gain = 0.2
 		}
 		province = {
 			local_missionary_strength = 0.02
@@ -2247,14 +2565,16 @@ pagan = {
 	}
 	
 	mesoamerican_religion = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		#color = { 76 25 178 }
 		color = { 127 25 178 }
 		icon = 19
 		country = {
 			tolerance_own = 1
 			advisor_pool = 1
+		}
+		country_as_secondary = {
+			advisor_pool = 1
+			stability_cost_modifier = -0.1
 		}
 		province = {
 			local_missionary_strength = 0.02
@@ -2267,15 +2587,16 @@ pagan = {
 	}
 	
 	norse_pagan_reformed = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		icon = 21
 		color = { 191 191 191 }
 		country = {
 			land_forcelimit_modifier = 0.10
 			naval_forcelimit_modifier = 0.10
 		}
-
+		country_as_secondary = {
+			merc_maintenance_modifier = -0.1
+			galley_power = 0.2
+		}
 		province = {
 			local_missionary_strength = 0.02
 		}
@@ -2286,51 +2607,56 @@ pagan = {
 	}
 	
 	tengri_pagan_reformed = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		icon = 27
 		color = { 25 76 217 }
 		country = {
-			land_morale = 0.1
-			#movement_speed = 0.2
-			global_manpower_modifier = 0.2
+			cav_to_inf_ratio = 0.25
+			global_regiment_cost = -0.2
 		}
 		can_have_secondary_religion = yes
 		heretic = { OLD_TENGRI }
-		ancestors = yes
 	}
 	
 	dreamtime = {
-		allow_female_defenders_of_the_faith = yes
 		icon = 29
 		color = { 197 133 43 }
 		country = {
 			shock_damage_received = -0.05
 			diplomatic_reputation = 1
 		}
+		country_as_secondary = {
+			shock_damage = 0.1
+			hostile_attrition = 2
+		}
 		
 		fetishist_cult = yes
 		heretic = { WAGYLKOOP MOORAMOORA GINGARRURNDE }
 	}
+	
 	crusade_name = CRUSADE
 	harmonized_modifier = harmonized_pagan
 }
 
 jewish_group = {
-	defender_of_faith = yes
 
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 106 107 }
 
 	jewish = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		icon = 20
 		color = { 0 156 231 }
 		country = {
 			tolerance_own = 2
 			advisor_pool = 1
 		}
+		country_as_secondary = {
+			advisor_pool = 1
+			advisor_cost = -0.1
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		
 		uses_judaism_power = yes
 		aspects_name = JEWISH_ASPECTS
 			
@@ -2427,27 +2753,94 @@ jewish_group = {
 }
 
 
-
 zoroastrian_group = {
-	defender_of_faith = yes
-
 	flag_emblem_index_range = { 110 110 }
 	zoroastrian = {
-		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
 		icon = 26
 		color = { 127 178 51 }
-
+		province = {
+			local_missionary_strength = -0.02
+		}
 		country = {
 			tolerance_own = 2
 			trade_efficiency = 0.1
 		}
+		country_as_secondary = {
+			merchants = 1
+			tolerance_own = 1
+		}
+
+		holy_sites = { 421 4430 2223 441 2235 }
+
+		blessings = {
+			blessing_yasna
+			blessing_haoma
+			blessing_navjote
+			blessing_manthras
+			blessing_dakhma
+		}
 		
 		heretic = { MAZDAKI MANICHEAN }	
+	}
+	
+	#New religion in BT, added in 15.0. Formerly a Sunni heresy
+	yazidi = {
+		icon = 34
+		color = { 51 51 178 }
+		country = {
+			tolerance_own = 3 # Preoccupation with religious purity
+			tolerance_heretic = -1 # Too much contact with non-Yazidis is considered polluting
+			tolerance_heathen = -1
+			advisor_pool = 1 # Caste system
+			global_missionary_strength = -0.01 # Accepts no converts
+		}
+		country_as_secondary = {
+			tolerance_own = 2
+			advisor_pool = 1
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		
+		personal_deity = yes
+		
+		heretic = { YAZDANIST }			#Does this link with anything? -D
 	}
 	
 	harmonized_modifier = harmonized_zoroastrian_group
 	
 	crusade_name = HOLY_WAR
 	
+}
+
+#Added in BT 15.0
+mandaean_group = {
+
+	flag_emblem_index_range = { 110 110 }
+	
+	#New religion in BT 15.0
+	mandaean = {
+		icon = 35
+		color = { 188 191 170 }
+		country = {
+			tolerance_own = 2
+			advisor_cost = -0.1
+		}
+		country_as_secondary = {
+			diplomatic_reputation = 1
+			tolerance_own = 1
+		}
+		province = {
+			local_missionary_strength = -0.03
+		}
+		
+		heretic = { ELCESAITE }
+		
+		fervor = yes
+	}
+	
+	harmonized_modifier = harmonized_mandaean_group
+	
+	crusade_name = HOLY_WAR
+
 }

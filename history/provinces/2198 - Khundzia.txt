@@ -1,17 +1,19 @@
-#2198 - Khundzia
+ 
+#2198 - Ichkeria
 
-owner = AVR
-controller = AVR
+owner = GAZ
+controller = GAZ
 culture = dagestani
-religion = sunni
-capital = "Khunzah"
-trade_goods = livestock
+religion = shiite
+capital = "Solzh-Glala"
+trade_goods = iron
 hre = no
-base_tax = 2 
-base_production = 2
-base_manpower = 3
+base_tax = 4 
+base_production = 4 
+base_manpower = 6
 is_city = yes
-add_core = AVR
+add_core = GAZ
+
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern

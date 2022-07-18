@@ -1,45 +1,70 @@
-owner = FRA
-controller = FRA
-capital = "Blois"
-is_city = yes
+ 
+#BT's Western Europe Overhaul in 12.0
+
+owner = ORL
+controller = ORL
+add_core = ORL
 culture = cosmopolitan_french
 religion = catholic
-hre = no
-base_tax = 4
-base_production = 4
-trade_goods = wine
+capital = "Blois"
+base_tax = 5
+base_production = 5
 base_manpower = 3
-add_core = ORL
-discovered_by = eastern
+trade_goods = glass			#or glass
+is_city = yes
+hre = no
+
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-
-1444.1.1  = {
-	owner = ORL
-	controller = ORL
-}
+discovered_by = eastern
 
 
-1560.1.1 = { religion = reformed }
-1562.3.1 = { unrest = 5 }
-1562.3.20 = { revolt = { type = heretic_rebels size = 2 } controller = REB } # Huguenot rebels garrison Orléans & Dreux
-1563.3.19 = { revolt = {} controller = FRA unrest = 3 } # Temporary truce negotiated after the assassination of de Guise
-1565.1.1 = { unrest = 8 } # France is restless once again as ultra-catholic intentions become clear
-1568.9.1 = { unrest = 15 } # Catherine de Medici and Charles IX side with the Guise faction, religious intolerance peaks
-1570.8.8 = { unrest = 10 } # Edict of Saint-Germain: temporary pacification
-1573.9.1 = { unrest = 15 } # Saint Barthelew's Day Massacre: the consequences in the land
-1574.5.1 = { unrest = 7 } # Charles IX dies, situation cools a bit	
-1574.5.3 = { owner = FRA controller = FRA add_core = FRA }
-1584.1.1 = { unrest = 12 } # Situation heats up again
-1588.12.1 = { unrest = 15 } # Henri de Guise assassinated at Blois, Ultra-Catholics into a frenzy
-1594.1.1 = { unrest = 10 } # 'Paris vaut bien une messe!', Henri converts to Catholicism
-1598.4.13 = { unrest = 3 } # Edict of Nantes, alot more freedom to the protestants
-1598.5.2 = { unrest = 0 } # Peace of Vervins, formal end to the Wars of Religion
-1650.1.14 = { unrest = 7 } # Mazarin arrests the Princes Condé, Conti & Longueville, the beginning of the Second Fronde
-1651.4.1 = { unrest = 4 } # An unstable peace is concluded
-1651.12.1 = { unrest = 7 } # Mazarin returns from exile, Condé sides with Spain, situation heats up again
-1652.7.2 = { unrest = 0 revolt = { type = revolutionary_rebels size = 1 } controller = REB } # Condé takes Orléannais
-1652.10.21 = { revolt = {} controller = FRA } # The King is allowed to enter Paris again, Mazarin leaves France for good. Second Fronde over.
-1685.10.18 = { unrest = 8 } # Edict of Nantes revoked by Louis XIV
-1686.1.17 = { religion = catholic unrest = 0 } # Dragonnard campaign succesful: region reverts back to catholicism
+#Province history completed by - Draiocht
+#1291.5.21 = { #BeyondTypus batch edit shortcut the first shattering begins
+#	owner = XXX
+#	controller = XXX
+#	add_core = XXX
+#	remove_core = XXX
+#} #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
+#1291.5.23 = { #BeyondTypus batch edit shortcut the first shattering ends
+#	owner = XXX
+#	controller = XXX
+#	add_core = XXX
+#	remove_core = XXX
+#} #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
+#1291.5.24 = { #BeyondTypus batch edit shortcut first performance start begins
+#	owner = XXX
+#	controller = XXX
+#	add_core = XXX
+#} #Cut all mod added tags, reverting to nearest or most logical vanilla tag owner. I think it is safe to leave cores, though.
+#1291.5.26 = { #BeyondTypus batch edit shortcut first performance start ends
+#	owner = XXX
+#	controller = XXX
+#	remove_core = XXX
+#} #Return to proper mod added owners and cuts vanilla core, typically.
+
+#1291 - 1444
+
+#1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
+#	owner = XXX
+#	controller = XXX
+#	add_core = XXX
+#} #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
+#1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
+#	owner = XXX
+#	controller = XXX
+#	remove_core = XXX
+#} #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
+#1444.11.16 = { #BeyondTypus batch edit shortcut second performance start begins
+#	owner = XXX
+#	controller = XXX
+#	add_core = XXX
+#} #Cut all mod added tags, reverting to nearest or most logical vanilla tag owner. I think it is safe to leave cores, though.
+#1444.11.18 = { #BeyondTypus batch edit shortcut second performance start ends
+#	owner = XXX
+#	controller = XXX
+#	remove_core = XXX
+#} #Return to proper mod added owners and cuts vanilla core, typically.
+
+#1444 on

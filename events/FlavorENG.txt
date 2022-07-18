@@ -217,7 +217,6 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			set_global_flag = eng_had_end_of_hundred_years_war
-			remove_country_modifier = gecko_hyw
 			if = {
 				limit = {
 					FRA = { NOT = { has_country_flag = had_end_of_HYW_france } }
@@ -242,11 +241,6 @@ country_event = {
 			}
 			remove_core = ROOT
 		}
-				home_counties_area = {
-						limit = { country_or_non_sovereign_subject_holds = ROOT }
-						add_base_manpower = 2
-						add_base_tax = 2
-					}
 		FRA = {
 			add_opinion = {
 				who = ROOT
@@ -814,7 +808,7 @@ country_event = {
 		#	name = the_muskovy_trade_company
 		#	duration = -1
 		#}
-		1652 = {
+		33 = { # BT; 1652
 			add_trade_modifier = {
 				who = ROOT
 				duration = -1
@@ -844,7 +838,7 @@ country_event = {
 			}
 			tag = GBR
 		}
-		#NOT = { advisor_exists = 236 }
+		NOT = { advisor_exists = 236 }
 		OR = {
 			owns = 235		# Kent
 			owns = 236		# London
@@ -1170,7 +1164,7 @@ country_event = {
 }
 
 # Hugh O'Neills Irish Rebellion
-country_event = {
+country_event = { #BT NOTE: Needs to be adapted to BT's Ireland viceroyalty somehow.
 	id = flavor_eng.9122
 	title = "flavor_eng.EVTNAME9122"
 	desc = "flavor_eng.EVTDESC9122"
@@ -1624,15 +1618,47 @@ country_event = {
 				}
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 2
+					size = 3 # BT; 2
 					leader = "James"
 					leader_dynasty = "Stuart"
 				}
 			}
 		}
-		if = {
+		# BT; 4 else_if below added/modified
+		else_if = {
 			limit = {
-				NOT = { highlands_area = { owned_by = ROOT } }
+				kingdom_of_the_isles_area = { owned_by = ROOT }
+			}
+			random_owned_province = {
+				limit = {
+					area = kingdom_of_the_isles_area
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 3
+					leader = "James"
+					leader_dynasty = "Stuart"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scottish_marches_area = { owned_by = ROOT }
+			}
+			random_owned_province = {
+				limit = {
+					area = scottish_marches_area
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 3
+					leader = "James"
+					leader_dynasty = "Stuart"
+				}
+			}
+		}
+		else_if = {
+			limit = {
 				lowlands_area = { owned_by = ROOT }
 			}
 			random_owned_province = {
@@ -1641,16 +1667,14 @@ country_event = {
 				}
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 2
+					size = 3
 					leader = "James"
 					leader_dynasty = "Stuart"
 				}
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				NOT = { highlands_area = { owned_by = ROOT } }
-				NOT = { lowlands_area = { owned_by = ROOT } }
 				british_isles_region = { owned_by = ROOT }
 			}
 			random_owned_province = {
@@ -1659,7 +1683,7 @@ country_event = {
 				}
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 2
+					size = 3
 					leader = "James"
 					leader_dynasty = "Stuart"
 				}
@@ -1686,7 +1710,7 @@ country_event = {
 			}
 			tag = GBR
 		}
-		#NOT = { advisor_exists = 284 }
+		NOT = { advisor_exists = 284 }
 		OR = {
 			owns = 238		# East Anglia
 			owns = 236		# London
@@ -1823,15 +1847,47 @@ country_event = {
 				}
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 2
+					size = 3 # BT; 2
 					leader = "James"
 					leader_dynasty = "Stuart"
 				}
 			}
 		}
-		if = {
+		# BT; 4 else_if below added/modified
+		else_if = {
 			limit = {
-				NOT = { highlands_area = { owned_by = ROOT } }
+				kingdom_of_the_isles_area = { owned_by = ROOT }
+			}
+			random_owned_province = {
+				limit = {
+					area = kingdom_of_the_isles_area
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 3
+					leader = "James"
+					leader_dynasty = "Stuart"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scottish_marches_area = { owned_by = ROOT }
+			}
+			random_owned_province = {
+				limit = {
+					area = scottish_marches_area
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 3
+					leader = "James"
+					leader_dynasty = "Stuart"
+				}
+			}
+		}
+		else_if = {
+			limit = {
 				lowlands_area = { owned_by = ROOT }
 			}
 			random_owned_province = {
@@ -1840,16 +1896,14 @@ country_event = {
 				}
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 2
+					size = 3
 					leader = "James"
 					leader_dynasty = "Stuart"
 				}
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				NOT = { highlands_area = { owned_by = ROOT } }
-				NOT = { lowlands_area = { owned_by = ROOT } }
 				british_isles_region = { owned_by = ROOT }
 			}
 			random_owned_province = {
@@ -1858,7 +1912,7 @@ country_event = {
 				}
 				spawn_rebels = {
 					type = pretender_rebels
-					size = 2
+					size = 3
 					leader = "James"
 					leader_dynasty = "Stuart"
 				}
@@ -1886,7 +1940,7 @@ country_event = {
 			}
 			tag = GBR
 		}
-		#NOT = { advisor_exists = 293 }
+		NOT = { advisor_exists = 293 }
 		owns = 236		# London
 	}
 
@@ -1944,7 +1998,7 @@ country_event = {
 			}
 			tag = GBR
 		}
-		#NOT = { advisor_exists = 315 }
+		NOT = { advisor_exists = 315 }
 		OR = {
 			owns = 235		# Kent
 			owns = 236		# London
@@ -2244,10 +2298,10 @@ country_event = {
 		NOT = { is_year = 1790 }
 		OR = {
 			AND = {
-				tag = ENG
-				NOT = { exists = GBR }
+				tag = GBR # ??? BT; ENG
+				NOT = { exists = SCO } # ??? BT; GBR
 			}
-			tag = GBR
+			tag = SCO # ??? BT; GBR
 		}
 	}
 
@@ -2286,10 +2340,10 @@ country_event = {
 		NOT = { is_year = 1776 }
 		OR = {
 			AND = {
-				tag = ENG
-				NOT = { exists = GBR }
+				tag = GBR # ??? BT; ENG
+				NOT = { exists = SCO } # ??? BT; GBR
 			}
-			tag = GBR
+			tag = SCO # ??? BT; GBR
 		}
 	}
 
@@ -2404,7 +2458,7 @@ country_event = {
 		NOT = { has_country_flag = ENG_had_event_9205 }
 		is_year = 1593
 		NOT = { is_year = 1616 }
-		#NOT = { advisor_exists = 245 }
+		NOT = { advisor_exists = 245 }
 		OR = {
 			AND = {
 				tag = ENG
@@ -2540,8 +2594,8 @@ country_event = {
 			dynasty = "Tudor"
 			culture = english
 			adm = 3
-			dip = 3
-			mil = 4
+			dip = 4
+			mil = 2
 			age = 24
 		}
 	}

@@ -1,24 +1,23 @@
+ 
 #495 - Antigua
 
-culture = carib
+culture = ineri
 religion = animism
-capital = "Antigua"
+capital = "Waladli"
 trade_goods = unknown 
 hre = no
-base_tax = 4
-base_production = 5
+base_tax = 1
+base_production = 1
 base_manpower = 1
-native_size = 20
-native_ferocity = 2
-native_hostileness = 4
-discovered_by = CAB
-discovered_by = ARW
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
 
-
+1444.1.1 = { discovered_by = CAB }
+1444.1.1 = { discovered_by = ARW }
 
 1493.1.1 = { discovered_by = CAS } # Christopher Columbus
 1516.1.23 = { discovered_by = SPA }
-
 1632.1.1 = {
 	owner = ENG
 	controller = ENG

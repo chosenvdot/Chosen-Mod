@@ -1,4 +1,7 @@
+ 
 #166 - Schwyz
+#Region - Germany
+#Area - Switzerland
 
 owner = SWI
 controller = SWI
@@ -7,12 +10,11 @@ religion = catholic
 capital = "Schwyz"
 trade_goods = iron
 hre = yes
-base_tax = 4 
+base_tax = 4
 base_production = 4
-base_manpower = 2
+base_manpower = 3 
 is_city = yes
 add_core = SWI
-fort_15th = yes
 
 
 

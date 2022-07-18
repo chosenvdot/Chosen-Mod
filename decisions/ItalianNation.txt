@@ -1,130 +1,10 @@
 country_decisions = {
 
-	italian_nation = {
-		major = yes
-		potential = {
-			OR = {
-				tag = MLO
-				tag = VEN
-				tag = SIC
-				tag = TTS
-				}
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_italy_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			NOT = { exists = ITA }
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
-			culture_group = latin
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 15
-				}
-			}
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
-		}
-		provinces_to_highlight = {
-			OR = {
-				AND = {
-					region = italy_region
-					root = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								value = 20
-								region = italy_region
-								is_core = root
-							}
-						}
-						owns_core_province = 101	
-						owns_core_province = 104	
-						owns_core_province = 116	
-						owns_core_province = 118	
-					}
-				}
-				province_id = 101	# Genoa
-				province_id = 104	# Milan
-				province_id = 116	# Firenze
-				province_id = 118	# Roma
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			#adm_tech = 14
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
-			owns_core_province = 101	# Genoa
-			owns_core_province = 104	# Milan
-			owns_core_province = 116	# Firenze
-			owns_core_province = 118	# Roma
-			num_of_owned_provinces_with = {
-				value = 40
-				region = italy_region
-				is_core = root
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					is_part_of_hre = yes
-					is_elector = no
-					is_emperor = no
-				}
-				emperor = {
-					add_opinion = {
-						who = root
-						modifier = opinion_left_empire
-					}
-				}
-				set_in_empire = no
-				emperor = {
-					country_event = { id = hre_event.5 }
-				}
-			}
-			if = {
-				limit = {
-					NOT = { government_rank = 2 }
-				}
-				set_government_rank = 2
-			}
-			change_tag = ITA
-			italy_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ITA
-			}
-			add_prestige = 25
-			ITA = {
-				set_capital = 118
-			}
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			swap_non_generic_missions = yes
-			set_country_flag = formed_italy_flag
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+#Moving forming decisions to BtPLReplaceVanillaCountryFormations
 
+#I normally don't like messing with vanilla files when I don't have to, but between all the map changes and the fact that I wanted to clean up a few things
+#and make everything more dynamic anyway, I figured I'd just reorganise. Hope this doesn't mess with anyone too much. - Draiocht
+	
 	gods_kingdom = {
 		major = yes
 		potential = {
@@ -134,6 +14,7 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = { exists = ITA }
+			NOT = { exists = ITL } # BT
 			tag = PAP
 			NOT = { has_country_flag = is_kingdom_of_god_flag }
 			OR = {
@@ -173,25 +54,36 @@ country_decisions = {
 			owns_core_province = 101	# Genoa
 			owns_core_province = 103	# Torino
 			owns_core_province = 104	# Milano
+			owns_core_province = 105	# Parma # BT
 			owns_core_province = 106	# Modena
+			owns_core_province = 107	# Brescia # BT
+			owns_core_province = 108	# Verona # BT
+			owns_core_province = 109	# Mantua # BT
 			owns_core_province = 110	# Trento
 			owns_core_province = 111	# Udine / Aquileia
 			owns_core_province = 112	# Venice
+			owns_core_province = 113	# Ferrara # BT
 			owns_core_province = 114	# Bologna + Ravenna
 			owns_core_province = 116	# Firenze
 			owns_core_province = 115	# Pisa
+			owns_core_province = 117	# Siena # BT
+			owns_core_province = 118	# Roma # BT
 			owns_core_province = 119	# Ancona + Fermo
 			owns_core_province = 2976	# Perugia
 			owns_core_province = 2977	# Pesaro
 		}
 		effect = {
-			country_event  = { id = catholic_flavor.2 }
-			italy_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
+			add_country_modifier = { # BT
+				name = "btp_kingdom_of_god"
+				duration = -1
 			}
+			country_event  = { id = catholic_flavor.2 }
+            italy_region = { # BT adjusted
+                limit = {
+                    NOT = { is_permanent_claim = ROOT } # BT; replaced owned_by
+                }
+                add_permanent_claim = ROOT
+            }
 			override_country_name = KINGDOM_OF_GOD
 			set_country_flag = is_kingdom_of_god_flag
 		}

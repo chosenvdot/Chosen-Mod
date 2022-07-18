@@ -1,25 +1,27 @@
 #4395 - Hisn Kayfa
 
-owner = AKK
-controller = AKK
-culture = kurdish
-religion = sunni
-capital = "Hisn Kayfa"
-trade_goods = wool
+owner = HSN
+controller = HSN
+add_core = HSN
+capital = "Hisn Kayfa"	
+culture = assyrian_culture
+religion = orthodox
+trade_goods = cloth			#No particular reason, but rich-ish area
 hre = no
-base_tax = 2 
-base_production = 2
-base_manpower = 2
+base_tax = 5
+base_production = 5
+base_manpower = 4
 is_city = yes
-#fort_15th = yes
-#add_core = IRQ
-add_core = AKK
+fort_15th = yes
+
+
 discovered_by = east_african
+discovered_by = western
 discovered_by = muslim
-discovered_by = indian
 discovered_by = ottoman
 discovered_by = eastern
 discovered_by = nomad_group
+discovered_by = indian
 
 1462.1.1 = {
 	owner = AKK
@@ -32,10 +34,10 @@ discovered_by = nomad_group
 	add_core = HSN
 	remove_core = AKK
 } # Independence
-1514.8.23 = {
+1515.1.1 = {
 	owner = TUR
 	controller = TUR
 	add_core = TUR
-} # Diyarbakir conquered by Ottomans, Van remains Persian
+} # Annexed by the Ottomans
 1624.1.1 = { controller = PER }
 1638.12.24 = { controller = TUR }

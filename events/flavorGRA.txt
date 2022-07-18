@@ -30,7 +30,7 @@ country_event = {
 				area = northern_greece_area
 				area = morea_area
 				area = macedonia_area
-				#area = western_aegean_area
+				area = western_aegean_area
 			}
 		}
 		religion_group = muslim
@@ -100,10 +100,10 @@ country_event = {
 				remove_core = ROOT
 				add_core = SIC
 			}
-			western_sicily_area = {
-				remove_core = ROOT
-				add_core = SIC
-			}
+			#western_sicily_area = { # BT removed
+			#	remove_core = ROOT
+			#	add_core = SIC
+			#}
 			release = SIC
 			create_march = SIC
 			SIC = {
@@ -122,9 +122,9 @@ country_event = {
 			sicily_area = {
 				add_core = SIC
 			}
-			western_sicily_area = {
-				add_core = SIC
-			}
+			#western_sicily_area = { # BT removed
+			#	add_core = SIC
+			#}
 			release = SIC
 			create_march = SIC
 		}
@@ -155,6 +155,15 @@ country_event = {
 			}
 			add_claim = SIC
 		}
+		abruzzo_area = { # BT
+			limit = {
+				NOT = {
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+			add_claim = SIC
+		}
 	}
 	
 	option = {
@@ -165,12 +174,12 @@ country_event = {
 				duration = 7300
 			}
 		}
-		western_sicily_area = {
-			add_province_modifier = {
-				name = "sicily_in_safe_hands"
-				duration = 7300
-			}
-		}
+		#western_sicily_area = { # BT removed
+		#	add_province_modifier = {
+		#		name = "sicily_in_safe_hands"
+		#		duration = 7300
+		#	}
+		#}
 	}
 	
 }
@@ -189,7 +198,7 @@ country_event = {
 		change_religion = shiite
 		add_country_modifier = {
 			name = "adu_popular_appeal"
-			duration = -1
+			duration = 7300
 		}
 	}
 	

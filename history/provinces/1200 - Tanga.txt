@@ -1,18 +1,19 @@
+ 
 #1200 - Tanga
 
-owner = ZAN
-controller = ZAN
-add_core = ZAN
+owner = MBA
+controller = MBA
+add_core = MBA
 culture = swahili
 religion = shamanism #Fetishism
 capital = "Vumba Kuu"
 is_city = yes
-base_manpower = 2
+base_manpower = 4
 add_local_autonomy = 35
 trade_goods = ivory
 hre = no
-base_tax = 2
-base_production = 2
+base_tax = 4 
+base_production = 4
 
 discovered_by = east_african
 discovered_by = indian

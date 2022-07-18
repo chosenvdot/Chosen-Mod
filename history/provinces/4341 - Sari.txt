@@ -1,3 +1,4 @@
+ 
 #4341 - Sari
 
 owner = TAB
@@ -7,11 +8,11 @@ religion = shiite
 capital = "Sari"
 trade_goods = silk
 hre = no
-base_tax = 2
-base_production = 4
-base_manpower = 2
+base_tax = 10
+base_production = 10
+base_manpower = 6
 is_city = yes
-#add_local_autonomy = 10
+add_local_autonomy = 10
 add_core = TAB
 discovered_by = eastern
 discovered_by = muslim

@@ -1,3 +1,4 @@
+ 
 #262 - Krakow
 
 latent_trade_goods = {
@@ -11,26 +12,46 @@ religion = catholic
 capital = "Kraków"
 hre = no
 base_tax = 7
-base_production = 7
+base_production = 6
 trade_goods = salt
-base_manpower = 6
+base_manpower = 5
 is_city = yes
 fort_15th = yes
  #Jagiellonian University established in 1364 by Casimir III the Great
 add_core = POL
-add_core = KRA
-discovered_by = KAZ
-discovered_by = CRI
-discovered_by = GOL
-discovered_by = AST
-discovered_by = QAS
+
+1444.1.1 = { discovered_by = KAZ }
+1444.1.1 = { discovered_by = CRI }
+1444.1.1 = { discovered_by = GOL }
+1444.1.1 = { discovered_by = AST }
+1444.1.1 = { discovered_by = QAS }
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-extra_cost = 16
+
+
+extra_cost = 15
+
 center_of_trade = 2
 
+#2nd Shattering
+1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
+	remove_core = POL
+	add_core = KRA
+	owner = KRA
+	controller = KRA
+	hre = yes #Just a bit of flavour.
+} #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
+1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
+	add_core = POL
+	remove_core = KRA
+	owner = POL
+	controller = POL
+	hre = no #Just a bit of flavour.
+} #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
+
+#1444 onwards
 1569.7.1 = {
 	owner = PLC
 	controller = PLC
@@ -38,7 +59,7 @@ center_of_trade = 2
 	add_core = PLC
 } # Union of Lublin
 1587.1.1 = { unrest = 6 }
-1587.2.14 = { unrest = 0 } # After a 6 week siege, Maximillian drops his bid for the Polish throne
+1587.2.14 = { unrest = 0 } # After a 6 week siege, Maximillian drops his bid for the Polish trone
 1588.1.1 = { revolt = { type = revolutionary_rebels size = 3 } controller = REB } # Civil war, Polish succession
 1589.1.1 = { revolt = {} controller = PLC } # Coronation of Sigismund III
 1733.1.1 = { revolt = { type = revolutionary_rebels size = 2 } controller = REB } # The war of Polish succession
@@ -57,4 +78,5 @@ center_of_trade = 2
 1815.5.3 = {
 	owner = KRA
 	controller = KRA
+	add_core = KRA
 } # The Free city of Krakow

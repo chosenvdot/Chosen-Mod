@@ -1,8 +1,552 @@
 
 #This one or the next one will always be valid
+estate_nomadic_tribes_hire_advisor = {
+	can_select = {
+		NOT = {
+			employed_advisor = {
+				category = MIL
+			}
+		}
+	}
+	selection_weight = {
+		factor = 1
+	}
+	task_requirements = {
+		employed_advisor = {
+			category = MIL
+		}
+		is_in_deficit = no
+	}
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 10
+		}
+    }
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}
+
+estate_nomadic_tribes_fire_advisor = {
+	can_select = {
+		employed_advisor = {
+			category = MIL
+		}
+	}
+	selection_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			always = yes
+		}
+	}
+	immediate_effect = {
+		hidden_effect = {
+			set_country_flag = need_to_fire_mil_advisor
+		}
+	}
+	on_invalid = {
+		clr_country_flag = need_to_fire_adm_advisor
+	}
+	task_requirements = {
+		custom_trigger_tooltip = {
+			tooltip = fire_mil_advisor_tooltip
+			has_country_flag = just_fired_mil_advisor
+		}
+	}
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 10
+		}
+		clr_country_flag = just_fired_mil_advisor
+		clr_country_flag = need_to_fire_mil_advisor
+	}
+	invalid_trigger = {
+		NOT = {
+			employed_advisor = {
+				category = MIL
+			}
+		}
+		NOT = { has_country_flag = just_fired_mil_advisor }
+	}
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+		clr_country_flag = need_to_fire_mil_advisor
+    }
+}
 
 #Raze a province
-
+estate_nomadic_tribes_raze_a_province = {
+	can_select = {
+		OR = {
+			has_reform = great_mongol_state_reform
+			has_reform = steppe_horde
+			has_dlc = "The Cossacks"
+		}
+		OR = {
+			NOT = {
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+				}
+			}
+			AND = {
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+				}
+				NOT = {
+					any_known_country = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+						}
+						NOT = {
+							has_opinion_modifier = {
+								who = root
+								modifier = razed_province
+								value = -190
+							}
+						}
+					}
+				}
+			}
+		}
+		NOT = { has_country_modifier = agenda_looting_zeal }
+	}
+	provinces_to_highlight = {
+		is_capital = yes
+		owner = {
+			has_opinion_modifier = {
+				who = root
+				modifier = razed_province
+			}
+		}
+	}
+	pre_effect = {
+		set_variable = {
+			which = estate_nomadic_tribes_raze_a_province_var
+			value = 0
+		}
+		if = {
+			limit = {
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+				}
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+							value = -174
+						}
+					}
+				}
+			}
+			set_variable = {
+				which = estate_nomadic_tribes_raze_a_province_var
+				value = 8
+			}
+		}
+		else_if = {
+			limit = {
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+				}
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+							value = -149
+						}
+					}
+				}
+			}
+			set_variable = {
+				which = estate_nomadic_tribes_raze_a_province_var
+				value = 7
+			}
+		}
+		else_if = {
+			limit = {
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+				}
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+							value = -124
+						}
+					}
+				}
+			}
+			set_variable = {
+				which = estate_nomadic_tribes_raze_a_province_var
+				value = 6
+			}
+		}
+		else_if = {
+			limit = {
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+				}
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+							value = -99
+						}
+					}
+				}
+			}
+			set_variable = {
+				which = estate_nomadic_tribes_raze_a_province_var
+				value = 5
+			}
+		}
+		else_if = {
+			limit = {
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+				}
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+							value = -74
+						}
+					}
+				}
+			}
+			set_variable = {
+				which = estate_nomadic_tribes_raze_a_province_var
+				value = 4
+			}
+		}
+		else_if = {
+			limit = {
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+				}
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+							value = -49
+						}
+					}
+				}
+			}
+			set_variable = {
+				which = estate_nomadic_tribes_raze_a_province_var
+				value = 3
+			}
+		}
+		else_if = {
+			limit = {
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+				}
+				any_known_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+							value = -24
+						}
+					}
+				}
+			}
+			set_variable = {
+				which = estate_nomadic_tribes_raze_a_province_var
+				value = 2
+			}
+		}
+		else = {
+			set_variable = {
+				which = estate_nomadic_tribes_raze_a_province_var
+				value = 1
+			}
+		}
+	}
+	task_requirements = {
+		if = {
+			limit = {
+				check_variable = {
+					which = estate_nomadic_tribes_raze_a_province_var
+					value = 8
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = someone_has_200_looted_province
+				any_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+							value = -199
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = estate_nomadic_tribes_raze_a_province_var
+					value = 7
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = someone_has_175_looted_province
+				any_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+							value = -174
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = estate_nomadic_tribes_raze_a_province_var
+					value = 6
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = someone_has_150_looted_province
+				any_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+							value = -149
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = estate_nomadic_tribes_raze_a_province_var
+					value = 5
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = someone_has_125_looted_province
+				any_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+							value = -124
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = estate_nomadic_tribes_raze_a_province_var
+					value = 4
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = someone_has_100_looted_province
+				any_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+							value = -99
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = estate_nomadic_tribes_raze_a_province_var
+					value = 3
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = someone_has_75_looted_province
+				any_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+							value = -74
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = estate_nomadic_tribes_raze_a_province_var
+					value = 2
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = someone_has_50_looted_province
+				any_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+							value = -49
+						}
+					}
+				}
+			}
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = someone_has_25_looted_province
+				any_country = {
+					has_opinion_modifier = {
+						who = root
+						modifier = razed_province
+					}
+					NOT = {
+						has_opinion_modifier = {
+							who = root
+							modifier = razed_province
+							value = -24
+						}
+					}
+				}
+			}
+		}
+	}
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 10
+		}
+		add_country_modifier = {
+			name = agenda_looting_zeal
+			duration = 3650
+		}
+    }
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}
 
 #Restore horde unity
 estate_nomadic_tribes_restore_horde_unity = {
@@ -664,6 +1208,119 @@ estate_nomadic_tribes_regain_liberty = {
 }
 
 #Convert province culture
+estate_nomadic_tribes_convert_province_culture = {
+	can_select = {
+		any_owned_province = {
+			NOT = { culture = root }
+			has_owner_accepted_culture = no
+			NOT = { nationalism = 1 }
+			religion = root
+			any_neighbor_province = {
+				owned_by = root
+				culture = root
+			}
+		}
+	}
+	selection_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.65
+			always = yes
+		}
+	}
+	pre_effect = {
+		random_owned_province = {
+			limit = {
+				NOT = { culture = root }
+				has_owner_accepted_culture = no
+				NOT = { nationalism = 1 }
+				religion = root
+				any_neighbor_province = {
+					owned_by = root
+					culture = root
+				}
+			}
+			save_event_target_as = agenda_province
+			choose_random_development_bonus_effect = yes
+		}
+	}
+	fail_if = {
+		event_target:agenda_province = {
+			OR = {
+				NOT = { owned_by = root }
+				nationalism = 1
+				NOT = { religion = root }
+			}
+		}
+	}
+	immediate_effect = {
+		event_target:agenda_province = {
+			add_province_modifier = {
+				name = agenda_cultural_conversion_help
+				duration = 3650
+			}
+		}
+	}
+	on_invalid = {
+		event_target:agenda_province = {
+			clear_random_development_bonus_flags_effect = yes
+			if = {
+				limit = {
+					has_province_modifier = agenda_cultural_conversion_help
+				}
+				remove_province_modifier = agenda_cultural_conversion_help
+			}
+		}
+	}
+	provinces_to_highlight = {
+		province_id = event_target:agenda_province
+	}
+	task_requirements = {
+		if = {
+			limit = {
+				NOT = {
+					event_target:agenda_province = {
+						has_owner_accepted_culture = yes
+					}
+				}
+			}
+			event_target:agenda_province = {
+				culture = root
+			}
+		}
+		else = { #don't want to show this in most cases, but don't want it to count as a fail if you do this.
+			event_target:agenda_province = {
+				has_owner_accepted_culture = yes
+			}
+		}
+	}
+	task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 10
+		}
+		event_target:agenda_province = {
+			apply_random_development_bonus_bonus_effect = yes
+		}
+	}
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+		event_target:agenda_province = {
+			clear_random_development_bonus_flags_effect = yes
+			if = {
+				limit = {
+					has_province_modifier = agenda_cultural_conversion_help
+				}
+				remove_province_modifier = agenda_cultural_conversion_help
+			}
+		}
+    }
+}
 
 #Protect our Culture in X
 estate_nomadic_tribes_protect_our_culture = {
@@ -910,12 +1567,12 @@ estate_nomadic_tribes_vassalise_vulnerable_country = {
 			is_free_or_tributary_trigger = yes
 			OR = {
 				NOT = { num_of_cities = 4 }
-				NOT = { total_development = 100 }
+				NOT = { total_development = 200 } #BT Dev Doubling
 			}
 			OR = {
 				NOT = { num_of_cities = 3 }
-				NOT = { total_development = 50 }
-				ROOT = { total_development = 500 }
+				NOT = { total_development = 100 } #BT Dev Doubling
+				ROOT = { total_development = 1000 } #BT Dev Doubling
 			}
 			NOT = { is_subject_of = root }
 			NOT = { overlord_of = root }
@@ -979,12 +1636,12 @@ estate_nomadic_tribes_vassalise_vulnerable_country = {
 				is_free_or_tributary_trigger = yes
 				OR = {
 					NOT = { num_of_cities = 4 }
-					NOT = { total_development = 100 }
+					NOT = { total_development = 200 } #BT Dev Doubling
 				}
 				OR = {
 					NOT = { num_of_cities = 3 }
-					NOT = { total_development = 50 }
-					ROOT = { total_development = 500 }
+					NOT = { total_development = 100 } #BT Dev Doubling
+					ROOT = { total_development = 1000 } #BT Dev Doubling
 				}
 				NOT = { is_subject_of = root }
 				NOT = { overlord_of = root }
@@ -1597,6 +2254,118 @@ estate_nomadic_tribes_complete_conquest_of_x = {
 
 
 #Annex vassal
+estate_nomadic_tribes_annex_subject = {
+	can_select = {
+		is_at_war = no
+		diplomatic_reputation = 0
+		any_subject_country = {
+			NOT = { total_development = 600 } #BT Dev Doubling
+			OR = {
+				AND = {
+					is_vassal = yes
+					years_in_vassalage_under = {
+						who = root
+						years = 10
+					}
+				}
+				AND = {
+					is_lesser_in_union = yes
+					years_in_union_under = {
+						who = root
+						years = 50
+					}
+				}
+			}
+		}
+	}
+	selection_weight = {
+		factor = 3
+	}
+	pre_effect = {
+		random_subject_country = {
+			limit = {
+				NOT = { total_development = 600 } #BT Dev Doubling
+				OR = {
+					AND = {
+						is_vassal = yes
+						years_in_vassalage_under = {
+							who = root
+							years = 10
+						}
+					}
+					AND = {
+						is_lesser_in_union = yes
+						years_in_union_under = {
+							who = root
+							years = 50
+						}
+					}
+				}
+			}
+			save_event_target_as = agenda_country
+			capital_scope = {
+				save_event_target_as = agenda_province
+			}
+			add_country_modifier = {
+				name = to_be_agenda_annexed_timer
+				duration = 7300
+				hidden = yes
+			}
+		}
+	}
+	provinces_to_highlight = {
+		OR = {
+			province_id = event_target:agenda_province
+			owned_by = event_target:agenda_country
+		}
+	}
+	task_requirements = {
+		event_target:agenda_country = {
+			NOT = { num_of_cities = 1 }
+		}
+		event_target:agenda_province = {
+			owned_by = root
+		}
+	}
+	fail_if = {
+		OR = {
+			AND = {
+				event_target:agenda_country = {
+					NOT = { num_of_cities = 1 }
+				}
+				NOT = {
+					event_target:agenda_province = {
+						owned_by = root
+					}
+				}
+			}
+			event_target:agenda_country = {
+				num_of_cities = 1
+				NOT = { is_subject_of = root }
+			}
+		}
+	}
+	task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 10
+		}
+		custom_tooltip = no_penalties_annexing_tt
+	}
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+		hidden_effect = {
+			event_target:agenda_country = {
+				remove_country_modifier = to_be_agenda_annexed_timer
+			}
+		}
+    }
+}
 
 
 #Bigger Army
@@ -1966,8 +2735,157 @@ estate_nomadic_tribes_recover_stability = {
 }
 
 #Stabilise Country II
-
+estate_nomadic_tribes_increase_stability = {
+	can_select = {
+		NOT = { stability = 2 }
+		stability = 1
+	}
+	selection_weight = {
+		factor = 1
+	}
+	fail_if = {
+		NOT = { stability = 0 }
+	}
+	task_requirements = {
+		stability = 3
+	}
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 10
+		}
+		add_prestige = 10
+    }
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}
 
 
 #Loot X province with at least 12 development ("Despoil X")
-
+estate_nomadic_tribes_despoil_x = {
+	can_select = {
+		is_at_war = yes
+		NOT = {
+			is_in_war = {
+				duration = 1825
+			}
+		}
+		any_neighbor_country = {
+			war_with = root
+			any_owned_province = {
+				development = 12
+				is_looted = no
+				continent = root
+				controlled_by = owner
+				area_for_scope_province = {
+					type = all
+					owned_by = prev
+				}
+			}
+		}
+		NOT = { has_country_modifier = agenda_looting_zeal }
+	}
+	selection_weight = {
+		factor = 2.5
+	}
+	pre_effect = {
+		random_neighbor_country = {
+			limit = {
+				war_with = root
+				any_owned_province = {
+					development = 12
+					is_looted = no
+					continent = root
+					controlled_by = owner
+					area_for_scope_province = {
+						type = all
+						owned_by = prev
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					development = 12
+					is_looted = no
+					continent = root
+					controlled_by = owner
+					area_for_scope_province = {
+						type = all
+						owned_by = prev
+					}
+				}
+				save_event_target_as = agenda_province
+			}
+			random_owned_province = {
+				limit = {
+					development = 16
+					is_looted = no
+					continent = root
+					controlled_by = owner
+					area_for_scope_province = {
+						type = all
+						owned_by = prev
+					}
+				}
+				save_event_target_as = agenda_province
+			}
+			random_owned_province = {
+				limit = {
+					development = 20
+					is_looted = no
+					continent = root
+					controlled_by = owner
+					area_for_scope_province = {
+						type = all
+						owned_by = prev
+					}
+				}
+				save_event_target_as = agenda_province
+			}
+		}
+	}
+	provinces_to_highlight = {
+		province_id = event_target:agenda_province
+	}
+	task_requirements = {
+		event_target:agenda_province = {
+			area_for_scope_province = {
+				type = all
+				is_looted = yes
+			}
+		}
+	}
+	fail_if = {
+		event_target:agenda_province = {
+			owner = {
+				NOT = {
+					war_with = root
+				}
+			}
+		}
+	}
+    task_completed_effect = {
+		add_estate_loyalty = {
+			estate = estate_nomadic_tribes
+			loyalty = 10
+		}
+		add_country_modifier = {
+			name = agenda_looting_zeal
+			duration = 3650
+		}
+    }
+    failing_effect = {
+        add_estate_loyalty_modifier = {
+            estate = estate_nomadic_tribes
+			desc = EST_VAL_AGENDA_DENIED
+			loyalty = -5
+			duration = 7300
+        }
+    }
+}
