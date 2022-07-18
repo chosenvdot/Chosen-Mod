@@ -1,8 +1,8 @@
  
 #535 - Kochin
 
-owner = KOC
-controller = KOC
+owner = VND
+controller = VND
 culture = malayalam
 religion = hinduism
 capital = "Kochin"
@@ -12,7 +12,7 @@ base_tax = 6
 base_production = 6
 base_manpower = 4
 is_city = yes
-add_core = KOC
+add_core = VND
 discovered_by = nomad_group
 discovered_by = indian
 discovered_by = muslim

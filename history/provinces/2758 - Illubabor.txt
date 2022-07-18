@@ -1,9 +1,9 @@
  
 #2758 - Illubabor
 
-owner = ENA
-controller = ENA
-add_core = ENA
+owner = ETH
+controller = ETH
+add_core = ETH
 culture = sidamo
 religion = coptic
 capital = "Illubabor"

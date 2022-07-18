@@ -1,8 +1,8 @@
  
 #2711 - Bulungan
 
-owner = BEU
-controller = BEU
+owner = KUT
+controller = KUT
 culture = kutainese
 religion = hinduism
 capital = "Bulungan"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 2
 is_city = yes
-add_core = BEU
+add_core = KUT
 
 discovered_by = chinese
 discovered_by = indian
