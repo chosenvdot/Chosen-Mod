@@ -1,4 +1,3 @@
-#Updated and scriptified by Dub.
 gc_spain_1 = {
 	slot = 1
 	generic = no
@@ -26,10 +25,7 @@ gc_spain_1 = {
 		completed_by = 1492.1.1
 
 		provinces_to_highlight = {
-			OR = {
-				province_id = 4565
-				province_id = 5096
-			}
+			province_id = 4565
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
@@ -38,10 +34,7 @@ gc_spain_1 = {
 			custom_trigger_tooltip = {
 				tooltip = spa_plus_ultra_tooltip
 				OR = {
-					AND = {
-						owns_core_province = 4565
-						owns_core_province = 5096
-					}
+					owns_core_province = 4565
 					any_owned_province = {
 						OR = {
 							continent = north_america
@@ -82,7 +75,7 @@ gc_spain_1 = {
 			else = {
 				custom_trigger_tooltip = {
 					tooltip = miss_discover_caribbean
-					carribeans_region = { has_discovered = ROOT }
+					colonial_the_carribean = { has_discovered = ROOT }
 				}
 			}
 		}
@@ -134,12 +127,7 @@ gc_spain_1_b = {
 		# free mission
 
 		provinces_to_highlight = {
-			OR = {
-				colonial_region = colonial_the_carribean
-				colonial_region = colonial_hispaniola
-				colonial_region = colonial_cuba
-				colonial_region = colonial_bahamas
-			}
+			colonial_region = colonial_the_carribean
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -149,12 +137,7 @@ gc_spain_1_b = {
 				tooltip = miss_colonize_caribbean
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 1
-					OR = {
-						colonial_region = colonial_the_carribean
-						colonial_region = colonial_hispaniola
-						colonial_region = colonial_cuba
-						colonial_region = colonial_bahamas
-					}
+					colonial_region = colonial_the_carribean
 					is_city = yes
 				}
 			}
@@ -174,7 +157,10 @@ gc_spain_1_b = {
 		completed_by = 1493.1.1
 
 		provinces_to_highlight = {
-			colonial_region = colonial_cuba
+			OR = {
+				area = cuba_area
+				area = east_cuba_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -197,12 +183,11 @@ gc_spain_1_b = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
-			custom_trigger_tooltip = {
-				tooltip = cas_spa_havana.tooltip
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 5
-					colonial_region = colonial_cuba
-					is_city = yes
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value =  5
+				OR = {
+					area = cuba_area
+					area = east_cuba_area
 				}
 			}
 		}
@@ -212,7 +197,12 @@ gc_spain_1_b = {
 			if = {
 				limit = {
 					any_subject_country = {
-						is_subject_of_type = colony
+						OR = {
+							is_subject_of_type = colony
+							is_subject_of_type = crown_colony
+							is_subject_of_type = private_enterprise
+							is_subject_of_type = self_governing_colony
+						}
 						owns = 484
 					}
 				}
@@ -275,17 +265,25 @@ gc_spain_1_b = {
 		}
 
 		trigger = {
-			2021 = {
-				country_or_non_sovereign_subject_holds = ROOT
-				has_holy_order_trigger = yes
-			}
-			custom_trigger_tooltip = {
-				tooltip = miss_colonize_california
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 5
-					colonial_region = colonial_california
-					is_city = yes
+			if = {
+				limit = {
+					religion = catholic
 				}
+				2021 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_holy_order_trigger = yes
+				}
+			}
+			else = {
+				2021 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					religion = ROOT
+				}
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_california
+				is_city = yes
 			}
 		}
 		effect = {
@@ -332,13 +330,12 @@ gc_spain_2 = {
 		position = 2
 
 		provinces_to_highlight = {
-			area = basque_country
+			province_id = 210
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
-			basque_country = {
-				type = all
+			210 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -455,18 +452,21 @@ gc_spain_2 = {
 		position = 4
 
 		provinces_to_highlight = {
-			region = iberia_region
 			OR = {
-				culture = andalusi_culture
-				culture = andalucian
+				area = upper_andalucia_area
+				area = lower_andalucia_area
 			}
+			NOT = { culture = ROOT }
 		}
 
 		trigger = {
-			iberia_region = {
+			upper_andalucia_area = {
 				type = all
-				NOT = { culture = andalusi_culture }
-				NOT = { culture = andalucian }
+				culture = ROOT
+			}
+			lower_andalucia_area = {
+				type = all
+				culture = ROOT
 			}
 		}
 		effect = {
@@ -507,8 +507,17 @@ gc_spain_2_b = {
 		position = 6
 
 		provinces_to_highlight = {
-			colonial_region = colonial_hispaniola
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			OR = {
+				AND = {
+					OR = {
+						area = hispaniola_area
+						area = dominica_area
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+
+				}
+				province_id = 490
+			}
 			has_discovered = ROOT
 		}
 
@@ -517,7 +526,7 @@ gc_spain_2_b = {
 				limit = {
 					has_dlc = "Rights of Man"
 				}
-				4621 = {
+				490 = {
 					country_or_non_sovereign_subject_holds = ROOT
 					OR = {
 						has_building = temple
@@ -527,17 +536,17 @@ gc_spain_2_b = {
 				}
 			}
 			else = {
-				4621 = {
+				490 = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
-			custom_trigger_tooltip = {
-				tooltip = cas_spa_hispaniola.tooltip
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 5
-					colonial_region = colonial_hispaniola
-					is_city = yes
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				OR = {
+					area = hispaniola_area
+					area = dominica_area
 				}
+				is_city = yes
 			}
 		}
 		effect = {
@@ -546,9 +555,9 @@ gc_spain_2_b = {
 				fire = 5
 				manuever = 6
 				siege = 1
-				name = "Hernán Cortés"
+				name = "Hernï¿½n Cortï¿½s"
 			}
-			4621 = {
+			490 = {
 				add_base_production = 3
 				if = {
 					limit = {
@@ -638,12 +647,27 @@ gc_spain_2_b = {
 		}
 
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = mexico_holy_order_tooltip
-				num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
-					has_holy_order_trigger = yes
-					region = mexico_region
-					value = 5
+			if = {
+				limit = {
+					religion = catholic
+				}
+				custom_trigger_tooltip = {
+					tooltip = mexico_holy_order_tooltip
+					num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
+						has_holy_order_trigger = yes
+						region = mexico_region
+						value = 5
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mexico_holy_order_alternative_tooltip
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						religion = ROOT
+						region = mexico_region
+						value = 25
+					}
 				}
 			}
 			mexico_region = {
@@ -659,7 +683,12 @@ gc_spain_2_b = {
 			if = {
 				limit = {
 					any_subject_country = {
-						is_subject_of_type = colony
+						OR = {
+							is_subject_of_type = colony
+							is_subject_of_type = crown_colony
+							is_subject_of_type = private_enterprise
+							is_subject_of_type = self_governing_colony
+						}
 						owns = 852
 					}
 					852 = { is_capital = no }
@@ -702,16 +731,13 @@ gc_spain_2_b = {
 		}
 
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = cas_spa_florida_forts.tooltip
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 3
-					OR = {
-						region = southeast_america_region
-						area = west_florida_area
-					}
-					fort_level = 3
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				OR = {
+					region = southeast_america_region
+					area = west_florida_area
 				}
+				fort_level = 3
 			}
 		}
 		effect = {
@@ -782,9 +808,14 @@ gc_spain_3 = {
 				name = "spa_rb_morale"
 				duration = 5475
 			}
-			give_permaclaims_for_mission = { mission=gc_cas_spa_reconquista_one }
-			give_permaclaims_for_mission = { mission=gc_cas_spa_navarra }
-			basque_country = {
+			upper_andalucia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			210 = {
 				if = {
 					limit = {
 						NOT = {
@@ -803,15 +834,14 @@ gc_spain_3 = {
 		completed_by = 1492.1.1
 
 		provinces_to_highlight = {
-			gra_reconquer_sevilla_provinces = yes
+			area = upper_andalucia_area
 			NOT = { owned_by = ROOT }
 		}
 
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_highlighted
-				provinces=gra_reconquer_sevilla_provinces
-				owner_type=owned_by
+			upper_andalucia_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 
@@ -932,24 +962,11 @@ gc_spain_3 = {
 				}
 				add_claim = ROOT
 			}
-			marrekesh_area = {
+			algiers_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_claim = ROOT }
 				}
-				add_claim = ROOT
-			}
-			barbary_coast_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_claim = ROOT
-			}
-			2465 = {
-				add_claim = ROOT
-			}
-			5213 = {
 				add_claim = ROOT
 			}
 		}
@@ -993,13 +1010,10 @@ gc_spain_3_b = {
 		# free mission
 
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = spa_rb_spanish_main.tooltip
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 5
-					colonial_region = colonial_colombia
-					is_city = yes
-				}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_colombia
+				is_city = yes
 			}
 		}
 
@@ -1011,7 +1025,7 @@ gc_spain_3_b = {
 				manuever = 5
 				siege = 1
 			}
-			upper_peru = {  
+			upper_peru = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1162,7 +1176,7 @@ gc_spain_3_b = {
 
 		provinces_to_highlight = {
 			OR = {
-				area = upper_peru  
+				area = upper_peru
 				area = potosi_area
 				area = antisuyu_area
 				area = kuntisuyu_area
@@ -1174,7 +1188,7 @@ gc_spain_3_b = {
 		}
 
 		trigger = {
-			upper_peru = {  
+			upper_peru = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1220,7 +1234,10 @@ gc_spain_3_b = {
 					province_id = 795
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
-				province_id = 809
+				AND = {
+					province_id = 809
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
 				AND = {
 					OR = {
 						province_id = 809
@@ -1233,6 +1250,8 @@ gc_spain_3_b = {
 		}
 
 		trigger = {
+			owns_or_non_sovereign_subject_of = 809
+			owns_or_non_sovereign_subject_of = 795
 			809 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1261,31 +1280,48 @@ gc_spain_3_b = {
 			1516 = {
 				is_strongest_trade_power = ROOT
 			}
-			795 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 		}
 		effect = {
-			if = {
-				limit = {
-					any_subject_country = {
-						is_subject_of_type = colony
-						owns = 809
-					}
-				}
-				every_subject_country = {
+			custom_tooltip = gc_cas_spa_potosi_tt
+			hidden_effect = {
+				if = {
 					limit = {
-						owns = 809
+						any_subject_country = {
+							OR = {
+								is_subject_of_type = colony
+								is_subject_of_type = crown_colony
+								is_subject_of_type = private_enterprise
+								is_subject_of_type = self_governing_colony
+							}
+							owns = 809
+						}
 					}
-					809 = {
-						prev_move_capital_effect = yes
+					every_subject_country = {
+						limit = {
+							owns = 809
+						}
+						809 = {
+							prev_move_capital_effect = yes
+						}
 					}
 				}
 			}
-			795 = {
-				add_province_modifier = {
-					name = "spa_rb_gold_rush"
-					duration = 5475
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				795 = {
+					set_great_project_tier_2 = {
+						type = potosi
+					}
+				}
+			}
+			else = {
+				795 = {
+					add_province_modifier = {
+						name = "spa_rb_gold_rush"
+						duration = 5475
+					}
 				}
 			}
 			2946 = {
@@ -1323,17 +1359,35 @@ gc_spain_3_b = {
 		}
 
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = native_reductions_tooltip
-				num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
-					has_holy_order_trigger = yes
-					OR = {
-						continent = north_america
-						continent = south_america
+			if = {
+				limit = {
+					religion = catholic
+				}
+				custom_trigger_tooltip = {
+					tooltip = native_reductions_tooltip
+					num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
+						has_holy_order_trigger = yes
+						OR = {
+							continent = north_america
+							continent = south_america
+						}
+						value = 15
 					}
-					value = 15
 				}
 			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = native_reductions_alternative_tooltip
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						religion = ROOT
+						OR = {
+							continent = north_america
+							continent = south_america
+						}
+						value = 75
+					}
+				}
+			}			
 			216 = { # school of salamanca
 				has_building = university
 			}
@@ -1352,7 +1406,12 @@ gc_spain_3_b = {
 				limit = {
 					any_country = {
 						is_subject_of = ROOT
-						is_subject_of_type = colony
+						OR = {
+							is_subject_of_type = colony
+							is_subject_of_type = crown_colony
+							is_subject_of_type = private_enterprise
+							is_subject_of_type = self_governing_colony
+						}
 					}
 				}
 				every_country = {
@@ -1397,54 +1456,125 @@ gc_spain_4 = {
 		completed_by = 1479.1.1
 
 		provinces_to_highlight = {
-			gc_cas_spa_reconquista_three_provinces = yes
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } #Fixed vanilla error, highlighting the provinces despite having completed the mission.
+			OR = {
+				area = valencia_area
+				area = catalonia_area
+				area = aragon_area
+			}
+			NOT = { owned_by = ROOT }
 		}
 
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted
-				provinces=gc_cas_spa_reconquista_three_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			valencia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			catalonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			aragon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
 		effect = {
 			if = {
 				limit = {
-					exists = NAP
+					exists = POR
 					valid_for_personal_unions_trigger = yes
-					NAP = {
+					POR = {
 						valid_for_personal_unions_trigger = yes
 					}
 				}
 				add_casus_belli = {
 					type = cb_restore_personal_union
 					months = 300
-					target = NAP
+					target = POR
+				}
+				sicily_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				western_sicily_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				calabria_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				apulia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				naples_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				120 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
+					add_permanent_claim = ROOT
+					}
 				}
 			}
-			else = { #Special case.
-				if = {
+			else = {
+				sicily_area = {
 					limit = {
-						any_province = {
-							gc_cas_spa_italian_ambition_provinces = yes
-							OR = {
-								NOT = { is_core = NAP }
-								NOT = { is_permanent_claim = NAP }
-							}
-						}
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
-					custom_tooltip = gc_cas_spa_italian_ambition_claims_2
-					hidden_effect = {
-						every_province = {
-							limit = {
-								gc_cas_spa_italian_ambition_provinces = yes
-								NOT = { is_core = NAP }
-								NOT = { is_permanent_claim = NAP }
-							}
-							add_permanent_claim = NAP
+					add_permanent_claim = NAP
+				}
+				western_sicily_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = NAP
+				}
+				calabria_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = NAP
+				}
+				apulia_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = NAP
+				}
+				naples_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = NAP
+				}
+				120 = {
+					if = {
+						limit = {
+							NOT = { country_or_non_sovereign_subject_holds = ROOT }
 						}
+					add_permanent_claim = NAP
 					}
 				}
 			}
@@ -1456,15 +1586,47 @@ gc_spain_4 = {
 		completed_by = 1516.1.1
 
 		provinces_to_highlight = {
-			gc_cas_spa_italian_ambition_provinces = yes
+			OR = {
+				area = sicily_area
+				area = western_sicily_area
+				area = calabria_area
+				area = apulia_area
+				area = naples_area
+				province_id = 120
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=gc_cas_spa_italian_ambition_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			OR = {
+				NAP = {
+					junior_union_with = ROOT
+				}
+				AND = {
+					sicily_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					western_sicily_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					calabria_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					apulia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					naples_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					120 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 		}
 
@@ -1473,8 +1635,54 @@ gc_spain_4 = {
 				name = "spa_rb_italian_ambition_mod"
 				duration = 5475
 			}
-			give_permaclaims_for_mission = { mission=gc_cas_spa_italian_ambition_2 }
-			give_permaclaims_for_mission = { mission=gc_spa_spanish_netherlands }
+			tuscany_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lombardy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			po_valley_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			wallonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			flanders_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			brabant_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hidden_effect = {
+				remove_casus_belli = {
+					type = cb_restore_personal_union
+					target = NAP
+				}
+			}
 		}
 	}
 	gc_cas_spa_italian_ambition_2 = {
@@ -1482,15 +1690,26 @@ gc_spain_4 = {
 		required_missions = { gc_cas_spa_italian_ambition }
 
 		provinces_to_highlight = {
-			gc_cas_spa_italian_ambition_2_provinces = yes
+			OR = {
+				area = tuscany_area
+				area = lombardy_area
+				area = po_valley_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=gc_cas_spa_italian_ambition_2_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			tuscany_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lombardy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			po_valley_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1549,13 +1768,10 @@ gc_spain_4_b = {
 			if = {
 				limit = {
 					exists = GBR
-					is_subject = no
-					government = monarchy
-					religion_group = christian
+					valid_for_personal_unions_trigger = yes
 					GBR = {
-						is_subject = no
+						valid_for_personal_unions_trigger = yes
 						NOT = { religion = ROOT }
-						government = monarchy
 					}
 				}
 				add_casus_belli = {
@@ -1567,13 +1783,10 @@ gc_spain_4_b = {
 			else_if = {
 				limit = {
 					exists = ENG
-					is_subject = no
-					government = monarchy
-					religion_group = christian
+					valid_for_personal_unions_trigger = yes
 					ENG = {
-						is_subject = no
+						valid_for_personal_unions_trigger = yes
 						NOT = { religion = ROOT }
-						government = monarchy
 					}
 				}
 				add_casus_belli = {
@@ -1583,7 +1796,48 @@ gc_spain_4_b = {
 				}
 			}
 			else = {
-				give_permaclaims_for_mission = { mission=gc_spa_invade_england }
+				wessex_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				home_counties_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				east_anglia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				east_midlands_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				west_midlands_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				yorkshire_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -1592,15 +1846,41 @@ gc_spain_4_b = {
 		required_missions = { gc_spa_spanish_armada }
 
 		provinces_to_highlight = {
-			gc_spa_invade_england_provinces = yes
+			OR = {
+				area = wessex_area
+				area = home_counties_area
+				area = east_anglia_area
+				area = east_midlands_area
+				area = west_midlands_area
+				area = yorkshire_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=gc_spa_invade_england_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			wessex_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			home_counties_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_anglia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_midlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_midlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			yorkshire_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1676,13 +1956,10 @@ gc_spain_4_c = {
 		}
 
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = spa_rb_la_plata.tooltip
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 5
-					colonial_region = colonial_la_plata
-					is_city = yes
-				}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_la_plata
+				is_city = yes
 			}
 		}
 
@@ -1758,7 +2035,48 @@ gc_spain_4_d = {
 			}
 		}
 		effect = {
-			give_permaclaims_for_mission = { mission=gc_cas_spa_conquer_philippines }
+			mindanao_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_mindanao_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			visayas_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			palawan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			luzon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			southern_luzon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	gc_cas_spa_conquer_philippines = {
@@ -1766,21 +2084,42 @@ gc_spain_4_d = {
 		required_missions = { gc_cas_spa_discover_spice_islands }
 
 		provinces_to_highlight = {
-			gc_cas_spa_conquer_philippines_provinces = yes
+			OR = {
+				area = mindanao_area
+				area = west_mindanao_area
+				area = visayas_area
+				area = palawan_area
+				area = luzon_area
+				area = southern_luzon_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 
 		trigger = {
-			# southern_luzon_area = {
-				# type = all
-				# owned_by = ROOT
-			# }
-			#^This particular area was required to be owned directly by Spain. Not sure why, but I'll leave it in in case it isn't just a vanilla bug (This file has quite a few). The highlighting doesn't regard this anyway.
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=gc_spa_invade_england_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			southern_luzon_area = {
+				type = all
+				owned_by = ROOT
+			}
+			luzon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mindanao_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_mindanao_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			visayas_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			palawan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1836,35 +2175,38 @@ gc_spain_5_a = {
 		position = 3
 
 		provinces_to_highlight = {
-			gc_spa_spanish_netherlands_provinces = yes
 			OR = {
-				NOT = { religion = ROOT }
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				area = flanders_area
+				area = wallonia_area
+				area = brabant_area
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=gc_spa_spanish_netherlands_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			flanders_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = ROOT
 			}
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=highlighted_provinces_converted_to_religion 
-				provinces=gc_spa_spanish_netherlands_provinces
-				owner_type=religion
+			wallonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = ROOT
+			}
+			brabant_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = ROOT
 			}
 		}
 		effect = {
 			if = {
 				limit = {
 					exists = HAB
-					is_subject = no
-					government = monarchy
-					religion_group = christian
+					valid_for_personal_unions_trigger = yes
 					HAB = {
-						is_subject = no
-						government = monarchy
+						valid_for_personal_unions_trigger = yes
 					}
 				}
 				add_casus_belli = {
@@ -1874,9 +2216,29 @@ gc_spain_5_a = {
 				}
 			}
 			else = {
-				give_permaclaims_for_mission = { mission=gc_spa_austrian_union }
+				tirol_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				austria_proper_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				inner_austria_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
-			netherlands_area = {
+			north_brabant_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1890,7 +2252,7 @@ gc_spain_5_a = {
 				}
 				add_claim = ROOT
 			}
-			north_brabant_area = {
+			holland_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1904,15 +2266,26 @@ gc_spain_5_a = {
 		required_missions = { gc_spa_spanish_netherlands }
 
 		provinces_to_highlight = {
-			gc_spa_austrian_union_provinces = yes
+			OR = {
+				area = inner_austria_area
+				area = austria_proper_area
+				area = tirol_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				tooltip=country_holds_or_non_sovereign_subject_holds_highlighted 
-				provinces=gc_spa_austrian_union_provinces
-				owner_type=country_or_non_sovereign_subject_holds
+			inner_austria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			austria_proper_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tirol_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1992,12 +2365,27 @@ gc_spain_5_c = {
 		}
 
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = colombia_holy_order_tooltip
-				num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
-					has_holy_order_trigger = yes
-					colonial_region = colonial_colombia
-					value = 5
+			if = {
+				limit = {
+					religion = catholic
+				}
+				custom_trigger_tooltip = {
+					tooltip = colombia_holy_order_tooltip
+					num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
+						has_holy_order_trigger = yes
+						colonial_region = colonial_colombia
+						value = 5
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = colombia_holy_order_alternative_tooltip
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						religion = ROOT
+						colonial_region = colonial_colombia
+						value = 25
+					}
 				}
 			}
 			colonial_colombia = {
@@ -2020,7 +2408,12 @@ gc_spain_5_c = {
 			if = {
 				limit = {
 					any_subject_country = {
-						is_subject_of_type = colony
+						OR = {
+							is_subject_of_type = colony
+							is_subject_of_type = crown_colony
+							is_subject_of_type = private_enterprise
+							is_subject_of_type = self_governing_colony
+						}
 						owns = 825
 					}
 					825 = { is_capital = no }

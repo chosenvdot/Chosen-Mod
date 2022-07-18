@@ -1,9 +1,9 @@
  
 #BT Italy reoverhaul
 
-owner = FNZ
-controller = FNZ
-add_core = FNZ
+owner = PAP
+controller = PAP
+add_core = PAP
 culture = romagnan
 religion = catholic
 capital = "Faenza"	#and Imola
