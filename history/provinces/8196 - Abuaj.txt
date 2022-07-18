@@ -17,7 +17,7 @@ religion = catholic
 base_tax = 5
 base_production = 5
 base_manpower = 4
-trade_goods = gold
+trade_goods = livestock
 
 #Cores and Occupation (Alphabetical after current)
 add_core = HUN
