@@ -5,8 +5,8 @@
 #Core Details
 capital = "Mühlhausen"
 is_city = yes
-owner = MHN
-controller = MHN
+owner = HES
+controller = HES
 
 #Demographics
 culture = saxon
@@ -19,7 +19,7 @@ base_manpower = 4
 trade_goods = iron
 
 #Cores and Occupation (Alphabetical after current)
-add_core = MHN
+add_core = HES
 
 #Other Political
 hre = yes

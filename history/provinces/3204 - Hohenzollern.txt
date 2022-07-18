@@ -4,9 +4,9 @@
 #Area - Lower Swabia
 
 culture = swabian
-owner = HOH
-controller = HOH
-add_core = HOH
+owner = RTW
+controller = RTW
+add_core = RTW
 capital = "Hechingen"
 religion = catholic
 trade_goods = wool

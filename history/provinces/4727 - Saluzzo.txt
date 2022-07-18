@@ -3,8 +3,8 @@
 #Region - Italy
 #Area - Piedmont
 
-owner = SZO
-controller = SZO
+owner = SAV
+controller = SAV
 culture = piedmontese
 religion = catholic
 hre = yes
@@ -14,7 +14,7 @@ trade_goods = wine
 base_manpower = 4
 capital = "Saluzzo"
 is_city = yes	# Estimated
-add_core = SZO
+add_core = SAV
 
 discovered_by = western
 discovered_by = muslim
