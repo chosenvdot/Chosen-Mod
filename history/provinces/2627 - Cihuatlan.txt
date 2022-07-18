@@ -2,8 +2,8 @@
 # 2627 - Cihuatlan
 
 culture = tlapanec
-owner = TLA
-controller = TLA
+owner = AZT
+controller = AZT
 add_core = TLA
 is_city = yes
 religion = nahuatl
