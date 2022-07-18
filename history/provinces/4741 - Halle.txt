@@ -1,9 +1,9 @@
  
 # 4741 - Halle
 
-owner = MAG
-controller = MAG
-add_core = MAG
+owner = MEI
+controller = MEI
+add_core = MEI
 culture = saxon
 religion = catholic
 hre = yes
