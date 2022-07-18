@@ -1,8 +1,8 @@
  
 #641 - Makassar
 
-owner = MKS
-controller = MKS
+owner = LUW
+controller = LUW
 culture = sulawesi
 religion = animism
 capital = "Makassar"
@@ -12,7 +12,7 @@ base_tax = 8
 base_production = 8
 base_manpower = 5
 is_city = yes
-add_core = MKS
+add_core = LUW
 
 discovered_by = chinese
 discovered_by = indian

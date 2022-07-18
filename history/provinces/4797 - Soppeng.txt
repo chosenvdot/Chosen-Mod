@@ -1,9 +1,9 @@
  
 # ex 8613
 
-owner = SPP # BT; MKS
-controller = SPP # BT; MKS
-add_core = SPP # BT; MKS
+owner = LUW # BT; MKS
+controller = LUW # BT; MKS
+add_core = LUW # BT; MKS
 culture = sulawesi
 religion = animism
 capital = "Soppeng"

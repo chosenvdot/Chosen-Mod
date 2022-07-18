@@ -1,9 +1,9 @@
  
 # ex BT 2375
 
-owner = JAR
-controller = JAR
-add_core = JAR
+owner = CHA
+controller = CHA
+add_core = CHA
 culture = degar # BT; cham
 religion = animism
 capital = "Jarai"

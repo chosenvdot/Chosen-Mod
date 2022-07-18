@@ -5,8 +5,8 @@ latent_trade_goods = {
 	coal
 }
 
-owner = KRY
-controller = KRY
+owner = TAB
+controller = TAB
 culture = mazandarani
 religion = shiite
 capital = "Lahijan"
@@ -16,7 +16,7 @@ base_tax = 10
 base_production = 10
 base_manpower = 4
 is_city = yes
-add_core = KRY
+add_core = TAB
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern

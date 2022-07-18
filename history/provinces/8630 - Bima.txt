@@ -1,9 +1,9 @@
 
 #4625 - Bima
 
-owner = BMA
-controller = BMA
-add_core = BMA
+owner = MTR
+controller = MTR
+add_core = MTR
 culture = bimanese
 religion = animism
 capital = "Bima"

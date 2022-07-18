@@ -1,8 +1,8 @@
  
 #559 - Mahoba
 
-owner = BND
-controller = BND
+owner = KLP
+controller = KLP
 culture = vindhyan
 religion = hinduism
 capital = "Mahoba"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 2 
 is_city = yes
-add_core = BND
+add_core = KLP
 add_core = PAN
 discovered_by = indian
 discovered_by = muslim 

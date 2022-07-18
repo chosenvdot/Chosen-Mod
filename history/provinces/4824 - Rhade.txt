@@ -1,9 +1,9 @@
  
 # ex 8596
 
-owner = RHD # BT; RHA
-controller = RHD # BT; RHA
-add_core = RHD # BT; RHA
+owner = CHA # BT; RHA
+controller = CHA # BT; RHA
+add_core = CHA # BT; RHA
 culture = degar # BT; cham
 religion = animism
 capital = "Rhade"

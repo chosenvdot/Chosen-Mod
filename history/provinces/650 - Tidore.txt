@@ -1,8 +1,8 @@
  
 #650 - Tidore
 
-owner = TID
-controller = TID
+owner = TER
+controller = TER
 culture = moluccan
 religion = animism
 capital = "Tidore"
@@ -12,7 +12,7 @@ base_tax = 6
 base_production = 6
 base_manpower = 4
 is_city = yes
-add_core = TID
+add_core = TER
 
 discovered_by = chinese
 
