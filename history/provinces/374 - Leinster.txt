@@ -1,8 +1,8 @@
  
 
-owner = LGN # changed from LAI
-controller = LGN # changed from LAI
-add_core = LGN # changed from LAI
+owner = ORD # changed from LAI
+controller = ORD # changed from LAI
+add_core = ORD # changed from LAI
 culture = irish
 religion = catholic
 capital = "Fearna Mór Maedhóg" # "Cill Mhantáin"

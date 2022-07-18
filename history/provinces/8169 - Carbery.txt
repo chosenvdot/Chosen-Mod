@@ -7,8 +7,8 @@
 #Core Details
 capital = "Kilbrittain"
 is_city = yes
-owner = MCM
-controller = MCM
+owner = DMS
+controller = DMS
 
 #Demographics
 culture = irish
@@ -21,7 +21,7 @@ base_manpower = 1
 trade_goods = fish
 
 #Cores and Occupation (Alphabetical after current)
-add_core = MCM
+add_core = DMS
 
 #Other Political
 hre = no

@@ -6,8 +6,8 @@
 #Core Details
 capital = "Rathfriland"
 is_city = yes
-owner = IVE
-controller = IVE
+owner = TYR
+controller = TYR
 
 #Demographics
 culture = irish
@@ -20,7 +20,7 @@ base_manpower = 2
 trade_goods = grain
 
 #Cores and Occupation (Alphabetical after current)
-add_core = IVE
+add_core = TYR
 
 #Other Political
 hre = no

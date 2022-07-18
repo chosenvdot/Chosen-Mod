@@ -3,8 +3,8 @@
 #Region - Britain
 #Area - Gwynedd
 
-owner = WLS
-controller = WLS
+owner = ENG
+controller = ENG
 culture = welsh
 religion = catholic
 hre = no
@@ -15,7 +15,7 @@ trade_goods = livestock
 capital = "Caernarfon"
 is_city = yes
 add_core = WLS 
-
+add_core = ENG 
 fort_15th = yes
 discovered_by = western
 discovered_by = muslim

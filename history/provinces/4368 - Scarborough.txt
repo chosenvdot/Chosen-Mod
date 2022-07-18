@@ -8,8 +8,8 @@ latent_trade_goods = {
 }
 
 
-owner = DUR
-controller = DUR
+owner = ENG
+controller = ENG
 culture = northumbrian
 religion = catholic
 hre = no
@@ -21,6 +21,7 @@ capital = "Durham"
 fort_15th = yes #Durham Castle
 is_city = yes
 add_core = DUR
+add_core = ENG
 add_core = NOL
 
 discovered_by = western

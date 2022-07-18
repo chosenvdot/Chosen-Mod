@@ -6,8 +6,8 @@
 #Core Details
 capital = "Trim"
 is_city = yes
-owner = WMC
-controller = WMC
+owner = ORD
+controller = ORD
 
 #Demographics
 culture = irish
@@ -21,6 +21,7 @@ trade_goods = livestock
 
 #Cores and Occupation (Alphabetical after current)
 add_core = WMC
+add_core = ORD
 add_core = MTH
 
 #Other Political

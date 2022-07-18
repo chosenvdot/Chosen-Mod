@@ -3,8 +3,8 @@
 #Region - Britain
 #Area - Deheubarth
 
-owner = WLS
-controller = WLS
+owner = ENG
+controller = ENG
 culture = welsh
 religion = catholic
 hre = no
@@ -15,6 +15,7 @@ base_manpower = 1
 capital = "Aberteifi" #"Aberystwyth"
 is_city = yes
 add_core = WLS 
+add_core = ENG
 
 discovered_by = western
 discovered_by = muslim

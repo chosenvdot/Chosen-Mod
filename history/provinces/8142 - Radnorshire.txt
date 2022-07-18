@@ -6,8 +6,8 @@
 #Core Details
 capital = "Radnor"
 is_city = yes
-owner = WMC
-controller = WMC
+owner = ENG
+controller = ENG
 
 #Demographics
 culture = welsh
@@ -22,6 +22,7 @@ trade_goods = livestock #lots of quarries as well so that could work
 #Cores and Occupation (Alphabetical after current)
 add_core = WMC
 add_core = WLS
+add_core = ENG
 
 #Other Political
 hre = no

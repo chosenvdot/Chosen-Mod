@@ -3,9 +3,9 @@
 #Region - Ireland
 #Area - Leinster
 
-owner = KID
-controller = KID
-add_core = KID
+owner = ORD
+controller = ORD
+add_core = ORD
 culture = irish
 religion = catholic
 hre = no

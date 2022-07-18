@@ -6,8 +6,8 @@
 #Core Details
 capital = "Dromahair"
 is_city = yes
-owner = BIF
-controller = BIF
+owner = MYO
+controller = MYO
 
 #Demographics
 culture = irish
@@ -21,7 +21,7 @@ trade_goods = livestock
 latent_trade_goods = { coal }
 
 #Cores and Occupation (Alphabetical after current)
-add_core = BIF
+add_core = MYO
 
 #Other Political
 hre = no

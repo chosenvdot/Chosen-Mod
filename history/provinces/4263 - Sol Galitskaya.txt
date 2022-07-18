@@ -1,8 +1,8 @@
  
 #4263 - Sol Galitskaya
 
-owner = MOS
-controller = MOS
+owner = GLC
+controller = GLC
 culture = russian 
 religion = orthodox
 hre = no
@@ -12,7 +12,7 @@ trade_goods = naval_supplies
 base_manpower = 2 
 capital = "Manturovo"
 is_city = yes
-add_core = MOS
+add_core = GLC
 
 discovered_by = eastern
 discovered_by = western
