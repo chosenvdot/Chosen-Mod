@@ -4,9 +4,9 @@
 #Area - Upper Swabia
 
 culture = swabian
-owner = KNZ
-controller = KNZ
-add_core = KNZ
+owner = VOR
+controller = VOR
+add_core = VOR
 capital = "Konstanz"
 religion = catholic
 trade_goods = fish

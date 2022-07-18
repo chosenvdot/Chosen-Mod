@@ -3,9 +3,9 @@
 #Region - Germany
 #Area - North Rhine
 
-owner = DRT
-controller = DRT
-add_core = DRT
+owner = TCK
+controller = TCK
+add_core = TCK
 culture = lower_saxon
 religion = catholic
 trade_goods = cloth

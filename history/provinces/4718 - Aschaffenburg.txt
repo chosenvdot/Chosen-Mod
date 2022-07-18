@@ -7,13 +7,13 @@ capital = "Aschaffenburg"
 culture = hessian
 religion = catholic
 trade_goods = naval_supplies
-owner = MAI
+owner = WBG
 base_tax = 2
 base_production = 2 
 base_manpower = 2 
 is_city = yes
-add_core = MAI
-controller = MAI
+add_core = WBG
+controller = WBG
 hre = yes
 
 discovered_by = western

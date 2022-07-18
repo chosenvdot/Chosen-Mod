@@ -3,8 +3,8 @@
 #Region - France
 #Area - Seine
 
-owner = RHM
-controller = RHM
+owner = NEV
+controller = NEV
 capital = "Reims"
 is_city = yes
 culture = cosmopolitan_french
@@ -15,7 +15,7 @@ base_production = 7
 trade_goods = wine
 base_manpower = 4
 add_core = CHP
-add_core = RHM
+add_core = NEV
 
 
 discovered_by = western

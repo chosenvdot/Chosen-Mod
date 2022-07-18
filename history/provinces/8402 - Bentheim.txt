@@ -5,8 +5,8 @@
 #Core Details
 capital = "Bentheim"
 is_city = yes
-owner = BTH
-controller = BTH
+owner = TCK
+controller = TCK
 
 #Demographics
 culture = lower_saxon
@@ -19,7 +19,7 @@ base_manpower = 2
 trade_goods = cloth
 
 #Cores and Occupation (Alphabetical after current)
-add_core = BTH
+add_core = TCK
 
 #Other Political
 hre = yes

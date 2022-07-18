@@ -4,9 +4,9 @@
 #Area - Lower Swabia
 
 culture = franconian
-owner = HEL
-controller = HEL
-add_core = HEL
+owner = ROT
+controller = ROT
+add_core = ROT
 capital = "Heilbronn"
 religion = catholic
 trade_goods = bt_trade_good_beer

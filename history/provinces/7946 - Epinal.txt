@@ -1,9 +1,9 @@
  
 #BT's Western Europe Overhaul in 12.0
 
-owner = FRA
-controller = FRA
-add_core = FRA
+owner = BUR
+controller = BUR
+add_core = BUR
 add_core = LOR
 culture = lorraine_culture
 religion = catholic
