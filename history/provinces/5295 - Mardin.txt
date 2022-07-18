@@ -1,7 +1,7 @@
 #New Province
 
-owner = BHT
-controller = BHT
+owner = QAR
+controller = QAR
 culture = assyrian_culture
 religion = nestorian
 capital = "Cizir"			#Kurdish version
@@ -11,7 +11,7 @@ base_tax = 5
 base_production = 4
 base_manpower = 3
 is_city = yes
-add_core = BHT
+add_core = QAR
 center_of_trade = 1
 fort_15th = yes
 

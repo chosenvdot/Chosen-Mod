@@ -1,8 +1,8 @@
 #4395 - Hisn Kayfa
 
-owner = ZIR
-controller = ZIR
-add_core = ZIR
+owner = AKK
+controller = AKK
+add_core = AKK
 capital = "Silvan"	
 culture = kurdish
 religion = sunni

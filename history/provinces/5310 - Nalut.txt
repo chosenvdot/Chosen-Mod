@@ -1,9 +1,9 @@
  
 #New Beyond Typus Province
 
-owner = GDM
-controller = GDM
-add_core = GDM
+owner = FZA
+controller = FZA
+add_core = FZA
 culture = libyan_berber_culture
 religion = ibadi
 capital = "Nalut"

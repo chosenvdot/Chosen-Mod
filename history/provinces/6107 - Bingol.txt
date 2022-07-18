@@ -5,8 +5,8 @@
 #Core Details
 capital = "Bingöl"
 is_city = yes
-owner = BIN
-controller = BIN
+owner = AKK
+controller = AKK
 
 #Demographics
 culture = armenian
@@ -20,7 +20,7 @@ trade_goods = livestock
 
 #Cores and Occupation (Alphabetical after current)
 add_core = BIN
-add_core = ARM
+add_core = AKK
 
 #Other Political
 hre = no

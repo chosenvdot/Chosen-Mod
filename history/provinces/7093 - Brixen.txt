@@ -1,9 +1,9 @@
  
 #BT Italy reoverhaul
 
-owner = BRX
-controller = BRX
-add_core = BRX
+owner = HAB
+controller = HAB
+add_core = HAB
 culture = bavarian
 religion = catholic
 capital = "Brixen"

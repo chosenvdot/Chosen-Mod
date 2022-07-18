@@ -1,9 +1,9 @@
  
 #BT Scandinavia and Baltics reoverhaul
 
-owner = PMS
-controller = PMS
-add_core = PMS
+owner = TEU
+controller = TEU
+add_core = TEU
 culture = prussian
 religion = catholic
 capital = "Marienwerder"

@@ -1,8 +1,8 @@
  
 
-owner = SMA # changed from SMB
-controller = SMA # changed from SMB
-add_core = SMA # changed from SMB
+owner = TEU # changed from SMB
+controller = TEU # changed from SMB
+add_core = TEU # changed from SMB
 culture = latvian # Curonians. Could do a new one province culture... but really, why bother?
 religion = catholic
 capital = "Fischhausen"

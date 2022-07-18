@@ -5,8 +5,8 @@
 #Core Details
 capital = "Sankt Pölten"
 is_city = yes
-owner = PSS
-controller = PSS
+owner = HAB
+controller = HAB
 
 #Demographics
 culture = austrian
@@ -19,7 +19,7 @@ base_manpower = 2
 trade_goods = paper
 
 #Cores and Occupation (Alphabetical after current)
-add_core = PSS
+add_core = HAB
 
 #Other Political
 hre = yes

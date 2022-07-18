@@ -1,8 +1,8 @@
  
 #350 - Laghwat
 
-owner = LGH
-controller = LGH 
+owner = ZAB
+controller = ZAB 
 culture = berber
 religion = ibadi
 capital = "Laghwat"
@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 1 
 base_manpower = 1 
 is_city = yes
-add_core = LGH
+add_core = ZAB
 
 discovered_by = western
 discovered_by = eastern

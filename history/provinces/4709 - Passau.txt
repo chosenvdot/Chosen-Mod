@@ -1,6 +1,6 @@
  
-owner = PSS
-controller = PSS
+owner = HAB
+controller = HAB
 capital = "Passau"
 is_city = yes
 culture = bavarian
@@ -10,7 +10,7 @@ base_tax = 5
 base_production = 4
 base_manpower = 4
 trade_goods = salt
-add_core = PSS
+add_core = HAB
 
 discovered_by = eastern
 discovered_by = western

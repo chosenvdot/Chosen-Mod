@@ -5,8 +5,8 @@
 #Core Details
 capital = "Landeck"
 is_city = yes
-owner = TIR
-controller = TIR
+owner = HAB
+controller = HAB
 
 #Demographics
 culture = bavarian
@@ -19,7 +19,7 @@ base_manpower = 3
 trade_goods = livestock
 
 #Cores and Occupation (Alphabetical after current)
-add_core = TIR
+add_core = HAB
 
 #Other Political
 hre = yes

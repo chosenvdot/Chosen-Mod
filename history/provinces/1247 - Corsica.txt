@@ -3,8 +3,8 @@
 #Region - Italy
 #Area - Corsica and Sardinia
 
-owner = COR			#Cinarca, but calling it Corsica for now.
-controller = COR
+owner = GEN	#Cinarca, but calling it Corsica for now.
+controller = GEN
 culture = corsican_culture
 religion = catholic
 capital = "Ajaccio"

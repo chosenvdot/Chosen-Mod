@@ -1,8 +1,8 @@
  
 
-owner = TFL
-controller = TFL
-add_core = TFL
+owner = MOR
+controller = MOR
+add_core = MOR
 culture = shilha
 religion = sunni
 capital = "Talsint"

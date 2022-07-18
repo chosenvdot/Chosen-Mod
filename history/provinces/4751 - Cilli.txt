@@ -1,9 +1,9 @@
  
 #BT Balkans reoverhaul
 
-owner = CLI
-controller = CLI
-add_core = CLI
+owner = HAB
+controller = HAB
+add_core = HAB
 culture = slovene
 religion = catholic
 capital = "Celje"
