@@ -6,8 +6,8 @@
 #Core Details
 capital = "Krosno"
 is_city = yes
-owner = GLG
-controller = GLG
+owner = ASC
+controller = ASC
 
 #Demographics
 culture = silesian_german
@@ -20,7 +20,7 @@ base_manpower = 1
 trade_goods = naval_supplies
 
 #Cores and Occupation (Alphabetical after current)
-add_core = GLG
+add_core = ASC
 add_core = KRO
 
 #Other Political

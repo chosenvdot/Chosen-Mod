@@ -6,8 +6,8 @@
 #Core Details
 capital = "Nysa"
 is_city = yes
-owner = NIE
-controller = NIE
+owner = ASC
+controller = ASC
 
 #Demographics
 culture = silesian_german
@@ -20,7 +20,7 @@ base_manpower = 1
 trade_goods = cloth
 
 #Cores and Occupation (Alphabetical after current)
-add_core = NIE
+add_core = ASC
 
 #Other Political
 hre = yes
