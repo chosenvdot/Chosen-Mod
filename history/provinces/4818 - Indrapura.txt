@@ -1,9 +1,9 @@
  
 # ex 8690
 
-owner = IDP # BT; IND
-controller = IDP # BT; IND
-add_core = IDP # BT; IND
+owner = PGR # BT; IND
+controller = PGR # BT; IND
+add_core = PGR # BT; IND
 culture = sumatran
 religion = mahayana # BT; hinduism
 capital = "Inderapura" # BT; "Indrapura"

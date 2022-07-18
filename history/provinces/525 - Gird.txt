@@ -1,8 +1,8 @@
  
 #525 - Gird
 
-owner = GWA
-controller = GWA
+owner = KLP
+controller = KLP
 culture = vindhyan
 religion = hinduism
 capital = "Gwalior"
@@ -12,7 +12,7 @@ base_tax = 6
 base_production = 6
 base_manpower = 4
 is_city = yes
-add_core = GWA
+add_core = KLP
 fort_15th = yes #"Gibraltar of India"
 discovered_by = indian
 discovered_by = muslim

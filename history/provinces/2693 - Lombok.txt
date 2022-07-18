@@ -1,9 +1,9 @@
  
 #2693 - Lombok
 
-owner = SPR
-controller = SPR
-add_core = SPR
+owner = MTR
+controller = MTR
+add_core = MTR
 culture = nusa_tenggara
 religion = animism
 capital = "Sasak"

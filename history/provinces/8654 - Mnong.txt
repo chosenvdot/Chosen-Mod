@@ -1,8 +1,8 @@
 
 #Mnong
 
-owner = MNN
-controller = MNN
+owner = CHA
+controller = CHA
 culture = degar
 religion = animism
 capital = "Mnong"
@@ -12,7 +12,7 @@ base_tax = 2
 base_production = 2
 base_manpower = 1
 is_city = yes
-add_core = MNN
+add_core = CHA
 
 
 

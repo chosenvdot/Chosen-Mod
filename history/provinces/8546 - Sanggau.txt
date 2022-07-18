@@ -1,8 +1,8 @@
 
 
-owner = SGG
-controller = SGG
-add_core = SGG
+owner = BEI
+controller = BEI
+add_core = BEI
 culture = bornean
 religion = hinduism
 capital = "Sanggau"

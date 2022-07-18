@@ -1,8 +1,8 @@
  
 #580 - Kale
 
-owner = KAL
-controller = KAL
+owner = AVA
+controller = AVA
 culture = chin
 religion = buddhism
 capital = "Kale"
@@ -12,7 +12,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 1
 is_city = yes
-add_core = KAL
+add_core = AVA
 
 
 

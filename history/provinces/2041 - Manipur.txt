@@ -1,8 +1,8 @@
  
 #2041 - Manipur
 
-owner = MLB
-controller = MLB
+owner = BNG
+controller = BNG
 culture = chin
 religion = animism
 capital = "Imphal"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 2 
 is_city = yes
-add_core = MLB
+add_core = BNG
 
 
 

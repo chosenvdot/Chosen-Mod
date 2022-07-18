@@ -1,8 +1,8 @@
  
 #4467 - Kalinjar
 
-owner = PAN
-controller = PAN
+owner = KLP
+controller = KLP
 culture = vindhyan
 religion = hinduism
 capital = "Kalinjar"
@@ -13,7 +13,7 @@ base_production = 4
 base_manpower = 2 
 is_city = yes
 fort_15th = yes
-add_core = PAN
+add_core = KLP
 discovered_by = indian
 discovered_by = muslim 
 discovered_by = ottoman

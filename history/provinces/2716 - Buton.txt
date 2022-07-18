@@ -1,8 +1,8 @@
  
 #2716 - Buton
 
-owner = BTN
-controller = BTN
+owner = LUW
+controller = LUW
 culture = butonese
 religion = animism
 capital = "Buton"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 2
 is_city = yes
-add_core = BTN
+add_core = LUW
 
 discovered_by = chinese
 discovered_by = indian

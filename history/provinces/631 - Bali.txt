@@ -1,9 +1,9 @@
  
 #631 - Bali
 
-owner = BLI
-controller = BLI
-add_core = BLI
+owner = MTR
+controller = MTR
+add_core = MTR
 culture = nusa_tenggara
 religion = hinduism
 capital = "Gianyar"

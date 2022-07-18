@@ -1,8 +1,8 @@
  
 #424 - Ardabil
 
-owner = ARL #Changing to vanilla's interpretation. This was a particularly notable holy order, and given that all these bishoprics have gone independent/start as vassals as of late, it only makes sense.
-controller = ARL
+owner = TAB #Changing to vanilla's interpretation. This was a particularly notable holy order, and given that all these bishoprics have gone independent/start as vassals as of late, it only makes sense.
+controller = TAB
 culture = azerbaijani
 religion = shiite
 capital = "Ardabil"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4 
 base_manpower = 4 
 is_city = yes
-add_core = ARL
+add_core = TAB
 #add_core = QAR
 #add_core = PER
 

@@ -2,9 +2,9 @@
 # ex 8705
 # vanilla uncolonised
 
-owner = BTN
-controller = BTN
-add_core = BTN
+owner = LUW
+controller = LUW
+add_core = LUW
 culture = butonese # BT; sulawesi
 religion = animism
 capital = "Poleang" # BT; "Kendari"

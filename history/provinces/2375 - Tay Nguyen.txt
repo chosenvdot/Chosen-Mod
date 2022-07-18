@@ -1,9 +1,9 @@
  
 # ex 8629
 
-owner = KOH
-controller = KOH
-add_core = KOH
+owner = CHA
+controller = CHA
+add_core = CHA
 culture = degar # BT; cham
 religion = animism
 capital = "Da Lach" # BT; "Tay Nguyen"

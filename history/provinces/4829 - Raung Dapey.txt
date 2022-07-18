@@ -1,9 +1,9 @@
  
 # ex 8655
 
-owner = DMA # BT; KHM
-controller = DMA # BT; KHM
-add_core = DMA # BT; KHM
+owner = CHA # BT; KHM
+controller = CHA # BT; KHM
+add_core = CHA # BT; KHM
 culture = degar # BT; khmer
 religion = buddhism # BT; hinduism
 capital = "Ma" # BT; "Raung Dapey"

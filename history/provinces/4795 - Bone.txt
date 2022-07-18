@@ -1,9 +1,9 @@
  
 # ex 8611
 
-owner = BNE
-controller = BNE
-add_core = BNE
+owner = LUW
+controller = LUW
+add_core = LUW
 culture = sulawesi
 religion = animism
 capital = "Bone"
