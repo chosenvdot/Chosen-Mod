@@ -1,9 +1,5 @@
 # 2265 - Liptako
 
-owner = YAT
-controller = YAT
-add_core = YAT
-add_core = ZND
 is_city = yes
 culture = mossi
 religion = shamanism #Fetishism

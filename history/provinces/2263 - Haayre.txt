@@ -1,8 +1,5 @@
 # No previous file for Haayre
 
-owner = YAT
-controller = YAT
-add_core = YAT
 is_city = yes
 culture = bozo 
 religion = shamanism #Fetishism

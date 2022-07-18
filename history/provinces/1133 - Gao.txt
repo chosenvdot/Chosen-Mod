@@ -1,8 +1,6 @@
  
 #1133 - Gao
 
-owner = SON
-controller = SON
 culture = songhai
 is_city = yes
 base_manpower = 4
@@ -10,9 +8,8 @@ religion = sunni
 capital = "Gao"
 trade_goods = cloth
 hre = no
-base_tax = 12
-base_production = 12
-add_core = SON
+base_tax = 1
+base_production = 1
 discovered_by = sub_saharan
 fort_15th = yes
 extra_cost = 8

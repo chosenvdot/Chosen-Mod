@@ -1,9 +1,6 @@
  
 # 2271 - Azawagh
 
-owner = SON
-controller = SON
-add_core = SON
 is_city = yes
 culture = tuareg 
 religion = sunni

@@ -1,9 +1,6 @@
  
 # No previous file for Muniyo
 
-owner = KBO
-controller = KBO
-add_core = KBO
 is_city = yes
 culture = kanuri 
 religion = sunni

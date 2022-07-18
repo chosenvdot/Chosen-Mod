@@ -1,9 +1,6 @@
  
 #1146 - Ife
 
-owner = OYO
-controller = OYO
-add_core = OYO
 culture = yorumba
 religion = shamanism #Fetishism
 capital = "Ife Ile"
