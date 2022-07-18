@@ -5,8 +5,8 @@
 #Core Details
 capital = "Gruyères"
 is_city = yes
-owner = GRU
-controller = GRU
+owner = SWI
+controller = SWI
 
 #Demographics
 culture = arpitan
@@ -19,7 +19,7 @@ base_manpower = 3
 trade_goods = livestock
 
 #Cores and Occupation (Alphabetical after current)
-add_core = GRU
+add_core = SWI
 
 #Other Political
 hre = yes

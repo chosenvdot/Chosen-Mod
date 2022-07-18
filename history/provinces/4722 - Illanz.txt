@@ -1,6 +1,6 @@
  
-owner = GRB
-controller = GRB
+owner = SWI
+controller = SWI
 culture = romanch_culture
 religion = catholic
 capital = "Illanz"
@@ -10,7 +10,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = GRB
+add_core = SWI
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim

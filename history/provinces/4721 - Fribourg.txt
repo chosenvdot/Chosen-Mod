@@ -1,6 +1,6 @@
  
-owner = VOR
-controller = VOR
+owner = SWI
+controller = SWI
 culture = arpitan
 religion = catholic
 capital = "Fribourg"
@@ -10,8 +10,7 @@ base_tax = 5
 base_production = 4
 base_manpower = 3
 is_city = yes
-add_core = VOR
-add_core = SAV
+add_core = SWI
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim

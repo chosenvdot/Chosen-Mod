@@ -3,9 +3,9 @@
 #Region - Germany
 #Area - Switzerland
 
-owner = GHB
-controller = GHB
-add_core = GHB
+owner = SWI
+controller = SWI
+add_core = SWI
 culture = romanch_culture
 religion = catholic
 capital = "Chur"
