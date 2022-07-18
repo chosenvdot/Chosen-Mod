@@ -3,9 +3,9 @@
 #Region - Germany
 #Area - Franconia
 
-owner = NUM
-controller = NUM
-add_core = NUM
+owner = BAM
+controller = BAM
+add_core = BAM
 culture = franconian
 religion = catholic
 base_tax = 13

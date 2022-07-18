@@ -3,11 +3,11 @@
 #Region - Germany
 #Area - Carniola
 
-owner = GRZ
-controller = GRZ
+owner = VEN
+controller = VEN
 add_core = GRZ
 add_core = AQU
-add_core = CNL
+add_core = VEN
 culture = friulian_culture
 religion = catholic
 base_tax = 5

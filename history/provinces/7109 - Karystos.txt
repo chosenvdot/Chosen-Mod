@@ -1,9 +1,9 @@
  
 #BT Balkans reoverhaul
 
-owner = NEG
-controller = NEG
-add_core = NEG
+owner = NAX
+controller = NAX
+add_core = NAX
 culture = arvanite			#Exact timeline unclear, but this would become a centre of the Arvanites in later years
 religion = orthodox
 capital = "Karystos"

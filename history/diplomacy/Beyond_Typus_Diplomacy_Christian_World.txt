@@ -94,41 +94,6 @@ vassal = {
 }
 
 #Burgundian Unions
-union = {
-	first = BUR
-	second = LUX
-	start_date = 1444.1.1
-	end_date = 1477.1.5
-}
-
-union = {
-	first = BUR
-	second = HAI
-	start_date = 1444.1.1
-	end_date = 1477.1.5
-}
-
-union = {
-	first = BUR
-	second = PIC
-	start_date = 1444.1.1
-	end_date = 1477.1.5
-}
-
-union = {
-	first = BUR
-	second = ATS
-	start_date = 1444.1.1
-	end_date = 1477.1.5
-}
-
-vassal = {
-	first = BUR
-	second = BSA
-	start_date = 1444.1.1
-	end_date = 1477.1.5
-}
-
 vassal = {
 	first = BUR
 	second = LXL
@@ -139,27 +104,6 @@ vassal = {
 guarantee = {
 	first = BUR
 	second = CMB
-	start_date = 1444.1.1
-	end_date = 1477.1.5
-}
-
-guarantee = {
-	first = BUR
-	second = TOA
-	start_date = 1444.1.1
-	end_date = 1477.1.5
-}
-
-guarantee = {
-	first = BUR
-	second = TRN
-	start_date = 1444.1.1
-	end_date = 1477.1.5
-}
-
-guarantee = {
-	first = BUR
-	second = UTR
 	start_date = 1444.1.1
 	end_date = 1477.1.5
 }

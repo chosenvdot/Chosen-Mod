@@ -53,31 +53,3 @@ union = {
 	start_date = 1453.10.28
 	end_date = 1457.11.24
 }
-
-#Styria - Austria
-vassal = {
-	first = STY
-	second = HAB
-	start_date = 1440.2.22
-	end_date = 1456.2.22
-}
-vassal = {
-	first = STY
-	second = VOR
-	start_date = 1440.2.22
-	end_date = 1463.12.2
-}
-guarantee = {
-	first = STY
-	second = TIR
-	start_date = 1440.2.22
-	end_date = 1463.12.2
-}
-
-# Poland-Hungary
-union = {
-	first = POL
-	second = HUN
-	start_date = 1439.10.27
-	end_date = 1444.11.11
-}
