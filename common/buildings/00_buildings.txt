@@ -142,7 +142,7 @@ temple = {
 	time = 12
 	modifier = {
 		local_missionary_strength = 0.01			#BTAddOn new effect. Giving the temple the same bonus of this building's upgrade, simply weaker. Makes it more useful when it is too late in the game to make money back from building cost.
-		local_tax_modifier = 0.3
+		local_tax_modifier = 0.5
 		allowed_num_of_buildings = 1
 	}
 	on_built = {
@@ -793,7 +793,7 @@ cathedral = {
 	time = 24			#BTAddOn changed from 12. Doubling upgraded buildings' build time
 	modifier = {
 		local_missionary_strength = 0.02			#BTAddOn changed from 0.03, might slow conversion slightly, but avg dev is also lower, so that might be a good thing
-		local_tax_modifier = 0.6
+		local_tax_modifier = 1
 		allowed_num_of_buildings = 1
 	}
 	on_built = {
