@@ -56,10 +56,15 @@ hab_holy_roman_ambitions = {
 						government = monarchy
 					}
 				}
-				add_casus_belli = {
-					type = cb_restore_personal_union
-					months = 300
-					target = BOH
+				hidden_effect = {
+					every_province = {
+						limit = {
+							subjugate_bohemia_provinces = yes
+							NOT = { is_core = ROOT }
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
 				}
 			}
 			else = {
@@ -316,10 +321,15 @@ hab_protect_the_balkans = {
 						government = monarchy
 					}
 				}
-				add_casus_belli = {
-					type = cb_restore_personal_union
-					months = 300
-					target = HUN
+				hidden_effect = {
+					every_province = {
+						limit = {
+							austrian_hungary_provinces = yes
+							NOT = { is_core = ROOT }
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
 				}
 			}
 			else = {
