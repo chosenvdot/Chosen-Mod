@@ -3,9 +3,9 @@
 #Region - Ireland
 #Area - Ulster
 
-owner = ANR
-add_core = ANR
-controller = ANR
+owner = TYR
+add_core = TYR
+controller = TYR
 culture = irish
 religion = catholic
 hre = no

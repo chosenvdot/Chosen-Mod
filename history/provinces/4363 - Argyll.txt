@@ -3,8 +3,8 @@
 #Region - Britain
 #Area - Southern Isles
 
-owner = LOI
-controller = LOI
+owner = SCO
+controller = SCO
 culture = highland_scottish
 religion = catholic
 hre = no

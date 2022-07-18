@@ -3,8 +3,8 @@
 #Region - Britain
 #Area - Powys
 
-owner = WMC
-controller = WMC
+owner = ENG
+controller = ENG
 culture = welsh
 religion = catholic
 hre = no
@@ -16,6 +16,7 @@ capital = "Gwyddelwern"
 is_city = yes
 add_core = WMC
 add_core = WLS
+add_core = ENG
 
 discovered_by = western
 discovered_by = muslim

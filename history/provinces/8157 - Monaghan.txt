@@ -6,8 +6,8 @@
 #Core Details
 capital = "Monaghan"
 is_city = yes
-owner = MGH
-controller = MGH
+owner = TYR
+controller = TYR
 
 #Demographics
 culture = irish
@@ -20,7 +20,7 @@ base_manpower = 1
 trade_goods = grain
 
 #Cores and Occupation (Alphabetical after current)
-add_core = MGH
+add_core = TYR
 
 #Other Political
 hre = no

@@ -3,8 +3,8 @@
 #Region - Britain
 #Area - Southern Isles
 
-owner = KOI
-controller = KOI
+owner = ENG
+controller = ENG
 culture = gallgaidheil			#The distinction between Gallgael and Gael was minimal by the 15th century, if not much sooner, but Ive already recieved multiple requests for this subculture, so give the people that for which they clamour...
 religion = catholic
 hre = no
@@ -15,6 +15,7 @@ base_manpower = 1
 capital = "Baile a' Chaisteil"	#changed from Balley Chashtal.... I love the IoM, and Manxmen all seem quite pleasant, but Manx spelling is an huge eyesore, going with Scottish for now
 is_city = yes
 add_core = KOI
+add_core = ENG
 
 discovered_by = western
 discovered_by = muslim

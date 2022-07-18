@@ -6,8 +6,8 @@
 latent_trade_goods = { 
 	coal 
 }
-owner = WMC
-controller = WMC
+owner = ENG
+controller = ENG
 culture = english
 religion = catholic
 hre = no

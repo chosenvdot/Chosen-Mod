@@ -6,8 +6,8 @@
 #Core Details
 capital = "Inverlochy"
 is_city = yes
-owner = LOI
-controller = LOI
+owner = SCO
+controller = SCO
 
 #Demographics
 culture = highland_scottish

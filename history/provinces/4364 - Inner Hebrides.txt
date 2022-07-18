@@ -3,8 +3,8 @@
 #Region - Britain
 #Area - Southern Isles
 
-owner = LOI
-controller = LOI
+owner = SCO
+controller = SCO
 culture = gallgaidheil			#The distinction between Gallgael and Gael was minimal by the 15th century, if not much sooner, but Ive already recieved multiple requests for this subculture, so give the people that for which they clamour...
 religion = catholic
 hre = no
@@ -15,6 +15,7 @@ base_manpower = 3
 capital = "Sléibhte"
 is_city = yes
 add_core = LOI
+add_core = SCO
 
 fort_15th = yes
 discovered_by = western
