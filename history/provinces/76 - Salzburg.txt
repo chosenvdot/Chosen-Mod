@@ -3,8 +3,8 @@
 #Region - Germany
 #Area - Upper Bavaria
 
-owner = SLZ
-controller = SLZ 
+owner = HAB
+controller = HAB
 culture = bavarian #Bugfixes changed from Austrian. It was Bavarian in every possible sense in this time period. Though the difference between Austrian & Bavarian is literally the division of the Imperial Circles, it was even part of the Bavarian Imperial circle. Hence, it becomes Bavarian.
 religion = catholic
 capital = "Salzburg"
@@ -14,7 +14,7 @@ base_tax = 6
 base_production = 7
 base_manpower = 7
 is_city = yes
-add_core = SLZ
+add_core = HAB
 center_of_trade = 1
 
 

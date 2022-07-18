@@ -5,8 +5,8 @@
 #Core Details
 capital = "Eferding"
 is_city = yes
-owner = SHB
-controller = SHB
+owner = HAB
+controller = HAB
 
 #Demographics
 culture = austrian
@@ -19,7 +19,7 @@ base_manpower = 2
 trade_goods = grain
 
 #Cores and Occupation (Alphabetical after current)
-add_core = SHB
+add_core = HAB
 
 #Other Political
 hre = yes

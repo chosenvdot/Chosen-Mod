@@ -1,9 +1,9 @@
  
 #4759 - Oberkärnten
 
-owner = BAM
-controller = BAM
-add_core = BAM
+owner = HAB
+controller = HAB
+add_core = HAB
 add_core = CNT
 culture	= austrian
 religion = catholic

@@ -3,8 +3,8 @@
 #Region - Germany
 #Area - Carniola
 
-owner = RIJ
-controller = RIJ
+owner = HAB
+controller = HAB
 culture = croatian
 religion = catholic
 capital = "Rijeka"
@@ -14,7 +14,7 @@ base_tax = 7
 base_production = 7
 base_manpower = 4
 is_city = yes
-add_core = RIJ
+add_core = HAB
 add_core = CRO
 
 1444.1.1 = { discovered_by = KAZ }
