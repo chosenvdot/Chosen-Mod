@@ -1,6 +1,7 @@
 
 historical_friend = BRI			#Burgundy allied several times with Brittany, often secretly, to counter France. Will probably need to be removed due the 1291 start date.
 national_focus = DIP
+historical_rival = ENG
 
 
 

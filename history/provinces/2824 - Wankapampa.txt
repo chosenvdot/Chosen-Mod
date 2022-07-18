@@ -1,8 +1,8 @@
  
 # - Wankapampa
 
-owner = CJA
-controller = CJA
+owner = CSU
+controller = CSU
 culture = inca
 religion = inti
 capital = "Wankapampa"
@@ -12,7 +12,7 @@ base_tax = 6
 base_production = 6
 base_manpower = 4
 is_city = yes
-add_core = CJA
+add_core = CSU
 
 
 

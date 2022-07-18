@@ -2,7 +2,7 @@
 
 graphical_culture = africangfx
 
-color = { 56  120  191 }
+color = { 8  6  0 }
 
 revolutionary_colors = { 9  8  5 }
 

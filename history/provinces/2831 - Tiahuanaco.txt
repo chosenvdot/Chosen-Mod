@@ -1,9 +1,9 @@
  
 # - Tiahuanoco
 
-owner = PCJ
-controller = PCJ
-add_core = PCJ
+owner = CSU
+controller = CSU
+add_core = CSU
 culture = aimara
 religion = inti
 capital = "Tiahuanoco"

@@ -16,9 +16,9 @@ hre = no
 base_tax = 4 
 base_production = 4
 base_manpower = 2 
-owner = PCJ
-controller = PCJ
-add_core = PCJ
+owner = CSU
+controller = CSU
+add_core = CSU
 
 1476.1.1 = {
 	owner = INC

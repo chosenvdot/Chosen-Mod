@@ -1,9 +1,9 @@
  
 # - Charcas
 
-owner = CRA
-controller = CRA
-add_core = CRA
+owner = CSU
+controller = CSU
+add_core = CSU
 culture = aimara
 
 

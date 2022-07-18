@@ -3,9 +3,9 @@
 
 
 culture = wastek
-owner = HST
-controller = HST
-add_core = HST
+owner = AZT
+controller = AZT
+add_core = AZT
 is_city = yes
 religion = mesoamerican_religion
 capital = "Tamaulipas"
@@ -37,7 +37,7 @@ discovered_by = mesoamerican
 discovered_by = mesoamerican
 discovered_by = north_american
 
-1519.3.13 = { discovered_by = SPA } # Hernán Cortés
+1519.3.13 = { discovered_by = SPA } # Hernï¿½n Cortï¿½s
 
 1554.1.1 = {
 	owner = SPA
