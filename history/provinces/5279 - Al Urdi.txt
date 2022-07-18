@@ -1,7 +1,7 @@
  
 
-owner = ABB # al Kanz
-controller = ABB 
+owner = HWA # al Kanz
+controller = HWA 
 add_core = ABB
 add_core = MKR
 add_core = HWA # changed from HWA

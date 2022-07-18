@@ -1,7 +1,7 @@
  
-owner = BEJ
-controller = BEJ
-add_core = BEJ
+owner = HWA
+controller = HWA
+add_core = HWA
 capital = "Abrak"			#or Wadi Allaqi
 culture = beja
 religion = sunni

@@ -1,10 +1,9 @@
  
 
-owner = ABB # al Kanz
-controller = ABB 
-add_core = ABB
+owner = HWA # al Kanz
+controller = HWA 
+add_core = HWA
 add_core = MKR
-add_core = HWA # changed from HAW
 capital = "Karima" # on the site of old Napata
 is_city = yes
 culture = nubian
