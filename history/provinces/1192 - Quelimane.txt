@@ -1,9 +1,7 @@
  
 #1192 - Quelimane
 
-owner = ZAN
-controller = ZAN
-add_core = ZAN
+
 culture = nyasa
 religion = sunni
 capital = "Quelimane"

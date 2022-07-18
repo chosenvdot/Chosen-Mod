@@ -1,9 +1,6 @@
  
 #1145 - Nupe
 
-owner = NUP
-controller = NUP
-add_core = NUP
 is_city = yes
 culture = nupe  
 religion = shamanism #Fetishism

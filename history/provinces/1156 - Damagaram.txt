@@ -1,9 +1,6 @@
  
 #1156 - Damagaram
 
-owner = AIR
-controller = AIR
-add_core = AIR
 culture = tuareg
 religion = sunni
 capital = "Mashina"

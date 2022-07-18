@@ -1,18 +1,15 @@
  
 #1184 - Zimbabwe
 
-owner = ZIM
-controller = ZIM
-add_core = ZIM
 culture = shona
 religion = shamanism
 capital = "Zimbabwe"
 is_city = yes
-base_manpower = 4
+base_manpower = 1
 trade_goods = gold
 hre = no
-base_tax = 4  
-base_production = 4
+base_tax = 1
+base_production = 1
 discovered_by = east_african
 discovered_by = central_african
 extra_cost = 8

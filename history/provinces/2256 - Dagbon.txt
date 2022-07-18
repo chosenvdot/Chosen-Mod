@@ -1,9 +1,6 @@
  
 # No previous file for Dagbon
 
-owner = DGB
-controller = DGB
-add_core = DGB
 is_city = yes
 culture = dagomba
 religion = shamanism #Fetishism

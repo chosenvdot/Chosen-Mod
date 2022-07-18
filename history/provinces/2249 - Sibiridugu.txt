@@ -1,9 +1,6 @@
  
 # No previous file for Sibiridugu
 
-owner = MAL
-controller = MAL
-add_core = MAL
 is_city = yes
 culture = mali 
 religion = shamanism #Fetishism

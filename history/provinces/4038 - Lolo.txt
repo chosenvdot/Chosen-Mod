@@ -1,9 +1,6 @@
  
 #Lolo
 
-owner = MKU
-controller = MKU
-add_core = MKU
 culture = nyasa
 religion = shamanism #Fetishism
 capital = "Lolo"

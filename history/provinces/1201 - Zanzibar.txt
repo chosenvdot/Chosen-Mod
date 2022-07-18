@@ -1,9 +1,6 @@
  
 #1201 - Zanzibar
 
-owner = ZAN
-controller = ZAN
-add_core = ZAN
 culture = swahili
 religion = ibadi
 capital = "Zanzibar"

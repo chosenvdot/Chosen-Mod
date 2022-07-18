@@ -1,9 +1,6 @@
  
 #4049 - Ibo
 
-owner = ZAN
-controller = ZAN
-add_core = ZAN
 culture = swahili
 religion = sunni
 capital = "Ibo"

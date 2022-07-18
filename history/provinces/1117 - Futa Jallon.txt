@@ -1,19 +1,15 @@
  
 #1117 - Futa Jallon
 
-owner = MAL
-controller = MAL
 culture = fulani
 is_city = yes
-base_manpower = 6
+base_manpower = 2
 religion = shamanism #Fetishism
 capital = "Timbo"
 trade_goods = ivory
 hre = no
-base_tax = 6 
-base_production = 6
-add_core = MAL
-add_core = KBU #Subject province within the empire
+base_tax = 2
+base_production = 2
 
 
 

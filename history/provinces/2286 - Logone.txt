@@ -1,10 +1,6 @@
  
 # No previous file for Logone
 
-owner = YAO
-controller = YAO
-add_core = YAO
-add_core = KBO
 culture = kanuri 
 religion = shamanism #Fetishism
 capital = "Logone"

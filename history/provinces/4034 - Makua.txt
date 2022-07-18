@@ -1,9 +1,6 @@
  
 #Makua
 
-owner = MKU
-controller = MKU
-add_core = MKU
 culture = makua
 religion = shamanism #Fetishism
 capital = "Makua"

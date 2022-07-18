@@ -1,9 +1,6 @@
  
 #1197 - Mzizima
 
-owner = ZAN
-controller = ZAN
-add_core = ZAN
 culture = swahili
 religion = shamanism #Fetishism
 capital = "Mzizima"
