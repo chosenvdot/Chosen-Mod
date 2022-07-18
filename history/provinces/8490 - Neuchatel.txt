@@ -5,8 +5,8 @@
 #Core Details
 capital = "Neuchâtel"
 is_city = yes
-owner = NUC
-controller = NUC
+owner = SWI
+controller = SWI
 
 #Demographics
 culture = arpitan
@@ -19,7 +19,7 @@ base_manpower = 2
 trade_goods = iron
 
 #Cores and Occupation (Alphabetical after current)
-add_core = NUC
+add_core = SWI
 
 #Other Political
 hre = yes

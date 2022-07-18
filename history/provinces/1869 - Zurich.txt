@@ -3,8 +3,8 @@
 #Region - Germany
 #Area - Switzerland
 
-owner = ZUR
-controller = ZUR
+owner = SWI
+controller = SWI
 culture = swiss
 religion = catholic
 capital = "Zürich"
@@ -14,7 +14,6 @@ base_tax = 8
 base_production = 8
 base_manpower = 4 
 is_city = yes
-add_core = ZUR
 add_core = SWI
 
 
