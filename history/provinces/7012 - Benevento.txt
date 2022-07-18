@@ -1,9 +1,9 @@
  
 #BT Italy reoverhaul
 
-owner = PAP
-controller = PAP
-add_core = PAP
+owner = NAP
+controller = NAP
+add_core = NAP
 culture = neapolitan
 religion = catholic
 capital = "Benevento"

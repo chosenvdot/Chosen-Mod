@@ -4,3 +4,7 @@ mingsplosion = {
 	discipline = -0.1
 	land_forcelimit = -80
 }
+
+elwolf_spa_arty_1 = {
+	artillery_fire = 0.5
+}
