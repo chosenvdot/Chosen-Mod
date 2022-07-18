@@ -1,9 +1,9 @@
  
 #4282 - Sahda
 
-owner = AZD
-controller = AZD
-add_core = AZD
+owner = HED
+controller = HED
+add_core = HED
 capital = "Qal`at Bishah"
 culture = bedouin_arabic
 religion = sunni

@@ -1,7 +1,4 @@
  
-owner = KUB
-controller = KUB
-add_core = KUB
 culture = kuba
 religion = shamanism #Fetishism
 capital = "Mai Munene"

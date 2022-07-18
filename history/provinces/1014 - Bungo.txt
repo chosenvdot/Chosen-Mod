@@ -1,8 +1,8 @@
  
 #1014 - Bungo
 
-owner = OTM
-controller = OTM
+owner = ITO
+controller = ITO
 culture = kyushuan
 religion = shinto
 capital = "Funai"
@@ -12,7 +12,7 @@ base_tax = 8
 base_production = 4
 base_manpower = 6
 is_city = yes
-add_core = OTM
+add_core = ITO
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }

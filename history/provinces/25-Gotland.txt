@@ -3,9 +3,9 @@
 #Region - Scandinavia
 #Area - Gotaland
 
-owner = GOT 
-controller = GOT
-add_core = GOT
+owner = DAN 
+controller = DAN
+add_core = DAN
 culture = gotlander
 religion = catholic
 hre = no

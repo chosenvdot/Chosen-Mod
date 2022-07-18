@@ -1,9 +1,6 @@
  
 #4026 - Antemoro
 
-owner = ANT
-controller = ANT
-add_core = ANT
 culture = madagasque
 religion = sunni
 capital = "Vohipeno"

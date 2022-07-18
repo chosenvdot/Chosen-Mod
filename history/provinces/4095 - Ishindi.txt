@@ -1,7 +1,4 @@
  
-owner = CKW
-controller = CKW
-add_core = CKW
 culture = chokwe
 religion = shamanism #Fetishism
 capital = "Ishindi"

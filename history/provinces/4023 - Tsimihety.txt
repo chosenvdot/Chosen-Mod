@@ -1,9 +1,6 @@
  
 #4023 - Tsimihety
 
-owner = BTS
-controller = BTS
-add_core = BTS
 culture = madagasque
 religion = shamanism #Fetishism
 capital = "Tsimihety"

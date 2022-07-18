@@ -1,7 +1,4 @@
  
-owner = KZB
-controller = KZB
-add_core = KZB
 culture = luba
 religion = shamanism #Fetishism
 capital = "Kazembe Lualaba"

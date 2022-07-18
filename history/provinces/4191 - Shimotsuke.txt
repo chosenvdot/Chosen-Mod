@@ -1,8 +1,8 @@
  
 #4191 - Shimotsuke
 
-owner = UTN
-controller = UTN
+owner = UES
+controller = UES
 culture = togoku
 religion = shinto
 capital = "Utsunomiya"
@@ -12,7 +12,7 @@ base_tax = 4
 base_manpower = 4
 base_production = 4
 is_city = yes
-add_core = UTN
+add_core = UES
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }

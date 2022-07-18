@@ -1,9 +1,6 @@
  
 #Bafuriru
 
-owner = RWA
-controller = RWA
-add_core = RWA
 culture = rwandan
 religion = shamanism #Fetishism
 capital = "Bafuriru"

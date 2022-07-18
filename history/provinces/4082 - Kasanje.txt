@@ -1,7 +1,4 @@
  
-owner = KSJ
-controller = KSJ
-add_core = KSJ
 culture = mbangala
 religion = shamanism #Fetishism
 capital = "Kasanje"

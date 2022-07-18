@@ -1,10 +1,10 @@
  
 # No previous file for Chortli
 
-owner = CHT
-controller = CHT
+owner = AZT
+controller = AZT
 is_city = yes
-add_core = CHT
+add_core = AZT
 culture = highland_mayan
 religion = mesoamerican_religion
 capital = "Chortli"

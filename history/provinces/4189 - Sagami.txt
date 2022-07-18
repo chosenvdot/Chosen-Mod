@@ -1,8 +1,8 @@
  
 #4189 - Sagami
 
-owner = ASK
-controller = ASK
+owner = ODA
+controller = ODA
 culture = togoku
 religion = shinto
 capital = "Kamakura"
@@ -12,7 +12,7 @@ base_tax = 6
 base_manpower = 6
 base_production = 4
 is_city = yes
-add_core = ASK
+add_core = ODA
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }

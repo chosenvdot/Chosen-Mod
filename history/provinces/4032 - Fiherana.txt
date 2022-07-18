@@ -1,9 +1,6 @@
  
 #4032 - Fiherana
 
-owner = SKA
-controller = SKA
-add_core = SKA
 culture = madagasque
 religion = shamanism #Fetishism
 capital = "Fiherana"

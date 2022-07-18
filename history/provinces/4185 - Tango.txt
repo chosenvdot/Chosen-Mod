@@ -1,8 +1,8 @@
  
 #4185 - Tango
 
-owner = ISK
-controller = ISK
+owner = YMN
+controller = YMN
 culture = japanese
 religion = shinto
 capital = "Miyazu"
@@ -12,7 +12,7 @@ base_tax = 6
 manpower = 2
 base_production = 4
 is_city = yes
-add_core = ISK
+add_core = YMN
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }

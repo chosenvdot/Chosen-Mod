@@ -1,9 +1,9 @@
  
 #New Beyond Typus Province
 
-owner = SPK
-controller = SPK
-add_core = SPK
+owner = MOS
+controller = MOS
+add_core = MOS
 culture = russian
 religion = orthodox
 capital = "Borovsk"

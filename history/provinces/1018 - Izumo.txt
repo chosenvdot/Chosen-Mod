@@ -1,8 +1,8 @@
  
 #1018 - Izumo
 
-owner = AMA
-controller = AMA
+owner = YMN
+controller = YMN
 culture = japanese
 religion = shinto
 capital = "Matsue"
@@ -12,7 +12,7 @@ base_tax = 6
 base_production = 6
 base_manpower = 4
 is_city = yes
-add_core = AMA
+add_core = YMN
 fort_15th = yes #Gassantoda Castle
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }

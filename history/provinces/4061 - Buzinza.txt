@@ -1,9 +1,6 @@
  
 #Buzinza
 
-owner = KRW
-controller = KRW
-add_core = KRW
 culture = takama
 religion = shamanism #Fetishism
 capital = "Buzinza"

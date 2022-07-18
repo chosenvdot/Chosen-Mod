@@ -5,9 +5,9 @@ latent_trade_goods = {
 	coal
 }
 
-owner = SPK			#As far as I can tell? Oka was really a huge, complicated mess at this point. More properly, it SEEMS that Kozelsk was acquired by Vladimir the Bold in 1408 and APPEARS to have been held as a PU principality until 1445, but anyone reading this who knows better is encouraged to correct me.
-controller = SPK
-add_core = SPK
+owner = MOS			#As far as I can tell? Oka was really a huge, complicated mess at this point. More properly, it SEEMS that Kozelsk was acquired by Vladimir the Bold in 1408 and APPEARS to have been held as a PU principality until 1445, but anyone reading this who knows better is encouraged to correct me.
+controller = MOS
+add_core = MOS
 culture = russian
 religion = orthodox
 capital = "Kozelsk"

@@ -1,8 +1,8 @@
  
 #Northern Mutsu
 
-owner = RFR
-controller = RFR
+owner = AKT
+controller = AKT
 culture = togoku
 religion = shinto
 capital = "Sannohe"
@@ -12,7 +12,7 @@ base_tax = 6
 base_manpower = 4
 base_production = 6
 is_city = yes
-add_core = RFR
+add_core = AKT
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }
