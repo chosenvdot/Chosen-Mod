@@ -4,7 +4,8 @@
 owner = ENG
 controller = ENG
 add_core = ENG
-add_core = FRA
+# add_core = FRA
+add_permanent_claim = FRA
 add_core = NRM
 culture = normand
 religion = catholic

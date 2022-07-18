@@ -18,7 +18,8 @@ add_local_autonomy = 25
 add_core = ENG
 add_core = MNE
 add_core = NRM
-add_core = FRA
+add_permanent_claim = FRA
+# add_core = FRA
 #fort_15th = yes #Cut because Surrender of Maine derp.
 
 discovered_by = eastern
