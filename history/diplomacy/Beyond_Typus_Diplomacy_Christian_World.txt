@@ -215,12 +215,12 @@ vassal = {
 	end_date = 1433.1.1
 } #Patriarchate of Aquileia
 
-vassal = {
-	first = VEN
-	second = CDA
-	start_date = 1444.1.1
-	end_date = 1669.1.1 #Ottoman conquest
-} #Candia
+# vassal = {
+# 	first = VEN
+# 	second = CDA
+# 	start_date = 1444.1.1
+# 	end_date = 1669.1.1 #Ottoman conquest
+# } #Candia
 vassal = {
 	first = VEN
 	second = NEG
