@@ -1,9 +1,9 @@
  
 #BT's Western Europe Overhaul in 12.0
 
-owner = MNE
-controller = MNE
-add_core = MNE
+owner = HAI
+controller = HAI
+add_core = HAI
 add_core = TRN#ternoise claim on Guise
 culture = picard_culture
 religion = catholic

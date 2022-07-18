@@ -1,8 +1,8 @@
  
 # - Ouargla
 
-owner = OGL
-controller = OGL
+owner = ZAB
+controller = ZAB
 culture = berber
 religion = ibadi
 capital = "Ouargla"
@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 1 
 base_manpower = 1 
 is_city = yes
-add_core = OGL
+add_core = ZAB
 
 
 

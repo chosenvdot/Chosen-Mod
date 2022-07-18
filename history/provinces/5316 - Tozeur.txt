@@ -1,9 +1,9 @@
  
 #New Beyond Typus Province
 
-owner = GHD
-controller = GHD 
-add_core = GHD
+owner = TUN
+controller = TUN 
+add_core = TUN
 culture = berber
 religion = sunni
 capital = "Tozeur"

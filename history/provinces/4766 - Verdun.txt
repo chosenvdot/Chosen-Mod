@@ -3,8 +3,8 @@
 #Region - France
 #Area - Lorraine
 
-owner = VDN
-controller = VDN
+owner = BUR
+controller = BUR
 capital = "Verdun"
 is_city = yes
 culture = lorraine_culture
@@ -14,7 +14,7 @@ base_tax = 5
 base_production = 4
 trade_goods = bt_trade_good_fruit			#Dragées, famous for them since the 1200s... calling it fruit due to nuts
 base_manpower = 3
-add_core = VDN
+add_core = BUR
 fort_15th = yes
  # La Notre-Dame de Verdun
 

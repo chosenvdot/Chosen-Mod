@@ -1,9 +1,9 @@
  
 #New Beyond Typus Province
 
-owner = ZAB
-controller = ZAB
-add_core = ZAB
+owner = TUN
+controller = TUN
+add_core = TUN
 culture = berber
 religion = sunni
 capital = "EL Oued"

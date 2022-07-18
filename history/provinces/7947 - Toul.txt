@@ -1,9 +1,9 @@
  
 #BT's Western Europe Overhaul in 12.0
 
-owner = TOL
-controller = TOL
-add_core = TOL
+owner = BUR
+controller = BUR
+add_core = BUR
 culture = lorraine_culture
 religion = catholic
 capital = "Tull"

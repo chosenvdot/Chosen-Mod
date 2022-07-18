@@ -1,8 +1,8 @@
  
 # - Mzab
 
-owner = MZB
-controller = MZB
+owner = ZAB
+controller = ZAB
 culture = berber
 religion = ibadi
 capital = "Ghardaia"
@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 1 
 base_manpower = 1 
 is_city = yes
-add_core = MZB
+add_core = ZAB
 
 
 

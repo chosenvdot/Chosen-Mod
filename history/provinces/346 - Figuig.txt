@@ -1,8 +1,8 @@
  
 #346 - Tafilalt
 
-owner = TFL
-controller = TFL 
+owner = MOR
+controller = MOR 
 culture = shilha
 religion = sunni
 capital = "Tafilalt"
@@ -12,7 +12,7 @@ base_tax = 5
 base_production = 5
 base_manpower = 2 
 is_city = yes
-add_core = TFL
+add_core = MOR
 fort_15th = yes
 
 
