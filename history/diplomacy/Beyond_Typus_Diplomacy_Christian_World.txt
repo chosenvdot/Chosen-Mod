@@ -489,33 +489,33 @@ royal_marriage = {
 # 	end_date = 1446.2.13 #Shemyaka takes Moscow
 # }
 
-vassal = {
-	first = LIT
-	second = VTN
-	start_date = 1444.1.1
-	end_date = 1494.1.1
-}
+# vassal = {
+# 	first = LIT
+# 	second = VTN
+# 	start_date = 1444.1.1
+# 	end_date = 1494.1.1
+# }
 
-vassal = {
-	first = LIT
-	second = OKA
-	start_date = 1444.1.1
-	end_date = 1494.1.1
-}
+# vassal = {
+# 	first = LIT
+# 	second = OKA
+# 	start_date = 1444.1.1
+# 	end_date = 1494.1.1
+# }
 
-vassal = {
-	first = LIT
-	second = BLV
-	start_date = 1444.1.1
-	end_date = 1494.1.1
-}
+# vassal = {
+# 	first = LIT
+# 	second = BLV
+# 	start_date = 1444.1.1
+# 	end_date = 1494.1.1
+# }
 
-vassal = {
-	first = LIT
-	second = MSL
-	start_date = 1444.1.1
-	end_date = 1494.1.1
-}
+# vassal = {
+# 	first = LIT
+# 	second = MSL
+# 	start_date = 1444.1.1
+# 	end_date = 1494.1.1
+# }
 
 dependency = {
 	subject_type = tributary_state
