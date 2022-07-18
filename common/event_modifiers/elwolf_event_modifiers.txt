@@ -8,3 +8,7 @@ mingsplosion = {
 elwolf_spa_arty_1 = {
 	artillery_fire = 0.5
 }
+
+elwolf_cheaper_core_cost = {
+	core_creation = -0.25
+}
