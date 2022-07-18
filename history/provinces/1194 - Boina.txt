@@ -1,9 +1,6 @@
  
 #1194 - Boina
 
-owner = SKA
-controller = SKA
-add_core = SKA
 culture = madagasque #Malagasy
 religion = shamanism #Fetishism
 capital = "Besalampy"

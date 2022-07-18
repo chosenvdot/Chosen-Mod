@@ -1,9 +1,6 @@
  
 #4021 - Antankara
 
-owner = BTS
-controller = BTS
-add_core = BTS
 culture = madagasque #Malagasy
 religion = shamanism #Fetishism
 capital = "Ambilobe"
