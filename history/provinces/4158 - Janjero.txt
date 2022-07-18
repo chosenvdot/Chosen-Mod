@@ -1,9 +1,9 @@
  
 #4158 - Janjero
 
-owner = JJI
-controller = JJI
-add_core = JJI
+owner = ETH
+controller = ETH
+add_core = ETH
 culture = sidamo
 religion = shamanism
 capital = "Fofa"

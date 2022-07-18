@@ -1,8 +1,8 @@
  
 #2053 - Patan
 
-owner = GUJ
-controller = GUJ
+owner = MER
+controller = MER
 culture = gujarati
 religion = hinduism
 capital = "Patan"
@@ -13,7 +13,7 @@ base_production = 6
 base_manpower = 2 
 is_city = yes
 add_jains_or_burghers_effect = yes
-add_core = GUJ
+add_core = MER	
 discovered_by = indian
 discovered_by = muslim 
 discovered_by = ottoman

@@ -1,9 +1,9 @@
  
 # renamed in 1.31
 
-owner = BEU
-controller = BEU
-add_core = BEU
+owner = KUT
+controller = KUT
+add_core = KUT
 culture = kutainese # BT; bornean
 religion = hinduism
 capital = "Berau" # BT; "Sambaliung"

@@ -1,9 +1,9 @@
  
 #New Province
 
-owner = FNJ
-controller = FNJ
-add_core = FNJ
+owner = ETH
+controller = ETH
+add_core = ETH
 is_city = yes
 capital = "Malakal"			#Fashoda would be better, perhaps, but leaving it for now
 culture = luo_culture

@@ -1,9 +1,9 @@
  
 # ex 8595
 
-owner = PAH
-controller = PAH
-add_core = PAH
+owner = MLC
+controller = MLC
+add_core = MLC
 add_core = JOH # BT
 culture = orang_asli # BT; malayan
 religion = mahayana

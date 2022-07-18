@@ -1,8 +1,8 @@
  
 #640 - Pontianak
 
-owner = SKD
-controller = SKD
+owner = BNJ
+controller = BNJ
 culture = bornean
 religion = hinduism
 capital = "Pontianak"
@@ -13,7 +13,7 @@ base_production = 3
 base_manpower = 2
 is_city = yes
 add_core = SKD
-add_core = PNT
+add_core = BNJ
 
 discovered_by = chinese
 discovered_by = indian
