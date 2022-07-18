@@ -1,9 +1,9 @@
  
 #BT Balkans reoverhaul
 
-owner = LES
-controller = LES
-add_core = LES
+owner = TUR
+controller = TUR
+add_core = TUR
 culture = greek
 religion = orthodox
 capital = "Ainos"

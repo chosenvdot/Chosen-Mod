@@ -564,13 +564,6 @@ vassal = {
 }
 
 vassal = {
-	first = BYZ
-	second = LES
-	start_date = 1444.1.1
-	end_date = 1453.5.29
-}
-
-vassal = {
 	first = CAS
 	second = NAV
 	start_date = 1444.1.1

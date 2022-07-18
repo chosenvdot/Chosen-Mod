@@ -1,8 +1,8 @@
  
 #4700 - Lesbos
 
-owner = LES
-controller = LES
+owner = TUR
+controller = TUR
 culture = greek
 religion = orthodox
 capital = "Mytilene"
@@ -13,8 +13,7 @@ base_production = 3
 base_manpower = 2
 is_city = yes
 #fort_15th = yes
-add_core = LES
-add_core = AYD
+add_core = TUR
 
 1444.1.1 = { discovered_by = KAZ }
 1444.1.1 = { discovered_by = CRI }
