@@ -1,9 +1,9 @@
  
 #BT Italy reoverhaul
 
-owner = STY
-controller = STY
-add_core = STY
+owner = VEN
+controller = VEN
+add_core = VEN
 culture = friulian_culture
 religion = catholic
 capital = "Pordenone"
