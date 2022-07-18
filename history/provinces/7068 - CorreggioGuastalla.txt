@@ -1,9 +1,9 @@
  
 #BT Italy reoverhaul
 
-owner = CRR
-controller = CRR
-add_core = CRR
+owner = MAN
+controller = MAN
+add_core = MAN
 culture = romagnan
 religion = catholic
 capital = "Guastalla" #includes Guatalla, Coreggio, Novellara, Bagnolo, Mirandola
