@@ -3,8 +3,8 @@
 #Region - Germany
 #Area - Weser
 
-owner = BRE
-controller = BRE
+owner = HAM
+controller = HAM
 culture = lower_saxon
 religion = catholic
 capital = "Bremen"
@@ -14,7 +14,7 @@ base_tax = 9
 base_production = 7
 base_manpower = 6
 is_city = yes
-add_core = BRE
+add_core = HAM
 fort_15th = yes
 add_local_autonomy = 50
 

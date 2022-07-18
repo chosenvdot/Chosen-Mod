@@ -3,9 +3,9 @@
 #Region - Germany
 #Area - Upper Swabia
 
-owner = AUG			#once again, major problems caused by (Paradox's?) confusion between Bishophrics and the Imperial Free Cities, need to fix this later
-controller = AUG
-add_core = AUG
+owner = MEM			#once again, major problems caused by (Paradox's?) confusion between Bishophrics and the Imperial Free Cities, need to fix this later
+controller = MEM
+add_core = MEM
 culture = swabian
 religion = catholic
 base_tax = 9			#With a strategic location as intersection of trade routes to Italy, the Free Imperial City became a major trading center. 
