@@ -1,8 +1,5 @@
 # No previous file for Gwiriko
 
-owner = KNG
-controller = KNG
-add_core = KNG
 is_city = yes
 culture = dyola 
 religion = shamanism #Fetishism
