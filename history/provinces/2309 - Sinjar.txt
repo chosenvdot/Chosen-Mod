@@ -1,7 +1,7 @@
 #2309 - Sinjar
 
-owner = SIN
-controller = SIN
+owner = QAR
+controller = QAR
 culture = kurdish
 religion = yazidi
 capital = "Sinjar"
@@ -11,7 +11,7 @@ base_tax = 3				#(JP) Described as "Little Damascus"
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = SIN
+add_core = QAR
 discovered_by = east_african
 discovered_by = muslim
 discovered_by = indian

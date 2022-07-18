@@ -6,8 +6,8 @@
 #Core Details
 capital = "Pettau"
 is_city = yes
-owner = SLZ
-controller = SLZ
+owner = HAB
+controller = HAB
 
 #Demographics
 culture = slovene
@@ -20,7 +20,7 @@ base_manpower = 2
 trade_goods = cloth
 
 #Cores and Occupation (Alphabetical after current)
-add_core = SLZ
+add_core = HAB
 add_core = STY
 
 #Other Political
