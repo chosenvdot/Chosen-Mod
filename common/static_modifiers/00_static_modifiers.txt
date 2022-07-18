@@ -100,6 +100,7 @@ city = {
 	local_sailors_modifier = 0.25
 	garrison_growth = 0.05
 	allowed_num_of_manufactories = 1
+
 }
 
 port = {
@@ -315,7 +316,7 @@ patriarch_state = {
 # Multiplied in provinces of same religion.
 patriarch_authority_local = {
 	local_unrest = -3
-	local_manpower_modifier = 0.33
+	local_manpower_modifier = 0.2
 }
 
 #for the country
@@ -453,7 +454,6 @@ devastation = {
 }
 
 prosperity = {
-	local_development_cost = -0.1
 	trade_goods_size_modifier = 0.25
 	local_autonomy = -0.05
 }
@@ -1044,9 +1044,9 @@ recovery_motivation = {
 
 militarized_society = {
 
-	discipline = 0.10
-	manpower_recovery_speed = 0.20
-	land_maintenance_modifier = -0.20
+	discipline = 0.05
+	manpower_recovery_speed = 0.10
+	land_maintenance_modifier = -0.10
 
 }
 
@@ -1094,7 +1094,7 @@ over_extension = {
 }
 
 prestige = {
-	global_trade_power = 0.15			#+15/-15 total bonus from prestige.
+	global_trade_power = 0.05			#+15/-15 total bonus from prestige.
 	land_morale = 0.1
 	naval_morale = 0.1
 	global_spy_defence = 0.1				#+10/-10
@@ -1269,7 +1269,6 @@ low_army_professionalism = {
 }
 
 high_army_professionalism = {
-	discipline = 0.10			#BTAddOn added. The reasoning here should be obvious. Note I also cut 0.05 from absolutism and removed the damage bonuses, so this isn't that massive
 	#fire_damage = 0.1			#BTAddOn removed. Replaced by discipline.
 	#shock_damage = 0.1			#BTAddOn removed. Replaced by discipline.
 	#siege_ability = 0.2			#BTAddOn removed. Replaced by discipline, plus I'm getting closer with sieges reblancing in this addon, I don't really want (or think we need) another wild card.
@@ -1282,7 +1281,7 @@ streltsy_modifier = {
 
 power_projection = {
 	defensiveness = 0.1
-	global_trade_power = 0.2
+	global_trade_power = 0.1
 	prestige = 0.5
 	land_morale = 0.1
 	naval_morale = 0.1
@@ -1312,52 +1311,44 @@ trade_company_strong = {
 
 large_colonial_nation = {
 	merchants = 1
-	global_trade_power = 0.05
-	naval_forcelimit = 3			#BTAddOn changed from 10. Naval forcelimits were getting obscene
-	land_forcelimit = 2			#BTAddOn changed from 5. Too large a bonus compared to vassals and marches
 }
 
 crown_colony_overlord = {
 	merchants = 1
-	global_trade_power = 0.05
+	global_tariffs = -1
 }
 
 private_enterprise_overlord = {
 	merchants = 1
-	global_trade_power = 0.05
-	global_tariffs = -0.05
+	global_tariffs = -1
 }
 
 self_governing_colony_overlord = {
 	merchants = 1
-	global_trade_power = 0.05
-	global_tariffs = -0.10
+	global_tariffs = -1
 }
 
 crown_colony_subject = {
-	global_autonomy = -0.1
-	global_colonial_growth = 10
+	colonists = 1
+	liberty_desire = -100
 }
 
 private_enterprise_subject = {
-	global_ship_trade_power = 0.2
-	global_trade_goods_size_modifier = 0.2
-	naval_tradition_from_trade = 0.1
-	ship_power_propagation = 0.1
+	colonists = 1
+	liberty_desire = -100
 }
 
 self_governing_colony_subject = {
 	colonists = 1
-	development_cost = -0.15
-	liberty_desire = 25
+	liberty_desire = -100
 }
 
 march_subject = {
-	land_forcelimit = 2			#BTAddOn changed from 1. Uses up an dip upkeep slot, so might as well be useful
+	land_forcelimit = 1			#BTAddOn changed from 1. Uses up an dip upkeep slot, so might as well be useful
 }
 
 vassal_subject = {
-	land_forcelimit = 2			#BTAddOn changed from 1. Uses up an dip upkeep slot, so might as well be useful
+	land_forcelimit = 1			#BTAddOn changed from 1. Uses up an dip upkeep slot, so might as well be useful
 }
 
 daimyo_subject = {
@@ -1864,7 +1855,7 @@ over_governing_capacity_modifier = {
 
 
 lost_hegemony = {
-	all_power_cost	= 0.10
+	
 }
 
 at_peace_revolutionary = { # Applied if at peace while reactionaries are bordering you

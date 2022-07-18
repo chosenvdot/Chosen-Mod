@@ -377,6 +377,7 @@ personal_union = {
 	restoration_cb = cb_restore_personal_union
 	
 	# Subject Interactions:
+	divert_trade = yes
 	placate_rulers = no
 	enforce_culture = yes
 	siphon_income = yes
@@ -455,7 +456,7 @@ colony = {
 	can_concentrate_development = no
 	extend_trading_range = yes
 
-	liberty_desire_development_ratio = 0.05			#halved for dev doubling. 
+	liberty_desire_development_ratio = 0.01			#halved for dev doubling. 
 
 	max_government_rank = 1
 	cities_required_for_bonuses = 10
@@ -511,8 +512,8 @@ crown_colony = {
 	can_send_missionary_to_subject = yes	
 	count = colony
 
-	forcelimit_to_overlord = 0.3
-	manpower_to_overlord = 0.3
+	forcelimit_to_overlord = 0.05
+	manpower_to_overlord = 0.1
 	naval_forcelimit_to_overlord = 0.01
 	sailors_to_overlord = 0.01
 
