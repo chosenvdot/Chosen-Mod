@@ -1,24 +1,16 @@
- 
-# owned in 1.31
-# renamed in 1.31
+#2737 - Wairarapa
 
-owner = TAK
-controller = TAK
-add_core = TAK
-culture = maori # 1.31
+
+culture = maori
 religion = animism
-capital = "Ahuriri"
-is_city = yes
 hre = no
-base_tax = 1 # BT; 3
-base_production = 1 # BT; 3
-base_manpower = 1
-trade_goods = naval_supplies
-# ??? below
-#native_size = 10
-#native_ferocity = 3
-#native_hostileness = 5
+capital = "Ahuriri"
 
-discovered_by = polynesian_tech # 1.31
+trade_goods = naval_supplies
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+discovered_by = polynesian_tech
+
 
 1642.1.1 = { discovered_by = NED } # Abel Tasman

@@ -1,21 +1,16 @@
- 
 # No previous file for Mdewakanton
 
-owner = SIO
-controller = SIO
-add_core = SIO
-is_city = yes
 culture = dakota
 religion = totemism
-capital = "Kaposia"
+capital = "Mdewakanton"
 trade_goods = fur
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
-native_size = 10
+native_size = 5
 native_ferocity = 1
-native_hostileness = 3
+native_hostileness = 2
 
 
 
