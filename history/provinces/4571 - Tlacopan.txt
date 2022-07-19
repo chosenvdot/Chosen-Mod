@@ -9,9 +9,9 @@ religion = nahuatl
 capital = "Tlacopan" 
 trade_goods = paper			#Amate paper was used most extensively during the Triple Alliance Empire.[11] This paper was manufactured in over 40 villages in territory controlled by the Aztecs and then handed over as tribute by the conquered peoples. This amounted to about 480,000 sheets annually. Most of the production was concentrated in the modern state of Morelos, where Ficus trees are abundant because of the climate.
 hre = no 
-base_tax = 10
-base_production = 10
-base_manpower = 4 
+base_tax = 1 
+base_production = 1
+base_manpower = 1
 is_city = yes
 1444.1.1 = { discovered_by = AZT }
 1444.1.1 = { discovered_by = MAY }

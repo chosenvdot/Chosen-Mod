@@ -10,10 +10,10 @@ add_core = JAE #BTB added: Castilian revolter tag.
 culture = andalucian
 religion = catholic
 hre = no
-base_tax = 5 
-base_production = 5 
+base_tax = 1 
+base_production = 3
 trade_goods = cloth
-base_manpower = 3 
+base_manpower = 8
 capital = "Jaén"
 is_city = yes
 

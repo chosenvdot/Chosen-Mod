@@ -11,10 +11,10 @@ capital = "Dunkirk"
 culture = flemish
 religion = catholic
 hre = no
-base_tax = 6
-base_production = 6
+base_tax = 2
+base_production = 1
 trade_goods = cloth			#Today the 3rd largest habour in France, with a large ship-building industry and also a lot of heavy industry. In the EU4 period, however, this was part of Flanders so I think both cloth and naval supplies would work.
-base_manpower = 4
+base_manpower = 2
 
 discovered_by = western
 discovered_by = muslim

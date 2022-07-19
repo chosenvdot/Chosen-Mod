@@ -9,9 +9,9 @@ religion = confucianism
 capital = "Anqing"
 trade_goods = cloth
 hre = no
-base_tax = 12 
-base_production = 12
-base_manpower = 4
+base_tax = 1 
+base_production = 1
+base_manpower = 1
 is_city = yes
 
 

@@ -9,10 +9,10 @@ add_core = GEN
 culture = ligurian
 religion = catholic
 hre = yes
-base_tax = 6
-base_production = 6
+base_tax = 1 
+base_production = 1
+base_manpower = 1
 trade_goods = naval_supplies
-base_manpower = 4
 capital = "Albenga"
 is_city = yes # Estimated
 

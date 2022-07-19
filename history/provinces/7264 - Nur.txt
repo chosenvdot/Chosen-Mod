@@ -1,9 +1,9 @@
  
 #BT GDL reoverhaul
 
-owner = MAZ
-controller = MAZ
-add_core = MAZ
+owner = POL
+controller = POL
+add_core = POL
 culture = polish
 religion = catholic
 capital = "Nur"

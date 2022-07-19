@@ -6,8 +6,8 @@
 #Core Details
 capital = "Ciechanów"
 is_city = yes
-owner = MAZ
-controller = MAZ
+owner = POL
+controller = POL
 
 #Demographics
 culture = polish
@@ -20,7 +20,7 @@ base_manpower = 1
 trade_goods = grain # Brian; added missing
 
 #Cores and Occupation (Alphabetical after current)
-add_core = MAZ
+add_core = POL
 
 #Other Political
 hre = no

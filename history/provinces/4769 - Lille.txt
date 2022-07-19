@@ -11,10 +11,10 @@ capital = "Lille"
 culture = flemish
 religion = catholic
 hre = no
-base_tax = 8
-base_production = 4
+base_tax = 2
+base_production = 2
 trade_goods = cloth			#Major Flemish cloth working centre along with Bruges, Gent, and Ypres
-base_manpower = 6
+base_manpower = 2
 fort_15th = yes
 
 discovered_by = western

@@ -3,9 +3,9 @@
 #Region - Baltic
 #Area - West Prussia
 
-owner = TEU
-controller = TEU
-add_core = TEU
+owner = POL
+controller = POL
+add_core = POL
 capital = "Tuchel"
 culture = kashubian_culture
 religion = catholic

@@ -8,7 +8,7 @@ bt_trade_good_beer = {
 }	#Events change value as follows   2.5 - 2.75 - 3.0 
 
 bt_trade_good_books = {
-	base_price = 4.0 #Changed from 3.5
+	base_price = 3 #Changed from 3.5
 }	#Events change value as follows   4.0 - 2.5 - 3.0
 
 bt_trade_good_fruit = { #Cider event maybe? Calvados? Who knows?
@@ -16,7 +16,7 @@ bt_trade_good_fruit = { #Cider event maybe? Calvados? Who knows?
 }	#Events change value as follows   2.5 - 3.0
 
 bt_trade_good_apiculture = {
-	base_price = 4.0 #Changed from 2.5
+	base_price = 3 #Changed from 2.5
 }	#Events change value as follows   4.0 - 4.5 - 2.5
 
 #Note on paper:

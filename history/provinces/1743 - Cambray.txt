@@ -11,10 +11,10 @@ is_city = yes
 culture = picard_culture
 religion = catholic
 hre = yes
-base_tax = 7
-base_production = 7
+base_tax = 2
+base_production = 1
 trade_goods = cloth			#Early on focused on both agriculture as well as weaving, but weaving, more specifically batiste (a great speaciality of the city), would eventually win out and dominate trade.
-base_manpower = 4 
+base_manpower = 2 
 
 discovered_by = western
 discovered_by = muslim

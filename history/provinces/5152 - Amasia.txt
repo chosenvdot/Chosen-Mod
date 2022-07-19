@@ -11,9 +11,9 @@ religion = sunni
 capital = "Amasya"
 trade_goods = bt_trade_good_books			#(JP) Important educational site for Ottoman Heirs
 hre = no
-base_tax = 4
-base_production = 4
-base_manpower = 3
+base_tax = 1 
+base_production = 1
+base_manpower = 1
 is_city = yes
 
 discovered_by = western

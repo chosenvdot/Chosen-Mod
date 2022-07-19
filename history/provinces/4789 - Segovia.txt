@@ -9,10 +9,10 @@ add_core = CAS
 culture = castillian
 religion = catholic
 hre = no
-base_tax = 4 
-base_production = 4 
+base_tax = 1 
+base_production = 1 
 trade_goods = glass 
-base_manpower = 2 
+base_manpower = 1 
 capital = "Segovia"
 is_city = yes
 

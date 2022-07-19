@@ -1,3 +1,16 @@
 
+elector = yes
+government_rank = 2
+
 add_accepted_culture = griko
 add_accepted_culture = sicilian
+
+1444.1.1 = {
+	monarch = {
+		name = "Gerardo de Coon"
+		birth_date = 1424.1.1
+		dip = 4
+		adm = 4
+		mil = 4
+	}
+}
