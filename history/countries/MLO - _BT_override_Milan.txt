@@ -1,6 +1,7 @@
-
+government = republic
 add_accepted_culture = romagnan
-
+add_government_reform = ambrosian_republic
+elector = yes
 
 
 #History
@@ -11,5 +12,17 @@ add_accepted_culture = romagnan
 		duration = -1
 	}
 }
+
+1444.1.1 = {
+	monarch = {
+		name = "Giovanni Maria I"
+		dynasty = "Visconti"
+		birth_date = 1424.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
 
 1648.1.1 = { remove_country_modifier = bt_ghibelline_nation }

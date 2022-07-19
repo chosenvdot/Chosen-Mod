@@ -1,6 +1,10 @@
  
 #New Province
 
+
+controller = ETH
+core = ETH
+owner = ETH
 capital = "Tokar"
 culture = tigray
 religion = coptic

@@ -1,0 +1,80 @@
+
+GUY_ideas = {
+	start = {
+		diplomatic_upkeep = -3
+		diplomatic_reputation = -30
+	}
+	
+	bonus = {
+		may_perform_slave_raid_on_same_religion = yes
+	}
+	
+	trigger = {
+		tag = GUY
+	}
+	free = yes
+	
+	GUY_1 = {
+		ae_impact = -0.1
+	}
+	GUY_2 = {
+		advisor_cost = -0.1
+	}
+	GUY_3 = {
+		global_tax_modifier = 0.1
+	}
+	GUY_4 = {
+		range = 0.2
+	}
+	GUY_5 = {
+		privateer_efficiency = 0.15
+	}
+	GUY_6 = {
+		siege_blockade_progress = 1
+	}
+	GUY_7 = {
+		leader_naval_fire = 1
+	}
+}
+
+TTS_ideas = {
+	start = {
+		land_morale = 0.15
+		global_manpower_modifier = 0.25
+	}
+	
+	bonus = {
+		prestige = 1
+	}
+	
+	trigger = {
+		OR = {
+			tag = TTS
+		}
+	}
+	free = yes
+	
+	TTS_1 = {
+		technology_cost = -0.1
+	}
+	TTS_2 = {
+		global_unrest = -1
+		possible_policy = 1
+	}
+	TTS_3 = {
+		navy_tradition = 1
+	}
+	TTS_4 = {
+		core_creation = -0.15
+	}
+	TTS_5 = {
+		global_ship_trade_power = 0.25
+	}
+	TTS_6 = {
+		naval_morale = 0.15
+	}
+	TTS_7 = {
+		global_trade_goods_size_modifier = 0.1
+		development_cost = -0.1 
+	}
+}

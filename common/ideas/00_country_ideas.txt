@@ -1566,10 +1566,7 @@ SIC_ideas = {
 	}
 	
 	trigger = {
-		OR = {
-			tag = TTS
-			tag = SIC
-		}
+		tag = SIC
 	}
 	
 	free = yes
@@ -1591,7 +1588,7 @@ SIC_ideas = {
 		global_ship_trade_power = 0.2
 	}
 	sic_grand_navy = {
-		naval_morale = 0.15
+		naval_morale = 0.1
 	}
 	sic_sicilian_silk = {
 		global_trade_goods_size_modifier = 0.1
@@ -2085,7 +2082,7 @@ ITA_ideas = {
 	}
 	
 	bonus = {
-		land_maintenance_modifier = -0.1
+		trade_efficiency = 0.15
 	}
 	
 	trigger = {
@@ -2094,7 +2091,7 @@ ITA_ideas = {
 	free = yes
 	
 	no_a_geographical_construct = {
-		stability_cost_modifier = -0.10
+		development_cost = -0.05
 	}
 	tradition_of_the_legion = {
 		infantry_power = 0.20
@@ -14632,8 +14629,8 @@ CSH_ideas = {
 
 NRM_ideas = {
 	start = {
-		leader_land_manuever = 1
-		legitimacy = 1
+		diplomatic_upkeep = -3
+		diplomatic_reputation = -30
 	}
 	
 	bonus = {

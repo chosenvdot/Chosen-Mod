@@ -1,67 +1,4 @@
-trade_company_west_africa = {
-	color = { 50 0 200 }
-	
-	provinces = {
-		1164 1165 1166 1096 1793 2241 1466 1097  1118 1119 1151 1163 2242 1168 1306 4078 4079 4080 
-		1111
-		1126 1139 1141 2257 2258 #West Africa Coast
-		1147 2289 2290 2294 #Benin
-		1112 1113 1116 2239 #Jolof
-		1114 1117 2238 #Futa Jalon
-		1167 1171 1172 #Angola
-		#1098 #Deprecated because it belongs to an area in La Plata
-		#Inland Kongo in Ivory Coast tradenode due to 1.30
-		798 1170 2949 1901 1169 
-	}
-	
-	# Specific
-	# Generic
-	names = {
-		name = "TRADE_COMPANY_WEST_AFRICA_Root_Culture_GetName"
-	}
-	names = {
-		name = "TRADE_COMPANY_WEST_AFRICA_Africa_Trade_Company"
-	}
-}
 
-trade_company_south_africa = {
-	color = { 0 175 0 }
-	
-	provinces = {
-		4783 1175 2856 2864 2880 
-		#Northern South Africa
-		5360 5362 5363 4782 5365 5366 5367 5368 5369 5376 4781 5378 4784 5380 5381 5383 5384 5385 5347 
-		#Namibia
-		5388 5389 5390 5391 5392 5393 5394 5395 5396 5397 5398 5399 5400 5401 5402 5404 5405 5408 5409 5414 5419 5420 5421 5422 5423 5424 5426 1174 5386 5425 5387 
-		5403 5406 5407 5410 5411 5412 5413 5415 5416 5417 5418 5427
-	}
-	
-	# Specific
-	# Generic
-	names = {
-		name = "TRADE_COMPANY_SOUTH_AFRICA_Root_Culture_GetName"
-	}
-	names = {
-		name = "TRADE_COMPANY_SOUTH_AFRICA_Africa_Trade_Company"
-	}
-}
-
-trade_company_east_africa = {
-	color = { 200 0 0 }
-	
-	provinces = {
-		1448 788 1100 1102 1103 1183 1186 1192 1193 1194 1195 1196 1197 1198 1199 1200 1201 1202 1203 1204 1792 1900 2796 2774 4020 4021 4022 4023 4024 4025 4026 4027 4028 4029 4030 4031 4032 4049 5382 1182 1800 1181 5371 5372 5373 5374 789 1998 1999 5093 8545 
-	}
-	
-	# Specific
-	# Generic
-	names = {
-		name = "TRADE_COMPANY_EAST_AFRICA_Root_Culture_GetName"
-	}
-	names = {
-		name = "TRADE_COMPANY_EAST_AFRICA_Africa_Trade_Company"
-	}
-}
 
 trade_company_west_india = {
 	color = { 135 104 85 }
@@ -248,68 +185,6 @@ trade_company_north_india = {
 	}
 	names = {
 		name = "TRADE_COMPANY_NORTH_INDIA_India_Trade_Company"
-	}
-}
-
-trade_company_indonesia = {
-	color = { 0 240 0 }
-	
-	provinces = {
-		593 594 595 596 597 598 599 617 618 619 620 621 622 623 636 640 659 1361 2390 2391 2392 2393 2394 2673 2674 2675 2676 4816 2677 2678 2679 2680 4817 2681 2682 2683 2684 2685 2686 2704 2705 2706 2740 4791 8623 4790 8695 8693 8571 8692 8603 4818 8604 8691 8602 4810 4808 8606 4811 8688 8689 4809 4815 8669 8670 4814 8675 8668 8632 8578 8577 8672 8559 8686 8699 8697 4803 4802 8680 4804 4805 8561 4806 8694 8667 4813 8674 4812 8673 8546 624 625 630 2687 2688
-	}
-
-	# Specific (Removed for potential confusion)
-	#names = {
-	#	trigger = {
-	#		primary_culture = dutch
-	#	}
-	#	name = "TRADE_COMPANY_INDONESIA_Dutch_East_Indies_Company"
-	#}
-	# Generic
-	names = {
-		name = "TRADE_COMPANY_INDONESIA_Root_Culture_GetName"
-	}
-	names = {
-		name = "TRADE_COMPANY_INDONESIA_Indonesia_Trade_Company"
-	}
-}
-
-trade_company_philippines = {
-	color = { 150 0 200 }
-	
-	provinces = {
-		2701 2702 4355 #mindanao_area
-		652 653 4354 #west_mindanao_area
-		654 2700 4351 4352 4353 #visayas_area
-		651 655 4356 #palawan_area
-		657 658 2698 4348 #luzon_area
-		656 2697 2699 4349 4350 #southern_luzon_area
-		1397 8715 8713 8714 8716 8712 8709 8711 8710 8720 8721 
-		8700 637 2703 8548 8549 8555 738 2154 2155 
-	}
-
-	# Generic
-	names = {
-		name = "TRADE_COMPANY_PHILIPPINES_Root_Culture_GetName"
-	}
-	names = {
-		name = "TRADE_COMPANY_PHILIPPINES_Indonesia_Trade_Company"
-	}
-}
-
-trade_company_moluccas = {
-	color = { 196 191 61 }
-	
-	provinces = {
-		646 1357 647 645 2717 648 649 650 2725 2696 2695 635 633 634 643 2713 2714 642 2715 641 2716 632 627 2691 631 2693 2692 628 644 8633 8635 8634 8723 8569 8727 8726 8725 8724 8631 8722 8630 4796 8615 8707 8616 8704 4845 8614 4797 4798 4795 4799 4801 8702 4800 8627 4794 8619 8717 8708 8547 2709 2710 2711 2712 638 639 2707 2708 8698 8703 8565 626 629 2689 2690 4792 4793 8544 
-	}
-
-	# Generic
-	names = {
-		name = "TRADE_COMPANY_MOLUCCAS_Root_Culture_GetName"
-	}
-	names = {
-		name = "TRADE_COMPANY_MOLUCCAS_Indonesia_Trade_Company"
 	}
 }
 
@@ -521,23 +396,6 @@ trade_company_safi = {
 	}
 	names = {
 		name = "TRADE_COMPANY_SAFI_African_Trade_Company"
-	}
-}
-
-trade_company_timbuktu = {
-	color = { 108 152 84 }
-	
-	provinces = {
-		2291 1115 2237 2240 1122 1125 2251 1135 1137 2265 2266 1136 2295 2256 2267 2252 2253 2254 2255 1138 1140 1129 2247 1120 1121 1124 1123 1130 1131 1132 1134 1133 1142 2243 2244 2245 2246 2248 2249 2250 2259 2260 2261 2262 2263 2264 2268 2269 2270 2271 1128 2292 1143 
-	}
-	
-	# Specific
-	# Generic
-	names = {
-		name = "TRADE_COMPANY_TIMBUKTU_Root_Culture_GetName"
-	}
-	names = {
-		name = "TRADE_COMPANY_TIMBUKTU_African_Trade_Company"
 	}
 }
 
@@ -762,23 +620,6 @@ trade_company_alexandria = {
 	}
 }
 
-trade_company_katsina = {
-	color = { 215 56 56 }
-	
-	provinces = {
-		1144 1146 1162 1145 1152 1153 1150 1154 1155 1156 1157 1158 1160 1161 1249 1149 1148 2273 2272 2274 2275 2276 2277 2278 2279 2280 2281 2282 2283 2284 2285 2286 2287 2288 2293 2475 1159 2448 2474 5307 
-	}
-	
-	# Specific
-	# Generic
-	names = {
-		name = "TRADE_COMPANY_KATSINA_Root_Culture_GetName"
-	}
-	names = {
-		name = "TRADE_COMPANY_KATSINA_African_Trade_Company"
-	}
-}
-
 trade_company_ethiopia = {
 	color = { 40 46 64 }
 	
@@ -793,57 +634,6 @@ trade_company_ethiopia = {
 	}
 	names = {
 		name = "TRADE_COMPANY_ETHIOPIA_African_Trade_Company"
-	}
-}
-
-trade_company_kongo = {
-	color = { 171 148 148 }
-	
-	provinces = {
-		4081 4082 4083 4084 4085 4086 4087 4088 4089 4090 4091 4092 4093 4094 4095 4096 4097 4098 4099 4101 4105 4100 4107 4102 4103 4109 2948 
-	}
-	
-	# Specific
-	# Generic
-	names = {
-		name = "TRADE_COMPANY_KONGO_Root_Culture_GetName"
-	}
-	names = {
-		name = "TRADE_COMPANY_KONGO_African_Trade_Company"
-	}
-}
-
-trade_company_great_lakes = {
-	color = { 57 168 220 }
-	
-	provinces = {
-		1273 1649 1798 1799 1925 4051 4052 4053 4054 4055 4056 4057 4058 4059 4060 4061 4062 4063 4064 4065 4066 4067 4068 4069 4070 4071 4072 4073 4074 4075 4076 4077 2777 
-	}
-	
-	# Specific
-	# Generic
-	names = {
-		name = "TRADE_COMPANY_GREAT_LAKES_Root_Culture_GetName"
-	}
-	names = {
-		name = "TRADE_COMPANY_GREAT_LAKES_African_Trade_Company"
-	}
-}
-
-trade_company_zambezi = {
-	color = { 32 164 51 }
-	
-	provinces = {
-		1184 1185 1187 1188 1189 1190 1191 2950 2951 2952 4034 4035 4036 4037 4038 4039 4040 4041 4042 4043 4044 4045 4046 4047 4048 4050 4104 4106 4108 
-	}
-	
-	# Specific
-	# Generic
-	names = {
-		name = "TRADE_COMPANY_ZAMBEZI_Root_Culture_GetName"
-	}
-	names = {
-		name = "TRADE_COMPANY_ZAMBEZI_African_Trade_Company"
 	}
 }
 

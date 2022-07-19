@@ -1,0 +1,73 @@
+country_decisions = {
+
+	ah_form_decision = {
+		major = yes
+		potential = {
+			tag = HAB
+			owns_core_province = 134 # Vienna
+			not = { has_country_flag = formedahu }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = southern_transylvania_area
+				area = transdanubia_area
+				area = alfold_area
+				area = slovakia_area
+				area = transylvania_area
+				area = croatia_area
+				area = slavonia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			stability = 1
+			is_at_war = no
+			NOT = { exists = HUN }
+			southern_transylvania_area = {
+				type = all
+				owned_by = ROOT
+			}
+			transdanubia_area = {
+				type = all
+				owned_by = ROOT
+			}	
+			alfold_area = {
+				type = all
+				owned_by = ROOT
+			}
+			slovakia_area = {
+				type = all
+				owned_by = ROOT
+			}	
+			transylvania_area = {
+				type = all
+				owned_by = ROOT
+			}
+			croatia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			slavonia_area = {
+				type = all
+				owned_by = ROOT
+			}	
+		}
+		effect = {
+			change_tag = AHU
+			add_government_reform = austrian_dual_monarchy
+			add_accepted_culture = hungarian
+			add_legitimacy = 25
+			add_prestige = 25
+			set_government_rank = 3
+			set_country_flag = formedahu
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+	}
+}
