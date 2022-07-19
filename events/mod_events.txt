@@ -1,0 +1,119 @@
+namespace = artillery_mod
+
+country_event = { #Removes regular cavalry or infantry if it exists.
+	id = artillery_mod.1
+	title = "none"
+	desc = "none"
+	picture = "none"
+	hidden = yes
+	is_triggered_only = yes
+	trigger = {
+		has_regular_units = yes
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_modifier = cossack_morale_offset
+				}
+			}
+			add_country_modifier = {
+				name = cossack_morale_offset
+				duration = -1
+				hidden = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_modifier = streltsy_morale_offset
+				}
+			}
+			add_country_modifier = {
+				name = streltsy_morale_offset
+				duration = -1
+				hidden = yes
+			}
+		}
+		while = {
+			limit = {
+				any_hired_mercenary_company = {
+					location = {
+						NOT = { has_province_flag = mercs_in_province }
+					}
+				}
+			}
+			random_hired_mercenary_company = {
+				limit = {
+					location = {
+						NOT = { has_province_flag = mercs_in_province }
+					}
+				}
+				location = {
+					set_province_flag = mercs_in_province
+				}
+			}
+		}
+		while = {
+			limit = {
+				any_province = {
+					OR = {
+						cavalry_in_province = ROOT 
+						infantry_in_province = ROOT 
+					}
+					NOT = { has_province_flag = already_killed_units }
+					NOT = { has_province_flag = mercs_in_province }
+					unit_in_battle = no
+				}
+			}
+			random_province = {
+				limit = {
+					OR = {
+						cavalry_in_province = ROOT
+						infantry_in_province = ROOT
+					}
+					NOT = { has_province_flag = already_killed_units }
+					NOT = { has_province_flag = mercs_in_province }
+					unit_in_battle = no
+				}
+				remove_regular_units_from_prov = yes
+				set_province_flag = already_killed_units
+			}
+		}
+	}
+	option = {}
+	after = {
+		every_province = {
+			limit = {
+				OR = {
+					has_province_flag = already_killed_units
+					has_province_flag = mercs_in_province
+				}
+			}
+			clr_province_flag = already_killed_units
+			clr_province_flag = mercs_in_province
+		}
+	}
+}
+province_event = {
+	id = artillery_mod.2 #For the AI
+	title = "none"
+	desc = "none"
+	picture = "none"
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		remove_regular_units_from_prov = yes
+	}
+	option = {}
+}
+province_event = { #Dlc error
+	id = artillery_mod.3
+	title = "artillery_mod.3.t"
+	picture = "none"
+	is_triggered_only = yes
+	desc = "artillery_mod.3.d"
+	option = {
+		name = "artillery_mod.3.a"
+	}
+}

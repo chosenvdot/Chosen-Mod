@@ -1,0 +1,8 @@
+cossack_morale_offset = {
+	land_morale = 0.95
+	is_cossack_modifier = yes
+}
+streltsy_morale_offset = {
+	land_morale = 0.95
+	is_streltsy_modifier = yes
+}

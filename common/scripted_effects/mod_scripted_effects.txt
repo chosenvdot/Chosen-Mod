@@ -1,0 +1,105 @@
+remove_regular_units_from_prov = { #Replaces regular infantry and cavalry with cawa/cossack units for mechanic use
+	if = {
+		limit = {
+			unit_in_battle = no
+		}
+		set_variable = {
+			which = infantry_in_province
+			value = 0
+		}
+		set_variable = {
+			which = cavalry_in_province
+			value = 0
+		}
+		while = {
+			limit = {
+				num_of_units_in_province = {
+					who = controller
+					type = infantry
+					amount = 1
+				}
+			}
+			kill_units = {
+				type = infantry
+				who = controller
+				amount = 1
+			}
+			change_variable = {
+				which = infantry_in_province
+				value = 1
+			}
+		}
+		while = {
+			limit = {
+				num_of_units_in_province = {
+					who = controller
+					type = cavalry
+					amount = 1
+				}
+			}
+			kill_units = {
+				type = cavalry
+				who = controller
+				amount = 1
+			}
+			change_variable = {
+				which = cavalry_in_province
+				value = 1
+			}
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = infantry_in_province
+					value = 1
+				}
+			}
+			if = {
+				limit = { has_dlc = "Origins" }
+				cawa_infantry = controller
+			}
+			else_if = {
+				limit = { has_dlc = "Dharma" }
+				rajput_infantry = controller
+			}
+			else_if = {
+				limit = { has_dlc = "Third Rome" }
+				streltsy_infantry = controller
+			}
+			else = {
+				province_event = { id = artillery_mod.3 } #dlc notification
+			}
+			subtract_variable = {
+				which = infantry_in_province
+				value = 1
+			}
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = cavalry_in_province
+					value = 1
+				}
+			}
+			if = {
+				limit = { has_dlc = "The Cossacks" }
+				cossack_cavalry = controller
+			}
+			else = {
+				province_event = { id = artillery_mod.3 } #dlc notification
+			}
+			subtract_variable = {
+				which = cavalry_in_province
+				value = 1
+			}
+		}
+		set_variable = {
+			which = cavalry_in_province
+			value = 0
+		}
+		set_variable = {
+			which = infantry_in_province
+			value = 0
+		}
+	}
+}
