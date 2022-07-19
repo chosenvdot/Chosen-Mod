@@ -123,10 +123,10 @@ coastal = {
 }
 
 seat_in_parliament = {
-	#local_manpower_modifier = 0.1			#BTAddOn removed - local representation at a federal level doesn't neccessarily mean a boost to local economy.
-	#local_sailors_modifier = 0.05			#BTAddOn removed - local representation at a federal level doesn't neccessarily mean a boost to local economy.
-	#local_tax_modifier = 0.1			#BTAddOn removed - local representation at a federal level doesn't neccessarily mean a boost to local economy.
-	#local_production_efficiency = 0.1			#BTAddOn removed - local representation at a federal level doesn't neccessarily mean a boost to local economy.
+	local_manpower_modifier = 0.1			#BTAddOn removed - local representation at a federal level doesn't neccessarily mean a boost to local economy.
+	local_sailors_modifier = 0.05			#BTAddOn removed - local representation at a federal level doesn't neccessarily mean a boost to local economy.
+	local_tax_modifier = 0.1			#BTAddOn removed - local representation at a federal level doesn't neccessarily mean a boost to local economy.
+	local_production_efficiency = 0.1			#BTAddOn removed - local representation at a federal level doesn't neccessarily mean a boost to local economy.
 	local_institution_spread = 0.10			#BTAddOn new - local representation at a federal level does often mean the province benefits from new ideas sooner. This also is a consolation prize for the enlightenment, which no longer spreads in provinces with a seat in parliament.
 	local_development_cost = -0.05			#BTAddOn new - little bonus, because I say so =p
 	local_unrest = -2			#BTAddOn new - People appreciate representation
@@ -148,7 +148,6 @@ tropical = {
 	#local_friendly_movement_speed = -0.35
 	
 	allowed_num_of_buildings = -1
-	local_development_cost = 0.1
 	local_institution_spread = -0.1
 
 	picture = "climate_tropical"
@@ -160,7 +159,6 @@ arctic = {
 	local_hostile_attrition = 5
 	
 	allowed_num_of_buildings = -1
-	local_development_cost = 1.0
 	local_institution_spread = -0.3
 	
 	picture = "climate_arctic"
@@ -172,7 +170,6 @@ arid = {
 	local_hostile_attrition = 5
 	
 	allowed_num_of_buildings = -1
-	local_development_cost = 0.5
 	local_institution_spread = -0.2
 	
 	picture = "climate_arid"
@@ -247,7 +244,7 @@ blockaded = {
 }
 
 no_adjacent_controlled = {
-	local_colonial_growth = -20			#BTAddOn changed from -5 - The first colony is always the hardest =p. This gives an advantage to growing colonies and Old World expansionists (Russia), but slightly weakens early colonisers in North America and especially land grabbers who try to get all the CoTs or try to get the Pope to Tordesillas their way into monopoly
+	local_colonial_growth = -5			#BTAddOn changed from -5 - The first colony is always the hardest =p. This gives an advantage to growing colonies and Old World expansionists (Russia), but slightly weakens early colonisers in North America and especially land grabbers who try to get all the CoTs or try to get the Pope to Tordesillas their way into monopoly
 }
 
 provincial_tax_income = {
@@ -284,7 +281,7 @@ province_razed = {
 
 development = {
 	allowed_num_of_buildings = 0.1			#Original vanilla 0.1, increased to 0.2 in Terrain Addon, then halfed to 0.1 again with dev doubling
-	supply_limit_modifier = 0.1			#BTAddOn changed from 0.02 in vanilla and 0.05 in Terrain addon and also lowering bonus in tech. This makes local development the primary factor in supply limit.
+	supply_limit_modifier = 0.2			#BTAddOn changed from 0.02 in vanilla and 0.05 in Terrain addon and also lowering bonus in tech. This makes local development the primary factor in supply limit.
 	local_missionary_strength = -0.001
 	land_forcelimit	= 0.05			# special case, affected by autonomy
 	naval_forcelimit = 0.05			# special case, affected by autonomy & set to 0 by code if not port
