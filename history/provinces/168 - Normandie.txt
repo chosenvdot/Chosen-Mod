@@ -3,17 +3,17 @@
 #Region - France
 #Area - Normandy
 
-owner = ENG
-controller = ENG 
+owner = NRM
+controller = NRM 
 capital = "Caen"
 is_city = yes
 culture = normand
 religion = catholic
 hre = no
-base_tax = 8
-base_production = 8
+base_tax = 3
+base_production = 3
 trade_goods = cloth
-base_manpower = 5
+base_manpower = 2
 add_core = ENG
 add_permanent_claim = FRA
 add_core = NRM

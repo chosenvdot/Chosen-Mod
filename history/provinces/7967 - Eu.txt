@@ -1,8 +1,8 @@
  
 #BT's Western Europe Overhaul in 12.0
 
-owner = ENG
-controller = ENG
+owner = NRM
+controller = NRM
 add_core = ENG
 add_core = NRM
 # add_core = FRA

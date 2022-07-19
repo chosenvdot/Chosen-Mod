@@ -3,8 +3,8 @@
 #Region - France
 #Area - Loire
 
-owner = ENG
-controller = ENG
+owner = NRM
+controller = NRM
 capital = "Le Mans"
 is_city = yes
 culture = angevin_culture

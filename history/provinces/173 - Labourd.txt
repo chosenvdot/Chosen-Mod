@@ -3,8 +3,8 @@
 #Region - France
 #Area - Pyrenees
 
-owner = ENG
-controller = ENG
+owner = GUY
+controller = GUY
 capital = "Bayonne"
 is_city = yes
 culture = basque

@@ -3,8 +3,8 @@
 #Region - France
 #Area - Normandy
 
-owner = ENG
-controller = ENG
+owner = NRM
+controller = NRM
 add_core = ENG
 add_core = NRM
 add_permanent_claim = FRA
@@ -13,8 +13,8 @@ is_city = yes
 culture = normand
 religion = catholic
 hre = no
-base_tax = 12
-base_production = 12
+base_tax = 6
+base_production = 6
 trade_goods = cloth
 base_manpower = 6
 fort_15th = yes
