@@ -43,3 +43,5 @@ NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.0
 -- Economy
 NDefines.NEconomy.CARAVAN_POWER_MAX = 4
 NDefines.NEconomy.CARAVAN_POWER_MIN = 1
+NDefines.NEconomy.GOLD_MINE_SIZE_PRIMITIVES = 3
+NDefines.NEconomy.GOLD_MINE_SIZE = 30
