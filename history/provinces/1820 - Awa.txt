@@ -1,18 +1,18 @@
  
 #1820 - Awa
 
-owner = HSK
-controller = HSK
+owner = UES
+controller = UES
 culture = japanese
 religion = shinto
 capital = "Tokushima"
 trade_goods = fish
 hre = no
-base_tax = 6
-base_production = 6
-base_manpower = 4
+base_tax = 1
+base_production = 1
+base_manpower = 1
 is_city = yes
-add_core = HSK
+add_core = UES
 
 
 

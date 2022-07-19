@@ -1,18 +1,18 @@
  
 #1029 - Kai
 
-owner = ODA
-controller = ODA
+owner = UES
+controller = UES
 culture = togoku
 religion = shinto
 capital = "Kofu"
 trade_goods = livestock
 hre = no
-base_tax = 6
-base_production = 6
-base_manpower = 6
+base_tax = 1
+base_production = 1
+base_manpower = 1
 is_city = yes
-add_core = ODA
+add_core = UES
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }

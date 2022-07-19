@@ -1,18 +1,18 @@
  
 #1019 - Harima
 
-owner = YMN
-controller = YMN
+owner = UES
+controller = UES
 culture = japanese
 religion = shinto
 capital = "Himeji"
 trade_goods = bt_trade_good_beer
 hre = no
-base_tax = 6
-base_manpower = 4
-base_production = 6
+base_tax = 1
+base_manpower = 1
+base_production = 1
 is_city = yes
-add_core = YMN
+add_core = UES
 add_core = HSK
 add_core = AKM
 discovered_by = chinese

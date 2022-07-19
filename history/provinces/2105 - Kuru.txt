@@ -1,9 +1,9 @@
  
 # 2105 - Kuru
 
-owner = EJZ
-controller = EJZ
-add_core = EJZ
+owner = MJZ
+controller = MJZ
+add_core = MJZ
 culture = manchu
 religion = tengri_pagan_reformed
 capital = "Kuru"

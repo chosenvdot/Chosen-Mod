@@ -9,9 +9,9 @@ hre = no
 base_tax = 2  
 base_production = 2 
 base_manpower = 2 
-owner = ANU
-controller = ANU
-add_core = ANU
+owner = UES
+controller = UES
+add_core = UES
 is_city = yes
 
 

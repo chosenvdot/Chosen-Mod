@@ -5,9 +5,9 @@ latent_trade_goods = {
 	coal
 }
 
-owner = ANU
-controller = ANU
-add_core = ANU
+owner = UES
+controller = UES
+add_core = UES
 is_city = yes
 culture = ainu
 religion = animism

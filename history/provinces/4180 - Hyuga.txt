@@ -1,18 +1,18 @@
  
 #4180 - Hyuga
 
-owner = ITO
-controller = ITO
+owner = UES
+controller = UES
 culture = kyushuan
 religion = shinto
 capital = "Obi"
 trade_goods = livestock
 hre = no
-base_tax = 6
-base_manpower = 4
-base_production = 4
+base_tax = 1
+base_manpower = 1
+base_production = 1
 is_city = yes
-add_core = ITO
+add_core = UES
 add_core = SMZ
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }

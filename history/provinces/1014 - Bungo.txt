@@ -1,18 +1,18 @@
  
 #1014 - Bungo
 
-owner = ITO
-controller = ITO
+owner = UES
+controller = UES
 culture = kyushuan
 religion = shinto
 capital = "Funai"
 trade_goods = tropical_wood
 hre = no
-base_tax = 8 
-base_production = 4
-base_manpower = 6
+base_tax = 1
+base_production = 1
+base_manpower = 1
 is_city = yes
-add_core = ITO
+add_core = UES
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }

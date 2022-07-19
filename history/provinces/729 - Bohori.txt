@@ -1,9 +1,9 @@
  
 #729 - Bohori
 
-owner = NHX
-controller = NHX
-add_core = NHX
+owner = MJZ
+controller = MJZ
+add_core = MJZ
 culture = manchu
 religion = tengri_pagan_reformed
 capital = "Bohori"

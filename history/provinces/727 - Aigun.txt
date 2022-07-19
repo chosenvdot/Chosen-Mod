@@ -1,9 +1,9 @@
  
 #727 - Aigun
 
-owner = MYR
-controller = MYR
-add_core = MYR
+owner = MJZ
+controller = MJZ
+add_core = MJZ
 culture = manchu
 religion = tengri_pagan_reformed
 capital = "Aigun"

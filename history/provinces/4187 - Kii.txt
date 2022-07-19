@@ -1,18 +1,18 @@
  
 #4187 - Kii
 
-owner = ASK
-controller = ASK
+owner = UES
+controller = UES
 culture = japanese
 religion = shinto
 capital = "Wakayama"
 trade_goods = naval_supplies
 hre = no
-base_tax = 4 
-base_manpower = 4
-base_production = 6
+base_tax = 1
+base_manpower = 1
+base_production = 1
 is_city = yes
-add_core = ASK
+add_core = UES
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }

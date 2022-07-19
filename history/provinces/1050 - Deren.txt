@@ -1,17 +1,17 @@
  
 #1050 - Deren
 
-owner = NVK
-controller = NVK
-add_core = NVK
+owner = MJZ
+controller = MJZ
+add_core = MJZ
 culture = nivkh
 religion = tengri_pagan_reformed
 capital = "Deren"
 trade_goods = fur
 hre = no
-base_tax = 8
-base_production = 8
-base_manpower = 6
+base_tax = 1
+base_production = 1
+base_manpower = 1
 is_city = yes
 extra_cost = 10
 

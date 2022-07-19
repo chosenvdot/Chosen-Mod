@@ -1,18 +1,18 @@
  
 #1837 - Etchu
 
-owner = ASK
-controller = ASK
+owner = UES
+controller = UES
 culture = togoku
 religion = shinto
 capital = "Kanazawa"
 trade_goods = grain
 hre = no
-base_tax = 6
-base_production = 6
-base_manpower = 6
+base_tax = 1
+base_production = 1
+base_manpower = 1
 is_city = yes
-add_core = ASK
+add_core = UES
 fort_15th = yes #Nanao Castle
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }

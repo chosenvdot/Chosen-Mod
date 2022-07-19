@@ -1,18 +1,18 @@
  
 #Northern Mutsu
 
-owner = AKT
-controller = AKT
+owner = UES
+controller = UES
 culture = togoku
 religion = shinto
 capital = "Sannohe"
 trade_goods = livestock
 hre = no
-base_tax = 6
-base_manpower = 4
-base_production = 6
+base_tax = 1
+base_manpower = 1
+base_production = 1
 is_city = yes
-add_core = AKT
+add_core = UES
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }

@@ -1,9 +1,9 @@
  
 #4214 - Kalar
 
-owner = NVK
-controller = NVK
-add_core = NVK
+owner = MJZ
+controller = MJZ
+add_core = MJZ
 culture = nivkh
 religion = tengri_pagan_reformed
 capital = "Kalar"

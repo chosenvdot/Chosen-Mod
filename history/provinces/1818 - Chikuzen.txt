@@ -5,19 +5,19 @@ latent_trade_goods = {
 	coal
 }
 
-owner = OUC
-controller = OUC
+owner = UES
+controller = UES
 culture = kyushuan
 religion = shinto
 capital = "Hakata"
 trade_goods = chinaware
 hre = no
-base_tax = 10
-base_production = 6
-base_manpower = 4
+base_tax = 1
+base_production = = 1
+base_manpower = 1
 is_city = yes
 fort_15th = yes #Tachibanayama Castle
-add_core = OUC
+add_core = UES
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }
