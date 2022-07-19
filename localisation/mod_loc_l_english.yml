@@ -1,9 +1,0 @@
-﻿l_english:
- artillery_mod.3.t: "Missing DLC"
- artillery_mod.3.d: "Cossacks DLC is required for this mod, alongside one of the following:\nOrigins\nDharma\nThird Rome"
- artillery_mod.3.a: "Blame Paradox!"
- cossack_morale_offset: ""
- desc_cossack_morale_offset: ""
- streltsy_morale_offset: ""
- desc_streltsy_morale_offset: ""
- illegal_units_tt: "Present Regulars"

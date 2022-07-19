@@ -10,7 +10,7 @@ nationalist_rebels = {
 	defection = nation_rebel_tag			# If the country seeks independence, defection specifies what type of provinces it wants.
 	independence = nation_rebel_tag 		# Seeks independence for spawn province culture. Will not spawn at all if there is no suitable tag.
 	defect_delay = 60				# Can spontaneously declare independence after 60 months (earliest)
-	unit_transfer = no #changes to prevent regular units
+	unit_transfer = yes				# Units switch allegiance after enforcing demands.
 	gfx_type = culture_province	
 	will_relocate = yes	
 	
@@ -20,10 +20,10 @@ nationalist_rebels = {
 	smart = yes
 	
 	artillery = 0.1
-	infantry = 0.6
-	cavalry = 0.3
+	infantry = 0.8 # BT; 0.6
+	cavalry = 0.2 # BT; 0.3
 	
-	morale = 10 #temporary fix to stop ai suiciding into rebels
+	morale = 1.0
 
 	# Possible handle actions
 	handle_action_negotiate = yes
@@ -182,6 +182,38 @@ nationalist_rebels = {
 			factor = 1.3
 			owner = {
 				NOT = { legitimacy_or_horde_unity = 75 }
+			}
+		}
+		###########################
+		#BT Added factors
+		##########################
+		modifier = {
+			factor = 0.001
+			culture = saxon
+			NOT = {
+				any_country = {
+					primary_culture = saxon
+					is_core = ROOT
+				}
+			}
+			OR = {
+				area = wallachia_area
+				area = upper_muntenia_area
+				area = oltenia_area
+			}
+		}
+		modifier = {
+			factor = 0.001
+			culture = albanian
+			NOT = {
+				any_country = {
+					primary_culture = albanian
+					is_core = ROOT
+				}
+			}
+			OR = {
+				area = morea_area
+				area = western_aegean_area
 			}
 		}
 	}

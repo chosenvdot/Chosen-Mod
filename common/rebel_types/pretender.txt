@@ -9,7 +9,7 @@ pretender_rebels = {
 	government = monarchy
 	defection = none
 	independence = none
-	unit_transfer = no #changes to prevent regular units spawning
+	unit_transfer = yes
 	gfx_type = culture_province	
 	
 	resilient = yes					# Will not disband on defeat.
@@ -22,10 +22,10 @@ pretender_rebels = {
 	
 	
 	artillery = 0.1
-	infantry = 0.5
-	cavalry = 0.4
+	infantry = 0.6 #From 0.5
+	cavalry = 0.3 #From 0.4 to account for Misc's cav rebalance.
 	
-	morale = 12.5 #temporary fix to stop ai suiciding into rebels
+	morale = 1.25
 	
 	# Possible handle actions
 	handle_action_negotiate = no
