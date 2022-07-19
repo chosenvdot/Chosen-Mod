@@ -1,0 +1,48 @@
+base_values = {
+	max_absolutism = 65
+	merchants = 2							#Start with 2 merchants
+	diplomats = 2							#Start with 2 diplomats..
+	missionaries = 1						#1 missionary
+	army_tradition_decay = 0.05				#lose 5% yearly
+	navy_tradition_decay = 0.05				#lose 5% yearly
+	prestige_decay = 0.05					#lose 5% prestige each year
+	tolerance_own = 3
+	diplomatic_upkeep = 4
+	tolerance_heathen = -3
+	tolerance_heretic = -2
+	global_missionary_strength = 0.02
+	global_manpower = 10.0
+	advisor_pool = 3
+	colonist_placement_chance = 0.1
+	free_leader_pool = 1
+	republican_tradition = 1
+	monthly_fervor_increase = 1
+	vassal_income = 0.10
+	horde_unity = -2
+	devotion = -0.5
+	meritocracy = -2
+	governing_capacity = 200
+	num_accepted_cultures = 2
+	monthly_splendor = 1
+	artillery_bonus_vs_fort = 5
+	cav_to_inf_ratio = 0.5
+	merc_maintenance_modifier = 0.5
+	monthly_heir_claim_increase = 0.208
+	tolerance_of_heretics_capacity = 3
+	tolerance_of_heathens_capacity = 3
+	#changes, so drill always remains high
+	drill_decay_modifier = -0.8
+}
+cawa_regiment = {
+	land_morale = 0.95 #offsets drill penalty
+}
+regiment_drill_modifier = { #individual unit modifier (removed)
+}
+army_drill_modifier = { #overall effect on army by average drill
+	land_morale = -0.95 #drill now penalizes morale so artillery always has low morale
+}
+cossacks_modifier = { #scaled country effect relative to the cavalry ratio of FL (removed)
+}
+rajput_regiment = {
+	land_morale = 0.95 #offsets drill penalty
+}

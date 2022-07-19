@@ -1,0 +1,89 @@
+has_regular_units = { #Checks if country has regular units
+	custom_trigger_tooltip = {
+		tooltip = illegal_units_tt
+		variable_arithmetic_trigger = {
+			#Calculate total number of non-regulars
+			export_to_variable = {
+				which = no_mercs
+				value = trigger_value:num_of_mercenaries
+			}
+			export_to_variable = {
+				which = no_banners
+				value = trigger_value:num_of_banners
+			}
+			export_to_variable = {
+				which = no_cawa
+				value = trigger_value:num_of_cawa
+			}
+			export_to_variable = {
+				which = no_cossacks
+				value = trigger_value:num_of_cossacks
+			}
+			export_to_variable = {
+				which = no_marines
+				value = trigger_value:num_of_marines
+			}
+			export_to_variable = {
+				which = no_rajput
+				value = trigger_value:num_of_rajput
+			}
+			export_to_variable = {
+				which = no_streltsy
+				value = trigger_value:num_of_streltsy
+			}
+			export_to_variable = {
+				which = no_janissaries
+				value = trigger_value:num_of_janissaries
+			}
+			export_to_variable = {
+				which = illegal_units
+				value = trigger_value:num_of_infantry
+			}
+			export_to_variable = {
+				which = illegal_cav
+				value = trigger_value:num_of_cavalry
+			}
+			change_variable = {
+				which = illegal_units
+				which = illegal_cav
+			}
+			subtract_variable = {
+				which = illegal_units
+				which = no_banners
+			}
+			subtract_variable = {
+				which = illegal_units
+				which = no_cawa
+			}
+			subtract_variable = {
+				which = illegal_units
+				which = no_cossacks
+			}
+			subtract_variable = {
+				which = illegal_units
+				which = no_janissaries
+			}
+			subtract_variable = {
+				which = illegal_units
+				which = no_marines
+			}
+			subtract_variable = {
+				which = illegal_units
+				which = no_rajput
+			}
+			subtract_variable = {
+				which = illegal_units
+				which = no_streltsy
+			}
+			subtract_variable = {
+				which = illegal_units
+				which = no_mercs
+			}
+			#Checks if any illegal units exist
+			check_variable = {
+				which = illegal_units
+				value = 1
+			}
+		}
+	}
+}
