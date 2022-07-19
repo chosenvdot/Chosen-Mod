@@ -3,9 +3,9 @@
 #Region - Scandinavia
 #Area - Skaneland
 
-add_core = DAN
-owner = DAN
-controller = DAN
+add_core = SWE
+owner = SWE
+controller = SWE
 culture = danish
 religion = catholic
 hre = no

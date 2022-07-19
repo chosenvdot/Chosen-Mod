@@ -397,7 +397,7 @@ age_of_reformation = {
 				tag = SPA
 			}
 			modifier = {
-				shock_damage_received = -0.3
+				shock_damage_received = -0.15
 			}
 			ai_will_do = {
 				factor = 100

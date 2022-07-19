@@ -11,8 +11,8 @@ capital = "Brussels"
 culture = dutch
 religion = catholic
 hre = yes
-base_tax = 14
-base_production = 14
+base_tax = 8
+base_production = 5
 trade_goods = cloth			#Niki - Those were major Beer producing regions. So was Brussels but I was reluctant to change it since the city itself was a major cloth producer.
 base_manpower = 7
 

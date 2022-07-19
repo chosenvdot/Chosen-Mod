@@ -9,9 +9,9 @@ religion = nahuatl
 capital = "Tenochtitlan" 
 trade_goods = gold
 hre = no 
-base_tax = 12
-base_production = 12
-base_manpower = 8
+base_tax = 1
+base_production = 1
+base_manpower = 2
 fort_15th = yes
 is_city = yes
 1444.1.1 = { discovered_by = AZT }

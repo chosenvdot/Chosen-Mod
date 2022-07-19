@@ -1,9 +1,9 @@
  
 #BT reoverhaul
 
-owner = DAN
-controller = DAN
-add_core = DAN
+owner = SWE
+controller = SWE
+add_core = SWE
 culture = danish
 religion = catholic
 capital = "Helsingborg"
