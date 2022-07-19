@@ -50,7 +50,7 @@ btp_dano_scottish_wedding = {
 #Scandinavia flavour stuff
 
 swe_settled_finland = {
-	local_manpower_modifier = 0.20
+	local_manpower_modifier = 0.10
 }
 swe_imperial_influence = {
 	spy_offence = 0.20
@@ -73,7 +73,7 @@ dan_sound_toll_strengthened = {
 	trade_efficiency = 0.2
 }
 nor_markland_timber = {
-	local_development_cost = -1			 #Meant to work with glacial + arctic modifiers, hence the size.
+	local_development_cost = -0.3			 #Meant to work with glacial + arctic modifiers, hence the size.
 }
 nor_haakons_legacy = {
 	legitimacy = 1
@@ -85,7 +85,7 @@ nor_harder_than_hardrade = {
 }
 
 dtt_bread_bonus_prod = {
-	trade_goods_size_modifier = 0.25
+	trade_goods_size_modifier = 0.1
 }
 
 bt_dev_cost_1 = {
@@ -153,8 +153,8 @@ cinque_ports_modifier = {
 }
 
 wealth_of_carbery_modifier = {
-	trade_goods_size = 0.5
-	local_development_cost = -0.20
+	trade_goods_size = 1
+	local_development_cost = -0.05
 }
 
 stannery_law_modifier = {

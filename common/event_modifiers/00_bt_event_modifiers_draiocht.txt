@@ -204,7 +204,7 @@ bt_birthplace_lager = {
 }
 
 bt_prussian_blue = {
-	trade_goods_size = 2
+	trade_goods_size = .5
 }
 
 bt_forests_of_cadore = {
@@ -259,30 +259,9 @@ bt_mercury_of_almaden = {
 ###########################
 #Other Stuff
 ###########################
-irish_catholicism_not_allowed = {
-	local_unrest = 6
-	local_missionary_strength = 0.01
-}
-
-irish_catholicism_allowed = {
-	local_unrest = -3
-	local_missionary_strength = -0.08
-}
-
-reformation_takes_hold_in_ireland = {
-	local_development_cost = -0.05
-}
-
-irish_fealty_negotiations_ongoing = {
-	diplomatic_upkeep = -1
-}
-
-humiliated_by_former_vassal = {
-	diplomatic_reputation = -1
-}
 
 huzzah_for_devolution = {
-	diplomatic_reputation = 2
+	diplomatic_reputation = 1
 }
 
 culture_shift_tension_bt = {
@@ -296,20 +275,11 @@ religious_shift_tension_bt = {
 
 grand_center_of_trade_modifier = {
 	local_institution_spread = 0.25
-	province_trade_power_value = 30
+	province_trade_power_value = 10
 	naval_forcelimit = 5
-	local_development_cost = -0.1
+	local_development_cost = -0.025
 	local_sailors_modifier = 1.00
 	picture = "province_trade_power_value"
-}
-
-btpl_recently_integrated = {
-	local_unrest = 10
-}
-
-bt_tanistry_waiting_on_heir = {
-	local_unrest = 4
-	heir_chance = 0.5
 }
 
 bt_tanistry_underaged_heir = {
@@ -367,12 +337,12 @@ btpl_clearing_the_inlet = {
 }
 
 btpl_stabilising_the_economy = {
-	global_tax_modifier = -0.20
+	global_tax_modifier = -0.1
 }
 
 btpl_investing_in_antwerp = {
-	local_development_cost = -0.2
-	local_tax_modifier = -0.8
+	local_development_cost = -0.05
+	local_tax_modifier = -0.4
 	local_unrest = -5
 }
 
@@ -383,7 +353,7 @@ bt_guelph_nation = {
 
 bt_white_guelph_nation = {
 	papal_influence = -1
-	global_trade_power = 0.05
+	global_trade_power = 0.025
 	diplomatic_upkeep = 1
 }	#Not currently used in game yet
 
@@ -439,8 +409,8 @@ bt_recently_granted_dhimmi_provinces = {
 }
 
 bt_queen_of_the_hansa = {
-	province_trade_power_value = 10
-	local_tax_modifier = 0.25
+	province_trade_power_value = 5
+	local_tax_modifier = 0.1
 }
 
 bt_investing_in_mediterranean_trading_enclaves = {

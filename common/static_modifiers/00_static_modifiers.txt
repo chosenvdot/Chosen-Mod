@@ -252,12 +252,12 @@ no_adjacent_controlled = {
 
 provincial_tax_income = {
 	#a tax income of 1.0 appears to be hardcoded into the engine. I hate messy stuff like this, but if I want to double dev, I'm going to have to offset it
-	tax_income = .225		#aforementioned offset
+	tax_income = .2	#aforementioned offset
 	regiment_recruit_speed = -0.005
 }
 
 provincial_production_size = {
-	trade_goods_size = 0.14
+	trade_goods_size = 0.16
 	ship_recruit_speed = -0.005 # BT; -0.01
 }
 
@@ -572,10 +572,10 @@ base_values = {
 	diplomatic_upkeep = 2			#BTAddOn changed from 4 - Note adding dip upkeep bonus to government levels and institutions, so kingdoms start with the same as vanilla, empires get 1 more, while countries with feudalism are unaffected, but countries without have 1 less.
 	tolerance_heathen = -3
 	tolerance_heretic = -2
-	global_missionary_strength = 0.01			#BTAddOn changed from 0.02 - BT generally lowers development by a fair amount, and provinces struck me as a little to easy to convert beforehand, so reducing the base conversion speed.
-	global_manpower = 5.0			#BTAddOn changed from 10.0 - It strikes me as odd that a country, even one with a single 1/1/1 province, automatically has around half the manpower of a large kingdom. I know this is a 'balance' thing, but asymmetry is fun.
+	global_missionary_strength = 0.02			#BTAddOn changed from 0.02 - BT generally lowers development by a fair amount, and provinces struck me as a little to easy to convert beforehand, so reducing the base conversion speed.
+	global_manpower = 10.0			#BTAddOn changed from 10.0 - It strikes me as odd that a country, even one with a single 1/1/1 province, automatically has around half the manpower of a large kingdom. I know this is a 'balance' thing, but asymmetry is fun.
 	advisor_pool = 3
-	colonist_placement_chance = 0.05			#Changed in 1.33 to 0.1, or double.... I have mixed emotions, but I feel generally vanilla balances moves towards far too aggressive, early, and mindless colonisation. I'm leaving the old value for the moment. -Draicoht
+	colonist_placement_chance = 0.1			#Changed in 1.33 to 0.1, or double.... I have mixed emotions, but I feel generally vanilla balances moves towards far too aggressive, early, and mindless colonisation. I'm leaving the old value for the moment. -Draicoht
 	free_leader_pool = 1
 	republican_tradition = 1
 	monthly_fervor_increase = 1
@@ -584,10 +584,10 @@ base_values = {
 	devotion = -0.5
 	meritocracy = -2
 	governing_capacity = 200			#BTB Probably not a wise idea to lower from 200 to 80 based on the 10 to 4 max states conversion.
-	num_accepted_cultures = 1			#BTAddOn changed from 2 - Note accepted culture bonus to government levels, so kingdoms start with the same as vanilla, and empires get 1 more.
+	num_accepted_cultures = 2			#BTAddOn changed from 2 - Note accepted culture bonus to government levels, so kingdoms start with the same as vanilla, and empires get 1 more.
 	monthly_splendor = 1
 	artillery_bonus_vs_fort = 5
-	cav_to_inf_ratio = 0.3			#BTAddOn changed from 0.5 - Seriously, what normal army was a full 50 percent cavalry? Realistic might be closer to 10 as a base, but 30 hits a nice gameplay/realism balance, I think.
+	cav_to_inf_ratio = 0.5			#BTAddOn changed from 0.5 - Seriously, what normal army was a full 50 percent cavalry? Realistic might be closer to 10 as a base, but 30 hits a nice gameplay/realism balance, I think.
 	merc_maintenance_modifier = 0.5
 	monthly_heir_claim_increase = 0.208
 	tolerance_of_heretics_capacity = 3
@@ -833,10 +833,10 @@ mercantilism = {
 
 army_tradition = {
 	recover_army_morale_speed = 0.1
-	land_morale = 0.25
+	land_morale = 0.2
 	manpower_recovery_speed = 0.1
 	#siege_ability = 0.05			#BTAddOn removed - the only thing an inexperienced army can do well is wait around... which is essentially what most sieges were. This makes the least sense to me as a bonus from AT. Additionally, a 5 percent bonus was nothing with the new fort defensive bonuses
-	discipline = 0.05			#BTAddOn new - adding discipline to army tradition. Only makes sense to me. Note this will make battles faster and more deadly, this is intentional.
+	#discipline = 0.05			#BTAddOn new - adding discipline to army tradition. Only makes sense to me. Note this will make battles faster and more deadly, this is intentional.
 	temples_influence = 0.1
 	mr_aristocrats_influence = 0.1
 	rr_girondists_influence = 0.1
@@ -1256,17 +1256,16 @@ absolutism = {
 }
 
 low_army_professionalism = {
-	#mercenary_cost = -0.15			#BTAddOn removed. Low professionalism just seemed a bit lacklustre, so I'm spicing it up a bit, but not trying to make it OPed.
-	mercenary_manpower = 0.25			#BTAddOn changed from 0.15. Low professionalism just seemed a bit lacklustre, so I'm spicing it up a bit.
-	mercenary_discipline = 0.05			#BTAddOn added. Making low professionalism armies slightly more attractive, but still not as good as high professionalism ones. More experienced mercenaries equals more discipline.
-	#discipline = -0.1			#BTAddOn added then removed. Apparently bonus begin before penalties leave, causes simultaneous penalty and bonus, which looked absurd.
+	mercenary_cost = -0.15
+	mercenary_manpower = 0.15
 }
 
 high_army_professionalism = {
-	#fire_damage = 0.1			#BTAddOn removed. Replaced by discipline.
-	#shock_damage = 0.1			#BTAddOn removed. Replaced by discipline.
-	#siege_ability = 0.2			#BTAddOn removed. Replaced by discipline, plus I'm getting closer with sieges reblancing in this addon, I don't really want (or think we need) another wild card.
+	fire_damage = 0.1
+	shock_damage = 0.1
+	siege_ability = 0.2
 	drill_decay_modifier = -0.5
+	army_tradition = .5
 }
 
 streltsy_modifier = {
