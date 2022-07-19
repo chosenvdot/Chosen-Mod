@@ -3,8 +3,8 @@
 #Region - Italy
 #Area - Venetia
 
-owner = VRN
-controller = VRN
+owner = VEN
+controller = VEN
 culture = venetian 
 religion = catholic 
 hre = yes 
@@ -14,7 +14,7 @@ trade_goods = cloth			#Luxury Furniture, wine
 base_manpower = 3
 capital = "Verona" 
 is_city = yes 
-add_core = VRN
+add_core = VEN
 
 discovered_by = western
 discovered_by = eastern

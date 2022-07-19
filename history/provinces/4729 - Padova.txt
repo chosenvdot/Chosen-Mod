@@ -1,13 +1,13 @@
  
 #BT Italy reoverhaul
 
-owner = PDV
-controller = PDV
-add_core = PDV
+owner = VEN
+controller = VEN
+add_core = VEN
 culture = venetian
 religion = catholic
 capital = "Padua"
-base_tax = 5
+base_tax = 1
 base_production = 2
 base_manpower = 5
 trade_goods = glass			#ceramics,pottery,musical instruments and goldsmithing
