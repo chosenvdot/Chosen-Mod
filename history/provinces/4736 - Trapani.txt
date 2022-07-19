@@ -12,6 +12,7 @@ base_production = 7
 base_manpower = 3
 trade_goods = salt
 is_city = yes
+add_core = NAP
 hre = no
 
 discovered_by = western

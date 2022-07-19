@@ -1,7 +1,7 @@
 ---Optimization and Graphics
 NDefines.NGame.DAYS_BEHIND_PAUSE = 90
-NDefines.NGame.DAYS_BEHIND_LOWER_SPEED = 45
-NDefines.NEngine.EVENT_PROCESS_OFFSET = 35
+NDefines.NGame.DAYS_BEHIND_LOWER_SPEED = 55
+NDefines.NEngine.EVENT_PROCESS_OFFSET = 55
 NDefines.NGraphics.CAPITAL_INDICATOR_HEIGHT_SCALE = 100.0
 NDefines.NGraphics.CAPITAL_INDICATOR_HEIGHT = 0
 NDefines.NGraphics.BORDER_WIDTH = 1
@@ -40,5 +40,5 @@ NDefines.NMilitary.WARGOAL_MAX_BONUS = 50
 NDefines.NMilitary.SUPPLY_DEPOT_MIL_COST = 10
 
 -- Economy
-NDefines.NEconomy.CARAVAN_POWER_MAX = 25
+NDefines.NEconomy.CARAVAN_POWER_MAX = 4
 NDefines.NEconomy.CARAVAN_POWER_MIN = 1

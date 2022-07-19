@@ -1,10 +1,9 @@
  
 
-owner = ABB
-controller = ABB
-add_core = ABB
+owner = HWA
+controller = HWA
+add_core = HWA
 add_core = MKR
-add_core = HWA # changed from HAW
 culture = nubian 
 religion = shiite
 capital = "Dunqula"

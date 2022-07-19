@@ -2599,57 +2599,6 @@ country_event = {
 	}
 }
 
-# Merino Wool and the Mesta by Daniel Tolman
-
-# Merino Wool
-country_event = {
-	id = flavor_spa.16
-	title = flavor_spa.16.t
-	desc = flavor_spa.16.d
-	picture = ECONOMY_eventPicture
-	
-	fire_only_once = yes
-	
-	trigger = {
-		OR = {
-			tag = SPA
-			AND = {
-				tag = CAS
-				NOT = {
-					exists = SPA
-				}
-			}
-		}
-		NOT = { is_year = 1600 }
-		any_owned_province = {
-			region = iberia_region
-			trade_goods = wool
-		}
-		has_estate = estate_church
-		has_estate = estate_nobles
-	}
-	
-	mean_time_to_happen = {
-		months = 120
-	}
-	
-	option = {
-		name = "flavor_spa.16.a"
-		every_owned_province = {
-			limit = {
-				region = iberia_region
-				trade_goods = wool
-			}
-			add_province_modifier = {
-				name = merino_wool
-				duration = -1
-			}
-		}
-		give_estate_land_share_medium = { estate = estate_nobles }
-		give_estate_land_share_medium = { estate = estate_church }
-	}
-}
-
 # The Mesta
 country_event = {
 	id = flavor_spa.17

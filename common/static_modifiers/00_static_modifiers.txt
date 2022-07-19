@@ -252,12 +252,12 @@ no_adjacent_controlled = {
 
 provincial_tax_income = {
 	#a tax income of 1.0 appears to be hardcoded into the engine. I hate messy stuff like this, but if I want to double dev, I'm going to have to offset it
-	tax_income = .5			#aforementioned offset
+	tax_income = .30		#aforementioned offset
 	regiment_recruit_speed = -0.005
 }
 
 provincial_production_size = {
-	trade_goods_size = 0.2
+	trade_goods_size = 0.13
 	ship_recruit_speed = -0.005 # BT; -0.01
 }
 
@@ -1239,8 +1239,6 @@ is_great_power = {						#Only works with Rights of Man DLC enabled
 }
 
 in_golden_era = {
-	all_power_cost = -0.1
-	global_trade_goods_size_modifier = 0.1
 	land_morale = 0.1
 	naval_morale = 0.1
 	max_absolutism = 5

@@ -1,9 +1,9 @@
  
 #New Province
 
-owner = ALO
-controller = ALO
-add_core = ALO
+owner = HWA
+controller = HWA
+add_core = HWA
 capital = "Halfaya"
 culture = nubian
 religion = coptic
