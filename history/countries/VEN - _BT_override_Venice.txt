@@ -7,3 +7,12 @@
 
 1291.1.1 = { remove_accepted_culture = dalmatian }
 1291.1.2 = { add_accepted_culture = friulian_culture }
+1444.1.1 = {
+	monarch = {
+		name = "Guillaume Fillatre"
+		birth_date = 1414.1.1
+		dip = 4
+		adm = 4
+		mil = 4
+	}
+}
