@@ -140,7 +140,6 @@ coastal_sea = {
 }
 
 tropical = {
-	local_colonial_growth = -10
 	supply_limit_modifier = -0.3
 	local_hostile_attrition = 2
 	#Removed because monsoons
@@ -154,7 +153,6 @@ tropical = {
 }
 
 arctic = {
-	local_colonial_growth = -30
 	supply_limit_modifier = -0.4
 	local_hostile_attrition = 5
 	
@@ -1560,16 +1558,18 @@ invasion_nation = {
 ########################################
 
 native_policy_coexist = {
-	native_uprising_chance = -0.8			#BTAddOn changed from -1.0 - So if every is nice and learns to communicate, everyone become your best friends and you all go skipping through the forest together, while you steal their land, assimilate their culture, pillage their resources, and annihilate their civiliation..... Coexist policy now reduces, but does not eliminate, the chance of native uprisings. Also going to do some events if I can find a trigger to check for the policy set here.
+	native_uprising_chance = -1
+	global_colonial_growth = 35		
 }
 
 native_policy_trade = {
-	native_assimilation = 0.5
-	native_uprising_chance = -0.5
+	native_uprising_chance = -1
+	global_colonial_growth = 35		
 }
 
 native_policy_hostile = {
-	global_colonial_growth = 35			#BTAddOn changed from 20 - Now that native uprising are possible under every policy, giving this policy a boost to make it still competitive.
+	native_uprising_chance = -1
+	global_colonial_growth = 35			
 }
 
 ########################################
