@@ -212,7 +212,7 @@ country_decisions = {
 			bt_generic_can_form_potential_check = yes
 			NOT = { has_country_flag = formed_illyria_flag_btp }
 			NOT = { tag = ILY }
-			tag = POL
+			tag = HUN
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -225,7 +225,6 @@ country_decisions = {
 				province_id = 1766			# Kosovo
 				province_id = 1767			# Slavonia
 				province_id = 1826			# Lika
-				province_id = 3001			# Skopje
 				province_id = 4755			# Sarajevo
 				province_id = 3187			# Podrinje
 				province_id = 4752			# Rijeka
@@ -254,16 +253,15 @@ country_decisions = {
 						province_id = 1766			# Kosovo
 						province_id = 1767			# Slavonia
 						province_id = 1826			# Lika
-						province_id = 3001			# Skopje
 						province_id = 4755			# Sarajevo
 						province_id = 3187			# Podrinje
 						province_id = 4752			# Rijeka
 					}
 				}
-				amount = 9			#At least 2/3 of Illyria's 13 provinces (approximate)
+				amount = 8			#At least 2/3 of Illyria's 13 provinces (approximate)
 			}
 			total_development = 500			#Special discount. Normal requirement for rank 3 is 2000 dev, so this is 75 percent discounted.
-			prestige = 40			#Normal requirement for rank 3 is 75 prestige.
+			prestige = 10			#Normal requirement for rank 3 is 75 prestige.
 		}
 		effect = {
 			change_tag = ILY

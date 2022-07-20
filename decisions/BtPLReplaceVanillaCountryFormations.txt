@@ -1878,7 +1878,6 @@ country_decisions = {
 			bt_generic_can_form_potential_check = yes
 			NOT = { has_country_flag = formed_tripoli_flag }
 			NOT = { tag = MOR }
-			NOT = { tag = TUN }
 			NOT = { tag = TLC }
 			NOT = { tag = ALG }
 			NOT = { tag = TRP }
