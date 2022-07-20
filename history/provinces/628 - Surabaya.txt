@@ -1,17 +1,14 @@
  
 #628 - Surabaya
 
-owner = MAJ
-controller = MAJ
-add_core = MAJ
 culture = javanese
 religion = hinduism
 capital = "Surabaya"
 trade_goods = chinaware
 hre = no
-base_tax = 8
-base_production = 8
-base_manpower = 6
+base_tax = 1
+base_production = 1
+base_manpower = 1
 is_city = yes
 add_core = SRB
 

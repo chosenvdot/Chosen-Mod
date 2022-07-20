@@ -2,16 +2,13 @@
 # ex 8705
 # vanilla uncolonised
 
-owner = LUW
-controller = LUW
-add_core = LUW
 culture = butonese # BT; sulawesi
 religion = animism
 capital = "Poleang" # BT; "Kendari"
 is_city = yes
 hre = no
-base_tax = 2 # BT; 4
-base_production = 3 # BT; 4
+base_tax = 1 # BT; 4
+base_production = 1 # BT; 4
 base_manpower = 1 # BT; 3
 trade_goods = spices
 

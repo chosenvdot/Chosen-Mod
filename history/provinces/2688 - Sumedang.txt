@@ -1,17 +1,13 @@
  
 # renamed in 1.31
 
-owner = GLU # BT; SUN
-controller = GLU # BT; SUN
-add_core = GLU # BT; SUN
-add_core = CRB # BT
 culture = sundanese
 religion = sunni # BT; hinduism
 capital = "Cirebon" # BT; "Sumedang"
 is_city = yes
 hre = no
-base_tax = 4 # BT; 3
-base_production = 5 # BT; 3
+base_tax = 1 # BT; 3
+base_production = 1 # BT; 3
 base_manpower = 3 # BT; 2
 trade_goods = spices
 

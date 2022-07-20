@@ -1,9 +1,6 @@
  
 #632 - Sumbawa
 
-owner = MTR
-controller = MTR
-add_core = MTR
 culture = nusa_tenggara
 religion = animism
 capital = "Sumbawa Besar"

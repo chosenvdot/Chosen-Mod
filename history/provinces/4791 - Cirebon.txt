@@ -1,17 +1,13 @@
  
 # ex 8719
 
-owner = GLU # BT; SUN
-controller = GLU # BT; SUN
-add_core = GLU # BT; SUN
-add_core = CRB
 culture = sundanese
 religion = sunni # BT; hinduism
 capital = "Indramayu" # BT; "Cirebon"
 is_city = yes
 hre = no
-base_tax = 3 # BT; 4
-base_production = 3 # BT; 4
+base_tax = 1 # BT; 4
+base_production = 1 # BT; 4
 base_manpower = 2 # BT; 3
 trade_goods = fish # BT; spices
 

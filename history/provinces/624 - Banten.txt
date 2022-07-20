@@ -1,17 +1,14 @@
  
 #624 - Banten
 
-owner = SUN
-controller = SUN
-add_core = SUN
-add_core = BAN
+
 culture = sundanese
 religion = sunni
 capital = "Banten"
 trade_goods = spices
 hre = no
-base_tax = 7
-base_production = 7
+base_tax = 2
+base_production = 3
 base_manpower = 4
 is_city = yes
 

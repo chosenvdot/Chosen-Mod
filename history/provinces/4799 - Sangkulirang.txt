@@ -1,16 +1,13 @@
  
 # ex 8626
 
-owner = KUT
-controller = KUT
-add_core = KUT
 culture = kutainese # BT; bornean
 religion = hinduism
 capital = "Sambaliung" # BT; "Sangkulirang"
 is_city = yes
 hre = no
-base_tax = 4 # BT; 3
-base_production = 4 # BT; 3
+base_tax = 1 # BT; 3
+base_production = 1 # BT; 3
 base_manpower = 2
 trade_goods = fish
 

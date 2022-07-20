@@ -2,16 +2,13 @@
 # now: Indragiri Hilir
 # in 1.31 in a wrong place
 
-owner = IDG # BT; SAK
-controller = IDG # BT; SAK
-add_core = IDG # BT; SAK
 culture = malayan # BT; sumatran
 religion = sunni
 capital = "Indragiri"
 is_city = yes
 hre = no
-base_tax = 5 # BT; 2
-base_production = 5 # BT; 2
+base_tax = 2 # BT; 2
+base_production = 1 # BT; 2
 base_manpower = 3
 trade_goods = copper # ???
 

@@ -1,8 +1,6 @@
  
 #2682 - Pariaman
 
-owner = PGR
-controller = PGR
 culture = sumatran
 religion = mahayana
 capital = "Pariaman"
@@ -12,7 +10,6 @@ base_tax = 3
 base_production = 3
 base_manpower = 3
 is_city = yes
-add_core = PGR
 
 discovered_by = chinese
 discovered_by = indian

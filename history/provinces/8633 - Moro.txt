@@ -1,8 +1,6 @@
 
 #4628 - Moro
 
-owner = TER
-controller = TER
 culture = moluccan
 religion = animism
 capital = "Morotai"
@@ -12,7 +10,6 @@ base_tax = 2
 base_production = 2
 base_manpower = 1
 is_city = yes
-add_core = TER
 
 discovered_by = chinese
 

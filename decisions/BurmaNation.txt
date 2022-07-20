@@ -32,7 +32,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 20
+			adm_tech = 10
 			NOT = { exists = BRM }
 			is_at_war = no
 			is_free_or_tributary_trigger = yes

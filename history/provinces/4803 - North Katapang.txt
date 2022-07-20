@@ -3,9 +3,6 @@
 # vanilla uncolonised
 # and then owned in 1444.1.1
 
-owner = LDA # BT; SMB
-controller = LDA # BT; SMB
-add_core = LDA # BT; SMB
 culture = bornean
 religion = hinduism
 capital = "Landak" # BT; "Meliau"

@@ -1,18 +1,17 @@
 
 #Banyuasin
 
-owner = PLB
-controller = PLB
+
 culture = musi
 religion = sunni
 capital = "Gasing"
 trade_goods = livestock
 hre = no
-base_tax = 4
-base_production = 5
+base_tax = 1
+base_production = 1
 base_manpower = 3
 is_city = yes
-add_core = PLB
+
 
 discovered_by = chinese
 discovered_by = indian

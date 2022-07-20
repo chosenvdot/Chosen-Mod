@@ -1,16 +1,13 @@
  
 #2687 - Pakuan
 
-owner = SUN
-controller = SUN
-add_core = SUN
 culture = sundanese
 religion = hinduism
 capital = "Pakuan"
 trade_goods = spices
 hre = no
-base_tax = 6 
-base_production = 6
+base_tax = 1
+base_production = 2
 base_manpower = 3
 is_city = yes
 

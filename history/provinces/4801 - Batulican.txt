@@ -3,9 +3,7 @@
 # vanilla uncolonised
 # and then owned in 1444.1.1
 
-owner = BNJ
-controller = BNJ
-add_core = BNJ
+#
 culture = banjarese # BT; bornean
 religion = hinduism
 capital = "Batulicin" # BT; "Batulican"

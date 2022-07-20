@@ -1,18 +1,15 @@
  
 #638 - Kutai
 
-owner = KUT
-controller = KUT
 culture = kutainese
 religion = hinduism
 capital = "Kutai"
 trade_goods = fish
 hre = no
-base_tax = 7
-base_production = 7
+base_tax = 1
+base_production = 1
 base_manpower = 4
 is_city = yes
-add_core = KUT
 
 discovered_by = chinese
 discovered_by = indian

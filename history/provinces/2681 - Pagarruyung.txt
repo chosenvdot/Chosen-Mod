@@ -1,18 +1,15 @@
  
 #2681 - Pagarruyung
 
-owner = PGR
-controller = PGR
 culture = sumatran
 religion = mahayana
 capital = "Pagarruyung"
 trade_goods = gold
 hre = no
-base_tax = 6
-base_production = 6
+base_tax = 1
+base_production = 1
 base_manpower = 3
 is_city = yes
-add_core = PGR
 
 discovered_by = chinese
 discovered_by = indian

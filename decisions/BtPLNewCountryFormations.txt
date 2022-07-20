@@ -729,6 +729,7 @@ country_decisions = {
 			is_emperor = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
+			adm_tech = 12
 			owns_core_province = 60			# Lusatia
 			owns_core_province = 1763		# Lusatia
 			owns_core_province = 263		# Ratibor

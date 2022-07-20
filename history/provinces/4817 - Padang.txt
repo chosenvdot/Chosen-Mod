@@ -1,9 +1,6 @@
  
 # ex 8696
 
-owner = PGR
-controller = PGR
-add_core = PGR
 culture = sumatran
 religion = mahayana # BT; hinduism
 capital = "Tiku" # BT; "Padang"

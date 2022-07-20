@@ -1,16 +1,13 @@
  
 # ex 8613
 
-owner = LUW # BT; MKS
-controller = LUW # BT; MKS
-add_core = LUW # BT; MKS
 culture = sulawesi
 religion = animism
 capital = "Soppeng"
 is_city = yes
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 1
+base_production = 1
 base_manpower = 2
 trade_goods = tropical_wood # BT; spices
 

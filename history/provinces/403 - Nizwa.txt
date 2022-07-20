@@ -1,18 +1,18 @@
  
 #403 - Nizwa
 
-owner = OMA
-controller = OMA
+owner = ORM
+controller = ORM
 culture = omani_culture
 religion = ibadi
 capital = "Bahla"			#Nizwa in vanilla, but Bahla was more important at this point
 trade_goods = copper			#known for pottery.... what do I do with that? Copper in the region in vanilla, just going with that.
 hre = no
-base_tax = 4 
-base_production = 4
-base_manpower = 4
+base_tax = 2
+base_production = 1
+base_manpower = 2
 is_city = yes
-add_core = OMA
+add_core = ORM
 fort_15th = yes
 
 discovered_by = muslim

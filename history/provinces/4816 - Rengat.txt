@@ -3,9 +3,6 @@
 # new in 1.31
 # in vanilla in a wrong place
 
-owner = IDG # ??? BT; SAK
-controller = IDG # ??? BT; SAK
-add_core = IDG # ??? BT; SAK
 culture = malayan # ??? BT; sumatran
 religion = sunni
 capital = "Rengat"
@@ -13,7 +10,7 @@ is_city = yes
 hre = no
 base_tax = 2 # ???
 base_production = 2 # ???
-base_manpower = 3 # ???
+base_manpower = 1 # ???
 trade_goods = fish # ???
 
 discovered_by = chinese

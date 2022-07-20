@@ -1,17 +1,13 @@
  
 # ex 8621
 
-owner = MAJ
-controller = MAJ
-add_core = MAJ
-add_core = SRK # BT
 culture = javanese
 religion = sunni # BT; hinduism
 capital = "Surakarta" # BT; "Pajang"
 is_city = yes
 hre = no
-base_tax = 6 # BT; 2
-base_production = 6 # BT; 2
+base_tax = 1 # BT; 2
+base_production = 1 # BT; 2
 base_manpower = 3 # BT; 2
 trade_goods = spices # BT; grain
 

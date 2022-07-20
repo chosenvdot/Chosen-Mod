@@ -1,19 +1,16 @@
  
 #640 - Pontianak
 
-owner = BNJ
-controller = BNJ
 culture = bornean
 religion = hinduism
 capital = "Pontianak"
 trade_goods = fish
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 1
+base_production = 1
 base_manpower = 2
 is_city = yes
-add_core = SKD
-add_core = BNJ
+
 
 discovered_by = chinese
 discovered_by = indian

@@ -1,18 +1,15 @@
  
 # ex 8718
 
-owner = MAJ
-controller = MAJ
-add_core = MAJ
-add_core = BLM
+
 culture = javanese
 religion = hinduism
 capital = "Malang"
 is_city = yes
 hre = no
-base_tax = 3 # BT; 2
-base_production = 3 # BT; 2
-base_manpower = 2
+base_tax = 1 # BT; 2
+base_production = 1 # BT; 2
+base_manpower = 1
 trade_goods = incense # BT; fish
 
 discovered_by = chinese

@@ -3,9 +3,6 @@
 # vanilla uncolonised
 # and then owned in 1444.1.1
 
-owner = LDA # BT; SMB
-controller = LDA # BT; SMB
-add_core = LDA # BT; SMB
 culture = bornean
 religion = hinduism
 capital = "Mandor" # BT; "Pontiniak"
@@ -14,7 +11,7 @@ hre = no
 base_tax = 2 # BT; 5
 base_production = 2 # BT; 5
 base_manpower = 1 # BT; 3
-trade_goods = gold
+trade_goods = cloth
 
 discovered_by = chinese
 discovered_by = indian

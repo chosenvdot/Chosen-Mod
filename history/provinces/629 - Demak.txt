@@ -1,17 +1,13 @@
  
 #629 - Demak
 
-owner = MAJ
-controller = MAJ
-add_core = MAJ
-add_core = DMK
 culture = javanese
 religion = sunni
 capital = "Demak"
 trade_goods = cotton
 hre = no
-base_tax = 7
-base_production = 7
+base_tax = 1
+base_production = 1
 base_manpower = 4
 is_city = yes
 

@@ -1,16 +1,13 @@
  
 # ex 8701
 
-owner = BEI
-controller = BEI
-add_core = BEI
 culture = bornean
 religion = sunni
 capital = "Mukah" # BT; "Bintulu"
 is_city = yes
 hre = no
 base_tax = 3
-base_production = 3
+base_production = 1
 base_manpower = 2
 trade_goods = grain # BT; fish
 

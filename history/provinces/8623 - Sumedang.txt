@@ -1,17 +1,13 @@
 
 #4618 - Sumedang
 
-owner = GLU
-controller = GLU
-add_core = GLU
-add_core = CRB
 culture = sundanese
 religion = hinduism
 capital = "Sumedang"
 trade_goods = grain
 hre = no
-base_tax = 4
-base_production = 4
+base_tax = 1
+base_production = 1
 base_manpower = 2
 is_city = yes
 

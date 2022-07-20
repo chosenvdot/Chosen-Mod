@@ -1,16 +1,13 @@
  
 # ex 8611
 
-owner = LUW
-controller = LUW
-add_core = LUW
 culture = sulawesi
 religion = animism
 capital = "Bone"
 is_city = yes
 hre = no
-base_tax = 4 # BT; 3
-base_production = 4
+base_tax = 1 # BT; 3
+base_production = 1
 base_manpower = 2
 trade_goods = fish # BT; spices
 

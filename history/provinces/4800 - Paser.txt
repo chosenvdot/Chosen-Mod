@@ -3,16 +3,14 @@
 # vanilla uncolonised
 # and then owned in 1444.1.1
 
-owner = BNJ
-controller = BNJ
-add_core = BNJ
+#
 culture = banjarese # BT; bornean
 religion = hinduism
 capital = "Paser"
 is_city = yes
 hre = no
 base_tax = 2 # BT; 3
-base_production = 3
+base_production = 1
 base_manpower = 2
 trade_goods = tropical_wood # BT; spices
 

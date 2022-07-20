@@ -1,9 +1,6 @@
 
 #Manggarai
 
-owner = MTR
-controller = MTR
-add_core = MTR
 culture = bimanese
 religion = animism
 capital = "Pota"

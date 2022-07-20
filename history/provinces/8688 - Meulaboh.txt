@@ -1,18 +1,15 @@
 
 #Meulaboh
 
-owner = ATJ
-controller = ATJ
 culture = acehnese
 religion = sunni
 capital = "Meulaboh"
 trade_goods = tropical_wood
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 1	
+base_production = 1
 base_manpower = 2
 is_city = yes
-add_core = ATJ
 
 discovered_by = chinese
 discovered_by = indian

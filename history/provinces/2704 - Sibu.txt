@@ -1,18 +1,16 @@
  
 #2704 - Rajang
 
-owner = BEI
-controller = BEI
 culture = bornean
 religion = sunni
 capital = "Kanowit"
 trade_goods = spices
 hre = no
-base_tax = 6
-base_production = 6
+base_tax = 1
+base_production = 1
 base_manpower = 3
 is_city = yes
-add_core = BEI
+
 
 discovered_by = chinese
 discovered_by = indian

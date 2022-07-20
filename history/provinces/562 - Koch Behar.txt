@@ -1,16 +1,16 @@
  
 #562 - Koch Behar
 
-owner = KMT
-controller = KMT
-culture = kochi
+owner = ASS
+controller = ASS
+culture = ASS
 religion = hinduism
 capital = "Kamatapur"
 trade_goods = grain
 hre = no
-base_tax = 6
-base_production = 6
-base_manpower = 6
+base_tax = 1
+base_production = 1
+base_manpower = 1
 is_city = yes
 add_core = KMT
 discovered_by = indian

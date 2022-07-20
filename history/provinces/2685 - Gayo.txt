@@ -1,8 +1,7 @@
  
 #2685 - Gayo
 
-owner = ATJ
-controller = ATJ
+
 culture = acehnese
 religion = sunni
 capital = "Gayo"
@@ -12,7 +11,6 @@ base_tax = 2
 base_production = 2
 base_manpower = 1
 is_city = yes
-add_core = ATJ
 
 discovered_by = chinese
 discovered_by = indian

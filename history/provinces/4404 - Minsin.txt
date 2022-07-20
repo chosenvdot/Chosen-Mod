@@ -1,18 +1,18 @@
  
 #4404 - Minsin
 
-owner = MKA
-controller = MKA
+owner = MMA
+controller = MMA
 culture = kachin
 religion = animism
 capital = "Minsin"
 trade_goods = grain
 hre = no
-base_tax = 2 
-base_production = 2 
+base_tax = 1
+base_production = 1
 base_manpower = 2 
 is_city = yes
-add_core = MKA
+add_core = MMA
 
 
 discovered_by = chinese

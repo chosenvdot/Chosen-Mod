@@ -1,18 +1,15 @@
  
 #2673 - Pasai
 
-owner = PSA
-controller = PSA
 culture = acehnese
 religion = sunni
 capital = "Pasai"
 trade_goods = spices
 hre = no
-base_tax = 8
-base_production = 8
+base_tax = 1
+base_production = 2
 base_manpower = 4
 is_city = yes
-add_core = PSA
 
 discovered_by = indian
 discovered_by = muslim

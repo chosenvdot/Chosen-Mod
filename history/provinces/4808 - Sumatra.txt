@@ -2,16 +2,13 @@
 # ex 8687
 # vanilla wasteland
 
-owner = BRS
-controller = BRS
-add_core = BRS
 culture = batak
 religion = sunni
 capital = "Mandaling"
 is_city = yes
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 1
+base_production = 1
 base_manpower = 2
 trade_goods = livestock
 

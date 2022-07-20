@@ -945,7 +945,7 @@ VEN_ideas = {
 	}
 	
 	bonus = {
-		naval_morale = 0.15
+		naval_morale = 0.1
 	}
 	trigger = {
 		tag = VEN
@@ -956,13 +956,13 @@ VEN_ideas = {
 		reform_progress_growth = 0.25
 	}
 	DAL_principalities = {
-		global_foreign_trade_power = 0.15
+		global_foreign_trade_power = 0.1
 	}
 	DAL_language = {
 		num_accepted_cultures = 2
 	}
 	DAL_independent_army = {
-		infantry_power = 0.15
+		infantry_power = 0.1
 	}
 	DAL_art_and_lit = {
 		global_institution_spread = 0.1
@@ -970,10 +970,10 @@ VEN_ideas = {
 	}
 	
 	DAL_arsenal = {
-		naval_forcelimit_modifier = 0.25
+		naval_forcelimit_modifier = 0.2
 	}
 	DAL_illyria = {
-		core_creation = -0.15
+		core_creation = -0.1
 	}
 }
 
@@ -1523,7 +1523,7 @@ NAP_ideas = {
 	}
 	
 	bonus = {
-		global_manpower_modifier = 0.2
+		global_manpower_modifier = 0.1
 	}
 	
 	trigger = {
@@ -1539,7 +1539,7 @@ NAP_ideas = {
 		technology_cost = -0.05
 	}
 	encouraged_city_living = {
-		development_cost = -0.1 #Often among the largest cities of Europe
+		development_cost = -0.05 #Often among the largest cities of Europe
 	}
 	crush_the_barons = {
 		land_morale = 0.1
@@ -1760,7 +1760,7 @@ MLO_ideas = {
 	}
 	
 	bonus = {
-		global_manpower_modifier = 0.20
+		global_manpower_modifier = 0.15
 	}
 	
 	trigger = {
@@ -1775,7 +1775,7 @@ MLO_ideas = {
 		prestige = 1
 	}
 	lowered_power_of_barons = {
-		development_cost = -0.1
+		development_cost = -0.05
 	}
 	age_of_condottieri = {
 		merc_maintenance_modifier = -0.15
@@ -1784,7 +1784,7 @@ MLO_ideas = {
 		technology_cost = -0.05
 	}
 	merchant_princes = {
-		global_trade_power = 0.1
+		global_trade_power = 0.05
 	}
 	rulership_of_enlightened_principals = {
 		stability_cost_modifier = -0.1

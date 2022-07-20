@@ -1,18 +1,15 @@
  
 #641 - Makassar
 
-owner = LUW
-controller = LUW
 culture = sulawesi
 religion = animism
 capital = "Makassar"
 trade_goods = spices
 hre = no
-base_tax = 8
-base_production = 8
+base_tax = 1
+base_production = 1
 base_manpower = 5
 is_city = yes
-add_core = LUW
 
 discovered_by = chinese
 discovered_by = indian

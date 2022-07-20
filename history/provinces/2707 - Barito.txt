@@ -1,8 +1,7 @@
  
 #2707 - Barito
 
-owner = BNJ
-controller = BNJ
+#
 culture = banjarese
 religion = hinduism
 capital = "Barito"
@@ -12,7 +11,7 @@ base_production = 1
 base_manpower = 1
 is_city = yes
 trade_goods = spices
-add_core = BNJ
+#
 
 discovered_by = chinese
 discovered_by = indian

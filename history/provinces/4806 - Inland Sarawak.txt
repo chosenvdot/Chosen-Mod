@@ -1,9 +1,6 @@
  
 # ex 8562
 
-owner = BEI
-controller = BEI
-add_core = BEI
 culture = bornean
 religion = sunni
 capital = "Song" # BT; "Kapit"

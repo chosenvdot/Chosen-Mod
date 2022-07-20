@@ -1,18 +1,13 @@
  
 # renamed in 1.31
 
-owner = MAJ
-controller = MAJ
-add_core = MAJ
-add_core = DMK # BT
-add_core = TGL # BT
 culture = javanese
 religion = sunni # BT; hinduism
 capital = "Kendal" # BT; "Pekalongan"
 is_city = yes
 hre = no
-base_tax = 3 # BT; 2
-base_production = 3 # BT; 2
+base_tax = 1 # BT; 2
+base_production = 1 # BT; 2
 base_manpower = 2
 trade_goods = naval_supplies
 

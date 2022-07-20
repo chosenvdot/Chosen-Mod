@@ -1,8 +1,8 @@
  
 #660 - Xishuan Banna
 
-owner = KET
-controller = KET
+owner = HSE
+controller = HSE
 culture = khun
 religion = buddhism
 capital = "Kenghung"
@@ -12,7 +12,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = KET
+add_core = HSE
 
 
 

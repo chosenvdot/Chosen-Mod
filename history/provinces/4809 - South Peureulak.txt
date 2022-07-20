@@ -1,16 +1,13 @@
  
 # ex 8605
 
-owner = PSA
-controller = PSA
-add_core = PSA
 culture = acehnese
 religion = sunni
 capital = "Langkat"
 is_city = yes
 hre = no
-base_tax = 3 # BT; 4
-base_production = 4
+base_tax = 1 # BT; 4
+base_production = 2
 base_manpower = 2 # BT; 3
 trade_goods = tropical_wood # BT; spices
 

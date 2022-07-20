@@ -1,16 +1,13 @@
  
 # renamed in 1.31
 
-owner = KUT
-controller = KUT
-add_core = KUT
 culture = kutainese # BT; bornean
 religion = hinduism
 capital = "Berau" # BT; "Sambaliung"
 is_city = yes
 hre = no
-base_tax = 5 # BT; 2
-base_production = 5 # BT; 2
+base_tax = 2 # BT; 2
+base_production = 2 # BT; 2
 base_manpower = 2
 trade_goods = fish
 

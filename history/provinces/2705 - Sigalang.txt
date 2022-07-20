@@ -1,18 +1,14 @@
  
 # renamed in 1.31
 
-owner = BEI
-controller = BEI
-add_core = BEI
-add_core = SWK # BT
 culture = bornean
 religion = sunni
 capital = "Santubong" # BT; "Sigalang"
 is_city = yes
 hre = no
-base_tax = 7 # BT; 3
-base_production = 7 # BT; 3
-base_manpower = 4 # BT; 2
+base_tax = 1 # BT; 3
+base_production = 1 # BT; 3
+base_manpower = 1 # BT; 2
 trade_goods = gems
 
 discovered_by = chinese

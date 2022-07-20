@@ -1,16 +1,16 @@
  
 #4287 - Ibra
 
-owner = OMA
-controller = OMA
-add_core = OMA
+owner = ORM
+controller = ORM
+add_core = ORM
 capital = "Ibra"
 culture = omani_culture
 religion = ibadi
 trade_goods = wool
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 1
+base_production = 1
 base_manpower = 2 
 is_city = yes
 

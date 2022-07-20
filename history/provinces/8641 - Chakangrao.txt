@@ -1,8 +1,8 @@
 
 #Chakangrao
 
-owner = SUK
-controller = SUK
+owner = LNA
+controller = LNA
 culture = central_thai
 religion = buddhism
 capital = "Chakangrao"
@@ -13,7 +13,7 @@ base_production = 3
 base_manpower = 2
 is_city = yes
 fort_15th = yes
-add_core = SUK
+add_core = LNA
 
 
 

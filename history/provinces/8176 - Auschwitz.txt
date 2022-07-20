@@ -23,7 +23,7 @@ trade_goods = cloth
 add_core = ASC
 
 #Other Political
-hre = yes
+hre = no
 
 #Fort/Other Buildings
 

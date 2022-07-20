@@ -1,18 +1,15 @@
  
 #2716 - Buton
 
-owner = LUW
-controller = LUW
 culture = butonese
 religion = animism
 capital = "Buton"
 trade_goods = spices
 hre = no
-base_tax = 4 
-base_production = 4
+base_tax = 2 
+base_production = 1
 base_manpower = 2
 is_city = yes
-add_core = LUW
 
 discovered_by = chinese
 discovered_by = indian

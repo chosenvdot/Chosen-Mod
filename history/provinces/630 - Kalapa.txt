@@ -1,18 +1,13 @@
  
 #630 - Kalapa
 
-owner = SUN
-controller = SUN
-add_core = SUN
-add_core = BAN
-add_core = JYK
 culture = sundanese
 religion = sunni
 capital = "Kalapa"
 trade_goods = spices
 hre = no
-base_tax = 8
-base_production = 8
+base_tax = 2
+base_production = 2
 base_manpower = 5
 is_city = yes
 

@@ -1,17 +1,14 @@
  
 # ex 8620
 
-owner = MAJ
-controller = MAJ
-add_core = MAJ
 add_core = YGK # BT; DMK
 culture = javanese
 religion = sunni # BT; hinduism
 capital = "Yogyakarta" # BT; "Kendal"
 is_city = yes
 hre = no
-base_tax = 3 # BT; 2
-base_production = 3 # BT; 2
+base_tax = 1 # BT; 2
+base_production = 1 # BT; 2
 base_manpower = 2
 trade_goods = spices # BT; naval_supplies
 
