@@ -376,19 +376,18 @@ CAS_ideas = {
 	}
 }
 
-NED_ideas = {
+HOL_ideas = {
 	start = {
-		global_sailors_modifier = 0.25
+		infantry_shock = 0.1
 		naval_forcelimit_modifier = 0.50
 	}
 	
 	bonus = {
-		trade_efficiency = 0.15
+		trade_efficiency = 0.1
 	}
 
 	trigger = {
 		OR = {
-			tag = NED
 			tag = HOL
 		}
 	}
@@ -396,20 +395,21 @@ NED_ideas = {
 	
 	amsterdam_wisselbank = {
 		inflation_reduction = 0.1
+		colonists = 1
 	}
 	dutch_trading_spirit = {
-		merchants = 1
 		trade_range_modifier = 0.10
 	}
 	polders = {
-		development_cost = -0.1
+		development_cost = -0.05
 	}
 	instructie_voor_de_admiraliteiten = {
-		leader_naval_fire = 2
+		leader_naval_fire = 1
 		allowed_marine_fraction = 0.25
 	}
 	embrace_humanism = {
 		tolerance_heretic = 3
+		global_colonial_growth = 20
 	}
 	army_sappers = {
 		siege_ability = 0.10
@@ -1062,7 +1062,7 @@ BRA_ideas = {
 POR_ideas = {
 	start = {
 		colonists = 1
-		land_morale = 0.15
+		land_morale = 0.1
 	}
 	
 	bonus = {
@@ -1091,7 +1091,7 @@ POR_ideas = {
 		trade_efficiency = 0.15
 	}
 	royal_absolutism = {
-		build_cost = -0.15
+		build_cost = -0.1
 		yearly_absolutism = 0.5
 	}
 	por_royal_military_academy = {
@@ -1148,7 +1148,7 @@ POL_ideas = {
 
 HAB_ideas = {
 	start = {
-		land_morale = 0.15
+		land_morale = 0.1
 		improve_relation_modifier = 0.3
 	}
 	
@@ -1188,7 +1188,7 @@ HAB_ideas = {
 		diplomatic_upkeep = 1
 	}
 	hofkriegsrat = {
-		reinforce_speed = 0.3
+		reinforce_speed = 0.2
 		discipline = 0.05
 	}
 }
@@ -2491,42 +2491,43 @@ COR_ideas = {
 
 SPI_ideas = {
 	start = {
-		idea_cost = -0.1
-		improve_relation_modifier = 0.25
+		infantry_power = 0.15
+		diplomatic_upkeep = 1
 	}
 	
 	bonus = {
-		global_tax_modifier = 0.15
+		global_manpower_modifier = 0.20
 	}
 	
 	trigger = {
-		tag = SPI
+		OR = {
+			tag = SPI
+		}
 	}
-	free = yes		#will be added at load.
+	free = yes
 	
-	spi_flexibility = {
-		diplomatic_upkeep = 1
+	SPI_1 = {
+		idea_cost = -0.1
 	}
-	spi_defensive_prowess = {
-		defensiveness = 0.25
+	SPI_2 = {
+		prestige = 1
+		naval_morale = 0.1
 	}
-	the_shroud_of_turin = { #effect in SAV_ideas
-#		papal_influence = 1
-#		prestige = 0.5
+	SPI_3 = {
+		development_cost = -0.1
+		galley_power = 0.1
 	}
-	spi_royal_sardinian_army = {
-		discipline = 0.05 #BTB Tweak due to vanilla powercreep. 3% discipline isn't worth jack.
-		global_manpower_modifier = 0.1
+	SPI_4 = {
+		merc_maintenance_modifier = -0.15
 	}
-	spi_centralized_state = {
-		development_cost = -0.05
-		core_creation = -0.1
+	SPI_5 = {
+		technology_cost = -0.05
 	}
-	spi_piedmontese_manufacturing = {
-		global_trade_goods_size_modifier = 0.1
+	SPI_6 = {
+		global_trade_power = 0.05
 	}
-	spi_risorgimento = {
-		ae_impact = -0.1
+	SPI_7 = {
+		stability_cost_modifier = -0.1
 	}
 }
 
@@ -7060,13 +7061,13 @@ HES_ideas = {
 		church_power_modifier = 0.05
 	}
 	let_in_religious_emigrants = {
-		development_cost = -0.1
+		development_cost = -0.05
 	}
 	modernization_of_the_hessian_army = {
 		discipline = 0.05
 	}
 	hessian_mercenaries_idea = {
-		land_forcelimit_modifier = 0.25
+		land_forcelimit_modifier = 0.2
 	}
 	hessian_economic_reforms = {
 		production_efficiency = 0.1
@@ -10756,7 +10757,7 @@ HAN_ideas = {
 	}
 	han_shutzenfest = {
 		land_maintenance_modifier = -0.05
-		fire_damage = 0.05
+		artillery_cost = -0.1
 	}
 	han_herrenhausen_gardens = {
 		prestige = 1
@@ -10765,7 +10766,7 @@ HAN_ideas = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	han_hanoverian_chancery = {
-		diplomatic_upkeep = 1
+		artillery_power = 0.1
 	}
 	han_kings_legion = {
 		fire_damage_received = -0.15
@@ -14011,7 +14012,7 @@ MOR_ideas = {
 TUN_ideas = {
 	start = {
 		may_perform_slave_raid = yes
-		galley_power = 0.2		
+		infantry_power = 0.1
 	}
 	bonus = {
 		naval_forcelimit_modifier = 0.25
@@ -14022,10 +14023,10 @@ TUN_ideas = {
 	free = yes
 	tun_catalan_guard = {
 		mercenary_discipline = 0.05
-		infantry_power = 0.05
 	}
 	dual_diplomacy = {
 		diplomatic_upkeep = 1
+		galley_power = 0.2	
 	}
 	corsairs = {
 		navy_tradition = 1
@@ -14035,7 +14036,7 @@ TUN_ideas = {
 		global_sailors_modifier = 0.25
 	}
 	tun_board_of_captains = {
-		leader_naval_fire = 1
+		land_morale = 0.1
 	}
 	tun_export_monopolies = {
 		global_own_trade_power = 0.2
@@ -14899,7 +14900,7 @@ CLI_ideas = {
 WES_ideas = {
 	start = {
 		diplomats = 1
-		land_forcelimit_modifier = 0.2
+		land_forcelimit_modifier = 0.33
 	}
 	bonus = {
 		discipline = 0.05
@@ -14914,10 +14915,10 @@ WES_ideas = {
 	}
 	wes_westphalian_decentralisation  = {
 		state_maintenance_modifier = -0.1
-		development_cost = -0.05
+		development_cost = -0.1
 	}
 	wes_increased_conscription = {
-		global_manpower_modifier = 0.20
+		global_manpower_modifier = 0.25
 	}
 	wes_administrative_assimilation_of_rheinlanders = {
 		num_accepted_cultures = 1
@@ -14925,6 +14926,7 @@ WES_ideas = {
 	}
 	wes_taxation = {
 		global_tax_modifier = 0.1
+		land_morale = 0.1
 	}
 	wes_enlightenment = {
 		tolerance_heretic = 1

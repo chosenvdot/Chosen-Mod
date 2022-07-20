@@ -61,6 +61,7 @@ country_decisions = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
+			adm_tech = 8
 			owns_core_province = 92 # Brussel
 			calc_true_if = {
 				all_owned_province = {
@@ -81,7 +82,7 @@ country_decisions = {
 				}
 				amount = 7			#At least 2/3 of Belgium's 11 provinces (approximate)
 			}
-			total_development = 100			#Normal requirement for rank 2 is 500 dev, so this is 80 percent discounted.
+			total_development = 200			#Normal requirement for rank 2 is 500 dev, so this is 80 percent discounted.
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
@@ -125,178 +126,11 @@ country_decisions = {
 ################################			Emilia			 ##############################################			#Note needs work
 ###################################################################################################
 	#More or less HR's work with only a few adjustments from Draiocht
-	emilian_nation = {
-		major = yes
-		potential = {
-			bt_generic_can_form_potential_check = yes
-			NOT = { has_country_flag = formed_emilia_flag_btp }
-			NOT = { tag = EMR }
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
-			NOT = { tag = ITL }
-			NOT = { tag = ITA }
-			NOT = { tag = SPI }
-			NOT = { tag = TUS }
-			NOT = { tag = LMV }
-			OR = { 
-				primary_culture = romagnan
-				tag = URB
-			}
-		}
-		provinces_to_highlight = {
-			culture = romagnan
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			NOT = { exists = EMR }
-			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			owns_core_province = 4730	# Bologna
-			calc_true_if = {
-				all_owned_province = {
-					is_core = ROOT
-					culture = romagnan
-				}
-				amount = 15			#At least 2/3rds of Romagnol-cultured 22 provinces
-			}
-		}
-		effect = {
-			change_tag = EMR
-			#remove_non_electors_emperors_from_empire_effect = yes #Duchy rank, therefore should not remove from HRE.
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 3650
-			}
-			every_province = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-					culture = romagnan
-				}
-				add_permanent_claim = EMR
-			}
-			add_prestige = 10
-			#No Emilian ideas yet.
-			swap_ideas = yes
-			set_country_flag = formed_emilia_flag_btp
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400
-	}
-
+	
 ###################################################################################################
 ################################			France (Diplomatically)			 ##############################################			#Using my work in Britain as a template here
 ###################################################################################################
-	french_nation_diplomatically = {
-		major = yes
-		potential = {
-			bt_generic_can_form_potential_check = yes
-			NOT = { has_country_flag = formed_france_flag }
-			NOT = { tag = FRA }
-			NOT = { tag = CEL }
-			NOT = { tag = SPA }
-			OR = {
-				culture_group = french
-				primary_culture = basque
-				primary_culture = breton
-			}
-			num_of_cities = 54			#At least 1/3 of France's 161 provinces to see for anyone
-		}
-		provinces_to_highlight = {
-			region = france_region
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			NOT = { exists = FRA }
-			is_nomad = no
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
-			if = {
-				limit = { government = monarchy }
-				legitimacy = 100
-			}
-			adm_tech = 10			#Diplo tech requirement
-			owns_or_vassal_of = 183			# Paris
-			owns_or_vassal_of = 186			# Rheims, coronation site
-			owns_or_vassal_of = 203			# Lyon
-			owns_or_vassal_of = 4389			# Tours
-			custom_trigger_tooltip = {
-				tooltip = hegemony_over_france_tooltip
-				calc_true_if = {
-					all_province = {
-						region = france_region
-						country_or_vassal_holds = ROOT
-						is_core = owner
-					}
-					amount = 149			#At least 90 percent of France's 161 provinces. Note the modern france includes a further 30 provinces, give or take a couple
-				}
-			}
-			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
-		}
-		effect = {
-			every_subject_country = {
-				limit = {
-					ai = yes
-					capital_scope = { region = france_region }
-					NOT = { num_of_cities = 16 }
-				}
-				ROOT = { inherit = PREV }
-			}
-			change_tag = FRA
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			add_country_modifier = {
-				name = centralization_modifier
-				duration = 7300
-			}
-			add_prestige = 25
-			france_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-					NOT = { area = brittany_area }
-					NOT = { area = lower_brittany_area }
-				}
-				add_permanent_claim = FRA
-			}
-			brittany_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_claim = FRA
-			}
-			lower_brittany_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_claim = FRA
-			}
-			swap_ideas = yes
-			# custom_tooltip = spanish_unification_effect.tooltip
-			set_country_flag = formed_france_flag
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400
-	}
-
+	
 ###################################################################################################
 ################################			Iberia (Portugal-based)			 ##############################################
 ###################################################################################################
@@ -409,6 +243,7 @@ country_decisions = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
+			adm_tech = 9
 			calc_true_if = {
 				all_owned_province = {
 					is_core = ROOT
@@ -468,61 +303,7 @@ country_decisions = {
 ###################################################################################################
 ################################			Kabylia			 ##############################################
 ###################################################################################################
-	btpl_kabylia_nation = {
-		major = yes
-		potential = {
-			bt_generic_can_form_potential_check = yes
-			NOT = { has_country_flag = formed_kabylia_flag }
-			NOT = { tag = KBA }
-			OR = {
-				primary_culture = kabylian
-				AND = {
-					culture_group = berber_group
-					capital_scope = { area = kabylia_area }
-				}
-			}
-		}
-		provinces_to_highlight = {
-			area = kabylia_area
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			NOT = { exists = KBA }
-			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			owns_core_province = 339			# Bugia
-			calc_true_if = {
-				all_owned_province = {
-					is_core = ROOT
-					area = kabylia_area
-				}
-				amount = 4			#All of Kabylia's 4 provinces
-			}
-		}
-		effect = {
-			change_tag = KBA
-			remove_non_electors_emperors_from_empire_effect = yes
-			add_country_modifier = {
-				name = centralization_modifier
-				duration = 3650
-			}
-			add_prestige = 10
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			set_country_flag = formed_kabylia_flag
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400 #
-	}
-	
+
 ###################################################################################################
 ############			LombardyVenetia (merged both of HR's decisions into one without gov type limits)			 ###########################			#Note needs work
 ###################################################################################################
@@ -832,77 +613,6 @@ country_decisions = {
 ###################################################################################################
 ################################			Najd			 ##############################################
 ###################################################################################################
-	bt_najd_formation = {
-		major = yes
-		potential = {
-			bt_generic_can_form_potential_check = yes
-			NOT = { has_country_flag = formed_najd_bt }
-			NOT = { tag = NAJ }
-			NOT = { tag = ALH }
-			primary_culture = bedouin_arabic
-		}
-		provinces_to_highlight = {
-			OR = {
-				area = nafud_area
-				area = yamamah_area
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			NOT = { exists = NAJ }
-			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			owns_core_province = 392
-			custom_trigger_tooltip = {
-				tooltip = half_of_najd_tooltip
-				num_of_owned_provinces_with = {
-					value = 6
-					OR = {
-						area = nafud_area
-						area = yamamah_area
-					}
-					is_core = ROOT
-				}
-			}
-			total_development = 50			#Normal requirement for rank 2 is 500 dev, so this is 90 percent discounted.
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
-		}
-		effect = {
-			change_tag = NAJ
-			remove_non_electors_emperors_from_empire_effect = yes
-			every_province = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					OR = {
-						area = nafud_area
-						area = yamamah_area
-					}
-				}
-				add_permanent_claim = NAJ
-			}
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			add_country_modifier = {
-				name = centralization_modifier
-				duration = 7300
-			}
-			add_prestige = 25
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			set_country_flag = formed_najd_bt
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 ###################################################################################################
 ################################			Pomerania			 ##############################################			#Done by JP 2019-4 & adjusted a bit by Draiocht
@@ -918,7 +628,7 @@ country_decisions = {
 			bt_generic_can_form_potential_check = yes
 			NOT = { has_country_flag = formed_rhineland_flag_btp }
 			NOT = { tag = RHI }
-			primary_culture = hessian
+			tag = TCK
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -946,7 +656,7 @@ country_decisions = {
 				}
 				value = 11			#At least 2/3 of Rhineland's 17 provinces (approximate)
 			}
-			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
+			total_development = 350			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
@@ -997,96 +707,7 @@ country_decisions = {
 ###################################################################################################
 ################################			Sennar			 ##############################################
 ###################################################################################################
-	bt_sennar_formation = {
-		major = yes
-		potential = {
-			bt_generic_can_form_potential_check = yes
-			NOT = { has_country_flag = formed_sennar_bt }
-			NOT = { tag = NUB }
-			OR = {
-				tag = FNJ
-				AND = {
-					owns_core_province = 2799
-					culture_group = sudanese
-					religion_group = muslim
-				}
-			}
-		}
-		provinces_to_highlight = {
-			province_id = 2799
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			NOT = { exists = NUB }
-			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			owns_core_province = 2799
-		}
-		effect = {
-			2799 = { move_capital_effect = yes }
-			change_tag = NUB
-			remove_non_electors_emperors_from_empire_effect = yes
-			every_province = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					OR = {
-						province_id = 2798
-						province_id = 5285
-						province_id = 1222
-						province_id = 5287
-						province_id = 2800
-						province_id = 2797
-						province_id = 5284
-						province_id = 1220
-						province_id = 5286
-						province_id = 1221
-						province_id = 1216
-					}
-				}
-				add_permanent_claim = NUB
-			}
-			every_province = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					OR = {
-						province_id = 5302
-						province_id = 5281
-						province_id = 5279
-						province_id = 1228
-					}
-				}
-				add_claim = NUB
-			}
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			add_country_modifier = {
-				name = centralization_modifier
-				duration = 7300
-			}
-			2799 = {
-				add_base_tax = 2
-				add_base_production = 2
-				add_base_manpower = 1
-			}
-			add_prestige = 10
-			change_religion = sunni
-			add_piety = -0.30
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			set_country_flag = formed_sennar_bt
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+
 	
 ###################################################################################################
 ################################			NEWCOUNTRY			 ##############################################

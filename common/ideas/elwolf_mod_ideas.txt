@@ -200,3 +200,339 @@ GMV_ideas = {
 	}
 }
 
+AHU_ideas = {
+	start = {
+		land_morale = 0.15
+		improve_relation_modifier = 0.3
+	}
+	
+	bonus = {
+		global_manpower_modifier = 0.25
+	}
+	
+	trigger = {
+		OR = {
+			tag = AHU
+		}
+	}
+	free = yes		#will be added at load.
+
+	AHU_1 = {
+		imperial_authority = 0.4
+		diplomatic_annexation_cost = -0.15
+	}
+	AHU_2 = {
+		defensiveness = 0.15
+        fort_maintenance_modifier = -0.2
+	}
+	AHU_3 = {
+		inflation_reduction = 0.15
+	}
+	AHU_4 = {
+		diplomatic_reputation = 2
+		infantry_power = 0.1
+	}
+	AHU_5 = {
+		global_missionary_strength = 0.02
+	}
+	AHU_6 = {
+		diplomatic_upkeep = 1
+	}
+	AHU_7 = {
+		reinforce_speed = 0.3
+		discipline = 0.05
+	}
+}
+
+TCK_ideas = {
+	start = {
+		shock_damage = 0.15
+		cavalry_cost = -0.1
+	}
+	
+	bonus = {
+		global_manpower_modifier = 0.1
+	}
+
+	trigger = {
+		OR = {
+			tag = TCK
+		}
+	}
+	free = yes		#will be added at load.
+
+	TCK_1 = {
+		vassal_forcelimit_bonus = 0.2
+		diplomatic_annexation_cost = -0.15
+	}
+	TCK_2 = {
+		trade_efficiency = 0.1
+        fort_maintenance_modifier = -0.2
+	}
+	TCK_3 = {
+		inflation_reduction = 0.15
+	}
+	TCK_4 = {
+		cavalry_power = 0.1
+	}
+	TCK_5 = {
+		cav_to_inf_ratio = .5
+	}
+	TCK_6 = {
+		diplomatic_upkeep = 2
+	}
+	TCK_7 = {
+		discipline = 0.025
+	}
+}
+
+RHI_ideas = {
+	start = {
+		shock_damage = 0.1
+		cavalry_cost = -0.2
+	}
+	
+	bonus = {
+		global_manpower_modifier = 0.2
+	}
+
+	trigger = {
+		OR = {
+			tag = TCK
+		}
+	}
+	free = yes		#will be added at load.
+
+	RHI_1 = {
+		vassal_forcelimit_bonus = 0.3
+		diplomatic_annexation_cost = -0.15
+	}
+	RHI_2 = {
+		trade_efficiency = 0.2
+        fort_maintenance_modifier = -0.2
+	}
+	RHI_3 = {
+		inflation_reduction = 0.15
+	}
+	RHI_4 = {
+		cavalry_power = 0.2
+		fire_damage_received = -0.2
+	}
+	RHI_5 = {
+		cav_to_inf_ratio = 1
+	}
+	RHI_6 = {
+		diplomatic_upkeep = 2
+	}
+	RHI_7 = {
+		discipline = 0.05
+	}
+}
+
+TRP_ideas = {
+	start = {
+		may_perform_slave_raid = yes
+		infantry_power = 0.15
+	}
+	bonus = {
+		naval_forcelimit_modifier = 0.33
+	}
+	trigger = {
+		tag = TRP
+	}
+	free = yes
+	TRP_1 = {
+		mercenary_discipline = 0.05
+		fire_damage_received = -0.1
+	}
+	TRP_2 = {
+		diplomatic_upkeep = 1
+		galley_power = 0.2	
+	}
+	TRP_3 = {
+		navy_tradition = 1
+		privateer_efficiency = 0.10
+	}
+	TRP_4 = {
+		global_sailors_modifier = 0.25
+	}
+	TRP_5 = {
+		land_morale = 0.15
+	}
+	TRP_6 = {
+		global_own_trade_power = 0.2
+		trade_efficiency = 0.05
+	}
+	TRP_7 = {
+		tolerance_own = 1
+		monthly_piety = 0.001
+	}
+}
+
+ILY_ideas = {
+	start = {
+		cavalry_power = 0.20
+		recover_army_morale_speed = 0.05
+	}
+	
+	bonus = {
+		free_leader_pool = 1
+	}
+	
+	trigger = {
+		tag = ILY
+	}
+	free = yes
+	
+	ILY_1 = {
+		global_unrest = -1
+	}
+	ILY_2 = {
+		global_manpower_modifier = 0.2
+	}
+	ILY_3 = {
+		discipline = 0.05
+	}
+	ILY_4 = {
+		global_tax_modifier = 0.1
+	}
+	ILY_5 = {
+		production_efficiency = 0.1
+		land_morale = 0.1
+	}
+	ILY_6 = {
+		global_own_trade_power = 0.25
+	}
+	ILY_7 = {
+		no_religion_penalty = yes
+	}
+}
+
+IBE_ideas = {
+	start = {
+		colonists = 2
+		land_morale = 0.15
+	}
+	
+	bonus = {
+		global_tariffs = 0.20
+	}
+	
+	trigger = {
+		tag = IBE
+	}
+	free = yes		#will be added at load.
+	
+	IBE_1 = {
+		naval_morale = 0.15
+		disengagement_chance = 0.05
+	}
+	IBE_2 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	IBE_3 = {
+		global_trade_power = 0.2
+		development_cost = -0.1
+	}
+	IBE_4 = {
+		global_colonial_growth = 25
+		discipline = 0.05
+	}
+	IBE_5 = {
+		trade_efficiency = 0.15
+		merchants = 1
+	}
+	IBE_6 = {
+		build_cost = -0.15
+		yearly_absolutism = 0.5
+	}
+	IBE_7 = {
+		defensiveness = 0.1
+		artillery_power = 0.1
+	}
+}
+
+NED_ideas = {
+	start = {
+		global_sailors_modifier = 0.25
+		naval_forcelimit_modifier = 0.50
+	}
+	
+	bonus = {
+		trade_efficiency = 0.15
+	}
+
+	trigger = {
+		OR = {
+			tag = NED
+		}
+	}
+	free = yes		#will be added at load.
+	
+	amsterdam_wisselbank = {
+		inflation_reduction = 0.1
+		land_morale = 0.05
+	}
+	dutch_trading_spirit = {
+		discipline = 0.05
+		trade_range_modifier = 0.10
+	}
+	polders = {
+		development_cost = -0.1
+		colonists = 1
+	}
+	instructie_voor_de_admiraliteiten = {
+		leader_naval_fire = 2
+		allowed_marine_fraction = 0.25
+	}
+	embrace_humanism = {
+		tolerance_heretic = 3
+		global_colonial_growth = 35
+	}
+	army_sappers = {
+		siege_ability = 0.10
+	}
+	platoon_fire = {
+		fire_damage = 0.15
+	}
+}
+
+BEL_ideas = {
+	start = {
+		general_cost = -0.2
+		land_morale = 0.1
+	}
+	
+	bonus = {
+		global_tax_modifier = 0.2
+	}
+
+	trigger = {
+		OR = {
+			tag = BEL
+		}
+	}
+	free = yes		#will be added at load.
+	
+	BEL_1 = {
+		infantry_cost = -0.1
+	}
+	BEL_2 = {
+		prestige = 2
+	}
+	BEL_3 = {
+		trade_efficiency = 0.2
+	}
+	BEL_4 = {
+		shock_damage = 0.1
+	}
+	BEL_5 = {
+		infantry_power =  0.1
+	}
+	BEL_6 = {
+		fire_damage_received = -0.1
+	}
+	BEL_7 = {
+		fire_damage = 0.1
+	}
+}
