@@ -32,29 +32,26 @@ estate_church =
 
 	# These scale with loyalty & power
 	country_modifier_happy = {
-		tolerance_own = 2			#BTAddOn new - estates rebalancing
 		global_tax_modifier = 0.2
-		papal_influence = 1.0
-		devotion = 1.0			#BTAddOn changed from 0.5 - estates rebalancing
-		church_power_modifier = 0.2			#BTAddOn changed from 0.1 - estates rebalancing
+		papal_influence = 1
+		devotion = 0.5
+		church_power_modifier = 0.1
 		monthly_fervor_increase = 1
-		#stability_cost_modifier = -0.1			#BTAddOn removed - estates rebalancing
+		stability_cost_modifier = -0.1
 	}
 	country_modifier_neutral = {
-		tolerance_own = 1			#BTAddOn new - estates rebalancing
-		#global_tax_modifier = 0.2			#BTAddOn removed - estates rebalancing
+		global_tax_modifier = 0.2
 	}	
 	country_modifier_angry = {
-		tolerance_own = -2			#BTAddOn new - estates rebalancing
-		global_tax_modifier = -0.2
+		global_tax_modifier = -0.1
 		papal_influence = -1
-		devotion = -1.0			#BTAddOn changed from -0.5 - estates rebalancing
-		church_power_modifier = -0.2			#BTAddOn changed from -0.25 - estates rebalancing
+		devotion = -0.5
+		church_power_modifier = -0.25
 		monthly_fervor_increase = -1
-		stability_cost_modifier = 0.33			#BTAddOn changed from 0.1 - estates rebalancing
+		stability_cost_modifier = 0.1
 		global_unrest = 2
 	}
-	
+
 	land_ownership_modifier = {
 		church_loyalty_modifier = 0.2
 	}
@@ -78,7 +75,7 @@ estate_church =
 			base_tax = 10
 		}
 	}
-	
+
 	# Influence modifiers
 	base_influence = 10
 	influence_modifier = {
@@ -150,6 +147,19 @@ estate_church =
 	}
 	
 	custom_name = {
+		desc = estate_ogboni
+		trigger = {
+			tag = OYO
+		}
+	}
+	custom_name = {
+		desc = estate_tengbiise
+		trigger = {
+			primary_culture = mossi
+			religion = shamanism
+		}
+	}
+	custom_name = {
 		desc = estate_monasteries
 		trigger = {
 			OR = {
@@ -169,6 +179,78 @@ estate_church =
 		desc = estate_brahmins
 		trigger = {
 			religion = hinduism
+		}
+	}
+	custom_name = {
+		desc = estate_pastors
+		trigger = {
+			OR = {
+				religion = protestant
+				religion = reformed
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_popes
+		trigger = {
+			AND = {
+				religion = orthodox
+				OR = {
+					culture_group = east_slavic
+					culture_group = south_slavic
+					culture_group = west_slavic
+				}
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_shamans
+		trigger = {
+			OR = {
+				religion = tengri_pagan_reformed
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_gurus
+		trigger = {
+			religion = sikhism
+		}
+	}
+	custom_name = {
+		desc = estate_medicine_men
+		trigger = {
+			religion = totemism
+		}
+	}
+	custom_name = {
+		desc = estate_godar
+		trigger = {
+			religion = norse_pagan_reformed
+		}
+	}
+	custom_name = {
+		desc = estate_rabbis
+		trigger = {
+			religion = jewish
+		}
+	}
+	custom_name = {
+		desc = estate_mobeds
+			trigger = {
+				religion = zoroastrian
+			}
+	}
+	custom_name = {
+		desc = estate_kannushi
+			trigger = {
+				religion = shinto
+			}
+	}
+	custom_name = {
+		desc = estate_panacas
+		trigger = {
+			religion = inti
 		}
 	}
 	custom_name = {
@@ -198,7 +280,7 @@ estate_church =
 			tag = KOR
 			religion = confucianism
 		}
-	}	
+	}
 	custom_name = {
 		desc = estate_kahuna
 		trigger = {
@@ -234,7 +316,7 @@ estate_church =
 		desc = estate_bete
 		trigger = {
 			OR = {
-				tag = LGN # changed from LAI
+				tag = LAI
 				tag = VIL
 				tag = VNL
 			}

@@ -4,10 +4,12 @@ estate_nobles =
 
 	# If true, country will get estate
 	trigger = {
+		NOT = { has_government_attribute = is_merchant_republic }
 		NOT = { has_reform = pirate_republic_reform }
 		NOT = { has_reform = veche_republic }
 		NOT = { has_reform = cossacks_reform }
 		NOT = { government = native }
+		NOT = { has_reform = trading_city }
 		NOT = { has_reform = siberian_tribe }
 		NOT = { is_revolutionary_republic_trigger = yes }
 		NOT = { has_reform = revolutionary_empire_reform }
@@ -48,18 +50,15 @@ estate_nobles =
 		manpower_recovery_speed = 0.2 
 		land_maintenance_modifier = -0.1
 		monthly_support_heir_gain = 0.33
-		legitimacy = 1.0			#BTAddOn new - estates rebalancing
 	}
 	country_modifier_neutral = {
-		manpower_recovery_speed = 0.1			#BTAddOn changed from 0.2 - estates rebalancing
+		manpower_recovery_speed = 0.2 
 	}	
 	country_modifier_angry = {
-		manpower_recovery_speed = -0.2			#BTAddOn changed from 0.1 - estates rebalancing
+		manpower_recovery_speed = -0.1
 		land_maintenance_modifier = 0.1
-		legitimacy = -1.0			#BTAddOn new - estates rebalancing
-		stability_cost_modifier = 0.33			#BTAddOn new - estates rebalancing
-		global_unrest = 2 			#New in 1.30
-	}	
+		global_unrest = 2
+	}
 	land_ownership_modifier = {
 		nobles_loyalty_modifier = 0.2
 	}
@@ -84,7 +83,7 @@ estate_nobles =
 			NOT = { is_state_core = owner }
 		}
 	}
-	
+
 	# Influence modifiers
 	base_influence = 10
 	influence_modifier = {
@@ -216,19 +215,30 @@ estate_nobles =
 	
 	#Alternative naming of estates
 	custom_name = {
+		desc = estate_oyo_mesi
+		trigger = {
+			tag = OYO
+		}
+	}
+	custom_name = {
+		desc = estate_nakomse
+		trigger = {
+			primary_culture = mossi
+			religion = shamanism
+		}
+	}
+	custom_name = {
+		desc = estate_chieftains
+		trigger = {
+			has_reform = tribal_confederacy
+		}
+	}
+	custom_name = {
 		desc = estate_beys
 		trigger = {
 			technology_group = ottoman
 		}
 	}
-	#BT-specific:
-	custom_name = {
-		desc = estate_marchers
-		trigger = {
-			has_reform = english_monarchy
-		}
-	}
-	#End of BT-specific
 	custom_name = {
 		desc = estate_boyars
 		trigger = {
@@ -364,14 +374,30 @@ estate_nobles =
 		desc = estate_ratu
 		trigger = {
 			OR = {
-				tag = LGN # changed from LAI
+				tag = LAI
 				tag = VIL
 				tag = VNL
 			}
 			religion = animism
 		}
 	}
-
+	custom_name = {
+		desc = estate_warriors
+		trigger = {
+			OR = {
+				government = native
+				has_reform = siberian_tribe
+				has_reform = native_basic_reform
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_mani
+		trigger = {
+			tag = KON
+		}
+	}
+	
 	color = { 200 0 50 }
 	
 	privileges = {
@@ -402,12 +428,6 @@ estate_nobles =
 		estate_nobles_tribe_unification
 		estate_nobles_tribe_centralization
 		estate_nobles_grant_power_to_the_bashorun
-		#BT-specific privileges
-		estate_nobles_very_strong_duchies
-		estate_nobles_extremely_strong_duchies
-		estate_nobles_british_strong_marches
-		estate_nobles_border_forts
-		#End of BT-specific privileges
 	}
 
 	agendas = {

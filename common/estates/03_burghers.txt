@@ -7,7 +7,9 @@ estate_burghers =
 		NOT = { has_estate = estate_vaisyas }
 		NOT = { has_estate = estate_jains }
 		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_government_attribute = is_merchant_republic }
 		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
 		NOT = { is_revolutionary_republic_trigger = yes }
 		NOT = { has_reform = cossacks_reform }
 		NOT = { government = native }
@@ -23,21 +25,15 @@ estate_burghers =
 
 	# These scale with loyalty & power
 	country_modifier_happy = {
-		production_efficiency = 0.2			#BTAddOn new - estates rebalancing
 		trade_efficiency = 0.2
-		#development_cost = -0.1			#BTAddOn removed - estates rebalancing
-		republican_tradition = 0.5			#BTAddOn new - estates rebalancing
+		development_cost = -0.1
 	}
 	country_modifier_neutral = {
-		#trade_efficiency = 0.2			#BTAddOn removed - estates rebalancing
-		production_efficiency = 0.1			#BTAddOn new - estates rebalancing
+		trade_efficiency = 0.2
 	}	
 	country_modifier_angry = {
-		production_efficiency = -0.2			#BTAddOn new - estates rebalancing
-		trade_efficiency = -0.2			#BTAddOn changed from -0.1 - estates rebalancing
-		#development_cost = 0.1			#BTAddOn removed - estates rebalancing
-		republican_tradition = -0.5			#BTAddOn new - estates rebalancing
-		stability_cost_modifier = 0.33			#BTAddOn new - estates rebalancing
+		trade_efficiency = -0.1
+		development_cost = 0.1
 		global_unrest = 2
 	}
 	land_ownership_modifier = {
@@ -78,7 +74,7 @@ estate_burghers =
 			has_province_modifier = thankful_guilds
 		}
 	}
-	
+
 	# Influence modifiers
 	base_influence = 10
 	influence_modifier = {	
@@ -226,9 +222,23 @@ estate_burghers =
 		}
 	}
 	custom_name = {
+		desc = estate_pochteca
+		trigger = {
+			religion = nahuatl
+		}
+	}
+	custom_name = {
 		desc = estate_merchant_guilds
 		trigger = {
-			NOT = { religion_group = christian } #Diversify a bit more.
+			OR = {	#Just like "NOT = { religion_group = Christian }", but at least it doesn't override estate names for new religion groups
+				#Still needs more diversity
+				religion_group = muslim
+				religion_group = eastern
+				religion_group = dharmic
+				religion_group = pagan
+				religion_group = jewish_group
+				religion_group = zoroastrian_group
+			}
 		}
 	}
 
