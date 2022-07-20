@@ -227,6 +227,7 @@ AHU_ideas = {
 	}
 	AHU_3 = {
 		inflation_reduction = 0.15
+		no_religion_penalty = yes
 	}
 	AHU_4 = {
 		diplomatic_reputation = 2
@@ -355,9 +356,11 @@ TRP_ideas = {
 	}
 	TRP_4 = {
 		global_sailors_modifier = 0.25
+		land_forcelimit_modifier = 0.33
 	}
 	TRP_5 = {
 		land_morale = 0.15
+		no_religion_penalty = yes
 	}
 	TRP_6 = {
 		global_own_trade_power = 0.2
