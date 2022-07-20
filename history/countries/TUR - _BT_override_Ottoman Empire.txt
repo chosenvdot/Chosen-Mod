@@ -1,3 +1,8 @@
 
 historical_rival = HUN
 historical_rival = RUS
+
+change_estate_land_share = {
+	estate = estate_dhimmi
+	share = -20
+}
