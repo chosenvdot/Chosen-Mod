@@ -348,13 +348,6 @@ union = {
 #	end_date = 1500.1.1 #Generic End Date, replace when I have time to do proper later starts history work
 #} #Principality of Drutsk
 
-guarantee = {
-	first = LIT
-	second = CRI
-	start_date = 1444.1.1
-	end_date = 1475.1.1 #Khanate becomes a protectorate of the Ottoman Empire, essentially.
-} #Agreement between Crimea and Lithuania against Great Horde, Crimea gaining protection in exchange for the Yedisan area.
-
 # vassal = {
 # 	first = TVE
 # 	second = ZBT
@@ -368,6 +361,13 @@ guarantee = {
 # 	start_date = 1444.1.1
 # 	end_date = 1483.1.1
 # } #Ryazan's autonomous vassal principality and bitter rival for most of its existance. Weakened greatly by this point.
+
+march = {
+	first = POL
+	second = MOL
+	start_date = 1444.1.1
+	end_date = 1446.2.13
+}
 
 vassal = {
 	first = MOS
