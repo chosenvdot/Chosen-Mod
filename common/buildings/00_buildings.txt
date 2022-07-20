@@ -46,7 +46,7 @@ marketplace = {
 	time = 12
 
 	modifier = {
-		province_trade_power_modifier = 0.25			#BTAddOn changed from .5 A 50 percent bonus available at practically day 1 was overpowered, and it snowballed for CoTs. While we still want CoTs strong, not x15 any other province this early. BT's lower avg dev but generally same dev for capitals and CoTs only made this worse, as well.
+		province_trade_power_modifier = 0.4			#BTAddOn changed from .5 A 50 percent bonus available at practically day 1 was overpowered, and it snowballed for CoTs. While we still want CoTs strong, not x15 any other province this early. BT's lower avg dev but generally same dev for capitals and CoTs only made this worse, as well.
 	}
 	
 	ai_will_do = {
@@ -82,7 +82,7 @@ workshop = {
 	cost = 100			#BTAddOn changed from 100. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
 	time = 12
 	modifier = {
-		local_production_efficiency = 0.4			#BTAddOn changed from 0.5. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces).
+		local_production_efficiency = 0.5			#BTAddOn changed from 0.5. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces).
 	}
 	
 	allow_in_gold_provinces = no
@@ -142,8 +142,7 @@ temple = {
 	time = 12
 	modifier = {
 		local_missionary_strength = 0.01			#BTAddOn new effect. Giving the temple the same bonus of this building's upgrade, simply weaker. Makes it more useful when it is too late in the game to make money back from building cost.
-		local_tax_modifier = 0.5
-		allowed_num_of_buildings = 1
+		local_tax_modifier = 0.3
 	}
 	on_built = {
 		if = {
@@ -219,7 +218,7 @@ barracks = {
 	cost = 100			#BTAddOn changed from 100. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
 	time = 12
 	modifier = {
-		local_manpower_modifier = 0.25			#BTAddOn changed from 0.5. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+		local_manpower_modifier = 0.4			#BTAddOn changed from 0.5. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
 	}
 	on_built = {
 		if = {
@@ -379,10 +378,10 @@ shipyard = {
 }
 
 fort_15th = {
-	cost = 100			#BTAddOn changed from original 200. Castles were way too cheap to build but also too expensive to maintain in BT. Note upkeep is controlled in defines and is generated based on fort level, I believe with reduced fort levels the vanilla .5 per month per level is fine
+	cost = 180			#BTAddOn changed from original 200. Castles were way too cheap to build but also too expensive to maintain in BT. Note upkeep is controlled in defines and is generated based on fort level, I believe with reduced fort levels the vanilla .5 per month per level is fine
 	time = 30
 	modifier = {
-		fort_level = 1			#BTAddOn changed from original 2. Fort levels are just ridiculous in vanilla and require far too many cannons, especially at later levels. After some testing, I'm content with my new 1-2-3-5 system. 
+		fort_level = 2			#BTAddOn changed from original 2. Fort levels are just ridiculous in vanilla and require far too many cannons, especially at later levels. After some testing, I'm content with my new 1-2-3-5 system. 
 		local_unrest = -0.5			#BTAddOn new. The days of controling a region by building a castle there were largely over by the later EU4 period, but I really like the concept of forts establishing a permanent military presence, much like friendly troops in the province reduce unrest. Also want another bonus to justify cost
 		local_defensiveness = 0.1			#BTAddOn new. The point of weakening forts isn't to speed up the game, or make conquest easier or faster, but rather to reduce how mandatory cannons and obscenely large armies are for sieges. Local defensiveness slows things back down after reducing fort levels.
 	}
@@ -492,10 +491,10 @@ courthouse = {
 	}
 	
 	modifier = {
-		local_state_maintenance_modifier = -0.25
+		local_state_maintenance_modifier = -0.2
 		local_autonomy = -0.1
-		local_governing_cost = -0.25
-		local_development_cost = -0.05			#BTAddOn removed. I wouldn't say universities aid development per se, so I'm moving this bonus elsewhere. Consider many older uni city examples, Cambrige, Oxford, Siena, Padua, Murcia, Heidelberg, Toulouse. Not really tiny, but not bastions of development and industry the London, Moscow, Berlin, Paris (though Paris did have a uni) etc. ended up moving dev bonus to production buildings to better represent this reality.
+		local_governing_cost = -0.2
+		#local_development_cost = -0.05			#BTAddOn removed. I wouldn't say universities aid development per se, so I'm moving this bonus elsewhere. Consider many older uni city examples, Cambrige, Oxford, Siena, Padua, Murcia, Heidelberg, Toulouse. Not really tiny, but not bastions of development and industry the London, Moscow, Berlin, Paris (though Paris did have a uni) etc. ended up moving dev bonus to production buildings to better represent this reality.
 		allowed_num_of_buildings = 1
 	}
 
@@ -701,11 +700,11 @@ regimental_camp = {
 }
 
 fort_16th = {
-	cost = 300			#BTAddOn changed from original 400
-	time = 36			#BTAddOn changed from original 30. Increasing build time of later forts by 6 months, 12 months, and 24 months
+	cost = 400			#BTAddOn changed from original 400
+	time = 30			#BTAddOn changed from original 30. Increasing build time of later forts by 6 months, 12 months, and 24 months
 	make_obsolete = fort_15th
 	modifier = {
-		fort_level = 2			#BTAddOn changed from 4
+		fort_level = 4			#BTAddOn changed from 4
 		local_unrest = -1.0			#BTAddOn new
 		local_defensiveness = 0.3			#BTAddOn new
 	}
@@ -793,8 +792,7 @@ cathedral = {
 	time = 24			#BTAddOn changed from 12. Doubling upgraded buildings' build time
 	modifier = {
 		local_missionary_strength = 0.02			#BTAddOn changed from 0.03, might slow conversion slightly, but avg dev is also lower, so that might be a good thing
-		local_tax_modifier = 1
-		allowed_num_of_buildings = 1
+		local_tax_modifier = .70
 	}
 	on_built = {
 		if = {
@@ -872,8 +870,7 @@ university = {
 	time = 12			#BTAddOn changed from 12. This is not meant to be spammed when the enlightenment hits to catch up, increased to 4y
 	modifier = {
 		local_institution_spread = 0.5			#BTAddOn new. Fits perfectly in the new tech system =D. Currently 100 percent bonus, which may be a bit much, but on the other hand still requires normal spread, and if a province is advanced enough to have a university, it probably is somwhat cutting edge anyway. Nice counterpoint for new non western tech penalties, too, so a tech minded country in Asia or Africa can still keep up with the spread bonus offsetting tech group spread penalties.
-		local_development_cost = -0.20			#BTAddOn removed. I wouldn't say universities aid development per se, so I'm moving this bonus elsewhere. Consider many older uni city examples, Cambrige, Oxford, Siena, Padua, Murcia, Heidelberg, Toulouse. Not really tiny, but not bastions of development and industry the London, Moscow, Berlin, Paris (though Paris did have a uni) etc. ended up moving dev bonus to production buildings to better represent this reality.
-		local_governing_cost = -0.5
+		local_development_cost = -0.10			#BTAddOn removed. I wouldn't say universities aid development per se, so I'm moving this bonus elsewhere. Consider many older uni city examples, Cambrige, Oxford, Siena, Padua, Murcia, Heidelberg, Toulouse. Not really tiny, but not bastions of development and industry the London, Moscow, Berlin, Paris (though Paris did have a uni) etc. ended up moving dev bonus to production buildings to better represent this reality.
 		allowed_num_of_buildings = 1			#BTAddOn removed. Terrain Overhaul addon (balanced to be enabled alongside misc addon) makes max buildings possible at around 40 development, instead of 100 development, so this isn't neccessary, and also a tad silly, if I may say so... 'Yay, we now have uni so we can build more buildings in our city'.... mkay
 	}
 	
@@ -1088,8 +1085,8 @@ university = {
 }
 
 trade_depot = {
-	cost = 200			#BTAddOn changed from 300. 
-	time = 24			#BTAddOn changed from 12. Doubling upgraded buildings' build time
+	cost = 300			#BTAddOn changed from 300. 
+	time = 12			#BTAddOn changed from 12. Doubling upgraded buildings' build time
 	
 	make_obsolete = marketplace
 	
@@ -1128,7 +1125,7 @@ trade_depot = {
 
 grand_shipyard = {
 	cost = 300			#BTAddOn notes - leaving this alone, see shipyard entry for logic
-	time = 24			#BTAddOn changed from 12. Doubling second level military buildings build time.
+	time = 12			#BTAddOn changed from 12. Doubling second level military buildings build time.
 	
 	make_obsolete = shipyard
 	
@@ -1212,14 +1209,14 @@ grand_shipyard = {
 
 training_fields = {
 	cost = 300			#BTAddOn changed from 300. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
-	time = 24			#BTAddOn changed from 12. Doubling second level military buildings build time.
+	time = 12			#BTAddOn changed from 12. Doubling second level military buildings build time.
 	
 	make_obsolete = barracks
 
 
 	
 	modifier = {
-		local_manpower_modifier = 0.5			#BTAddOn changed from 1.0. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+		local_manpower_modifier = 0.8			#BTAddOn changed from 1.0. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
 	}
 	on_built = {
 		if = {
@@ -1299,13 +1296,13 @@ training_fields = {
 
 fort_17th = {
 	cost = 600			#BTAddOn changed from original 600
-	time = 48			#BTAddOn changed from original 30. Increasing build time of later forts by 6 months, 12 months, and 24 months
+	time = 30			#BTAddOn changed from original 30. Increasing build time of later forts by 6 months, 12 months, and 24 months
 	
 	make_obsolete = fort_16th
 	
 	modifier = {
-		fort_level = 3			#BTAddOn changed from 6
-		local_unrest = -1.5			#BTAddOn new
+		fort_level = 6			#BTAddOn changed from 6
+		#local_unrest = -1.5			#BTAddOn new
 		local_defensiveness = 0.6			#BTAddOn new
 	}
 
@@ -1392,12 +1389,12 @@ fort_17th = {
 ################################################
 stock_exchange = {
 	cost = 400
-	time = 36			#BTAddOn changed from 12. tripling stock exchange build time, as a doubled upgraded building
+	time = 12			#BTAddOn changed from 12. tripling stock exchange build time, as a doubled upgraded building
 	
 	make_obsolete = trade_depot
 	
 	modifier = {
-		province_trade_power_modifier = 1.5			#BTAddOn changed from 1.25. While earlier levels were weaker than vanilla, I'm increasing the final level, because by this tech level, the centres of wealth should be pulling a massive slice of the wealth in a node, and the many new provinces will have had plenty chance to build up and compete with the capitals much more than in vanilla.
+		province_trade_power_modifier = 1.25			#BTAddOn changed from 1.25. While earlier levels were weaker than vanilla, I'm increasing the final level, because by this tech level, the centres of wealth should be pulling a massive slice of the wealth in a node, and the many new provinces will have had plenty chance to build up and compete with the capitals much more than in vanilla.
 	}
 	
 	ai_will_do = {
@@ -1430,13 +1427,13 @@ stock_exchange = {
 }
 
 counting_house = {
-	cost = 300			#BTAddOn changed from 400. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
-	time = 24			#BTAddOn changed from 12. Doubling upgraded buildings' build time
+	cost = 400			#BTAddOn changed from 400. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	time = 12			#BTAddOn changed from 12. Doubling upgraded buildings' build time
 	
 	make_obsolete = workshop
 	modifier = {
 					#BTAddOn new. A little non-cash boost to make this building not worthless when it is too late in the game to make your ducats back from the cost to build it. Note the corresponding dev cost reduction has been removed from universities, where I felt it made less logical sense. Here, production and industry encourage development.
-		local_production_efficiency = 0.6			#BTAddOn changed from 1.0. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+		local_production_efficiency = 1			#BTAddOn changed from 1.0. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
 	}
 	
 	allow_in_gold_provinces = no
@@ -1496,7 +1493,7 @@ counting_house = {
 
 town_hall = {
 	cost = 100
-	time = 24			#BTAddOn changed from 12. Doubling upgraded buildings' build time
+	time = 12			#BTAddOn changed from 12. Doubling upgraded buildings' build time
 	
 	make_obsolete = courthouse
 	
@@ -1512,7 +1509,7 @@ town_hall = {
 		local_state_maintenance_modifier = -0.5
 		local_autonomy = -0.2
 		local_governing_cost = -0.5
-		local_development_cost = -0.10			#BTAddOn removed. I wouldn't say universities aid development per se, so I'm moving this bonus elsewhere. Consider many older uni city examples, Cambrige, Oxford, Siena, Padua, Murcia, Heidelberg, Toulouse. Not really tiny, but not bastions of development and industry the London, Moscow, Berlin, Paris (though Paris did have a uni) etc. ended up moving dev bonus to production buildings to better represent this reality.
+		#local_development_cost = -0.10			#BTAddOn removed. I wouldn't say universities aid development per se, so I'm moving this bonus elsewhere. Consider many older uni city examples, Cambrige, Oxford, Siena, Padua, Murcia, Heidelberg, Toulouse. Not really tiny, but not bastions of development and industry the London, Moscow, Berlin, Paris (though Paris did have a uni) etc. ended up moving dev bonus to production buildings to better represent this reality.
 		allowed_num_of_buildings = 1
 	}
 	
@@ -1565,7 +1562,7 @@ town_hall = {
 }
 
 drydock = {
-	cost = 200			#BTAddOn changed from 300. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	cost = 300			#BTAddOn changed from 300. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
 	time = 24			#BTAddOn changed from 12. Doubling second level military buildings build time.
 	
 	make_obsolete = dock
@@ -1641,7 +1638,7 @@ drydock = {
 }
 
 conscription_center = {
-	cost = 300			#BTAddOn changed from 400. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+	cost = 400			#BTAddOn changed from 400. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
 	time = 24			#BTAddOn changed from 12. Doubling second level military buildings build time.
 	
 	
@@ -1729,14 +1726,14 @@ conscription_center = {
 
 fort_18th = {
 	cost = 1000			#BTAddOn changed from original 800
-	time = 72			#BTAddOn changed from original 30. Increasing build time of later forts by 6 months (to 3y), then 12 more months (to 4y), and then 24 more months (to 6y)
+	time = 30			#BTAddOn changed from original 30. Increasing build time of later forts by 6 months (to 3y), then 12 more months (to 4y), and then 24 more months (to 6y)
 	
 	
 	make_obsolete = fort_17th
 	
 	modifier = {
-		fort_level = 5			#BTAddOn changed from 8
-		local_unrest = -2.0			#BTAddOn new
+		fort_level = 8			#BTAddOn changed from 8
+		#local_unrest = -2.0			#BTAddOn new
 		local_defensiveness = 1.0			#BTAddOn new
 	}
 
@@ -1841,7 +1838,7 @@ wharf = {
 		salt
 	}
 	modifier = {
-		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
 		#trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#naval_forcelimit = 1			#BTAddOn new - Just a fun little new bonus
 	}
@@ -1951,7 +1948,7 @@ weapons = {
 		iron
 	}
 	modifier = {
-		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
 		#trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#land_forcelimit = 0.5			#BTAddOn new - Just a fun little new bonus
 	}
@@ -2062,7 +2059,7 @@ textile = {
 		bt_trade_good_books
 	}
 	modifier = {
-		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
 		#trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#local_tax_modifier = 0.25			#BTAddOn new - Just a fun little new bonus
 	}
@@ -2181,7 +2178,7 @@ plantations = {
 		cocoa
 	}
 	modifier = {
-		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
 		#trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#local_production_efficiency = 0.25			#BTAddOn new - Just a fun little new bonus
 	}
@@ -2289,7 +2286,7 @@ tradecompany = {
 		incense
 	}
 	modifier = {
-		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
 		#trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#province_trade_power_modifier = 0.5			#BTAddOn new - Just a fun little new bonus
 	}
@@ -2413,7 +2410,7 @@ farm_estate = {
 		bt_trade_good_apiculture
 	}
 	modifier = {
-		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
 		#trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#local_production_efficiency = 0.25			#BTAddOn new - Just a fun little new bonus
 	}
@@ -2521,7 +2518,7 @@ mills = {
 		chinaware
 	}
 	modifier = {
-		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
 		#trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#local_tax_modifier = 0.25			#BTAddOn new - Just a fun little new bonus
 	}
@@ -2640,8 +2637,8 @@ furnace = {
 	}
 
 	modifier = {
-		trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
-		#trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
+		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#global_trade_goods_size_modifier = 0.03			#BTAddOn changed from 0.05. This was just too huge, especially with all the new provinces.
 	}
 	onmap = yes

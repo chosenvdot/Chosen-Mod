@@ -24,7 +24,7 @@ add_core = ASC
 add_core = KRO
 
 #Other Political
-hre = yes
+hre = no
 
 #Fort/Other Buildings
 

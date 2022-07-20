@@ -23,7 +23,7 @@ trade_goods = fish
 add_core = ASC
 
 #Other Political
-hre = yes
+hre = no
 
 #Fort/Other Buildings
 

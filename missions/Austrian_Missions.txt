@@ -51,25 +51,14 @@ hab_holy_roman_ambitions = {
 					preferred_emperor = ROOT
 					has_opinion = { who = ROOT value = 100 }
 				}
-				amount = 5
+				amount = 3
 			}
 		}
 		effect = {
 			if = {
 				limit = {
 					exists = BOH
-					valid_for_personal_unions_trigger = yes
-					BOH = {
-						valid_for_personal_unions_trigger = yes
-					}
 				}
-				add_casus_belli = {
-					type = cb_restore_personal_union
-					months = 300
-					target = BOH
-				}
-			}
-			else = {
 				bohemia_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -91,13 +80,9 @@ hab_holy_roman_ambitions = {
 					}
 					add_permanent_claim = ROOT
 				}
-			}
-			add_country_modifier = {
-				name = "succesful_bid_for_imperial_crown"
-				duration = 5475 #15 years
-			}
-		}
-	}
+		 }
+ 	}
+}
 	subjugate_bohemia = {
 		icon = mission_empire
 		required_missions = { secure_the_imperial_crown }
@@ -376,18 +361,7 @@ hab_protect_the_balkans = {
 			if = {
 				limit = {
 					exists = HUN
-					valid_for_personal_unions_trigger = yes
-					HUN = {
-						valid_for_personal_unions_trigger = yes
-					}
 				}
-				add_casus_belli = {
-					type = cb_restore_personal_union
-					months = 300
-					target = HUN
-				}
-			}
-			else = {
 				slovakia_area = {
 					limit = {
 						NOT = { is_core = ROOT }
