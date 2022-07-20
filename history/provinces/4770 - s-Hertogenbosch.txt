@@ -11,10 +11,10 @@ capital = "Des Hertogenbosch"
 culture = dutch
 religion = catholic
 hre = yes
-base_tax = 1
-base_production = 1
+base_tax = 7
+base_production = 3
 trade_goods = naval_supplies			#Naval supplies to represent the large forested portions of this province. Good enough for me.
-base_manpower = 1
+base_manpower = 9
 fort_15th = yes
 
 discovered_by = western

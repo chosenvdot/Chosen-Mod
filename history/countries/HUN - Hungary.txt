@@ -13,9 +13,11 @@ capital = 153 # Buda
 		name = "Mike the Old"
 		dynasty = "von Boomer"
 		culture = irish
-		birth_date = 1422.1.1			
-		adm = 4
+		birth_date = 1424.1.1			
+		adm = 5
 		dip = 5
 		mil = 6
 	}
+		clear_scripted_personalities = yes
+		add_ruler_personality = immortal_personality
 }

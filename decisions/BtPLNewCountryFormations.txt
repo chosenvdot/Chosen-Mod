@@ -26,6 +26,7 @@ country_decisions = {
 			OR = {
 				primary_culture = wallonian
 				primary_culture = flemish
+				primary_culture = dutch
                 AND = {
                     tag = HAI
                     primary_culture = picard_culture
@@ -34,8 +35,7 @@ country_decisions = {
                     tag = BRB
                     primary_culture = dutch
                 }
-			}
-			NOT = { num_of_cities = 30 }			#With more than 30 cities, we want the tag to be trying to form something else, like NED or FRA
+			}			#With more than 30 cities, we want the tag to be trying to form something else, like NED or FRA
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -212,10 +212,7 @@ country_decisions = {
 			bt_generic_can_form_potential_check = yes
 			NOT = { has_country_flag = formed_illyria_flag_btp }
 			NOT = { tag = ILY }
-			OR = {
-				culture_group = south_slavic
-				culture_group = illyrian
-			}
+			tag = POL
 		}
 		provinces_to_highlight = {
 			OR = {
