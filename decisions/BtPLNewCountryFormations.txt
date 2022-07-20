@@ -315,11 +315,7 @@ country_decisions = {
 			NOT = { tag = EMR }
 			NOT = { tag = TUS }
 			NOT = { tag = TTS }
-			OR = { 
-				tag = MLO #Milan
-				tag = LOM #Lombardy (Non-milanese Lombardy formable)
-				tag = VEN #Venice
-			}
+			tag = VEN #Venice
 		}
 		provinces_to_highlight = {
 			OR = {
