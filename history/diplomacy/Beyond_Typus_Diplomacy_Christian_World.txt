@@ -334,20 +334,6 @@ union = {
 # 	end_date = 1536.1.1
 # }
 
-vassal = {
-	first = LIT
-	second = KIE
-	start_date = 1444.1.1
-	end_date = 1471.1.1 #Principality of Kiev fully annexed to Lithuania with the death of Prince Simeon Olelkovich
-} #Kiev Principality under Lithuania
-
-vassal = {
-	first = LIT
-	second = SMG
-	start_date = 1444.1.1
-	end_date = 1500.1.1 #Generic End Date, replace when I have time to do proper later starts history work
-} #Duchy of Samogitia under Lithuania
-
 #vassal = {
 #	first = LIT
 #	second = SLT
