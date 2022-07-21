@@ -10,9 +10,8 @@ elwolf_spa_arty_1 = {
 }
 
 jew_1 = {
-	tax_income = 96
 	land_morale = 0.2
-	land_forcelimit = 0.2
+	land_forcelimit = 5
 	core_creation = -0.2
 	technology_cost = -0.1
 	idea_cost = -0.1

@@ -1,6 +1,7 @@
 country_decisions = {
 
 reclaim_jewish_state = {
+	major = yes
 	potential = {
 		tag = ROT
 	}
@@ -12,8 +13,7 @@ reclaim_jewish_state = {
 	}
 	effect = {
 		change_tag = JUD
-		set_government_rank = 3
-		south_germany_region = {
+		south_german_region = {
 			limit = {
 				NOT = { is_core = ROOT }
 				NOT = { is_permanent_claim = ROOT }
@@ -26,6 +26,7 @@ reclaim_jewish_state = {
 }
 
 invite_jewish_bankers = {
+	major = yes
 	potential = {
 		tag = ROT
 		NOT = { has_global_flag = jewishinvestors }
@@ -35,6 +36,8 @@ invite_jewish_bankers = {
 	}
 	effect = { #jewish urbanization to catch up to other minors 
 	set_global_flag = jewishinvestors
+	add_treasury = 500
+	add_manpower = 5
 	add_country_modifier = {
 		name = "jew_1"
 		duration = 120
