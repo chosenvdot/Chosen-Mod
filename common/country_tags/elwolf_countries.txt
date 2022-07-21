@@ -1,1 +1,2 @@
 AHU = "countries/Austria-Hungary.txt"
+JUD = "countries/Kingdom-Of-Yahweh.txt"
