@@ -1,6 +1,6 @@
 government = monarchy
 add_government_reform = feudalism_reform
-government_rank = 1
+government_rank = 2
 primary_culture = hessian
 religion = catholic
 technology_group = western
@@ -40,7 +40,7 @@ elector = yes
 		birth_date = 1402.2.6
 		adm = 3
 		dip = 2
-		mil = 2
+		mil = 3
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = entrepreneur_personality
@@ -72,7 +72,7 @@ elector = yes
 		claim = 95
 		adm = 3
 		dip = 3
-		mil = 0
+		mil = 3
 	}
 }
 

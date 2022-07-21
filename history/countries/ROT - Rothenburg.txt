@@ -1,0 +1,35 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+mercantilism = 25
+technology_group = western
+religion = catholic
+primary_culture = franconian
+capital = 4715	# Rothenburg
+fixed_capital = 4715 # Cannot move capital away from this province & no power cost to move to it
+
+1444.1.1 = {
+	monarch = {
+		name = "Karl"
+		dynasty = "Marx"
+		birth_date = 1429.1.1
+		adm = 4
+		dip = 5
+		mil = 5
+		clear_scripted_personalities = yes
+		add_ruler_personality = well_connected_personality	
+	}
+}
+
+1444.1.1 = {
+	heir = {
+		name = "Anne Annelies Marie"
+		dynasty = "Frank"
+		birth_date = 1444.1.1
+		adm = 6
+		dip = 6
+		mil = 2
+		female = yes
+	}
+}
+
