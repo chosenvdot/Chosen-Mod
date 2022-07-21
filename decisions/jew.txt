@@ -8,7 +8,7 @@ reclaim_jewish_state = {
 		is_free_or_tributary_trigger = yes
 		is_nomad = no
 		is_at_war = no
-		total_development = 200
+		total_development = 300
 	}
 	effect = {
 		change_tag = JUD
@@ -20,28 +20,27 @@ reclaim_jewish_state = {
 			}
 			add_permanent_claim = JUD
 		}
-		change_religion = judaism
+		change_religion = jewish 
+		swap_ideas = yes
 	}
-
-
 }
 
 invite_jewish_bankers = {
 	potential = {
 		tag = ROT
+		NOT = { has_global_flag = jewishinvestors }
 	}
 	allow = {
 		NOT = {total_development = 100}
 	}
-
 	effect = { #jewish urbanization to catch up to other minors 
+	set_global_flag = jewishinvestors
 	add_country_modifier = {
 		name = "jew_1"
 		duration = 120
 	}
-		
 	}
-
+}
 }
 
 

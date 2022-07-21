@@ -11060,7 +11060,7 @@ ROT_ideas = {
 		global_institution_spread = 0.1
 	}
 	ROT_end_of_the_line = {
-		republican_tradition = 0.3
+		rebel_support_efficiency = 0.5
 	}
 	ROT_hinterland_knights = {
 		build_cost = -0.1

@@ -12,24 +12,13 @@ fixed_capital = 4715 # Cannot move capital away from this province & no power co
 	monarch = {
 		name = "Karl"
 		dynasty = "Marx"
+		monarch_name "Karl Marx the Wise"
 		birth_date = 1429.1.1
 		adm = 4
 		dip = 5
 		mil = 5
 		clear_scripted_personalities = yes
 		add_ruler_personality = well_connected_personality	
-	}
-}
-
-1444.1.1 = {
-	heir = {
-		name = "Anne Annelies Marie"
-		dynasty = "Frank"
-		birth_date = 1444.1.1
-		adm = 6
-		dip = 6
-		mil = 2
-		female = yes
 	}
 }
 

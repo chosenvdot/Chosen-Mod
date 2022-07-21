@@ -626,3 +626,43 @@ SCA_ideas = {
 		global_manpower_modifier = 0.20
 	}
 }
+
+JUD_ideas = {
+	start = {
+		land_morale = 0.2
+		defensiveness = 0.25
+	}
+	bonus = {
+		global_tax_modifier = 0.3
+	}
+	trigger = {
+		tag = JUD
+	}
+	free = yes
+	
+	JUD_1 = {
+		no_religion_penalty = yes
+	}
+	JUD_2 = {
+		prestige = 1
+		global_institution_spread = 0.1
+	}
+	JUD_3 = {
+		trade_efficiency = 0.2
+	}
+	JUD_4 = {
+		build_cost = -0.2
+		land_forcelimit_modifier = 0.25
+	}
+	JUD_5 = {
+		discipline = 0.05
+	}
+	JUD_6 = {
+		global_prov_trade_power_modifier = 0.2
+		advisor_cost = -.5
+	}
+	JUD_7 = {
+		garrison_size = 0.2
+		global_manpower_modifier = 0.2
+	}
+}
