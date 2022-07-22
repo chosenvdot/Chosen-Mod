@@ -379,7 +379,7 @@ CAS_ideas = {
 HOL_ideas = {
 	start = {
 		infantry_shock = 0.1
-		naval_forcelimit_modifier = 0.50
+		siege_ability = 0.10
 	}
 	
 	bonus = {
@@ -412,7 +412,7 @@ HOL_ideas = {
 		global_colonial_growth = 20
 	}
 	army_sappers = {
-		siege_ability = 0.10
+		naval_forcelimit_modifier = 0.50
 	}
 	platoon_fire = {
 		fire_damage = 0.1

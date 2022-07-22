@@ -82,7 +82,7 @@ workshop = {
 	cost = 100			#BTAddOn changed from 100. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
 	time = 12
 	modifier = {
-		local_production_efficiency = 0.5			#BTAddOn changed from 0.5. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces).
+		local_production_efficiency = 0.7			#BTAddOn changed from 0.5. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces).
 	}
 	
 	allow_in_gold_provinces = no
@@ -1838,8 +1838,8 @@ wharf = {
 		salt
 	}
 	modifier = {
-		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
-		#trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
+		trade_goods_size = 1			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		#trade_goods_size_modifier = 0.1			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#naval_forcelimit = 1			#BTAddOn new - Just a fun little new bonus
 	}
 	
@@ -1948,7 +1948,7 @@ weapons = {
 		iron
 	}
 	modifier = {
-		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size = 1			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
 		#trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#land_forcelimit = 0.5			#BTAddOn new - Just a fun little new bonus
 	}
@@ -2059,7 +2059,7 @@ textile = {
 		bt_trade_good_books
 	}
 	modifier = {
-		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size = 1			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
 		#trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#local_tax_modifier = 0.25			#BTAddOn new - Just a fun little new bonus
 	}
@@ -2178,7 +2178,7 @@ plantations = {
 		cocoa
 	}
 	modifier = {
-		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size = 1			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
 		#trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#local_production_efficiency = 0.25			#BTAddOn new - Just a fun little new bonus
 	}
@@ -2286,7 +2286,7 @@ tradecompany = {
 		incense
 	}
 	modifier = {
-		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size = 1			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
 		#trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#province_trade_power_modifier = 0.5			#BTAddOn new - Just a fun little new bonus
 	}
@@ -2410,7 +2410,7 @@ farm_estate = {
 		bt_trade_good_apiculture
 	}
 	modifier = {
-		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size = 1			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
 		#trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#local_production_efficiency = 0.25			#BTAddOn new - Just a fun little new bonus
 	}
@@ -2518,7 +2518,7 @@ mills = {
 		chinaware
 	}
 	modifier = {
-		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size = 1			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
 		#trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#local_tax_modifier = 0.25			#BTAddOn new - Just a fun little new bonus
 	}
@@ -2637,7 +2637,7 @@ furnace = {
 	}
 
 	modifier = {
-		trade_goods_size = 0.6			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
+		trade_goods_size = 1			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
 		trade_goods_size_modifier = 0.5			#BTAddOn changed from flat trade good size increase. Logic above at the top of Manufactories entries.
 		#global_trade_goods_size_modifier = 0.03			#BTAddOn changed from 0.05. This was just too huge, especially with all the new provinces.
 	}

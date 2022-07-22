@@ -1,2 +1,10 @@
 
-historical_friend = LIT
+historical_rival = LIT
+historical_rival = MOS
+historical_rival = NOV
+historical_rival = CRI
+historical_rival = POL
+historical_rival = GOL
+historical_rival = NOG
+historical_rival = TEU
+historical_rival = KAZ
