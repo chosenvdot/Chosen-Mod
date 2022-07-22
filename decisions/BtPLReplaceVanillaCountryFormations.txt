@@ -2068,11 +2068,7 @@ country_decisions = {
 				}
 			}
 			num_of_owned_provinces_with = {
-				value = 12 #out of 22
-				OR = {
-					culture = hannoverian
-					culture = hessian
-				}
+				value = 20 #out of 22
 				region = north_german_region
 				is_core = root
 			}
