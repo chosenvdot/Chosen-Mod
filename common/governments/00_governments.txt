@@ -885,20 +885,3 @@ pre_dharma_mapping = {
 		government = monarchy
 		legacy_government = florence_republic_legacy
 	}
-	regnum_dei = {
-		government = theocracy
-		legacy_government = regnum_dei_legacy
-	}
-	puppet_kingdom_of_ireland = {
-		government = republic
-		legacy_government = puppet_kingdom_of_ireland_legacy
-	}
-	transitional_government_ireland = {
-		government = republic
-		legacy_government = transitional_government_ireland_legacy
-	}
-	lithuanian_grand_duchy = {
-		government = monarchy
-		legacy_government = lithuanian_grand_duchy_legacy
-	}	#This is probably not needed, though I also don't expect it will hurt.
-}
