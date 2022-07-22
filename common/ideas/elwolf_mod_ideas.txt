@@ -299,7 +299,7 @@ RHI_ideas = {
 
 	trigger = {
 		OR = {
-			tag = TCK
+			tag = RHI
 		}
 	}
 	free = yes		#will be added at load.
