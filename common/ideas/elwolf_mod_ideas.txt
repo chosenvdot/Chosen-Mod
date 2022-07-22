@@ -343,7 +343,7 @@ TRP_ideas = {
 	}
 	free = yes
 	TRP_1 = {
-		mercenary_discipline = 0.05
+		discipline = 0.05
 		fire_damage_received = -0.1
 	}
 	TRP_2 = {
