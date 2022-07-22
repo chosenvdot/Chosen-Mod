@@ -1,15 +1,17 @@
 jesuit_order = {
     icon = GFX_holy_order_jesuits
     trigger = {
-		OR = {
-			culture_group = iberian
-			primary_culture = basque # BT
-		}
-        religion = catholic
+       OR = {
+			tag = POR
+			tag = CAS
+			tag = SPA
+		}	
+       religion = catholic
     }
     cost = 50
     cost_type = adm_power
     per_province_effect = {
+	
         add_base_tax = 1
     }
     per_province_abandon_effect = {
@@ -31,34 +33,25 @@ jesuit_order = {
 dominican_order = {
     icon = GFX_holy_order_dominicans
     trigger = {
-		OR = {
-			culture_group = iberian
-			primary_culture = basque # BT
-		}
-        religion = catholic
+       OR = {
+			tag = POR
+			tag = CAS
+			tag = SPA
+		}	
+       religion = catholic
     }
     cost = 50
     cost_type = dip_power
     per_province_effect = {
         add_base_production = 1
-
-        tooltip = {
-            custom_tooltip = removes_slaves_tooltip
-        }
-        hidden_effect = {
-            if = {
-                limit = {
-                    trade_goods = slaves
-                }
-                change_trade_goods = random
-            }
-        }
-    }
+	}
+    
     per_province_abandon_effect = {
         add_base_production = -1
     }
     modifier = {
         local_culture_conversion_cost = -0.3
+		local_governing_cost = -0.15
     }
     ai_priority = {
         factor = 1
@@ -76,15 +69,16 @@ dominican_order = {
 franciscan_order = {
     icon = GFX_holy_order_franciscans
     trigger = {
-		OR = {
-			culture_group = iberian
-			primary_culture = basque # BT
-		}
-        religion = catholic
+       OR = {
+			tag = POR
+			tag = CAS
+			tag = SPA
+		}	
+       religion = catholic
     }
     cost = 50
     cost_type = mil_power
-    per_province_effect = {
+    per_province_effect = {	
         add_base_manpower = 1
     }
     per_province_abandon_effect = {
@@ -110,22 +104,23 @@ franciscan_order = {
 shadhili_order = {
     icon = GFX_holy_order_shadhili
     trigger = {
-        primary_culture = andalusi_culture # BT; andalucian
+        tag = ADU
         religion_group = muslim
     }
     cost = 50
     cost_type = adm_power
-    per_province_effect = {
+    per_province_effect = {	
         add_base_tax = 1
         owner = { add_piety = -0.02 }
-        custom_tooltip = order_piety_tooltip
-    }
+	}
+    
     per_province_abandon_effect = {
         add_base_tax = -1
     }
     modifier = {
         local_missionary_strength = 0.015
         local_institution_spread = 0.10
+		local_governing_cost = -0.15
     }
     ai_priority = {
         factor = 2
@@ -139,7 +134,7 @@ shadhili_order = {
 qadiri_order = {
     icon = GFX_holy_order_qadiri
     trigger = {
-        primary_culture = andalusi_culture # BT; andalucian
+        tag = ADU
         religion_group = muslim
     }
     cost = 50
@@ -147,7 +142,7 @@ qadiri_order = {
     per_province_effect = {
         add_base_production = 1
         owner = { add_piety = -0.02 }
-        custom_tooltip = order_piety_tooltip
+
     }
     per_province_abandon_effect = {
         add_base_production = -1
@@ -167,16 +162,16 @@ qadiri_order = {
 
 aissawa_order = {
     icon = GFX_holy_order_aissawa
-    trigger = {
-        primary_culture = andalusi_culture # BT; andalucian
+	trigger = {
+        tag = ADU
         religion_group = muslim
     }
     cost = 50
     cost_type = mil_power
     per_province_effect = {
+	
         add_base_manpower = 1
         owner = { add_piety = -0.02 }
-        custom_tooltip = order_piety_tooltip
     }
     per_province_abandon_effect = {
         add_base_manpower = -1

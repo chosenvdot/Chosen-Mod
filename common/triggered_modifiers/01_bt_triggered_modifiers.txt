@@ -106,31 +106,6 @@
 ###########################################
 # Aragon Balancing
 ###########################################
-bt_iberian_crowns = {
-	potential = {
-		tag = ARA
-		is_subject = no
-		NOT = { total_development = 500 }
-		any_subject_country = {
-			is_subject_of_type = personal_union
-			OR = {
-				capital_scope = { region = italy_region }
-				capital_scope = { region = iberia_region }
-			}
-		}
-	}
-	trigger = {
-		tag = ARA
-		any_subject_country = {
-			is_subject_of_type = personal_union
-			total_development = 200
-		}
-		#NOT = { has_country_flag = bt_centralising_aragon }			#Currently a dead end, might add later.
-	}
-	diplomatic_upkeep = 2 #Added to account for lack of hegemoniacle for Aragon since PUs don't count.
-	reduced_liberty_desire = 45
-	diplomatic_annexation_cost = 0.25
-}
 
 
 ###########################################
