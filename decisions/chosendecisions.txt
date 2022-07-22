@@ -1,0 +1,27 @@
+country_decisions = {
+
+	inherit_cro = {
+	major = yes
+	potential = {
+		TAG = HUN
+		EXISTS = CRO 
+	}
+	
+	allow = {
+		adm_tech = 4
+	}
+
+	effect = {
+		inherit = CRO
+	}
+	}
+
+
+
+
+
+
+
+
+
+}
