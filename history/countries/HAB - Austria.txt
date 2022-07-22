@@ -1,0 +1,41 @@
+government = monarchy
+add_government_reform = austrian_archduchy_reform
+government_rank = 3
+primary_culture = austrian
+religion = catholic
+technology_group = western
+capital = 134 # Wien
+historical_friend = HUN
+historical_rival = TUR
+historical_rival = FRA
+national_focus = ADM
+
+add_accepted_culture = slovene
+
+
+1439.10.27 = {
+	monarch = {
+		name = "Friedrich III"
+		dynasty = "von Habsburg"
+		birth_date = 1415.9.21
+		adm = 4
+		dip = 5
+		mil = 3
+	}
+	
+	clear_scripted_personalities = yes
+	add_ruler_personality = careful_personality
+}
+
+1440.2.22 = {
+	heir = {
+		name = "Ladislaus Postumus"
+		monarch_name = "Ladislaus Postumus"
+		dynasty = "von Habsburg"
+		birth_date = 1440.2.22
+		death_date = 1457.11.24
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
