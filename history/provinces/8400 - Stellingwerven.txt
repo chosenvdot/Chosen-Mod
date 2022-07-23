@@ -9,7 +9,7 @@ owner = FRI
 controller = FRI
 
 #Demographics
-culture = lower_saxon
+culture = frisian
 religion = catholic
 
 #Development and Trade
