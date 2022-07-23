@@ -153,6 +153,11 @@ gc_tunis_1 = {
 		}
 		effect = {
 			add_country_modifier = {
+				name = "tun_colonist"
+				duration = 0
+			}
+
+			add_country_modifier = {
 				name = "tun_conquest_of_kanem"
 				duration = 7300
 			}

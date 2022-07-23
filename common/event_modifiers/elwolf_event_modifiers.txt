@@ -17,3 +17,6 @@ jew_1 = {
 	idea_cost = -0.1
 }
 
+tun_colonist = {
+	colonists = 1 
+}
