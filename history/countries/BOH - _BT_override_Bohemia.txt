@@ -1,5 +1,5 @@
 
-historical_friend = HUN
+historical_rival = HUN
 historical_friend = POL
 
 
