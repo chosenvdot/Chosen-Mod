@@ -10,6 +10,9 @@ hre = no
 base_tax = 1
 base_production = 1
 native_ferocity = 4
+owner = JNN
+controller = JNN
+add_core = JNN
 native_hostileness = 9
 
 
