@@ -10,4 +10,7 @@ base_tax = 2
 base_production = 2 
 base_manpower = 4
 is_city = yes
+owner = NKO
+controller = NKO
+add_core = NKO
 discovered_by = central_african

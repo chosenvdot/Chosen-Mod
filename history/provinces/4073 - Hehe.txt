@@ -12,5 +12,8 @@ native_size = 40
 native_ferocity = 4
 native_hostileness = 9
 capital = "Hehe"
+owner = KRW
+controller = KRW
+add_core = KRW
 
 discovered_by = central_african
