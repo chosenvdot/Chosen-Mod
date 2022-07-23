@@ -20,10 +20,7 @@ discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern
-add_permanent_province_modifier = {
-	name = transcaucasian_wine_valleys
-	duration = -1
-	}
+
 1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
 	owner = CMN
 	controller = CMN
