@@ -84,3 +84,22 @@
  gecko_stability:0 "Stability must be at least 0 to Declare War."
  geckomercvalue:0 "Number of Mercenaries"
  geckomercFL:0 "Mercenary Forcelimit"
+ 
+# Modifiers:
+ transcaucasian_wine_valleys: "Transcaucasian Wine Valleys"
+ desc_transcaucasian_wine_valleys:0 "The fertile valleys and protective slopes of Transcaucasia have made the region home to grapevine cultivation and wine production for millennia."
+ 
+# Modifiers:
+ steirischer_erzberg_iron_mines: "Steirischer Erzberg Iron Mines"
+ desc_steirischer_erzberg_iron_mines:0 "Located on the Enns and Steyr rivers, these iron mines served both as trafic routes and as hydraulic power reservoirs for the industry which fluorished since 990 AD owing to the rich ore deposites located in the hinterland."
+
+# Modifiers:
+ alte_salzstrase: "Alte Salzstraße"
+ desc_alte_salzstrase:0 "The Alte Salzstraße, also known as the Old Salt Road, was a very rich salt transporting network. Often called "White Gold", the salt mines were very lucrative for the northern parts of Germany, especially Lübeck, until the 17th century."
+
+# Modifiers:
+ granary_of_europe: "Granary of Europe"
+ desc_granary_of_europe:0 "The rich soils of Ruthenia produces much of the grain supplies of Europe, making it a vital part of both Central and Eastern Europe."
+# Modifiers:
+ slave_trading_hub: "Slave Trading Hub"
+ desc_slave_trading_hub:0 "The ports of Caffa and Azov were responsible for most of the slave trade in Europe and the muslim world for much of the 13th to 17th century. Italian Merchants would buy qipchaks and slavic prisonners from the Crimean Tatars and sell them all accross the Mediterranean sea and the muslim world."
