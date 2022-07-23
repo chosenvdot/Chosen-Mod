@@ -9,6 +9,9 @@ base_tax = 4
 base_production = 4
 base_manpower = 2 
 native_size = 40
+owner = BSG
+controller = BSG
+add_core = BSG
 native_ferocity = 4
 native_hostileness = 9
 
