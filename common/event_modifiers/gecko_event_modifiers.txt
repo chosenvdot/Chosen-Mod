@@ -368,3 +368,20 @@ trade_hub_created_in_province = {
 }
 trade_hub_created = {
 }
+
+transcaucasian_wine_valleys = {
+	trade_goods_size = 2.0
+	}
+
+steirischer_erzberg_iron_mines = {
+	trade_goods_size = 1.0
+	}
+alte_salzstrase = {
+	trade_goods_size = 1.0
+	}
+granary_of_europe = {
+	trade_goods_size = 1.0
+	} 
+slave_trading_hub = {
+	trade_goods_size = 2.0
+	} 
