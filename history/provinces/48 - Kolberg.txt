@@ -15,7 +15,10 @@ trade_goods = salt
 base_manpower = 2  
 capital = "Kolberg"
 is_city = yes
-
+add_permanent_province_modifier = {
+	name = alte_salzstrase
+	duration = -1
+	}
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
