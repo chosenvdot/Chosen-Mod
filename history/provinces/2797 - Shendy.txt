@@ -1,9 +1,9 @@
  
 #2797 - Shendy
 
-owner = HWA
-controller = HWA
-add_core = HWA
+owner = ABB
+controller = ABB
+add_core = ABB
 culture = nubian
 religion = coptic
 capital = "Shendi"

@@ -6,11 +6,14 @@ capital = "Ouara"
 native_size = 50
 native_ferocity = 4
 native_hostileness = 9 
-trade_goods = unknown
+trade_goods = gold 
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
+owner = FNJ
+controller = FNJ
+add_core = FNJ
 
 discovered_by = sub_saharan
 

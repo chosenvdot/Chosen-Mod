@@ -13,6 +13,9 @@ native_size = 10
 native_ferocity = 9
 native_hostileness = 5
 
+owner = MKR
+controller = MKR
+add_core = MKR
 discovered_by = east_african
 discovered_by = muslim
 

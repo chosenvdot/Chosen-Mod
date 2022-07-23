@@ -12,6 +12,9 @@ trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1 
+add_core = NBA
+controller = NBA
+owner = NBA
 
 
 discovered_by = east_african

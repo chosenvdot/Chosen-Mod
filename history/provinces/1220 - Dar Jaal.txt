@@ -4,9 +4,9 @@
 culture = nubian 
 religion = coptic
 capital = "Gakdul"
-owner = HWA
-controller = HWA
-add_core = HWA
+owner = ABB
+controller = ABB
+add_core = ABB
 is_city = yes
 trade_goods = wool
 base_manpower = 1 

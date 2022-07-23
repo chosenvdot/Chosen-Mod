@@ -1,9 +1,7 @@
  
-
-owner = HWA # al Kanz
-controller = HWA
-add_core = HWA
-add_core = MKR
+owner = ABB
+controller = ABB
+add_core = ABB
 culture = nubian
 religion = sunni
 capital = "Dakhesh" # Don't know about the date of founding, here, doubt it was by the 15th century, but it is better than Abu Hamad which is recognisably later.
