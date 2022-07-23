@@ -183,7 +183,7 @@ GMV_ideas = {
 	}
 	GMV_3 = {
 		global_manpower_modifier = 0.25
-		cavalry_fire = 1
+		fire_damage_received = -0.1
 	}
 	GMV_4 = {
 		cavalry_power = 0.25
