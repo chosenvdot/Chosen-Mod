@@ -8,6 +8,9 @@ religion = sunni
 capital = "Tadmekka al-Suq"
 trade_goods = wool
 hre = no
+owner = TMB
+controller = TMB
+add_core = TMB	
 base_tax = 2  
 base_production = 2 
 

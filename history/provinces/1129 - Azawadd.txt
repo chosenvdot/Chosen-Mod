@@ -13,6 +13,9 @@ base_manpower = 2
 native_size = 30
 native_ferocity = 4
 native_hostileness = 10
+owner = TMB
+controller = TMB
+add_core = TMB
 
 
 

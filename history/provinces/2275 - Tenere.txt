@@ -1,6 +1,9 @@
  
 # 2275 - Tenere
 
+owner = AIR
+controller = AIR
+add_core = AIR
 is_city = yes
 culture = tuareg 
 religion = sunni

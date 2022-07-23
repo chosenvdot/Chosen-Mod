@@ -13,3 +13,6 @@ native_size = 30
 native_ferocity = 4
 native_hostileness = 9
 discovered_by = sub_saharan
+owner = AIR
+controller = AIR
+add_core = AIR

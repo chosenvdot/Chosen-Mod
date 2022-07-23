@@ -7,6 +7,10 @@ capital = "Kotoko"
 trade_goods = grain
 hre = no
 base_tax = 2
+
+owner = YAO
+controller = YAO
+add_core = YAO
 base_production = 2
 is_city = yes
 base_manpower = 2 
