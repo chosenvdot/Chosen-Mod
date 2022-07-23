@@ -6,6 +6,7 @@ culture = kanuri
 religion = sunni
 capital = "Muniyo"
 trade_goods = grain
+p
 hre = no
 base_tax = 4  
 base_production = 4
