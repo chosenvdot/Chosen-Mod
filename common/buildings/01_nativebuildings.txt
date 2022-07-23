@@ -20,7 +20,7 @@
 
 
 native_earthwork = {
-	cost = 50 # BT; 100
+	cost = 100
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -30,20 +30,21 @@ native_earthwork = {
 	}
 	modifier = {
 		local_defensiveness = 0.25
+		local_hostile_movement_speed = -0.25
 	}
 	government_specific = yes
-
+	
 	ai_will_do = {
 		factor = 100
 		modifier = {
 			factor = 2.0
 			is_capital = yes
-		}
+		}				
 	}
 }
 
 native_palisade = {
-	cost = 100 # BT; 200
+	cost = 200
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -56,20 +57,20 @@ native_palisade = {
 	}
 	government_specific = yes
 	influencing_fort = yes
-
+	
 	onmap = yes
-
+	
 	ai_will_do = {
 		factor = 100
 		modifier = {
 			factor = 2.0
 			is_capital = yes
-		}
+		}				
 	}
 }
 
 native_fortified_house = {
-	cost = 100 # BT; 200
+	cost = 200
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -78,24 +79,24 @@ native_fortified_house = {
 		owner = { government = native }
 	}
 	modifier = {
-		land_forcelimit = 10
+		land_forcelimit = 5
 	}
 	one_per_country = yes
 	government_specific = yes
-
+	
 	ai_will_do = {
 		factor = 100
 		modifier = {
 			factor = 2.0
 			is_capital = yes
-		}
+		}				
 	}
 }
 
 
 
 native_ceremonial_fire_pit = {
-	cost = 100 # BT; 200
+	cost = 200
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -109,18 +110,18 @@ native_ceremonial_fire_pit = {
 	}
 	one_per_country = yes
 	government_specific = yes
-
+	
 	ai_will_do = {
 		factor = 100
 		modifier = {
 			factor = 2.0
 			is_capital = yes
-		}
+		}				
 	}
 }
 
 native_irrigation = {
-	cost = 100 # BT; 200
+	cost = 200
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -129,21 +130,21 @@ native_irrigation = {
 		owner = { government = native }
 	}
 	modifier = {
-		tribal_development_growth = 0.02
+		tribal_development_growth = 0.01
 	}
 	government_specific = yes
-
+	
 	ai_will_do = {
 		factor = 100
 		modifier = {
 			factor = 2.0
 			is_capital = yes
-		}
+		}				
 	}
 }
 
 native_storehouse = {
-	cost = 50 # BT; 100
+	cost = 100
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -155,18 +156,18 @@ native_storehouse = {
 		local_production_efficiency = 0.5
 	}
 	government_specific = yes
-
+	
 	ai_will_do = {
 		factor = 100
 		modifier = {
 			factor = 2.0
 			is_capital = yes
-		}
+		}				
 	}
 }
 
 native_longhouse = {
-	cost = 50 # BT; 100
+	cost = 100
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -176,20 +177,21 @@ native_longhouse = {
 	}
 	modifier = {
 		monthly_reform_progress_building = 0.1
+		local_governing_cost = -0.25
 	}
 	government_specific = yes
-
+	
 	ai_will_do = {
 		factor = 100
 		modifier = {
 			factor = 2.0
 			is_capital = yes
-		}
+		}				
 	}
 }
 
 native_sweat_lodge = {
-	cost = 100 # BT; 200
+	cost = 200
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -202,18 +204,18 @@ native_sweat_lodge = {
 	}
 	one_per_country = yes
 	government_specific = yes
-
+	
 	ai_will_do = {
 		factor = 100
 		modifier = {
 			factor = 2.0
 			is_capital = yes
-		}
+		}				
 	}
 }
 
 native_great_trail = {
-	cost = 50 # BT; 100
+	cost = 100
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -226,19 +228,19 @@ native_great_trail = {
 	}
 	government_specific = yes
 
-
+	
 	ai_will_do = {
 		factor = 100
 		modifier = {
 			factor = 2.0
 			is_capital = yes
-		}
+		}				
 	}
 }
 
 
 native_three_sisters_field = {
-	cost = 50 # BT; 100
+	cost = 100
 	time = 12
 	build_trigger = {
 		owner = { government = native }
@@ -250,12 +252,12 @@ native_three_sisters_field = {
 		trade_goods_size_modifier = 0.5
 	}
 	government_specific = yes
-
+	
 	ai_will_do = {
 		factor = 100
 		modifier = {
 			factor = 2.0
 			is_capital = yes
-		}
+		}				
 	}
 }
