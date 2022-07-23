@@ -8,7 +8,7 @@ jesuit_order = {
 		}	
        religion = catholic
     }
-    cost = 50
+    cost = 100
     cost_type = adm_power
     per_province_effect = {
 	
@@ -40,7 +40,7 @@ dominican_order = {
 		}	
        religion = catholic
     }
-    cost = 50
+    cost = 100
     cost_type = dip_power
     per_province_effect = {
         add_base_production = 1
@@ -76,7 +76,7 @@ franciscan_order = {
 		}	
        religion = catholic
     }
-    cost = 50
+    cost = 100
     cost_type = mil_power
     per_province_effect = {	
         add_base_manpower = 1
@@ -107,7 +107,7 @@ shadhili_order = {
         tag = ADU
         religion_group = muslim
     }
-    cost = 50
+    cost = 100
     cost_type = adm_power
     per_province_effect = {	
         add_base_tax = 1
@@ -137,7 +137,7 @@ qadiri_order = {
         tag = ADU
         religion_group = muslim
     }
-    cost = 50
+    cost = 100
     cost_type = dip_power
     per_province_effect = {
         add_base_production = 1
@@ -166,7 +166,7 @@ aissawa_order = {
         tag = ADU
         religion_group = muslim
     }
-    cost = 50
+    cost = 100
     cost_type = mil_power
     per_province_effect = {
 	
