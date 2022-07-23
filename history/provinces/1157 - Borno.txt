@@ -15,6 +15,9 @@ discovered_by = sub_saharan
 extra_cost = 10
 fort_15th = yes
 extra_cost = 16
+core = YAO 
+controller = YAO 
+owner = YAO
 center_of_trade = 2
 
 1458.1.1 = { unrest = 5 } #Civil War for control of position of Mai
