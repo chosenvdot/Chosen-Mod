@@ -433,7 +433,7 @@ country_event = {
 	}
 }
 
-# The Duke of Alençon by Daniel Tolman
+# The Duke of AlenÃ§on by Daniel Tolman
 
 country_event = {
 	id = emp_mission_events.10
@@ -521,7 +521,6 @@ country_event = {
 	option = {
 		name = emp_mission_events.10.b
 		ai_chance = { factor = 0 }
-		add_stability = -1
 		add_estate_loyalty = {
 			estate = estate_nobles
 			loyalty = -20
