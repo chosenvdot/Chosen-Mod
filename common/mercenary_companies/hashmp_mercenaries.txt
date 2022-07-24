@@ -1937,7 +1937,7 @@ h_merc_landsknecht = {
 		tag = GER
 	}
 	modifier = {
-		discipline = 0.1
+		discipline = 0.05
 		infantry_power = 0.15
 	}
 }
@@ -1998,6 +1998,7 @@ h_merc_ruthenians = {
 	}
 	modifier = {
 		shock_damage = 0.15
+		cav_to_inf_ratio = 1
 	}
 }
 
@@ -2043,6 +2044,7 @@ h_merc_hussars = {
 	modifier = {
 		shock_damage = 0.15
 		discipline = 0.025
+		cav_to_inf_ratio = 1
 	}
 }
 
@@ -2130,6 +2132,7 @@ h_merc_bluehorde = {
 	modifier = {
 		cavalry_power = 0.15
 		shock_damage = 0.15
+		cav_to_inf_ratio = 1
 	}
 }
 
@@ -2145,6 +2148,7 @@ h_merc_timur = {
 	modifier = {
 		cavalry_power = 0.15
 		land_morale = 0.1
+		cav_to_inf_ratio = 1
 	}
 }
 
@@ -2304,6 +2308,7 @@ h_merc_jianzhou = {
 		tag = MCH
 	}
 	modifier = {
+		cav_to_inf_ratio = 1
 		cavalry_power = 0.1
 		movement_speed = 0.1
 	}
@@ -2319,6 +2324,7 @@ h_merc_banner = {
 		tag = QNG
 	}
 	modifier = {
+		cav_to_inf_ratio = 1
 		cavalry_fire = 0.5
 		shock_damage = 0.1
 	}
@@ -2326,16 +2332,16 @@ h_merc_banner = {
 
 h_merc_sileraioi = {
 	regiments_per_development = 0.05
-	cavalry_weight = 0.8
+	cavalry_weight = 0.0
 	artillery_weight = 0.0
 	cavalry_cap = 0
-	cost_modifier = 0.5
+	cost_modifier = 0.75
 	trigger = {
 		tag = TTS
 	}
 	modifier = {
 		shock_damage = 0.1
-		cavalry_shock = 0.5
+		land_morale = 0.15
 	}
 }
 
@@ -2457,6 +2463,7 @@ merc_knights_templar = {
 		}
 	}
 	modifier = {
+		cav_to_inf_ratio = 1
 		cavalry_power = 0.15
 		shock_damage = 0.1
 	}
@@ -2571,7 +2578,7 @@ merc_routiers = {
 		tag = FRA
 	}
 	modifier = {
-		land_morale = 0.05
+		land_morale = 0.075
 		loot_amount = 0.5
 	}
 }
@@ -3064,6 +3071,7 @@ merc_mesopotamian_mamluks = {
 		tag = ILK
 	}
     modifier = {
+    	cav_to_inf_ratio = 1
         cavalry_power = 0.1
 	cavalry_shock = 0.5
     }
@@ -3082,6 +3090,7 @@ merc_nile_mamluks = {
 		tag = MAM
 	}
     modifier = {
+    	cav_to_inf_ratio = 1
         cavalry_power = 0.1
         discipline = 0.025
     }
@@ -3099,6 +3108,7 @@ merc_delhi_mamluks = {
 		tag = DLH
 	}
     modifier = { 
+    		cav_to_inf_ratio = 1
 		discipline = 0.05
 	}
 }
@@ -3126,6 +3136,7 @@ merc_sekban = {
 	}
     modifier = { 
 		reinforce_speed = 0.25
+		discipline = 0.025
 	}
 }
 
@@ -3196,7 +3207,7 @@ merc_nubian_company = {
 		tag = ETH
 	}
     modifier = { 
-		infantry_shock = 0.25
+		infantry_power = 0.15
 		land_attrition = -0.10
 	}
 }
@@ -3228,6 +3239,8 @@ merc_mongol_mercenaries = {
 		tag = YUA
 	}
     modifier = {
+		cav_to_inf_ratio = 1
+    	
         cavalry_power = 0.2
 	shock_damage = 0.1
     }
@@ -3258,6 +3271,7 @@ merc_bedouin_auxiliaries = {
 		tag = ARB
 	}
     modifier = { 
+		cav_to_inf_ratio = 1
 		loot_amount = 1.0
 		movement_speed = 0.25
 	}
@@ -3275,6 +3289,7 @@ merc_kurdish_company = {
 		tag = QAR
 	}
     modifier = { 
+		cav_to_inf_ratio = 1
 		cavalry_shock = 0.5
 	}
 }
@@ -3356,6 +3371,7 @@ merc_lithuanian_company = {
 		tag = LIT
 	}
     modifier = { 
+		cav_to_inf_ratio = 1
 		shock_damage = 0.1
 		reinforce_speed = 0.1
 	}
@@ -3387,6 +3403,7 @@ merc_finnish_company = {
 		tag = SCA
 	}
     modifier = { 
+		cav_to_inf_ratio = 1
 		cavalry_power = 0.2
 		infantry_power = 0.1
 	}
@@ -3402,7 +3419,7 @@ merc_almogavars = {
 		tag = SPA
 	}
     modifier = {
-		infantry_shock = 0.5
+		shock_damage_received = -0.15
 		movement_speed = 0.10
 	}
 }
@@ -3443,7 +3460,7 @@ merc_miquelet_company = {
 		tag = CAS
 	}
     modifier = {
-		infantry_shock = 0.25
+		shock_damage_received = -0.10
 		movement_speed = 0.10
 	}
 }
@@ -3534,6 +3551,8 @@ merc_kazakh_company = {
     modifier = { 
 		loot_amount = 1.0
 		discipline = 0.025
+		cav_to_inf_ratio = 1
+		
 	}
 }
 
