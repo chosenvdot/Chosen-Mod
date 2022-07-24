@@ -32,7 +32,7 @@ technology = { #Advanced Tribes
 	expects_institution = {
 		feudalism = 0.25
 	}
-	
+	governing_capacity = 100
 	tribal_democracy_legacy = yes
 	tribal_kingdom_legacy = yes
 }
@@ -80,9 +80,9 @@ technology = { #National Ideas
 	year = 1466
 	expects_institution = {
 		feudalism = 0.5
-		renaissance = 0.15
+		renaissance = 0.05
 	}
-
+	governing_capacity = 150
 	allowed_idea_groups = 1
 	production_efficiency	 =	0.02
 }
@@ -92,7 +92,7 @@ technology = { #Workshop
 	year = 1479
 	expects_institution = {
 		feudalism = 0.5
-		renaissance = 0.3
+		renaissance = 0.2
 	}
 
 	#Workshop
@@ -106,7 +106,7 @@ technology = { #Renaissance Thought
 	year = 1492
 	expects_institution = {
 		feudalism = 0.5
-		renaissance = 0.5
+		renaissance = 0.3
 	}
 	
 	#Noble Republic
@@ -118,11 +118,11 @@ technology = { #Courthouse
 	year = 1505
 	expects_institution = {
 		feudalism = 0.5
-		renaissance = 0.5
+		renaissance = 0.4
 	}
 
 	courthouse = yes
-	governing_capacity = 100
+	governing_capacity = 200
 
 }
 
@@ -132,7 +132,7 @@ technology = { #The Scythe
 	expects_institution = {
 		feudalism = 0.5
 		renaissance = 0.5
-		new_world_i = 0.15
+		new_world_i = 0.05
 	}
 	
 	#The Scythe
@@ -147,9 +147,9 @@ technology = { #Modern Theocracy
 	expects_institution = {
 		feudalism = 0.5
 		renaissance = 0.5
-		new_world_i = 0.3
+		new_world_i = 0.15
 	}
-	
+	governing_capacity = 200
 	allowed_idea_groups = 3
 	theocratic_government = yes
 }
@@ -160,7 +160,7 @@ technology = { #Textile Manufactory
 	expects_institution = {
 		feudalism = 0.5
 		renaissance = 0.5
-		new_world_i = 0.5
+		new_world_i = 0.3
 	}
 	
 	#Textile Manufactory
@@ -174,12 +174,12 @@ technology = { #Early Modern Administration
 	expects_institution = {
 		feudalism = 0.5
 		renaissance = 0.5
-		new_world_i = 0.5
+		new_world_i = 0.4
 	}
 	
 	administrative_monarchy	= yes 
 	administrative_republic	= yes
-	governing_capacity = 100
+	governing_capacity = 250
 	state_house = yes
 }
 
@@ -190,7 +190,7 @@ technology = { #Improved Drainage
 		feudalism = 0.5
 		renaissance = 0.5
 		new_world_i = 0.5
-		printing_press = 0.15
+		printing_press = 0.05
 	}
 	
 	#Improved Drainage
@@ -204,9 +204,9 @@ technology = { #Scientific Experimentation
 		feudalism = 0.5
 		renaissance = 0.5
 		new_world_i = 0.5
-		printing_press = 0.3
+		printing_press = 0.15
 	}
-	
+	governing_capacity = 250
 	plantations = yes
 	allowed_idea_groups	= 4
 }
@@ -218,7 +218,7 @@ technology = { #Military Administration
 		feudalism = 0.5
 		renaissance = 0.5
 		new_world_i = 0.5
-		printing_press = 0.5
+		printing_press = 0.3
 	}
 	
 	may_force_march = yes
@@ -232,7 +232,7 @@ technology = { #Metallurgy
 		feudalism = 0.5
 		renaissance = 0.5
 		new_world_i = 0.5
-		printing_press = 0.5
+		printing_press = 0.4
 	}
 	
 	mills = yes
@@ -249,11 +249,11 @@ technology = { #University
 		renaissance = 0.5
 		new_world_i = 0.5
 		printing_press = 0.5
-		global_trade = 0.15
+		global_trade = 0.05
 	}
 	
 	university = yes	
-	governing_capacity = 250
+	governing_capacity = 300
 	
 	administrative_efficiency = 0.1
 	development_efficiency = 0.1
@@ -267,7 +267,7 @@ technology = { #National Sovereignty
 		renaissance = 0.5
 		new_world_i = 0.5
 		printing_press = 0.5
-		global_trade = 0.3
+		global_trade = 0.15
 	}
 	
 	allowed_idea_groups	= 5
@@ -281,7 +281,7 @@ technology = { #Cathedral
 		renaissance = 0.5
 		new_world_i = 0.5
 		printing_press = 0.5
-		global_trade = 0.5
+		global_trade = 0.3
 	}
 	
 	#Cathedral
@@ -296,11 +296,11 @@ technology = { #Absolute Rulership
 		renaissance = 0.5
 		new_world_i = 0.5
 		printing_press = 0.5
-		global_trade = 0.5
+		global_trade = 0.4
 	}
 	
 	republican_dictatorship = yes
-	governing_capacity = 250
+	governing_capacity = 400
 }
 
 technology = { #Land Clearance
@@ -312,7 +312,7 @@ technology = { #Land Clearance
 		new_world_i = 0.5
 		printing_press = 0.5
 		global_trade = 0.5
-		manufactories = 0.15
+		manufactories = 0.05
 	}
 	
 	#Land Clearance
@@ -331,7 +331,7 @@ technology = { #The Constitution
 		global_trade = 0.5
 		manufactories = 0.3
 	}
-	
+	governing_capacity = 400
 	allowed_idea_groups = 6
 	constitutional_monarchy = yes
 	constitutional_republic = yes  
@@ -365,11 +365,11 @@ technology = { #Bonds and Tontines
 		printing_press = 0.5
 		global_trade = 0.5
 		manufactories = 0.5
-		enlightenment = 0.15
+		enlightenment = 0.05
 	}
-	
+	allowed_idea_groups = 7
 	counting_house = yes  
-	governing_capacity = 250
+	governing_capacity = 450
 }
 
 technology = { #Improved Production
@@ -382,7 +382,7 @@ technology = { #Improved Production
 		printing_press = 0.5
 		global_trade = 0.5
 		manufactories = 0.5
-		enlightenment = 0.3
+		enlightenment = 0.15
 	}
 	
 	#Improved Farm Animals
@@ -399,10 +399,10 @@ technology = { #Separation of Powers
 		printing_press = 0.5
 		global_trade = 0.5
 		manufactories = 0.5
-		enlightenment = 0.5
+		enlightenment = 0.3
 	}
 	
-	allowed_idea_groups 	= 	7
+	allowed_idea_groups 	= 	8
 }
 
 technology = { #Modern Bureaucracy
@@ -415,7 +415,7 @@ technology = { #Modern Bureaucracy
 		printing_press = 0.5
 		global_trade = 0.5
 		manufactories = 0.5
-		enlightenment = 0.5
+		enlightenment = 0.4
 	}
 
 	administrative_efficiency = 0.1
@@ -434,7 +434,7 @@ technology = { #Rotherham Plough
 		global_trade = 0.5
 		manufactories = 0.5
 		enlightenment = 0.5
-		industrialization = 0.25
+		industrialization = 0.15
 	}
 	
 	#Rotherham Plough
@@ -452,10 +452,9 @@ technology = { #Rights of Man
 		global_trade = 0.5
 		manufactories = 0.5
 		enlightenment = 1
-		industrialization = 0.5
+		industrialization = 0.3
 	}
-
-	allowed_idea_groups = 8
+	governing_capacity = 500
 	enlightened_despotism = yes
 	bureaucratic_despotism = yes
 }
