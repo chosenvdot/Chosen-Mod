@@ -4,9 +4,7 @@
 culture = chichimecan 
 religion = animism
 is_city = yes
-owner = CCM
-controller = CCM
-add_core = CCM
+
 capital = "Zacatecas" 
 trade_goods = gold
 hre = no
