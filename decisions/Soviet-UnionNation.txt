@@ -12,7 +12,6 @@ country_decisions = {
 			}
 			OR = {
 				NOT = { exists = SOV }
-				ai = no
 			}
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }

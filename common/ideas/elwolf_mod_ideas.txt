@@ -786,8 +786,8 @@ MSA_ideas = {
 }
 SOM_ideas = {
     start = {
-        core_creation = -0.05
-        land_morale = 0.1
+        core_creation = -0.15
+        land_morale = 0.2
     }
     bonus = {
         heir_chance = 0.33
@@ -797,16 +797,16 @@ SOM_ideas = {
     }
     free = yes
     SOM_1 = {
-        fort_maintenance_modifier = -0.01
+        fort_maintenance_modifier = -0.5
     }
     SOM_2 = {
         discipline = 0.05
     }
     SOM_3 = {
-        trade_efficiency = 0.10
+        trade_efficiency = 0.15
     }
     SOM_4 = {
-        global_manpower_modifier = 0.10
+        global_manpower_modifier = 0.15
     }
     SOM_5 = {
         prestige = 1
@@ -815,7 +815,7 @@ SOM_ideas = {
         may_perform_slave_raid = yes
     }
     SOM_7 = {
-        global_trade_goods_size_modifier = 0.10
+        global_trade_goods_size_modifier = 0.15
     }
 }
 
