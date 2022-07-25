@@ -1,8 +1,8 @@
  
 #2094 - Bahreich
 
-owner = JNP
-controller = JNP
+owner = ODH
+controller = ODH
 culture = avadhi
 religion = hinduism
 capital = "Bahreich"
@@ -13,7 +13,6 @@ base_production = 6
 base_manpower = 4
 is_city = yes
 add_rajputs_or_marathas_or_nobles_effect = yes
-add_core = JNP
 add_core = ODH
 discovered_by = indian
 discovered_by = muslim 
