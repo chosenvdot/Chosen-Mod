@@ -13,10 +13,7 @@ country_decisions = {
 			NOT = { exists = KRD }
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
-			capital_scope = {
-				region = mashriq_region
-				is_core = ROOT
-			}
+			tag = QAR
 
 			is_colonial_nation = no
 			}
@@ -57,7 +54,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = KRD
-			add_prestige = 20
+			add_prestige = 100
 			set_country_flag = formed_kurdistan_flag
 			if = {
 				limit = {
@@ -74,6 +71,11 @@ country_decisions = {
 				remove_government_reform = states_general_reform
 			}
 		}	
+		if = {
+			limit = { is_revolutionary = no }
+			add_government_reform = feudal_theocracy
+		}
+		country_event = { id = ideagroups.1 } #Swap Ideas
 		ai_will_do = {
 			factor = 1
 		}
