@@ -25,3 +25,8 @@ h_fortified_oasis = {
 	local_development_cost = -0.5
 	local_defensiveness = 0.25
 }
+
+arabia_gujarat_modifier = {
+	global_trade_goods_size_modifier = 0.15
+	global_manpower_modifier = 0.15
+}

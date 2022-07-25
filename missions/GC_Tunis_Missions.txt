@@ -154,7 +154,7 @@ gc_tunis_1 = {
 		effect = {
 			add_country_modifier = {
 				name = "tun_colonist"
-				duration = 0
+				duration = -1
 			}
 
 			add_country_modifier = {
