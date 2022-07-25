@@ -1,8 +1,10 @@
  
 #542 - Golconda
 
-owner = GOC
-controller = GOC
+owner = TLG
+
+
+controller = TLG
 culture = telegu
 religion = hinduism
 capital = "Golconda"

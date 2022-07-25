@@ -1,8 +1,8 @@
  
 #545 - Marathwada
 
-owner = BAH
-controller = BAH
+owner = AHM
+controller = AHM
 culture = marathi
 religion = hinduism
 capital = "Daulatabad"
@@ -12,7 +12,6 @@ base_tax = 8
 base_production = 6
 base_manpower = 2 
 is_city = yes
-add_core = BAH
 add_core = AHM
 fort_15th = yes #Daulatabad
 discovered_by = indian
