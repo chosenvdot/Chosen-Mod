@@ -883,15 +883,53 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			colonial_alaska = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 30
+				colonial_region = colonial_alaska
+				is_city = yes
 			}
 			NOT = { exists = ALA }
 		}
 		effect  = {
 			change_tag = ALA
+			remove_non_electors_emperors_from_empire_effect = yes
+			
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = became_dominion
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	h_form_ontario = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = became_dominion }
+			was_never_end_game_tag_trigger = yes
+			is_colonial_nation = yes
+			colonial_hudson_bay = {
+				owned_by = ROOT
+			}
+		}
+		allow = {
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				value = 30
+				colonial_region = colonial_hudson_bay
+				is_city = yes
+			}
+			NOT = { exists = CSC }
+		}
+		effect  = {
+			change_tag = CSC
 			remove_non_electors_emperors_from_empire_effect = yes
 			
 			if = {
