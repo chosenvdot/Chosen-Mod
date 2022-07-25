@@ -1,8 +1,8 @@
  
 #4421 - Seringapatam
 
-owner = MYS
-controller = MYS
+owner = VND
+controller = VND
 culture = kannada
 religion = hinduism
 capital = "Seringapatam"
@@ -13,7 +13,7 @@ base_production = 8
 base_manpower = 6
 fort_15th = yes #Seringapatanam Fort
 is_city = yes
-add_core = MYS
+add_core = VND
 add_jains_or_burghers_effect = yes
 discovered_by = nomad_group
 discovered_by = indian
