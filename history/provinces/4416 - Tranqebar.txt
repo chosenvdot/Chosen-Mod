@@ -1,8 +1,8 @@
  
 #4416 - Tranqebar 
 
-owner = VIJ
-controller = VIJ
+owner = TNJ
+controller = TNJ
 culture = tamil
 religion = hinduism
 capital = "Tranqebar"
@@ -13,8 +13,6 @@ base_production = 6
 base_manpower = 2 
 is_city = yes
 add_vaisyas_or_burghers_effect = yes
-add_core = VIJ
-add_core = MAD
 add_core = TNJ
 discovered_by = east_african
 discovered_by = indian

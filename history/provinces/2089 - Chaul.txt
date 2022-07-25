@@ -13,7 +13,6 @@ base_production = 1
 base_manpower = 1
 add_local_autonomy = 75
 is_city = yes
-add_core = BIJ
 add_core = VIJ
 add_rajputs_or_marathas_or_nobles_effect = yes
 discovered_by = indian
@@ -29,7 +28,6 @@ center_of_trade = 2
 	controller = VIJ
 	owner = VIJ
 } # Taken by Harihara II
-1444.1.1 = { add_core = BAH }
 1469.1.1 = { controller = BAH } # Taken by Bahmanis
 1470.1.1 = { owner = BAH } # Taken by Bahmanis
 1490.1.1 = {

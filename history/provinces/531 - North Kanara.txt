@@ -23,7 +23,6 @@ extra_cost = 8
 center_of_trade = 1
 
 1405.1.1 = { discovered_by = chinese }
-1444.1.1 = { add_core = BAH }
 1469.1.1 = { controller = BAH } # Taken by Bahmanis
 1470.1.1 = { owner = BAH } # Taken by Bahmanis
 1490.1.1 = {

@@ -1,8 +1,8 @@
  
 #2029 - South Kanara
 
-owner = VIJ
-controller = VIJ
+owner = KLN
+controller = KLN
 culture = kannada
 religion = hinduism
 capital = "Mangalore"
@@ -12,9 +12,7 @@ base_tax = 6
 base_production = 6
 base_manpower = 4
 is_city = yes
-add_core = VIJ
 add_core = KLN
-add_core = KLT
 add_local_autonomy = 40
 add_vaisyas_or_burghers_effect = yes
 discovered_by = indian

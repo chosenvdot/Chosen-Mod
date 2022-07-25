@@ -1,8 +1,8 @@
  
 #4444 - Manidurg
 
-owner = BAH
-controller = BAH
+owner = BRR
+controller = BRR
 culture = telegu
 religion = hinduism
 capital = "Manidurg"
@@ -12,7 +12,7 @@ base_tax = 2
 base_production = 2 
 base_manpower = 2 
 is_city = yes
-add_core = BAH
+add_core = BRR
 discovered_by = indian
 discovered_by = nomad_group
 discovered_by = muslim

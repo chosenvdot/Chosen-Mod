@@ -1,8 +1,8 @@
  
 #540 - Coromandel 
 
-owner = VIJ
-controller = VIJ
+owner = GNG
+controller = GNG
 culture = tamil
 religion = hinduism
 capital = "Kuddaluru"
@@ -13,8 +13,6 @@ base_production = 1
 base_manpower = 1
 is_city = yes
 add_vaisyas_or_burghers_effect = yes
-add_core = VIJ
-add_core = MAD
 add_core = GNG
 add_local_autonomy = 25
 discovered_by = indian

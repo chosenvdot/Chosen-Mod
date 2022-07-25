@@ -1,8 +1,8 @@
  
 #2032 - Malenadu
 
-owner = VIJ
-controller = VIJ
+owner = KLN
+controller = KLN
 culture = kannada
 religion = hinduism
 capital = "Ikkeri"
@@ -12,7 +12,6 @@ base_tax = 4
 base_production = 4
 base_manpower = 4
 is_city = yes
-add_core = VIJ
 add_core = KLN
 add_rajputs_or_marathas_or_nobles_effect = yes
 discovered_by = indian
