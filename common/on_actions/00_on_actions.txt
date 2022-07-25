@@ -2,7 +2,7 @@
 
 # country
 on_startup = {
-	MNG = { country_event = { id = elwolf.1 days = 16790 } } # Scripted Mingsplosion for 1490
+	MNG = { country_event = { id = elwolf.1 days = 12000 } } # Scripted Mingsplosion for 1490
 	CAS = { country_event = { id = flavor_spa.3716 days = 9855 } } # Castile gets Iberian wedding no matter what in 1471
 	if = {
 		limit = {
