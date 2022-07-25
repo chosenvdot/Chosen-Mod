@@ -137,10 +137,10 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			colonial_canada = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 30
+				colonial_region = colonial_canada
+				is_city = yes
 			}
 			NOT = { exists = CAN }
 		}
@@ -488,10 +488,10 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			colonial_canada = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
+			num_of_owned_provinces_with = {
+				value = 30
+				colonial_region = colonial_canada
+				is_city = yes
 			}
 			NOT = { exists = QUE }
 		}
@@ -728,10 +728,10 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			NOT = { exists = NEG }
+			NOT = { exists = NE1 }
 		}
 		effect  = {
-			change_tag = NEG
+			change_tag = NE1
 			remove_non_electors_emperors_from_empire_effect = yes
 			
 			if = {
@@ -808,10 +808,10 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
-			NOT = { exists = BLV }
+			NOT = { exists = BL1 }
 		}
 		effect  = {
-			change_tag = BLV
+			change_tag = BL1
 			remove_non_electors_emperors_from_empire_effect = yes
 			
 			if = {
@@ -865,6 +865,45 @@ country_decisions = {
 			add_prestige = 25
 			set_country_flag = became_dominion
 			clr_country_flag = h_california_dominion_request
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	h_form_alaska = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = became_dominion }
+			was_never_end_game_tag_trigger = yes
+			is_colonial_nation = yes
+			colonial_alaska = {
+				owned_by = ROOT
+			}
+		}
+		allow = {
+			is_at_war = no
+			colonial_alaska = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			NOT = { exists = ALA }
+		}
+		effect  = {
+			change_tag = ALA
+			remove_non_electors_emperors_from_empire_effect = yes
+			
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = became_dominion
 		}
 		ai_will_do = {
 			factor = 0
