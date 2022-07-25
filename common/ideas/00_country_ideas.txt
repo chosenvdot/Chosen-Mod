@@ -5521,7 +5521,7 @@ INC_ideas = {
 		global_tax_modifier = 0.1
 	}
 	drafted_hatun_runas = {
-		discipline = 0.025
+		discipline = 0.05
 		global_manpower_modifier = 0.1
 	}
 	mita_system = {
@@ -14024,7 +14024,7 @@ TUN_ideas = {
 	}
 	free = yes
 	tun_catalan_guard = {
-		mercenary_discipline = 0.05
+		discipline = 0.05
 	}
 	dual_diplomacy = {
 		diplomatic_upkeep = 1
@@ -14219,7 +14219,7 @@ CSC_ideas = {
 	}
 	CSC_forts_of_hudson_bay = {
 		fort_maintenance_modifier = -0.2
-		discipline = 0.5
+		discipline = 0.05
 	}
 	CSC_settling_boundaries = {
 		global_spy_defence = 0.33
