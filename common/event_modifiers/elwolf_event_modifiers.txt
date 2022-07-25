@@ -20,3 +20,8 @@ jew_1 = {
 tun_colonist = {
 	colonists = 1 
 }
+
+h_fortified_oasis = {
+	local_development_cost = -0.5
+	local_defensiveness = 0.25
+}

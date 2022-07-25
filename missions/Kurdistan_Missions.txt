@@ -1,0 +1,84 @@
+h_krd_missions = {
+
+	slot = 1
+	generic = no
+	ai = yes
+	
+	potential ={
+		OR = {
+			tag = KRD
+			tag = QAR
+		}
+	}
+	has_country_shield = yes
+
+	h_krd_mission_5 = { #Fortify the Oases
+		icon = mission_asian_trader
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				area = tabriz_area
+				area = luristan_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			OR = {
+				4304 = { owned_by = ROOT has_building = fort_15th }
+				2206 = { owned_by = ROOT has_building = fort_15th }
+				2207 = { owned_by = ROOT has_building = fort_15th }
+			}
+			OR = {	
+				2210 = { owned_by = ROOT has_building = fort_15th }
+				413 = { owned_by = ROOT has_building = fort_15th }
+			}
+		}
+		effect = {
+			tooltip = {
+				tabriz_area = {
+					add_province_modifier = {
+						name = "h_fortified_oasis"
+					}
+				}
+				luristan_area = {
+					add_province_modifier = {
+						name = "h_fortified_oasis"
+					}
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = luristsn_area
+							area = tabriz_area
+						}
+					}
+					add_province_modifier = {
+						name = "h_fortified_oasis"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	h_krd_mission_6 = { #Monoploize India
+		icon = mission_asian_trader
+		required_missions = { h_krd_mission_5 }
+		position = 2
+		trigger = {
+			persia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "arabia_gujarat_modifier"
+				duration = -1
+			}
+		}
+	}
+}
