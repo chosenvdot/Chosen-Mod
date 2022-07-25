@@ -520,3 +520,31 @@ union = {
 	start_date = 1435.1.1
 	end_date = 1463.1.1
 }
+
+union = { 
+	first = BUR
+	second = LUX
+	start_date = 1435.1.1
+	end_date = 1463.1.1
+}
+
+union = { 
+	first = BUR
+	second = HAI
+	start_date = 1435.1.1
+	end_date = 1463.1.1
+}
+
+union = { 
+	first = BUR
+	second = PIC
+	start_date = 1435.1.1
+	end_date = 1463.1.1
+}
+
+union = { 
+	first = BUR
+	second = LIE
+	start_date = 1435.1.1
+	end_date = 1463.1.1
+}
