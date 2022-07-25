@@ -1,11 +1,11 @@
  
-#Sönderjylland-Slesvig, incl. Ribe, Slesvig and Flensborg
+#SÃ¶nderjylland-Slesvig, incl. Ribe, Slesvig and Flensborg
 #Region - Germany
 #Area - Holstein
 
-owner = SHL
-controller = SHL
-add_core = SHL
+owner = DAN
+controller = DAN
+add_core = DAN
 add_core = SLW
 culture = danish
 religion = catholic
@@ -43,7 +43,7 @@ center_of_trade = 1
 1627.8.1 = { controller = HAB }
 1629.5.22 = { controller = SHL }
 1644.1.12 = { controller = SWE } #Torstenssons War-Captured by Lennart Torstensson
-1645.8.13 = { controller = SHL } #The Peace of Brömsebro
+1645.8.13 = { controller = SHL } #The Peace of BrÃ¶msebro
 1657.10.23 = { controller = SWE } #Karl X Gustavs First Danish War-Captured by Wrangel
 1658.2.26 = { owner = SHL controller = SHL } #The Peace of Roskilde
 1721.1.1 = { add_core = DAN owner = DAN controller = DAN }
