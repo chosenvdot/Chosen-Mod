@@ -1,8 +1,8 @@
  
 #2225 - Bamyan
 
-owner = TIM
-controller = TIM
+owner = AFG
+controller = AFG
 culture = afghani
 religion = shiite
 capital = "Bamyan"
@@ -12,7 +12,6 @@ base_tax = 4
 base_production = 4
 base_manpower = 4
 is_city = yes
-add_core = TIM
 add_core = AFG
 1444.1.1 = { discovered_by = KAS }
 discovered_by = muslim
