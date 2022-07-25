@@ -11,11 +11,11 @@ culture = normand
 religion = catholic
 hre = no
 base_tax = 1  
+add_core = FRA
+add_local_autonomy = 70
 base_production = 1 
 trade_goods = naval_supplies
 base_manpower = 1 
-add_core = ENG
-add_permanent_claim = FRA
 add_core = NRM
 
 discovered_by = western

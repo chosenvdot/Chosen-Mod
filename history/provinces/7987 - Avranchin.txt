@@ -3,7 +3,6 @@
 
 owner = NRM
 controller = NRM
-add_core = ENG
 add_core = FRA
 add_core = NRM
 culture = normand
@@ -11,6 +10,7 @@ religion = catholic
 capital = "Avranches"
 base_tax = 5
 base_production = 5
+add_local_autonomy = 70
 base_manpower = 3
 trade_goods = salt
 is_city = yes

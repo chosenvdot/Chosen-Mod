@@ -3,9 +3,9 @@
 
 owner = NRM
 controller = NRM
-add_core = ENG
 add_core = FRA
 add_core = NRM
+add_local_autonomy = 70
 culture = normand
 religion = catholic
 capital = "Lisieux"

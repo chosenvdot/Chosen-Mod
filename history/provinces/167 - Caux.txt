@@ -5,8 +5,8 @@
 
 owner = NRM
 controller = NRM
-add_core = ENG
 add_core = NRM
+add_local_autonomy = 70
 add_core = FRA
 capital = "Rouen"
 is_city = yes

@@ -16,10 +16,8 @@ trade_goods = glass
 base_manpower = 3
 add_local_autonomy = 25
 add_core = FRA
-add_core = MNE
+add_local_autonomy = 70
 add_core = NRM
-add_permanent_claim = FRA
-# add_core = FRA
 #fort_15th = yes #Cut because Surrender of Maine derp.
 
 discovered_by = eastern
