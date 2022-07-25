@@ -1,8 +1,8 @@
  
 #1949 - Penukonda
 
-owner = VIJ
-controller = VIJ
+owner = YOR
+controller = YOR
 culture = telegu
 religion = hinduism
 capital = "Chandragiri"
@@ -13,7 +13,6 @@ base_production = 6
 base_manpower = 4
 is_city = yes
 add_core = KRK
-add_core = VIJ
 add_core = YOR
 add_brahmins_or_church_effect = yes #Tirupati
 #fort_15th = yes #One of the great forts of the East
