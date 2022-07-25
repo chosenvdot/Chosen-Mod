@@ -95,62 +95,6 @@ vassal = {
 
 #Other Stuff
 # Provence and Lorraine under René of Anjou
-union = {
-	first = PRO
-	second = LOR
-	start_date = 1431.1.25
-	end_date = 1453.2.28
-}
-
-union = {
-	first = PRO
-	second = BAR
-	start_date = 1444.11.11		#purely to keep from early annexation
-	end_date = 1453.2.28		#copied from Lorraine (LOR)
-}
-
-union = {
-	first = PRO
-	second = ANJ
-	start_date = 1444.11.11		#purely to keep from early annexation
-	end_date = 1453.2.28		#copied from Lorraine (LOR)
-}
-
-vassal = {
-	first = PRO
-	second = MNE
-	start_date = 1444.11.11		#purely to keep from early annexation
-	end_date = 1453.2.28
-}
-
-alliance = {
-	first = FRA
-	second = PRO
-	start_date = 1431.1.25
-	end_date = 1453.7.18
-}
-
-royal_marriage = {		#Marie of Anjou x Charles VII 
-	first = FRA
-	second = PRO
-	start_date = 1422.7.1
-	end_date = 1461.7.22
-}
-
-guarantee = {
-	first = FRA
-	second = PRO
-	start_date = 1444.1.1
-	end_date = 1589.8.2
-}
-
-
-guarantee = {
-	first = FOI
-	second = AOR
-	start_date = 1444.1.1
-	end_date = 1589.8.2
-}
 
 guarantee = {
 	first = FRA
