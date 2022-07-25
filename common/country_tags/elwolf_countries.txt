@@ -1,2 +1,4 @@
 AHU = "countries/Austria-Hungary.txt"
 JUD = "countries/Kingdom-Of-Yahweh.txt"
+KRD = "countries/Kurdistan.txt"
+SOV = "countries/Soviet-Union.txt"

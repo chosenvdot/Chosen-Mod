@@ -1,0 +1,3 @@
+NE1 = "countries/NewEngland.txt"
+BL1 = "countries/Bolivia.txt"
+CUL = "countries/Columbia.txt"
