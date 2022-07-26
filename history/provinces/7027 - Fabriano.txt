@@ -1,9 +1,9 @@
  
 #BT Italy reoverhaul
 
-owner = PAP
-controller = PAP
-add_core = PAP
+owner = MRT
+controller = MRT
+add_core = MRT
 culture = umbrian
 religion = catholic
 capital = "Fabriano"
