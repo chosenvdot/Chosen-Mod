@@ -1,8 +1,8 @@
  
 #4754 - Kotor
 
-owner = VEN
-controller = VEN
+owner = RAG
+controller = RAG
 culture = serbian
 religion = orthodox
 capital = "Càttaro"
@@ -13,7 +13,7 @@ base_production = 2
 base_manpower = 1 
 is_city = yes
 fort_15th = yes			#Moved here from Scutari
-add_core = VEN
+add_core = RAG
 add_core = SER
 
 discovered_by = western

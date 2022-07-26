@@ -2,8 +2,8 @@
 #4175 - repurposed by Draiocht
 #Vanilla 4175 info
 
-owner = VEN
-controller = VEN
+owner = ALB
+controller = ALB
 culture = albanian
 religion = catholic
 capital = "Lezhë"			
@@ -13,7 +13,6 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = VEN
 add_core = ALB
 #fort_15th = yes			#Main fort in Albania, was a very fortified area
 

@@ -1,9 +1,9 @@
  
 #BT Balkans reoverhaul
 
-owner = VEN
-controller = VEN
-add_core = VEN
+owner = CEP
+controller = CEP
+add_core = CEP
 culture = greek
 religion = orthodox
 capital = "Parga"

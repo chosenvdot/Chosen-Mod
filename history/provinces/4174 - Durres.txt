@@ -1,8 +1,8 @@
  
 #4174 - repurposed by Draiocht
 
-owner = VEN
-controller = VEN
+owner = ALB
+controller = ALB
 culture = albanian
 religion = orthodox
 capital = "Durrës"			#Durazzo in Venetian Italian
@@ -12,7 +12,6 @@ base_tax = 2
 base_production = 1
 base_manpower = 1 
 is_city = yes
-add_core = ALB
 add_core = VEN
 fort_15th = yes
 
