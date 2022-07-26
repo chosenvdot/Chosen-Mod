@@ -1336,16 +1336,16 @@ luristan_area = {
 khuzestan_area = {
 	412 2217 4289 4290 4342 
 }
-farsistan_area = {
+farsistan_area = { 8843  8842  8841  8840  8839  8838  8837  8836  8835  8834  8833  8832  8831  8830  8829  8828  8827  8826  8825  8824  8823  8822  8821  8820  8819  8818  8817 
 	2218 4329 4330 4331 
 }
-iraq_e_ajam_area = { 8801 
+iraq_e_ajam_area = { 8816  8815  8804  8803  8802  8801 
 	427 428 2213 2216 4337 
 }
 azerbaijan_area = { #Southern Azerbaijan
 	2212 2215 4300 4338 
 }
-isfahan_area = {
+isfahan_area = { 8814  8813  8812  8811  8810  8809 
 	429 433 2222 4171 4335 
 }
 tabriz_area = { #Central Azerbaijan
@@ -1386,7 +1386,7 @@ mashhad_area = { #Northern Khorasan
 herat_area = { #Eastern Khorasan
 	446 4324 4325 
 }
-birjand_area = { #Western Khorasan
+birjand_area = { 8808  8807  8806  8805  #Western Khorasan
 	436 4334 4336 
 }
 ghor_area = {
