@@ -12,7 +12,7 @@ base_production = 1
 base_manpower = 4
 trade_goods = grain # noted for being an agricultural city before the administrative centre was moved there. Could also be wine
 is_city = yes
-hre = no
+hre = yes
 
 discovered_by = western
 discovered_by = muslim

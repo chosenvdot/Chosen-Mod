@@ -12,7 +12,7 @@ base_production = 1
 base_manpower = 1
 trade_goods = cloth # lace, hats and footwear. Could also be copper or grain
 is_city = yes
-hre = no
+hre = yes
 
 discovered_by = western
 discovered_by = muslim
