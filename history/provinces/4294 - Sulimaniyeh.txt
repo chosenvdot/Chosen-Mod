@@ -10,6 +10,7 @@ hre = no
 base_tax = 5			#(JP) Main town not founded yet
 base_production = 5
 base_manpower = 3
+
 is_city = yes
 add_core = QAR
 discovered_by = east_african
@@ -18,7 +19,7 @@ discovered_by = ottoman
 discovered_by = eastern
 discovered_by = indian
 discovered_by = nomad_group
-
+center_of_trade = 2
 
 1469.2.4 = {
 	owner = AKK
