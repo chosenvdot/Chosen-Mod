@@ -3,8 +3,8 @@
 #Region - Italy
 #Area - Lombardy
 
-owner = BLG
-controller = BLG
+owner = VEN
+controller = VEN
 culture = lombard 
 religion = catholic 
 hre = yes 
@@ -14,7 +14,7 @@ trade_goods = livestock
 base_manpower = 3
 capital = "Bergamo" 
 is_city = yes
-add_core = BLG
+add_core = VEN
 
 discovered_by = western
 discovered_by = muslim
