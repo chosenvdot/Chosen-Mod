@@ -1,14 +1,14 @@
  
 #BT Italy reoverhaul
 
-owner = MLO			#Not really clear, but the Biella region appears defacto under Vercelli in the early period.
-controller = MLO
-add_core = MLO
+owner = NVA			#Not really clear, but the Biella region appears defacto under Vercelli in the early period.
+controller = NVA
+add_core = NVA
 culture = piedmontese
 religion = catholic
 capital = "Biella"
-base_tax = 3
-base_production = 4
+base_tax = 5
+base_production = 6
 base_manpower = 2
 trade_goods = gold	#Intentional. Apparently gold was and still is an industry in the region. Also note wool is a major industry, and the obviously second choice.
 is_city = yes
