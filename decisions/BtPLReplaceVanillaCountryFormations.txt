@@ -72,7 +72,7 @@ country_decisions = {
 				}
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			hidden_effect = {
@@ -250,7 +250,7 @@ country_decisions = {
 				value = 50			#At least 2/3 of Arabia's 74 provinces
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			change_tag = ARB
@@ -338,7 +338,7 @@ country_decisions = {
 				value = 63	#At least 3/4 of Britain's 84 provinces ##OUTDATED##(Note England has 26 in 1444 with 7 more under subjects, so this is rather easy)##END OUTDATED##
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#restige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			hidden_effect = {
@@ -450,7 +450,7 @@ country_decisions = {
 				value = 76			#At least 90 percent of Britain's 84 provinces
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			every_subject_country = {
@@ -584,7 +584,7 @@ country_decisions = {
 				value = 111			#At least 2/3 of France's 166 provinces
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			change_tag = FRA
@@ -815,7 +815,7 @@ country_decisions = {
 				value = 20			#requires roughly two thirds of Ireland to form, so ANI can be formed without the west or IRE can be formed without the Pale and the NE plantations
 			}
 			total_development = 150			#Normal requirement for rank 2 is 500 dev, so this is 70 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			change_tag = IRE
@@ -908,7 +908,7 @@ country_decisions = {
 				value = 106			#At least 65 percent of N Italy's 163 provinces. Also note this is 90 percent of continental, non-Neapolitan Italy's 118 provinces. (Italy has 34 in Naples-Sicily and 11 in Sardinia-Corsica)
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			change_tag = ITA
@@ -1042,7 +1042,7 @@ country_decisions = {
 				NOT = { has_disaster = dutch_revolt_disaster }
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 	  		if = {
@@ -1165,7 +1165,7 @@ country_decisions = {
 				value = 24			#At least 67 percent of Greece's 36 provinces, per historical Kingdom of Greece borders
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			change_tag = POL
@@ -1241,7 +1241,7 @@ country_decisions = {
 				owns_core_province = 2995	# Stolp
 			}
 			total_development = 150			#Normal requirement for rank 2 is 500 dev, so this is 70 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			change_tag = PRU
@@ -1391,7 +1391,7 @@ country_decisions = {
 			owns_core_province = 43		# Danzig
 			owns_core_province = 2995	# Stolp
 			total_development = 150			#Normal requirement for rank 2 is 500 dev, so this is 70 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			change_tag = PRU
@@ -1563,8 +1563,8 @@ country_decisions = {
 				area = sardinia_area #Sardinia
 				value = 4			#Half of Sardinia's 7 provinces
 			}
-			total_development = 150			#Normal requirement for rank 2 is 500 dev, so this is 70 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 70 percent discounted
+			#prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			#No claims: Savoy has missions to conquer all of Italy in 1.30.
@@ -1666,7 +1666,7 @@ country_decisions = {
 				value = 103			#At least 2/3 of Iberia's 153 provinces (note modern Spain is 123 provinces, 81 in Castile, 41 more in Aragon, Granada, and Navarre, and another 1 in Portugal). This is also 85% of non Portuguese Iberia.
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 			iberia_region = { type = all NOT = { owner = { religion_group = muslim } } }			#Eventually make it so Portgual can fail and still spain can be formed
 		}
 		effect = {
@@ -1774,7 +1774,7 @@ country_decisions = {
 				value = 115			#At least 75 percent of Iberia's 153 provinces (Note Portugal has 31, so Castile or Aragon needs everything but Portugal and 7 others). This is also 95 percent of non Portuguese Iberia.
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 			iberia_region = { type = all NOT = { owner = { religion_group = muslim } } }			#Eventually make it so Portgual can fail and still spain can be formed
 		}
 		effect = {
@@ -1907,7 +1907,7 @@ country_decisions = {
 				value = 13			#At least 2/3 of Libya's 19 provinces
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			change_tag = TRP
