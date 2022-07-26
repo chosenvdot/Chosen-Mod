@@ -1355,13 +1355,13 @@ tabarestan_area = {
 	417 426 2214 4339 4341 
 }
 kerman_area = {
-	432 2220 2234 4345 8825 8839 8827 8828
+	432 2220 2234 4345 8825 8839 8827 8828 8830 8824 8841
 }
 persian_gulf_coast = {  
 	430 2219 2223 4332 8820 8840
 }
 mogostan_area = {
-	431 4327 8819 8818 8821 8822
+	431 4327 8819 8818 8821 8822 8837 8823
 }
 
 ###
@@ -1371,7 +1371,7 @@ makran_area = {
 	434 575 2231 2232 2233 8836 8842 8838 8835
 }
 sistan_area = {
-	435 2224 2229 2230 
+	435 2224 2229 2230 8834 8831 8843 8833
 }
 kalat_area = {
 	576 577 2068 
@@ -1386,7 +1386,7 @@ mashhad_area = { #Northern Khorasan
 herat_area = { #Eastern Khorasan
 	446 4324 4325 8832
 }
-birjand_area = { 8808  8807  8806  8805  #Western Khorasan
+birjand_area = { 8808  8807  8806  8805 8829 #Western Khorasan
 	436 4334 4336 
 }
 ghor_area = {
