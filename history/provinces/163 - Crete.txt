@@ -1,8 +1,8 @@
  
 #163 - Crete/Heraklion
 
-owner = VEN
-controller = VEN
+owner = CRT
+controller = CRT
 culture = greek
 religion = orthodox
 capital = "Candia"
@@ -13,7 +13,6 @@ base_production = 3
 base_manpower = 2
 is_city = yes
 fort_15th = yes			#As a note, this province was the location of what is traditionally held as the longest siege in history. An on again off again siege of 21 years in the 1645 to 1669 Cretan War, finally falling to the Ottomans after hundreds of thousands of casulties.
-add_core = VEN
 add_core = CRT
 
 extra_cost = 8
