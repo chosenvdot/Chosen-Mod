@@ -9,7 +9,7 @@ owner = IRQ
 controller = IRQ
 
 #Demographics
-culture = turkoman
+culture = kurdish
 religion = sunni
 
 #Development and Trade

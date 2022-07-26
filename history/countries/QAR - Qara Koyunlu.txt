@@ -1,9 +1,8 @@
 government = monarchy
 add_government_reform = iqta
-primary_culture = azerbaijani
+primary_culture = kurdish
 add_accepted_culture = armenian
 add_accepted_culture = assyrian
-add_accepted_culture = kurdish
 religion = shiite
 technology_group = muslim
 capital = 416 # Tabriz
