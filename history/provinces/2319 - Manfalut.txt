@@ -3,8 +3,8 @@
 
 owner = MAM
 controller = MAM
-culture = coptic_culture
-religion = coptic
+culture = al_misr_arabic
+religion = sunni
 capital = "Asyut"
 trade_goods = grain
 hre = no
