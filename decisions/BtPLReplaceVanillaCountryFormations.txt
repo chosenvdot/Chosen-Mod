@@ -1515,6 +1515,7 @@ country_decisions = {
 			OR = {
 				tag = SAV
 				tag = SAR
+				TAG = GEN
 				tag = PIE
 				primary_culture = piedmontese
 				primary_culture = sardinian
