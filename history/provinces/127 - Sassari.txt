@@ -3,8 +3,8 @@
 #Region - Italy
 #Area - Corsica and Sardinia
 
-owner = PIS
-controller = PIS
+owner = GEN
+controller = GEN
 culture = sardinian 
 religion = catholic 
 hre = no 
@@ -15,7 +15,7 @@ base_manpower = 1
 capital = "Civita" 		#Only changed back to original Roman Olbia during fascist Italy years
 is_city = yes 
 add_core = SAR
-add_core = PIS
+add_core = GEN
 
 discovered_by = western
 discovered_by = eastern
