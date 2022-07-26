@@ -3,8 +3,8 @@
 #Region - Italy
 #Area - Piedmont
 
-owner = SAV
-controller = SAV
+owner = GEN
+controller = GEN
 culture = piedmontese
 religion = catholic
 hre = yes
@@ -14,7 +14,7 @@ trade_goods = wine
 base_manpower = 4
 capital = "Saluzzo"
 is_city = yes	# Estimated
-add_core = SAV
+add_core = GEN
 
 discovered_by = western
 discovered_by = muslim

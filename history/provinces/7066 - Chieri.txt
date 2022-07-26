@@ -1,9 +1,9 @@
  
 #BT Italy reoverhaul
 
-owner = CIE
-controller = CIE
-add_core = CIE
+owner = GEN
+controller = GEN
+add_core = GEN
 culture = piedmontese
 religion = catholic
 capital = "Chieri"
