@@ -5,7 +5,7 @@
 owner = AYU 
 controller = AYU
 add_core = AYU
-culture = mon # BT; central_thai
+culture = central_thai
 religion = mahayana # BT; buddhism
 capital = "Lawo" # BT; "Lopburi"
 is_city = yes
