@@ -2,10 +2,10 @@ government = monarchy
 add_government_reform = plutocratic_reform
 government_rank = 2
 technology_group = muslim
-religion = sunni
+add_accepted_culture = omani_culture
+religion = ibadi
 primary_culture = gulf_arabic
 capital = 2999	# Ormuz Island
-religious_school = maliki_school
 
 #Rulers of Ormuz
 1442.1.1 = {
@@ -13,8 +13,8 @@ religious_school = maliki_school
 		name = "Fakhr al-Din"
 		dynasty = "Turani"
 		dip = 4
-		mil = 2
-		adm = 2
+		mil = 6
+		adm = 4
 	}
 	add_piety = 0.1
 }
