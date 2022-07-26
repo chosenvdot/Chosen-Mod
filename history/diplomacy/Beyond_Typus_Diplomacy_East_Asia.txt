@@ -62,7 +62,7 @@ dependency = {
 	end_date = 1527.1.1
 }
 
-#Boné
+#BonÃ©
 dependency = {
 	subject_type = tributary_state
 	first = MAJ
@@ -251,14 +251,6 @@ union = {
 	second = MNI
 	start_date = 1444.1.1
 	end_date = 1527.1.1
-}
-
-dependency = {
-	subject_type = tributary_state
-	first = BNG
-	second = ARK
-	start_date = 1429.1.1
-	end_date = 1531.1.1
 }
 
 #Ming Tributaries in SEA, per Cinnamon Ryce's South East Asia overhaul
