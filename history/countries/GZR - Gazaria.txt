@@ -9,8 +9,6 @@ capital = 285 #Kaffa
 
 mercantilism = 25
 
-historical_friend = GEN
-
 
 #History, currently empty.
 1399.1.1 = {

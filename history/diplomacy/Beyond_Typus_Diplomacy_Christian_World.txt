@@ -197,13 +197,6 @@ vassal = {
 	end_date = 1436.1.1
 } #Francesco Sforza's Marche
 
-vassal = {
-	first = GEN
-	second = GZR
-	start_date = 1444.1.1
-	end_date = 1475.1.1 #Ottoman conquest
-} #Gazaria
-
 #Switzerland-Basel
 guarantee = {
 	first = SWI
