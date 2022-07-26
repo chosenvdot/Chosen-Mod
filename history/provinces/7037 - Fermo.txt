@@ -1,9 +1,9 @@
  
 #BT Italy reoverhaul
 
-owner = PAP
-controller = PAP
-add_core = PAP
+owner = FMO
+controller = FMO
+add_core = FMO
 culture = umbrian
 religion = catholic
 capital = "Fermo"

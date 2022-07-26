@@ -3,8 +3,8 @@
 #Region - Italy
 #Area - Central Italy
 
-owner = PAP
-controller = PAP
+owner = MRT
+controller = MRT
 culture = umbrian 
 religion = catholic 
 hre = no 
@@ -14,7 +14,7 @@ trade_goods = fish # second biggest fishery on the Adriatic
 base_manpower = 6
 capital = "Ancona" 
 is_city = yes 
-add_core = PAP
+add_core = MRT
 
 discovered_by = western
 discovered_by = muslim
