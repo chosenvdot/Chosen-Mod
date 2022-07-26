@@ -1,5 +1,6 @@
 
 historical_rival = HUN
+elector = no
 historical_friend = POL
 
 

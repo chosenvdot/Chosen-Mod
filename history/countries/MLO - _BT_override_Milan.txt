@@ -1,7 +1,6 @@
 government = republic
 add_accepted_culture = romagnan
 add_government_reform = ambrosian_republic
-elector = yes
 
 
 #History

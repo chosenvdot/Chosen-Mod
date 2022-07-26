@@ -3,7 +3,7 @@
 #Political Situation
 capital = 8406
 
-elector = yes
+elector = no
 
 #Government
 government_rank = 2

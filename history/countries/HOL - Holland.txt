@@ -4,6 +4,7 @@ government_rank = 2
 technology_group = western
 religion = catholic
 primary_culture = dutch
+elector = yes
 capital = 4383 #Haag
 
 1444.1.1 = {
