@@ -1,15 +1,15 @@
 #Written with Eu4 Easy Province Creator by emiroercn
 #per_3
-add_core = KHO
-owner = KHO
-controller = KHO
+add_core = BAL
+owner = BAL
+controller = BAL
 culture = khorasani
 religion = shiite
 hre = no
-base_tax = 3
-base_production = 3
-trade_goods = glass
-base_manpower = 3
+base_tax = 1
+base_production = 1
+trade_goods = cloth
+base_manpower = 1
 capital = "per_3"
 is_city = yes
 extra_cost = 26
