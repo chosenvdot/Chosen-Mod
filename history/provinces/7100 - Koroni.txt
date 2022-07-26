@@ -1,9 +1,9 @@
  
 #BT Balkans reoverhaul
 
-owner = VEN
-controller = VEN
-add_core = VEN
+owner = BYZ
+controller = BYZ
+add_core = BYZ
 culture = greek
 religion = orthodox
 capital = "Koroni"

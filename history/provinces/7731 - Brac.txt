@@ -1,9 +1,9 @@
  
 #BT Balkans reoverhaul
 
-owner = VEN
-controller = VEN
-add_core = VEN
+owner = CRO
+controller = CRO
+add_core = CRO
 culture = croatian
 religion = catholic
 capital = "Nerežisca"
