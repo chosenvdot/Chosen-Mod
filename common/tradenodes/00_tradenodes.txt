@@ -2439,7 +2439,7 @@ london={
 	end=yes
 }
 lowlands={
-	location=8112
+	location=1744
 	color={
 		5 82 13
 	}
