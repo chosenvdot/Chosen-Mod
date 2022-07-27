@@ -240,11 +240,13 @@ h_orm_missions = {
 				qasim_area = {
 					add_province_modifier = {
 						name = "h_fortified_oasis"
+						duration = -1
 					}
 				}
 				yamamah_area = {
 					add_province_modifier = {
 						name = "h_fortified_oasis"
+						duration = -1
 					}
 				}
 			}
