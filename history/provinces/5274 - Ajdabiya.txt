@@ -1,9 +1,9 @@
  
 #New Province
 
-owner = FZA
-controller = FZA
-add_core = FZA
+owner = MAM
+controller = MAM
+add_core = MAM
 capital = "Ajdabiya"
 culture = tunisian
 religion = sunni
