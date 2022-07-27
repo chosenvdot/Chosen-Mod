@@ -368,7 +368,6 @@ trade_hub_created_in_province = {
 }
 trade_hub_created = {
 }
-#hash mp modifiers
 
 transcaucasian_wine_valleys = {
 	trade_goods_size = 2.0
@@ -377,47 +376,44 @@ transcaucasian_wine_valleys = {
 steirischer_erzberg_iron_mines = {
 	trade_goods_size = 1.0
 	}
-alte_salzstrase = {
-	trade_goods_size = 1.0
-	}
 granary_of_europe = {
 	trade_goods_size = 1.0
 	} 
 slave_trading_hub = {
 	trade_goods_size = 2.0
 	} 
-	
-	h_khm_khmer_resurgent = {
+
+h_khm_khmer_resurgent = {
 	development_cost = -0.1
 	global_manpower_modifier = 0.25
-}
+	}
 
 h_angkor_mod_1 = {
 	local_development_cost = -0.25
 	tax_income = 15
 	local_manpower_modifier = 0.25
-}
+	}
 
 h_angkor_mod_2 = {
 	local_development_cost = -0.5
 	tax_income = 30
 	local_manpower_modifier = 0.5
-}
-
+	}
+	
 h_angkor_mod_3 = {
 	local_development_cost = -0.75
 	tax_income = 60
 	local_manpower_modifier = 1.0
 	prestige = 0.5
-}
+	}
 
 h_khm_khmer_faith = {
 	global_missionary_strength = 0.03
 	missionary_maintenance_cost = -0.5
-}
+	}
 
 h_indochina_mod = {
 	governing_capacity = 500
 	discipline = 0.05
-}
+	}
 
