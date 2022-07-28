@@ -1211,7 +1211,7 @@ gujarat={
 	}
 }
 arabia={
-	location=1332
+	location=1779
 	outgoing={
 		name="zanzibar"
 		path={
