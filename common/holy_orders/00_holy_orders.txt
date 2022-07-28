@@ -8,14 +8,13 @@ jesuit_order = {
 		}	
        religion = catholic
     }
-    cost = 150
+    cost = 100
     cost_type = adm_power
     per_province_effect = {
 	
-        add_base_tax = 1
     }
     per_province_abandon_effect = {
-        add_base_tax = -1
+        
     }
     modifier = {
         local_missionary_strength = 0.015
@@ -40,14 +39,14 @@ dominican_order = {
 		}	
        religion = catholic
     }
-    cost = 150
+    cost = 100
     cost_type = dip_power
     per_province_effect = {
-        add_base_production = 1
+        
 	}
     
     per_province_abandon_effect = {
-        add_base_production = -1
+        
     }
     modifier = {
         local_culture_conversion_cost = -0.3
@@ -76,13 +75,13 @@ franciscan_order = {
 		}	
        religion = catholic
     }
-    cost = 150
+    cost = 100
     cost_type = mil_power
     per_province_effect = {	
-        add_base_manpower = 1
+ 
     }
     per_province_abandon_effect = {
-        add_base_manpower = -1
+        
     }
     modifier = {
         local_unrest = -1
