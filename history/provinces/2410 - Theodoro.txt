@@ -1,8 +1,8 @@
  
 #2410 - Theodoro
 
-owner = TRE
-controller = TRE
+owner = GZR
+controller = GZR
 culture = goths
 religion = orthodox
 hre = no
@@ -12,7 +12,7 @@ trade_goods = wine
 base_manpower = 4 
 capital = "Mangup"
 is_city = yes
-add_core = TRE
+add_core = GZR
 
 discovered_by = western
 discovered_by = eastern
