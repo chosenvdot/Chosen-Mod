@@ -417,3 +417,6 @@ h_indochina_mod = {
 	discipline = 0.05
 	}
 
+tau_rice = {
+	trade_goods_size = 2
+}
