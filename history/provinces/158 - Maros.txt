@@ -3,7 +3,7 @@
 
 owner = HUN
 controller = HUN 
-culture = szekely
+culture = hungarian
 religion = catholic
 capital = "Targu Mures"
 trade_goods = wine

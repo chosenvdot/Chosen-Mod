@@ -3,7 +3,7 @@
 
 owner = MOL
 controller = MOL
-culture = csango
+culture = romanian
 religion = catholic
 hre = no
 base_tax = 2 

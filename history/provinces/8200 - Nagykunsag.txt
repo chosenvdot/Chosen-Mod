@@ -10,7 +10,7 @@ owner = HUN
 controller = HUN
 
 #Demographics
-culture = cuman
+culture = hungarian
 religion = catholic
 
 #Development and Trade

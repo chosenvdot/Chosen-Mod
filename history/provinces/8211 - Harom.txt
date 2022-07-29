@@ -10,7 +10,7 @@ owner = HUN
 controller = HUN
 
 #Demographics
-culture = szekely
+culture = hungarian
 religion = catholic
 
 #Development and Trade

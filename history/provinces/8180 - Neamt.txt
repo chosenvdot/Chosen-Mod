@@ -10,7 +10,7 @@ owner = MOL
 controller = MOL
 
 #Demographics
-culture = csango
+culture = romanian
 religion = catholic
 
 #Development and Trade

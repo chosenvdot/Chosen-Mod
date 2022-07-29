@@ -4,7 +4,7 @@
 owner = STE
 controller = STE
 add_core = STE
-culture = polabian_culture
+culture = pommeranian
 religion = catholic
 capital = "Usedom"
 base_tax = 2 

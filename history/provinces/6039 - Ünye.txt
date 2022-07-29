@@ -9,7 +9,7 @@ owner = TRE
 controller = TRE
 
 #Demographics
-culture = pontic_greek
+culture = laz_culture
 religion = orthodox
 
 #Development and Trade

@@ -3,7 +3,7 @@
 owner = DUL
 controller = DUL
 add_core = DUL
-culture = turkoman
+culture = turkish
 religion = sunni
 capital = "Malatya"
 trade_goods = cloth

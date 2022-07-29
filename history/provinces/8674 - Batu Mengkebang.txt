@@ -3,7 +3,7 @@
 
 owner = KEL
 controller = KEL
-culture = orang_asli
+culture = malayan
 religion = sunni
 capital = "Batu Mengkebang"
 trade_goods = livestock

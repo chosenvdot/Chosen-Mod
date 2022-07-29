@@ -3,7 +3,7 @@
 
 owner = GZR
 controller = GZR 
-culture = ligurian
+culture = crimean
 religion = catholic
 hre = no
 base_tax = 5
