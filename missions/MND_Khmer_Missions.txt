@@ -15,7 +15,6 @@ h_khm_missions = {
 		position = 1
 		trigger = {
 			609 = {
-				NOT = { unrest = 1 }
 				NOT = { local_autonomy = 20 }
 			}
 		}
