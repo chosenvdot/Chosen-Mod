@@ -38,7 +38,6 @@ discovered_by = eastern
 } #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
 1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
 	remove_core = TET
-	add_core = MOR
 	add_core = GRA
 	add_core = MOR
 	owner = MOR
