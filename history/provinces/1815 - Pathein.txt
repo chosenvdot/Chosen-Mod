@@ -1,8 +1,8 @@
  
 #1815 - Pathein
 
-owner = PEG
-controller = PEG
+owner = TAU
+controller = TAU
 culture = mon
 religion = buddhism
 capital = "Pathein"
@@ -12,7 +12,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = PEG
+add_core = TAU
 
 
 
