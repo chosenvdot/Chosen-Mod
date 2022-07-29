@@ -23,7 +23,7 @@ discovered_by = ottoman
 discovered_by = eastern
 
 extra_cost = 8
-center_of_trade = 1
+center_of_trade = 2
 
 
 1412.6.29 = { revolt = { type = pretender_rebels size = 0 } controller = REB } # Jaime d'Urgell Uprising

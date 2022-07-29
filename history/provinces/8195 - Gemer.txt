@@ -10,8 +10,8 @@ owner = HUN
 controller = HUN
 
 #Demographics
-culture = slovak
-religion = hussite
+culture = hungarian
+religion = catholic
 
 #Development and Trade
 base_tax = 2

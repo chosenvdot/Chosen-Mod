@@ -7,7 +7,7 @@ latent_trade_goods = {
 
 owner = HUN
 controller = HUN 
-culture = slovak
+culture = hungarian
 religion = catholic
 capital = "Ipolyság"
 trade_goods = copper
