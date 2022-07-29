@@ -1718,3 +1718,42 @@ PEU_ideas = { #Peru
 		prestige_decay = -0.01
 	}
 }
+
+VND_ideas = {
+	start = {
+		advisor_pool = 1
+		infantry_power = 0.1
+	}
+	
+	bonus = {
+		global_tax_modifier = 0.2
+	}
+	
+	trigger = {
+		tag = VND
+	}
+	free = yes
+	
+	VND_1 = {
+		global_trade_power = 0.10
+	}
+	VND_2 = {
+		land_forcelimit_modifier = 0.1
+	}
+	VND_3 = {
+		stability_cost_modifier = -0.1
+	}
+	VND_4 = {
+		tolerance_heretic = 1
+ 		tolerance_heathen = 1
+	}
+	VND__5 = {
+		prestige = 1
+	}
+	VND_6 = {
+		diplomats = 1
+	}
+	VND_7 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
