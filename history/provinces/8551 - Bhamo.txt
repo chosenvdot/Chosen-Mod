@@ -1,8 +1,8 @@
 
 #4523 - Bhamo
 
-owner = AVA
-controller = AVA
+owner = MMA
+controller = MMA
 culture = shan
 religion = buddhism
 capital = "Wanmaw"
@@ -12,7 +12,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 1
 is_city = yes
-add_core = AVA
+add_core = MMA
 
 
 
