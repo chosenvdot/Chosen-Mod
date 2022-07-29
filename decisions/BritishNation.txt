@@ -195,7 +195,7 @@ country_decisions = {
 						SCO = {	junior_union_with = ENG	}
 						SCO = {	is_subject_of = ENG	}
 					}
-					SCO = { NOT = { num_of_cities = 15 } } #Keep this number the same as in potential
+					SCO = { NOT = { num_of_cities = 45 } } #Keep this number the same as in potential
 				}
 				AND = {
 					tag = SCO
@@ -203,7 +203,7 @@ country_decisions = {
 						ENG = {	junior_union_with = SCO	}
 						ENG = {	is_subject_of = SCO	}
 					}
-					ENG = { NOT = { num_of_cities = 41 } } #Keep this number the same as in potential
+					ENG = { NOT = { num_of_cities = 100 } } #Keep this number the same as in potential
 				}
 			}
 		}
