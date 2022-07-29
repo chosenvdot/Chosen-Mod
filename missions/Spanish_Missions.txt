@@ -971,10 +971,6 @@ spa_reconquista_por = {
 				name = "spa_rb_italian_ambition_mod"
 				duration = 5475
 			}
-			add_country_modifier = {
-				name = "elwolf_spa_arty_1"
-				duration = 0
-			}
 		}
 	}
 }
