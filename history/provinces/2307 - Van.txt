@@ -3,7 +3,7 @@
 owner = QAR
 controller = QAR
 culture = armenian
-religion = apostolic
+religion = sunni
 capital = "Van"
 trade_goods = cloth
 hre = no

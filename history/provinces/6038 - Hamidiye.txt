@@ -10,7 +10,7 @@ controller = TUR
 
 #Demographics
 culture = armenian
-religion = apostolic
+religion = sunni
 
 #Development and Trade
 base_tax = 1

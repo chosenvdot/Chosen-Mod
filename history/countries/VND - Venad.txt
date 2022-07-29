@@ -12,7 +12,7 @@ capital = 537	# Padmanabhapuram
 		name = "Mootha"
 		dynasty = "Cheraman"
 		birth_date = 1424.1.1
-		DIP = 3
+		DIP = 4
 		ADM = 3
 		MIL = 4
 	}

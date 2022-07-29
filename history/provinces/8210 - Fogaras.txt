@@ -6,8 +6,8 @@
 #Core Details
 capital = "Fogaras"
 is_city = yes
-owner = WAL
-controller = WAL
+owner = HUN
+controller = HUN
 
 #Demographics
 culture = romanian

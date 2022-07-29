@@ -3,7 +3,7 @@
 owner = QAR
 controller = QAR
 culture = armenian
-religion = apostolic
+religion = sunni
 capital = "Bayazit"
 trade_goods = livestock
 hre = no

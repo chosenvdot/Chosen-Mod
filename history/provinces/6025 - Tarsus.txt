@@ -10,7 +10,7 @@ controller = RAM
 
 #Demographics
 culture = cilician
-religion = apostolic
+religion = sunni
 
 #Development and Trade
 base_tax = 3

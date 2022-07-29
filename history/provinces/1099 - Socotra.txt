@@ -4,7 +4,7 @@
 owner = MRE
 controller = MRE
 culture = mahri_culture
-religion = nestorian
+religion = sunni
 capital = "Suq"
 trade_goods = fish
 hre = no
