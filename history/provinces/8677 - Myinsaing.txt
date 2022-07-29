@@ -1,8 +1,8 @@
 
 #Myinsaing
 
-owner = AVA
-controller = AVA
+owner = TAU
+controller = TAU
 culture = burmese
 religion = buddhism
 capital = "Myinsaing"
@@ -12,9 +12,12 @@ base_tax = 4
 base_production = 4
 base_manpower = 2
 is_city = yes
-add_core = AVA
+add_core = TAU
 
-
+add_permanent_province_modifier = {
+	name = tau_rice
+	duration = -1
+	}
 
 discovered_by = chinese
 discovered_by = indian
