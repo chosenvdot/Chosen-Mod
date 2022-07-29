@@ -210,19 +210,15 @@ country_decisions = {
 			1816 = {		# Beijing
 				is_state = yes
 			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				region = north_china_region
+				is_core = owner
+				value = 40		
+			}
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			NOT = {
 				has_ruler_modifier = tribal_succession_crisis
-			}
-			if = {
-				limit = {
-					has_dlc = "Mandate of Heaven"
-					any_country = {
-						is_emperor_of_china = yes
-					}
-				}
-				is_emperor_of_china = yes
 			}
 			else_if = {
 				limit = {
