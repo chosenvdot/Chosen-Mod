@@ -1,9 +1,8 @@
  
 #BT's Western Europe Overhaul in 12.0
 
-owner = SAV
-controller = SAV
-add_core = SAV
+owner = ANJ
+controller = ANJ
 add_core = ANJ
 culture = aquitaine
 religion = catholic
@@ -54,10 +53,9 @@ discovered_by = eastern
 	controller = ANJ
 } #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
 1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
-	add_core = SAV
-	add_core = PRO
-	owner = SAV
-	controller = SAV
+	add_core = ANJ
+	owner = ANJ
+	controller = ANJ
 } #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
 #1444.11.16 = { #BeyondTypus batch edit shortcut second performance start begins
 #	owner = XXX
