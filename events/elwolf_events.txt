@@ -61,3 +61,25 @@ country_event = {
 		kill_ruler = yes
 	}
 }
+
+country_event = {
+	id = chosen_tur_1
+	title = "chosen.annex.byztitle"
+	desc = "chosen.annex.byzdesc"
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		tag = TUR
+		owns_core_province = 151
+	}
+
+	option = {
+		name = chosen.annex.1
+		BYZ = {
+		every_owned_province = {
+			cede_province = TUR
+			}
+		}
+	}
+}
