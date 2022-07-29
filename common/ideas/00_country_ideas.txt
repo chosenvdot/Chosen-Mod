@@ -2672,12 +2672,12 @@ MAR_ideas = {
 
 TAU_ideas = {
 	start = {
-		leader_land_manuever = 1
-		global_tax_modifier = 0.1
+		global_tax_modifier = 0.2
+		global_manpower_modifier = 0.25	
 	}
 	
 	bonus = {
-		core_creation = -0.15
+		leader_land_fire = 1
 	}
 	
 	trigger = {
@@ -2689,25 +2689,27 @@ TAU_ideas = {
 	free = yes
 	
 	mandala_system = {
-		global_manpower_modifier = 0.25
+		core_creation = -0.25
 	}
 	tau_elephant_battles = {
 		cavalry_power = 0.20
-	}
-	nat_worship = {
-		religious_unity = 0.2
+		cav_to_inf_ratio = 0.3
 	}
 	chakravartin = {
-		army_tradition = 0.5
+		army_tradition = 1
 	}
 	the_hluttaw = {
-		global_unrest = -2
+		development_cost = -0.1
 	}
+	nat_worship = {
+		global_unrest = -2
+	}	
 	tau_organized_campaigns = {
-		land_attrition = -0.10
+		reinforce_cost_modifier = -0.1
+		land_attrition = -0.2
 	}
 	bayingyi = {
-		infantry_cost = -0.2
+		global_regiment_cost = -0.1
 	}
 }
 
