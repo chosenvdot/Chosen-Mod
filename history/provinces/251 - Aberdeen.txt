@@ -15,7 +15,6 @@ base_manpower = 1
 capital = "Aberdeen"
 is_city = yes
 add_core = SCO
-fort_15th = yes #Clear fortifications and was heavily fortified until the 1770s apparently.
 
 extra_cost = 8
 center_of_trade = 1
