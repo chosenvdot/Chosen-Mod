@@ -6,7 +6,7 @@ religion = shinto
 technology_group = chinese
 capital = 1012	# Satsuma
 
-1425.1.1 = { 
+1444.1.1 = { 
 	monarch = {
 		name = "Tadakuni"
 		dynasty = "Shimazu"
@@ -20,7 +20,7 @@ capital = 1012	# Satsuma
 	add_ruler_personality = incorruptible_personality
 }
 	
-1432.11.27 = {
+1444.1.1 = {
 	heir = {
 		name = "Tatsuhisa"
 		monarch_name = "Tatsuhisa"
