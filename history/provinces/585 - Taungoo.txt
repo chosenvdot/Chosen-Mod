@@ -1,8 +1,8 @@
  
 #585 - Toungoo
 
-owner = AVA
-controller = AVA
+owner = TAU
+controller = TAU
 culture = burmese
 religion = buddhism
 capital = "Toungoo"
@@ -12,7 +12,7 @@ base_tax = 7
 base_production = 7
 base_manpower = 5
 is_city = yes
-add_core = AVA
+add_core = TAU
 
 
 
