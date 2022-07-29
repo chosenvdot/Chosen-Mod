@@ -2,9 +2,9 @@
 # ex 8599
 # wasteland in vanilla
 
-owner = AVA
-controller = AVA
-add_core = AVA
+owner = TAU
+controller = TAU
+add_core = TAU
 culture = karen
 religion = buddhism
 capital = "Hpa An"
