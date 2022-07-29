@@ -1,8 +1,8 @@
  
 #2401 - Mong Pai
 
-owner = AVA
-controller = AVA
+owner = MYA
+controller = MYA
 culture = karen
 religion = buddhism
 capital = "Mong Pai"
@@ -12,7 +12,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 1
 is_city = yes
-add_core = AVA
+add_core = MYA
 
 
 
