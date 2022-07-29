@@ -3,7 +3,7 @@ add_government_reform = mandala_reform
 technology_group = chinese
 religion = buddhism
 primary_culture = shan
-capital = 582	# Mong Yang
+capital = 588	# Mong Yang
 
 1444.1.1 = {
 	monarch = {
