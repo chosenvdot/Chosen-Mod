@@ -1,8 +1,8 @@
 
 #4524 - Mong Mit
 
-owner = AVA
-controller = AVA
+owner = HSE
+controller = HSE
 culture = shan
 religion = buddhism
 capital = "Mong Mit"
@@ -12,7 +12,7 @@ base_tax = 5
 base_production = 5
 base_manpower = 2
 is_city = yes
-add_core = AVA
+add_core = HSE
 
 
 
