@@ -40,9 +40,9 @@ discovered_by = eastern
 	remove_core = TET
 	add_core = MOR
 	add_core = GRA
-	add_core = POR
-	owner = POR
-	controller = POR
+	add_core = MOR
+	owner = MOR
+	controller = MOR
 } #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
 
 #1444 onwards
