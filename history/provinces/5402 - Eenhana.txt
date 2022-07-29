@@ -1,7 +1,7 @@
  
 # No previous file for Beyond Typus province
 
-culture = ovambo_culture
+culture = juu_culture
 religion = shamanism 
 capital = "Eenhana" 
 trade_goods = unknown

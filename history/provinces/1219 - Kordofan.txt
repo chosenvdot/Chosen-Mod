@@ -1,7 +1,7 @@
  
 #1219 - Darfur
 
-culture = fur_culture 
+culture = nubian 
 religion = shamanism #Fetishism
 capital = "Al-Fashir"
 add_core = DAR

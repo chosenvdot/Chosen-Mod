@@ -9,7 +9,7 @@ owner = CYP
 controller = CYP
 
 #Demographics
-culture = syriac_culture
+culture = cypriot
 religion = catholic						#Maronites
 
 #Development and Trade

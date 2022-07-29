@@ -3,7 +3,7 @@
 
 owner = HUN
 controller = HUN 
-culture = transylvanian_saxons
+culture = hungarian
 religion = catholic
 capital = "Beszterce"
 trade_goods = cloth #Was wool

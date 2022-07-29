@@ -4,7 +4,7 @@
 owner = TRE
 controller = TRE
 add_core = TRE
-culture = pontic_greek
+culture = laz_culture
 religion = orthodox
 capital = "Tzantzakon"
 trade_goods = cloth			#silver and gold. The mines of the region gave the name Argyropolis ("silver town", modern Gümüshane) to the principal settlement

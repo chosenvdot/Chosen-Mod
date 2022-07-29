@@ -1,7 +1,7 @@
  
 #2801 - Medwa
 
-culture = fur_culture 
+culture = nubian 
 religion = shamanism #Fetishism
 capital = "Ain Farah"
 add_core = DAR

@@ -3,7 +3,7 @@
 owner = LEC
 controller = LEC
 add_core = LEC
-culture = griko
+culture = neapolitan
 religion = catholic
 capital = "Lecce"
 is_city = yes

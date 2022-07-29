@@ -3,7 +3,7 @@
 owner = TRE
 controller = TRE 				#Very ambigious, 3 different sources all give different owners at this point. One says it was still under Empire of Trebizond, one says Turks had gotten control of the region by now, and other says region still under Canik.... Indirect sources 'suggest' this region was either extremely autonomous 
 add_core = TRE 					#or independant from the Ottomans, and 'suggest' majority population was muslim Turks. Everyone does seem to seem to agree it was definitely under the Ottomans by the fall of Trebizond against Mehmed II in 1475
-culture = pontic_greek 			#JP here, deffo Trebizond. It was conquered by Ottomans during their conquest
+culture = laz_culture 			#JP here, deffo Trebizond. It was conquered by Ottomans during their conquest
 religion = orthodox
 capital = "Bayramli"
 is_city = yes

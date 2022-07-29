@@ -9,7 +9,7 @@ owner = TUR
 controller = TUR
 
 #Demographics
-culture = pontic_greek		#Converted to Islam but still many Greeks, often practicising Christianity in secret
+culture = turkish		#Converted to Islam but still many Greeks, often practicising Christianity in secret
 religion = sunni
 
 #Development and Trade

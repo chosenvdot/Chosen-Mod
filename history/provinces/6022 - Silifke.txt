@@ -9,7 +9,7 @@ owner = KAR
 controller = KAR
 
 #Demographics
-culture = cilician
+culture = turkish
 religion = sunni
 
 #Development and Trade

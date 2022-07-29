@@ -2,7 +2,7 @@
 
 owner = AKK
 controller = AKK
-culture = assyrian_culture
+culture = kurdish
 religion = orthodox
 trade_goods = bt_trade_good_books #(JP) Centre of Christian churches in the the region, at least four patriarchs and dozens of monasteries
 capital = "Mardin"

@@ -2,7 +2,7 @@
 
 owner = QAR
 controller = QAR
-culture = assyrian_culture
+culture = al_iraqiya_arabic
 religion = sunni
 capital = "Cizir"			#Kurdish version
 trade_goods = bt_trade_good_books #(JP) Manuscript centre plus Prince had large library

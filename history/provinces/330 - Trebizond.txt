@@ -4,7 +4,7 @@
 owner = TRE
 controller = TRE
 add_core = TRE
-culture = pontic_greek
+culture = laz_culture
 religion = orthodox
 capital = "Trapezous"
 trade_goods = naval_supplies

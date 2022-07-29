@@ -1,7 +1,7 @@
  
 #2802 - Kobbe
 
-culture = fur_culture
+culture = nubian
 religion = shamanism #Fetishism
 capital = "Ad-Du'ain"
 add_core = DAR

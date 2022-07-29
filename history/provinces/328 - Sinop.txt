@@ -4,7 +4,7 @@
 owner = CND
 controller = CND
 add_core = CND
-culture = pontic_greek		#Converted to Islam but still many Greeks, often practicising Christianity in secret
+culture = turkish		#Converted to Islam but still many Greeks, often practicising Christianity in secret
 religion = sunni
 capital = "Sinop"
 trade_goods = cotton

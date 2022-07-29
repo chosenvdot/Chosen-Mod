@@ -1,7 +1,7 @@
  
 #1216 - Tegali
 
-culture = tegali_culture
+culture = nubian
 religion = shamanism #Fetishism
 capital = "Kaduqli"			#vanilla Takala
 native_size = 50

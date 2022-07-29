@@ -9,7 +9,7 @@ owner = RAM
 controller = RAM
 
 #Demographics
-culture = cilician
+culture = turkish
 religion = sunni
 
 #Development and Trade

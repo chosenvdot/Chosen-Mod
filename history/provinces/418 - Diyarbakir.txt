@@ -2,7 +2,7 @@
 
 owner = AKK
 controller = AKK
-culture = assyrian_culture
+culture = kurdish
 religion = orthodox
 capital = "Diyarbakir"
 trade_goods = copper			#abundant resources of copper around the city.

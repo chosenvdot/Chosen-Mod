@@ -1,7 +1,7 @@
  
 # No previous file for Beyond Typus province
 
-culture = kavango_culture
+culture = juu_culture
 religion = shamanism 
 capital = "Luhonono" 
 trade_goods = unknown

@@ -4,7 +4,7 @@
 owner = TRE
 controller = TRE
 add_core = TRE
-culture = pontic_greek
+culture = laz_culture
 religion = orthodox
 capital = "Kerasous"
 trade_goods = bt_trade_good_fruit		#(JP) Cherries are named after this place

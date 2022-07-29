@@ -3,7 +3,7 @@
 owner = NAP
 controller = NAP
 add_core = NAP
-culture = griko
+culture = neapolitan
 religion = catholic
 capital = "Brindisi"
 is_city = yes

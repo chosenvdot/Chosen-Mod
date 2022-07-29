@@ -1,7 +1,7 @@
  
 #1221 - Kordofan
 
-culture = fur_culture
+culture = nubian
 religion = shamanism
 capital = "Al-Ubayyid"
 native_size = 50

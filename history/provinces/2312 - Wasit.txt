@@ -2,7 +2,7 @@
 
 owner = IRQ
 controller = IRQ
-culture = mandaean_culture
+culture = al_iraqiya_arabic
 religion = sunni
 capital = "Wasit"
 trade_goods = bt_trade_good_fruit

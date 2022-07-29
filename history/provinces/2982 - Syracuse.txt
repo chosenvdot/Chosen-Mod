@@ -5,7 +5,7 @@
 
 owner = SIC
 controller = SIC
-culture = griko 
+culture = sicilian 
 religion = catholic 
 hre = no 
 base_tax = 3

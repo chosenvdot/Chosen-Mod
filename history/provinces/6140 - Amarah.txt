@@ -9,7 +9,7 @@ owner = MSY
 controller = MSY
 
 #Demographics
-culture = mandaean_culture
+culture = al_iraqiya_arabic
 religion = sunni
 
 #Development and Trade

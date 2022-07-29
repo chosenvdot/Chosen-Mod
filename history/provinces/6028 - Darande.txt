@@ -9,7 +9,7 @@ owner = DUL
 controller = DUL
 
 #Demographics
-culture = cappadocian
+culture = turkish
 religion = orthodox
 
 #Development and Trade
