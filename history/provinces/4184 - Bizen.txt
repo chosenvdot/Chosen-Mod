@@ -1,8 +1,8 @@
  
 #4184 - Bizen
 
-owner = UES
-controller = UES
+owner = MRI
+controller = MRI
 culture = japanese
 religion = shinto
 capital = "Okayama"
@@ -12,8 +12,7 @@ base_tax = 1
 base_manpower = 1
 base_production = 1
 is_city = yes
-add_core = UES
-add_core = AKM
+add_core = MRI
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }

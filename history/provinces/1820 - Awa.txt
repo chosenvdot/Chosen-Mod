@@ -1,8 +1,8 @@
  
 #1820 - Awa
 
-owner = UES
-controller = UES
+owner = MRI
+controller = MRI
 culture = japanese
 religion = shinto
 capital = "Tokushima"
@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = UES
+add_core = MRI
 
 
 

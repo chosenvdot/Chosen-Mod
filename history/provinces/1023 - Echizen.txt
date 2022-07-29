@@ -1,8 +1,8 @@
  
 #1023 - Echizen
 
-owner = UES
-controller = UES
+owner = SBA
+controller = SBA
 culture = japanese
 religion = shinto
 capital = "Takefu"
@@ -12,8 +12,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = UES
-add_core = ASA
+add_core = SBA
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }

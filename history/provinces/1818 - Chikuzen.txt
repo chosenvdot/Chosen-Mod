@@ -5,8 +5,8 @@ latent_trade_goods = {
 	coal
 }
 
-owner = UES
-controller = UES
+owner = SMZ
+controller = SMZ
 culture = kyushuan
 religion = shinto
 capital = "Hakata"
@@ -17,7 +17,7 @@ base_production = = 1
 base_manpower = 1
 is_city = yes
 fort_15th = yes #Tachibanayama Castle
-add_core = UES
+add_core = SMZ
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }
