@@ -418,5 +418,5 @@ h_indochina_mod = {
 	}
 
 tau_rice = {
-	trade_goods_size = 2
+	trade_goods_size = 1
 }
