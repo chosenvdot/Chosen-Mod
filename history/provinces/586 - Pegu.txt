@@ -1,8 +1,8 @@
  
 #586 - Pegu
 
-owner = PEG
-controller = PEG
+owner = TAU
+controller = TAU
 culture = mon
 religion = buddhism
 capital = "Hanthawaddy"
@@ -13,7 +13,7 @@ base_production = 7
 base_manpower = 4
 fort_15th = yes
 is_city = yes
-add_core = PEG
+add_core = TAU
 
 
 
