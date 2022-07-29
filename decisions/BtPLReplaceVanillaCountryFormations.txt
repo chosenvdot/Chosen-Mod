@@ -200,7 +200,12 @@ country_decisions = {
 				#set_legacy_government = despotic_monarchy
 			}
 			set_country_flag = formed_andalusia_flag
-			swap_ideas = yes
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -273,9 +278,9 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					NOT = { has_idea_group = arabian_ideas }
+					has_custom_ideas = no
 				}
-				swap_ideas = yes
+				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_arabia_flag
 		}
@@ -391,9 +396,9 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					NOT = { has_idea_group = FRA_ideas }
+					has_custom_ideas = no
 				}
-				swap_ideas = yes
+				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_france_flag
 		}
@@ -517,7 +522,12 @@ country_decisions = {
 				set_government_rank = 2
 			}
 			swap_non_generic_missions = yes
-			swap_ideas = yes
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			set_country_flag = formed_hannover_flag
 		}
 		ai_will_do = {
@@ -624,12 +634,7 @@ country_decisions = {
 			}
 			#I decided to remove the development bonus from forming altogether. With the ability to build up provinces already there, this isn't really needed and can get out of hand quickly. Plus capital should move to Dublin anyway.
 			add_prestige = 25
-			if = {
-				limit = {
-					NOT = { has_idea_group = irish_ideas }
-				}
-				swap_ideas = yes
-			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			swap_non_generic_missions = yes
 			set_country_flag = formed_ireland_flag
 		}
@@ -718,7 +723,7 @@ country_decisions = {
 					add_claim = ITA
 				}
 			}
-			swap_ideas = yes
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			swap_non_generic_missions = yes
 			set_country_flag = formed_italy_flag
 		}
@@ -871,12 +876,7 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
-			if = {
-				limit = {
-					NOT = { has_idea_group = NED_ideas }
-				}
-				swap_ideas = yes
-			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			set_country_flag = formed_netherlands_flag
 		}
 		ai_will_do = {
@@ -954,7 +954,7 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
-			swap_ideas = yes
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			set_country_flag = formed_poland_flag
 		}
 		ai_will_do = {
@@ -1089,12 +1089,7 @@ country_decisions = {
 				}
 				add_permanent_claim = PRU
 			}
-			if = {
-				limit = {
-					NOT = { has_idea_group = PRU_ideas }
-				}
-				swap_ideas = yes
-			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			set_country_flag = formed_prussia_flag
 		}
 		ai_will_do = {
@@ -1243,12 +1238,7 @@ country_decisions = {
 				}
 				add_permanent_claim = PRU
 			}
-			if = {
-				limit = {
-					NOT = { has_idea_group = PRU_ideas }
-				}
-				swap_ideas = yes
-			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			set_country_flag = formed_prussia_flag
 		}
 		ai_will_do = {
@@ -1363,7 +1353,7 @@ country_decisions = {
 				}
 				add_accepted_culture = sardinian
 			}
-			swap_ideas = yes
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			if = {
 				limit = {
 					NOT = { was_tag = SAV }
@@ -1492,7 +1482,7 @@ country_decisions = {
 				#set_legacy_government = despotic_monarchy
 			}
 			add_prestige = 25
-			swap_ideas = yes
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			set_country_flag = formed_tripoli_flag
 		}
 		ai_will_do = {
@@ -1666,7 +1656,7 @@ country_decisions = {
 				add_permanent_claim = WES
 			}
 			swap_non_generic_missions = yes
-			swap_ideas = yes
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			set_country_flag = formed_westphalia_flag
 		}
 		ai_will_do = {

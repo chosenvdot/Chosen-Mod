@@ -109,7 +109,7 @@ country_decisions = {
 				}
 				add_permanent_claim = BEL
 			}
-			swap_ideas = yes
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			set_country_flag = formed_belgian_flag_btp
 		}
 		ai_will_do = {
@@ -193,7 +193,7 @@ country_decisions = {
 				add_permanent_claim = IBE
 			}
 			#No Iberian ideas yet.
-			# swap_ideas = yes
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			set_country_flag = formed_iberia_flag_btp
 		}
 		ai_will_do = {
@@ -286,7 +286,7 @@ country_decisions = {
 			}
 			add_prestige = 25
 			#No Illyrian ideas yet.
-			# swap_ideas = yes
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			set_country_flag = formed_illyria_flag_btp
 		}
 		ai_will_do = {
@@ -453,9 +453,7 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
-			swap_ideas = yes
-			#Lombardy-Venetia no unique missions yet has.
-			#swap_non_generic_missions = yes
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			set_country_flag = formed_lombardy_venetia_flag_btp
 		}
 		ai_will_do = {
@@ -592,7 +590,7 @@ country_decisions = {
 			}
 			add_prestige = 50
 			#No Moravian ideas yet
-			# swap_ideas = yes
+			country_event = { id = ideagroups.1 } #Swap Ideas
 			country_event = { id = ideagroups.1 } #Swap Ideas
 			set_country_flag = formed_moravia_flag_btp
 		}
@@ -683,12 +681,7 @@ country_decisions = {
 				set_government_rank = 2
 			}
 			swap_non_generic_missions = no 			#(JP) Because Rhineland has no ideas, they should keep the prior ones
-			if = {
-				limit = {
-					is_playing_custom_nation = no
-				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
 		}
 		ai_will_do = {
 			factor = 1
