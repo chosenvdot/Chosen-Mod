@@ -4,7 +4,7 @@
 owner = MAM
 controller = MAM
 add_core = MAM
-culture = syriac_culture
+culture = al_suryah_arabic
 religion = catholic						#Maronites
 capital = "Beirut"
 trade_goods = naval_supplies			#Cedar trees of Lebanon			

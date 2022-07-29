@@ -9,7 +9,7 @@ owner = QAR
 controller = QAR
 
 #Demographics
-culture = assyrian_culture
+culture = kurdish
 religion = sunni
 
 #Development and Trade

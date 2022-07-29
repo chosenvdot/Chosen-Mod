@@ -9,7 +9,7 @@ owner = IRQ
 controller = IRQ
 
 #Demographics
-culture = assyrian_culture
+culture = kurdish
 religion = sunni
 
 #Development and Trade

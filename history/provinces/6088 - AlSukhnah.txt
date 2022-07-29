@@ -9,7 +9,7 @@ owner = FAD
 controller = FAD
 
 #Demographics
-culture = syriac_culture
+culture = al_suryah_arabic
 religion = orthodox
 
 #Development and Trade
