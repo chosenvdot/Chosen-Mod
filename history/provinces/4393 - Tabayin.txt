@@ -1,8 +1,8 @@
  
 #4393 - Tabayin
 
-owner = AVA
-controller = AVA
+owner = TAU
+controller = TAU
 culture = burmese
 religion = buddhism
 capital = "Tabayin"
@@ -12,7 +12,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = AVA
+add_core = TAU
 
 
 
