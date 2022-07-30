@@ -986,3 +986,47 @@ japanese_catch_up = {
 	global_tax_modifier = 0.3
 	advisor_cost = -0.35
 }
+
+######################################
+# CAVRATIO
+######################################
+t_vassal_cav_ratio = {
+    potential = {
+        is_subject = yes
+        ai = yes
+    }
+    trigger = {
+        overlord = {
+            has_global_modifier_value = {
+                which = cav_to_inf_ratio
+                value = 1
+            }
+        }
+        OR = {
+            is_subject_of_type = client_march
+            is_subject_of_type = client_vassal
+            is_subject_of_type = vassal
+            is_subject_of_type = march
+        }
+    }
+    cav_to_inf_ratio = 0.5
+}
+
+######################################
+# MINGSPLOSION
+######################################
+
+
+mingsplosion = {
+	potential = {
+		tag = MNG
+	}
+
+	trigger = {
+		is_year = 1470
+	}
+	global_unrest = 100
+	land_morale = -0.9
+	discipline = -0.8
+	land_forcelimit = -500
+}

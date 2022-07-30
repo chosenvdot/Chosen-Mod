@@ -1,9 +1,3 @@
-mingsplosion = {
-	global_unrest = 80
-	land_morale = -0.9
-	discipline = -0.8
-	land_forcelimit = -500
-}
 
 elwolf_spa_arty_1 = {
 	artillery_fire = 0.5
