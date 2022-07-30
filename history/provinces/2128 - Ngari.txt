@@ -1,9 +1,9 @@
  
 # 2128 - Ngari
 
-owner = GUG
-controller = GUG
-add_core = GUG
+owner = LDK
+controller = LDK
+add_core = LDK
 culture = tibetan
 religion = vajrayana
 capital = "Ngari"
