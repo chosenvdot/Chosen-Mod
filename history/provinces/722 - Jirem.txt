@@ -1,9 +1,9 @@
  
 #722 - Jurim
 
-owner = MJZ
-controller = MJZ
-add_core = MJZ
+owner = KRC
+controller = KRC
+add_core = KRC
 culture = chahar
 religion = vajrayana
 capital = "Jirem"
