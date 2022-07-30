@@ -8,6 +8,9 @@ trade_goods = incense
 hre = no
 base_tax = 1
 base_production = 1
+add_core = JOH
+owner = JOH
+controller = JOH	
 base_manpower = 2
 is_city = yes
 
