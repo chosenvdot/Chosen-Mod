@@ -6,6 +6,7 @@ add_harmonized_religion = mahayana
 technology_group = chinese
 capital = 735	# Hanseong
 historical_rival = ASK
+historical_rival = MJZ
 historical_rival = DTE
 historical_rival = UES
 historical_rival = HTK
