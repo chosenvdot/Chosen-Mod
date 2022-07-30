@@ -1030,3 +1030,76 @@ mingsplosion = {
 	discipline = -0.8
 	land_forcelimit = -500
 }
+
+######################################
+# MERC DEBUFFS
+######################################
+t_over_merc_cap_early = {
+    potential = {
+        was_player = yes
+    }
+    trigger = {
+        army_size_percentage = 1.25
+
+    NOT = {
+        army_size_percentage = 1.75
+        }
+}
+    global_unrest = 1
+    war_exhaustion = 0.03
+}
+
+t_over_merc_cap_mid = {
+    potential = {
+        was_player = yes
+    }
+    trigger = {
+        army_size_percentage = 1.75
+
+    NOT = {
+        army_size_percentage = 2.25
+
+        }
+}
+    global_unrest = 2.5
+    war_exhaustion = 0.06
+    defensiveness = -0.1
+    war_taxes_cost_modifier = 0.5
+}
+
+t_over_merc_cap_late = {
+    potential = {
+        was_player = yes
+    }
+    trigger = {
+        army_size_percentage = 2.25
+
+    NOT = {
+        army_size_percentage = 2.75
+
+        }
+}
+    global_unrest = 4
+    war_exhaustion = 0.1
+    reinforce_speed = -0.2
+    reinforce_cost_modifier = 0.2
+    defensiveness = -0.15
+    war_taxes_cost_modifier = 1
+}
+t_over_merc_cap_superlate = {
+    potential = {
+        was_player = yes
+    }
+    trigger = {
+
+        army_size_percentage = 2.75
+}
+    global_unrest = 6
+    war_exhaustion = 0.2
+    reinforce_speed = -0.25
+    reinforce_cost_modifier = 0.5
+    defensiveness = -0.2
+    war_taxes_cost_modifier = 2
+    global_trade_goods_size_modifier = -0.1
+    merc_maintenance_modifier = 0.5
+}
