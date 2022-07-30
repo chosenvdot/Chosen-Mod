@@ -374,8 +374,8 @@ TRP_ideas = {
 
 ILY_ideas = {
 	start = {
-		cavalry_power = 0.20
-		recover_army_morale_speed = 0.05
+		infantry_power = 0.15
+		reinforce_speed = 0.3
 	}
 	
 	bonus = {
@@ -397,10 +397,10 @@ ILY_ideas = {
 		discipline = 0.05
 	}
 	ILY_4 = {
-		global_tax_modifier = 0.1
+		global_tax_modifier = 0.25
 	}
 	ILY_5 = {
-		production_efficiency = 0.1
+		production_efficiency = 0.2
 		land_morale = 0.1
 	}
 	ILY_6 = {

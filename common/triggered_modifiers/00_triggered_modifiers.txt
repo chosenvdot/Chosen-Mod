@@ -901,7 +901,6 @@ pope_in_hre_triggered_modifier = {
 		religion = catholic
 		NOT = { is_part_of_hre = yes }
 	}
-	prestige = -0.5
 }
 
 ######################################

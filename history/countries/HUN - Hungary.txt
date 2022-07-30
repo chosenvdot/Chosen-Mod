@@ -1,7 +1,8 @@
 government = monarchy
 add_government_reform = feudalism_reform
 primary_culture = hungarian
-add_accepted_culture = slovak
+add_government_reform = gc_greater_hungary_reform
+add_accepted_culture = ruthenian
 add_accepted_culture = transylvanian
 religion = catholic
 technology_group = eastern

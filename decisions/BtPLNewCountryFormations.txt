@@ -264,6 +264,7 @@ country_decisions = {
 			prestige = 10			#Normal requirement for rank 3 is 75 prestige.
 		}
 		effect = {
+			add_government_reform = empire_of_hungary_reform
 			change_tag = ILY
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
