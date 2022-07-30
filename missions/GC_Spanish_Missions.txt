@@ -546,7 +546,7 @@ gc_spain_2_b = {
 				fire = 5
 				manuever = 6
 				siege = 1
-				name = "Hern·n CortÈs"
+				name = "Hern√°n Cort√©s"
 			}
 			4621 = {
 				add_base_production = 3
@@ -1473,10 +1473,6 @@ gc_spain_4 = {
 				name = "spa_rb_italian_ambition_mod"
 				duration = 5475
 			}
-			add_country_modifier = {
-				name = "elwolf_spa_arty_1"
-				duration = 0
-			}
 			give_permaclaims_for_mission = { mission=gc_cas_spa_italian_ambition_2 }
 			give_permaclaims_for_mission = { mission=gc_spa_spanish_netherlands }
 		}
@@ -1501,6 +1497,10 @@ gc_spain_4 = {
 			add_country_modifier = {
 				name = "spa_milan"
 				duration = 7300
+			}
+			add_country_modifier = {
+				name = "elwolf_spa_arty_1"
+				duration = 0
 			}
 		}
 	}
