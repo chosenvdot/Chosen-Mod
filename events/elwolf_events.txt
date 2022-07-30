@@ -63,23 +63,25 @@ country_event = {
 }
 
 country_event = {
-	id = chosen_tur_1
-	title = "chosen.annex.byztitle"
-	desc = "chosen.annex.byzdesc"
-	picture = SIEGE_eventPicture
+	id = elwolf.1
+	title = "EVTNAME3097"
+	desc = "EVTDESC3097"
+	picture = ANGRY_MOB_eventPicture
+	goto = jackals_and_vultures_province
 
 	fire_only_once = yes
-	trigger = {
-		tag = TUR
-		owns_core_province = 151
-	}
 
+	trigger = {
+		is_year = 1485
+		tag = MNG
+	}
+	
 	option = {
-		name = chosen.annex.1
-		BYZ = {
-		every_owned_province = {
-			cede_province = TUR
-			}
+		name = "EVTOPTA3097" # Jackals! Vultures!
+		
+		add_country_modifier = {
+			name = "mingsplosion"
+			duration = 18250
 		}
 	}
 }

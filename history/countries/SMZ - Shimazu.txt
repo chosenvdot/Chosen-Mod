@@ -1,5 +1,5 @@
 government = monarchy
-add_government_reform = daimyo
+add_government_reform = indep_daimyo
 government_rank = 2
 primary_culture = kyushuan
 religion = shinto
@@ -13,7 +13,7 @@ capital = 1012	# Satsuma
 		birth_date = 1434.1.1
 		adm = 5
 		dip = 6
-		mil = 4
+		mil = 5
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = lawgiver_personality
