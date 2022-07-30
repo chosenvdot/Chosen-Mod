@@ -63,18 +63,30 @@ japanse_missions_sea = {
 			if = {
 				limit = {
 					1032 = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						is_empty = yes
 					}
 				}
-				add_permanent_claim = 1032
-			}
-			sakhalin_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+				1032 = {
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
 				}
-				add_permanent_claim = ROOT
+			}
+			else = {
+				1032 = {
+					add_permanent_claim = ROOT
+				}
+			}
+			1033 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -344,6 +356,13 @@ japanse_missions_china = {
 					}
 				}
 			}
+			manchuria_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			hebei_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -395,7 +414,7 @@ japanse_missions_china = {
 					}
 					ROOT = {
 						add_casus_belli = {
-							type = cb_force_tributary_mission
+							type = cb_force_tributary
 							months = 300
 							target = PREV
 						}
@@ -596,7 +615,25 @@ japanse_missions_the_empire = {
 				}
 				add_claim = ROOT
 			}
-			northern_polynesia_area = {
+			1240 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			1994 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			1997 = {
 				if = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -612,7 +649,11 @@ japanse_missions_the_empire = {
 		icon = mission_invade_island
 		required_missions = { jap_colonize_taiwan }
 		provinces_to_highlight = {
-			area = northern_polynesia_area
+			OR = {
+				province_id = 1240 # Hawaii
+				province_id = 1994 # Wake Island
+				province_id = 1997 # Midway
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -629,10 +670,9 @@ japanse_missions_the_empire = {
 				}
 			}
 			else = {
-				northern_polynesia_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
+				owns_core_province = 1240
+				owns_core_province = 1994
+				owns_core_province = 1997
 			}
 		}
 		effect = {
@@ -730,7 +770,7 @@ japanse_missions_domestic = {
 				area = saigoku_area
 				area = sanindo_area
 				area = shikoku_area
-				area = northern_kyushu  
+				area = northern_kyushu
 				province_id = 4181
 				province_id = 4180
 				province_id = 1012
@@ -781,7 +821,7 @@ japanse_missions_domestic = {
 				type = all
 				owned_by = ROOT
 			}
-			northern_kyushu = {  
+			northern_kyushu = {
 				type = all
 				owned_by = ROOT
 			}
@@ -1156,6 +1196,80 @@ japanse_missions_economic = {
 		effect = {
 			add_country_modifier = {
 				name = "JAP_trade_hegemon"
+				duration = -1
+			}
+		}
+	}
+}
+jap_missions_hash = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+			tag = JAP
+	}
+	has_country_shield = yes
+	h_jap_philippines = {
+		icon = mission_empire
+		required_missions = { jap_colonize_taiwan }
+		provinces_to_highlight = {
+			OR = {
+				area = luzon_area
+				area = southern_luzon_area
+				area = visayas_area
+				area = west_mindanao_area
+				area = mindanao_area
+				area = palawan_area
+				area = sabah_area
+				area = kutai_area
+				area = brunei_area
+				area = kalimantan_area
+				area = banjar_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		trigger = {
+			luzon_area = { type = all is_core = ROOT owned_by = ROOT }
+			southern_luzon_area = { type = all is_core = ROOT owned_by = ROOT }
+			visayas_area = { type = all is_core = ROOT owned_by = ROOT }
+			west_mindanao_area = { type = all is_core = ROOT owned_by = ROOT }
+			mindanao_area = { type = all is_core = ROOT owned_by = ROOT }
+			palawan_area = { type = all is_core = ROOT owned_by = ROOT }
+			taiwan_area = { type = all is_core = ROOT owned_by = ROOT }
+			sabah_area = { type = all is_core = ROOT owned_by = ROOT }
+			kutai_area = { type = all is_core = ROOT owned_by = ROOT }
+			brunei_area = { type = all is_core = ROOT owned_by = ROOT }
+			kalimantan_area = { type = all is_core = ROOT owned_by = ROOT }
+			banjar_area = { type = all is_core = ROOT owned_by = ROOT }
+		}
+		effect = {
+			add_country_modifier = {
+				name = "h_jap_navy"
+				duration = -1
+			}
+		}
+	}
+
+	h_jap_manchuria = {
+		icon = mission_unite_home_region
+		required_missions = { establish_footholding_in_manchuria }
+		provinces_to_highlight = {
+				region = manchuria_region
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		
+		trigger = {
+			manchuria_region = { type = all is_core = ROOT owned_by = ROOT }
+		}
+		effect = {
+			add_country_modifier = {
+				name = "h_jap_disc"
 				duration = -1
 			}
 		}
