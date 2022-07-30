@@ -7,7 +7,6 @@ culture = silesian_german
 religion = catholic
 capital = "Lehnice"
 trade_goods = cloth
-hre = yes
 base_tax = 3 
 base_production = 2 
 is_city = yes
