@@ -15578,7 +15578,7 @@ BEI_ideas = {
 MLC_ideas = {
 	start = {
 		global_trade_power = 0.1
-		naval_forcelimit_modifier = 0.33
+		diplomatic_reputation = 1
 	}
 	bonus = {
 		merchants = 1
@@ -15592,24 +15592,27 @@ MLC_ideas = {
 		vassal_income = 0.25
 	}
 	mlc_maritime_laws = {
-		global_ship_trade_power = 0.2
+		naval_maintenance_modifier = -0.1
+		sailor_maintenance_modifer = -0.1
+	}
+	mlc_jawi_script = {
+		idea_cost = -0.1
 	}
 	mlc_new_hegemony = {
-		diplomatic_reputation = 1
+		naval_forcelimit_modifier = 0.33
 	}
 	mlc_islamic_sultanate = {
-		tolerance_own = 1
+		land_morale = 0.10
+		tolerance_heathen = 2
 	}
 	mlc_habor_masters = {
 		trade_steering = 0.2
 		num_accepted_cultures = 1
 	}
 	mlc_daulat = {
-		legitimacy = 1
+		heavy_ship_power = 0.1
 	}
-	mlc_jawi_script = {
-		idea_cost = -0.1
-	}
+
 }
 
 SIA_ideas = {
