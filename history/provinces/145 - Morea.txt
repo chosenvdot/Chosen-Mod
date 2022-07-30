@@ -1,8 +1,8 @@
  
 #145 - Morea
 
-owner = BYZ
-controller = BYZ
+owner = MOE
+controller = MOE
 culture = greek
 religion = orthodox
 capital = "Mystras"

@@ -5,8 +5,8 @@ latent_trade_goods = {
 	coal
 }
 
-owner = BYZ
-controller = BYZ
+owner = MOE
+controller = MOE
 add_core = MOE
 add_core = BYZ
 culture = greek

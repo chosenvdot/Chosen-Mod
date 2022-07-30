@@ -1,9 +1,9 @@
  
 #4283 - Shihr
 
-owner = OMA
-controller = OMA
-add_core = OMA
+owner = ORM
+controller = ORM
+add_core = ORM
 capital = "Mirbat"
 culture = mahri_culture
 religion = sunni

@@ -1,8 +1,8 @@
  
 #1773 - Achaea
 
-owner = BYZ
-controller = BYZ
+owner = MOE
+controller = MOE
 culture = greek
 religion = orthodox
 capital = "Glarentza"
