@@ -11,7 +11,9 @@ base_manpower = 1
 trade_goods = livestock
 is_city = yes
 
-
+add_core = SUN
+controller = SUN
+owner = SUN
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
