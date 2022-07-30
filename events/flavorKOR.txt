@@ -1,7 +1,7 @@
 #################################################
 # Flavor Events for Korea
 #
-# written by Sara Wendel-Örtqvist
+# written by Sara Wendel-Ã–rtqvist
 # edits to Literati Purges by Pierre du Plessis
 #################################################
 
@@ -93,12 +93,12 @@ country_event = {
 	
 	trigger = {
 		tag = KOR
-		is_year = 1490
-		has_country_modifier = kor_factional_upheaval
+		is_year = 1444
+		
 	}
 	
 	mean_time_to_happen = {
-		months = 200
+		months = 1
 	}
 
 	immediate = {
@@ -109,9 +109,11 @@ country_event = {
 	
 	option = {
 		name = "flavor_kor.2.A"
-		add_adm_power = -30
-		add_mil_power = -30
-		add_dip_power = -30
+		add_treasury = -1000
+		add_stability = -4
+		add_adm_power = -500
+		add_mil_power = -500
+		add_dip_power = -500
 		add_estate_nobles_loyalty_effect = yes
 		add_estate_influence_modifier = {
 			estate = estate_nobles
@@ -135,44 +137,6 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 2
-		}
-	}
-	option = {
-		name = "flavor_kor.2.B"
-		add_adm_power = -30
-		add_mil_power = -30
-		add_dip_power = -30
-		add_estate_burghers_loyalty_effect = yes
-		add_estate_influence_modifier = {
-			estate = estate_burghers
-			desc = KOR_supported_faction
-			influence = 10
-			duration = 5475
-		}
-		reduce_estate_nobles_loyalty_effect = yes
-		add_estate_influence_modifier = {
-			estate = estate_nobles
-			desc = KOR_purged_faction
-			influence = -10
-			duration = 5475
-		}
-		reduce_estate_church_loyalty_effect = yes
-		add_estate_influence_modifier = {
-			estate = estate_church
-			desc = KOR_purged_faction
-			influence = -10
-			duration = 5475
-		}
-	}
-	option = {
-		name = "flavor_kor.2.C"
-		add_stability = -1
-		reduce_estate_burghers_loyalty_effect = yes
-		reduce_estate_nobles_loyalty_effect = yes
-		reduce_estate_church_loyalty_effect = yes
-
-		ai_chance = {
-			factor = 0
 		}
 	}
 }
