@@ -12,7 +12,7 @@ persian_theocracy = { #tier 1
 			}
 		}
 	modifiers = {
-		land_morale = 0.10
+		land_morale = 0.05
 		missionaries = 1
 		global_missionary_strength = 0.01
 		tolerance_own = 2
@@ -106,7 +106,7 @@ reforms_of_abbas_i_reform = { #tier 5
 		tag = PER
 	}
 	modifiers = {
-		#fire_damage = 0.10
+		fire_damage = 0.10
 		global_autonomy = -0.05
 		tolerance_heathen = 1
 		global_unrest = -1
@@ -142,112 +142,6 @@ ghilman_administrative_positions_reform = { #tier 6
 		ghilman_influence_modifier = 0.05
 		ghilman_loyalty_modifier = 0.10
 		possible_policy = 1
-	}
-	ai = {
-		factor = 1000
-		}
-}
-
-######################
-##OTTOMAN GOVERNMENT##
-######################
-
-upgrade_janissary_weaponry_reform = { #tier 2
-	icon = "ottoman_government"
-	potential = {
-		has_reform = ottoman_government
-		NOT = { has_country_modifier = force_janissaries_to_undergo_yoklama }
-	}
-	modifiers = {
-		global_manpower_modifier = 0.10
-		global_tax_modifier = 0.10
-		janissary_influence_modifier = 0.1
-		janissary_loyalty_modifier = 0.05
-	}
-	conditional = {
-		allow = {
-		}
-		claim_states = yes
-	}
-	custom_attributes = {
-		upgrade_janissary_weaponry_privilege_interaction = yes #used for localization of estate privilege
-	}
-	ai = {
-		factor = 1000
-		}
-}
-
-
-derbend_organization_reform = { #tier 3
-	icon = "ottoman_government"
-	potential = {
-		has_reform = ottoman_government
-	}
-	modifiers = {
-		global_tax_modifier = -0.10
-		global_manpower_modifier = 0.1
-		defensiveness = 0.10
-		global_autonomy = -0.025
-
-		
-	}
-	ai = {
-		factor = 1000
-		}
-}
-
-establish_auxiliary_support_system_reform = { #tier 4
-	icon = "ottoman_government"
-	potential = {
-		has_reform = ottoman_government
-		#NOT = { has_country_modifier = force_janissaries_to_undergo_yoklama }
-	}
-	modifiers = {
-		movement_speed = 0.10
-		land_attrition = -0.10
-	}
-	custom_attributes = {
-		establish_auxiliary_support_system_privilege_interaction = yes #used for localization of estate privilege
-	}
-	ai = {
-		factor = 1000
-		}
-}
-
-janissary_administrative_positions_reform = { #tier 5
-	icon = "paper_money_map"
-	potential = {
-		has_reform = ottoman_government
-		NOT = { has_country_modifier = force_janissaries_to_undergo_yoklama }
-	}
-	modifiers = {
-		global_tax_modifier = -0.1
-		governing_capacity_modifier = 0.2
-		free_adm_policy = 1
-		state_maintenance_modifier = -0.25
-		advisor_pool = 1
-		janissary_influence_modifier = 0.1
-		janissary_loyalty_modifier = 0.05
-		yearly_army_professionalism= 0.00250
-	}
-	ai = {
-		factor = 1000
-		}
-}
-
-reform_the_janissaries_reform = { #tier 6
-	icon = "ottoman_government"
-	potential = {
-		has_reform = ottoman_government
-		NOT = { has_country_modifier = force_janissaries_to_undergo_yoklama }
-	}
-	modifiers = {
-		janissary_influence_modifier = -0.10
-		janissary_loyalty_modifier = -0.10
-		possible_policy = 1
-	}
-	custom_attributes = {
-		reform_the_janissaries_privilege_interaction = yes #used for localization of estate privilege
 	}
 	ai = {
 		factor = 1000

@@ -1,0 +1,180 @@
+estate_gc_noble_levies = {
+	icon = privilege_raise_host
+	max_absolutism = -5
+	loyalty = 0.10
+	influence = 0.20
+	cooldown_years = 10
+	on_cooldown_expires = { 
+		country_event = { id = gecko.8 }
+	}
+	is_valid = {
+	}
+	can_select = {
+		NOT = { has_estate_privilege = estate_gc_noble_levies }
+		NOT = { has_estate_privilege = estate_gc_sipahi }
+	}
+	#mechanics = {
+	#	enables_cossack_regiments
+	#}
+	#modifier = {
+	#	special_unit_forcelimit = 0.125
+	#}
+	on_granted = {
+		create_general = {
+			tradition = 30
+		}
+		capital_scope = {
+			add_unit_construction = {
+			type = cavalry
+			amount = 10
+			speed = 1
+			cost = 0
+			}
+		}	
+	}
+	on_revoked = {
+	}
+	penalties = {
+	}
+	benefits = {
+
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_mamluks_land_rights = {
+	icon = privilege_grant_autonomy
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		governing_capacity = 100
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.25
+			num_of_states = 25
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 35
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 45
+		}
+		modifier = {
+			factor = 1.25
+			num_of_states = 55
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 20 }
+				estate_influence = {
+					estate = estate_mamluks
+					influence = 80
+				}
+			}
+			NOT = { has_estate_privilege = estate_mamluks_land_rights }
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_territories = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 40 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 60 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_mamluks_land_rights }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 30 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 50 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_mamluks_land_rights }
+		}
+	}
+}
+
+estate_mamluks_promote_leadership = {
+	icon = privilege_promote_purbias
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.1
+	can_select = {
+		tag = EGY
+		mission_completed = gecko_mam_mission_8
+	}
+	on_granted = {
+		add_country_modifier = { 
+			name = estate_ghilman_discipline_modifier
+			duration = -1
+			}
+		}
+	can_revoke = {
+		has_country_modifier = estate_ghilman_discipline_modifier
+		}
+	on_revoked = {
+        remove_country_modifier = estate_ghilman_discipline_modifier
+            }
+	on_invalid = {
+		remove_country_modifier = estate_ghilman_discipline_modifier
+		}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_mamluks_recruit_turkmen = {
+	icon = privilege_supply_arms
+	max_absolutism = -5
+	loyalty = 0.05
+	land_share = 5
+	influence = 0.1
+	is_valid = {
+		has_unlocked_estate_privilege ={ estate_privilege = estate_mamluks_recruit_turkmen }
+	}
+	
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		land_morale = 0.05
+		movement_speed = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0.5
+			is_absolutism_active = yes
+		}
+	}
+}

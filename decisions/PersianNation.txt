@@ -101,7 +101,7 @@ country_decisions = {
 			set_government_rank = 3
 			if = {
 				limit = { is_revolutionary = no }
-				add_government_reform = feudal_theocracy
+				add_government_reform = persian_theocracy
 			}
 			if = {
 				limit = {
