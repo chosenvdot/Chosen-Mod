@@ -6,7 +6,7 @@
 owner = TEU
 controller = TEU
 capital = "Stallupönen"
-culture = yotvingian_culture
+culture = prussian
 religion = catholic
 trade_goods = naval_supplies
 hre = no

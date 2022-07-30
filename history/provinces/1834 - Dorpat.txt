@@ -6,7 +6,7 @@
 owner = LIV
 controller = LIV
 add_core = LIV
-culture = prussian
+culture = estonian
 religion = catholic
 hre = no
 base_tax = 5

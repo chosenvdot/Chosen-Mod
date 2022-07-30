@@ -6,7 +6,7 @@
 owner = LIT
 controller = LIT
 religion = catholic
-culture = yotvingian_culture
+culture = byelorussian
 capital = "Vilkaviskis"
 trade_goods = naval_supplies
 hre = no

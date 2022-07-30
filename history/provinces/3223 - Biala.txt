@@ -4,7 +4,7 @@
 owner = LIT
 controller = LIT
 add_core = LIT
-culture = yotvingian_culture
+culture = byelorussian
 religion = catholic
 capital = "Bialystok"
 base_tax = 1

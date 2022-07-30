@@ -3,7 +3,7 @@
 owner = TEU # changed from SMB
 controller = TEU # changed from SMB
 add_core = TEU # changed from SMB
-culture = latvian # Curonians. Could do a new one province culture... but really, why bother?
+culture = prussian # Curonians. Could do a new one province culture... but really, why bother?
 religion = catholic
 capital = "Fischhausen"
 is_city = yes

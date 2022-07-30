@@ -4,7 +4,7 @@
 owner = LIV
 controller = LIV
 add_core = LIV
-culture = livonian
+culture = latvian
 religion = catholic
 capital = "Kandava"
 base_tax = 1
