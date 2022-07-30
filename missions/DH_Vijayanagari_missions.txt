@@ -6,7 +6,7 @@ vij_north_conquest = {
 		has_dlc = "Dharma"
 	}
 	potential = {
-		tag = VIJ
+		tag = VND
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -159,7 +159,7 @@ vij_south_conquest = {
 		has_dlc = "Dharma"
 	}
 	potential = {
-		tag = VIJ
+		tag = VND
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -263,7 +263,7 @@ vij_tamil_conquest = {
 		has_dlc = "Dharma"
 	}
 	potential = {
-		tag = VIJ
+		tag = VND
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -435,7 +435,7 @@ vij_east_conquest = {
 		has_dlc = "Dharma"
 	}
 	potential = {
-		tag = VIJ
+		tag = VND
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -580,7 +580,7 @@ vij_religious_missions = {
 		has_dlc = "Dharma"
 	}
 	potential = {
-		tag = VIJ
+		tag = VND
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
 	}

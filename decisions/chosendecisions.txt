@@ -46,6 +46,7 @@ country_decisions = {
 				tag = NAG
 				tag = MAR
 				tag = BAH
+				tag = VND
 			}
 			religion_group = muslim
 			OR = {
@@ -150,6 +151,7 @@ country_decisions = {
 				tag = NAG
 				tag = MAR
 				tag = BAH
+				TAG = VND
 			}
 			OR = {
 				religion_group = dharmic
