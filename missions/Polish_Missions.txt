@@ -488,6 +488,7 @@ polish_missions_slot_3 = {
 			owns_core_province = 257
 		}
 		effect = {
+			
 			country_event = { id = flavor_pol.3473 }
 			add_country_modifier = {
 				name = "polish_ambition"
@@ -579,6 +580,27 @@ polish_missions_slot_3 = {
 				baltic_region = {
 					limit = {
 						is_core = LIT
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				middle_silesia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				silesia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				lower_silesia_area = {
+					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
 					}
