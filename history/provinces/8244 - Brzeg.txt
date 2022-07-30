@@ -6,8 +6,8 @@
 #Core Details
 capital = "Brzeg"
 is_city = yes
-owner = ASC
-controller = ASC
+owner = NIE
+controller = NIE
 
 #Demographics
 culture = silesian_german
@@ -20,7 +20,7 @@ base_manpower = 1
 trade_goods = fish
 
 #Cores and Occupation (Alphabetical after current)
-add_core = ASC
+add_core = NIE
 
 #Other Political
 hre = no

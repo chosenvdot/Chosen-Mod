@@ -1,8 +1,8 @@
  
 # - Glogau 
 
-owner = ASC
-controller = ASC
+owner = JAW
+controller = JAW
 culture = silesian_german
 religion = catholic
 capital = "Glogau"
@@ -12,7 +12,7 @@ base_tax = 3
 base_production = 3
 is_city = yes
 base_manpower = 2 
-add_core = ASC
+add_core = JAW
 center_of_trade = 1
 
 1444.1.1 = { discovered_by = KAZ }

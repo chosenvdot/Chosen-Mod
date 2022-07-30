@@ -1,8 +1,8 @@
  
 #264 - Breslau
 
-owner = ASC
-controller = ASC
+owner = NIE
+controller = NIE
 culture = silesian_german			#With the influx of settlers the town expanded and adopted in 1242 German town law. The city council used Latin and German, and "Breslau", the Germanized name of the city, appeared for the first time in written records.
 religion = catholic
 capital = "Breslau"
@@ -13,7 +13,7 @@ base_production = 3
 is_city = yes 
 base_manpower = 4
 fort_15th = yes
-add_core = ASC	
+add_core = NIE	
 add_core = BAU
 add_local_autonomy = 25
 

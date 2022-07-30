@@ -6,8 +6,8 @@
 #Core Details
 capital = "Krosno"
 is_city = yes
-owner = ASC
-controller = ASC
+owner = JAW
+controller = JAW
 
 #Demographics
 culture = silesian_german
@@ -20,7 +20,7 @@ base_manpower = 1
 trade_goods = naval_supplies
 
 #Cores and Occupation (Alphabetical after current)
-add_core = ASC
+add_core = JAW
 add_core = KRO
 
 #Other Political
