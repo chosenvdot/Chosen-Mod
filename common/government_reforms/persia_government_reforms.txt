@@ -17,8 +17,7 @@ persian_theocracy = { #tier 1
 		global_missionary_strength = 0.01
 		tolerance_own = 2
 		monthly_piety = -0.001
-		governing_capacity = 100
-		move_capital_cost_modifier = 0.33
+		governing_capacity = 200
 	}
 	government_abilities = {
 		feudal_theocracy_mechanic
@@ -43,9 +42,6 @@ establish_qurchi_corps_reform = { #tier 2
 		}
 		claim_states = yes
 	}
-	custom_attributes = {
-		qizilbash_qurchis_privilege_interaction = yes #used for localization of estate privilege
-	}
 	ai = {
 		factor = 1000
 		}
@@ -62,9 +58,6 @@ foreign_ghilman_reform = { #tier 3
 	conditional = {
 		allow = { has_dlc = "Cradle of Civilization" }
 		has_pashas = yes
-		}
-	custom_attributes = {
-		enables_ghilman_estate = yes #used for localization of estate privilege
 		}
 	modifiers = {
 		advisor_pool = 1
@@ -92,9 +85,6 @@ qizilbash_in_officer_corps_reform = { #tier 4
 		nobles_loyalty_modifier = -0.05
 		nobles_influence_modifier = -0.05
 	}
-	custom_attributes = {
-		qizilbash_officer_interaction = yes #used for localization of estate privilege
-		}
 	ai = {
 		factor = 1000
 		}		
@@ -116,12 +106,6 @@ reforms_of_abbas_i_reform = { #tier 5
 		ghilman_loyalty_modifier = 0.05
 		ghilman_influence_modifier = 0.10
 		yearly_army_professionalism= 0.00250
-	}
-	custom_attributes = {
-		qizilbash_discipline_looting_interaction = yes #used for localization of estate privilege
-	}
-	custom_attributes = {
-		ghilman_morale_interaction = yes #used for localization of estate privilege
 	}
 	ai = {
 		factor = 1000

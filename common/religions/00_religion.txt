@@ -792,7 +792,7 @@ christian = {
 		}
 		country_as_secondary = {
 			siege_ability = 0.1
-			defensiveness = 0.1
+			global_missionary_strength = 0.02
 		}
 		province = {
 			local_missionary_strength = -0.02

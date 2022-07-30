@@ -1,9 +1,9 @@
  
 #1050 - Deren
 
-owner = MJZ
-controller = MJZ
-add_core = MJZ
+owner = NHX
+controller = NHX
+add_core = NHX
 culture = nivkh
 religion = tengri_pagan_reformed
 capital = "Deren"

@@ -14,11 +14,7 @@ country_decisions = {
 				NOT = { exists = DEC }
 				ai = no
 			}
-			religion_group = muslim
-			OR = {
-				culture_group = dravidian
-				primary_culture = marathi
-			}
+			tag = VND
 			OR = {
 				ai = no
 				AND = {
