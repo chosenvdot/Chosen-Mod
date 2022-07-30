@@ -1,0 +1,21 @@
+name = "Crusade for Morroco"
+war_goal = {
+	type = superiority_crusade
+	casus_belli = cb_crusade
+}
+
+1443.1.1 = {
+	add_attacker = CAS
+	add_attacker = ARA
+	add_attacker = POR
+	add_defender = MOR
+	add_defender = TLC
+}
+#Peace and end of war
+1444.11.10 = {
+	rem_attacker = ARA
+	rem_attacker = POR
+	rem_defender = MOR
+	rem_attacker = CAS
+	rem_defender = TLC
+}

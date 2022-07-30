@@ -648,10 +648,7 @@ spa_reconquista = {
 		completed_by = 1445.1.1
 		
 		trigger = {
-			army_size_percentage = 1
-			navy_size_percentage = 1
-			manpower_percentage = 0.6
-			num_of_generals = 1
+			army_size_percentage = .8
 		}
 		
 		effect = {
