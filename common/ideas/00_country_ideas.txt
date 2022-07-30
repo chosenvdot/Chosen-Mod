@@ -15578,7 +15578,7 @@ BEI_ideas = {
 MLC_ideas = {
 	start = {
 		global_trade_power = 0.1
-		diplomatic_reputation = 1
+		colonists = 1
 	}
 	bonus = {
 		merchants = 1
