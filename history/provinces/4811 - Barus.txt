@@ -10,6 +10,9 @@ hre = no
 base_tax = 1 # BT; 4
 base_production = 1 # BT; 4
 base_manpower = 2 # BT; 3
+add_core = ATJ
+controller = ATJ
+owner = ATJ
 trade_goods = bt_trade_good_fruit # BT; spices
 
 discovered_by = chinese
