@@ -4,6 +4,10 @@ primary_culture = central_thai
 religion = buddhism
 technology_group = chinese
 capital = 600 # Ayutthaya
+historical_rival = ARK
+historical_rival = CHA
+historical_rival = LNA
+historical_rival = LXA
 
 1395.1.1 = {
 	monarch = {
