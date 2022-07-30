@@ -1,6 +1,5 @@
 
 historical_rival = LIT
-national_focus = DIP
 
 
 
