@@ -9,6 +9,9 @@ historical_friend = HUN
 historical_rival = TUR
 historical_rival = FRA
 national_focus = ADM
+historical_rival = ASC
+historical_rival = NIE
+historical_rival = JAW
 
 add_accepted_culture = slovene
 

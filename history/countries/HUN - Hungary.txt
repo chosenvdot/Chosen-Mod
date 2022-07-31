@@ -7,6 +7,9 @@ add_accepted_culture = transylvanian
 religion = catholic
 technology_group = eastern
 capital = 153 # Buda
+historical_rival = ASC
+historical_rival = NIE
+historical_rival = JAW
 
 
 1444.1.1 = {
