@@ -84,7 +84,7 @@ Ndefines.Ncountry.CORE_HAD_PERMANENT_CLAIM = 0.125						-- Impacts MODIFIER_CORE
 
 --NMilitary
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 50
-NDefines.NMilitary.FORTRESS_COST = 0.4
+NDefines.NMilitary.FORTRESS_COST = 0.75
 NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.0
 NDefines.NMilitary.DAYS_PER_PHASE = 2
 NDefines.NMilitary.BACK_LINE_STRENGTH_DAMAGE_TAKEN_MODIFIER = 0.0
