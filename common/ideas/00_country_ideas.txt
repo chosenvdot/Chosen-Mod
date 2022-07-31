@@ -1108,7 +1108,7 @@ POR_ideas = {
 
 POL_ideas = {
 	start = {
-		#infantry_power = 0.1
+		infantry_power = 0.1
 		num_accepted_cultures = 2
 	}
 	
