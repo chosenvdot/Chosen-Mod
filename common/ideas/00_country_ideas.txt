@@ -530,6 +530,7 @@ TUR_ideas = {
 	}		
 	timariot_system = {
 		cavalry_power = 0.15
+		cav_to_inf_ratio = 0.3
 	}
 	autonmous_pashas = {
 		war_exhaustion_cost = -0.10
@@ -1138,7 +1139,7 @@ POL_ideas = {
 	}
 	winged_hussars = {
 		cavalry_power = 0.2
-		cav_to_inf_ratio = 0.2
+		cav_to_inf_ratio = 0.3
 	}
 	wojsko_komputoe = {
 		global_regiment_cost = -0.10
@@ -1422,6 +1423,7 @@ HUN_ideas = {
 	}
 	found_the_black_army = {
 		discipline = 0.05
+		cav_to_inf_ratio = 0.3
 	}
 	reformed_coinage = {
 		global_tax_modifier = 0.1
@@ -1505,6 +1507,7 @@ MAM_ideas = {
 	}
 	mam_army_reform = {
 		discipline = 0.05
+		cav_to_inf_ratio = 0.3
 	}
 	reform_fellah_system = {
 		production_efficiency = 0.1
@@ -1659,6 +1662,7 @@ MUG_ideas = {
 	}
 	mughal_ibadat_khana = {
 		idea_cost = -0.1
+		cav_to_inf_ratio = 0.3
 	}
 	an_indian_padshah = {
 		free_mil_policy = 1
@@ -4051,7 +4055,7 @@ GEO_ideas = {
 AFG_ideas = {
 	start = {
 		army_tradition = 0.5
-		global_own_trade_power = 0.1
+		land_morale = 0.15
 	}
 	
 	bonus = {
@@ -4077,6 +4081,7 @@ AFG_ideas = {
 	}
 	durrani_imperialism = {
 		cavalry_power = 0.15
+		cav_to_inf_ratio = 0.3
 	}
 	institutionalized_loya_jirga = {
 		legitimacy = 1
@@ -7794,6 +7799,7 @@ ORM_ideas = {
 	}
 	orm_secure_trading_monopoly = {
 		cavalry_power = 0.10
+		cav_to_inf_ratio = 0.3
 	}
 	orm_moqarrariya = {
 		merchants = 1
@@ -11585,7 +11591,7 @@ QAR_ideas = {
 	free = yes
 	
 	qar_black_sheep = {
-		global_manpower_modifier = 0.25
+		global_manpower_modifier = 0.25	
 	}
 	qar_governor_of_azerbaijan = {
 		province_warscore_cost = -0.05
@@ -11596,6 +11602,7 @@ QAR_ideas = {
 	}
 	qar_dynamic_warfare = {
 		leader_land_manuever = 1
+		cav_to_inf_ratio = 0.3
 	}
 	qar_freedom_with_responsibility = {
 		reduced_liberty_desire = 10
