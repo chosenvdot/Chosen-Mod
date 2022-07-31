@@ -32,6 +32,8 @@ country_event = {
 		NOT = { has_reform = military_dictatorship_reform }
 		NOT = { has_reform = admiralty_reform }
 		NOT = { has_reform = prussian_republic_reform }
+		NOT = { government = monarchy }
+		NOT = { government = theocracy }
 		NOT = { has_disaster =  bonfire_of_the_vanities_disaster }
 		if = {
 			limit = {
