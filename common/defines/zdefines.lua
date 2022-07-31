@@ -14,7 +14,7 @@ NDefines.NAI.DEVELOPMENT_CAP_BASE = 50
 --- Diplo
 NDefines.NDiplomacy.PO_FORM_PU_AE = 0.05
 NDefines.NDiplomacy.DAYS_TO_DECLARE_WAR = 5
-NDefines.NDiplomacy.IMPERIAL_AUTHORITY_FROM_PRINCES = 0.3
+NDefines.NDiplomacy.IMPERIAL_AUTHORITY_FROM_PRINCES = 0.15
 NDefines.NDiplomacy.IMPERIAL_CITY_IA = 0.1  --way less OPMS
 NDefines.NDiplomacy.MIN_RELATIONS_TO_ALLY = -200
 NDefines.NDiplomacy.MONTHS_BEFORE_TOTAL_OCCUPATION = 12
