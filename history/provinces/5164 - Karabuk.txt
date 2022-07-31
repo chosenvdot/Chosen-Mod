@@ -3,7 +3,6 @@
 owner = TUR
 controller = TUR
 add_core = TUR
-add_core = CND#formerly Candari
 culture = turkish
 religion = sunni
 capital = "Eflani"
