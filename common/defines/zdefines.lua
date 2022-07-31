@@ -22,11 +22,15 @@ NDefines.NDiplomacy.GREAT_PROJECT_WARSCORE_COST_MODIFIER = 0
 NDefines.NDiplomacy.CONDOTTIERI_MIN_DURATION = 1
 NDefines.NDiplomacy.CHANGE_RIVAL_YEARS = 5
 NDefines.NDiplomacy.HRE_AUTHORITY_JOIN_EMPIRE = 0
+NDefines.NDiplomacy.HRE_MAX_RANK_ELECTOR = 3
+NDefines.NDiplomacy.HRE_MAX_RANK = 3
 NDefines.NDiplomacy.GREAT_POWER_SUBJECT_CONTRIBUTION = 0
 NDefines.NDiplomacy.NUM_OF_GREAT_POWERS = 10
 NDefines.NDiplomacy.SHAREMAP_PRESTIGE_TRANSFER_LOSE = 0				-- Prestige transferred for the Request to Share Maps diplomatic action.
 NDefines.NDiplomacy.SHAREMAP_PRESTIGE_TRANSFER_GAIN = 0
 NDefines.NDiplomacy.DISHONORABLE_PEACE_MONTHS = 0
+NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.45
+NDefines.NDiplomacy.PO_RETURN_CORES_AE = 0.25
 NDefines.NDiplomacy.DISHONORABLE_PEACE_WARSCORE = 0
 NDefines.NDiplomacy.DEFENDER_OF_FAITH_TRUST_LOSS = 0
 NDefines.NDiplomacy.MAX_PEACE_TREATY_COST = 100
@@ -35,6 +39,22 @@ NDefines.NDiplomacy.ANNUL_TREATIES_YEARS = 20
 NDefines.NDiplomacy.COALITION_YEARS = 5
 NDefines.NDiplomacy.REVANCHISM_MONTHLY_DECAY = 0.833
 NDefines.NDiplomacy.MAX_ASKED_TRADE_POWER = 100
+NDefines.NDiplomacy.AE_OTHER_CONTINENT = 5
+NDefines.NDiplomacy.AE_SAME_CULTURE = 0.25
+NDefines.NDiplomacy.AE_SAME_CULTURE_GROUP = 0.125
+NDefines.NDiplomacy.AE_INFIDEL_CONQUEST = 0.125 		-- different religion group conquered same religion province
+NDefines.NDiplomacy.AE_SAME_RELIGION = 0.25
+NDefines.NDiplomacy.AE_SAME_RELIGION_GROUP = 0.0
+NDefines.NDiplomacy.AE_DIFFERENT_RELIGION = -0.25
+NDefines.NDiplomacy.AE_HRE_INTERNAL = 0.25
+NDefines.NDiplomacy.AE_ATTACKER_DEVELOPMENT = 0.005			-- from 0p01
+NDefines.NDiplomacy.AE_DEFENDER_DEVELOPMENT = 0.005	
+NDefines.NDiplomacy.PO_BECOME_VASSAL_AE = 0.25	
+NDefines.NDiplomacy.AE_DISTANCE_BASE = 0.75 --0.75 per 100 distance
+NDefines.NDiplomacy.AE_SAME_OVERLORD = 0.5
+NDefines.NDiplomacy.AE_PROVINCE_CAP = 30				-- Province development above this will not count for AE (also used for warscore cost cap)
+NDefines.NDiplomacy.AE_THREATEN_WAR = 1.0
+NDefines.NDiplomacy.AE_PRIMITIVES = -0.75 -- less AE from primitives
 
 ---Country
 NDefines.NCountry.MONARCH_MIN_SKILL = 1
@@ -55,12 +75,22 @@ NDefines.NCountry.PS_IMPROVE_PROVINCE_CAPITAL_DISCOUNT = 0.05
 NDefines.NCountry.NORMAL_ELECTION_CYCLE = 5
 NDefines.NCountry.LAND_FORCELIMIT_EXTRA_COST_FACTOR = 2.2
 NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.4
+Ndefines.Ncountry.CORE_COLONY = 0.25								-- Multiplied with development, colonized by country or overseas
+Ndefines.Ncountry.CORE_OVERSEAS = 0.25							-- Multiplied with development, colonized by country or overseas
+Ndefines.Ncountry.CORE_SAME_REGION = 0.125						-- Multiplied with development, for colonial nations
+Ndefines.Ncountry.CORE_SAME_CONTINENT = 0.35						-- Multiplied with development, for colonial nations
+Ndefines.Ncountry.CORE_HAD_CLAIM = 0.05							-- Impacts MODIFIER_CORE_CREATION
+Ndefines.Ncountry.CORE_HAD_PERMANENT_CLAIM = 0.125						-- Impacts MODIFIER_CORE_CREATION
 
 --NMilitary
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 50
+NDefines.NMilitary.FORTRESS_COST = 0.4
 NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.0
 NDefines.NMilitary.DAYS_PER_PHASE = 2
 NDefines.NMilitary.BACK_LINE_STRENGTH_DAMAGE_TAKEN_MODIFIER = 0.0
+NDefines.NMilitary.GALLEY_TIME = 60
+NDefines.NMilitary.HEAVY_SHIP_TIME = 500
+NDefines.NMilitary.TRANSPORT_TIME = 30	
 
 -- Economy
 NDefines.NEconomy.CARAVAN_POWER_MAX = 4
@@ -73,6 +103,7 @@ NDefines.NEconomy.COLONY_MIN_AUTONOMY = 75
 NDefines.NEconomy.COT_DOWNGRADE_PRESTIGE_COST = 0
 NDefines.NEconomy.GOLD_MINE_SIZE_PRIMITIVES = 3
 NDefines.NEconomy.GOLD_MINE_SIZE = 35
+	
 
 -- Religion
 NDefines.NReligion.MIN_CARDINALS = 15										-- Least amount of cardinals/ Starting cardinals
@@ -84,7 +115,7 @@ NDefines.NReligion.MAX_PAPAL_INFLUENCE = 999
 NDefines.NGovernment.SELECT_HEIR_FROM_HAREM_AT_MONARCH_AGE = 20
 NDefines.NGovernment.FEUDAL_THEOCRACY_INTERACTION_COOLDOWN_YEARS = 10
 
---gecko AI changes 
+-- Gecko AI changes 
 
 NDefines.NAI.DIPLOMATIC_ACTION_OFFER_CONDOTTIERI_DISABLE_VERSUS_PLAYER_ENEMIES = 1
 NDefines.NAI.ACCEPTABLE_FRACTION_OF_INTEREST_PAYMENTS = 0.4
