@@ -75,12 +75,12 @@ NDefines.NCountry.PS_IMPROVE_PROVINCE_CAPITAL_DISCOUNT = 0.05
 NDefines.NCountry.NORMAL_ELECTION_CYCLE = 5
 NDefines.NCountry.LAND_FORCELIMIT_EXTRA_COST_FACTOR = 2.2
 NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.4
-NDefines.Ncountry.CORE_COLONY = 0.25								-- Multiplied with development, colonized by country or overseas
-NDefines.Ncountry.CORE_OVERSEAS = 0.25							-- Multiplied with development, colonized by country or overseas
-NDefines.Ncountry.CORE_SAME_REGION = 0.125						-- Multiplied with development, for colonial nations
-NDefines.Ncountry.CORE_SAME_CONTINENT = 0.35						-- Multiplied with development, for colonial nations
-NDefines.Ncountry.CORE_HAD_CLAIM = 0.05							-- Impacts MODIFIER_CORE_CREATION
-NDefines.Ncountry.CORE_HAD_PERMANENT_CLAIM = 0.125						-- Impacts MODIFIER_CORE_CREATION
+NDefines.NCountry.CORE_COLONY = 0.25								-- Multiplied with development, colonized by country or overseas
+NDefines.NCountry.CORE_OVERSEAS = 0.25							-- Multiplied with development, colonized by country or overseas
+NDefines.NCountry.CORE_SAME_REGION = 0.125						-- Multiplied with development, for colonial nations
+NDefines.NCountry.CORE_SAME_CONTINENT = 0.35						-- Multiplied with development, for colonial nations
+NDefines.NCountry.CORE_HAD_CLAIM = 0.05							-- Impacts MODIFIER_CORE_CREATION
+NDefines.NCountry.CORE_HAD_PERMANENT_CLAIM = 0.125						-- Impacts MODIFIER_CORE_CREATION
 
 --NMilitary
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 50
