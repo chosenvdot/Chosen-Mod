@@ -32,8 +32,6 @@ country_event = {
 		NOT = { has_reform = military_dictatorship_reform }
 		NOT = { has_reform = admiralty_reform }
 		NOT = { has_reform = prussian_republic_reform }
-		NOT = { government = monarchy }
-		NOT = { government = theocracy }
 		NOT = { has_disaster =  bonfire_of_the_vanities_disaster }
 		if = {
 			limit = {
@@ -76,35 +74,35 @@ country_event = {
 		change_adm = 1
 		change_dip = 1
 		change_mil = 1
-		if = {
-			limit = {
-				is_tribal = no 
-				government = republic
-				NOT = { republican_tradition = 20 }				
-				NOT = { is_revolutionary_republic_trigger = yes }
-				has_dlc = "Res Publica"
-			}
-			add_government_reform = presidential_despot_reform	
-		}
-		else_if = {
-			limit = {
-				government = republic
-				NOT = { republican_tradition = 20 }	
-				is_revolutionary_republic_trigger = yes
-			}
-			change_government_to_monarchy = yes
-			add_government_reform = revolutionary_empire_reform
-		}
-		if = {
-			limit = {
-				is_tribal = no  
-				government = republic
-				NOT = { republican_tradition = 20 }
-				NOT = { has_dlc = "Res Publica" }
-			}
-			change_government_to_monarchy = yes
-			#set_legacy_government = despotic_monarchy
-		}
+#		if = {
+#			limit = {
+#				is_tribal = no 
+#				government = republic
+#				NOT = { republican_tradition = 20 }				
+#				NOT = { is_revolutionary_republic_trigger = yes }
+#				has_dlc = "Res Publica"
+#			}
+#			add_government_reform = presidential_despot_reform	
+#		}
+#		else_if = {
+#			limit = {
+#				government = republic
+#				NOT = { republican_tradition = 20 }	
+#				is_revolutionary_republic_trigger = yes
+#			}
+#			change_government_to_monarchy = yes
+#			add_government_reform = revolutionary_empire_reform
+#		}
+#		if = {
+#			limit = {
+#				is_tribal = no  
+#				government = republic
+#				NOT = { republican_tradition = 20 }
+#				NOT = { has_dlc = "Res Publica" }
+#			}
+#			change_government_to_monarchy = yes
+#			#set_legacy_government = despotic_monarchy
+#		}
 		if = {
 			limit = {
 				has_country_flag = strengthened_signoria_flag
@@ -113,17 +111,17 @@ country_event = {
 			clr_country_flag = strengthened_signoria_flag
 		}
 		else = {
-			add_scaled_republican_tradition = -10
+			add_scaled_republican_tradition = -16
 		}
 		random_list = {
 			10 = {
-				add_adm_power = 50
+				add_adm_power = 10
 			}
 			10 = {
-				add_dip_power = 50
+				add_dip_power = 10
 			}
 			10 = {
-				add_mil_power = 50
+				add_mil_power = 10
 			}
 		}
 		add_karma = -5
@@ -137,6 +135,7 @@ country_event = {
 				mil = 1
 				adm = 4
 				dip = 1
+				
 				random_gender = yes # Allows random gender for republics
 			}
 		}
@@ -145,6 +144,7 @@ country_event = {
 				mil = 1
 				adm = 4
 				dip = 1					
+				
 			}
 		}
 		if = {
@@ -167,6 +167,7 @@ country_event = {
 				dip = 4
 				adm = 1
 				mil = 1					
+				
 				random_gender = yes # Allows random gender for republics
 			}
 		}
@@ -175,6 +176,7 @@ country_event = {
 				dip = 4
 				adm = 1
 				mil = 1					
+				
 			}
 		}
 		if = {
@@ -197,6 +199,7 @@ country_event = {
 				mil = 4
 				adm = 1
 				dip = 1					
+				
 				random_gender = yes # Allows random gender for republics
 			}
 		}
@@ -205,6 +208,7 @@ country_event = {
 				mil = 4
 				adm = 1
 				dip = 1					
+				
 			}
 		}
 		if = {
@@ -241,9 +245,9 @@ country_event = {
 				NOT = { has_reform = signoria_reform }
 			}
 			define_ruler = {
-				change_mil = -2
-				change_adm = -2
-				change_dip = -2
+				mil = -2
+				adm = -2
+				dip = -2
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -256,6 +260,9 @@ country_event = {
 				has_reform = signoria_reform
 			}
 			define_ruler = {
+				adm = -2
+				dip = -2
+				mil = -2
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -265,6 +272,9 @@ country_event = {
 		else_if = {
 			limit = { has_reform = signoria_reform }
 			define_ruler = {
+				adm = -2
+				dip = -2
+				mil = -2
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -272,9 +282,9 @@ country_event = {
 		}
 		else = {
 			define_ruler = {
-				change_mil = -2
-				change_adm = -2
-				change_dip = -2
+				mil = -2
+				adm = -2
+				dip = -2
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -328,6 +338,7 @@ country_event = {
 				mil = 1
 				adm = 4
 				dip = 1					
+				
 				random_gender = yes # Allows random gender for republics
 			}
 		}
@@ -336,6 +347,7 @@ country_event = {
 				mil = 1
 				adm = 4
 				dip = 1					
+				
 			}
 		}
 		if = {
@@ -357,6 +369,7 @@ country_event = {
 				dip = 4
 				adm = 1
 				mil = 1					
+				
 				random_gender = yes # Allows random gender for republics
 			}
 		}
@@ -365,6 +378,7 @@ country_event = {
 				dip = 4
 				adm = 1
 				mil = 1					
+				
 			}
 		}
 		if = {
@@ -386,6 +400,7 @@ country_event = {
 				mil = 4
 				adm = 1
 				dip = 1					
+				
 				random_gender = yes # Allows random gender for republics
 			}
 		}
@@ -394,6 +409,7 @@ country_event = {
 				mil = 4
 				adm = 1
 				dip = 1					
+				
 			}
 		}
 		if = {
@@ -428,9 +444,9 @@ country_event = {
 				NOT = { has_reform = signoria_reform }
 			}
 			define_ruler = {
-				change_mil = -2
-				change_adm = -2
-				change_dip = -2
+				mil = -2
+				adm = -2
+				dip = -2
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -443,6 +459,9 @@ country_event = {
 				has_reform = signoria_reform
 			}
 			define_ruler = {
+				adm = -2
+				dip = -2
+				mil = -2
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -454,6 +473,9 @@ country_event = {
 				has_reform = signoria_reform
 			}
 			define_ruler = {
+				adm = -2
+				dip = -2
+				mil = -2
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -462,9 +484,9 @@ country_event = {
 		}
 		else = {
 			define_ruler = {
-				change_mil = -2
-				change_adm = -2
-				change_dip = -2
+				mil = -2
+				adm = -2
+				dip = -2
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -503,6 +525,7 @@ country_event = {
 				adm = 4
 				mil = 2
 				dip = 2
+				
 			}
 			set_ruler_flag = appointed_by_overlord
 		}
@@ -515,6 +538,7 @@ country_event = {
 				adm = 2
 				dip = 4
 				mil = 2
+				
 			}
 			set_ruler_flag = appointed_by_overlord
 		}
@@ -527,6 +551,7 @@ country_event = {
 				adm = 2
 				dip = 2
 				mil = 4
+				
 			}	
 			set_ruler_flag = appointed_by_overlord
 		}
@@ -615,6 +640,9 @@ country_event = {
 			NOT = { has_reform = feuillant_reform }
 		}
 		define_ruler = {
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
 		}
 		change_statists_vs_orangists = -0.33
 	
@@ -649,6 +677,9 @@ country_event = {
 		name = elections.720.b
 		define_ruler = {
 			dynasty = "van Oranje"
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
 		}
 		change_statists_vs_orangists = 0.33
 	}
@@ -755,6 +786,9 @@ country_event = {
 			NOT = { has_reform = feuillant_reform }
 		}
 		define_ruler = {
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
 		}
 		change_statists_vs_orangists = -0.33
 	
@@ -789,6 +823,9 @@ country_event = {
 		name = elections.720.b
 		define_ruler = {
 			dynasty = "van Oranje"
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
 		}
 		change_statists_vs_orangists = 0.33
 	}
@@ -880,9 +917,9 @@ country_event = {
 					random_gender = yes
 					min_age = 50
 					max_age = 75
-					change_adm = 2
-					change_dip = -1
-					change_mil = -1
+					adm = 2
+					dip = -1
+					mil = -1
 					option = 0
 				}
 			}
@@ -896,9 +933,9 @@ country_event = {
 					random_gender = yes
 					min_age = 50
 					max_age = 75
-					change_adm = 3
-					change_dip = -1
-					change_mil = -1
+					adm = 3
+					dip = -1
+					mil = -1
 					option = 0
 				}
 			}
@@ -911,9 +948,9 @@ country_event = {
 					exiled_as = lottery_candidate_a_@ROOT
 					min_age = 50
 					max_age = 75
-					change_adm = 3
-					change_dip = -1
-					change_mil = -1
+					adm = 3
+					dip = -1
+					mil = -1
 					option = 0
 				}
 			}
@@ -922,9 +959,9 @@ country_event = {
 					exiled_as = lottery_candidate_a_@ROOT
 					min_age = 50
 					max_age = 75
-					change_adm = 2
-					change_dip = -1
-					change_mil = -1
+					adm = 2
+					dip = -1
+					mil = -1
 					option = 0
 				}
 			}
@@ -938,9 +975,9 @@ country_event = {
 					exiled_as = lottery_candidate_b_@ROOT
 					min_age = 50
 					max_age = 75
-					change_adm = -1
-					change_dip = 2
-					change_mil = -1
+					adm = -1
+					dip = 2
+					mil = -1
 					random_gender = yes
 					option = 1
 				}
@@ -955,9 +992,9 @@ country_event = {
 					random_gender = yes
 					min_age = 50
 					max_age = 75
-					change_adm = -1
-					change_dip = 3
-					change_mil = -1
+					adm = -1
+					dip = 3
+					mil = -1
 					option = 0
 				}
 			}
@@ -970,9 +1007,9 @@ country_event = {
 					exiled_as = lottery_candidate_b_@ROOT
 					min_age = 50
 					max_age = 75
-					change_adm = -1
-					change_dip = 3
-					change_mil = -1
+					adm = -1
+					dip = 3
+					mil = -1
 					option = 0
 				}
 			}
@@ -981,9 +1018,9 @@ country_event = {
 					exiled_as = lottery_candidate_b_@ROOT
 					min_age = 50
 					max_age = 75
-					change_adm = -1
-					change_dip = 2
-					change_mil = -1
+					adm = -1
+					dip = 2
+					mil = -1
 					option = 1
 				}
 			}
@@ -997,9 +1034,9 @@ country_event = {
 					exiled_as = lottery_candidate_c_@ROOT
 					min_age = 50
 					max_age = 75
-					change_adm = -1
-					change_dip = -1
-					change_mil = 2
+					adm = -1
+					dip = -1
+					mil = 2
 					random_gender = yes
 					option = 2
 				}
@@ -1014,9 +1051,9 @@ country_event = {
 					random_gender = yes
 					min_age = 50
 					max_age = 75
-					change_adm = -1
-					change_dip = -1
-					change_mil = 3
+					adm = -1
+					dip = -1
+					mil = 3
 					option = 0
 				}
 			}
@@ -1029,9 +1066,9 @@ country_event = {
 					exiled_as = lottery_candidate_c_@ROOT
 					min_age = 50
 					max_age = 75
-					change_adm = -1
-					change_dip = -1
-					change_mil = 3
+					adm = -1
+					dip = -1
+					mil = 3
 					option = 0
 				}
 			}
@@ -1040,9 +1077,9 @@ country_event = {
 					exiled_as = lottery_candidate_c_@ROOT
 					min_age = 50
 					max_age = 75
-					change_adm = -1
-					change_dip = -1
-					change_mil = 2
+					adm = -1
+					dip = -1
+					mil = 2
 					option = 2
 				}
 			}
@@ -1205,9 +1242,9 @@ country_event = {
 			define_ruler = {
 				min_age = 30
 				max_age = 50
-				change_mil = -1
-				change_adm = -1
-				change_dip = -1
+				mil = -1
+				adm = -1
+				dip = -1
 				name = "lastname"
 				random_gender = yes # Allows random gender for republics
 			}
@@ -1218,6 +1255,9 @@ country_event = {
 				has_reform = signoria_reform
 			}
 			define_ruler = {
+				adm = -1
+				dip = -1
+				mil = -1
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -1230,6 +1270,9 @@ country_event = {
 				has_reform = signoria_reform
 			}
 			define_ruler = {
+				adm = -1
+				dip = -1
+				mil = -1
 				min_age = 30
 				max_age = 50
 				name = "lastname"
@@ -1239,9 +1282,9 @@ country_event = {
 			define_ruler = {
 				min_age = 30
 				max_age = 50
-				change_mil = -1
-				change_adm = -1
-				change_dip = -1
+				mil = -1
+				adm = -1
+				dip = -1
 				name = "lastname"
 			}
 		}
