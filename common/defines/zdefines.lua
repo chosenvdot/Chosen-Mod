@@ -85,7 +85,7 @@ NDefines.NCountry.PS_MAKE_PROVINCE_CORE = 4						-- Impacts MODIFIER_CORE_CREATI
 
 --NMilitary
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 50
-NDefines.NMilitary.FORTRESS_COST = 0.2
+NDefines.NMilitary.FORTRESS_COST = 0.4
 NDefines.NMilitary.BACK_LINE_MORALE_DAMAGE_TAKEN_MODIFIER = 0.0
 NDefines.NMilitary.DAYS_PER_PHASE = 2
 NDefines.NMilitary.BACK_LINE_STRENGTH_DAMAGE_TAKEN_MODIFIER = 0.0
