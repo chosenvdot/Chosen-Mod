@@ -15,7 +15,10 @@ trade_goods = iron
 base_manpower = 3
 capital = "Bozen"
 is_city = yes
-
+add_permanent_province_modifier = {
+	name = steirischer_erzberg_iron_mines
+	duration = -1
+	}
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
@@ -64,7 +67,7 @@ discovered_by = ottoman
 	controller = ITL
 	add_core = ITL
 	remove_core = BAV
-} # Incorporated into the Kingdom of Italy after the treaty of Schönbrunn
+} # Incorporated into the Kingdom of Italy after the treaty of SchÃ¶nbrunn
 1814.4.11 = {	owner = HAB
 	controller = HAB
 	add_core = HAB
