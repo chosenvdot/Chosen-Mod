@@ -1,5 +1,5 @@
  
-#4759 - Oberk‰rnten
+#4759 - Oberk√§rnten
 
 owner = HAB
 controller = HAB
@@ -21,7 +21,10 @@ discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
-
+add_permanent_province_modifier = {
+	name = steirischer_erzberg_iron_mines
+	duration = -1
+	}
 1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
 	remove_core = HAB
 	owner = CNT
