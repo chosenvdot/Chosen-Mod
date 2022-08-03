@@ -2,7 +2,7 @@
 
 #Ming Tributaries
 
-dependency = {
+vassal = {
 	first = MNG
 	second = KOR
 	start_date = 1444.1.1
