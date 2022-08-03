@@ -561,7 +561,7 @@ ARB_ideas = { #Arabian Empire
 	}
 	arb_2 = { #Arabian Horsemanship
 		merchants = 1
-		land_morale = 0.1
+		land_morale = 0.15
 	}
 	arb_3 = { #Bedouin Raiders
 		hostile_attrition = 1
