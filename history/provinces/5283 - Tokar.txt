@@ -3,7 +3,7 @@
 
 
 controller = ETH
-core = ETH
+add_core = ETH
 owner = ETH
 capital = "Tokar"
 culture = tigray
