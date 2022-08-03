@@ -3447,7 +3447,7 @@ NPL_ideas = {
 KNI_ideas = {
 	start = {
 		discipline = 0.05
-		may_perform_slave_raid = yes
+		naval_morale = 0.2
 	}
 	
 	bonus = {
