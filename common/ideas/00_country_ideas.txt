@@ -13990,7 +13990,7 @@ SYN_ideas = {
 
 MOR_ideas = {
 	start = {
-		may_perform_slave_raid = yes
+		land_morale = 0.1
 		naval_forcelimit_modifier = 0.25
 	}
 	bonus = {
@@ -14028,7 +14028,7 @@ MOR_ideas = {
 
 TUN_ideas = {
 	start = {
-		may_perform_slave_raid = yes
+		global_tax_modifier = 0.1
 		infantry_power = 0.1
 	}
 	bonus = {
