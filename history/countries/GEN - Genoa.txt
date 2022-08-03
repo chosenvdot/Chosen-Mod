@@ -1,7 +1,7 @@
 government = republic
 add_government_reform = merchant_republic
 government_rank = 2
-mercantilism = 25
+mercantilism = 40
 primary_culture = ligurian
 add_accepted_culture = piedmontese
 add_accepted_culture = corsican_culture
@@ -16,8 +16,8 @@ fixed_capital = 101 # Cannot move capital away from this province & no power cos
 	monarch = {
 		name = "Raffaele Adorno"
 		birth_date = 1420.1.1
-		adm = 3
-		dip = 3
-		mil = 3
+		adm = 4
+		dip = 4
+		mil = 4
 	}
 }
