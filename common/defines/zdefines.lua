@@ -79,9 +79,9 @@ NDefines.NCountry.CORE_COLONY = 0.25								-- Multiplied with development, colo
 NDefines.NCountry.CORE_OVERSEAS = 0.25							-- Multiplied with development, colonized by country or overseas
 NDefines.NCountry.CORE_SAME_REGION = 0.125						-- Multiplied with development, for colonial nations
 NDefines.NCountry.CORE_SAME_CONTINENT = 0.35						-- Multiplied with development, for colonial nations
-NDefines.NCountry.CORE_HAD_CLAIM = 0.2							-- Impacts MODIFIER_CORE_CREATION
-NDefines.NCountry.CORE_HAD_PERMANENT_CLAIM = 0.3
-NDefines.NCountry.PS_MAKE_PROVINCE_CORE = 4						-- Impacts MODIFIER_CORE_CREATION
+NDefines.NCountry.CORE_HAD_CLAIM = 0.15							-- Impacts MODIFIER_CORE_CREATION
+NDefines.NCountry.CORE_HAD_PERMANENT_CLAIM = 0.2
+NDefines.NCountry.PS_MAKE_PROVINCE_CORE = 6						-- Impacts MODIFIER_CORE_CREATION
 
 --NMilitary
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 50
