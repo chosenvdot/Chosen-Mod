@@ -81,7 +81,7 @@ NDefines.NCountry.CORE_SAME_REGION = 0.125						-- Multiplied with development, 
 NDefines.NCountry.CORE_SAME_CONTINENT = 0.35						-- Multiplied with development, for colonial nations
 NDefines.NCountry.CORE_HAD_CLAIM = 0.15							-- Impacts MODIFIER_CORE_CREATION
 NDefines.NCountry.CORE_HAD_PERMANENT_CLAIM = 0.2
-NDefines.NCountry.PS_MAKE_PROVINCE_CORE = 6						-- Impacts MODIFIER_CORE_CREATION
+NDefines.NCountry.PS_MAKE_PROVINCE_CORE = 8						-- Impacts MODIFIER_CORE_CREATION
 
 --NMilitary
 NDefines.NMilitary.WARGOAL_MAX_BONUS = 50
