@@ -4,7 +4,7 @@ owner = TUR
 controller = TUR
 add_core = TUR
 add_core = CIK
-add_core = CND #Candar got control when Seljuk Empire broke up, lost it shortly thereafter
+#add_core = CND #Candar got control when Seljuk Empire broke up, lost it shortly thereafter
 culture = turkish		#Converted to Islam but still many Greeks, often practicising Christianity in secret
 religion = sunni
 capital = "Samsoon" #Contemporary spelling, according to wiki! =p
