@@ -164,7 +164,7 @@ age_of_discovery = {
 		}
 		ab_colony_boost_development = {
 			rule = {
-				can_colony_boost_development = yes
+				global_colonial_growth = 20
 			}
 			ai_will_do = {
 				factor = 10
