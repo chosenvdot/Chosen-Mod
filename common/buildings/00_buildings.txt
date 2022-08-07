@@ -1356,7 +1356,7 @@ manufactory = {
 	cost = 500
 	time = 60
 	modifier = {
-		trade_goods_size = 0.8
+		trade_goods_size = 0.75
 	}
 }
 

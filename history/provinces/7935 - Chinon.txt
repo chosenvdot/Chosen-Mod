@@ -4,7 +4,6 @@
 owner = FRA
 controller = FRA
 add_core = FRA
-add_core = PRO
 culture = angevin_culture
 religion = catholic
 capital = "Chinon"
