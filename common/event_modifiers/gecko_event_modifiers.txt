@@ -143,7 +143,7 @@ gc_drill_master_modifier = {
 
 free_colonist = {
 	colonists = 2
-	range = 3
+	range = 5
 	global_colonial_growth = 25
 }
 
