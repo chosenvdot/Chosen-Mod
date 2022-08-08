@@ -1,5 +1,11 @@
 
 religious_school = ismaili_school
+historical_rival = KHO
+historical_rival = MSY
+historical_rival = SRV
+historical_rival = AKK
+historical_rival = QOM
+historical_rival = GEO
 
 #Last Jalayrid, Husain II, defeated by Ispend bin Yusuf, after hiding out along the Lower Euphrates in 1431. 
 #Ispend travels eastwards to Baghdad and capturing it from half-brother, and Qara governor Shah Muhammad who flees to Tabriz. 
