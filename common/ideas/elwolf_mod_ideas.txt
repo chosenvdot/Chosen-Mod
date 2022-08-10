@@ -658,7 +658,7 @@ JUD_ideas = {
 		discipline = 0.05
 	}
 	JUD_6 = {
-		global_prov_trade_power_modifier = 0.2
+		global_trade_power = 0.2
 		advisor_cost = -.5
 	}
 	JUD_7 = {
