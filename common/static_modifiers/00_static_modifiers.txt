@@ -696,13 +696,9 @@ peace = {
 }
 
 unconditional_surrender = {
-	war_exhaustion = -0.1
-	global_autonomy = -0.1
-	global_institution_spread = 0.1
 }
 
 call_for_peace = {
-	war_exhaustion = 0.008
 }
 
 war_exhaustion = {

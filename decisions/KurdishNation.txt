@@ -54,7 +54,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = KRD
-			add_prestige = 100
+			add_prestige = 25
 			set_country_flag = formed_kurdistan_flag
 			if = {
 				limit = {
@@ -69,13 +69,13 @@ country_decisions = {
 					has_reform = states_general_reform
 				}
 				remove_government_reform = states_general_reform
-			}
-		}	
+			}	
 		if = {
 			limit = { is_revolutionary = no }
 			add_government_reform = feudal_theocracy
 		}
 		country_event = { id = ideagroups.1 } #Swap Ideas
+		}
 		ai_will_do = {
 			factor = 1
 		}
