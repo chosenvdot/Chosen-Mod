@@ -13,8 +13,8 @@ capital = 537	# Padmanabhapuram
 		dynasty = "Cheraman"
 		birth_date = 1424.1.1
 		DIP = 4
-		ADM = 3
-		MIL = 4
+		ADM = 6
+		MIL = 5
 	}
 }
 
@@ -27,7 +27,7 @@ capital = 537	# Padmanabhapuram
 		death_date = 1471.1.1
 		claim = 95
 		ADM = 4
-		DIP = 3
-		MIL = 3
+		DIP = 4
+		MIL = 5
 	}
 }
