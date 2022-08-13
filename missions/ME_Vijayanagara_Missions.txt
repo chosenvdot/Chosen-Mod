@@ -3,7 +3,7 @@ vijayanagara_mission_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = VIJ
+		tag = VND
 		OR = {
 			NOT = { has_dlc = "Dharma" }
 			AND = {
@@ -238,7 +238,7 @@ vijayanagara_mission_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = VIJ
+		tag = VND
 		OR = {
 			NOT = { has_dlc = "Dharma" }
 			AND = {
@@ -543,7 +543,7 @@ vijayanagara_mission_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = VIJ
+		tag = VND
 		OR = {
 			NOT = { has_dlc = "Dharma" }
 			AND = {
@@ -762,7 +762,7 @@ vijayanagara_mission_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = VIJ
+		tag = VND
 		OR = {
 			NOT = { has_dlc = "Dharma" }
 			AND = {
@@ -986,7 +986,7 @@ vijayanagara_mission_5 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = VIJ
+		tag = VND
 		OR = {
 			NOT = { has_dlc = "Dharma" }
 			AND = {
@@ -1170,7 +1170,7 @@ vijayanagara_mission_1_expansion = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = VIJ
+		tag = VND
 		OR = {
 			NOT = { has_dlc = "Dharma" }
 			AND = {
@@ -1558,7 +1558,7 @@ vijayanagara_mission_2_expansion = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = VIJ
+		tag = VND
 		OR = {
 			NOT = { has_dlc = "Dharma" }
 			AND = {
@@ -1881,7 +1881,7 @@ vijayanagara_mission_3_expansion = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = VIJ
+		tag = VND
 		OR = {
 			NOT = { has_dlc = "Dharma" }
 			AND = {
@@ -2262,7 +2262,7 @@ vijayanagara_mission_4_expansion = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = VIJ
+		tag = VND
 		OR = {
 			NOT = { has_dlc = "Dharma" }
 			AND = {
@@ -2529,7 +2529,7 @@ vijayanagara_mission_5_expansion = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = VIJ
+		tag = VND
 		OR = {
 			NOT = { has_dlc = "Dharma" }
 			AND = {
@@ -2704,7 +2704,7 @@ vijayanagara_mission_1_tall = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = VIJ
+		tag = VND
 		OR = {
 			NOT = { has_dlc = "Dharma" }
 			AND = {
@@ -2922,7 +2922,7 @@ vijayanagara_mission_2_tall = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = VIJ
+		tag = VND
 		OR = {
 			NOT = { has_dlc = "Dharma" }
 			AND = {
@@ -3174,7 +3174,7 @@ vijayanagara_mission_3_tall = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = VIJ
+		tag = VND
 		OR = {
 			NOT = { has_dlc = "Dharma" }
 			AND = {
@@ -3365,7 +3365,7 @@ vijayanagara_mission_4_tall = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = VIJ
+		tag = VND
 		OR = {
 			NOT = { has_dlc = "Dharma" }
 			AND = {
@@ -3460,7 +3460,7 @@ vijayanagara_mission_5_tall = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = VIJ
+		tag = VND
 		OR = {
 			NOT = { has_dlc = "Dharma" }
 			AND = {
