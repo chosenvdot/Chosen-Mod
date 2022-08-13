@@ -1,9 +1,6 @@
  
 #2799 - Sennar
 
-owner = HWA
-controller = HWA
-add_core = HWA
 culture = nubian
 religion = coptic
 capital = "Sennar"
