@@ -613,7 +613,7 @@ vij_religious_missions = {
 		required_missions = { vij_war_plunder }
 		trigger = {
 			capital_scope = {
-				development = 48
+				development = 25
 			}
 		}
 		effect = {
