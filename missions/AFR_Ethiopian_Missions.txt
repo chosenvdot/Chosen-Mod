@@ -228,6 +228,7 @@ ethiopia_policy_with_the_cushitic_people = {
 		trigger = {
 			army_size_percentage = 1
 			num_of_generals = 1
+			treasury = 100
 		}
 		effect = {
 			southern_ethiopia_area = {
@@ -243,6 +244,10 @@ ethiopia_policy_with_the_cushitic_people = {
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "thriving_arms_industry"
+				duration = 9125 #25 years
 			}
 		}
 	}
