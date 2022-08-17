@@ -2,6 +2,9 @@ vijayanagara_mission_1 = {
 	slot = 1
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
 	potential = {
 		tag = VND
 		OR = {
@@ -237,6 +240,9 @@ vijayanagara_mission_2 = {
 	slot = 2
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
 	potential = {
 		tag = VND
 		OR = {
@@ -544,13 +550,6 @@ vijayanagara_mission_3 = {
 	ai = yes
 	potential = {
 		tag = VND
-		OR = {
-			NOT = { has_dlc = "Dharma" }
-			AND = {
-				has_dlc = "Dharma"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
 	}
 	has_country_shield = yes
 
@@ -761,6 +760,9 @@ vijayanagara_mission_4 = {
 	slot = 4
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
 	potential = {
 		tag = VND
 		OR = {
@@ -985,6 +987,9 @@ vijayanagara_mission_5 = {
 	slot = 5
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
 	potential = {
 		tag = VND
 		OR = {
@@ -1168,6 +1173,9 @@ vijayanagara_mission_5 = {
 vijayanagara_mission_1_expansion = {
 	slot = 1
 	generic = no
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
 	ai = yes
 	potential = {
 		tag = VND
@@ -1557,6 +1565,9 @@ vijayanagara_mission_2_expansion = {
 	slot = 2
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
 	potential = {
 		tag = VND
 		OR = {
@@ -1880,6 +1891,9 @@ vijayanagara_mission_3_expansion = {
 	slot = 3
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
 	potential = {
 		tag = VND
 		OR = {
@@ -2261,6 +2275,9 @@ vijayanagara_mission_4_expansion = {
 	slot = 4
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
 	potential = {
 		tag = VND
 		OR = {
@@ -2528,6 +2545,9 @@ vijayanagara_mission_5_expansion = {
 	slot = 5
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
 	potential = {
 		tag = VND
 		OR = {
@@ -2703,6 +2723,9 @@ vijayanagara_mission_1_tall = {
 	slot = 1
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
 	potential = {
 		tag = VND
 		OR = {
@@ -2921,6 +2944,9 @@ vijayanagara_mission_2_tall = {
 	slot = 2
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
 	potential = {
 		tag = VND
 		OR = {
@@ -3173,6 +3199,9 @@ vijayanagara_mission_3_tall = {
 	slot = 3
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
 	potential = {
 		tag = VND
 		OR = {
@@ -3364,6 +3393,9 @@ vijayanagara_mission_4_tall = {
 	slot = 4
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
 	potential = {
 		tag = VND
 		OR = {
@@ -3459,6 +3491,9 @@ vijayanagara_mission_5_tall = {
 	slot = 5
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Emperor"
+	}
 	potential = {
 		tag = VND
 		OR = {
