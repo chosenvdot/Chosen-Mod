@@ -227,6 +227,9 @@ gen_south_india_2 = {
 	generic = yes
 	ai = yes
 	potential = {
+		NOT = {
+			tag = VND
+		}
 		technology_group = indian
 		capital_scope = {
 			OR = {
@@ -487,6 +490,9 @@ gen_hindu = {
 	generic = yes
 	ai = yes
 	potential = {
+		not = {
+			tag = VND
+		}
 		technology_group = indian
 		capital_scope = {
 			superregion = india_superregion

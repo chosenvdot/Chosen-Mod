@@ -1,13 +1,14 @@
 country_decisions = {
 	the_fix = {
 		potential = {
-			ai = no
+			tag = VND
 		}
 		allow = {
 			always = yes
 		}
 		effect = {
 			swap_non_generic_missions = yes
+			set_country_flag = use_missions_expanded_missions_instead_of_paradox
 		}
 	}
 }
