@@ -3,17 +3,12 @@ vijayanagara_mission_1 = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		has_dlc = "Origins"
 	}
 	potential = {
+		has_dlc = "Origins"
+		NOT = { map_setup = map_setup_random }
 		tag = VND
-		OR = {
-			NOT = { has_dlc = "Dharma" }
-			AND = {
-				has_dlc = "Dharma"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
 	}
 	has_country_shield = yes
 
@@ -241,17 +236,12 @@ vijayanagara_mission_2 = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		has_dlc = "Origins"
 	}
 	potential = {
+		has_dlc = "Origins"
+		NOT = { map_setup = map_setup_random }
 		tag = VND
-		OR = {
-			NOT = { has_dlc = "Dharma" }
-			AND = {
-				has_dlc = "Dharma"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
 	}
 	has_country_shield = yes
 
@@ -548,7 +538,12 @@ vijayanagara_mission_3 = {
 	slot = 3
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Origins"
+	}
 	potential = {
+		has_dlc = "Origins"
+		NOT = { map_setup = map_setup_random }
 		tag = VND
 	}
 	has_country_shield = yes
@@ -761,17 +756,12 @@ vijayanagara_mission_4 = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		has_dlc = "Origins"
 	}
 	potential = {
+		has_dlc = "Origins"
+		NOT = { map_setup = map_setup_random }
 		tag = VND
-		OR = {
-			NOT = { has_dlc = "Dharma" }
-			AND = {
-				has_dlc = "Dharma"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
 	}
 	has_country_shield = yes
 
@@ -988,17 +978,12 @@ vijayanagara_mission_5 = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		has_dlc = "Origins"
 	}
 	potential = {
+		has_dlc = "Origins"
+		NOT = { map_setup = map_setup_random }
 		tag = VND
-		OR = {
-			NOT = { has_dlc = "Dharma" }
-			AND = {
-				has_dlc = "Dharma"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
 	}
 	has_country_shield = yes
 
@@ -1174,18 +1159,12 @@ vijayanagara_mission_1_expansion = {
 	slot = 1
 	generic = no
 	potential_on_load = {
-		has_dlc = "Emperor"
+		has_dlc = "Origins"
 	}
-	ai = yes
 	potential = {
+		has_dlc = "Origins"
+		NOT = { map_setup = map_setup_random }
 		tag = VND
-		OR = {
-			NOT = { has_dlc = "Dharma" }
-			AND = {
-				has_dlc = "Dharma"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
 	}
 	has_country_shield = yes
 
@@ -1566,17 +1545,12 @@ vijayanagara_mission_2_expansion = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		has_dlc = "Origins"
 	}
 	potential = {
+		has_dlc = "Origins"
+		NOT = { map_setup = map_setup_random }
 		tag = VND
-		OR = {
-			NOT = { has_dlc = "Dharma" }
-			AND = {
-				has_dlc = "Dharma"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
 	}
 	has_country_shield = yes
 
@@ -1892,17 +1866,12 @@ vijayanagara_mission_3_expansion = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		has_dlc = "Origins"
 	}
 	potential = {
+		has_dlc = "Origins"
+		NOT = { map_setup = map_setup_random }
 		tag = VND
-		OR = {
-			NOT = { has_dlc = "Dharma" }
-			AND = {
-				has_dlc = "Dharma"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
 	}
 	has_country_shield = yes
 
@@ -2276,17 +2245,12 @@ vijayanagara_mission_4_expansion = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		has_dlc = "Origins"
 	}
 	potential = {
+		has_dlc = "Origins"
+		NOT = { map_setup = map_setup_random }
 		tag = VND
-		OR = {
-			NOT = { has_dlc = "Dharma" }
-			AND = {
-				has_dlc = "Dharma"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
 	}
 	has_country_shield = yes
 
@@ -2546,17 +2510,12 @@ vijayanagara_mission_5_expansion = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		has_dlc = "Origins"
 	}
 	potential = {
+		has_dlc = "Origins"
+		NOT = { map_setup = map_setup_random }
 		tag = VND
-		OR = {
-			NOT = { has_dlc = "Dharma" }
-			AND = {
-				has_dlc = "Dharma"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
 	}
 	has_country_shield = yes
 
@@ -2724,17 +2683,12 @@ vijayanagara_mission_1_tall = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		has_dlc = "Origins"
 	}
 	potential = {
+		has_dlc = "Origins"
+		NOT = { map_setup = map_setup_random }
 		tag = VND
-		OR = {
-			NOT = { has_dlc = "Dharma" }
-			AND = {
-				has_dlc = "Dharma"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
 	}
 	has_country_shield = yes
 
@@ -2945,17 +2899,12 @@ vijayanagara_mission_2_tall = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		has_dlc = "Origins"
 	}
 	potential = {
+		has_dlc = "Origins"
+		NOT = { map_setup = map_setup_random }
 		tag = VND
-		OR = {
-			NOT = { has_dlc = "Dharma" }
-			AND = {
-				has_dlc = "Dharma"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
 	}
 	has_country_shield = yes
 
@@ -3200,17 +3149,12 @@ vijayanagara_mission_3_tall = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		has_dlc = "Origins"
 	}
 	potential = {
+		has_dlc = "Origins"
+		NOT = { map_setup = map_setup_random }
 		tag = VND
-		OR = {
-			NOT = { has_dlc = "Dharma" }
-			AND = {
-				has_dlc = "Dharma"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
 	}
 	has_country_shield = yes
 
@@ -3394,17 +3338,12 @@ vijayanagara_mission_4_tall = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		has_dlc = "Origins"
 	}
 	potential = {
+		has_dlc = "Origins"
+		NOT = { map_setup = map_setup_random }
 		tag = VND
-		OR = {
-			NOT = { has_dlc = "Dharma" }
-			AND = {
-				has_dlc = "Dharma"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
 	}
 	has_country_shield = yes
 
@@ -3492,17 +3431,12 @@ vijayanagara_mission_5_tall = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		has_dlc = "Origins"
 	}
 	potential = {
+		has_dlc = "Origins"
+		NOT = { map_setup = map_setup_random }
 		tag = VND
-		OR = {
-			NOT = { has_dlc = "Dharma" }
-			AND = {
-				has_dlc = "Dharma"
-				has_country_flag = use_missions_expanded_missions_instead_of_paradox
-			}
-		}
 	}
 	has_country_shield = yes
 
