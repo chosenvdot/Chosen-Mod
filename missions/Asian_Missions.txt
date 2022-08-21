@@ -3,7 +3,7 @@ asian_missions = {
 	generic = yes
 	ai = yes
 	potential = {
-		not {
+		not = {
 			tag = VND
 		}
 		capital_scope = {
