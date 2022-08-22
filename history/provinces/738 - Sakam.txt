@@ -46,9 +46,9 @@ center_of_trade = 1
 1626.1.1 = { controller = SPA } # Spanish occupation
 1642.1.1 = { controller = NED } # The Spanish settlers are driven out by the Dutch
 1662.1.1 = {
-	owner = MNG
-	controller = MNG
-	add_core = MNG
+	 
+	 
+	 
 	religion = confucianism
 } # Captured by Zheng Chenggong
 1683.1.1 = {

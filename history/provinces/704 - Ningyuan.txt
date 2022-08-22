@@ -1,9 +1,9 @@
  
 #704 - Liaoxi
 
-owner = MNG
-controller = MNG
-add_core = MNG
+ 
+ 
+ 
 culture = chihan
 religion = confucianism
 capital = "Ningyuan"
@@ -27,9 +27,9 @@ discovered_by = nomad_group
 	remove_core = MNG
 } #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
 1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
-	owner = MNG
-	controller = MNG
-	add_core = MNG
+	 
+	 
+	 
 	remove_core = YAN
 } #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
 

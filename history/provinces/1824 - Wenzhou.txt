@@ -1,9 +1,9 @@
  
 #1824 - Wenzhou
 
-owner = MNG
-controller = MNG
-add_core = MNG
+ 
+controller =  
+ 
 culture = wu
 religion = confucianism
 capital = "Wenzhou"
@@ -20,14 +20,14 @@ discovered_by = chinese
 discovered_by = nomad_group
 
 1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
-	remove_core = MNG
+	remove_core =  
 	owner = WUU
 	controller = WUU
 } #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
 1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
-	add_core = MNG
-	owner = MNG
-	controller = MNG
+	 
+	 
+	controller =  
 } #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
 
 #1444 onwards
@@ -37,5 +37,5 @@ discovered_by = nomad_group
 	controller = QNG
 	add_core = QNG
 }
-1675.1.1 = { controller = MNG }
+1675.1.1 = { controller =   }
 1680.1.1 = { controller = QNG }

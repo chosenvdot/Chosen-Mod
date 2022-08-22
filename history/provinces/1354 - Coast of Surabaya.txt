@@ -31,6 +31,6 @@ discovered_by = chinese # 1.31
 	discovered_by = TID
 }
 
-1405.1.1 = { discovered_by = MNG }
+1405.1.1 = { discovered_by =   }
 1509.1.1 = { discovered_by = POR }
 1613.1.1 = { discovered_by = NED }

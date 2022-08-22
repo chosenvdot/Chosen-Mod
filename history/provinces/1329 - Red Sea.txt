@@ -11,7 +11,7 @@ discovered_by = western
 
 
 
-1421.1.1 = { discovered_by = MNG }
+1421.1.1 = { discovered_by =   }
 1453.1.1 = { discovered_by = western }
 1488.1.1 = { discovered_by = POR }
 

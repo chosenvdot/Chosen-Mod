@@ -27,7 +27,7 @@ discovered_by = chinese
 	owner = QNG
 	controller = QNG
 	add_core = QNG
-	remove_core = MNG
+	remove_core =  
 	is_city = yes
 	trade_goods = grain
 } # Submitted to Manchu control
