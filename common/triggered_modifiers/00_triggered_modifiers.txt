@@ -1123,3 +1123,46 @@ mamluks_ai_buff = {
     global_tax_income = 48
     global_tax_modifier = 0.2
 }
+
+kilwa_ai_buff = {
+    potential = {
+        tag = ZAN
+    }
+    trigger = {
+        ai = yes
+    }
+ 
+    land_forcelimit_modifier = 0.4
+    land_attrition = -0.10
+    global_regiment_cost = -0.1
+    global_ship_cost = -0.1
+    manpower_recovery_speed = 0.3
+    naval_forcelimit_modifier = 0.3
+    technology_cost = -0.2
+    development_cost = -0.3
+    global_tax_income = 80
+    global_tax_modifier = 0.2
+}
+
+csuazt_ai_buff = {
+    potential = {
+        OR = {
+			tag = CSU
+			tag = AZT
+		}
+    }
+    trigger = {
+        ai = yes
+    }
+ 
+    land_forcelimit_modifier = 0.4
+    land_attrition = -0.10
+    global_regiment_cost = -0.1
+    global_ship_cost = -0.1
+    manpower_recovery_speed = 0.3
+    naval_forcelimit_modifier = 0.3
+    technology_cost = -0.2
+    development_cost = -0.3
+    global_tax_income = 80
+    global_tax_modifier = 0.2
+}
