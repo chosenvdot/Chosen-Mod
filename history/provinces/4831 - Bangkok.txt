@@ -1,9 +1,9 @@
  
 # ex 8556
 
-owner = AYU 
-controller = AYU
-add_core = AYU
+  
+ 
+ 
 culture = central_thai
 religion = buddhism
 capital = "Thonburi" # BT; "Bangkok"

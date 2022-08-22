@@ -1,8 +1,8 @@
  
 #2388 - Phitsanulok
 
-owner = AYU 
-controller = AYU
+ 
+ 
 culture = central_thai
 religion = buddhism
 capital = "Phitsanulok"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 3
 is_city = yes
-add_core = AYU
+ 
 add_core = SUK
 discovered_by = chinese
 discovered_by = indian
@@ -23,7 +23,7 @@ discovered_by = indian
 	controller = SUK
 }
 1770.1.1 = { # Annexed by Ayutthaya
-        owner = AYU
-	controller = AYU
+         
+	 
 }
 

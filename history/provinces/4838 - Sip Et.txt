@@ -1,9 +1,9 @@
  
 # ex 8729
 
-owner = LXA
-controller = LXA
-add_core = LXA
+ 
+ 
+ 
 add_core = CHK
 add_core = VIE # BT
 culture = lao
@@ -25,7 +25,7 @@ discovered_by = indian
 1580.1.1 = { unrest = 0 }
 1593.1.1 = { unrest = 4 } # Revolt against Burmese vassalization
 1603.1.1 = { unrest = 0 }
-1694.1.1 = { add_core = AYU } # Siamnese Intervention
+1694.1.1 = {   } # Siamnese Intervention
 1707.1.1 = {
 	owner = VIE
 	controller = VIE

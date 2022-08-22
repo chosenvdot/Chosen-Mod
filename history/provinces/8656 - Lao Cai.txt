@@ -1,8 +1,8 @@
 
 #Lao Cai
 
-owner = DAI
-controller = DAI
+ 
+ 
 culture = tai
 religion = mahayana
 capital = "Sa Pa"
@@ -13,7 +13,7 @@ base_production = 4
 base_manpower = 2
 fort_15th = yes
 is_city = yes
-add_core = DAI
+ 
 add_core = SSC
 
 discovered_by = chinese
@@ -28,8 +28,8 @@ discovered_by = indian
 } # Vietnam is invaded by Chinese troops after the Tran dynasty is overthrowned
 1427.1.1 = {
 	revolt = {}
-	owner = DAI
-	controller = DAI
+	 
+	 
 	remove_core = MNG
 } # The Le Dynasty
 1520.1.1 = { unrest = 10 } # Civil War in Dai Viet

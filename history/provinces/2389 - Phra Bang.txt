@@ -21,9 +21,9 @@ discovered_by = indian
 
 
 1438.1.1 = {
-        owner = AYU
-	controller = AYU	
-	add_core = AYU
+         
+	 
+	 
 } # Sukhothai is under Personal Union with Ayutthaya
 1530.1.1 = {
 	remove_core = SUK
@@ -34,7 +34,7 @@ discovered_by = indian
 	controller = SUK
 }
 1770.1.1 = { # Annexed by Ayutthaya
-        owner = AYU
-	controller = AYU
+         
+	 
 }
 

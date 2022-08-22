@@ -1,8 +1,8 @@
  
 #614 - Vientiane
 
-owner = LXA
-controller = LXA
+ 
+ 
 culture = lao
 religion = buddhism
 capital = "Vientiane"
@@ -13,7 +13,7 @@ base_production = 7
 base_manpower = 4
 fort_15th = yes
 is_city = yes
-add_core = LXA
+ 
 add_core = VIE
 discovered_by = chinese
 discovered_by = indian
@@ -25,7 +25,7 @@ center_of_trade = 1
 1580.1.1 = { unrest = 0 }
 1627.1.1 = { unrest = 6 }
 1633.1.1 = { unrest = 0 }
-1694.1.1 = { add_core = AYU } # Siamnese Intervention
+1694.1.1 = {   Intervention
 1707.1.1 = {
 	owner = VIE
 	controller = VIE

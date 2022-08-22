@@ -1,8 +1,8 @@
  
 #1844 - Xiankhouang
 
-owner = LXA
-controller = LXA
+ 
+ 
 culture = tai
 religion = buddhism
 capital = "Xieng Khouang"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 3
 is_city = yes
-add_core = LXA
+ 
 add_core = MPH
 
 
@@ -21,7 +21,7 @@ discovered_by = chinese
 discovered_by = indian
 
 
-1483.1.1 = { add_core = DAI } # Vietnamese Invasion
+1483.1.1 = {  se Invasion
 1579.1.1 = { unrest = 5 } # Revolt against vassalization
 1580.1.1 = { unrest = 0 }
 1593.1.1 = { unrest = 4 } # Revolt against Burmese vassalization

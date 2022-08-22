@@ -1,9 +1,9 @@
  
 # ex 8657
 
-owner = DAI
-controller = DAI
-add_core = DAI
+ 
+ 
+ 
 add_core = SSC # BT; TOK
 culture = vietnamese
 religion = mahayana
@@ -28,8 +28,8 @@ discovered_by = ottoman # 1.31
 } # Vietnam is invaded by Chinese troops after the Tran dynasty is overthrowned
 1427.1.1 = {
 	revolt = {}
-	owner = DAI
-	controller = DAI
+	 
+	 
 	remove_core = MNG
 } # The Le Dynasty
 1520.1.1 = { unrest = 10 } # Civil War in Dai Viet

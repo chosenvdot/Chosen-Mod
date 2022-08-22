@@ -1,8 +1,8 @@
 
 #4587 - Vi Xuyen
 
-owner = DAI
-controller = DAI
+ 
+ 
 culture = vietnamese
 religion = mahayana
 capital = "Vi Xuyen"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 3
 is_city = yes
-add_core = DAI
+ 
 
 
 
@@ -28,8 +28,8 @@ discovered_by = indian
 } # Vietnam is invaded by Chinese troops after the Tran dynasty is overthrowned
 1427.1.1 = {
 	revolt = {}
-	owner = DAI
-	controller = DAI
+	 
+	 
 	remove_core = MNG
 } # The Le Dynasty
 1520.1.1 = { unrest = 10 } # Civil War in Dai Viet

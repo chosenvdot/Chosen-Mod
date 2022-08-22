@@ -1,8 +1,8 @@
  
 #2390 - Chaiya
 
-owner = AYU
-controller = AYU
+ 
+ 
 culture = central_thai
 religion = buddhism
 capital = "Chaiya"
@@ -12,7 +12,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 1
 is_city = yes
-add_core = AYU
+ 
 
 
 
@@ -30,6 +30,6 @@ discovered_by = ottoman
         add_core = LIG
 }
 1769.1.1 = {
-	owner = AYU
-	controller = AYU
+	 
+	 
 }

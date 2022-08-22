@@ -1,9 +1,9 @@
 
 #4619 - Mort Chrouk
 
-owner = KHM
-controller = KHM
-add_core = KHM
+ 
+ 
+ 
 culture = khmer
 religion = buddhism
 capital = "Mort Chrouk"

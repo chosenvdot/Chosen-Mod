@@ -1,8 +1,8 @@
  
 #607 - Vijaya
 
-owner = CHA
-controller = CHA
+ 
+ 
 culture = cham
 religion = hinduism
 capital = "Vijaya"
@@ -13,7 +13,7 @@ base_production = 7
 base_manpower = 3
 fort_15th = yes
 is_city = yes
-add_core = CHA
+ 
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
@@ -23,9 +23,9 @@ extra_cost = 20
 center_of_trade = 2
 
 1472.1.1 = {
-	owner = DAI
-	controller = DAI
-	add_core = DAI
+	 
+	 
+	 
 	add_core = ANN
 	fort_15th = no
 } # Severe defeat against the Vietnamese, Vijaya is annexed
@@ -55,8 +55,8 @@ center_of_trade = 2
 1773.1.1 = { controller = REB }
 1776.1.1 = {
 	unrest = 0
-	owner = DAI
-	controller = DAI
+	 
+	 
 } # Tay Son Dynasty conquered the Nguyen Lords
 1786.1.1 = { unrest = 5 } # Unsuccessful revolt
 1787.1.1 = { unrest = 0 }

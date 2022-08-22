@@ -1,8 +1,8 @@
 
 #4545 - Houaphanh
 
-owner = LXA
-controller = LXA
+ 
+ 
 culture = tai
 religion = buddhism
 capital = "Xam Neua"
@@ -12,7 +12,7 @@ base_tax = 2
 base_production = 2
 base_manpower = 1
 is_city = yes
-add_core = LXA
+ 
 add_core = MPH
 
 
@@ -22,9 +22,9 @@ discovered_by = indian
 
 
 1478.1.1 = {
-	owner = DAI
-	controller = DAI
-	add_core = DAI
+	 
+	 
+	 
 }
 1520.1.1 = { unrest = 10 } # Civil War in Dai Viet
 1524.1.1 = { unrest = 0 }
@@ -37,8 +37,8 @@ discovered_by = indian
 } #Lan Xang falls; loses cores
 
 1786.6.1 = {
-	owner = DAI
-	controller = DAI
+	 
+	 
 	remove_core = TOK
 } # Tai Son and Le dynasty annexed the Trinh Lords 
 1802.7.22 = {	

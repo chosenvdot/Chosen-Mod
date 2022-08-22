@@ -1,9 +1,9 @@
  
 # ex 8582
 
-owner = AYU 
-controller = AYU
-add_core = AYU
+ 
+ 
+ 
 add_core = PHM # BT
 culture = khmer
 religion = buddhism
@@ -27,8 +27,8 @@ discovered_by = ottoman # 1.31
 	controller = PHM
 }
 1768.1.1 = { # Annexed by Ayutthaya
-	owner = AYU
-	controller = AYU
+	 
+	 
 }
 1811.1.1 = { revolt = { type = revolutionary_rebels size = 1 } controller = REB } # The Siamese-Cambodian Rebellion
 1812.1.1 = { revolt = {} }
