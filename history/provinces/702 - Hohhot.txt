@@ -13,7 +13,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = KHA
+ 
 
 
 
@@ -21,8 +21,8 @@ discovered_by = chinese
 discovered_by = nomad_group
 
 1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
-	owner = KHA
-	controller = KHA
+	 
+	 
 	remove_core = MNG
 }
 1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
@@ -33,15 +33,15 @@ discovered_by = nomad_group
 
 #1444 onwards
 1449.10.1 = {
-	owner = OIR
-	controller = OIR
-	add_core = OIR
+	 
+	 
+	 
 }
 
 1454.1.1 = {
-	owner = KHA
-	controller = KHA
-	add_core = KHA
+	 
+	 
+	 
 	remove_core = OIR
 } # Mark?rgis Khan of the Gold Family rises to power after Esen's death.
 1543.1.1 = { unrest = 8 } # Fighting broke out between the Mongols

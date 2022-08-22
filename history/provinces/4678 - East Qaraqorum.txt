@@ -1,9 +1,9 @@
  
 # 4678 - Qaraqorum
 
-owner = OIR
-controller = OIR
-add_core = OIR
+ 
+ 
+ 
 culture = khalkha
 religion = tengri_pagan_reformed
 capital = "Qaraqorum"
@@ -25,9 +25,9 @@ discovered_by = nomad_group
 
 
 1454.1.1 = {
-	owner = KHA
-	controller = KHA
-	add_core = KHA
+	 
+	 
+	 
 } # Mark?rgis Khan of the Gold Family rises to power after Esen's death.
 1635.4.1 = {
 	owner = KLK

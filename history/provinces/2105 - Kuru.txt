@@ -1,9 +1,9 @@
  
 # 2105 - Kuru
 
-owner = NHX
-controller = NHX
-add_core = NHX
+ 
+ 
+ 
 culture = manchu
 religion = tengri_pagan_reformed
 capital = "Kuru"

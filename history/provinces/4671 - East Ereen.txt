@@ -1,7 +1,7 @@
  
-owner = KHA
-controller = KHA
-add_core = KHA
+ 
+ 
+ 
 culture = mongol
 religion = vajrayana
 capital = "Kalgan"
@@ -17,9 +17,9 @@ add_core = CHH
 
 
 1552.1.1 = {
-	owner = KHA
-	controller = KHA
-	add_core = KHA
+	 
+	 
+	 
 } # The Oirads are defeated & Altan Khan reunites the the area.
 1632.5.1 = {
 	owner = MCH

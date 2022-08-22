@@ -1,9 +1,9 @@
  
 # 4202 - Taining
 
-owner = KRC
-controller = KRC
-add_core = KRC
+ 
+ 
+ 
 culture = chahar
 religion = vajrayana
 capital = "Baichungtze"

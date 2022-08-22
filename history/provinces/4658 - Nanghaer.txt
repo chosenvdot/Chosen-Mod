@@ -1,9 +1,9 @@
  
 #Nangha'er
 
-owner = NHX
-controller = NHX
-add_core = NHX
+ 
+ 
+ 
 culture = nivkh
 religion = tengri_pagan_reformed
 capital = "Nangha'er"

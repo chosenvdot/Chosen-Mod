@@ -1,9 +1,9 @@
  
 # 2119 - Chuguchak
 
-owner = OIR
-controller = OIR
-add_core = OIR
+ 
+ 
+ 
 culture = oirats
 religion = sunni
 capital = "Chugachak"

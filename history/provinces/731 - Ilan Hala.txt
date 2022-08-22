@@ -1,9 +1,9 @@
  
 #731 - Ilan Hala
 
-owner = MJZ
-controller = MJZ
-add_core = MJZ
+ 
+ 
+ 
 culture = manchu
 religion = tengri_pagan_reformed
 capital = "Ilan Hala"

@@ -1,9 +1,9 @@
  
 # 2111 - Hetu Ala
 
-owner = MJZ
-controller = MJZ
-add_core = MJZ
+ 
+ 
+ 
 culture = manchu
 religion = confucianism
 capital = "Hetu Ala"

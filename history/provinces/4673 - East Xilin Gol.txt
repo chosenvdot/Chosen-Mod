@@ -1,7 +1,7 @@
  
-owner = KHA	# The Oirads united much of Mongolia
-controller = KHA
-add_core = KHA
+ 	# The Oirads united much of Mongolia
+ 
+ 
 culture = mongol
 religion = vajrayana
 capital = "Ujimqin"
@@ -16,9 +16,9 @@ discovered_by = nomad_group
 add_core = CHH
 
 1552.1.1 = {
-	owner = KHA
-	controller = KHA
-	add_core = KHA
+	 
+	 
+	 
 } # The Oirads are defeated & Altan Khan reunites the the area.
 1608.1.1 = { discovered_by = SPA }
 1632.5.1 = {

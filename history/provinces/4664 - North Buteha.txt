@@ -1,7 +1,7 @@
  
-owner = MJZ
-controller = MJZ
-add_core = MJZ
+ 
+ 
+ 
 culture = evenk
 religion = tengri_pagan_reformed
 capital = "Oroqen"
@@ -15,9 +15,9 @@ discovered_by = chinese
 discovered_by = nomad_group
 
 1552.1.1 = {
-	owner = KHA
-	controller = KHA
-	add_core = KHA
+	 
+	 
+	 
 } # The Oirads are defeated & Altan Khan reunites the the area.
 1624.1.1 = {
 	owner = MCH

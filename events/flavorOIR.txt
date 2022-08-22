@@ -224,7 +224,7 @@ country_event = {
 						}
 						controlled_by = MNG
 					}
-					change_controller = OIR
+					change_ 
 				}
 			}
 		}
@@ -253,7 +253,7 @@ country_event = {
 					controlled_by = MNG
 					region = north_china_region
 				}
-				change_controller = OIR
+				change_ 
 			}
 		}
 		if = {
