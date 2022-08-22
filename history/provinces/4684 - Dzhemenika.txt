@@ -1,9 +1,6 @@
  
 # 4684 - Dzhemenika
 
-owner = OIR
-controller = OIR
-add_core = OIR
 culture = oirats
 religion = sunni
 capital = "Dzhemenika"

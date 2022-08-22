@@ -1,7 +1,4 @@
  
-owner = OIR
-controller = OIR
-add_core = OIR
 culture = khalkha
 religion = tengri_pagan_reformed
 capital = "Khovsgol"
