@@ -1016,21 +1016,6 @@ t_vassal_cav_ratio = {
 # MINGSPLOSION
 ######################################
 
-
-mingsplosion = {
-	potential = {
-		 
-	}
-
-	trigger = {
-		is_year = 1470
-	}
-	global_unrest = 100
-	land_morale = -0.9
-	discipline = -0.8
-	land_forcelimit = -500
-}
-
 ######################################
 # MERC DEBUFFS
 ######################################
