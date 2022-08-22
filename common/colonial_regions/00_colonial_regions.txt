@@ -463,7 +463,7 @@ colonial_eastern_america = {
 		name = "COLONIAL_EASTERN_AMERICA_TU"
 	}
 	names = {
-		trigger = { OR = { tag = KOR primary_culture = korean primary_culture = korean_new } }
+		trigger = { OR = {  n primary_culture = korean_new } }
 		name = "COLONIAL_EASTERN_AMERICA_Miju"
 	}
 	# Generic
@@ -1723,7 +1723,7 @@ colonial_australia = {
 		name = "COLONIAL_AUSTRALIA_TU"
 	}
 	names = {
-		trigger = { OR = { tag = KOR primary_culture = korean primary_culture = korean_new } }
+		trigger = { OR = {  n primary_culture = korean_new } }
 		name = "COLONIAL_AUSTRALIA_Hoju"
 	}
 	# Generic

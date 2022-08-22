@@ -2011,7 +2011,7 @@ KOR_ideas = {
 	}
 	
 	trigger = {
-		tag = KOR
+		 
 	}
 	free = yes
 	
@@ -6479,7 +6479,7 @@ KHM_ideas = {
 	}
 	
 	trigger = {
-		tag = KHM
+		 
 	}
 	free = yes
 	
@@ -9653,7 +9653,7 @@ UES_ideas = {
     }
 
     trigger = {
-        tag = UES
+         
     }
     free = yes
 

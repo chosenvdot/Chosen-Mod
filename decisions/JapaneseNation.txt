@@ -41,7 +41,7 @@ country_decisions = {
 				tag = TKI
 				tag = TKG
 				tag = TTI
-				tag = UES
+				 
 				tag = UTN
 				tag = YMN
 			}
@@ -150,7 +150,7 @@ country_decisions = {
 				tag = TKI
 				tag = TKG
 				tag = TTI
-				tag = UES
+				 
 				tag = UTN
 				tag = YMN
 			}
@@ -236,7 +236,7 @@ country_decisions = {
 				tag = TKI
 				tag = TKG
 				tag = TTI
-				tag = UES
+				 
 				tag = UTN
 				tag = YMN
 			}

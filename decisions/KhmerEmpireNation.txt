@@ -8,7 +8,7 @@ country_decisions = {
 			NOT = { has_country_flag = formed_khmer_empire_flag }
 			OR = {
 				primary_culture = khmer
-				tag = KHM
+				 
 			}
 		}
 		provinces_to_highlight = {

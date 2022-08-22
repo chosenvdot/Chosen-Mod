@@ -276,7 +276,7 @@ estate_church =
 	custom_name = {
 		desc = estate_yangban_scholars
 		trigger = {
-			tag = KOR
+			 
 			religion = confucianism
 		}
 	}

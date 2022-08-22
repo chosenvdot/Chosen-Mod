@@ -3,7 +3,7 @@ korea_nomad_group = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -349,7 +349,7 @@ kor_military_missions = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -384,7 +384,7 @@ kor_military_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -439,7 +439,7 @@ korea_conquer_china_group = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -617,7 +617,7 @@ kor_diplo_missions = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -733,7 +733,7 @@ kor_fortify_missions = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -837,7 +837,7 @@ kor_righteous_army_tree = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -867,7 +867,7 @@ kor_japan_tree = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1081,7 +1081,7 @@ kor_turtle_ships_tree = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1112,7 +1112,7 @@ kor_settle_land = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1188,7 +1188,7 @@ kor_harmony_with_japan = {
 		has_dlc = "Mandate of Heaven"
 	}
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Mandate of Heaven"
 	}
@@ -1234,7 +1234,7 @@ korea_economic_social_political_path_0 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -1262,7 +1262,7 @@ korea_economic_social_political_path_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1388,7 +1388,7 @@ korea_economic_social_political_path_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1427,7 +1427,7 @@ korea_economic_social_political_path_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1564,7 +1564,7 @@ korea_trade_group = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = KOR
+		 
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

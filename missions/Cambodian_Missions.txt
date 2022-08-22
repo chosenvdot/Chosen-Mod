@@ -5,7 +5,7 @@ cambodian_missions_1 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = KHM
+			 
 			tag = KME
 		}
 		NOT = { has_dlc = "Leviathan" } #Leviathan users have a grander mission tree that should be replaced by this.
@@ -154,7 +154,7 @@ cambodian_missions_2 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = KHM
+			 
 			tag = KME
 		}
 		NOT = { has_dlc = "Leviathan" } #Leviathan users have a grander mission tree that should be replaced by this.

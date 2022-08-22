@@ -215,7 +215,7 @@ estate_burghers =
 	custom_name = {
 		desc = estate_neoconfucian_reformers
 		trigger = {
-			tag = KOR
+			 
 			religion = confucianism
 		}
 	}

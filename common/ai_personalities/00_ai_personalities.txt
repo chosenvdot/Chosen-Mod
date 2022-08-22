@@ -70,7 +70,7 @@ ai_capitalist = {
 		}
 		modifier = {
 			factor = 1.5
-			tag = KOR
+			 
 		}		
 		modifier = {
 			factor = 100
@@ -172,7 +172,7 @@ ai_capitalist = {
 #		}
 #		modifier = {
 #			factor = 1.5
-#			tag = KOR
+#			 
 #		}
 #		modifier = {
 #			factor = 3
@@ -312,7 +312,7 @@ ai_capitalist = {
 #		}
 #		modifier = {
 #			factor = 0.75
-#			tag = KOR
+#			 
 #		}	
 #		modifier = {
 #			factor = 100

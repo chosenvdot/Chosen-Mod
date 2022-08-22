@@ -5,7 +5,7 @@ h_khm_missions = {
 	ai = yes
 	
 	potential ={
-		tag = KHM
+		 
 	}
 	has_country_shield = yes
 	
@@ -242,7 +242,7 @@ h_angkor_missions = {
 	ai = yes
 	
 	potential ={
-		tag = KHM
+		 
 	}
 	has_country_shield = yes
 	

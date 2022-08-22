@@ -2717,7 +2717,7 @@ estate_church_inwards_perfection = {
 		factor = 1
 		modifier = {
 			factor = 1000
-			tag = KOR
+			 
 			NOT = { num_of_cities = 30 }
 			religion = confucianism
 		}
@@ -8663,7 +8663,7 @@ estate_burghers_khmer_irrigation = {
 		NOT = { has_estate_privilege = estate_vaisyas_khmer_irrigation }
 		OR = {
 			tag = LNA
-			tag = KHM
+			 
 			tag = SUN
 			has_estate_privilege = estate_vaisyas_khmer_irrigation
 		}
@@ -8731,7 +8731,7 @@ estate_vaisyas_khmer_irrigation = {
 		NOT = { has_estate_privilege = estate_burghers_khmer_irrigation }
 		OR = {
 			tag = LNA
-			tag = KHM
+			 
 			has_estate_privilege = estate_vaisyas_khmer_irrigation
 		}
 	}

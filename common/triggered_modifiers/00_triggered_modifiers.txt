@@ -969,7 +969,7 @@ japanese_catch_up = {
 	potential = {
 		ai = no
 		OR = {
-			tag = UES
+			 
 			tag = SMZ
 			tag = JAP
 		}

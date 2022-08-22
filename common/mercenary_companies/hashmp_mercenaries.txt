@@ -2246,7 +2246,7 @@ h_merc_angkor = {
 	cavalry_cap = 0
 	cost_modifier = 0.75
 	trigger = {
-		tag = KHM
+		 
 	}
 	modifier = {
 		shock_damage_received = -0.1
@@ -2938,7 +2938,7 @@ merc_shikoku_yojimbo = {
 	cost_modifier = 0.75
 	sprites = { dlc067_hsk_sprite_pack jap_base_sprite_pack }
     trigger = {	
-		tag = UES
+		 
 	}
 	modifier = { 
 		discipline = 0.05
