@@ -11,6 +11,9 @@ hre = no
 base_tax = 4
 base_production = 4
 base_manpower = 3
+controller = MYA
+owner = MYA
+add_core = MYA
 is_city = yes
  
 
