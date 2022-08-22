@@ -13,7 +13,7 @@ native_size = 10
 native_ferocity = 9
 native_hostileness = 5
 add_core = NBA
-controller = NBA
+ 
 owner = NBA
 
 

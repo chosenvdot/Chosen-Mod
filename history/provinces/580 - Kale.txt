@@ -25,7 +25,7 @@ discovered_by = indian
 
 1480.1.1 = {
 	owner = MYA
-	controller = MYA
+	 
 	add_core = MYA
         add_core = AVA
 	remove_core = KAL

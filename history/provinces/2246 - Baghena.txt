@@ -23,7 +23,7 @@ discovered_by = sub_saharan
 
 1503.1.1 = {
 	owner = SON
-	controller = SON
+	 
 	add_core = SON 
 } # Conquered by Songhai
 1591.3.15 = {

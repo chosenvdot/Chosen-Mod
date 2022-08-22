@@ -5,7 +5,7 @@ culture = bilala
 religion = sunni
 capital = "Yao"
 owner = YAO
-controller = YAO
+ 
 add_core = YAO
 trade_goods = bt_trade_good_fruit
 hre = no

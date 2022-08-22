@@ -1,5 +1,5 @@
 
-add_government_reform = irish_clann_reform
+#add_government_reform = irish_clann_reform
 capital = 4118	# Cork
 
 

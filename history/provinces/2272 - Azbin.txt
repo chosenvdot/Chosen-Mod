@@ -10,7 +10,7 @@ hre = no
 base_tax = 2  
 
 owner = SON
-controller = SON
+ 
 add_core = SON
 base_production = 2 
 native_size = 40
@@ -25,7 +25,7 @@ discovered_by = sub_saharan
 
 1500.1.1 = {
 	owner = SON 
-	controller = SON 
+	  
 	add_core = SON 
 } #Askiya Muhammad of Songhai seizes control 
 1591.3.15 = {

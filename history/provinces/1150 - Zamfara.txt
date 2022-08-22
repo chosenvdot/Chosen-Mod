@@ -11,7 +11,7 @@ hre = no
 base_tax = 2 
 base_production = 4
 core = KAN
-controller = KAN 
+  
 owner = KAN
 
 

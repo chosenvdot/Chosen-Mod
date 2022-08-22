@@ -597,11 +597,6 @@ country_decisions = {
 		effect = {
 			change_tag = IRE
 			if = {
-				limit = { has_dlc = "Dharma" }
-				remove_government_reform = irish_clann_reform
-				add_government_reform = tanistry_reform
-			}
-			if = {
 				limit = { NOT = { has_dlc = "Dharma" } }
 				set_legacy_government = high_kingship_legacy
 			}

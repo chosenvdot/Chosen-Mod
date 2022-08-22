@@ -10,7 +10,7 @@ trade_goods = cloth
 hre = no
 base_tax = 1
 core = SON 
-controller = SON 
+ 
 owner = SON
 base_production = 1
 discovered_by = sub_saharan

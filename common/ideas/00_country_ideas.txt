@@ -1209,7 +1209,7 @@ CHI_ideas = {
 	}
 	
 	trigger = {
-		 
+		tag = MNG
 	}
 	free = yes		#will be added at load.
 	

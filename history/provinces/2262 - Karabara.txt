@@ -10,7 +10,7 @@ hre = no
 base_tax = 2
 base_production = 2
 core = SON 
-controller = SON 
+  
 owner = SON
 base_manpower = 2
 discovered_by = sub_saharan

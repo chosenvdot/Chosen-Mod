@@ -85,40 +85,6 @@ gov_transitional_government_ireland = { #Something to do with viceroyalty anglo-
 	}
 }
 
-gov_irish_clann = { #Starting Irish minors
-	rank = {
-		1 = CLANN
-	}
-	
-	ruler_male = {
-		1 = RI
-	}
-	
-	ruler_female = {
-		1 = BANRION
-	}
-	
-	consort_male = {
-		1 = FEARNABANRION
-	}
-
-	consort_female = {
-		1 = BANANRI
-	}
-	
-	heir_male = {
-		1 = TANAISTE
-	}
-
-	heir_female = {
-		1 = BANTANAISTE
-	}
-	
-	trigger = {
-		has_reform = irish_clann_reform
-	}
-}
-
 gov_provincial_kingdom = { #Provincial Kingdom formables Munster, Leinster, Ulster & Connacht, by Irish
 	rank = {
 		1 = PROVKINGDOM

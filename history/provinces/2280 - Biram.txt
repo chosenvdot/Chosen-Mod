@@ -9,7 +9,7 @@ hre = no
 base_tax = 2
 base_production = 2
 core = KAN
-controller = KAN 
+  
 owner = KAN
 base_manpower = 2 
 

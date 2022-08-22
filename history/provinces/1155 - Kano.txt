@@ -6,7 +6,7 @@ is_city = yes
 religion = sunni
 capital = "Kano"
 core = KAN
-controller = KAN 
+  
 owner = KAN
 trade_goods = dyes
 hre = no

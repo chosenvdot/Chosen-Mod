@@ -26,12 +26,12 @@ discovered_by = sub_saharan
 
 1518.1.1 = {
 	owner = SON
-	controller = SON
+	 
 	add_core = SON
 } #Askiya Muhammad of Songhai seizes control 
 1543.1.1 = { add_core = MOR unrest = 3 } #Muhammad al-Shaykh claims Taodeni for Morocco, stirs up resistance to Songhai
 1556.1.1 = { owner = MOR controller = MOR } #Moroccan Expedition seizes Taghaza
-1557.1.1 = { owner = SON controller = SON } #Morocco returns Taghaza to Songhai control
+1557.1.1 = { owner = SON   } #Morocco returns Taghaza to Songhai control
 1585.1.1 = { owner = MOR controller = MOR } #Moroccan Expedition expels Songhai governor
 1630.1.1 = {
 	owner = SOS

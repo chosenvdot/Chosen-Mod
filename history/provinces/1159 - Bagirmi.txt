@@ -3,7 +3,7 @@
 
 
 owner = YAO
-controller = YAO
+ 
 add_core = YAO
 culture = bilala #bagirmi
 religion = shamanism #Fetishism

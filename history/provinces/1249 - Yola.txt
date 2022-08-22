@@ -7,7 +7,7 @@ capital = "Kwararafa"
 trade_goods = unknown
 hre = no
 add_core = YAO
-controller = YAO
+ 
 owner = YAO
 base_tax = 2  
 base_production = 2 

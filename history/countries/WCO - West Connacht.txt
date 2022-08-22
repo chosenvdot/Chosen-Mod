@@ -3,7 +3,6 @@ capital = 8161 #Connemara, Annaghdown
 technology_group = western
 
 government = monarchy
-add_government_reform = irish_clann_reform
 
 religion = catholic
 primary_culture = irish

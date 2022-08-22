@@ -20,11 +20,11 @@ fort_15th = yes
 extra_cost = 16
 center_of_trade = 2
 
-1469.1.1 = { owner = SON controller = SON add_core = SON culture = songhai } # Conquered by Sunni Ali Ber of Songhai
+1469.1.1 = { owner = SON   add_core = SON culture = songhai } # Conquered by Sunni Ali Ber of Songhai
 1471.1.1 = { unrest = 7 } # Muslim leaders in city launch revolt to end Songhai rule
 1472.1.1 = { unrest = 0 } # Sunni Ali represses Muslim leadership of Timbuktu
 1586.1.1 = { revolt = { type = revolutionary_rebels size = 1 } controller = REB } # Civil war between Al-Sadduk and Ishak
-1588.1.1 = { revolt = {} controller = SON unrest = 7 } # Ishak reconquers lands in revolt, uneasy on throne
+1588.1.1 = { revolt = {}   unrest = 7 } # Ishak reconquers lands in revolt, uneasy on throne
 1591.5.1 = { owner = MOR controller = MOR add_core = MOR } #moroccans seize Timbuktu
 1593.1.1 = { unrest = 7 } # Moroccans launches purge of city elite
 1618.1.1 = { owner = TMB controller = TMB add_core = TMB remove_core = MOR } #Moroccans no longer appoint governors, local Moroccans, the Arma, rule on their own (recycle TMB tag)

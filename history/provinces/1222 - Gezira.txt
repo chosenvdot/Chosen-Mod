@@ -12,7 +12,7 @@ trade_goods = grain
 hre = no
 add_local_autonomy = 95
 add_core = NBA
-controller = NBA
+ 
 owner = NBA
 
 

@@ -2,7 +2,7 @@
 #2401 - Mong Pai
 
 owner = MYA
-controller = MYA
+ 
 culture = karen
 religion = buddhism
 capital = "Mong Pai"

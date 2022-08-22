@@ -2,7 +2,7 @@
 #4398 - Mawkmai
 
 owner = MYA
-controller = MYA
+ 
 culture = shan
 religion = buddhism
 capital = "Mawkmai"
