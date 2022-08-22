@@ -5,9 +5,9 @@ latent_trade_goods = {
 	coal
 }
 
-owner = SOL
-controller = SOL
-add_core = SOL
+ 
+ 
+ 
 culture = evenk
 religion = tengri_pagan_reformed
 capital = "Urkantun"

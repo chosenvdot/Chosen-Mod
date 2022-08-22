@@ -10,9 +10,9 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-owner = TDO
-controller = TDO
-add_core = TDO
+ 
+ 
+ 
 
 discovered_by = chinese
 

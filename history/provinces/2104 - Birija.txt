@@ -1,9 +1,9 @@
  
 # 2104 - Birija
 
-owner = SOL
-controller = SOL
-add_core = SOL
+ 
+ 
+ 
 culture = manchu
 religion = tengri_pagan_reformed
 capital = "Niuman"

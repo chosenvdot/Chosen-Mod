@@ -1,9 +1,9 @@
  
 #4214 - Kalar
 
-owner = SOL
-controller = SOL
-add_core = SOL
+ 
+ 
+ 
 culture = nivkh
 religion = tengri_pagan_reformed
 capital = "Kalar"
