@@ -652,11 +652,9 @@ province;red;green;blue;x;x
 651;221;54;64;Sulu;x
 652;93;56;128;Maguindanae;x
 653;221;58;192;Tagoloan;x
-654;93;60;255;Samar;x
 655;221;62;0;Palawan;x
 656;93;64;64;Manila;x
 657;221;66;128;Samtoy;x
-658;94;68;192;Cagayan;x
 659;222;70;255;Riau;x
 660;94;72;0;Xishuan Banna;x
 661;222;74;64;Dali;x
@@ -665,9 +663,7 @@ province;red;green;blue;x;x
 664;94;80;255;Guangxi;x
 665;223;82;0;Shiuhing;x
 666;95;84;64;Hainan;x
-667;223;86;128;Guangzhou;x
 668;95;88;192;Macau;x
-669;223;90;255;Fuzhou;x
 670;95;92;0;Ganzhou;x
 671;223;94;64;Changsha;x
 672;96;96;128;Chenzhou;x
@@ -731,11 +727,8 @@ province;red;green;blue;x;x
 730;104;84;0;Haixi;x
 731;232;86;64;Ninguta;x
 732;104;88;128;Hamheung;x
-733;232;90;192;Hwangju;x
 734;104;92;255;Gangwon;x
-735;153;134;173;Hanseong;x
 736;217;164;164;Sangju;x
-737;233;98;128;Jeonju;x
 738;105;100;192;Taiwan;x
 739;233;102;255;Kashgar;x
 740;105;104;0;Chanderi;x
@@ -1011,7 +1004,6 @@ province;red;green;blue;x;x
 1010;25;128;32;Manitoba;x
 1011;153;130;79;Woods Cree;x
 1012;25;132;126;Satsuma;x
-1013;233;94;0;Cheongju;x
 1014;25;136;32;Bungo;x
 1015;153;138;79;Okinawa;x
 1016;26;140;126;Nghe An;x
@@ -1032,21 +1024,14 @@ province;red;green;blue;x;x
 1031;156;42;79;Kamikawa;x
 1032;28;44;126;Kurils;x
 1033;156;46;173;Sakhalin;x
-1034;28;48;32;Kamchatka;x
-1035;156;50;79;Penchisky;x
-1036;28;52;126;Podzhiversk;x
-1037;157;54;173;Nizhe-Kolymsk;x
-1038;29;56;32;Anadyrsk;x
 1039;157;58;79;Verkhoyansk;x
 1040;29;254;126;Suntar Khayat;x
 1041;157;62;173;Gizhiga;x
 1042;29;64;32;Kamnuskoye;x
 1043;157;66;79;Okhotsk;x
-1044;30;68;126;Tauisk;x
 1045;158;70;173;Yakutsk;x
 1046;30;243;32;Butalsk;x
 1047;158;174;79;Jugjur;x
-1048;30;76;126;Udskoye;x
 1049;158;78;173;Saghalian Oula;x
 1050;30;80;32;Deren;x
 1051;159;82;79;Uchurskoye;x
@@ -1820,14 +1805,12 @@ province;red;green;blue;x;x
 1819;77;96;32;Tosa;x
 1820;205;98;79;Awa;x
 1821;78;100;126;Nanjing;x
-1822;206;102;173;Shangai;x
 1823;78;104;32;Stung Treng;x
 1824;206;106;79;Wenzhou;x
 1825;78;108;126;Aki;x
 1826;206;110;173;Lika;x
 1827;78;112;32;Raska;x
 1828;207;114;79;Soli;x
-1829;79;116;126;Xiamen;x
 1830;207;118;173;Tajima;x
 1831;79;120;32;Travunia;x
 1832;207;122;79;Yamato;x
@@ -2104,14 +2087,12 @@ province;red;green;blue;x;x
 2103;103;132;224;Udi;x
 2104;104;136;64;Birija;x
 2105;105;148;160;Kuru;x
-2106;105;162;80;Furdan;x
 2107;104;158;240;Ningguta;x
 2108;100;98;144;Huncun;x
 2109;100;90;80;Boduna;x
 2110;99;86;240;Yehe;x
 2111;199;223;102;Hetu Ala;x
 2112;115;210;143;Andong;x
-2113;193;133;132;Gaizhou;x
 2114;106;172;160;Ereen;x
 2115;107;180;224;Chahar;x
 2116;108;206;240;Ih Huree;x
@@ -2137,7 +2118,6 @@ province;red;green;blue;x;x
 2136;124;210;144;Xuanhua;x
 2137;143;75;75;Daming;x
 2138;86;118;240;Wuding;x
-2139;145;24;24;Laizhou;x
 2140;238;254;148;Yanzhou;x
 2141;107;218;111;Xuzhou;x
 2142;84;80;128;Huai'an;x
@@ -2147,7 +2127,6 @@ province;red;green;blue;x;x
 2146;185;197;39;Ningguo;x
 2147;150;42;42;Huizhou;x
 2148;41;150;61;Shaoxin;x
-2149;121;54;54;Ningbo;x
 2150;69;102;64;Jinhua;x
 2151;131;100;35;Poyang;x
 2152;144;37;37;Jianning;x
@@ -2697,8 +2676,6 @@ province;red;green;blue;x;x
 2696;181;45;81;Yamdena;x
 2697;163;70;58;Tondo;x
 2698;163;207;58;Pangasinan;x
-2699;255;75;66;Bikol;x
-2700;197;255;53;Panay;x
 2701;219;211;164;Tagloc;x
 2702;65;219;88;Butuan;x
 2703;104;158;82;Lehad Datu;x
@@ -2742,7 +2719,6 @@ province;red;green;blue;x;x
 2741;138;58;45;Jeju;x
 2742;162;64;128;Yukjin;x
 2743;209;139;185;North Hamgyeong;x
-2744;122;48;97;Nyeongbyeon;x
 2745;134;53;105;Gyengju;x
 2746;213;38;84;Vidin;x
 2747;106;186;80;Khara Narin Ula;x
@@ -4226,7 +4202,6 @@ province;red;green;blue;x;x
 4225;64;173;200;Coast of Hokkaido;x
 4226;29;124;148;North Japan Basin;x
 4227;105;96;64;Daegu;x
-4228;195;44;140;Naju;x
 4229;188;200;56;Chungju;x
 4230;158;186;44;Suwon;x
 4231;231;184;20;Haeju;x
@@ -4347,10 +4322,7 @@ province;red;green;blue;x;x
 4346;149;226;227;Qamr Bay;x
 4347;144;206;207;UNUSED;###
 4348;198;47;101;Ifuago;x
-4349;105;219;142;Laguna;x
-4350;154;86;212;Mindoro;x
 4351;104;196;152;Buglas;x
-4352;219;168;88;Cebu;x
 4353;89;35;145;Leyte;x
 4354;135;77;125;Zamboanga;x
 4355;248;245;172;Caraga;x
@@ -4683,7 +4655,6 @@ province;red;green;blue;x;x
 4682;106;90;108;South Kobdo;x
 4683;186;144;83;East Hoboskar;x
 4684;255;216;1;Dzhemenika;x
-4685;196;69;0;Karagandy;x
 4686;255;90;0;Ekibastuz;x
 4687;255;186;0;Imakia;x
 4688;255;223;172;Baraba;x
@@ -8553,7 +8524,6 @@ province;red;green;blue;x;x
 8552;135;237;146;Mong Mit;x
 8553;110;57;172;Mong Yai;x
 8554;125;181;184;Mong Lem;x
-8555;102;172;232;SETaiwan;x
 8556;8;62;113;UNUSED;### replaced by 4831
 8557;61;44;219;UNUSED;### replaced by 4802
 8558;70;182;116;UNUSED;### replaced by 4803
