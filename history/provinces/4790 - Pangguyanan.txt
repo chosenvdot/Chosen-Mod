@@ -24,7 +24,7 @@ discovered_by = ottoman
 	owner = BAN
 	controller = BAN
 	add_core = BAN
-	remove_core = SUN
+	remove_core =  
 	religion = sunni
 } # Conquered by the Cirebonese Army and Banten Sultanate was established
 1528.1.1 = { unrest = 0 }

@@ -9,9 +9,9 @@ hre = no
 base_tax = 3  # BT; 2
 base_production = 1 # BT; 2
 base_manpower = 2
-add_core = JOH
-owner = JOH
-controller = JOH
+add_core =  
+owner =  
+controller =  
 trade_goods = bt_trade_good_fruit # BT; grain
 
 discovered_by = chinese

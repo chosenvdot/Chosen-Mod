@@ -1,9 +1,9 @@
  
 # ex 8671
 
-owner = MLC # BT; KED
-controller = MLC # BT; KED
-add_core = MLC # BT; KED
+owner =   BT;  
+controller =   BT;  
+add_core =   BT;  
 add_core = PRK # BT
 culture = malayan
 religion = sunni

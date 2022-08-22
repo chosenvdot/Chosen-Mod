@@ -15580,47 +15580,6 @@ BEI_ideas = {
 		trade_efficiency = 0.1
 	}
 }
-
-MLC_ideas = {
-	start = {
-		global_trade_power = 0.1
-		colonists = 1
-	}
-	bonus = {
-		merchants = 1
-	}
-	trigger = {
-		tag = MLC
-	}
-	free = yes
-	mlc_vassal_princes = {
-		reduced_liberty_desire = 10
-		vassal_income = 0.25
-	}
-	mlc_maritime_laws = {
-		naval_maintenance_modifier = -0.1
-		sailor_maintenance_modifer = -0.1
-	}
-	mlc_jawi_script = {
-		idea_cost = -0.1
-	}
-	mlc_new_hegemony = {
-		naval_forcelimit_modifier = 0.33
-	}
-	mlc_islamic_sultanate = {
-		land_morale = 0.10
-		tolerance_heathen = 2
-	}
-	mlc_habor_masters = {
-		trade_steering = 0.2
-		num_accepted_cultures = 1
-	}
-	mlc_daulat = {
-		heavy_ship_power = 0.1
-	}
-
-}
-
 SIA_ideas = {
 	start = {
 		land_morale = 0.1

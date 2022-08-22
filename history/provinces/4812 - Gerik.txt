@@ -1,9 +1,9 @@
  
 # ex 8579
 
-owner = MLC
-controller = MLC
-add_core = MLC
+owner =  
+controller =  
+add_core =  
 culture = malayan
 religion = sunni
 capital = "Gerik"

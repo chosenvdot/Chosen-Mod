@@ -1,8 +1,8 @@
  
 #593 - Nakhon Si Thammarat
 
-owner = KED
-controller = KED
+owner =  
+controller =  
 culture = central_thai
 religion = buddhism
 capital = "Nakhon Si Thammarat"
@@ -12,7 +12,7 @@ base_tax = 5
 base_production = 5
 base_manpower = 4
 is_city = yes
-add_core = KED
+add_core =  
 
 discovered_by = chinese
 discovered_by = indian

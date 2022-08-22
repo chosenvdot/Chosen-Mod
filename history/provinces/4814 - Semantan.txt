@@ -1,10 +1,10 @@
  
 # ex 8595
 
-owner = MLC
-controller = MLC
-add_core = MLC
-add_core = JOH # BT
+owner =  
+controller =  
+add_core =  
+add_core =   # BT
 culture = malayan # BT; malayan
 religion = mahayana
 capital = "Kuala Semantan" # BT; "Semantan"
@@ -21,10 +21,10 @@ discovered_by = muslim
 discovered_by = ottoman
 
 1454.1.1 = {
-	owner = MLC
-	controller = MLC
-	add_core = MLC
-	add_core = JOH
+	owner =  
+	controller =  
+	add_core =  
+	add_core =  
 }
 
 1470.1.1 = {
@@ -34,7 +34,7 @@ discovered_by = ottoman
 1516.1.1 = { discovered_by = POR }
 
 1528.1.1 = {
-	owner = JOH
-	controller = JOH
-	remove_core = MLC
+	owner =  
+	controller =  
+	remove_core =  
 }

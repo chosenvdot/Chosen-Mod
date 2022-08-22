@@ -5,9 +5,9 @@ culture = acehnese
 religion = sunni
 capital = "Peureulak"
 trade_goods = spices
-add_core = ATJ
-controller = ATJ
-owner = ATJ
+add_core =  
+controller =  
+owner =  
 hre = no
 base_tax = 2
 base_production = 2
@@ -21,11 +21,11 @@ discovered_by = ottoman
 
 1405.1.1 = { discovered_by =   }
 
-1471.1.1 = { add_core = ATJ }
+1471.1.1 = { add_core =  
 1509.1.1 = { discovered_by = POR }
 1521.1.1 = {
-	owner = ATJ
-	controller = ATJ
+	owner =  
+	controller =  
 	remove_core = PSA
 }
 

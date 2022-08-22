@@ -8,9 +8,9 @@ trade_goods = tropical_wood
 hre = no
 base_tax = 1	
 base_production = 1
-add_core = ATJ
-controller = ATJ
-owner = ATJ
+add_core =  
+controller =  
+owner =  
 base_manpower = 2
 is_city = yes
 

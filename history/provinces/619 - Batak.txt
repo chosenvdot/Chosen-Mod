@@ -8,9 +8,9 @@ trade_goods = incense
 hre = no
 base_tax = 1
 base_production = 1
-add_core = JOH
-owner = JOH
-controller = JOH	
+add_core =  
+owner =  
+controller =  	
 base_manpower = 2
 is_city = yes
 
@@ -23,7 +23,7 @@ discovered_by = ottoman
 1405.1.1 = { discovered_by = MNG }
 1509.1.1 = { discovered_by = POR }
 1521.1.1 = {
-	owner = ATJ
-	controller = ATJ
-	add_core = ATJ
+	owner =  
+	controller =  
+	add_core =  
 }

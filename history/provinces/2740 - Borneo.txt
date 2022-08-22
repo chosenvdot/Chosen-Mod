@@ -2,7 +2,7 @@
 discovered_by = chinese # 1.31
 
 1444.1.1 = { # Brian fixed
-	discovered_by = ATJ
+	discovered_by =  
 	discovered_by = MAJ
 	discovered_by = MKS
 	discovered_by = BLI
@@ -16,7 +16,7 @@ discovered_by = chinese # 1.31
 	discovered_by = PLB
 	discovered_by = PSA
 	discovered_by = SAK
-	discovered_by = SUN
+	discovered_by =  
 	discovered_by = KUT
 	discovered_by = BNJ
 	discovered_by = LFA
@@ -41,9 +41,9 @@ discovered_by = chinese # 1.31
 	discovered_by = IDP
 	discovered_by = ARU
 	discovered_by = BRS
-	discovered_by = ATJ
+	discovered_by =  
 	discovered_by = PAH
-	discovered_by = KEL
+	discovered_by =  
 	discovered_by = IFG
 	discovered_by = DPT
 }

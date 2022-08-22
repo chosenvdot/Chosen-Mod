@@ -13,7 +13,7 @@ native_size = 20
 native_ferocity = 7
 native_hostileness = 5
 
-1444.1.1 = { discovered_by = ATJ }
+1444.1.1 = { discovered_by =   }
 1444.1.1 = { discovered_by = MAJ }
 1444.1.1 = { discovered_by = MKS }
 1444.1.1 = { discovered_by = BLI }
@@ -27,7 +27,6 @@ native_hostileness = 5
 1444.1.1 = { discovered_by = PLB }
 1444.1.1 = { discovered_by = PSA }
 1444.1.1 = { discovered_by = SAK }
-1444.1.1 = { discovered_by = SUN }
 1444.1.1 = { discovered_by = KUT }
 1444.1.1 = { discovered_by = BNJ }
 1444.1.1 = { discovered_by = LFA }
@@ -53,9 +52,7 @@ native_hostileness = 5
 1444.1.1 = { discovered_by = IDP }
 1444.1.1 = { discovered_by = ARU }
 1444.1.1 = { discovered_by = BRS }
-1444.1.1 = { discovered_by = ATJ }
 1444.1.1 = { discovered_by = PAH }
-1444.1.1 = { discovered_by = KEL }
 1444.1.1 = { discovered_by = IFG }
 1444.1.1 = { discovered_by = DPT }
 

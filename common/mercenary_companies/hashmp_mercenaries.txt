@@ -2260,7 +2260,7 @@ h_merc_pasai = {
 	cavalry_cap = 0
 	cost_modifier = 0.75
 	trigger = {
-		tag = MLC
+		tag =  
 	}
 	modifier = {
 		infantry_power = 0.05

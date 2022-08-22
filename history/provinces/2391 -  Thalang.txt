@@ -1,8 +1,8 @@
  
 #2391 - Thalang
 
-owner = KED
-controller = KED
+owner =  
+controller =  
 culture = central_thai
 religion = buddhism
 capital = "Thalang"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 3
 is_city = yes
-add_core = KED
+add_core =  
 
 discovered_by = chinese
 discovered_by = indian

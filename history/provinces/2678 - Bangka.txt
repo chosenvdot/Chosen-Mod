@@ -9,9 +9,9 @@ trade_goods = naval_supplies
 hre = no
 base_tax = 1 
 base_production = 2
-add_core = SUN
-controller = SUN
-owner = SUN
+add_core =  
+controller =  
+owner =  
 base_manpower = 2
 is_city = yes
 
@@ -24,17 +24,17 @@ discovered_by = ottoman
 1509.1.1 = { discovered_by = POR }
 
 1528.1.1 = {
-	owner = JOH
-	controller = JOH
-        add_core = JOH
-        remove_core = MLC
+	owner =  
+	controller =  
+        add_core =  
+        remove_core =  
 }
 
 1530.1.1 = {
 	owner = BAN
 	controller = BAN
         add_core = BAN
-        remove_core = JOH
+        remove_core =  
 }
 
 1670.1.1 = {
