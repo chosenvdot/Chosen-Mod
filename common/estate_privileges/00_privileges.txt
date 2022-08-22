@@ -123,7 +123,7 @@ estate_brahmins_land_rights = {
 		}
 		modifier = {
 			factor = 1.25
-			tag = MNG
+			 
 			NOT = { adm_tech = 17 }
 		}
 		modifier = {
@@ -310,7 +310,7 @@ estate_nobles_land_rights = {
 		}
 		modifier = {
 			factor = 1.25
-			tag = MNG
+			 
 			NOT = { adm_tech = 17 }
 		}
 		modifier = {
@@ -497,7 +497,7 @@ estate_church_land_rights = {
 		}
 		modifier = {
 			factor = 1.25
-			tag = MNG
+			 
 			NOT = { adm_tech = 17 }
 		}
 		modifier = {
@@ -684,7 +684,7 @@ estate_maratha_land_rights = {
 		}
 		modifier = {
 			factor = 1.25
-			tag = MNG
+			 
 			NOT = { adm_tech = 17 }
 		}
 		modifier = {
@@ -871,7 +871,7 @@ estate_burghers_land_rights = {
 		}
 		modifier = {
 			factor = 1.25
-			tag = MNG
+			 
 			NOT = { adm_tech = 17 }
 		}
 		modifier = {
@@ -1058,7 +1058,7 @@ estate_vaisyas_land_rights = {
 		}
 		modifier = {
 			factor = 1.25
-			tag = MNG
+			 
 			NOT = { adm_tech = 17 }
 		}
 		modifier = {
@@ -1245,7 +1245,7 @@ estate_cossacks_land_rights = {
 		}
 		modifier = {
 			factor = 1.25
-			tag = MNG
+			 
 			NOT = { adm_tech = 17 }
 		}
 		modifier = {
@@ -1432,7 +1432,7 @@ estate_nomadic_tribes_land_rights = {
 		}
 		modifier = {
 			factor = 1.25
-			tag = MNG
+			 
 			NOT = { adm_tech = 17 }
 		}
 		modifier = {
@@ -1619,7 +1619,7 @@ estate_dhimmi_land_rights = {
 		}
 		modifier = {
 			factor = 1.25
-			tag = MNG
+			 
 			NOT = { adm_tech = 17 }
 		}
 		modifier = {
@@ -1806,7 +1806,7 @@ estate_jains_land_rights = {
 		}
 		modifier = {
 			factor = 1.25
-			tag = MNG
+			 
 			NOT = { adm_tech = 17 }
 		}
 		modifier = {
@@ -1993,7 +1993,7 @@ estate_rajput_land_rights = {
 		}
 		modifier = {
 			factor = 1.25
-			tag = MNG
+			 
 			NOT = { adm_tech = 17 }
 		}
 		modifier = {

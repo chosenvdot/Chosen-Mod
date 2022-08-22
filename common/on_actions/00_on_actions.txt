@@ -626,7 +626,7 @@ on_battle_lost_unit = {
     if = {
         limit = {
             unit_owner = {
-                tag = MNG
+                 
                 has_ruler_flag = mng_militry_incompetence
             }
             is_ruler_commanding_unit = yes

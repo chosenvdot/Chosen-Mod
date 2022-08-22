@@ -524,7 +524,7 @@ was_never_end_game_tag_trigger = {	#Country Scope
 			NOT = { was_tag = GBR }
 			NOT = { was_tag = ITA }
 			NOT = { was_tag = GER }
-			NOT = { was_tag = MNG }
+			NOT = { was_  }
 			NOT = { was_tag = MGE }
 			NOT = { was_tag = SYN }
 			NOT = { was_tag = ADU }
@@ -559,7 +559,7 @@ was_never_end_game_tag_trigger = {	#Country Scope
 			NOT = { tag = GBR }
 			NOT = { tag = ITA }
 			NOT = { tag = GER }
-			NOT = { tag = MNG }
+			NOT = {   }
 			NOT = { tag = MGE }
 			NOT = { tag = SYN }
 			NOT = { tag = ADU }

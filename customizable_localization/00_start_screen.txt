@@ -53,7 +53,7 @@ defined_text = {
 	text = {
         localisation_key = string_start_title_great_ming
         trigger = {
-			tag = MNG
+			 
 		}
     }
 	text = {
@@ -545,7 +545,7 @@ defined_text = {
 	text = { #Great Ming
         localisation_key = string_start_great_ming
         trigger = {
-			tag = MNG
+			 
         }
     }
 	

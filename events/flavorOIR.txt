@@ -13,7 +13,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = MNG
+		 
 		war_with = OIR
 		NOT = { is_year = 1500 }
 		NOT = { MIL = 2 }
@@ -132,7 +132,7 @@ country_event = {
 	major = yes
 	
 	trigger = {
-		tag = MNG
+		 
 		war_with = OIR
 		had_country_flag = {
 			flag = mng_emperor_captured

@@ -1019,7 +1019,7 @@ t_vassal_cav_ratio = {
 
 mingsplosion = {
 	potential = {
-		tag = MNG
+		 
 	}
 
 	trigger = {

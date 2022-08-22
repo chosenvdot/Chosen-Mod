@@ -108,7 +108,7 @@ bt_generic_can_form_potential_check = {
 	#NOT = { was_tag = GBR }			#Cut GBR, as I add the UK formable
 	NOT = { was_tag = ITA }
 	NOT = { was_tag = GER }
-	NOT = { was_tag = MNG }
+	NOT = { was_  }
 	NOT = { was_tag = MGE }
 	NOT = { was_tag = SYN }
 	NOT = { was_tag = ADU }
@@ -133,7 +133,7 @@ bt_generic_can_form_potential_check = {
 	#NOT = { tag = GBR }			#Cut GBR, as I add the UK formable
 	NOT = { tag = ITA }
 	NOT = { tag = GER }
-	NOT = { tag = MNG }
+	NOT = {   }
 	NOT = { tag = MGE }
 	NOT = { tag = SYN }
 	NOT = { tag = ADU }

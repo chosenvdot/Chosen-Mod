@@ -13,7 +13,7 @@ country_decisions = {
 			NOT = { exists = YUA }
 			NOT = { tag = MUG }
 			NOT = { tag = QNG }
-			NOT = { tag = MNG }
+			NOT = {  
 			NOT = { tag = MCH }
 			culture_group = altaic
 			OR = {

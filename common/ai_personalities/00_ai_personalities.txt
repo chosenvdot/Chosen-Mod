@@ -66,7 +66,7 @@ ai_capitalist = {
 		}
 		modifier = {
 			factor = 1.5
-			tag = MNG
+			 
 		}
 		modifier = {
 			factor = 1.5
@@ -168,7 +168,7 @@ ai_capitalist = {
 #		}		
 #		modifier = {
 #			factor = 1.5
-#			tag = MNG
+#			 
 #		}
 #		modifier = {
 #			factor = 1.5
@@ -308,7 +308,7 @@ ai_capitalist = {
 #		}		
 #		modifier = {
 #			factor = 0.75
-#			tag = MNG
+#			 
 #		}
 #		modifier = {
 #			factor = 0.75
