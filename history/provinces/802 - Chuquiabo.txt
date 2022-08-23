@@ -1,9 +1,9 @@
 
 #802 - Chuquiabo
 
-owner = CSU
-controller = CSU
-add_core = CSU
+ 
+ 
+ 
 is_city = yes
 culture = aimara
 religion = inti

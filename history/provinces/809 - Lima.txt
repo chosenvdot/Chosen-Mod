@@ -1,8 +1,8 @@
 
 #809 - Lima
 
-owner = CSU
-controller = CSU
+ 
+ 
 culture = inca
 religion = inti
 capital = "Lima"
@@ -12,7 +12,7 @@ base_tax = 6
 base_production = 4
 base_manpower = 2 
 is_city = yes
-add_core = CSU
+ 
 discovered_by = south_american
 discovered_by = andean
 1444.1.1 = { discovered_by = CHM }

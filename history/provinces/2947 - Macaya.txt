@@ -1,9 +1,9 @@
  
 # - Macaya
 
-owner = CSU
-controller = CSU
-add_core = CSU
+ 
+ 
+ 
 is_city = yes
 
 

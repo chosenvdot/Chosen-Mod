@@ -1,8 +1,8 @@
 
 #808 - Cuzco
 
-owner = CSU
-controller = CSU
+ 
+ 
 culture = inca
 religion = inti
 capital = "Cuzco"
@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = CSU
+ 
 fort_15th = yes
 discovered_by = south_american
 discovered_by = andean

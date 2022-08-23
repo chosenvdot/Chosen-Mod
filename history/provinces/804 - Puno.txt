@@ -1,8 +1,8 @@
 
 #804 - Puno
 
-owner = CSU
-controller = CSU
+ 
+ 
 culture = aimara
 religion = inti
 capital = "Hatuncolla"
@@ -12,7 +12,7 @@ hre = no
 base_tax = 1
 base_production = 1
 base_manpower = 1
-add_core = CSU
+ 
 
 
 
@@ -22,9 +22,9 @@ discovered_by = andean
 
 1448.1.1 = {
 	capital = "Puno"
-	owner = CSU
-	controller = CSU
-	add_core = CSU
+	 
+	 
+	 
 }
 1467.1.1 = {
 	owner = INC

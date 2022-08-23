@@ -1,9 +1,9 @@
  
 # - Sucre
 
-owner = CSU
-controller = CSU
-add_core = CSU
+ 
+ 
+ 
 culture = aimara
 
 

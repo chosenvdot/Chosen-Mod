@@ -1,8 +1,8 @@
  
 # - Huaraz
 
-owner = CSU
-controller = CSU
+ 
+ 
 culture = inca
 religion = inti
 capital = "Huaraz"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 2 
 is_city = yes
-add_core = CSU
+ 
 
 
 
@@ -22,9 +22,9 @@ discovered_by = andean
 
 
 1465.1.1 = {
-	owner = CSU
-	controller = CSU
-	add_core = CSU
+	 
+	 
+	 
 }
 1467.1.1 = {
 	owner = INC

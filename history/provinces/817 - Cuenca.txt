@@ -1,9 +1,9 @@
 
 #817 - Cuenca
 
-owner = CSU
-controller = CSU
-add_core = CSU
+ 
+ 
+ 
 culture = cara
 
 
