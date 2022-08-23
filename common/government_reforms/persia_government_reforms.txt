@@ -34,8 +34,6 @@ establish_qurchi_corps_reform = { #tier 2
 	}
 	modifiers = {
 		global_manpower_modifier = 0.10
-		qizilbash_influence_modifier = 0.1
-		qizilbash_loyalty_modifier = 0.05
 	}
 	conditional = {
 		allow = {
@@ -62,9 +60,6 @@ foreign_ghilman_reform = { #tier 3
 	modifiers = {
 		advisor_pool = 1
 		free_leader_pool = 1
-		ghilman_loyalty_modifier = 0.10
-		qizilbash_loyalty_modifier = -0.05
-		qizilbash_influence_modifier = -0.10
 		}
 	ai = {
 		factor = 1000
@@ -78,10 +73,6 @@ qizilbash_in_officer_corps_reform = { #tier 4
 	}
 	modifiers = {
 		recover_army_morale_speed = 0.05
-		qizilbash_influence_modifier = 0.1
-		qizilbash_loyalty_modifier = 0.05
-		ghilman_loyalty_modifier = -0.05
-		ghilman_influence_modifier = -0.05
 		nobles_loyalty_modifier = -0.05
 		nobles_influence_modifier = -0.05
 	}
@@ -101,10 +92,6 @@ reforms_of_abbas_i_reform = { #tier 5
 		tolerance_heathen = 1
 		global_unrest = -1
 		global_own_trade_power = 0.25
-		qizilbash_influence_modifier = -0.25
-		qizilbash_loyalty_modifier = -0.1
-		ghilman_loyalty_modifier = 0.05
-		ghilman_influence_modifier = 0.10
 		yearly_army_professionalism= 0.00250
 	}
 	ai = {
@@ -121,10 +108,6 @@ ghilman_administrative_positions_reform = { #tier 6
 		administrative_efficiency = 0.05
 		global_tax_modifier = 0.20
 		governing_capacity_modifier = 0.1
-		qizilbash_influence_modifier = -0.05
-		qizilbash_loyalty_modifier = -0.05
-		ghilman_influence_modifier = 0.05
-		ghilman_loyalty_modifier = 0.10
 		possible_policy = 1
 	}
 	ai = {
