@@ -235,7 +235,7 @@ bt_swedish_colonialism = {
 					owns = 4163 #Lödöse/Göteborg
 				}
 				4163 = { #The founding of Gothenburg. Technically occured before Sweden even became a colonial power, but whatever.
-					add_or_spawn_center_of_trade = { level = 1 }
+					#add_or_spawn_center_of_trade = { level = 1 }
 					add_base_tax = 6
 					add_base_production = 6
 					rename_capital = "Göteborg"
@@ -246,7 +246,7 @@ bt_swedish_colonialism = {
 					owns = 3 #Kalmar
 				}
 				3 = {
-					add_or_spawn_center_of_trade = { level = 1 }
+					#add_or_spawn_center_of_trade = { level = 1 }
 					add_base_tax = 4
 					add_base_production = 4
 				}
@@ -746,7 +746,7 @@ bt_swedish_internal_missions = {
 		effect = {
 			28 = {
 				rename_capital = "Helsinki"
-				add_or_spawn_center_of_trade = { level = 1 }
+				#add_or_spawn_center_of_trade = { level = 1 }
 			}
 		}
 	}
@@ -1132,7 +1132,7 @@ swedish_missions_baltic = {
 				LIT = {
 					define_advisor = {
 						type = statesman
-						name = "Jonušas Radvila"
+						name = "Jonuÿas Radvila"
 						skill = 3
 						cost_multiplier = 0.34
 					}
