@@ -12,7 +12,7 @@ base_tax = 8
 base_production = 6
 base_manpower = 4
 is_city = yes
-add_core = KRK
+ 
  
 add_brahmins_or_church_effect = yes #Tirupati
 #fort_15th = yes #One of the great forts of the East
@@ -37,15 +37,15 @@ discovered_by = chinese
 	remove_core = GOC
 }
 1710.1.1 = {
-	owner = KRK
-	controller = KRK
-	add_core = KRK
+	 
+	 
+	 
 	remove_core = MUG
 } # Nawab of Arcot / Carnatic
 1740.5.1 = { controller = MAR } # Arcot falls to the Marathas
-1743.3.1 = { controller = KRK } # Arcot falls to the Nizam
+1743.3.1 = {   } # Arcot falls to the Nizam
 1751.9.1 = { controller = GBR }	#Conquered by Clive
-1754.1.1 = { controller = KRK }
+1754.1.1 = {   }
 1801.1.1 = {
 	controller = GBR
 	owner = GBR

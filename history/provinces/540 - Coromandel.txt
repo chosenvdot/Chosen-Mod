@@ -1,8 +1,8 @@
  
 #540 - Coromandel 
 
-owner = KRK
-controller = KRK
+ 
+ 
 culture = tamil
 religion = hinduism
 capital = "Kuddaluru"
@@ -13,7 +13,7 @@ base_production = 1
 base_manpower = 1
 is_city = yes
 add_vaisyas_or_burghers_effect = yes
-add_core = KRK
+ 
 add_local_autonomy = 25
 discovered_by = indian
 discovered_by = muslim

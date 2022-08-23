@@ -1,8 +1,8 @@
  
 #2027 - Arcot
 
-owner = KRK
-controller = KRK
+ 
+ 
 culture = tamil
 religion = hinduism
 capital = "Arcot"
@@ -12,7 +12,7 @@ base_tax = 6
 base_production = 6
 base_manpower = 4
 is_city = yes
-add_core = KRK
+ 
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim 
@@ -30,16 +30,16 @@ add_local_autonomy = 25
 1686.1.1 = { controller = MUG }
 1687.1.1 = { owner = MUG }
 1710.1.1 = {
-	owner = KRK
-	controller = KRK
-	add_core = KRK
+	 
+	 
+	 
 	fort_16th = yes
 	fort_15th = no
 } # Nawab of Arcot / Carnatic
 1740.5.1 = { controller = MAR } # Arcot falls to the Marathas
-1743.3.1 = { controller = KRK } # Arcot falls to the Nizam
+1743.3.1 = {   } # Arcot falls to the Nizam
 1751.9.1 = { controller = GBR } #Conquered by Clive
-1754.1.1 = { controller = KRK }
+1754.1.1 = {   }
 1801.1.1 = {
 	controller = GBR
 	owner = GBR

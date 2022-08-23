@@ -46,13 +46,13 @@ center_of_trade = 1
 	revolt = { }
 }
 1565.1.26 = {
-	owner = MAD
-	controller = MAD
+	 
+	 
 } # The Vijayanagar empire collapses, the Nayaks proclaimed themselves rulers
 1736.4.1 = {
-	owner = KRK
-	controller = KRK
-	add_core = KRK
+	 
+	 
+	 
 	remove_core = MAD
 }
 1741.1.1 = {
@@ -60,8 +60,8 @@ center_of_trade = 1
 	controller = MAR
 } #Marathas
 1743.1.1 = {
-	owner = KRK
-	controller = KRK
+	 
+	 
 	#Dutch traders expelled
 } #Retaken by Nizam, annexed to Carnatic
 1759.1.1 = {

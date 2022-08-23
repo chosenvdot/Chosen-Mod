@@ -1,9 +1,9 @@
  
 # 2135 - Garze
 
-owner = KAM
-controller = KAM
-add_core = KAM
+ 
+ 
+ 
 culture = tibetan
 religion = vajrayana
 capital = "Garze"

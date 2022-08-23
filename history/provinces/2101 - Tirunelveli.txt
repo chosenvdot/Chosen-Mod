@@ -30,13 +30,13 @@ discovered_by = east_african
 1543.1.1 = { controller = REB revolt = { size = 0 type = nationalist_rebels } }
 1550.1.1 = { controller = VIJ revolt = { } }
 1565.7.1 = {
-	owner = MAD
-	controller = MAD
+	 
+	 
 } # The Vijayanagar empire collapses, the Nayaks proclaimed themselves rulers
 1736.4.1 = {
-	owner = KRK
-	controller = KRK
-	add_core = KRK
+	 
+	 
+	 
 }
 1741.1.1 = {
 	owner = MAR

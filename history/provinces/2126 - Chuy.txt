@@ -19,9 +19,9 @@ discovered_by = muslim
 discovered_by = ottoman
 
 1462.1.1 = {
-	owner = KAS
-	controller = KAS
-	add_core = KAS
+	 
+	 
+	 
 }
 1622.1.1 = { discovered_by = RUS }
 1682.1.1 = {

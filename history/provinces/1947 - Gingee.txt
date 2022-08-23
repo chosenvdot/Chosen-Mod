@@ -1,8 +1,8 @@
  
 #1947 - Gingee
 
-owner = KRK
-controller = KRK
+ 
+ 
 culture = tamil
 religion = hinduism
 capital = "Gingee"
@@ -12,7 +12,7 @@ base_tax = 6
 base_production = 6
 base_manpower = 4
 is_city = yes
-add_core = KRK
+ 
 fort_15th = yes #Gingee Fort
 add_local_autonomy = 25
 discovered_by = indian
@@ -46,18 +46,18 @@ discovered_by = chinese
 	add_core = MUG
 }
 1710.1.1 = {
-	owner = KRK
-	controller = KRK
+	 
+	 
 	remove_core = MUG
 } # Nawab of Arcot / Carnatic
 1740.5.1 = {
 	controller = MAR
 } # Arcot falls to the Marathas
 1743.3.1 = {
-	controller = KRK
+	 
 } # Arcot falls to the Nizam
 1751.9.1 = { controller = GBR }	#Conquered by Clive
-1754.8.2 = { controller = KRK }
+1754.8.2 = {  
 1801.1.1 = {
 	controller = GBR
 	owner = GBR

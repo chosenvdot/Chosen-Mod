@@ -1,8 +1,8 @@
  
 #2029 - South Kanara
 
-owner = KLN
-controller = KLN
+ 
+ 
 culture = kannada
 religion = hinduism
 capital = "Mangalore"
@@ -12,7 +12,7 @@ base_tax = 6
 base_production = 6
 base_manpower = 4
 is_city = yes
-add_core = KLN
+ 
 add_local_autonomy = 40
 add_vaisyas_or_burghers_effect = yes
 discovered_by = indian
@@ -25,13 +25,13 @@ discovered_by = east_african
 
 1498.1.1 = { discovered_by = POR }
 1565.7.1 = {
-	owner = KLN
-	controller = KLN
+	 
+	 
 } # The Vijayanagar empire collapses
 1660.1.1 = { controller = BIJ owner = BIJ }
 1686.1.1 = {
-	owner = KLN
-	controller = KLN
+	 
+	 
 }
 1763.1.1 = {
 	owner = MYS

@@ -1,8 +1,8 @@
  
 #2038 - Midnapore
 
-owner = ORI
-controller = ORI
+ 
+ 
 culture = bengali
 religion = hinduism
 capital = "Midnapore"
@@ -12,7 +12,7 @@ base_tax = 8
 base_production = 8
 base_manpower = 6
 is_city = yes
-add_core = ORI
+ 
  
 
 
@@ -31,8 +31,8 @@ discovered_by = chinese
 	 
 } # Annexed to Bengal
 1576.1.1 = {
-	owner = ORI
-	controller = ORI
+	 
+	 
 } # Orissa resurgent after Akbar's defeat of Bengal
 1591.1.1 = { controller = MUG } # The Mughal Empire
 1592.1.1 = {

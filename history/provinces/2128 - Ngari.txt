@@ -35,9 +35,9 @@ discovered_by = indian
 	controller = ZUN
 } #Zunghar invasion of Tibet
 1720.1.1 = {
-	owner = UTS
-	controller = UTS
-	add_core = UTS
+	 
+	 
+	 
 }
 1721.1.1 = { discovered_by = SPA }
 1792.11.1 = {

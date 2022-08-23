@@ -1,8 +1,8 @@
  
 #552 - Cuttack
 
-owner = ORI
-controller = ORI
+ 
+ 
 culture = oriya
 religion = hinduism
 capital = "Cuttack"
@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = ORI
+ 
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
@@ -29,8 +29,8 @@ center_of_trade = 1
 	 
 } # Bengal Annexes
 1576.1.1 = {
-	owner = ORI
-	controller = ORI
+	 
+	 
 } # Orissa resurgent after Akbar's defeat of Bengal
 1591.1.1 = { controller = MUG } # The Mughal Empire
 1592.1.1 = {

@@ -1,9 +1,9 @@
  
 # 2124 - Yarkand
 
-owner = KAS
-controller = KAS
-add_core = KAS
+ 
+ 
+ 
 culture = uyghur
 religion = sunni
 capital = "Yarkant"
@@ -25,8 +25,8 @@ center_of_trade = 1
 	add_core = ZUN
 }
 1755.1.1 = {
-	owner = KAS
-	controller = KAS
-	add_core = KAS 
+	 
+	 
+	 
 }
 1759.1.1 = { owner = QNG controller = QNG add_core = QNG } # Part of the Manchu empire
