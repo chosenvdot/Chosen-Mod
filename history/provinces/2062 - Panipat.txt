@@ -35,9 +35,9 @@ discovered_by = chinese
 	add_core = MUG
 } # Battle of Panipat
 1540.1.1 = {
-	owner = BNG
-	controller = BNG
-	add_core = BNG
+	 
+	 
+	 
 } # Sher Shah Conquers Delhi
 1553.1.1 = {
 	owner = DLH

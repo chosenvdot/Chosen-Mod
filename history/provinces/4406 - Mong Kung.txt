@@ -13,8 +13,8 @@ base_production = 3
 base_manpower = 1
 is_city = yes
  
-owner = MYA
-add_core = MYA
+ 
+ 
  
 
 
@@ -30,22 +30,22 @@ discovered_by = indian
 	remove_core = HSE
 }
 1535.1.1 = { discovered_by = POR }
-1554.1.1 = { add_core = TAU }
-1557.11.1 = { controller = TAU } # The Shan dynasty is overthrown
-1563.4.1 = {	owner = TAU }
+1554.1.1 = {  
+1557.11.1 = {  ynasty is overthrown
+1563.4.1 = {	 
 1599.1.1 = {
 	owner = SST
 	controller = SST
 }
 1605.1.1 = {
-	owner = TAU
-	controller = TAU
+	 
+	 
 }
 1752.1.1 = {
 	owner = SST
 	controller = SST
 }
 1754.1.1 = {
-	owner = TAU
-	controller = TAU
+	 
+	 
 }

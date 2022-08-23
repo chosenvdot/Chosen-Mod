@@ -30,8 +30,8 @@ discovered_by = chinese
 	controller = DHU
 } # Independent again after Mughals lose Delhi
 1544.1.1 = {
-	owner = BNG
-	controller = BNG
+	 
+	 
 } # Sur expansion
 1545.5.22 = {
 	owner = DHU

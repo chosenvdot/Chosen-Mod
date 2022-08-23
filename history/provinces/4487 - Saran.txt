@@ -26,13 +26,13 @@ discovered_by = chinese
 } # Bahlul Lodi places his eldest surviving son Barbak Shah Lodi on the throne of Jaunpur, slowly integrated into Delhi's domains after this
 1526.4.1 = { controller = TIM } #Conquered by Babur
 1526.4.21 = {
-	owner = BNG
+	 
 	controller = REB
 	revolt = { type = anti_tax_rebels name = "Landless Nobles" }
 } # Contested area with lots of different factions fighting eachother after Panipat
 1538.1.1 = {
-	controller = BNG
-	add_core = BNG
+	 
+	 
 	remove_core = DLH
 	revolt = { }
 } # Sher Shah Triumphant

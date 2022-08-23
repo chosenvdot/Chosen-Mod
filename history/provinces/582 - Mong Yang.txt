@@ -1,8 +1,8 @@
  
 #582 - Mong Yang
 
-owner = MMA
-controller = MMA
+ 
+ 
 culture = shan
 religion = buddhism
 capital = "Mong Yang"
@@ -13,8 +13,8 @@ base_production = 4
 base_manpower = 3
 fort_15th = yes
 is_city = yes
-add_core = MMA
-add_core = MYA
+ 
+ 
 
 
 
@@ -22,7 +22,7 @@ discovered_by = chinese
 discovered_by = indian
 
 1449.1.1 = {
-	owner = MYA
+	 
 	 
         remove_core = MMA
 }
@@ -33,16 +33,16 @@ discovered_by = indian
 	add_core = SST
 	remove_core = MYA
 }
-1557.3.6 = { controller = TAU }
-1563.4.1 = { owner = TAU }
+1557.3.6 = {  
+1563.4.1 = {   }
 1599.1.1 = {
 	owner = SST
 	controller = SST
 }
 1605.1.1 = {
-	owner = TAU
-	controller = TAU
-	add_core = TAU
+	 
+	 
+	 
 }
 1655.1.1 = { discovered_by = SPA }#Novus Atlas Sinensis
 1752.1.1 = {
@@ -50,6 +50,6 @@ discovered_by = indian
 	controller = SST
 }
 1754.1.1 = {
-	owner = TAU
-	controller = TAU
+	 
+	 
 }

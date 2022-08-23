@@ -23,9 +23,9 @@ discovered_by = chinese
 1485.1.1 = { capital = "Rati Ghati" }
 1488.1.1 = { capital = "Bikaner" }
 1544.1.1 = {
-	owner = BNG
-	controller = BNG
-	add_core = BNG
+	 
+	 
+	 
 } # Sur expansion
 1545.1.1 = {
 	owner = JAN

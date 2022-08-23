@@ -1,8 +1,8 @@
  
 #563 - Gauda
 
-owner = BNG
-controller = BNG
+ 
+ 
 culture = bengali
 religion = hinduism
 capital = "Pandua"
@@ -12,7 +12,7 @@ base_tax = 2
 base_production = 2
 base_manpower = 4
 is_city = yes
-add_core = BNG
+ 
 fort_15th = yes
 discovered_by = indian
 discovered_by = muslim
@@ -24,7 +24,7 @@ center_of_trade = 2
 
 1453.1.1 = { capital = "Gaur" }
 1538.6.1 = { controller = MUG } # Mughal Invasion
-1539.1.1 = { controller = BNG } # Surs again in control
+1539.1.1 = {   } # Surs again in control
 1570.1.1 = { religion = sunni }
 1576.7.12 = {
 	owner = MUG
@@ -71,8 +71,8 @@ center_of_trade = 2
 	revolt = { }
 } # Muhammed Shuja defeated by Aurangzeb
 1707.3.15 = {
-	owner = BNG
-	controller = BNG
+	 
+	 
 	remove_core = MUG
 	capital = "Murshidabad"
 }

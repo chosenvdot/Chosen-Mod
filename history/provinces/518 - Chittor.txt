@@ -25,9 +25,9 @@ center_of_trade = 1
 1534.1.1 = { controller = GUJ } # War with Gujarat
 1536.1.1 = { controller = MER } # War with Gujarat ends
 1544.1.1 = {
-	owner = BNG
-	controller = BNG
-	add_core = BNG
+	 
+	 
+	 
 } # Sur expansion
 1545.5.22 = {
 	owner = MER

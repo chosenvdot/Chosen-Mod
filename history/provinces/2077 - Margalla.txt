@@ -55,9 +55,9 @@ discovered_by = chinese
 } # Battle of Panipat & Tag Change
 1540.1.1 = { religion = sikhism }
 1544.1.1 = {
-	owner = BNG
-	controller = BNG
-	add_core = BNG
+	 
+	 
+	 
 } # Sur expansion
 1553.1.1 = {
 	owner = SRH

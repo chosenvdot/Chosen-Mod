@@ -1,8 +1,8 @@
  
 #2399 - Pagan
 
-owner = TAU
-controller = TAU
+ 
+ 
 culture = burmese
 religion = buddhism
 capital = "Pagan"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 3
 is_city = yes
-add_core = TAU
+ 
 
 
 
@@ -27,9 +27,9 @@ discovered_by = indian
 	remove_core = AVA
 }
 1535.1.1 = { discovered_by = POR }
-1554.1.1 = { add_core = TAU }
-1555.1.22 = { controller = TAU }
+1554.1.1 = {  
+1555.1.22 = {   }
 1563.4.1 = {	
-	owner = TAU
+	 
 	remove_core = SST
 }

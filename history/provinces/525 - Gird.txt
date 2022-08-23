@@ -36,9 +36,9 @@ discovered_by = chinese
 	controller = GWA
 } # Sher Shah Conquers Delhi
 1543.1.1 = { 
-	owner = BNG
-	controller = BNG
-	add_core = BNG
+	 
+	 
+	 
 	fort_15th = no
 	fort_16th = yes
 } # Suri Expansion

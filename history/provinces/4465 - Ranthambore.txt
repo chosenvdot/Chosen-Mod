@@ -44,9 +44,9 @@ discovered_by = chinese
 	remove_core = MUG
 } # Independent after Delhi's fall
 1544.1.1 = {
-	owner = BNG
-	controller = BNG
-	add_core = BNG
+	 
+	 
+	 
 } # Sur expansion
 1545.5.22 = {
 	owner = HAD

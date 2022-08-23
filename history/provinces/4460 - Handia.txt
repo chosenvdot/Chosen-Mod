@@ -32,9 +32,9 @@ discovered_by = chinese
 	remove_core = MUG
 } # Reverts to Gujarati control and is granted independence
 1543.1.1 = {
-	owner = BNG
-	controller = BNG
-	add_core = BNG
+	 
+	 
+	 
 } # Conquered by Sher Shah Sur
 1545.5.22 = {
 	owner = MLW

@@ -1,8 +1,8 @@
  
 #2039 - Sunderbans
 
-owner = BNG
-controller = BNG
+ 
+ 
 culture = bengali
 religion = hinduism
 capital = "Bagerhat"
@@ -12,7 +12,7 @@ base_tax = 2
 base_production = 2 
 base_manpower = 2 
 is_city = yes
-add_core = BNG
+ 
 
 
 
@@ -56,8 +56,8 @@ discovered_by = chinese
 	revolt = { }
 } # Muhammed Shuja defeated by Aurangzeb
 1707.3.15 = {
-	owner = BNG
-	controller = BNG
+	 
+	 
 }
 1760.1.1 = {
 	owner = GBR

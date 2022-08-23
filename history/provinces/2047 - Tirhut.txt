@@ -24,18 +24,18 @@ center_of_trade = 1
 1497.1.1 = { controller = DLH }
 1498.1.1 = { controller = TRT }
 1524.1.1 = {
-	controller = BNG
-	owner = BNG
-	add_core = BNG
+	 
+	 
+	 
 	capital = "Darbhanga"
 }
 1529.1.1 = { revolt = { type = pretender_rebels } } # Sur control
 1538.1.1 = {
-	controller = BNG
+	 
 	revolt = { }
 } # Gaur has fallen
 1538.6.1 = { controller = MUG } # Mughal Invasion
-1539.1.1 = { controller = BNG } # Surs again in control
+1539.1.1 = {   in control
 1575.1.1 = {
 	owner = MUG
 	controller = MUG
@@ -69,8 +69,8 @@ center_of_trade = 1
 	revolt = { }
 } # Muhammed Shuja defeated by Aurangzeb
 1707.3.15 = {
-	owner = BNG
-	controller = BNG
+	 
+	 
 }
 1707.5.12 = { discovered_by = GBR }
 1765.1.1 = {

@@ -1,8 +1,8 @@
  
 #2398 - Thaungdut
 
-owner = MMA
-controller = MMA
+ 
+ 
 culture = chin
 religion = animism
 capital = "Hsawngsup"
@@ -12,8 +12,8 @@ base_tax = 3
 base_production = 3
 base_manpower = 1
 is_city = yes
-add_core = MMA
-add_core = MYA
+ 
+ 
 
 
 
@@ -21,7 +21,7 @@ discovered_by = chinese
 discovered_by = indian
 
 1449.1.1 = {
-	owner = MYA
+	 
 	 
         remove_core = MMA
 }
@@ -32,23 +32,23 @@ discovered_by = indian
 	add_core = SST
 	remove_core = MYA
 }
-1554.1.1 = { add_core = TAU }
-1559.1.1 = { controller = TAU }
-1563.4.1 = { owner = TAU }
+1554.1.1 = {  
+1559.1.1 = {  
+1563.4.1 = {   }
 1599.1.1 = {
 	owner = SST
 	controller = SST
 }
 1605.1.1 = {
-	owner = TAU
-	controller = TAU
+	 
+	 
 }
 1752.1.1 = {
 	owner = SST
 	controller = SST
 }
 1754.1.1 = {
-	owner = TAU
-	controller = TAU
+	 
+	 
 }
 1760.1.1 = { discovered_by = GBR }

@@ -29,8 +29,8 @@ discovered_by = chinese
 } # Mahmud Begada captures champaner
 1498.1.1 = { discovered_by = POR }
 1544.1.1 = {
-	owner = BNG
-	controller = BNG
+	 
+	 
 } # Sur expansionism
 1545.1.1 = {
 	owner = GUJ

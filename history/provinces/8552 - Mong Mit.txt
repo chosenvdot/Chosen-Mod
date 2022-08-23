@@ -13,8 +13,8 @@ base_production = 5
 base_manpower = 2
 is_city = yes
  
-owner = MYA
-add_core = MYA
+ 
+ 
  
 
 
@@ -28,16 +28,16 @@ discovered_by = indian
 	add_core = SST
 	remove_core = MMT
 }
-1554.1.1 = { add_core = TAU }
-1559.1.1 = { controller = TAU }
-1563.4.1 = { owner = TAU }
+1554.1.1 = {  
+1559.1.1 = {  
+1563.4.1 = {   }
 1599.1.1 = {
 	owner = SST
 	controller = SST
 }
 1605.1.1 = {
-	owner = TAU
-	controller = TAU
+	 
+	 
 }
 1655.1.1 = { discovered_by = SPA }#Novus Atlas Sinensis
 1752.1.1 = {
@@ -45,7 +45,7 @@ discovered_by = indian
 	controller = SST
 }
 1754.1.1 = {
-	owner = TAU
-	controller = TAU
+	 
+	 
 }
 1760.1.1 = { discovered_by = GBR }

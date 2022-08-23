@@ -1,8 +1,8 @@
  
 #562 - Koch Behar
 
-owner = ASS
-controller = ASS
+ 
+ 
 culture = assamese
 religion = hinduism
 capital = "Kamatapur"
@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = ASS
+ 
 discovered_by = indian
 discovered_by = muslim 
 discovered_by = ottoman

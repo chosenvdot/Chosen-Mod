@@ -2,9 +2,9 @@
 # ex 8599
 # wasteland in vanilla
 
-owner = TAU
-controller = TAU
-add_core = TAU
+ 
+ 
+ 
 culture = karen
 religion = buddhism
 capital = "Hpa An"
@@ -29,7 +29,7 @@ discovered_by = ottoman # 1.31
 	add_core = PEG
 }
 1755.1.1 = {
-	owner = TAU
-	controller = TAU
+	 
+	 
 	remove_core = PEG
 }

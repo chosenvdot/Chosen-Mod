@@ -1,8 +1,8 @@
  
 #561 - Bengal Delta
 
-owner = BNG
-controller = BNG
+ 
+ 
 culture = bengali
 religion = hinduism
 capital = "Howrah"
@@ -12,7 +12,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 3
 is_city = yes
-add_core = BNG
+ 
 discovered_by = indian
 discovered_by = nomad_group
 discovered_by = muslim
@@ -109,5 +109,5 @@ add_permanent_province_modifier = {
 		investor = GBR
 	}
 }
-1756.1.1 = { controller = BNG } # Captured by Siraj-ud-daullah
+1756.1.1 = {  y Siraj-ud-daullah
 1757.6.23 = { controller = GBR } # Battle of Plassey, a new Nawab is installed by the British

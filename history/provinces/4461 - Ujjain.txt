@@ -37,8 +37,8 @@ center_of_trade = 2
 	remove_core = GUJ
 } # Reverts to Gujarati control and granted independence
 1543.1.1 = {
-	owner = BNG
-	controller = BNG
+	 
+	 
 } # Conquered by Sher Shah Sur
 1545.5.22 = {
 	owner = MLW

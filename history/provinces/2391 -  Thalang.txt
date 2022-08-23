@@ -36,4 +36,4 @@ discovered_by = ottoman
 	 
 	 
 }
-1809.1.1 = { add_core = TAU }
+1809.1.1 = {  

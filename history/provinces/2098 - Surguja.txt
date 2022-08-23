@@ -1,8 +1,8 @@
  
 #2098 - Surguja
 
-owner = NGP
-controller = NGP
+ 
+ 
 culture = jharkhandi
 religion = hinduism
 capital = "Surguja"
@@ -12,7 +12,7 @@ base_tax = 2
 base_production = 2 
 base_manpower = 2 
 is_city = yes
-add_core = NGP
+ 
 add_core = SRG
 add_core = RTT
 discovered_by = indian

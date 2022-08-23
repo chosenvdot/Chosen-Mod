@@ -1,8 +1,8 @@
  
 #4477 - Satgaon
 
-owner = BNG
-controller = BNG
+ 
+ 
 culture = bengali
 religion = hinduism
 capital = "Satgaon"
@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = BNG
+ 
 fort_15th = yes
 discovered_by = indian
 discovered_by = nomad_group
@@ -79,5 +79,5 @@ center_of_trade = 2
 	controller = GBR
 	add_core = GBR
 }
-1756.1.1 = { controller = BNG } # Captured by Siraj-ud-daullah
+1756.1.1 = {  y Siraj-ud-daullah
 1757.6.23 = { controller = GBR } # Battle of Plassey, a new Nawab is installed by the British

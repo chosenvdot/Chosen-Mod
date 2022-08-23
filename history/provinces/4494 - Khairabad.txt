@@ -32,7 +32,7 @@ discovered_by = chinese
 	unrest = 0
 } #Conquered by Babur
 1526.4.21 = {
-	owner = BNG
+	 
 	controller = REB
 	revolt = { type = anti_tax_rebels name = "Landless Nobles" }
 } # Contested area with lots of different factions fighting eachother after Panipat
@@ -56,9 +56,9 @@ discovered_by = chinese
 	revolt = { }
 } #Lodi Pretender beaten
 1540.1.1 = {
-	owner = BNG
-	controller = BNG
-	add_core = BNG
+	 
+	 
+	 
 } # Sher Shah Conquers Delhi
 1553.1.1 = {
 	owner = JNP
