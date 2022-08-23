@@ -1,8 +1,8 @@
  
 #534 - Calicut
 
-owner = VND
-controller = VND
+ 
+ 
 culture = malayalam
 religion = hinduism
 capital = "Calicut"

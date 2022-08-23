@@ -1,8 +1,8 @@
  
 #535 - Kochin
 
-owner = VND
-controller = VND
+ 
+ 
 culture = malayalam
 religion = hinduism
 capital = "Kochin"

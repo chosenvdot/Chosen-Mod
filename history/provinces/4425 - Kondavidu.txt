@@ -1,8 +1,8 @@
  
 #4425 - Kondavidu
 
-owner = YOR #In custody of Rajamahendri Reddys after the Reddys of Kondavidu were overthrown by Vijayanagar in 1428.
-controller = YOR
+  #In custody of Rajamahendri Reddys after the Reddys of Kondavidu were overthrown by Vijayanagar in 1428.
+ 
 culture = telegu
 religion = hinduism
 capital = "Kondavidu"
@@ -14,7 +14,7 @@ base_manpower = 2
 fort_15th = yes
 is_city = yes
 add_core = GOC
-add_core = YOR
+ 
 add_brahmins_or_church_effect = yes
 discovered_by = indian
 discovered_by = muslim

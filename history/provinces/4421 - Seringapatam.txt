@@ -1,8 +1,8 @@
  
 #4421 - Seringapatam
 
-owner = VND
-controller = VND
+ 
+ 
 culture = kannada
 religion = hinduism
 capital = "Seringapatam"
