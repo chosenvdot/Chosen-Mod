@@ -1,6 +1,5 @@
-government = gc_ethiopian_government
-add_government_reform = gc_ethiopian_theocracy_reform
-add_government_reform = GC_Ethiopia_Mechanic
+government = monarchy
+add_government_reform = feudalism_reform
 government_rank = 3
 primary_culture = amhara
 religion = coptic
