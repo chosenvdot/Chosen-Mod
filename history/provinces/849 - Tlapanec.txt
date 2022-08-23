@@ -1,8 +1,8 @@
 
 #849 - Tlapanec
 
-owner = AZT
-controller = AZT
+ 
+ 
 culture = tlapanec
 religion = nahuatl
 capital = "Acapulco"
@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = AZTf
+ 
 1444.1.1 = { discovered_by = MAY }
 1444.1.1 = { discovered_by = ZAP }
 1444.1.1 = { discovered_by = AZT }
@@ -20,9 +20,9 @@ extra_cost = 8
 center_of_trade = 1
 
 1505.1.1 = { 
-	owner = AZT
-	controller = AZT 
-	add_core = AZT
+	 
+	 
+	 
 } #Estimated; during Moctezuma II's rign
 1521.8.13 = {
 	owner = TLA

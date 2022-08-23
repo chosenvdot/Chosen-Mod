@@ -1,7 +1,7 @@
  
 # new in 1.31
 
-#tribal_owner = AGQ # ???
+# 
 culture = anishinabe #was algonquin
 religion = totemism
 capital = "Batiscan"

@@ -15,7 +15,7 @@ native_ferocity = 2
 native_hostileness = 3
 
 
-1444.1.1 = { tribal_owner = NAH }
+1444.1.1 = {  
 
 discovered_by = north_american
 

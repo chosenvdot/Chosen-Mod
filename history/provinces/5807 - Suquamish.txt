@@ -19,7 +19,7 @@ discovered_by = north_american
 #discovered_by = bt_northwest_tech
 
 
-1444.1.1 = { tribal_owner = SAL }
+1444.1.1 = {  
 1444.11.15 = { #BeyondTypus batch edit shortcut no native start date begin
 	owner = XXX
 	controller = XXX

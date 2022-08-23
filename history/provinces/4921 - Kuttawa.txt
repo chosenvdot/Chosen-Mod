@@ -1,7 +1,7 @@
  
 # new in 1.31
 
-tribal_owner = KSP # ???
+ ?
 culture = shawnee
 religion = totemism
 capital = "Kuttawa"
@@ -16,7 +16,7 @@ native_hostileness = 6
 
 discovered_by = north_american
 
-#1444.1.1 = { tribal_owner = KSP } # redundant
+#1444.1.1 = {  redundant
 
 1774.10.19 = {
 	owner = GBR

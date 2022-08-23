@@ -2,7 +2,7 @@
 # ex 5056
 # vanilla uncolonised
 
-#tribal_owner = AGQ # ??? 1.31
+# ? 1.31
 culture = anishinabe # BT; algonquin
 religion = totemism
 capital = "Kitcisìpi" # BT; "Ottagotouemin"; Not a good name, just the name of the river. All names I found came from the story of an explorer who lost some matches downstream, and I'm no using that

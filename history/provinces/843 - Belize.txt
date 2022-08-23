@@ -1,7 +1,7 @@
 
 #843 - Belize
-owner = AZT
-controller = AZT
+ 
+ 
 culture = yucatec
 religion = mesoamerican_religion
 capital = "Chactemal" 
@@ -12,7 +12,7 @@ base_production = 3
 base_manpower = 2 
 is_city = yes 
 add_local_autonomy = 25
-add_core = AZT
+ 
 discovered_by = mesoamerican
 1502.1.1 = { discovered_by = CAS } # Christopher Columbus, no attempt to colonize
 1516.1.23 = { discovered_by = SPA }

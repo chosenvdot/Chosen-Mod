@@ -2,9 +2,9 @@
 # No previous file for Iximché
 
 culture = highland_mayan
-owner = AZT
-controller = AZT
-add_core = AZT
+ 
+ 
+ 
 is_city = yes
 religion = mesoamerican_religion
 capital = "Iximché"
