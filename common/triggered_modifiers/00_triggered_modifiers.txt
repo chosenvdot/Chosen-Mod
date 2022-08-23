@@ -965,28 +965,6 @@ defense_of_the_empire_modifier = {
 ######################################
 # Japanese Industrilization 
 ######################################
-japanese_catch_up = {
-	potential = {
-		ai = no
-		OR = {
-			 
-			tag = SMZ
-			tag = JAP
-		}
-	}
-	trigger = {
-		is_year = 1470
-		not = {
-			is_year = 1525
-		}
-		}
-	development_cost = -0.2
-	build_cost = -0.3 
-	trade_efficiency = 0.3
-	global_tax_modifier = 0.3
-	advisor_cost = -0.35
-}
-
 ######################################
 # CAVRATIO
 ######################################
