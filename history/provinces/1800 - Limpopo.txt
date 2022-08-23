@@ -9,9 +9,9 @@ hre = no
 base_tax = 1
 base_production = 1
 base_manpower = 1
-owner = ZAN
-controller = ZAN
-add_core = ZAN
+ 
+ 
+ 
 native_size = 40
 native_ferocity = 20
 native_hostileness = 10 

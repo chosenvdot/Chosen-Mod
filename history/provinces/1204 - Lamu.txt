@@ -9,9 +9,9 @@ base_manpower = 2
 trade_goods = ivory
 hre = no
 base_tax = 2
-owner = ZAN
-controller = ZAN
-add_core = ZAN
+ 
+ 
+ 
 base_production = 2
 add_local_autonomy = 35
 discovered_by = east_african
