@@ -550,11 +550,6 @@ gc_tunis_5 = {
 						}
 					}
 				}
-				358 = {
-					add_or_spawn_center_of_trade = { level=1 }
-				}
-			}
-			else = { #Shame this will never trigger unless without Dharma.
 				358 = { 
 					add_province_modifier = {
 						name = "tun_restoration_of_alexandra"

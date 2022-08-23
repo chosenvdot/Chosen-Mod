@@ -183,9 +183,9 @@ bt_danish_trade_2 = {
 				name = "dan_sound_toll_strengthened"
 				duration = -1
 			}
-			7766 = {
-				add_or_spawn_center_of_trade = { level=1 }
-			}
+			#7766 = {
+				#add_or_spawn_center_of_trade = { level=1 }
+			#}
 			38 = {
 				if = {
 					limit = {
@@ -408,7 +408,7 @@ bt_danish_colonialism = {
 					owns = 23 #Bergen
 				}
 				23 = {
-					add_or_spawn_center_of_trade = { level = 1 }
+				#	add_or_spawn_center_of_trade = { level = 1 }
 					add_base_tax = 4
 					add_base_production = 4
 				}
@@ -418,7 +418,7 @@ bt_danish_colonialism = {
 					owns = 15 #Ribe
 				}
 				15 = {
-					add_or_spawn_center_of_trade = { level = 1 }
+				#	add_or_spawn_center_of_trade = { level = 1 }
 					add_base_tax = 3
 					add_base_production = 3
 				}
@@ -631,15 +631,15 @@ bt_danish_internal_missions = {
 			12 = { #Christiania district of Copenhagen
 				add_base_tax = 4
 				add_base_production = 4
-				add_or_spawn_center_of_trade = { level = 1 }
+				#add_or_spawn_center_of_trade = { level = 1 }
 			}
 			17 = {
 				rename_capital = "Christiania"
-				add_or_spawn_center_of_trade = { level = 1 }
+				#add_or_spawn_center_of_trade = { level = 1 }
 			}
 			7772 = {
 				rename_capital = "Christiansand"
-				add_or_spawn_center_of_trade = { level = 1 }
+				#add_or_spawn_center_of_trade = { level = 1 }
 			}
 			if = { #Christiansted
 				limit = {

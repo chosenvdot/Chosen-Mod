@@ -1,7 +1,0 @@
-spriteTypes = {
-	spriteType = {
-		name = "POMPEII_eventPicture"
-		texturefile = "gfx/event_pictures/BT/POMPEII_eventPicture.dds"
-		alwaystransparent = yes
-	}
-}
