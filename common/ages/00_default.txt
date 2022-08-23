@@ -163,8 +163,8 @@ age_of_discovery = {
 			}
 		}
 		ab_colony_boost_development = {
-			rule = {
-				global_colonial_growth = 20
+			modifier = {
+				global_colonial_growth = 50
 			}
 			ai_will_do = {
 				factor = 10

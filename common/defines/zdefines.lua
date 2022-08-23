@@ -112,7 +112,6 @@ NDefines.NReligion.MIN_CARDINALS = 15										-- Least amount of cardinals/ Sta
 NDefines.NReligion.MAX_CARDINALS = 100
 NDefines.NReligion.MAX_CARDINALS_PER_COUNTRY = 40
 NDefines.NReligion.MAX_PAPAL_INFLUENCE = 999
-NDefines.NReligion.CONSECRATE_PATRIARCH_THRESHOLD = 60
 
 
 -- Government
