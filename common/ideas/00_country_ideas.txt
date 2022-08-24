@@ -2011,7 +2011,7 @@ KOR_ideas = {
 	}
 	
 	trigger = {
-		 
+		tag = KOR
 	}
 	free = yes
 	
