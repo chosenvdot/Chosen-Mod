@@ -158,7 +158,7 @@ wealth_of_carbery_modifier = {
 }
 
 stannery_law_modifier = {
-	trade_goods_size = .3
+	trade_goods_size = .5
 }
 
 ##################################################################################################
