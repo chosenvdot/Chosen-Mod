@@ -597,6 +597,9 @@ minor_buff = {
 			tag = TCK
 			tag = SWI
 			tag = DAN
+			tag = GEN
+			tag = VEN
+			tag = NAP
 		}
 	}
 	trigger = {
@@ -604,17 +607,17 @@ minor_buff = {
 			development = 400
 		}
 	}
-	ae_impact = -.2
+	ae_impact = -0.2
 }
 
-lithuania_blowup = {
-	potential = {
-		tag = LIT
-	}
-	trigger = {
-		ai = yes
-	}
-	global_unrest = 40
-	land_morale = -0.5 
-	discipline = -5
-}
+#lithuania_blowup = {
+#	potential = {
+#		tag = LIT
+#	}
+#	trigger = {
+#		ai = yes
+#	}
+#	global_unrest = 40
+#	land_morale = -0.5 
+#	discipline = -5`
+#}
