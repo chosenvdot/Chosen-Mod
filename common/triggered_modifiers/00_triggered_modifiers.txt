@@ -585,3 +585,24 @@ italian_wars_triggered_modifier = {
 	mercenary_cost = -0.10
 	mercenary_discipline = 0.05
 }
+
+
+minor_buff = {
+	potential = {
+		OR = {
+			tag = HES 
+			tag = BRA
+			tag = ROT
+			tag = HOL
+			tag = TCK
+			tag = SWI
+			tag = DAN
+		}
+	}
+	trigger = {
+		NOT = {
+			development = 400
+		}
+	}
+	ae_impact = -.2
+}
