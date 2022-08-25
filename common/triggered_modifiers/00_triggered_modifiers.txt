@@ -606,3 +606,15 @@ minor_buff = {
 	}
 	ae_impact = -.2
 }
+
+lithuania_blowup = {
+	potential = {
+		tag = LIT
+	}
+	trigger = {
+		ai = yes
+	}
+	global_unrest = 40
+	land_morale = -0.5 
+	discipline = -5
+}
