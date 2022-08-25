@@ -12,6 +12,7 @@ NDefines.NGraphics.DIRECTION_POINTER_INTERPOLATION_SPEED = 0.1
 NDefines.NAI.DEVELOPMENT_CAP_BASE = 50
 
 --- Diplo
+NDefines.NDiplomacy.FABRICATE_CLAIM_COST = 10
 NDefines.NDiplomacy.PO_FORM_PU_AE = 0.05
 NDefines.NDiplomacy.DAYS_TO_DECLARE_WAR = 5
 NDefines.NDiplomacy.IMPERIAL_AUTHORITY_FROM_PRINCES = 0.15
@@ -29,8 +30,8 @@ NDefines.NDiplomacy.NUM_OF_GREAT_POWERS = 10
 NDefines.NDiplomacy.SHAREMAP_PRESTIGE_TRANSFER_LOSE = 0				-- Prestige transferred for the Request to Share Maps diplomatic action.
 NDefines.NDiplomacy.SHAREMAP_PRESTIGE_TRANSFER_GAIN = 0
 NDefines.NDiplomacy.DISHONORABLE_PEACE_MONTHS = 0
-NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.55
-NDefines.NDiplomacy.PO_RETURN_CORES_AE = 0.25
+NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.5
+NDefines.NDiplomacy.PO_RETURN_CORES_AE = 0.3
 NDefines.NDiplomacy.DISHONORABLE_PEACE_WARSCORE = 0
 NDefines.NDiplomacy.DEFENDER_OF_FAITH_TRUST_LOSS = 0
 NDefines.NDiplomacy.MAX_PEACE_TREATY_COST = 100
@@ -40,12 +41,12 @@ NDefines.NDiplomacy.COALITION_YEARS = 5
 NDefines.NDiplomacy.REVANCHISM_MONTHLY_DECAY = 0.833
 NDefines.NDiplomacy.MAX_ASKED_TRADE_POWER = 100
 NDefines.NDiplomacy.AE_OTHER_CONTINENT = 5
-NDefines.NDiplomacy.AE_SAME_CULTURE = 0.3
-NDefines.NDiplomacy.AE_SAME_CULTURE_GROUP = 0.18
+NDefines.NDiplomacy.AE_SAME_CULTURE = 0.5
+NDefines.NDiplomacy.AE_SAME_CULTURE_GROUP = 0.25
 NDefines.NDiplomacy.AE_INFIDEL_CONQUEST = 0.125 		-- different religion group conquered same religion province
-NDefines.NDiplomacy.AE_SAME_RELIGION = 0.25
+NDefines.NDiplomacy.AE_SAME_RELIGION = 0.5
 NDefines.NDiplomacy.AE_SAME_RELIGION_GROUP = 0.0
-NDefines.NDiplomacy.AE_DIFFERENT_RELIGION = -0.25
+NDefines.NDiplomacy.AE_DIFFERENT_RELIGION = -0.5
 NDefines.NDiplomacy.AE_HRE_INTERNAL = 0.25
 NDefines.NDiplomacy.AE_ATTACKER_DEVELOPMENT = 0.01		-- from 0p01
 NDefines.NDiplomacy.AE_DEFENDER_DEVELOPMENT = 0.01	
@@ -80,8 +81,8 @@ NDefines.NCountry.CORE_COLONY = 0.25								-- Multiplied with development, colo
 NDefines.NCountry.CORE_OVERSEAS = 0.25							-- Multiplied with development, colonized by country or overseas
 NDefines.NCountry.CORE_SAME_REGION = 0.125						-- Multiplied with development, for colonial nations
 NDefines.NCountry.CORE_SAME_CONTINENT = 0.35						-- Multiplied with development, for colonial nations
-NDefines.NCountry.CORE_HAD_CLAIM = 0.2					-- Impacts MODIFIER_CORE_CREATION
-NDefines.NCountry.CORE_HAD_PERMANENT_CLAIM = 0.25
+NDefines.NCountry.CORE_HAD_CLAIM = 0.1					-- Impacts MODIFIER_CORE_CREATION
+NDefines.NCountry.CORE_HAD_PERMANENT_CLAIM = 0.15
 NDefines.NCountry.PS_MAKE_PROVINCE_CORE = 10						-- Impacts MODIFIER_CORE_CREATION
 
 --NMilitary
