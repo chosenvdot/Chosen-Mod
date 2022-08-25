@@ -3,8 +3,8 @@
 #Region - Low Countries
 #Area - Frisia
 
-owner = FRI
-controller = FRI
+owner = HOL
+controller = HOL
 capital = "Sneek"
 is_city = yes
 culture = frisian
@@ -14,7 +14,7 @@ base_tax = 3
 base_production = 4
 trade_goods = livestock 			#SUPERCOWS
 base_manpower = 4 
-add_core = FRI
+add_core = HOL
 
 discovered_by = western
 discovered_by = muslim
