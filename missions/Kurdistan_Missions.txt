@@ -7,7 +7,6 @@ h_krd_missions = {
 	potential ={
 		OR = {
 			tag = KRD
-			tag = QAR
 		}
 	}
 	has_country_shield = yes

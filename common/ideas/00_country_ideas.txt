@@ -6468,45 +6468,6 @@ jerusalem_ideas = {
 	}
 }
 
-KHM_ideas = {
-	start = {
-		advisor_cost = -0.10
-		global_tax_modifier = 0.1
-	}
-	
-	bonus = {
-		global_manpower_modifier = 0.2
-	}
-	
-	trigger = {
-		tag = KHM
-	}
-	free = yes
-	
-	preah_ko_preah_keo = {
-		land_morale = 0.1
-	}
-	khm_theravada = {
-		tolerance_own = 1
-		improve_relation_modifier = 0.15
-	}
-	khm_cham_migration = {
-		navy_tradition = 1
-	}
-	khm_river_trade = {
-		trade_efficiency = 0.1
-	}
-	khm_european_mercenaries = {
-		discipline = 0.05
-	}
-	khm_restore_angkor = {
-		prestige = 1
-	}
-	khm_modern_navy = {
-		ship_durability = 0.05
-	}
-}
-
 ZAZ_ideas = {
 	start = {
 		loot_amount = 0.25
