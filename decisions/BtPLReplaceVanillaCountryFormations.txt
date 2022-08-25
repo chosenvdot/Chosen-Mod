@@ -1297,7 +1297,6 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			adm_tech = 10
-			owns_core_province = 205 #Savoy
 			owns_core_province = 103 #Piedmont
 			owns_core_province = 102 #Nice
 			num_of_owned_provinces_with = {
