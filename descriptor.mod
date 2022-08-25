@@ -4,4 +4,4 @@ tags={
 }
 name="Chosen-Mod"
 supported_version="1.33.3"
-remote_file_id="2853957311"
+remote_file_id="2853959092"
