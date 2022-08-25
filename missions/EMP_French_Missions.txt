@@ -500,6 +500,7 @@ emp_france_missions_2 = {
 					type = all
 					OR = {
 						province_id = 87
+						province_id = 3110
 						AND = {
 							NOT = { owned_by = ENG }
 							NOT = { owned_by = GBR }
