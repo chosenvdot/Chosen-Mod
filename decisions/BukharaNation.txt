@@ -24,7 +24,6 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 2370 
 				province_id = 440 
 				province_id = 2362 
 				province_id = 1973 
@@ -47,7 +46,6 @@ country_decisions = {
 			has_institution = feudalism
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 2370 
 			owns_core_province = 440 
 			owns_core_province = 2362 
 			owns_core_province = 1973 
@@ -65,6 +63,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+			add_republican_tradition = 100
 			set_country_flag = bukharan_nation
 			442 = {
 				move_capital_effect = yes
