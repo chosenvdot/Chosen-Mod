@@ -51,6 +51,7 @@ NDefines.NDiplomacy.AE_HRE_INTERNAL = 0.25
 NDefines.NDiplomacy.AE_ATTACKER_DEVELOPMENT = 0.01		-- from 0p01
 NDefines.NDiplomacy.AE_DEFENDER_DEVELOPMENT = 0.01	
 NDefines.NDiplomacy.PO_BECOME_VASSAL_AE = 0.25	
+NDefines.NDiplomacy.INTEGRATE_UNION_MIN_YEARS = 15
 NDefines.NDiplomacy.INTEGRATE_VASSAL_MIN_YEARS = 5
 NDefines.NDiplomacy.AE_DISTANCE_BASE = 0.75 --0.75 per 100 distance
 NDefines.NDiplomacy.AE_SAME_OVERLORD = 0.5
