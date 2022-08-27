@@ -320,7 +320,7 @@ emp_hun_economy_branch = {
 		}
 		trigger = {
 			has_institution = renaissance
-			prestige = 50
+			prestige = 30
 			owns_core_province = 153
 		}
 		effect = {
@@ -439,11 +439,9 @@ emp_hun_economy_political_branch = {
 			}
 		}
 		effect = {
-			capital_scope = {
-				add_province_modifier = {
-					name = hun_great_city
-					duration = 7300
-				}
+			add_country_modifier = {
+				name = tuscany_fernandino_construction
+				duration = 0
 			}
 		}
 	}
@@ -825,22 +823,6 @@ emp_hun_bulwark_of_christianity_branch = {
 		icon = shield_of_christendom
 		required_missions = { hun_ottoman_borders_four }
 		position = 8
-		provinces_to_highlight = {
-			owner = {
-				religion_group = muslim
-				OR = {
-					culture_group = turko_semitic
-					is_neighbor_of = root
-					capital_scope = {
-						continent = europe
-					}
-				}
-				army_size = root
-			}
-			ROOT = {
-				religion_group = christian
-			}
-		}
 		trigger = {
 			if = {
 				limit = {
@@ -848,19 +830,7 @@ emp_hun_bulwark_of_christianity_branch = {
 				}
 				custom_trigger_tooltip = {
 					tooltip = emp_hun_bulwark_of_christianity_trigger_tooltip
-					NOT = {
-						any_country = {
-							religion_group = muslim
-							OR = {
-								culture_group = turko_semitic
-								is_neighbor_of = root
-								capital_scope = {
-									continent = europe
-								}
-							}
-							army_size = root
-						}
-					}
+					army_size_percentage = 1
 				}
 			}
 			else = { #congrats, you've broken it.
