@@ -1094,6 +1094,7 @@ POR_ideas = {
 	}
 	the_bandeirantes = {
 		trade_efficiency = 0.15
+		discipline = 0.05
 	}
 	royal_absolutism = {
 		build_cost = -0.1
