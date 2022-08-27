@@ -443,19 +443,6 @@ union = {
 	end_date = 1526.1.1 ### XXX 1526.8.30
 }
 
-guarantee = {#Venice protected Zeta from Serbia and Ottomans
-	first = VEN
-	second = MON
-	start_date = 1444.1.1
-	end_date = 1478.1.1
-}
-guarantee = {#Hungary protected Serbia from Ottoman attacks, arguably Serbia was a vassal
-	first = HUN
-	second = SER
-	start_date = 1444.1.1
-	end_date = 1459.1.1
-}
-
 #Calenburg PU over Gottingen
 #(JP) Just checked with Gottingen, it seems Otto II abdicated in 1435 but was not inherited till 1463 by William I/III/IV. I think you are right in representing it as a PU 1435-1463. It wasn't actually merged into Calenburg until 1495 it seems? Though because it was split again in 1473 for William VI
 union = { 
