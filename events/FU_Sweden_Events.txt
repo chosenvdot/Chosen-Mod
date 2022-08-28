@@ -1,0 +1,1198 @@
+namespace = FU_Sweden_Events 
+
+country_event = { #Svensk & Norska Unionen
+	id = FU_Sweden_Events.1 
+	title = FU_Sweden_Events.1.t 
+	desc = FU_Sweden_Events.1.d 
+	picture = SIEGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = FU_Sweden_Events.1.a 
+		
+		SWE = { create_union = NOR }
+		add_liberty_desire = -50 
+		ai_chance = { factor = 100 }
+		add_stability_or_adm_power = yes 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.1.b 
+		
+		add_stability = -1 
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10 
+		}
+	}
+}
+
+country_event = { #Sweden's First University
+	id = FU_Sweden_Events.2 
+	title = FU_Sweden_Events.2.t 
+	desc = FU_Sweden_Events.2.d 
+	picture = GREAT_BUILDING_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Sweden_Events.2.a 
+		
+		1 = {
+			add_province_modifier = {
+				name = swe_gratie_veritas_naturae_modifier
+				duration = -1 
+			}
+			add_building = university 
+		}
+		add_years_of_income = -0.5
+		change_innovativeness = 5 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.2.b
+		
+		add_estate_loyalty = {
+			estate = estate_church 
+			loyalty = 15 
+		}
+		add_legitimacy = 10 
+		change_innovativeness = 2 
+	}
+}
+
+country_event = { #Lund Universitet 
+	id = FU_Sweden_Events.3 
+	title = FU_Sweden_Events.3.t 
+	desc = FU_Sweden_Events.3.d
+	picture = UNIVERSITY_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Sweden_Events.3.a #Ad utrumque paratus!
+		
+		if = {
+			limit = {
+				6 = { 
+					NOT = { has_building = university }
+				}
+			}
+			6 = { add_building = university }
+		}
+		else = { add_adm_power = 100 }
+		define_advisor = {
+			name = "Canutus Hahn"	 
+			skill = 3 
+			cost_multiplier = 0.25 
+			type = philosopher 
+		}
+		change_innovativeness = 5 
+	}
+}
+
+country_event = { #A Description of the Northern Peoples
+	id = FU_Sweden_Events.4 
+	title = FU_Sweden_Events.4.t 
+	desc = FU_Sweden_Events.4.d 
+	picture = BIG_BOOK_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Sweden_Events.4.a #I can't wait for the sequel!
+		
+		add_country_modifier = {
+			name = swe_prestigious_publications_modifier 
+			duration = -1 
+		}
+	}
+}
+
+country_event = { #Riksrag of the Estates
+	id = FU_Sweden_Events.5
+	title = FU_Sweden_Events.5.t 
+	desc = FU_Sweden_Events.5.d 
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Sweden_Events.5.a #Support the clerical estates.
+		
+		scaled_estate_church_land_share_effect = yes
+		add_estate_loyalty = {
+			estate = estate_church 
+			loyalty = 15 
+		}
+		add_country_modifier = {
+			name = swe_strong_clergy_modifier
+			duration = 7300 
+		}
+		add_adm_power = 50 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.5.b #Our interest lie with our merchants.
+		
+		scaled_estate_burghers_land_share_effect = yes
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = 15 
+		}
+		add_country_modifier = {
+			name = swe_strong_merchant_class_modifier
+			duration = 7300 
+		}
+		every_owned_province = {
+			limit = { province_has_center_of_trade_of_level = 2 }
+			add_base_production = 2
+		}				
+	}
+	
+	option = {
+		name = FU_Sweden_Events.5.c #Let us secure the support of the nobility, instead.
+		
+		scaled_estate_nobles_land_share_effect = yes
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 15 
+		}
+		add_country_modifier = {
+			name = swe_powerful_nobility_modifier
+			duration = 7300 
+		}
+		add_mil_power = 50 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.5.e #We need not depend on the old institutions!
+		
+		change_estate_land_share = {
+			estate = all
+			share = -10
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -20 
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -20 
+		}
+		add_estate_loyalty = {
+			estate = estate_church 
+			loyalty = -20 
+		}
+		every_owned_province = {
+			limit = { local_autonomy_above_min = 10 }
+			add_local_autonomy = -10 
+		}
+	}
+}
+
+country_event = { #Karoliner
+	id = FU_Sweden_Events.6 
+	title = FU_Sweden_Events.6.t 
+	desc = FU_Sweden_Events.6.d 
+	picture = LAND_MILITARY_eventPicture 
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = FU_Sweden_Events.6.a 
+		
+		add_country_modifier = {
+			name = swe_ga_pa_tactics_modifier 
+			duration = -1 
+		}
+	}
+}
+
+country_event = { #The Farms of Sweden 
+	id = FU_Sweden_Events.7 
+	title = FU_Sweden_Events.7.t 
+	desc = FU_Sweden_Events.7.d 
+	picture = FARMING_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = FU_Sweden_Events.7.a #The peasantry must own their lands. 
+		
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -15 
+		}
+		add_stability_or_adm_power = yes 
+		add_country_modifier = {
+			name = swe_free_peasant_class_modifier
+			duration = 3650
+		}
+	}
+	
+	option = {
+		name = FU_Sweden_Events.7.b #Reaffirm the status of the nobility.
+		
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 20 
+		}
+		add_years_of_income = 1 
+	}
+}
+
+country_event = { #The Sound Dues of Sweden
+	id = FU_Sweden_Events.8
+	title = FU_Sweden_Events.8.t 
+	desc = FU_Sweden_Events.8.d 
+	picture = LARGE_SHIPYARD_eventPicture 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Sweden_Events.8.a #Impose new Sound Dues.
+		
+		12 = { center_of_trade = 1 }
+	}
+	
+	option = {
+		name = FU_Sweden_Events.8.b #Let us create a market of free trade instead.
+		
+		add_country_modifier = {
+			name = swe_increased_free_trade_modifier 
+			duration = 9125 
+		}
+	}
+}
+
+country_event = { #Holstein's Position in the Empire
+	id = FU_Sweden_Events.9
+	title = FU_Sweden_Events.9.t 
+	desc = FU_Sweden_Events.9.d 
+	picture = HRE_eventPicture 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Sweden_Events.9.a #Demand Holstein's return!
+		
+		if = {
+			limit = { 
+				1775 = { 
+					NOT = { is_core = emperor }
+				}
+			}
+			1775 = { add_core = emperor }
+		}
+		add_imperial_influence = 5
+	}
+	
+	option = {
+		name = FU_Sweden_Events.9.b #Let us delegate their entry in the Empire!
+		
+		SWE = { 
+			country_event = { id = FU_Sweden_Events.10 }
+		}
+		add_dip_power = 50 
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { 
+	id = FU_Sweden_Events.10 
+	title = FU_Sweden_Events.10.t  
+	desc = FU_Sweden_Events.10.d 
+	picture = HRE_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Sweden_Events.10.a #Let us join the Holy Roman Empire! 
+		
+		set_in_empire = yes 
+		if = {
+			limit = {
+				NOT = { num_of_electors = 7 }
+			}
+			elector = yes 
+		}
+		add_historical_friend = emperor 
+		emperor = { add_historical_friend = ROOT }
+		emperor = { change_dip = 1 } 
+		change_dip = 1 
+		emperor = { add_imperial_influence = 5 }
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {
+		name = FU_Sweden_Events.10.b #Draw genitalia on the letter and send it back!
+		
+		add_power_projection = {
+			type = mission_rewards_power_projection
+			amount = 25
+		}
+		add_mil_power = 75 
+	}
+}
+
+country_event = {
+	id = FU_Sweden_Events.11 
+	title = FU_Sweden_Events.11.t 
+	desc = FU_Sweden_Events.11.d 
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Sweden_Events.11.a #Restore the Duchy of Pomerania under our flag!
+		
+		ai_chance = {
+			factor = 100
+			
+			modifier = {
+				factor = 0
+				NOT = { num_of_free_diplomatic_relations = 1 }
+			}
+		}
+		
+		vorpommern_area = {
+			limit = {
+				NOT = { is_core = POM }
+				owned_by = ROOT
+			}
+			add_core = POM
+		}
+		hinter_pommern_area = {
+			limit = {
+				NOT = { is_core = POM }
+				owned_by = ROOT
+			}
+			add_core = POM
+		}
+		release = POM 
+		POM = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			change_religion = ROOT 
+		}
+		create_march = POM
+		add_country_modifier = {
+			name = swe_restored_the_landtag_of_pomerania_modifier
+			duration = -1 
+		}
+	}
+	
+	option = {
+		name = FU_Sweden_Events.11.b #Bah, loot their estates!
+		
+		add_prestige = 20 
+		add_years_of_income = 0.4 
+	}
+}	
+	
+country_event = { #	
+	id = FU_Sweden_Events.12 
+	title = FU_Sweden_Events.12.t 
+	desc = FU_Sweden_Events.12.d 
+	picture = CONQUEST_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = { 
+		name = FU_Sweden_Events.12.a #They will serve the Swedish Crown!
+		
+		estonia_ingria_area = {
+			limit = {
+				NOT = { is_core = KUR }
+				owned_by = ROOT
+			}
+			add_core = KUR
+		}
+		livonia_area = {
+			limit = {
+				NOT = { is_core = KUR }
+			}
+			add_core = KUR
+		}
+		curonia_area = {
+			limit = {
+				NOT = { is_core = KUR }
+			}
+			add_core = KUR
+		}
+		release = KUR 
+		KUR = {
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			change_religion = ROOT 
+		}
+		create_march = KUR
+		KUR = {
+			add_country_modifier = {
+				name = swe_swedish_crown_authority_modifier
+				duration = -1 
+			}
+		}
+	}
+	
+	option = {
+		name = FU_Sweden_Events.12.b #Our lands, our rules.
+		
+		estonia_ingria_area = {
+			add_local_autonomy = -10 
+			add_devastation = -25 
+		}
+		change_mil = 1 
+	}
+}
+
+country_event = { #Gustav Vasa Bible
+	id = FU_Sweden_Events.13
+	title = FU_Sweden_Events.13.t 
+	desc = FU_Sweden_Events.13.d 
+	picture = PRAYING_eventPicture
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_Sweden_Events.13.a #Spread the word 
+	
+		add_country_modifier = {
+			name = swe_defender_of_the_reformation_modifier 
+			duration = 9125 
+		}
+	}
+}
+	
+######Game-Flow Events######
+#Fun Fact: A snail can sleep for three years at a time. This explains the slow pace of Missions Expanded Updates#
+
+country_event = { #Gustav I Vasa 
+	id = FU_Sweden_Events.14 
+	title = FU_Sweden_Events.14.t 
+	desc = FU_Sweden_Events.14.d 
+	picture = COURT_eventPicture 
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = SWE 
+		is_year = 1490 
+		NOT = { mil = 6 } 
+		NOT = { is_year = 1540 }
+		is_subject = no 
+	}
+	
+	mean_time_to_happen = {
+		months = 48
+	}
+	
+	immediate = { set_country_flag = swe_has_had_vasa_flag } 
+	
+	option = {
+		name = FU_Sweden_Events.14.a #The throne is his!
+		
+		kill_heir = { } 
+		define_ruler = {
+			name = "Gustav Ericsson I"
+			dynasty = Vasa 
+			change_adm = 2 
+			change_dip = 1
+			change_mil = 2
+			age = 27
+			hide_skills = yes 
+		}
+		if = {
+			limit = {
+				has_dlc = "Rights of Man" 
+			}
+			add_ruler_personality = lawgiver_personality
+			add_ruler_personality = inspiring_leader_personality 
+		}
+		add_stability = -1 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.14.b #We will maintain the status quo.
+		
+		add_prestige = 5 
+	}
+}
+
+country_event = { #The Lion of the North 
+	id = FU_Sweden_Events.15 
+	title = FU_Sweden_Events.15.t 
+	desc = FU_Sweden_Events.15.d 
+	picture = COURT_eventPicture 
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = SWE 
+		is_year = 1600 
+		NOT = { is_year = 1650 }
+		NOT = { mil = 6 }
+		is_subject = no 
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	option = {
+		name = FU_Sweden_Events.15.a #Lion come forth! 
+		
+		kill_ruler = yes 
+		define_ruler = {
+			name = "Gustavus Adolphus the Great"
+			dynasty = Vasa 
+			adm = 6 
+			dip = 6 
+			mil = 6 
+		}
+		if = {
+			limit = {
+				has_dlc = "Rights of Man" 
+			}
+			add_ruler_personality = conqueror_personality 
+			add_ruler_personality = strict_personality 
+			add_ruler_personality = zealot_personality
+		}
+		add_stability = -1 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.15.b #We will maintain the status quo. 
+		
+		add_prestige = 5 
+	}
+}
+
+country_event = { #The Dalecarlian Rebellions
+	id = FU_Sweden_Events.16 
+	title = FU_Sweden_Events.16.t 
+	desc = FU_Sweden_Events.16.d 
+	picture = ANGRY_MOB_eventPicture 
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		is_year = 1481
+		tag = SWE 
+		NOT = { has_country_flag = swe_prevented_food_crisis_uwu_flag } 
+		is_subject = no 
+		OR = {
+			NOT = { stability = 3 }
+			num_of_loans = 3
+		}
+		NOT = { is_year = 1600 }
+	}
+	
+	mean_time_to_happen = {
+		months = 200 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.16.a #This is madness!
+		
+		capital_scope = {
+			spawn_rebels = {
+				size = 3
+				type = leadered_peasant_rebels
+				win = yes 	
+			}
+		}
+	}
+}
+
+country_event = { #The Sture Murders 
+	id = FU_Sweden_Events.17 
+	title = FU_Sweden_Events.17.t 
+	desc = FU_Sweden_Events.17.d 
+	picture = ASSASSINATION_eventPicture 
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SWE 
+		OR = {
+			NOT = { adm = 1 }
+			NOT = { dip = 1 }
+		}
+		NOT = { stability = 2 }
+		is_year = 1560
+		NOT = { is_year = 1610 }
+		has_estate = estate_nobles
+		estate_territory = {
+			estate = estate_nobles
+			territory = 10
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	option = {
+		name = FU_Sweden_Events.17.a #Compensate the victims and pursue seclusion.
+		
+		add_years_of_income = -0.3 
+		add_prestige = -15
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10 
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = 10
+		}
+	}
+	
+	option = {
+		name = FU_Sweden_Events.17.b #Drive them out of our land!
+		
+		
+		capital_scope = {
+			spawn_rebels = {
+				size = 2
+				type = noble_rebels
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -0.05
+		}
+		add_stability = -1 
+	}
+}
+
+country_event = { #The Invasion of Brandenburg 
+	id = FU_Sweden_Events.18 
+	title = FU_Sweden_Events.18.t 
+	desc = FU_Sweden_Events.18.d 
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = SWE 
+		mission_completed = swe_rittergrut_pomerania
+		is_subject = no 
+		NOT = {
+			mittelmark_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = FU_Sweden_Events.18.a 
+		
+		mittelmark_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				is_empty = no
+			}
+			add_permanent_claim = ROOT
+		}
+		add_prestige = 10 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.18.b 
+		
+		add_dip_power = 50 
+	}
+}
+
+country_event = { #Swedish East India Company
+	id = FU_Sweden_Events.19 
+	title = FU_Sweden_Events.19.t 
+	desc = FU_Sweden_Events.19.d 
+	picture = COLONIZATION_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = SWE
+		full_idea_group = exploration_ideas 
+		is_year = 1715
+		
+		owns = 4163 
+	}
+	
+	mean_time_to_happen = {
+		months = 24 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.19.a #Let there be profit!
+		
+		4163 = {
+			add_province_modifier = {
+				name = swe_swedish_east_india_hq_modifier 
+				duration = -1 
+			}
+		}
+		add_mercantilism = 3 
+	}
+}
+
+country_event = { #Expedition to Lapland
+	id = FU_Sweden_Events.21
+	title = FU_Sweden_Events.21.t 
+	desc = FU_Sweden_Events.21.d 
+	picture = EXPLORERS_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		has_country_flag = swe_has_linnaeus_flag 
+	}
+	
+	mean_time_to_happen = {
+		months = 24 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.21.a #Nature is fascinating!
+		
+		change_innovativeness = 3
+		add_prestige = 15
+	}
+}
+
+country_event = { #Civil Code of the Swedish Realm 
+	id = FU_Sweden_Events.22
+	title = FU_Sweden_Events.22.t 
+	desc = FU_Sweden_Events.22.d 
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SWE 
+		is_year = 1700
+		OR = {
+			NOT = { absolutism = 75 }
+			has_parliament = yes 
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120 
+	}
+	
+	option = { 
+		name = FU_Sweden_Events.22.a #A new era for our Baltic territories!
+		
+		add_country_modifier = {
+			name = swe_civil_code_of_sweden_modifier
+			duration = 10950 
+		}
+	}
+}
+
+country_event = { #Bollhuset Theater
+	id = FU_Sweden_Events.23 
+	title = FU_Sweden_Events.23.t 
+	desc = FU_Sweden_Events.23.d 
+	picture = CULTURE_eventPicture 
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = SWE 
+		innovativeness = 50
+		is_year = 1650
+		stability = 1 
+		is_at_war = no 
+		owns = 1 
+	}
+	
+	mean_time_to_happen = {
+		months = 200 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.23.a #Such an elegant display of culture and sophistication!
+		
+		1 = {
+			add_province_modifier = {
+				name = swe_bollhuset_theater_modifier
+				duration = 9125 
+			}
+		}
+	}
+}
+
+country_event = { #Royal Swedish Academy of Sciences
+	id = FU_Sweden_Events.24 
+	title = FU_Sweden_Events.24.t 
+	desc = FU_Sweden_Events.24.d 
+	picture = GREAT_BUILDING_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = SWE 
+		owns = 1 
+		innovativeness = 50 
+		current_age = age_of_revolutions
+	}
+	
+	mean_time_to_happen = {
+		months = 48 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.24.a #För efterkommande!
+		
+		1 = {
+			add_province_modifier = { 
+				name = swe_royal_academy_sciences_modifier 
+				duration = 7300  
+			}
+		}
+		change_innovativeness = 3 
+	}
+}
+
+country_event = { #Anders Celsius and the Celsius Temperature Scale
+	id = FU_Sweden_Events.25 
+	title = FU_Sweden_Events.25.t 
+	desc = FU_Sweden_Events.25.d 
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = SWE 
+		innovativeness = 50 
+		is_year = 1700 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.25.a #A very hot man of science!
+		
+		add_country_modifier = {
+			name = swe_discoveries_of_celcius_modifier
+			duration = 7300 
+		}
+		define_advisor = {
+			name = "Anders Celcius" 
+			type = natural_scientist
+			skill = 3 
+			cost_multiplier = 0.5 
+		}
+	}
+}
+	
+country_event = { #Svea Rikes Historia
+	id = FU_Sweden_Events.26
+	title = FU_Sweden_Events.26.t 
+	desc = FU_Sweden_Events.26.d 
+	picture = BIG_BOOK_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = SWE 
+		mission_completed = swe_literary_publications
+		NOT = { num_of_loans = 1 }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	option = { 
+		name = FU_Sweden_Events.26.a #A celebrated account of our history!
+		
+		add_prestige = 20 
+		add_legitimacy = 10 
+		add_republican_tradition = 5 
+	}
+}
+
+country_event = { #The December Crisis
+	id = FU_Sweden_Events.27
+	title = FU_Sweden_Events.27.t 
+	desc = FU_Sweden_Events.27.d 
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = SWE 
+		absolutism = 50 
+		is_year = 1680 
+		has_estate = estate_nobles 
+	}
+	
+	mean_time_to_happen = {
+		months = 200 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.27.a #I refuse! 
+		
+		add_stability = -2 
+		random_owned_province = {
+			noble_rebels = 3
+		}
+		random_owned_province = {
+			noble_rebels = 2
+		}
+		random_owned_province = {
+			noble_rebels = 1
+		}
+		random_owned_province = {
+			noble_rebels = 2
+		}
+		random_owned_province = {
+			noble_rebels = 3
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -20 
+		}
+	}
+	
+	option = {
+		name = FU_Sweden_Events.27.b #Bend to the nobility 
+		
+		add_absolutism = -50 
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = 0.25
+		}
+		add_country_modifier = {
+			name = swe_ruling_nobility_modifier 
+			duration = 7300 
+		}
+	}
+}
+
+country_event = { #Societetsskolan i Göteborg för Döttrar
+	id = FU_Sweden_Events.28
+	title = FU_Sweden_Events.28.t 
+	desc = FU_Sweden_Events.d 
+	picture = wihgfx_FEMALE_SCHOLAR_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = SWE
+		4163 = {
+			owned_by = ROOT 
+			has_building = university
+			NOT = { devastation = 1 }
+		}
+		current_age = age_of_revolutions
+	}
+	
+	mean_time_to_happen = {
+		months = 240 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.28.a #A great step for women across our realm!
+		
+		add_country_modifier = {
+			name = swe_first_female_school_modifier
+			duration = -1 
+		}
+		change_innovativeness = 2 
+	}
+}
+
+country_event = { #Ambitions of the Baltic Dominion
+	id = FU_Sweden_Events.29
+	title = FU_Sweden_Events.29.t 
+	desc = FU_Sweden_Events.29.d 
+	picture = LIBERUM_VETO_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = SWE 
+		is_subject = no 
+	}
+	
+	mean_time_to_happen = {
+		months = 1 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.29.a #And thus our saga begins!	
+		
+		custom_tooltip = swe_dominion_claims
+		hidden_effect = {
+			scandinavia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					is_empty = no
+				}
+				add_permanent_claim = ROOT
+			}
+			holstein_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					is_empty = no
+				}
+				add_permanent_claim = ROOT
+			}
+			karelia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					is_empty = no
+				}
+				add_permanent_claim = ROOT
+			}
+			estonia_ingria_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					is_empty = no
+				}
+				add_permanent_claim = ROOT
+			}
+			east_prussia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					is_empty = no
+				}
+				add_permanent_claim = ROOT
+			}
+			west_prussia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					is_empty = no
+				}
+				add_permanent_claim = ROOT
+			}
+			hinter_pommern_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					is_empty = no
+				}
+				add_permanent_claim = ROOT
+			}
+			vorpommern_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					is_empty = no
+				}
+				add_permanent_claim = ROOT
+			}
+			
+			mecklenburg_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					is_empty = no
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}		
+}
+
+country_event = { #The Swedish-Polish Union 
+	id = FU_Sweden_Events.30 
+	title = FU_Sweden_Events.30.t 
+	desc = FU_Sweden_Events.30.d 
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = SWE 
+		OR = {
+			total_development = 400
+			AND = {
+				is_great_power = yes
+				mission_completed = swe_campaign_prussia
+			}
+		} 
+		OR = {
+			exists = POL 
+			exists = PLC 
+		}
+		has_regency = no
+		is_at_war = no
+		is_year = 1550		
+	}
+	
+	mean_time_to_happen = {
+		months = 6 
+	}
+	
+	option = {
+		name = FU_Sweden_Events.30.a #This will only benefit both our nations!
+		
+		if = {
+			limit = {
+				exists = PLC 
+			}
+			add_casus_belli = {
+				type = cb_restore_personal_union
+				months = 600
+				target = PLC 
+			}
+		}
+		else_if = {
+			limit = {
+				exists = POL 
+			}
+			add_casus_belli = {
+				type = cb_restore_personal_union 
+				months = 600 
+				target = POL 
+			}
+		}
+		else = {
+			mazovia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					is_empty = no
+				}
+				add_permanent_claim = ROOT
+			}
+			wielkopolska_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					is_empty = no
+				}
+				add_permanent_claim = ROOT
+			}
+			kuyavia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					is_empty = no
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+

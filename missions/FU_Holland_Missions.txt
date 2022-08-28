@@ -1,0 +1,599 @@
+FU_Holland_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = HOL
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes
+	
+	hol_flemish_decline = {
+		icon = unite_the_realm
+		required_missions = { hol_hook_cod_wars }
+		position = 2 
+		provinces_to_highlight = { 
+			area = flanders_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+		trigger = {
+			flanders_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+				OR = {
+					has_building = workshop 
+					has_building = counting_house
+				}
+			}
+		}
+		effect = {
+			flanders_area = {
+				add_province_modifier = {
+					name = hol_revival_flemish_textile_modifier
+					duration = 9125 
+				}
+				add_base_production = 1 
+			}
+			if = {
+				limit = { has_dlc = "Rights of Man" }
+				custom_tooltip = hol_industrious_trait_tt
+				hidden_effect = { 
+					country_event = { id = FU_Holland_Netherlands_Events.1 }
+				}
+			}
+		}
+	}
+	
+	hol_great_privilege = {
+		icon = reform_the_nomocanon
+		required_missions = { hol_all_across_rhine } 
+		position = 4 
+		provinces_to_highlight = { } 
+		trigger = {
+			NOT = { average_home_autonomy = 10 }
+			government_reform_progress = 200
+			crown_land_share = 40 
+		}
+		effect = {
+			add_country_modifier = {	
+				name = hol_first_constitution_modifier
+				duration = -1 
+				desc = until_we_reform_the_constitution_desc
+			}
+			change_adm = 1 
+		}
+	}
+	
+	hol_council_malines = {
+		icon = invade_poland
+		required_missions = { hol_great_privilege }
+		position = 5 
+		provinces_to_highlight = { province_id = 1744 }
+		trigger = {	
+			1744 = {
+				owned_by = ROOT 
+				OR = {
+					has_building = courthouse
+					has_building = town_hall 
+				}
+				development = 22 
+			}
+			1744 = {
+				NOT = { unrest = 1 } 
+				NOT = { devastation = 1 } 
+				NOT = { local_autonomy = 5 }
+			}
+			OR = { 
+				NOT = { has_estate_privilege = estate_nobles_supremacy_over_crown }
+				crown_land_share = 50 
+			}
+		}
+		effect = {
+			country_event = { id = FU_Holland_Netherlands_Events.2 } #The Great Council of the Low Countries
+		}
+	}
+}
+
+FU_Holland_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = HOL
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes
+	
+	hol_hook_cod_wars = {
+		icon = assert_our_sovereignty
+		required_missions = { } 
+		position = 1 
+		trigger = {
+			OR = {	
+				liberty_desire = 100 
+				AND = {
+					is_subject = no 
+					is_at_war = no 
+				}
+			}
+			army_size_percentage = 1 
+		}
+		effect = {
+			low_countries_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			custom_tooltip = hol_if_lib_desire_tt
+			tooltip = {
+				overlord = {
+					add_spy_network_from = {
+						who = ROOT 
+						value = 100
+					}
+				}
+				add_country_modifier = {
+					name = hol_apiration_for_liberty_modifier
+					duration = 3650 
+				}
+				add_manpower = 3
+			}
+			custom_tooltip = hol_if_indep_not_at_war_tt
+			tooltip = {
+				country_event = { id = FU_Holland_Netherlands_Events.3 }
+			}
+			hidden_effect = {
+				if = {
+					limit = { liberty_desire = 100 }
+					overlord = {
+						add_spy_network_from = {
+							who = ROOT 
+							value = 100
+						}
+					}
+					add_country_modifier = {
+						name = hol_apiration_for_liberty_modifier
+						duration = 3650 
+					}
+					add_manpower = 3.5 
+				}
+				else_if = {
+					limit = {
+						is_subject = no 
+						is_at_war = no 
+					}
+					country_event = { id = FU_Holland_Netherlands_Events.3 }
+				}
+			}
+		}
+	}				
+	
+	hol_overkwartier_van_gelre = {
+		icon = ansbach_succession
+		required_missions = { hol_hook_cod_wars }
+		position = 2 
+		provinces_to_highlight = {
+			area = north_brabant_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			north_brabant_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = hol_ended_wars_gelre_modifier
+				duration = 9125
+			}
+			change_dip = 2 
+		}
+	}
+	
+	hol_proclaim_dutch_republic = {
+		icon = the_true_freedom
+		required_missions = { hol_overkwartier_van_gelre hol_flemish_decline hol_frisian_freedoms }
+		position = 3 
+		provinces_to_highlight = {
+			region = low_countries_region
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				region = low_countries_region 
+				value = 18 
+			}
+			owns = 97
+			owns = 4383
+			owns = 1865
+			owns = 1744
+			owns = 92
+			custom_trigger_tooltip = {
+				tooltip = hol_stronger_in_the_region
+				OR = { 
+					NOT = {
+						any_country = { 
+							capital_scope = {
+								region = low_countries_region
+							}
+							army_size = ROOT
+						}
+					}
+					NOT = {
+						any_country = { 
+							capital_scope = {
+								region = low_countries_region
+							}
+							prestige = ROOT
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { 
+					NED = { exists = no }
+				}
+				change_tag = NED 
+				97 = {
+					move_capital_effect = yes
+				}
+				swap_non_generic_missions = yes
+				if = {
+					limit = {
+						NOT = {
+							government_rank = 2
+						}
+					}
+					NED = { set_government_rank = 2 }
+				}
+				set_country_flag = formed_netherlands_flag
+				add_prestige = 25
+				if = {
+					limit = {
+						has_custom_ideas = no
+						NOT = { has_idea_group = NED_ideas }
+					}
+					country_event = { id = ideagroups.1 } #Swap Ideas
+				}
+			}
+			else = {
+				change_adm = 1 
+				change_dip = 1 
+				change_mil = 1 
+			}
+			add_country_modifier = {
+				name = hol_unification_of_netherlands_modifier
+				duration = 9125
+			}
+		}
+	}
+}
+
+FU_Holland_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = HOL
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes
+	
+	hol_frisian_freedoms = {
+		icon = conquer_east_francia
+		required_missions = { hol_hook_cod_wars }
+		position = 2 
+		provinces_to_highlight = {
+			area = frisia_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			frisia_area = {
+				type = all 
+				country_or_non_sovereign_subject_holds = ROOT 
+				NOT = { average_autonomy = 10 }
+			}
+		}
+		effect = {
+			if = {
+				limit = { has_country_flag = hol_merchants_flag }
+				1931 = { 
+					add_base_production = 2
+				}
+				frisia_area = {
+					add_nationalism = -10 
+					add_prosperity = 100 
+				}
+				custom_tooltip = hol_if_we_havent_burgher_point_tt
+				if = {
+					limit = { 
+						NOT = { has_estate_privilege = estate_burghers_land_of_commerce }
+					}
+					set_estate_privilege = estate_burghers_land_of_commerce
+					change_estate_land_share = {
+						estate = all
+						share = -10
+					}
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = hol_broke_peasant_state_modifier
+					duration = 9125
+				}
+				custom_tooltip = hol_if_we_havent_nobles_privilege_tt
+				hidden_effect = {
+					if = {
+						limit = { 
+							NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+						}
+						set_estate_privilege = estate_nobles_nobility_primacy
+						change_estate_land_share = {
+							estate = all
+							share = -10
+						}
+					}
+				}
+			}
+		}	
+	}
+	
+	hol_all_across_rhine = {
+		icon = mission_divert_trade_from_bengal
+		required_missions = { }
+		position = 3 
+		provinces_to_highlight = { province_id = 4383 }
+		trigger = {
+			4383 = {
+				num_of_times_improved = 3 
+				has_trade_building_trigger = yes
+			}
+			OR = {
+				estate_loyalty = {
+					estate = estate_burghers 
+					loyalty = 60 
+				}
+				has_estate_privilege = estate_burghers_free_enterprise
+			}
+		}
+		effect = {
+			custom_tooltip = hol_rhine_on_steroids_tt
+			hidden_effect = {
+				4383 = {
+					remove_province_modifier = rhine_estuary_modifier
+					add_province_modifier = {
+						name = rhine_estuary2_modifier
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	
+	hol_outshine_hansa = {
+		icon = colonize_the_cape
+		required_missions = { hol_all_across_rhine }
+		position = 4
+		trigger = {
+			if = {
+				limit = { 
+					HSA = { exists = yes } 
+				}
+				capital_scope = { higher_development_than = 45 }
+				army_size = HSA 
+				prestige = HSA
+				monthly_income = HSA 
+			}
+			else = {
+				army_size = 25 
+				prestige = 30 
+				45 = {
+					trade_share = {
+						country = ROOT 
+						share = 15
+					}
+				}
+			}
+		}
+		effect = {
+			country_event = { id = FU_Holland_Netherlands_Events.4 } #The Shifting of Trade
+		}
+	}
+	
+	hol_growth_amsterdam = {
+		icon = fu_amsterdam_port 
+		required_missions = { hol_outshine_hansa }
+		position = 5
+		provinces_to_highlight = { province_id = 97 }
+		trigger = {
+			97 = {
+				development = 30 
+				has_trade_building_trigger = yes
+				renaissance = 100
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+				OR = {
+					has_building = dock
+					has_building = drydock
+				}
+			}
+		}
+		effect = {
+			97 = {
+				add_province_modifier = {
+					name = hol_port_of_amsterdam_modifier
+					duration = -1 
+				}
+				if = {
+					limit = { 
+						NOT = { province_has_center_of_trade_of_level = 3 }		
+					}
+					add_center_of_trade_level = 1
+				}
+				else = { add_mercantilism = 2 }
+				add_prosperity = 100
+			}
+		}
+	}
+}
+
+FU_Holland_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = HOL
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes
+
+	hol_tame_brabantian_lion = {
+		icon = fu_brabant_lion
+		required_missions = { hol_hook_cod_wars }
+		position = 2 
+		provinces_to_highlight = { 
+			OR = {
+				province_id = 1744
+				province_id = 92
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			1744 = { country_or_non_sovereign_subject_holds = ROOT }
+			92 = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+			country_event = { id = FU_Holland_Netherlands_Events.5 }
+		}
+	}
+	
+	hol_bulk_fleet = {
+		icon = support_the_bulk_trades 
+		required_missions = { hol_all_across_rhine }
+		position = 4 
+		provinces_to_highlight = { province_id = 97 } 
+		trigger = {
+			97 = { 	
+				province_trade_power = 35
+			}
+			navy_size = FLA 
+			navy_size = BRB
+		}
+		effect = {
+			add_country_modifier = {
+				name = hol_new_central_trade_network_modifier
+				duration = 7300
+			}
+			add_mercantilism = 3 
+		}
+	}
+}
+
+FU_Holland_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = HOL
+		if = {
+			limit = { has_global_flag = missions_expanded_mod_active }
+			NOT = { has_country_flag = use_missions_expanded_missions_instead_of_paradox }
+		}
+	}
+	has_country_shield = yes	
+	
+	hol_sea_beggars = {
+		icon = fu_sea_beggars
+		required_missions = { } 
+		position = 1 
+		trigger = {
+			num_of_light_ship = 15 
+		}
+		effect = {
+			add_country_modifier = { 
+				name = hol_letters_of_marque_modifier
+				duration = -1 
+			}
+			add_navy_tradition = 10
+		}
+	}
+	
+	hol_statute_admiralty = {
+		icon = mission_rb_grow_the_channel 
+		required_missions = { hol_sea_beggars }
+		position = 2 
+		trigger = {
+			num_of_heavy_ship = 4 
+			navy_size_percentage = 0.9
+		}
+		effect = {
+			add_country_modifier = {
+				name = hol_admiralty_holland_modifier
+				duration = 7300
+			}
+			create_admiral = {
+				tradition = 60 
+				add_fire = 1 
+				add_shock = 1 
+			}
+		}
+	}
+	
+	hol_center_economy = {
+		icon = adriatic_access
+		required_missions = { hol_statute_admiralty hol_tame_brabantian_lion }
+		provinces_to_highlight = { province_id = 1744 }
+		trigger = {
+			1744 = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				num_of_times_improved = 4 
+				has_trade_building_trigger = yes  
+			}
+		}
+		effect = {
+			country_event = { id = FU_Holland_Netherlands_Events.6 }
+		}
+	}
+	
+	hol_new_world_daze = {
+		icon = mission_look_west
+		required_missions = { hol_center_economy hol_bulk_fleet }
+		position = 5
+		trigger = {
+			monthly_income = 50 
+			exploration_ideas = 1 
+			num_of_colonists = 1 
+			num_of_explorers = 1 
+		}
+		effect = {
+			add_dip_power = 100 
+			add_country_modifier = {
+				name = hol_journey_to_new_world_modifier
+				duration = 9125
+			}
+		}
+	}
+}
+	
+	
+	
+	

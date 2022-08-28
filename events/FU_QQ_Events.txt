@@ -1,0 +1,226 @@
+namespace = FU_QQ_Events
+
+country_event = { #Three Sons
+	id = FU_QQ_Events.1
+	title = FU_QQ_Events.1.t 
+	desc = FU_QQ_Events.1.d 
+	picture = DIPLOMACY_eventPicture
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = QAR 
+		NOT = { is_year = 1446 }
+	}
+	mean_time_to_happen = { months = 3 }
+	
+	immediate = { 
+		hidden_effect = { set_country_flag = qar_had_three_brothers_event_flag }
+	}
+	
+	option = {
+		name = FU_QQ_Events.1.a 
+		
+		ai_chance = { factor = 0.5 }
+		
+		capital_scope = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 1
+				leader = "Pir Bubaq"
+				leader_dynasty = "Qara Qoyunlu"
+				friend = TIM 
+			}
+		}
+		add_legitimacy = -10 
+		add_stability_or_adm_power = yes 
+		change_heir_mil = 1 
+	}
+	
+	option = {
+		name = FU_QQ_Events.1.b 
+		
+		ai_chance = { factor = 0.3 }
+		capital_scope = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 1
+				use_heir_as_leader = yes 
+			}
+		}
+		define_heir = {
+			name = "Pir Budaq"
+			dynasty = ROOT 
+			claim = 50 
+			age = 17 
+		}
+	}
+	
+	option = {
+		name = FU_QQ_Events.1.c 
+		
+		ai_chance = { factor = 0.2 }
+		
+		capital_scope = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 1
+				use_heir_as_leader = yes 
+			}
+		}
+		define_heir = {
+			name = "Mirza Yusuf"
+			dynasty = ROOT 
+			claim = 50
+			age = 13
+		}
+	}
+}
+
+country_event = {
+	id = FU_QQ_Events.2
+	title = FU_QQ_Events.2.t 
+	desc = FU_QQ_Events.2.d 
+	picture = CONQUEST_eventPicture
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = QAR 
+		is_at_war = no 
+		NOT = { is_year = 1465 }
+		NOT = {
+			has_won_war_against = {
+				who = AKK 
+				max_years_since = 21
+			}
+		}
+	}
+	
+	mean_time_to_happen = { months = 72 }
+	
+	option = {
+		name = FU_QQ_Events.2.g 
+		
+		411 = {
+			add_province_modifier = {
+				name = qar_strong_governorship_modifier
+				duration = 7300 
+			}
+		}
+		define_general = {
+			name = "Alvand Mirza"
+			fire = 3 
+			shock = 3 
+			manuever = 2 
+			siege = 1 
+		} 
+	}
+	
+	option = {
+		name = FU_QQ_Events.2.b 
+		
+		add_prestige = -5 
+		411 = { add_unrest = 1 } 
+	}
+}
+
+country_event = {
+	id = FU_QQ_Events.3
+	title = FU_QQ_Events.3.t 
+	desc = FU_QQ_Events.3.d 
+	picture = CONQUEST_eventPicture
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = QAR 
+		war_with = AKK 
+		NOT = {
+			war_score_against = {
+				who = AKK
+				value = -10
+			}
+		}
+		has_leader = "Alvand Mirza"
+	}
+	
+	mean_time_to_happen = { months = 1 } 
+	
+	option = {
+		name = FU_QQ_Events.3.a 
+		
+		custom_tooltip = qar_alvand_mizra_flees
+		411 = { remove_province_modifier = qar_strong_governorship_modifier }
+		add_prestige = -15 
+		add_stability = -1 
+		hidden_effect = { 
+			kill_leader = {
+				type = "Alvand Mizra" 
+			}
+			AKK = { 
+				define_general = {
+					name = "Alvand Mizra"
+					fire = 3 
+					shock = 3 
+					manuever = 2 
+					siege = 1 
+				} 
+			}
+		}
+	}
+}
+	
+country_event = { 
+	id = FU_QQ_Events.4
+	title = FU_QQ_Events.4.t 
+	desc = FU_QQ_Events.4.d 
+	picture = ANGRY_MOB_eventPicture
+	fire_only_once = yes 
+	
+	trigger = {
+		tag = QAR 
+		NOT = { is_year = 1465 }
+		NOT = { religious_unity = 0.75 }
+		stability = 1 
+	}
+	
+	mean_time_to_happen = { months = 48 }
+	
+	option = {
+		name = FU_QQ_Events.4.a 
+		
+		add_country_modifier = {
+			name = qar_religious_practices_modifier
+			duration = 5475
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5 
+		}
+	}
+}
+
+country_event = { #Grand Library of Baghdad 
+	id = FU_QQ_Events.5
+	title = FU_QQ_Events.5.t 
+	desc = FU_QQ_Events.5.d 
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes 
+	
+	option = {
+		name = FU_QQ_Events.5.a 
+		
+		410 = {
+			add_province_modifier = {
+				name = qar_house_of_wisdom_modifier
+				duration = 7300
+			}
+			if = {
+				limit = { 
+					NOT = {  has_building = university }
+				}
+				add_building = university 
+			}
+			else = { add_base_production = 2 }
+			change_innovativeness = 5 
+		}
+	}
+}
