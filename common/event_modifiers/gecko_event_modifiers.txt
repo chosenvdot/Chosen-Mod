@@ -111,7 +111,7 @@ alte_salzstrase = {
 	trade_goods_size = 1.0
 }
 
-gc_ethiopia_prester_john = {
+ethiopia_prester_john = {
 	prestige_decay = -0.01
 	tolerance_own = 2
 }
@@ -419,4 +419,7 @@ h_indochina_mod = {
 
 tau_rice = {
 	trade_goods_size = 1
+}
+gc_thriving_arms_industry = {
+	land_morale = 0.1
 }
