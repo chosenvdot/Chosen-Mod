@@ -2140,11 +2140,11 @@ ottoman_missions_3 = {
 				151 = { 
 					OR = { 
 						has_great_project = { 
-							type = fu_topkapi_palace 
+							type = gme_great_palace_constantinople 
 							tier = 2 
 						}
 						has_great_project = { 
-							type = fu_topkapi_palace 
+							type = gme_great_palace_constantinople
 							tier = 3
 						}
 					}

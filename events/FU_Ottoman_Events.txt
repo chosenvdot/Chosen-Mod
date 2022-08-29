@@ -271,28 +271,16 @@ country_event = { #The Fate of Anatolia
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-			add_claim = ROOT 
+			add_territorial_core = ROOT 
 		}
 		karaman_area = {
 			limit = { 
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
-			add_claim =  = ROOT 
+			add_territorial_core = ROOT 
 		}
-		cappadocia_area = {
-			limit = { 
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-			add_claim =  = ROOT 
-		}
-		
-		2302 = { add_claim = ROOT } 
-		6019 = { add_claim = ROOT }
-		6020 = { add_claim = ROOT }
-		5147 = { add_claim = ROOT }
-		5158 = { add_claim = ROOT }
+		2302 = { add_territorial_core = ROOT } 
 	}
 }
 
