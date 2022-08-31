@@ -273,14 +273,6 @@ country_event = { #The Fate of Anatolia
 			}
 			add_territorial_core = ROOT 
 		}
-		karaman_area = {
-			limit = { 
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-			add_territorial_core = ROOT 
-		}
-		2302 = { add_territorial_core = ROOT } 
 	}
 }
 
