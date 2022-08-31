@@ -1,8 +1,8 @@
  
 #556 - Lower Doab
 
-owner = JNP
-controller = JNP
+ 
+ 
 culture = avadhi
 religion = hinduism
 capital = "Allahabad"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 4
 is_city = yes
-add_core = JNP
+ 
 add_brahmins_or_church_effect = yes
 discovered_by = indian
 discovered_by = muslim 
@@ -23,9 +23,9 @@ extra_cost = 16
 center_of_trade = 2
 
 1486.1.1 = {
-	owner = DLH
-	controller = DLH
-	add_core = DLH
+	 
+	 
+	 
 } # Bahlul Lodi places his eldest surviving son Barbak Shah Lodi on the throne of Jaunpur, slowly integrated into Delhi's domains after this
 1517.11.21 = {
 	controller = REB
@@ -33,7 +33,7 @@ center_of_trade = 2
 	type = nationalist_rebels }
 } #Revolt of Afghan Nobles
 1518.5.1 = {
-	controller = DLH
+	 
 	revolt = { }
 	unrest = 5
 }
@@ -61,8 +61,8 @@ center_of_trade = 2
 	 
 } # Sher Shah Conquers Delhi
 1553.1.1 = {
-	owner = JNP
-	controller = JNP
+	 
+	 
 	remove_core = BNG
 } #Death of Islam Shah Sur, Suri empire split
 1558.11.1 = { controller = MUG }	#Ibrahim defeated
@@ -81,9 +81,9 @@ center_of_trade = 2
 1690.1.1 = { discovered_by = ENG }
 1707.5.12 = { discovered_by = GBR }
 1724.1.1 = {
-	owner = ODH
-	controller = ODH
-	add_core = ODH
+	 
+	 
+	 
 } # Foundation of the Oudh dynasty
 1758.1.1 = {
 	owner = GWA

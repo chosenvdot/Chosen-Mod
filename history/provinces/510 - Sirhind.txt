@@ -1,8 +1,8 @@
  
 #510 - Sirhind
 
-owner = SRH
-controller = SRH
+ 
+ 
 culture = panjabi
 religion = hinduism
 capital = "Sirhind"
@@ -12,9 +12,9 @@ base_tax = 8
 base_production = 8
 base_manpower = 4
 is_city = yes
-add_core = DLH
+ 
 add_core = PUN
-add_core = SRH
+ 
 add_core = PTA
 fort_15th = yes
 discovered_by = indian
@@ -26,8 +26,8 @@ extra_cost = 8
 center_of_trade = 1
 
 1451.4.20 = {
-	controller = DLH
-	owner = DLH
+	 
+	 
 } #Bahlul Lodi takes power in Delhi
 1517.11.21 = { unrest = 8 } #Afghan factionalism
 1526.2.1 = {

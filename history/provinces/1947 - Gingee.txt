@@ -35,10 +35,10 @@ discovered_by = chinese
 	owner = GNG
 	controller = GNG
 } # The Vijayanagar empire collapses, the Nayaks proclaimed themselves rulers
-1649.1.1 = { controller = BIJ } # Conquered by Bijapur
+1649.1.1 = {   } # Conquered by Bijapur
 1649.12.1 = {
-	owner = BIJ
-	add_core = BIJ
+	 
+	 
 } # Conquered by Bijapur
 1685.1.1 = { controller = MUG }
 1686.1.1 = {

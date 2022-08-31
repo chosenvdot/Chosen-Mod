@@ -1,8 +1,8 @@
  
 #2054 - Ahmadabad
 
-owner = GUJ
-controller = GUJ
+ 
+ 
 culture = gujarati
 religion = hinduism
 capital = "Ahmadabad"
@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = GUJ
+ 
 discovered_by = east_african
 discovered_by = indian
 discovered_by = muslim 
@@ -27,8 +27,8 @@ discovered_by = chinese
 	add_core = MUG
 } # Conquered by Akbar
 1725.1.1 = {
-	owner = GUJ
-	controller = GUJ
+	 
+	 
 	remove_core = MUG	
 } #Mughal governor
 1757.1.1 = {

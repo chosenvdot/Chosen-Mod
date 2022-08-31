@@ -1,8 +1,8 @@
  
 #4429 - Rajapur
 
-owner = AHM
-controller = AHM
+ 
+ 
 culture = marathi
 religion = hinduism
 capital = "Rajapur"
@@ -13,7 +13,7 @@ base_production = 4
 base_manpower = 2 
 is_city = yes
 add_rajputs_or_marathas_or_nobles_effect = yes
-add_core = AHM
+ 
 discovered_by = east_african
 discovered_by = indian
 discovered_by = nomad_group

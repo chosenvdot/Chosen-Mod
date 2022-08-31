@@ -1,8 +1,8 @@
  
 #2051 - Bhavnagar
 
-owner = GUJ
-controller = GUJ
+ 
+ 
 culture = saurashtri
 religion = hinduism
 capital = "Bhavnagar"
@@ -12,7 +12,7 @@ base_tax = 6
 base_production = 6
 base_manpower = 4
 is_city = yes
-add_core = GUJ
+ 
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim 
@@ -21,9 +21,9 @@ discovered_by = nomad_group
 discovered_by = east_african
 
 1470.1.1 = {
-	owner = GUJ
-	controller = GUJ
-	add_core = GUJ
+	 
+	 
+	 
 }
 1498.1.1 = { discovered_by = POR }
 1540.1.1 = {

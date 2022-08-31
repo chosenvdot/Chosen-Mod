@@ -1,8 +1,8 @@
  
 #2037 - Warangal
 
-owner = TLG
-controller = TLG
+ 
+ 
 culture = telegu
 religion = hinduism
 capital = "Warangal"
@@ -13,7 +13,7 @@ base_production = 4
 base_manpower = 4
 is_city = yes
 add_core = GOC
-add_core = TLG
+ 
 fort_15th = yes #Warangal Fort
 add_brahmins_or_church_effect = yes
 discovered_by = indian

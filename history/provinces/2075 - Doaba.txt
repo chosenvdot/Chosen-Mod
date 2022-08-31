@@ -1,8 +1,8 @@
  
 #2075 - Doaba
 
-owner = SRH
-controller = SRH
+ 
+ 
 culture = panjabi
 religion = hinduism
 capital = "Jalandhar"
@@ -12,9 +12,9 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = DLH
+ 
 add_core = PUN
-add_core = SRH
+ 
 discovered_by = indian
 discovered_by = nomad_group
 discovered_by = muslim
@@ -23,8 +23,8 @@ discovered_by = chinese
 add_province_triggered_modifier = sikh_amritsar
 
 1451.4.20 = {
-	controller = DLH
-	owner = DLH
+	 
+	 
 } #Bahlul Lodi takes power in Delhi
 1499.1.1 = {
 	religion = sikhism
@@ -43,8 +43,8 @@ add_province_triggered_modifier = sikh_amritsar
 	 
 } #Conquered by Sher Shah Suri
 1553.1.1 = {
-	owner = SRH
-	controller = SRH
+	 
+	 
 	remove_core = BNG
 } #Death of Islam Shah Sur, Suri empire split
 1554.12.1 = {

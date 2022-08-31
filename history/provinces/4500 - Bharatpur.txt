@@ -1,8 +1,8 @@
  
 #4500 - Bharatpur
 
-owner = NGA
-controller = NGA
+ 
+ 
 culture = rajput
 religion = hinduism
 capital = "Bharatpur"
@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 4
 is_city = yes
-add_core = NGA
+ 
 discovered_by = indian
 discovered_by = nomad_group
 discovered_by = muslim 
@@ -30,15 +30,15 @@ discovered_by = chinese
 	 
 } # Delhi falls to Sher Shah Suri
 1553.1.1 = {
-	owner = DLH
-	controller = DLH
+	 
+	 
 } # Split of Suri Empire
 1555.7.23 = {
 	owner = MUG
 	controller = MUG
 	remove_core = BNG
 } # Humayun Returns
-1556.10.7 = { controller = DLH }	# Hemu
+1556.10.7 = {   }	# Hemu
 1556.11.5 = {
 	controller = MUG
 }	# Panipat 2

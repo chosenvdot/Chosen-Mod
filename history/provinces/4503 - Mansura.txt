@@ -1,8 +1,8 @@
  
 #4503 - Mansura
 
-owner = SND
-controller = SND
+ 
+ 
 culture = sindhi
 religion = sunni
 capital = "Mansura"
@@ -13,7 +13,7 @@ base_tax = 8
 base_production = 8
 base_manpower = 4
 is_city = yes
-add_core = SND
+ 
 discovered_by = indian
 discovered_by = muslim 
 discovered_by = ottoman
@@ -28,8 +28,8 @@ center_of_trade = 1
 	 
 } # Sur Expansionism
 1545.1.1 = {
-	owner = SND
-	controller = SND
+	 
+	 
 } # Sher Shah dies
 1591.1.1 = {
 	owner = MUG
@@ -37,8 +37,8 @@ center_of_trade = 1
 	add_core = MUG
 } # Integrated into Mughal Empire
 1739.1.1 = {
-	owner = SND 
-	controller = SND
+	  
+	 
 	remove_core = MUG
 }
 1768.1.1 = { capital = "Hyderabad" }

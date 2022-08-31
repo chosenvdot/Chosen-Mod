@@ -1,8 +1,8 @@
  
 #2089 - Chaul (Chaul+Janjira+Kolaba)
 
-owner = AHM
-controller = AHM
+ 
+ 
 culture = marathi
 religion = hinduism
 capital = "Chaul"
@@ -13,7 +13,7 @@ base_production = 1
 base_manpower = 1
 add_local_autonomy = 75
 is_city = yes
-add_core = AHM
+ 
 add_rajputs_or_marathas_or_nobles_effect = yes
 discovered_by = indian
 discovered_by = muslim 

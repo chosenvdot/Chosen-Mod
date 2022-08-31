@@ -1,8 +1,8 @@
  
 #2052 - Navanagar
 
-owner = KAT
-controller = KAT
+ 
+ 
 culture = saurashtri
 religion = hinduism
 capital = "Nagnes"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 2 
 is_city = yes
-add_core = KAT
+ 
 add_core = NVR
 add_brahmins_or_church_effect = yes
 discovered_by = indian
@@ -23,8 +23,8 @@ discovered_by = chinese
 discovered_by = east_african
 
 1470.1.1 = {
-	owner = GUJ
-	controller = GUJ
+	 
+	 
 }
 1498.1.1 = { discovered_by = POR }
 1519.1.1 = { capital = "Navanagar" }

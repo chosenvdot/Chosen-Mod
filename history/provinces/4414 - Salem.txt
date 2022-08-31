@@ -29,10 +29,10 @@ discovered_by = chinese
 	controller = MYS
 	remove_core = VIJ
 } # The Vijayanagar empire collapses
-1649.1.1 = { controller = BIJ } #Bijapuri Expansion
+1649.1.1 = {   } #Bijapuri Expansion
 1649.12.1 = {
-	owner = BIJ
-	add_core = BIJ
+	 
+	 
 } #Bijapuri Expansion
 1685.1.1 = { controller = MUG } # Conquered by the Mughal emperor Aurangzeb
 1686.1.1 = {

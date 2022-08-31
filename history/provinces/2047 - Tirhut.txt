@@ -21,7 +21,7 @@ discovered_by = chinese
 extra_cost = 8
 center_of_trade = 1
 
-1497.1.1 = { controller = DLH }
+1497.1.1 = {  
 1498.1.1 = { controller = TRT }
 1524.1.1 = {
 	 
