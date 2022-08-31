@@ -26,9 +26,9 @@ discovered_by = chinese
 	 
 }
 1444.1.1 = {
-	controller = KSH
-	owner = KSH
-	add_core = KSH
+	 
+	 
+	 
 }
 1450.1.1 = {
 	 
