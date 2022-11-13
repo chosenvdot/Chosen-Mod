@@ -174,7 +174,7 @@ GMV_ideas = {
 	}
 	free = yes		#will be added at load.
 	
-	GMV_1 {
+	GMV_1 = {
 		production_efficiency = 0.1
 	}
 	GMV_2 = {

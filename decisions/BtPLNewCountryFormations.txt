@@ -488,6 +488,7 @@ country_decisions = {
 				province_id = 266		# Prague
 				province_id = 1763		# Lusatia
 				province_id = 1772		# Bratislava
+				province_id = 134
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -511,7 +512,8 @@ country_decisions = {
 			owns_core_province = 1772		# Bratislava
 			owns_core_province = 262		# Krakow
 			owns_core_province = 257		# Warsaw
-			total_development = 500			#Special discount. Normal requirement for rank 3 is 2000 dev, so this is 75 percent discounted.
+			owns_core_province = 134
+			total_development = 1000			#Special discount. Normal requirement for rank 3 is 2000 dev, so this is 75 percent discounted.
 			prestige = 40			#Normal requirement for rank 3 is 75 prestige.
 		}
 		effect = {
