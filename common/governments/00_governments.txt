@@ -1036,3 +1036,11 @@ pre_dharma_mapping = {
 		legacy_government = despotic_monarchy
 	}
 }
+native = {
+	basic_reform = native_basic_reform
+
+	legacy_government = {
+		native_council_legacy
+	}
+	color = { 194 127 209 }
+}
