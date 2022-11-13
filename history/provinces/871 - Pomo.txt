@@ -1,8 +1,8 @@
 #871 - Pomo
 
-owner = PMO			#Pomo
-controller = PMO
-add_core = PMO
+owner =  			#Pomo
+controller =  
+add_core =  
 is_city = yes
 culture = pomoan 
 religion = totemism
@@ -23,14 +23,14 @@ discovered_by = north_american
 1444.11.15 = { #BeyondTypus batch edit shortcut no native start date begin
 	owner = XXX
 	controller = XXX
-	remove_core = PMO
+	remove_core =  
 	is_city = no
 	trade_goods = unknown
 }
 1444.11.17 = { #BeyondTypus batch edit shortcut no native start date end
-	owner = PMO
-	controller = PMO
-	add_core = PMO
+	owner =  
+	controller =  
+	add_core =  
 	is_city = yes
 	trade_goods = naval_supplies
 }
