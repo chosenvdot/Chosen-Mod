@@ -1450,6 +1450,7 @@ textile = {
 		cloth
 		silk
 		dyes
+		bt_trade_good_books
 	}
 	onmap = yes
 	on_built = {
@@ -1543,6 +1544,9 @@ farm_estate = {
 		grain
 		livestock
 		wine
+		bt_trade_good_beer
+		bt_trade_good_fruit
+		bt_trade_good_apiculture
 	}
 	onmap = yes
 	on_built = {
@@ -1660,6 +1664,9 @@ soldier_households = {
 		fish
 		livestock
 		wine
+		bt_trade_good_fruit
+		bt_trade_good_beer
+		bt_trade_good_apiculture
 	}
 
 	modifier = {
@@ -1754,6 +1761,7 @@ state_house = {
 		paper
 		glass
 		gems
+		bt_trade_good_books
 	}
 
 	build_trigger = {
