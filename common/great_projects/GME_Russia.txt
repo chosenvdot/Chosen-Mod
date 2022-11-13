@@ -2,7 +2,7 @@ gme_bolshoi_theatre = {
 	start = 295
 	date = 1.01.01
 	time = { months = 0 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 0
 	type = monument
 	can_be_moved = no
@@ -10,12 +10,16 @@ gme_bolshoi_theatre = {
 	on_built = { }
 	on_destroyed = { }
 	can_use_modifiers_trigger = {
-		culture_group = east_slavic
-		has_owner_culture = yes
+		owner = {
+			culture_group = east_slavic
+		}
+		has_owner_accepted_culture = yes
 	}
 	can_upgrade_trigger = {
-		culture_group = east_slavic
-		has_owner_culture = yes
+		owner = {
+			culture_group = east_slavic
+		}
+		has_owner_accepted_culture = yes
 	}
 	keep_trigger = { }
 	tier_0 = {
@@ -23,40 +27,43 @@ gme_bolshoi_theatre = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = { }
 		area_modifier = {
 			local_culture_conversion_cost = -0.1
 		}
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_unrest = -1
 		}
 		area_modifier = {
 			local_culture_conversion_cost = -0.25
 		}
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
-
+		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = {
 		 	local_unrest = -1
 			local_culture_conversion_cost = -0.5
 		}
+		region_modifier = { }
 		country_modifiers = {
 			same_culture_advisor_cost = -0.15
 			culture_conversion_cost = -0.15
@@ -68,7 +75,7 @@ gme_petersburg_admiralty = {
 	start = 33
 	date = 1.01.01
 	time = { months = 0 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 0
 	type = monument
 	can_be_moved = no
@@ -76,11 +83,15 @@ gme_petersburg_admiralty = {
 	on_built = { }
 	on_destroyed = { }
 	can_use_modifiers_trigger = {
-		culture_group = east_slavic
+		owner = {
+			culture_group = east_slavic
+		}
 		has_owner_accepted_culture = yes
 	}
 	can_upgrade_trigger = {
-		culture_group = east_slavic
+		owner = {
+			culture_group = east_slavic
+		}
 		has_owner_accepted_culture = yes
 	}
 	keep_trigger = { }
@@ -89,45 +100,57 @@ gme_petersburg_admiralty = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
-			local_ship_repair = 0.1
+			local_ship_cost = -0.10
+			local_ship_repair = 0.10
+			naval_forcelimit = 2
+			ship_recruit_speed = -0.10
 		}
 		area_modifier = {
-			local_sailors_modifier = 0.1
+			local_sailors_modifier = 0.25
 		}
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
-			local_ship_cost = -0.1
-			local_ship_repair = 0.1
+			local_ship_cost = -0.25
+			local_ship_repair = 0.25
+			naval_forcelimit = 4
+			ship_recruit_speed = -0.25
 		}
 		area_modifier = {
-			local_sailors_modifier = 0.25
+			local_sailors_modifier = 0.50
 		}
-		country_modifiers = { }
+		region_modifier = { }
+		country_modifiers = {
+			naval_tradition_from_battle = 0.25
+		}
 		on_upgraded = { }
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
-
+		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
-			local_ship_cost = -0.25
-			local_ship_repair = 0.25
+			naval_forcelimit = 8
 		}
 		area_modifier = {
-			local_sailors_modifier = 0.5
+			local_sailors_modifier = 1
+			local_ship_cost = -0.33
+			local_ship_repair = 0.33
+			ship_recruit_speed = -0.33
 		}
+		region_modifier = { }
 		country_modifiers = {
 			naval_tradition_from_battle = 0.5
 			naval_morale = 0.1
@@ -139,7 +162,7 @@ gme_peterhof_palace = {
 	start = 33
 	date = 1.01.01
 	time = { months = 0 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 0
 	type = monument
 	can_be_moved = no
@@ -147,11 +170,15 @@ gme_peterhof_palace = {
 	on_built = { }
 	on_destroyed = { }
 	can_use_modifiers_trigger = { 
-		culture_group = east_slavic
+		owner = {
+			culture_group = east_slavic
+		}
 		has_owner_accepted_culture = yes
 	}
 	can_upgrade_trigger = { 
-		culture_group = east_slavic
+		owner = {
+			culture_group = east_slavic
+		}
 		has_owner_accepted_culture = yes
 	}
 	keep_trigger = { }
@@ -160,46 +187,50 @@ gme_peterhof_palace = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
-			yearly_absolutism = 0.25
-			prestige = 0.25
 			legitimacy = 0.25
+			prestige = 0.25
+			yearly_absolutism = 0.25
 		}
 		on_upgraded = { }
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
-			local_unrest = 1
+			local_unrest = -1
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
-			yearly_absolutism = 0.5
-			prestige = 0.5
 			legitimacy = 0.5
+			prestige = 0.5
+			yearly_absolutism = 0.5
 		}
 		on_upgraded = { }
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = {
-			local_unrest = 2
+			local_unrest = -2
 		}
+		region_modifier = { }
 		country_modifiers = {
-			yearly_absolutism = 1
-			prestige = 1
 			legitimacy = 1
+			prestige = 1
+			yearly_absolutism = 1
 		}
 		on_upgraded = { }
 	}

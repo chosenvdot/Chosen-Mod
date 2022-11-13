@@ -2,7 +2,7 @@ gme_leshan_giant_buddha = {
 	start = 4212
 	date = 1.01.01
 	time = { months = 0 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 1
 	type = monument
 	can_be_moved = no
@@ -23,14 +23,16 @@ gme_leshan_giant_buddha = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			global_autonomy = -0.025
 		}
@@ -38,23 +40,25 @@ gme_leshan_giant_buddha = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			global_autonomy = -0.05
-			all_power_cost = -0.01
+			all_power_cost = -0.025
 		}
 		on_upgraded = { }
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			global_autonomy = -0.05
-			all_power_cost = -0.025
+			all_power_cost = -0.05
 		}
 		on_upgraded = { }
 	}

@@ -2,7 +2,7 @@ gme_bundeshaus = {
 	start = 165
 	date = 1.01.01
 	time = { months = 120 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 0
 	type = monument
 	can_be_moved = no
@@ -23,16 +23,18 @@ gme_bundeshaus = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_governing_cost = -0.10
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			reform_progress_growth = 0.05
 		}
@@ -44,12 +46,13 @@ gme_bundeshaus = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = {
 			local_state_maintenance_modifier = -0.15
 			local_governing_cost = -0.20
 		}
+		region_modifier = { }
 		country_modifiers = {
 			reform_progress_growth = 0.10
 		}
@@ -61,12 +64,13 @@ gme_bundeshaus = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = {
 			local_state_maintenance_modifier = -0.25
 			local_governing_cost = -0.25
 		}
+		region_modifier = { }
 		country_modifiers = {
 			candidate_random_bonus = 1
 			reform_progress_growth = 0.15
@@ -82,7 +86,7 @@ gme_chillon_castle = {
 	start = 1867
 	date = 1.01.01
 	time = { months = 120 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 1
 	type = monument
 	can_be_moved = no
@@ -103,17 +107,19 @@ gme_chillon_castle = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_manpower_modifier = 0.15
 			garrison_growth = 0.15
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = {
 			add_devastation = -10
@@ -121,13 +127,15 @@ gme_chillon_castle = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_manpower_modifier = 0.25
 			local_defensiveness = 0.25
+			local_garrison_size = 0.25
 			garrison_growth = 0.25
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			defensiveness = 0.15
 		}
@@ -135,13 +143,15 @@ gme_chillon_castle = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_manpower_modifier = 0.33
 			local_defensiveness = 0.33
+			local_garrison_size = 0.33
 			garrison_growth = 0.33
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			defensiveness = 0.15
 			fort_maintenance_modifier = -0.15
@@ -153,7 +163,7 @@ gme_college_geneve = {
 	start = 4720
 	date = 1.01.01
 	time = { months = 120 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 0
 	type = monument
 	can_be_moved = no
@@ -178,14 +188,16 @@ gme_college_geneve = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			monthly_fervor_increase = 0.25
 			tolerance_own = 0.50
@@ -198,13 +210,14 @@ gme_college_geneve = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			monthly_fervor_increase = 0.5
 			tolerance_own = 1
-			advisor_cost = -0.1
+			advisor_cost = -0.20
 		}
 		on_upgraded = {
 			owner = {
@@ -214,13 +227,14 @@ gme_college_geneve = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			monthly_fervor_increase = 1
 			tolerance_own = 2
-			advisor_cost = -0.15
+			advisor_cost = -0.30
 			advisor_pool = 1
 			idea_cost = -0.10
 		}
@@ -231,11 +245,201 @@ gme_college_geneve = {
 		}
 	}
 }
+gme_heidelberg = {
+	start = 77
+	date = 1.01.01
+	time = { months = 120 }
+	build_cost = 500
+	starting_tier = 1
+	type = monument
+	can_be_moved = no
+	build_trigger = { }
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		owner = {
+			culture_group = germanic
+		}
+		has_owner_accepted_culture = yes
+	}
+	can_upgrade_trigger = {
+		owner = {
+			culture_group = germanic
+		}
+		has_owner_accepted_culture = yes
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 500 }
+		province_modifiers = {
+			local_development_cost = -0.10
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			monthly_splendor = 0.5
+		}
+		on_upgraded = { }
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			allowed_num_of_buildings = 1
+		}
+		area_modifier = {
+			local_development_cost = -0.10
+			local_prosperity_growth = 0.5
+		}
+		region_modifier = { }
+		country_modifiers = {
+			improve_relation_modifier = 0.1
+			monarch_lifespan = 0.05
+			monthly_splendor = 1
+		}
+		on_upgraded = { }
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 2000 }
+		province_modifiers = { }
+		area_modifier = {
+			allowed_num_of_buildings = 2
+			local_development_cost = -0.15
+			local_institution_spread = 0.25
+			local_prosperity_growth = 1
+		}
+		region_modifier = { }
+		country_modifiers = {
+			improve_relation_modifier = 0.20
+			monarch_admin_power = 1
+			monarch_lifespan = 0.10
+			monthly_splendor = 2
+		}
+		on_upgraded = { }
+	}
+}
+gme_hofburg = {
+	start = 134
+	date = 1.01.01
+	time = { months = 120 }
+	build_cost = 500
+	starting_tier = 1
+	type = monument
+	can_be_moved = no
+	build_trigger = { }
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		has_owner_accepted_culture = yes
+		owner = {
+			OR = {
+				dynasty = "von Habsburg"
+				is_emperor = yes
+				tag = HLR
+			}
+		}
+	}
+	can_upgrade_trigger = {
+		has_owner_accepted_culture = yes
+		owner = {
+			OR = {
+				dynasty = "von Habsburg"
+				is_emperor = yes
+				tag = HLR
+			}
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 500 }
+		province_modifiers = {
+			local_development_cost = -0.10
+			local_institution_spread = 0.15
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.5
+		}
+		region_modifier = { }
+		country_modifiers = {
+			advisor_pool = 1
+			legitimacy = 0.5
+		}
+		on_upgraded = { }
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			allowed_num_of_buildings = 1
+			local_institution_spread = 0.25
+		}
+		area_modifier = {
+			local_development_cost = -0.10
+			local_prosperity_growth = 0.5
+		}
+		region_modifier = { }
+		country_modifiers = {
+			advisor_pool = 1
+			diplomatic_reputation = 2
+			diplomatic_upkeep = 1
+			legitimacy = 1
+			same_culture_advisor_cost = -0.15
+		}
+		on_upgraded = { }
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 2000 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			allowed_num_of_buildings = 2
+			local_development_cost = -0.15
+			local_institution_spread = 0.25
+			local_prosperity_growth = 1
+		}
+		region_modifier = { }
+		country_modifiers = {
+			diplomatic_reputation = 2
+			advisor_pool = 1
+			diplomatic_upkeep = 2
+			imperial_authority = 0.10
+			legitimacy = 1
+			same_culture_advisor_cost = -0.15
+		}
+		on_upgraded = {
+			owner = {
+				add_imperial_influence = 5
+			}
+		}
+	}
+}
 gme_neuschwanstein_castle = {
 	start = 65
 	date = 1.01.01
 	time = { months = 120 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 0
 	type = monument
 	can_be_moved = no
@@ -243,7 +447,7 @@ gme_neuschwanstein_castle = {
 	on_built = { }
 	on_destroyed = { }
 	can_use_modifiers_trigger = {
-		FROM = { government = monarchy }
+		owner = { government = monarchy }
 		OR = {
 			culture = bavarian
 			culture = austrian
@@ -251,8 +455,8 @@ gme_neuschwanstein_castle = {
 		has_owner_accepted_culture = yes
 	}
 	can_upgrade_trigger = {
-		FROM = { adm_tech = 10 }
-		FROM = { government = monarchy }
+		owner = { adm_tech = 10 }
+		owner = { government = monarchy }
 		OR = {
 			culture = bavarian
 			culture = austrian
@@ -265,16 +469,18 @@ gme_neuschwanstein_castle = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_development_cost = -0.10
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			governing_capacity_modifier = 0.05
 		}
@@ -284,13 +490,14 @@ gme_neuschwanstein_castle = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_prosperity_growth = 0.5
 		}
 		area_modifier = {
 			local_development_cost = -0.10
 		}
+		region_modifier = { }
 		country_modifiers = {
 			governing_capacity_modifier = 0.10
 		}
@@ -298,24 +505,133 @@ gme_neuschwanstein_castle = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_prosperity_growth = 1
 		}
 		area_modifier = {
 			local_development_cost = -0.10
 		}
+		region_modifier = { }
 		country_modifiers = {
 			governing_capacity_modifier = 0.15
+			monarch_diplomatic_power = 1
 		}
 		on_upgraded = { }
+	}
+}
+gme_stephansdom = {
+	start = 134
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 500
+	starting_tier = 1
+	type = monument
+	can_be_moved = no
+	build_trigger = { }
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		has_owner_accepted_culture = yes
+		has_owner_religion = yes
+		religion = catholic
+		owner = {
+			culture_group = germanic
+		}
+	}
+	can_upgrade_trigger = {
+		has_owner_accepted_culture = yes
+		has_owner_religion = yes
+		religion = catholic
+		owner = {
+			culture_group = germanic
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 500 }
+		province_modifiers = {
+			local_tax_modifier = 0.15
+			local_religious_conversion_resistance = 0.33
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			papal_influence = 0.5
+			tolerance_own = 0.5
+		}
+		on_upgraded = { }
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			local_tax_modifier = 0.25
+			local_religious_conversion_resistance = 0.50
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = {
+			imperial_reform_catholic_approval = 5
+			papal_influence = 1
+			tolerance_own = 1
+			manpower_in_true_faith_provinces = 0.05
+		}
+		on_upgraded = {
+			if = {
+				limit = {
+					has_cardinal = no
+				}
+				add_cardinal = yes
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 2000 }
+		province_modifiers = {
+			local_tax_modifier = 0.33
+		}
+		area_modifier = {
+			local_religious_conversion_resistance = 0.66
+		}
+		region_modifier = { }
+		country_modifiers = {
+			imperial_reform_catholic_approval = 10
+			warscore_cost_vs_other_religion = -0.10
+			manpower_in_true_faith_provinces = 0.15
+			papal_influence = 1
+			tolerance_own = 1
+		}
+		on_upgraded = {
+			owner = {
+				add_papal_influence = 5
+				define_advisor = {
+					type = inquisitor
+					skill = 3
+					culture = ROOT
+					religion = ROOT
+					discount = yes
+				}
+			}
+		}
 	}
 }
 gme_stone_bridge_regensburg = {
 	start = 2957
 	date = 1.01.01
 	time = { months = 120 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 2
 	type = monument
 	can_be_moved = no
@@ -330,44 +646,144 @@ gme_stone_bridge_regensburg = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			province_trade_power_modifier = 0.1
-        	local_development_cost = -0.05
+			local_development_cost = -0.05
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 750 }
 		province_modifiers = {
 			province_trade_power_modifier = 0.25
 			local_development_cost = -0.1
 			local_institution_spread = 0.1	
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {
-			province_trade_power_modifier = 0.5
-			local_development_cost = -0.1
-			local_institution_spread = 0.2
-			local_prosperity_growth = 1
+			local_prosperity_growth = 1.5
 			local_monthly_devastation = -0.1
 		}
-		area_modifier = { }
+		area_modifier = {
+			province_trade_power_modifier = 0.75
+			local_development_cost = -0.25
+			local_institution_spread = 0.25
+		}
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = { }
+	}
+}
+gme_university_graz = {
+	start = 1863
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 500
+	starting_tier = 0
+	type = monument
+	can_be_moved = no
+	build_trigger = { }
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		culture = austrian
+		has_owner_accepted_culture = yes
+	}
+	can_upgrade_trigger = {
+		culture = austrian
+		has_owner_accepted_culture = yes
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 500 }
+		province_modifiers = {
+			local_institution_spread = 0.25
+		}
+		area_modifier = { }
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			institution_growth = 4
+		}
+		area_modifier = {
+			local_institution_spread = 0.15
+			local_development_cost = -0.15
+		}
+		region_modifier = { }
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 10
+				}
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 2000 }
+		province_modifiers = {
+			institution_growth = 4
+		}
+		area_modifier = {
+			local_institution_spread = 0.15
+			local_development_cost = -0.15
+		}
+		region_modifier = { }
+		country_modifiers = {
+			technology_cost = -0.05
+			embracement_cost = -0.10
+		}
+		on_upgraded = {
+			if = {
+				limit = {
+					NOT = { has_building = university }
+				}
+				add_building = university
+			}
+			else = {
+				add_base_tax = 2
+			}
+		}
 	}
 }

@@ -2,7 +2,7 @@ gme_elephant_stables = {
 	start = 541
 	date = 1.01.01
 	time = { months = 0 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 1
 	type = monument
 	can_be_moved = no
@@ -23,29 +23,33 @@ gme_elephant_stables = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = {	}
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_regiment_cost = -0.10
+			local_regiment_cost = -0.20
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = {	}
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
-			local_regiment_cost = -0.10
-			local_manpower_modifier = 0.10
+			local_manpower_modifier = 0.25
+			local_regiment_cost = -0.25
 		}
 		area_modifier = {
-			local_monthly_devastation = -0.1
+			local_monthly_devastation = -0.05
 		}
+		region_modifier = { }
 		country_modifiers = {
 			cavalry_power = 0.05
 		}
@@ -53,16 +57,17 @@ gme_elephant_stables = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
-		province_modifiers = {
-			local_regiment_cost = -0.10
-			local_manpower_modifier = 0.10
-		}
+		cost_to_upgrade = { factor = 2000 }
+		province_modifiers = { }
 		area_modifier = {
+			local_manpower_modifier = 0.33
 			local_monthly_devastation = -0.1
+			local_regiment_cost = -0.33
 		}
+		region_modifier = { }
 		country_modifiers = {
 			cavalry_power = 0.10
+			cavalry_cost = -0.10
 		}
 		on_upgraded = {	}
 	}
@@ -71,7 +76,7 @@ gme_market_complex = {
 	start = 541
 	date = 1.01.01
 	time = { months = 0 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 1
 	type = monument
 	can_be_moved = no
@@ -92,28 +97,35 @@ gme_market_complex = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = {	}
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
-			local_production_efficiency = 0.05
 			local_development_cost = -0.05
+			province_trade_power_modifier = 0.10
 		}
-		area_modifier = { }
+		area_modifier = {
+			trade_value_modifier = 0.10
+		}
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = {	}
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
-			local_production_efficiency = 0.10
 			local_development_cost = -0.10
+			province_trade_power_modifier = 0.25
 		}
-		area_modifier = { }
+		area_modifier = {
+			trade_value_modifier = 0.25
+		}
+		region_modifier = { }
 		country_modifiers = {
 			trade_efficiency = 0.05
 		}
@@ -121,16 +133,17 @@ gme_market_complex = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
-		province_modifiers = {
-			local_production_efficiency = 0.15
+		cost_to_upgrade = { factor = 2000 }
+		province_modifiers = { }
+		area_modifier = { }
+		region_modifier = {
 			local_development_cost = -0.15
-		}
-		area_modifier = {
-			local_development_cost = -0.05
+			province_trade_power_modifier = 0.25
+			trade_value_modifier = 0.25
 		}
 		country_modifiers = {
 			trade_efficiency = 0.10
+			merchants = 1
 		}
 		on_upgraded = {	}
 	}

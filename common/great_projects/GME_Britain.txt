@@ -2,7 +2,7 @@ gme_blarney_castle = {
 	start = 4378
 	date = 1.01.01
 	time = { months = 0 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 1
 	type = monument
 	can_be_moved = no
@@ -23,16 +23,19 @@ gme_blarney_castle = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = {	}
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
-			local_defensiveness = 0.10
+			local_defensiveness = 0.15
+			local_manpower_modifier = 0.25
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			improve_relation_modifier = 0.10
 		}
@@ -40,11 +43,13 @@ gme_blarney_castle = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
-			local_defensiveness = 0.15
+			local_defensiveness = 0.25
+			local_manpower_modifier = 0.33
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			improve_relation_modifier = 0.15
 			diplomatic_reputation = 0.5
@@ -53,11 +58,13 @@ gme_blarney_castle = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
-			local_defensiveness = 0.20
+			local_defensiveness = 0.33
+			local_manpower_modifier = 0.50
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			improve_relation_modifier = 0.20
 			diplomatic_reputation = 1
@@ -69,7 +76,7 @@ gme_kilkenny_castle = {
 	start = 374
 	date = 1.01.01
 	time = { months = 0 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 1
 	type = monument
 	can_be_moved = no
@@ -90,16 +97,19 @@ gme_kilkenny_castle = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = {	}
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
-			local_defensiveness = 0.10
+			local_defensiveness = 0.15
+			land_forcelimit = 2
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			advisor_cost = -0.05
 		}
@@ -107,11 +117,13 @@ gme_kilkenny_castle = {
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
-			local_defensiveness = 0.15
+			local_defensiveness = 0.25
+			land_forcelimit = 4
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			advisor_cost = -0.10
 			technology_cost = -0.05
@@ -120,11 +132,13 @@ gme_kilkenny_castle = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
-			local_defensiveness = 0.20
+			local_defensiveness = 0.33
+			land_forcelimit = 8
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			advisor_cost = -0.15
 			technology_cost = -0.10
@@ -136,7 +150,7 @@ gme_newgrange_tomb = {
 	start = 373
 	date = 1.01.01
 	time = { months = 0 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 1
 	type = monument
 	can_be_moved = no
@@ -159,38 +173,47 @@ gme_newgrange_tomb = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = {	}
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
-			local_manpower_modifier = 0.10
+			local_manpower_modifier = 0.25
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = {	}
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
-			local_manpower_modifier = 0.15
+			local_manpower_modifier = 0.33
+			local_regiment_cost = -0.25
+			regiment_recruit_speed = -0.25
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = {	}
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
-		province_modifiers = {
-			local_manpower_modifier = 0.20
+		cost_to_upgrade = { factor = 2000 }
+		province_modifiers = { }
+		area_modifier = {
+			local_manpower_modifier = 0.50
+			local_regiment_cost = -0.25
+			regiment_recruit_speed = -0.25
 		}
-		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
-			land_morale = 0.025
+			army_tradition = 0.5
+			land_morale = 0.10
 		}
 		on_upgraded = {	}
 	}
@@ -199,7 +222,7 @@ gme_patrick_cathedral = {
 	start = 373
 	date = 1.01.01
 	time = { months = 0 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 0
 	type = monument
 	can_be_moved = no
@@ -224,26 +247,29 @@ gme_patrick_cathedral = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = {	}
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_tax_modifier = 0.15
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = {	}
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_tax_modifier = 0.25
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			tolerance_own = 0.5
 			papal_influence = 1
@@ -252,11 +278,12 @@ gme_patrick_cathedral = {
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_tax_modifier = 0.33
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = {
 			tolerance_own = 1
 			papal_influence = 2
@@ -268,7 +295,7 @@ gme_rock_chasel = {
 	start = 4377
 	date = 1.01.01
 	time = { months = 0 }
-	build_cost = 1000
+	build_cost = 500
 	starting_tier = 1
 	type = monument
 	can_be_moved = no
@@ -289,42 +316,50 @@ gme_rock_chasel = {
 		cost_to_upgrade = { factor = 0 }
 		province_modifiers = { }
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = {	}
 	}
 	tier_1 = {
 		upgrade_time = { months = 120 }
-		cost_to_upgrade = { factor = 1000 }
+		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_defensiveness = 0.15
+			local_garrison_size = 0.15
 			local_governing_cost = -0.10
 			local_unrest = -1
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = {	}
 	}
 	tier_2 = {
 		upgrade_time = { months = 240 }
-		cost_to_upgrade = { factor = 2500 }
+		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
-			local_defensiveness = 0.20
+			local_defensiveness = 0.25
+			local_garrison_size = 0.20
 			local_governing_cost = -0.20
 			local_unrest = -2
 		}
 		area_modifier = { }
+		region_modifier = { }
 		country_modifiers = { }
 		on_upgraded = {	}
 	}
 	tier_3 = {
 		upgrade_time = { months = 480 }
-		cost_to_upgrade = { factor = 5000 }
+		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
-			local_defensiveness = 0.25
-			statewide_governing_cost = -0.25
-			local_unrest = -3
+			local_defensiveness = 0.33
+			local_garrison_size = 0.25
 		}
-		area_modifier = { }
+		area_modifier = {
+			local_unrest = -3
+			statewide_governing_cost = -0.25
+		}
+		region_modifier = { }
 		country_modifiers = {
 			legitimacy = 0.5
 			nobles_loyalty_modifier = 0.1
