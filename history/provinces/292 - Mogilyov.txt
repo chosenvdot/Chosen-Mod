@@ -1,8 +1,8 @@
  
 #292 - Mogilyov
 
-owner = LIT
-controller = LIT  
+owner = DTK
+controller = DTK
 culture = byelorussian
 religion = orthodox 
 hre = no
@@ -12,7 +12,7 @@ trade_goods = wool
 base_manpower = 2 
 capital = "Mogilev"
 is_city = yes
-add_core = LIT
+add_core = DTK
 add_local_autonomy = 25
 
 #extra_cost = 8

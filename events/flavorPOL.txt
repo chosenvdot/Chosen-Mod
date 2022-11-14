@@ -1818,6 +1818,9 @@ country_event = {
 		ai_chance = { 
 			factor = 75 
 		}
+		LIT = { 
+			country_event = { id = flavor_lit.16 }
+		}
 		if = {
 			limit = { has_dlc = "Lions of the North" }
 			custom_tooltip = pol_impact_future_missions_tt 
@@ -1829,6 +1832,13 @@ country_event = {
 		name = flavor_pol.18.b #Appoint a Local Noble.
 		ai_chance = { 
 			factor = 25
+		}
+		define_ruler = {
+			ADM = 4
+			DIP = 4
+			MIL = 4
+			claim = 100
+			culture = polish
 		}
 		if = {
 			limit = {

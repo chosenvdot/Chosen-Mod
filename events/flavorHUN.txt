@@ -122,52 +122,6 @@ country_event = {
 	}
 }
 
-# Decline of Royal Power
-country_event = {
-	id = flavor_hun.7
-	title = flavor_hun.7.t
-	desc = flavor_hun.7.d
-	picture = COURT_eventPicture
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = HUN
-		is_year = 1490
-		NOT = { is_year = 1530 }
-		is_neighbor_of = TUR
-		has_regency = no
-		NOT = { ADM = 5 }
-	}
-
-	mean_time_to_happen = {
-		months = 12
-	}
-
-	option = {
-		name = flavor_hun.7.a
-		add_ruler_modifier = {
-			name = hun_power_to_magnates
-		}
-		add_estate_loyalty = {
-			estate = estate_nobles
-			loyalty = 15
-		}
-	}
-	option = {
-		name = flavor_hun.7.b
-		add_stability = -3
-		random_owned_province = {
-			noble_rebels = 2
-		}
-		add_estate_loyalty = {
-			estate = estate_nobles
-			loyalty = -25
-		}
-
-	}
-}
-
 # Elizabeth Bathory
 country_event = {
 	id = flavor_hun.8
