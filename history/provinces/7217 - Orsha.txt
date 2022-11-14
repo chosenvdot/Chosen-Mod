@@ -1,9 +1,9 @@
  
 #BT GDL reoverhaul
 
-owner = LIT
-controller = LIT
-add_core = LIT
+owner = DTK
+controller = DTK
+add_core = DTK
 culture = byelorussian
 religion = orthodox
 capital = "Orsha"

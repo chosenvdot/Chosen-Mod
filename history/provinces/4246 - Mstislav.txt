@@ -1,8 +1,8 @@
  
 #4246 - Mstislav
 
-owner = LIT
-controller = LIT  
+owner = DTK
+controller = DTK
 culture = byelorussian
 religion = orthodox 
 hre = no
@@ -12,7 +12,7 @@ trade_goods = wool
 base_manpower = 1 
 capital = "Mstislav"
 is_city = yes
-add_core = LIT
+add_core = DTK
 add_local_autonomy = 25
 
 discovered_by = nomad_group

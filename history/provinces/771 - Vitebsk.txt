@@ -1,8 +1,8 @@
  
 #293 - Vitebsk
 
-owner = LIT
-controller = LIT
+owner = DTK
+controller = DTK
 culture = byelorussian
 religion = orthodox
 hre = no
@@ -13,8 +13,7 @@ base_manpower = 2
 add_local_autonomy = 25
 capital = "Vitebsk"
 is_city = yes	 
-add_core = LIT
-add_core = PLT
+add_core = DTK
 
 #extra_cost = 8
 #center_of_trade = 1
