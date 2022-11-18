@@ -444,7 +444,10 @@ emp_france_missions_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = normandy_area
+				area = lower_normandy_area
 				province_id = 177
+				province_id = 7980
+				NOT = { province_id = 3110 }
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -458,6 +461,14 @@ emp_france_missions_2 = {
 			177 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			7980 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_normandy_area	= {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			NOT = { province_id = 3110 }
 		}
 		effect = {
 			if = {
@@ -1079,18 +1090,20 @@ emp_france_missions_3 = {
 		completed_by = 1453.7.18
 		provinces_to_highlight = {
 			OR = {
-				province_id = 174
-				province_id = 173
+				area = guyenne_area
+				area = pyrenees_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			174 = {
+			guyenne_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			173 = {
+			pyrenees_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -1103,6 +1116,20 @@ emp_france_missions_3 = {
 				add_permanent_claim = ROOT
 			}
 			loire_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_brittany_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			brittany_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
