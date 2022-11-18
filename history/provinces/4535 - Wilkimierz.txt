@@ -1,8 +1,8 @@
  
 #4535 - Wilkimierz
 
-owner = LIT
-controller = LIT
+owner = PLT
+controller = PLT
 capital = "Utena"
 is_city = yes
 culture = lithuanian
@@ -12,7 +12,7 @@ hre = no
 base_tax = 2
 base_production = 2
 base_manpower = 2
-add_core = LIT
+add_core = PLT
 
 discovered_by = western
 discovered_by = eastern

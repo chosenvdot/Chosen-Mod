@@ -1,8 +1,8 @@
  
 #4243 - Toropets
 
-owner = LIT
-controller = LIT
+owner = DTK
+controller = DTK
 culture = russian
 religion = orthodox
 hre = no
@@ -13,8 +13,7 @@ base_manpower = 3
 add_local_autonomy = 50
 capital = "Toropets"
 is_city = yes	 
-add_core = LIT
-add_core = SMO
+add_core = DTK
 fort_15th = yes
 
 discovered_by = western

@@ -3,8 +3,8 @@
 #Region - Baltic
 #Area - Lithuania
 
-owner = LIT
-controller = LIT
+owner = PLT
+controller = PLT
 culture = lithuanian
 religion = catholic
 capital = "Kaunas"
@@ -14,7 +14,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 1 
 is_city = yes
-add_core = LIT
+add_core = PLT
 
 1444.1.1 = { discovered_by = KAZ }
 1444.1.1 = { discovered_by = CRI }

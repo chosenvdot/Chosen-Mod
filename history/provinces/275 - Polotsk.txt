@@ -1,8 +1,8 @@
  
 #275 - Polotsk
 
-owner = LIT 
-controller = LIT 
+owner = PLT
+controller = PLT 
 culture = byelorussian
 religion = orthodox 
 hre = no
@@ -14,7 +14,7 @@ add_local_autonomy = 25
 capital = "Polotsk"
 is_city = yes 
 fort_15th = yes 
-add_core = LIT
+add_core = PLT
 
 extra_cost = 8
 center_of_trade = 1

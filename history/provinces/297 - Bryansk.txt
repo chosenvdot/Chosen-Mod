@@ -1,8 +1,8 @@
  
 #297 - Bryansk
 
-owner = LIT
-controller = LIT
+owner = SMO
+controller = SMO
 culture = russian
 religion = orthodox 
 hre = no
@@ -13,7 +13,6 @@ base_manpower = 2
 add_local_autonomy = 25
 capital = "Bryansk"
 is_city = yes
-add_core = LIT
 add_core = SMO
 
 extra_cost = 8

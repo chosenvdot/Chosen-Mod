@@ -1,10 +1,9 @@
  
 #BT GDL reoverhaul
 
-owner = LIT
-controller = LIT
-add_core = LIT
-add_core = CHR
+owner = SMO
+controller = SMO
+add_core = SMO
 culture = ruthenian
 religion = orthodox
 capital = "Sosnytsia"

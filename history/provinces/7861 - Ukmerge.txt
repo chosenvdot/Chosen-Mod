@@ -1,9 +1,9 @@
  
 #BT Scandinavia and Baltics reoverhaul
 
-owner = LIT
-controller = LIT
-add_core = LIT
+owner = PLT
+controller = PLT
+add_core = PLT
 culture = lithuanian
 religion = catholic
 capital = "Ukmerge"
