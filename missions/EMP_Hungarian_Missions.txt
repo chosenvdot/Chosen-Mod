@@ -867,6 +867,14 @@ emp_hun_bulwark_of_christianity_branch = {
 				name = hun_bulwark_of_christianity
 				duration = 7300
 			}
+			anatolia_region = {
+			} = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }

@@ -12,113 +12,16 @@ hun_north_group = {
 		icon = mission_noble_council
 		required_missions = {  }
 		position = 1
-
-		provinces_to_highlight = {
-			OR = {
-				owned_by = POL
-				AND = {
-					NOT = { exists = POL }
-					region = poland_region
-					ROOT = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								value = 6
-								region = poland_region
-							}
-						}
-					}
-				}
-			}
-		}
 		
 		trigger = {
-			if = {
-				limit = {
-					exists = POL
-					has_dlc = "Res Publica"
-					POL = {
-						has_reform = elective_monarchy
-					}
-				}
-				OR = { 
-					POL = { dynasty = root }
-					AND = {
-						alliance_with = POL
-						POL = {
-							has_opinion = {
-								who = ROOT
-								value = 190
-							}
-						}
-					}
-					overlord_of = POL
-					AND = { 
-						OR = {
-							is_rival = POL
-							POL = { is_rival = ROOT }
-						}
-						army_size = POL
-					}
-				}
-			}
-			else_if = {
-				limit = { exists = POL }
-				OR = {
-					alliance_with = POL
-					overlord_of = POL
-					POL = {
-						has_opinion = {
-							who = ROOT
-							value = 190
-						}
-					}
-					AND = { 
-						OR = {
-							is_rival = POL
-							POL = { is_rival = ROOT }
-						}
-						army_size = POL
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = { exists = POL }
-				}
-				OR = {
-					army_size_percentage = 1
-					num_of_owned_provinces_with = {
-						value = 6
-						region = poland_region
-					}
-				}
-			}
-			is_subject = no
+				army_size_percentage = .8
+				num_of_generals = 1
 		}
 		
 		effect = {
-			if = {
-				limit = {
-					OR = {
-						NOT = { alliance_with = POL }
-						NOT = {
-							moldavia_area = {
-								type = all
-								country_or_non_sovereign_subject_holds = POL
-							}
-						}
-					}
-				}
-				moldavia_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			else = {
-				add_dip_power = 100
+			add_country_modifier = {
+				name = "spa_rb_morale"
+				duration = 5475
 			}
 			wallachia_area = {
 				limit = {
@@ -127,29 +30,42 @@ hun_north_group = {
 				}
 				add_permanent_claim = ROOT
 			}
-		}
-	}
-	
-	hun_vassal_states = {
-		icon = mission_unite_home_region
-		required_missions = { hun_poland_alliance }
-		position = 2
-		
-		provinces_to_highlight = {
-			area = wallachia_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		
-		trigger = {
-			wallachia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			upper_muntenia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
-			is_subject = no
-		}
-		
-		effect = {
+			oltenia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			bosnia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			serbia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			3000 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			7711 = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -163,8 +79,99 @@ hun_north_group = {
 				}
 				add_permanent_claim = ROOT
 			}
+			3187 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			herzegovina_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			7727 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			1828 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
+	hun_vassal_states = {
+		icon = mission_unite_home_region
+		required_missions = { hun_poland_alliance }
+		position = 2
+		
+	provinces_to_highlight = {
+		OR = {
+			area = wallachia_area
+			area = upper_munntenia_area
+			area = oltenia_area
+		}
+		NOT = {
+			ROOT = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 12 #out of 17
+					OR = {
+						area = wallachia_area
+						area = upper_munntenia_area
+						area = oltenia_area
+					}
+				}
+			}
+		}
+		NOT = { country_or_non_sovereign_subject_holds = ROOT }
+	}
+	trigger = {
+		num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+			value = 11 #out of 14
+			OR = {
+				area = wallachia_area
+				area = upper_munntenia_area
+				area = oltenia_area
+			}
+		}
+	}
+	effect = {
+		danubian_plain_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		silistria_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		vidin_area = {
+			limit = {
+				NOT = { is_core = ROOT }
+				NOT = { is_permanent_claim = ROOT }
+			}
+			add_permanent_claim = ROOT
+		}
+		add_country_modifier = {
+			name = "royal_hungary"
+			duration = 5475
+		}
+	}
+}
 	
 	hun_vassal_states_three = {
 		icon = mission_eastern_european_city
@@ -254,38 +261,24 @@ hun_south_group = {
 		icon = mission_eastern_european_city
 		required_missions = { hun_poland_alliance }
 		position = 2
-		
-		provinces_to_highlight = {
-			area = moldavia_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
+
 		
 		trigger = {
-			moldavia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			is_subject = no
-		}
-		
-		effect = {
-			moldavia_area = {
-				add_province_modifier = {
-					name = "hun_moldavia_mod"
-					duration = 10950
-				}
-			}
-
 			if = {
 				limit = {
-					has_dlc = "Emperor"
+					exists = POL
 				}
-				malopolska_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
+				total_own_and_non_tributary_subject_development = POL
+				total_own_and_non_tributary_subject_development = 300
+			}
+			else = {
+				total_own_and_non_tributary_subject_development = 600
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = POL
 				}
 				red_ruthenia_area = {
 					limit = {
@@ -294,7 +287,22 @@ hun_south_group = {
 					}
 					add_permanent_claim = ROOT
 				}
-				sandomierz_area = {
+				malopolska_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				moldavia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				western_moldovia_area = {
+				} = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -445,14 +453,7 @@ hun_ottoman_group = {
 		}
 		
 		effect = {
-			bulgaria_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			silistria_area = {
+			balkan_region = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
