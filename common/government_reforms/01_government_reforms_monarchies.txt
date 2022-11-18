@@ -1696,12 +1696,8 @@ polish_elective_monarchy = {
 		max_absolutism = -30
 		nobles_influence_modifier = 0.05
 		reform_progress_growth = -0.2
-	}
-
-	conditional = {
-		allow = { has_dlc = "Res Publica" }
-		is_elective = yes
-	}
+	} 
+	
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes

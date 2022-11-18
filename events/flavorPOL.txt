@@ -1827,38 +1827,7 @@ country_event = {
 			set_country_flag = pol_chose_pu_flag
 		}
 	}
-	
-	option = {
-		name = flavor_pol.18.b #Appoint a Local Noble.
-		ai_chance = { 
-			factor = 25
-		}
-		define_ruler = {
-			ADM = 4
-			DIP = 4
-			MIL = 4
-			claim = 100
-			culture = polish
-		}
-		if = {
-			limit = {
-				has_states_general_mechanic = yes
-			}
-			change_statists_vs_orangists = 1
-		}
-		LIT = {
-			add_opinion = {
-				who = ROOT
-				modifier = lit_denied_birthright
-			}
-			set_country_flag = lit_decline_pu_flag
-		}
-		if = {
-			limit = { has_dlc = "Emperor" }
-			custom_tooltip = pol_impact_future_missions_tt 
-			set_country_flag = pol_denied_pu_flag
-		}
-	}
+
 }
 
 # Become elective
