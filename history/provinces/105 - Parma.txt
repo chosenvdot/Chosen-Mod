@@ -3,8 +3,8 @@
 #Region - Italy
 #Area - Emilia-Romagna
 
-owner = PAR
-controller = PAR
+owner = PCZ
+controller = PCZ
 culture = romagnan 
 religion = catholic 
 hre = yes 
@@ -14,8 +14,7 @@ trade_goods = livestock
 base_manpower = 5
 capital = "Parma" 
 is_city = yes	# Estimated 
-add_core = MLO
-add_core = PAR
+add_core = PCZ
 
 1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
 	remove_core = MLO

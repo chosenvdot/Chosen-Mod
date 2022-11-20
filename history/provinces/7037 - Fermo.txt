@@ -1,9 +1,9 @@
  
 #BT Italy reoverhaul
 
-owner = FMO
-controller = FMO
-add_core = FMO
+owner = MRT
+controller = MRT
+add_core = MRT
 culture = umbrian
 religion = catholic
 capital = "Fermo"

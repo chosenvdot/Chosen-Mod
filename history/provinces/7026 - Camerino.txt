@@ -1,9 +1,9 @@
  
 #BT Italy reoverhaul
 
-owner = FMO
-controller = FMO
-add_core = FMO
+owner = NRC
+controller = NRC
+add_core = NRC
 culture = umbrian
 religion = catholic
 capital = "Camerino"

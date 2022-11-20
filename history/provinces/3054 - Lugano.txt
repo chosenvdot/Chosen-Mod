@@ -3,8 +3,8 @@
 #Region - Germany
 #Area - Switzerland
 
-owner = MLO
-controller = MLO 
+owner = NVA
+controller = NVA 
 culture = lombard
 religion = catholic
 capital = "Lugano"
@@ -14,7 +14,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = MLO
+add_core = NVA
 #add_core = SWI (JP) Not neccesary, Switzerland had not control of this land prior to its later conquest
 
 discovered_by = western

@@ -3,8 +3,8 @@
 #Region - Italy
 #Area - Emilia-Romagna
 
-owner = RAV
-controller = RAV
+owner = BLG
+controller = BLG
 culture = romagnan
 religion = catholic 
 hre = yes 
@@ -14,7 +14,7 @@ trade_goods = salt
 base_manpower = 3
 capital = "Ravenna"
 is_city = yes	# Estimated #WTF Paradox
-add_core = RAV
+add_core = BLG
 
 extra_cost = 8
 center_of_trade = 1

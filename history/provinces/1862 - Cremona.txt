@@ -3,8 +3,8 @@
 #Region - Italy
 #Area - Lombardy
 
-owner = MLO
-controller = MLO
+owner = MAN
+controller = MAN
 culture = lombard
 religion = catholic
 hre = yes
@@ -14,7 +14,7 @@ trade_goods = grain
 base_manpower = 7
 capital = "Cremona"
 is_city = yes	# Estimated
-add_core = MLO
+add_core = MAN	
 
 discovered_by = western
 discovered_by = muslim
