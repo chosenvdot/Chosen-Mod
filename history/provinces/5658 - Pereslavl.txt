@@ -1,9 +1,9 @@
  
 #New Beyond Typus Province
 
-owner = SMO
-controller = SMO
-add_core = SMO
+owner = MOS
+controller = MOS
+add_core = MOS
 culture = russian
 religion = orthodox
 capital = "Pereslavl-Zalessky"
