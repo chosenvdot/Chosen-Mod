@@ -625,7 +625,6 @@ spa_reconquista = {
 		
 		trigger = {
 			army_size_percentage = .8
-			num_of_generals = 1
 		}
 		
 		effect = {
