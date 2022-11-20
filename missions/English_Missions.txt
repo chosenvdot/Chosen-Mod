@@ -20,8 +20,7 @@ eng_british_conquest = {
 		completed_by = 1450.1.1
 		
 		trigger = {
-			army_size_percentage = 1
-			manpower_percentage = 0.6
+			army_size_percentage = .8
 			num_of_generals = 1
 		}
 		
@@ -92,7 +91,7 @@ eng_british_conquest = {
 				add_casus_belli = {
 					target = SCO
 					type = cb_vassalize_mission
-					months = 120
+					months = 500
 				}
 			}
 		}
