@@ -13,6 +13,7 @@ base_manpower = 6
 capital = "Eski Qirim"
 is_city = yes
 add_core = CRI
+fort_15th = yes
 
 discovered_by = western
 discovered_by = eastern

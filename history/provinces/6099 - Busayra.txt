@@ -9,6 +9,8 @@ owner = QAR
 controller = QAR
 
 #Demographics
+fort_15th = yes
+
 culture = al_iraqiya_arabic
 religion = sunni
 

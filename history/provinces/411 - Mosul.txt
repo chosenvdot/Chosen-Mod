@@ -8,6 +8,8 @@ capital = "Mosul"
 trade_goods = glass
 hre = no
 base_tax = 8 
+fort_15th = yes
+
 base_production = 6
 base_manpower = 6
 is_city = yes
