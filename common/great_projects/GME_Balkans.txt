@@ -1,7 +1,7 @@
 gme_kruje_castle = {
 	start = 4750
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 2
 	type = monument
@@ -40,7 +40,7 @@ gme_kruje_castle = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_defensiveness = 0.25
@@ -60,7 +60,7 @@ gme_kruje_castle = {
 	}
 
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 750 }
 		province_modifiers = {
 			local_defensiveness = 0.33
@@ -82,7 +82,7 @@ gme_kruje_castle = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {
 			local_defensiveness = 0.50
@@ -156,7 +156,7 @@ gme_pec_patriarchate = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -168,7 +168,7 @@ gme_pec_patriarchate = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -191,7 +191,7 @@ gme_pec_patriarchate = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -213,7 +213,7 @@ gme_pec_patriarchate = {
 gme_sacred_palace = {
 	start = 151
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -240,7 +240,7 @@ gme_sacred_palace = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_defensiveness = 0.25
@@ -255,7 +255,7 @@ gme_sacred_palace = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			allowed_num_of_buildings = 1
@@ -272,7 +272,7 @@ gme_sacred_palace = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			allowed_num_of_buildings = 3
@@ -295,7 +295,7 @@ gme_sacred_palace = {
 gme_smerederevo_fortress = {
 	start = 141
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -334,7 +334,7 @@ gme_smerederevo_fortress = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_defensiveness = 0.25
@@ -353,7 +353,7 @@ gme_smerederevo_fortress = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_defensiveness = 0.50
@@ -380,7 +380,7 @@ gme_smerederevo_fortress = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_defensiveness = 0.75
@@ -408,7 +408,7 @@ gme_smerederevo_fortress = {
 gme_walls_ragusa = {
 	start = 137
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 2
 	type = monument
@@ -429,7 +429,7 @@ gme_walls_ragusa = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_defensiveness = 0.15
@@ -445,7 +445,7 @@ gme_walls_ragusa = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 750 }
 		province_modifiers = {
 			blockade_force_required = 0.25
@@ -464,7 +464,7 @@ gme_walls_ragusa = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {
 			local_defensiveness = 0.25

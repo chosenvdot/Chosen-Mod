@@ -1,7 +1,7 @@
 gme_agha_bozorg_mosque = {
 	start = 4335
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	can_be_moved = no
 	starting_tier = 0
@@ -44,7 +44,7 @@ gme_agha_bozorg_mosque = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			institution_growth = 3
@@ -65,7 +65,7 @@ gme_agha_bozorg_mosque = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			institution_growth = 6
@@ -88,7 +88,7 @@ gme_agha_bozorg_mosque = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			institution_growth = 12
@@ -137,7 +137,7 @@ gme_bazaar_tabriz = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_development_cost = -0.20
@@ -163,7 +163,7 @@ gme_bazaar_tabriz = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			province_trade_power_value = 15
@@ -191,7 +191,7 @@ gme_bazaar_tabriz = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			province_trade_power_value = 20
@@ -224,7 +224,7 @@ gme_bazaar_tabriz = {
 gme_behistun_inscription = {
 	start = 2210
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	can_be_moved = no
 	starting_tier = 1
@@ -267,7 +267,7 @@ gme_behistun_inscription = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -279,7 +279,7 @@ gme_behistun_inscription = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -291,7 +291,7 @@ gme_behistun_inscription = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -307,7 +307,7 @@ gme_behistun_inscription = {
 gme_chaharbagh_school = {
 	start = 429
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	can_be_moved = no
 	starting_tier = 1
@@ -346,7 +346,7 @@ gme_chaharbagh_school = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			institution_growth = 3
@@ -361,7 +361,7 @@ gme_chaharbagh_school = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			institution_growth = 6
@@ -383,7 +383,7 @@ gme_chaharbagh_school = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			institution_growth = 12
@@ -412,7 +412,7 @@ gme_chaharbagh_school = {
 gme_golestan_palace = {
 	start = 428
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	can_be_moved = no
 	starting_tier = 0
@@ -451,7 +451,7 @@ gme_golestan_palace = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_development_cost = -0.05
@@ -467,7 +467,7 @@ gme_golestan_palace = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = {
@@ -488,7 +488,7 @@ gme_golestan_palace = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = {
@@ -513,7 +513,7 @@ gme_golestan_palace = {
 gme_gonbad_qabus_tower = {
 	start = 2214
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	can_be_moved = no
 	starting_tier = 1
@@ -546,7 +546,7 @@ gme_gonbad_qabus_tower = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -558,7 +558,7 @@ gme_gonbad_qabus_tower = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -571,7 +571,7 @@ gme_gonbad_qabus_tower = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -587,7 +587,7 @@ gme_gonbad_qabus_tower = {
 gme_maragheh_observatory = {
 	start = 2207
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	can_be_moved = no
 	starting_tier = 1
@@ -620,7 +620,7 @@ gme_maragheh_observatory = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			allowed_num_of_buildings = 1
@@ -639,7 +639,7 @@ gme_maragheh_observatory = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			allowed_num_of_buildings = 2
@@ -666,7 +666,7 @@ gme_maragheh_observatory = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			allowed_num_of_buildings = 3
@@ -700,7 +700,7 @@ gme_maragheh_observatory = {
 gme_sheikh_safi = {
 	start = 424
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	can_be_moved = no
 	starting_tier = 1
@@ -743,7 +743,7 @@ gme_sheikh_safi = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_unrest = -1
@@ -759,7 +759,7 @@ gme_sheikh_safi = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_unrest = -1.5
@@ -778,7 +778,7 @@ gme_sheikh_safi = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_unrest = -2
@@ -801,7 +801,7 @@ gme_sheikh_safi = {
 gme_towers_silence = {
 	start = 433
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	can_be_moved = no
 	starting_tier = 1
@@ -828,7 +828,7 @@ gme_towers_silence = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_unrest = -2
@@ -843,7 +843,7 @@ gme_towers_silence = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = {
@@ -857,7 +857,7 @@ gme_towers_silence = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = {
@@ -875,7 +875,7 @@ gme_towers_silence = {
 gme_vank_cathedral = {
 	start = 429
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	can_be_moved = no
 	starting_tier = 2
@@ -914,7 +914,7 @@ gme_vank_cathedral = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_production_efficiency = 0.15
@@ -928,7 +928,7 @@ gme_vank_cathedral = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_production_efficiency = 0.25
@@ -943,7 +943,7 @@ gme_vank_cathedral = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_production_efficiency = 0.33

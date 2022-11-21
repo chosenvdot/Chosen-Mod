@@ -1,7 +1,7 @@
 gme_bretagne_castles = {
 	start = 172
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -40,7 +40,7 @@ gme_bretagne_castles = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_defensiveness = 0.1
@@ -53,7 +53,7 @@ gme_bretagne_castles = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_defensiveness = 0.15
@@ -78,7 +78,7 @@ gme_bretagne_castles = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_defensiveness = 0.2
@@ -108,7 +108,7 @@ gme_bretagne_castles = {
 gme_chambord = {
 	start = 4776
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 0
 	type = monument
@@ -137,7 +137,7 @@ gme_chambord = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_defensiveness = 0.1
@@ -150,7 +150,7 @@ gme_chambord = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_defensiveness = 0.15
@@ -166,7 +166,7 @@ gme_chambord = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
  			local_defensiveness = 0.25
@@ -185,7 +185,7 @@ gme_chambord = {
 gme_chenonceau = {
 	start = 4389
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 0
 	type = monument
@@ -212,7 +212,7 @@ gme_chenonceau = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_institution_spread = 0.1
@@ -225,7 +225,7 @@ gme_chenonceau = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_institution_spread = 0.1
@@ -251,7 +251,7 @@ gme_chenonceau = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
  			local_institution_spread = 0.1
@@ -282,7 +282,7 @@ gme_chenonceau = {
 gme_mont_michel = {
 	start = 4385
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -309,7 +309,7 @@ gme_mont_michel = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_defensiveness = 0.1
@@ -334,7 +334,7 @@ gme_mont_michel = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_defensiveness = 0.1
@@ -361,7 +361,7 @@ gme_mont_michel = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_defensiveness = 0.15
@@ -392,7 +392,7 @@ gme_mont_michel = {
 gme_palais_des_papes = {
 	start = 202
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -419,7 +419,7 @@ gme_palais_des_papes = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_defensiveness = 0.1
@@ -435,7 +435,7 @@ gme_palais_des_papes = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_defensiveness = 0.1
@@ -461,7 +461,7 @@ gme_palais_des_papes = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_defensiveness = 0.2
@@ -491,7 +491,7 @@ gme_palais_des_papes = {
 gme_port_de_moon = {
 	start = 174
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -512,7 +512,7 @@ gme_port_de_moon = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 		   province_trade_power_value = 2.5
@@ -526,7 +526,7 @@ gme_port_de_moon = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			province_trade_power_value = 5
@@ -543,7 +543,7 @@ gme_port_de_moon = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			province_trade_power_value = 10

@@ -1,7 +1,7 @@
 gme_cathedral_poznan = {
 	start = 254
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	can_be_moved = no
 	starting_tier = 1
@@ -42,7 +42,7 @@ gme_cathedral_poznan = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -65,7 +65,7 @@ gme_cathedral_poznan = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -88,7 +88,7 @@ gme_cathedral_poznan = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -114,7 +114,7 @@ gme_cathedral_poznan = {
 gme_jagielon_university = {
 	start = 262
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	can_be_moved = no
 	starting_tier = 1
@@ -155,7 +155,7 @@ gme_jagielon_university = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_institution_spread = 0.25
@@ -172,7 +172,7 @@ gme_jagielon_university = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			institution_growth = 4
@@ -191,7 +191,7 @@ gme_jagielon_university = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			institution_growth = 4
@@ -221,7 +221,7 @@ gme_jagielon_university = {
 gme_lazienki_park = {
 	start = 257
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	can_be_moved = no
 	starting_tier = 0
@@ -260,7 +260,7 @@ gme_lazienki_park = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -294,7 +294,7 @@ gme_lazienki_park = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -328,7 +328,7 @@ gme_lazienki_park = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -366,7 +366,7 @@ gme_lazienki_park = {
 gme_saint_mary_basilica = {
 	start = 262
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	can_be_moved = no
 	starting_tier = 1
@@ -407,7 +407,7 @@ gme_saint_mary_basilica = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_tax_modifier = 0.15
@@ -423,7 +423,7 @@ gme_saint_mary_basilica = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_tax_modifier = 0.25
@@ -441,7 +441,7 @@ gme_saint_mary_basilica = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = {
@@ -465,7 +465,7 @@ gme_saint_mary_basilica = {
 gme_wawel = {
 	start = 262
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	can_be_moved = no
 	starting_tier = 1
@@ -504,7 +504,7 @@ gme_wawel = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_defensiveness = 0.15
@@ -524,7 +524,7 @@ gme_wawel = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_defensiveness = 0.25
@@ -547,7 +547,7 @@ gme_wawel = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_defensiveness = 0.33
@@ -593,7 +593,7 @@ gme_zamosc_city = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_development_cost = -0.10
@@ -610,7 +610,7 @@ gme_zamosc_city = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.15
@@ -631,7 +631,7 @@ gme_zamosc_city = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_development_cost = -0.20

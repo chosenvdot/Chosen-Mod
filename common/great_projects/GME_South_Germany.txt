@@ -1,7 +1,7 @@
 gme_bundeshaus = {
 	start = 165
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 0
 	type = monument
@@ -28,7 +28,7 @@ gme_bundeshaus = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_governing_cost = -0.10
@@ -45,7 +45,7 @@ gme_bundeshaus = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = {
@@ -63,7 +63,7 @@ gme_bundeshaus = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = {
@@ -85,7 +85,7 @@ gme_bundeshaus = {
 gme_chillon_castle = {
 	start = 1867
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -112,7 +112,7 @@ gme_chillon_castle = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_manpower_modifier = 0.15
@@ -126,7 +126,7 @@ gme_chillon_castle = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_manpower_modifier = 0.25
@@ -142,7 +142,7 @@ gme_chillon_castle = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_manpower_modifier = 0.33
@@ -162,7 +162,7 @@ gme_chillon_castle = {
 gme_college_geneve = {
 	start = 4720
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 0
 	type = monument
@@ -193,7 +193,7 @@ gme_college_geneve = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -209,7 +209,7 @@ gme_college_geneve = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -226,7 +226,7 @@ gme_college_geneve = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -248,7 +248,7 @@ gme_college_geneve = {
 gme_heidelberg = {
 	start = 77
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -279,7 +279,7 @@ gme_heidelberg = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_development_cost = -0.10
@@ -292,7 +292,7 @@ gme_heidelberg = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			allowed_num_of_buildings = 1
@@ -310,7 +310,7 @@ gme_heidelberg = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = {
@@ -332,7 +332,7 @@ gme_heidelberg = {
 gme_hofburg = {
 	start = 134
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -371,7 +371,7 @@ gme_hofburg = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_development_cost = -0.10
@@ -388,7 +388,7 @@ gme_hofburg = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			allowed_num_of_buildings = 1
@@ -409,7 +409,7 @@ gme_hofburg = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 		}
@@ -438,7 +438,7 @@ gme_hofburg = {
 gme_neuschwanstein_castle = {
 	start = 65
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 0
 	type = monument
@@ -474,7 +474,7 @@ gme_neuschwanstein_castle = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_development_cost = -0.10
@@ -489,7 +489,7 @@ gme_neuschwanstein_castle = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_prosperity_growth = 0.5
@@ -504,7 +504,7 @@ gme_neuschwanstein_castle = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_prosperity_growth = 1
@@ -558,7 +558,7 @@ gme_stephansdom = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_tax_modifier = 0.15
@@ -573,7 +573,7 @@ gme_stephansdom = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_tax_modifier = 0.25
@@ -597,7 +597,7 @@ gme_stephansdom = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_tax_modifier = 0.33
@@ -630,7 +630,7 @@ gme_stephansdom = {
 gme_stone_bridge_regensburg = {
 	start = 2957
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 2
 	type = monument
@@ -651,7 +651,7 @@ gme_stone_bridge_regensburg = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			province_trade_power_modifier = 0.1
@@ -663,7 +663,7 @@ gme_stone_bridge_regensburg = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 750 }
 		province_modifiers = {
 			province_trade_power_modifier = 0.25
@@ -676,7 +676,7 @@ gme_stone_bridge_regensburg = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {
 			local_prosperity_growth = 1.5
@@ -722,7 +722,7 @@ gme_university_graz = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_institution_spread = 0.25
@@ -739,7 +739,7 @@ gme_university_graz = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			institution_growth = 4
@@ -760,7 +760,7 @@ gme_university_graz = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			institution_growth = 4

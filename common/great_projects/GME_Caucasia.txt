@@ -1,7 +1,7 @@
 gme_derbent_fortifications = {
 	start = 425
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -22,7 +22,7 @@ gme_derbent_fortifications = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_defensiveness = 0.25
@@ -36,7 +36,7 @@ gme_derbent_fortifications = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 750 }
 		province_modifiers = {
 			local_defensiveness = 0.50
@@ -52,7 +52,7 @@ gme_derbent_fortifications = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 1500 }
 		province_modifiers = {
 			local_defensiveness = 0.75
@@ -73,7 +73,7 @@ gme_derbent_fortifications = {
 gme_gelati_monastery = {
 	start = 422
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -116,7 +116,7 @@ gme_gelati_monastery = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_defensiveness = 0.15
@@ -131,7 +131,7 @@ gme_gelati_monastery = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_defensiveness = 0.25
@@ -146,7 +146,7 @@ gme_gelati_monastery = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_defensiveness = 0.33
@@ -165,7 +165,7 @@ gme_gelati_monastery = {
 gme_narikala = {
 	start = 423
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -204,7 +204,7 @@ gme_narikala = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_defensiveness = 0.25
@@ -222,7 +222,7 @@ gme_narikala = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_defensiveness = 0.33
@@ -240,7 +240,7 @@ gme_narikala = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_defensiveness = 0.50
@@ -264,7 +264,7 @@ gme_narikala = {
 gme_noah_mausoleum = {
 	start = 2205
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 0
 	type = monument
@@ -311,7 +311,7 @@ gme_noah_mausoleum = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_unrest = -2
@@ -327,7 +327,7 @@ gme_noah_mausoleum = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_unrest = -2
@@ -344,7 +344,7 @@ gme_noah_mausoleum = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = {
@@ -363,7 +363,7 @@ gme_noah_mausoleum = {
 gme_vardzia = {
 	start = 2204
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -402,7 +402,7 @@ gme_vardzia = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_unrest = -2
@@ -418,7 +418,7 @@ gme_vardzia = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_unrest = -2
@@ -435,7 +435,7 @@ gme_vardzia = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_unrest = -2

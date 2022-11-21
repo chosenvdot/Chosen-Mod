@@ -44,7 +44,7 @@ gme_binnenhof = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = {	factor = 500 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -58,7 +58,7 @@ gme_binnenhof = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = {	factor = 1000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -73,7 +73,7 @@ gme_binnenhof = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = {	factor = 2000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -139,7 +139,7 @@ gme_bishop_palace = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = {	factor = 500 }
 		province_modifiers = {
 			local_tax_modifier = 0.20
@@ -163,7 +163,7 @@ gme_bishop_palace = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = {	factor = 1000 }
 		province_modifiers = {
 			local_tax_modifier = 0.40
@@ -188,7 +188,7 @@ gme_bishop_palace = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = {	factor = 2000 }
 		province_modifiers = {
 			local_tax_modifier = 0.50
@@ -259,7 +259,7 @@ gme_bruges_city_centre = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = {	factor = 500 }
 		province_modifiers = {
 			province_trade_power_modifier = 0.15
@@ -283,7 +283,7 @@ gme_bruges_city_centre = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = {	factor = 1000 }
 		province_modifiers = {
 			province_trade_power_modifier = 0.50
@@ -309,7 +309,7 @@ gme_bruges_city_centre = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = {	factor = 2000 }
 		province_modifiers = {
 			province_trade_power_modifier = 1
@@ -385,7 +385,7 @@ gme_domkerk = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = {	factor = 500 }
 		province_modifiers = { }
 		area_modifier = {
@@ -401,7 +401,7 @@ gme_domkerk = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = {	factor = 1000 }
 		province_modifiers = { }
 		area_modifier = {
@@ -418,7 +418,7 @@ gme_domkerk = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = {	factor = 2000 }
 		province_modifiers = { }
 		area_modifier = {
@@ -483,7 +483,7 @@ gme_grote_raad_mechelen = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = {	factor = 500 }
 		province_modifiers = {
 			local_build_cost = -0.05
@@ -523,7 +523,7 @@ gme_grote_raad_mechelen = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = {	factor = 1000 }
 		province_modifiers = {
 			allowed_num_of_buildings = 1
@@ -564,7 +564,7 @@ gme_grote_raad_mechelen = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = {	factor = 2000 }
 		province_modifiers = {
 			allowed_num_of_buildings = 2
@@ -651,7 +651,7 @@ gme_het_gravensteen = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = {	factor = 500 }
 		province_modifiers = {
 			local_defensiveness = 0.25
@@ -668,7 +668,7 @@ gme_het_gravensteen = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = {	factor = 1000 }
 		province_modifiers = {
 			local_defensiveness = 0.25
@@ -686,7 +686,7 @@ gme_het_gravensteen = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = {	factor = 2000 }
 		province_modifiers = {
 			local_defensiveness = 0.50
@@ -751,7 +751,7 @@ gme_kasteel_de_haar = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = {	factor = 500 }
 		province_modifiers = {
 			local_unrest = -1
@@ -765,7 +765,7 @@ gme_kasteel_de_haar = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_unrest = -1
@@ -781,7 +781,7 @@ gme_kasteel_de_haar = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = {	factor = 2000 }
 		province_modifiers = {
 			local_unrest = -2
@@ -858,7 +858,7 @@ gme_leiden_university = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = {	factor = 500 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -870,7 +870,7 @@ gme_leiden_university = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			institution_growth = 0.5
@@ -914,7 +914,7 @@ gme_leiden_university = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = {	factor = 2000 }
 		province_modifiers = {
 			institution_growth = 1
@@ -1017,7 +1017,7 @@ gme_old_leuven_university = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = {	factor = 500 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -1035,7 +1035,7 @@ gme_old_leuven_university = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			institution_growth = 0.5
@@ -1056,7 +1056,7 @@ gme_old_leuven_university = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = {	factor = 2000 }
 		province_modifiers = {
 			institution_growth = 1
@@ -1125,7 +1125,7 @@ gme_paleis_koudenberg = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = {	factor = 500 }
 		province_modifiers = {
 			local_unrest = -1
@@ -1163,7 +1163,7 @@ gme_paleis_koudenberg = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = {	factor = 1000 }
 		province_modifiers = {
 			local_unrest = -2
@@ -1203,7 +1203,7 @@ gme_paleis_koudenberg = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = {	factor = 2000 }
 		province_modifiers = {
 			local_unrest = -2
@@ -1293,7 +1293,7 @@ gme_sint_pietersabdij = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = {	factor = 500 }
 		province_modifiers = {
 			province_trade_power_value = 5
@@ -1318,7 +1318,7 @@ gme_sint_pietersabdij = {
 		}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = {	factor = 1000 }
 		province_modifiers = {
 			province_trade_power_value = 10
@@ -1344,7 +1344,7 @@ gme_sint_pietersabdij = {
 		}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = {	factor = 2000 }
 		province_modifiers = {
 			province_trade_power_value = 15
@@ -1394,7 +1394,7 @@ gme_the_bock = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			garrison_growth = 0.33
@@ -1409,7 +1409,7 @@ gme_the_bock = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			garrison_growth = 0.66
@@ -1426,7 +1426,7 @@ gme_the_bock = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			garrison_growth = 1

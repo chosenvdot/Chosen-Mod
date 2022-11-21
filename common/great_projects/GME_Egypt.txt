@@ -1,7 +1,7 @@
 gme_monastery_saint_antonhy = {
 	start = 2320
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -36,7 +36,7 @@ gme_monastery_saint_antonhy = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_development_cost = -0.15
@@ -51,7 +51,7 @@ gme_monastery_saint_antonhy = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_development_cost = -0.25
@@ -70,7 +70,7 @@ gme_monastery_saint_antonhy = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_development_cost = -0.35
@@ -94,7 +94,7 @@ gme_monastery_saint_antonhy = {
 gme_saint_mark_coptic_cathedral = {
 	start = 358
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -121,7 +121,7 @@ gme_saint_mark_coptic_cathedral = {
 		on_upgraded = { }
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
 			local_unrest = -1
@@ -136,7 +136,7 @@ gme_saint_mark_coptic_cathedral = {
 		on_upgraded = { }
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = {
 			local_state_maintenance_modifier = -0.25
@@ -153,7 +153,7 @@ gme_saint_mark_coptic_cathedral = {
 		on_upgraded = { }
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = {
 			local_state_maintenance_modifier = -0.50

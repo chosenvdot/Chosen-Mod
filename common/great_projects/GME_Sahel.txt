@@ -1,7 +1,7 @@
 gme_djinguereber_mosque = {
 	start = 1132
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 1
 	type = monument
@@ -32,7 +32,7 @@ gme_djinguereber_mosque = {
 		on_upgraded = {	}
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -43,7 +43,7 @@ gme_djinguereber_mosque = {
 		on_upgraded = {	}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -55,7 +55,7 @@ gme_djinguereber_mosque = {
 		on_upgraded = {	}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -71,7 +71,7 @@ gme_djinguereber_mosque = {
 gme_tomb_askia = {
 	start = 1133
 	date = 1.01.01
-	time = { months = 120 }
+	time = { months = 60 }
 	build_cost = 500
 	starting_tier = 0
 	type = monument
@@ -98,7 +98,7 @@ gme_tomb_askia = {
 		on_upgraded = {	}
 	}
 	tier_1 = {
-		upgrade_time = { months = 120 }
+		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -111,7 +111,7 @@ gme_tomb_askia = {
 		on_upgraded = {	}
 	}
 	tier_2 = {
-		upgrade_time = { months = 240 }
+		upgrade_time = { months = 120 }
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = { }
@@ -125,7 +125,7 @@ gme_tomb_askia = {
 		on_upgraded = {	}
 	}
 	tier_3 = {
-		upgrade_time = { months = 480 }
+		upgrade_time = { months = 240 }
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = { }
