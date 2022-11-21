@@ -8,6 +8,8 @@ religion = sunni
 capital = "Atakent"
 trade_goods = livestock
 hre = no
+fort_15th = yes
+
 base_tax = 2  
 base_production = 2 
 base_manpower = 2 

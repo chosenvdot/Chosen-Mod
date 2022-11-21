@@ -10,6 +10,8 @@ culture = venetian
 religion = catholic 
 hre = yes
 base_tax = 3
+fort_15th = yes
+
 base_production = 3
 trade_goods = paper
 base_manpower = 5

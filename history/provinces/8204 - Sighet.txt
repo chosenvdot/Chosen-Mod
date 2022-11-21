@@ -12,6 +12,8 @@ controller = HUN
 #Demographics
 culture = ruthenian
 religion = orthodox
+fort_15th = yes
+
 
 #Development and Trade
 base_tax = 1

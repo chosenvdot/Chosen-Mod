@@ -12,6 +12,8 @@ culture = dutch
 religion = catholic
 hre = yes
 base_tax = 5
+fort_15th = yes
+
 base_production = 5
 trade_goods = cloth
 base_manpower = 3

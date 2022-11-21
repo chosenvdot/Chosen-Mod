@@ -10,6 +10,8 @@ capital = "Negotin"
 base_tax = 1
 base_production = 1
 base_manpower = 2
+fort_15th = yes
+
 trade_goods = copper
 is_city = yes
 hre = no

@@ -11,6 +11,8 @@ religion = catholic
 hre = yes
 base_tax = 4
 base_production = 4
+fort_15th = yes
+
 trade_goods = fish
 base_manpower = 2
 capital = "Copenhagen"

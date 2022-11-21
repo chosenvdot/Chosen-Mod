@@ -13,6 +13,8 @@ base_production = 7			#Indeed, was one of the most important HRE cities, but not
 base_manpower = 4			#Ideal would be Frankfurter Stock Exchage event, giving a small dev boost and a centre of trade after certain institutions are unlocked, or some such.
 is_city = yes				#(JP) Wasn't actualy that rich, dropped the dev down as part of my HRE update anyway
 
+fort_15th = yes
+
 add_core = HES
 controller = HES
 hre = yes

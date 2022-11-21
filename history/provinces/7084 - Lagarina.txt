@@ -13,6 +13,8 @@ base_manpower = 2
 trade_goods = silk			#a silk manufacture centre... in the Alps. Now I have seen everything
 is_city = yes
 hre = yes
+fort_15th = yes
+
 
 discovered_by = western
 discovered_by = muslim

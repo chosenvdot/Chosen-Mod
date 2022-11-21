@@ -17,6 +17,7 @@ is_city = yes
 hre = no
 trade_goods = cloth
 center_of_trade = 3
+fort_15th = yes
 
 extra_cost = 40
 

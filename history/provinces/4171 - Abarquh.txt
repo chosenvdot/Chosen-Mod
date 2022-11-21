@@ -9,6 +9,8 @@ capital = "Abarquh"
 trade_goods = livestock #known for its pastures for Timurid armies
 hre = no
 base_tax = 2 
+fort_15th = yes
+
 base_production = 2 
 base_manpower = 2 
 is_city = yes

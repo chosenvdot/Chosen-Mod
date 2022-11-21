@@ -12,6 +12,8 @@ controller = HUN
 #Demographics
 culture = hungarian
 religion = catholic
+fort_15th = yes
+
 
 #Development and Trade
 base_tax = 1

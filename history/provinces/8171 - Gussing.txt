@@ -7,6 +7,8 @@
 capital = "Güssing"
 is_city = yes
 owner = HUN
+fort_15th = yes
+
 controller = HUN
 
 #Demographics

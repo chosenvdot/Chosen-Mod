@@ -15,6 +15,8 @@ base_tax = 7
 base_production = 6
 trade_goods = salt
 base_manpower = 5
+fort_15th = yes
+
 is_city = yes
 
  #Jagiellonian University established in 1364 by Casimir III the Great

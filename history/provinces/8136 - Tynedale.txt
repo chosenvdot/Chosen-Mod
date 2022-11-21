@@ -8,6 +8,8 @@ capital = "Hexham"
 is_city = yes
 owner = ENG
 controller = ENG
+fort_15th = yes
+
 #(JP) Tynedale was held in fief by the Kings of Scotland. It also gives England an instant Reconquest CB on Scotland helping to encourage more earlier conflict. Vice-versa for England holding Berwick.
 #(JP) This fiefdom ended in 1296 it seems. Corrected for BT14
 

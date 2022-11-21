@@ -17,6 +17,8 @@ base_manpower = 2
 add_core = ENG
 add_core = GUY
 add_core = FRA
+fort_15th = yes
+
 
 discovered_by = western
 discovered_by = muslim

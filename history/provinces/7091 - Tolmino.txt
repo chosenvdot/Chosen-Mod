@@ -13,6 +13,8 @@ base_manpower = 1
 trade_goods = iron			#slovene wiki says one of the richest iron deposits in Europe. I'd take that with a grain of salt, but the TG seems justified
 is_city = yes
 hre = yes
+fort_15th = yes
+
 
 discovered_by = western
 discovered_by = muslim

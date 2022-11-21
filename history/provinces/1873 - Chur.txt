@@ -12,6 +12,8 @@ capital = "Chur"
 trade_goods = wool
 hre = yes
 base_tax = 4
+fort_15th = yes
+
 base_production = 3
 base_manpower = 3
 is_city = yes
