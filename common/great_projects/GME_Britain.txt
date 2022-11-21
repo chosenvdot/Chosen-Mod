@@ -126,7 +126,7 @@ gme_kilkenny_castle = {
 		region_modifier = { }
 		country_modifiers = {
 			advisor_cost = -0.10
-			technology_cost = -0.05
+			technology_cost = -0.025
 		}
 		on_upgraded = {	}
 	}
@@ -141,7 +141,7 @@ gme_kilkenny_castle = {
 		region_modifier = { }
 		country_modifiers = {
 			advisor_cost = -0.15
-			technology_cost = -0.10
+			technology_cost = -0.05
 		}
 		on_upgraded = {	}
 	}
@@ -212,8 +212,8 @@ gme_newgrange_tomb = {
 		}
 		region_modifier = { }
 		country_modifiers = {
-			army_tradition = 0.5
-			land_morale = 0.10
+			army_tradition = 0.25
+			land_morale = 0.05
 		}
 		on_upgraded = {	}
 	}

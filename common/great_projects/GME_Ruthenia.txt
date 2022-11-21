@@ -103,7 +103,7 @@ gme_brotherhood_school = {
 		}
 		region_modifier = { }
 		country_modifiers = {
-			technology_cost = -0.10
+			technology_cost = -0.075
 			leader_land_manuever = 1
 			church_loyalty_modifier = 0.10
 		}

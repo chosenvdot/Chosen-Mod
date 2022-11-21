@@ -202,7 +202,7 @@ gme_jagielon_university = {
 		region_modifier = { }
 		country_modifiers = {
 			idea_cost = -0.05
-			advisor_cost = -0.10
+			advisor_cost = -0.05
 			all_estate_loyalty_equilibrium =  0.05
 		}
 		on_upgraded = {

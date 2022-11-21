@@ -189,7 +189,7 @@ gme_vilnius_cathedral = {
 					limit = { has_estate = estate_church }
 					add_estate_loyalty = {
 						estate = estate_church
-						loyalty = 5
+						loyalty = 10
 					}
 				}
 			}

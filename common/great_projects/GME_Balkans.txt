@@ -71,7 +71,7 @@ gme_kruje_castle = {
 		area_modifier = { }
 		region_modifier = { }
 		country_modifiers = {
-			general_cost = -0.25
+			general_cost = -0.1
 		}
 		on_upgraded = {
 			owner = {
@@ -94,7 +94,7 @@ gme_kruje_castle = {
 		}
 		region_modifier = { }
 		country_modifiers = {
-			general_cost = -0.25
+			general_cost = -0.15
 			mil_tech_cost_modifier = -0.05
 			land_morale = 0.05
 		}
@@ -163,7 +163,7 @@ gme_pec_patriarchate = {
 		region_modifier = { }
 		country_modifiers = {
 			tolerance_own = 0.5
-			warscore_cost_vs_other_religion = -0.05
+			warscore_cost_vs_other_religion = -0.025
 		}
 		on_upgraded = { }
 	}
@@ -174,9 +174,9 @@ gme_pec_patriarchate = {
 		area_modifier = { }
 		region_modifier = { }
 		country_modifiers = {
-			manpower_in_true_faith_provinces = 0.10
+			manpower_in_true_faith_provinces = 0.05
 			tolerance_own = 1
-			warscore_cost_vs_other_religion = -0.10
+			warscore_cost_vs_other_religion = -0.05
 		}
 		on_upgraded = {
 			owner = {
@@ -197,10 +197,10 @@ gme_pec_patriarchate = {
 		area_modifier = { }
 		region_modifier = { }
 		country_modifiers = {
-			manpower_in_true_faith_provinces = 0.15
-			technology_cost = -0.10
+			manpower_in_true_faith_provinces = 0.1
+			technology_cost = -0.05
 			tolerance_own = 2
-			warscore_cost_vs_other_religion = -0.15
+			warscore_cost_vs_other_religion = -0.1
 		}
 		on_upgraded = {
 			owner = {
@@ -395,7 +395,7 @@ gme_smerederevo_fortress = {
 		region_modifier = { }
 		country_modifiers = {
 			fort_maintenance_modifier = -0.25
-			infantry_power = 0.10
+			infantry_power = 0.075
 		}
 		on_upgraded = {
 			owner = {

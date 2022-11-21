@@ -126,7 +126,7 @@ gme_gelati_monastery = {
 		}
 		region_modifier = { }
 		country_modifiers = {
-			technology_cost = -0.05
+			technology_cost = -0.025
 		}
 		on_upgraded = { }
 	}
@@ -141,7 +141,7 @@ gme_gelati_monastery = {
 		}
 		region_modifier = { }
 		country_modifiers = {
-			technology_cost = -0.075
+			technology_cost = -0.05
 		}
 		on_upgraded = { }
 	}
@@ -156,7 +156,7 @@ gme_gelati_monastery = {
 		}
 		region_modifier = { }
 		country_modifiers = {
-			technology_cost = -0.10
+			technology_cost = -0.075
 			idea_cost = -0.05
 		}
 		on_upgraded = { }
@@ -430,7 +430,7 @@ gme_vardzia = {
 		country_modifiers = {
 			religious_unity = 0.15
 			global_missionary_strength = 0.015
-			manpower_in_true_faith_provinces = 0.10
+			manpower_in_true_faith_provinces = 0.075
 		}
 		on_upgraded = { }
 	}
@@ -448,7 +448,7 @@ gme_vardzia = {
 			religious_unity = 0.25
 			global_missionary_strength = 0.02
 			missionary_maintenance_cost = -0.15
-			manpower_in_true_faith_provinces = 0.15
+			manpower_in_true_faith_provinces = 0.1
 		}
 		on_upgraded = { }
 	}

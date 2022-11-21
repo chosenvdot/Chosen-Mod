@@ -33,7 +33,7 @@ gme_mount_arafat = {
 		upgrade_time = { months = 60 }
 		cost_to_upgrade = { factor = 500 }
 		province_modifiers = {
-			local_development_cost = -0.15
+			local_development_cost = -0.05
 			local_friendly_movement_speed = 0.15
 			local_institution_spread = 0.15
 		}
@@ -50,7 +50,7 @@ gme_mount_arafat = {
 		cost_to_upgrade = { factor = 1000 }
 		province_modifiers = { }
 		area_modifier = {
-			local_development_cost = -0.25
+			local_development_cost = -0.1
 			local_friendly_movement_speed = 0.25
 			local_institution_spread = 0.25
 		}
@@ -67,7 +67,7 @@ gme_mount_arafat = {
 		cost_to_upgrade = { factor = 2000 }
 		province_modifiers = { }
 		area_modifier = {
-			local_development_cost = -0.33
+			local_development_cost = -0.2
 			local_friendly_movement_speed = 0.33
 			local_institution_spread = 0.33
 		}
@@ -138,7 +138,7 @@ gme_prophet_mosque = {
 		country_modifiers = {
 			enforce_religion_cost = -0.25
 			manpower_in_true_faith_provinces = 0.05
-			province_warscore_cost = -0.1
+			province_warscore_cost = -0.075
 			global_missionary_strength = 0.01
 		}
 		on_upgraded = { }
@@ -154,8 +154,8 @@ gme_prophet_mosque = {
 		region_modifier = { }
 		country_modifiers = {
 			enforce_religion_cost = -0.33
-			manpower_in_true_faith_provinces = 0.15
-			province_warscore_cost = -0.15
+			manpower_in_true_faith_provinces = 0.1
+			province_warscore_cost = -0.1
 			global_missionary_strength = 0.02
 		}
 		on_upgraded = { }

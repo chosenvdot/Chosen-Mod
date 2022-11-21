@@ -157,9 +157,9 @@ gme_al_mustansiriya = {
 		}
 		region_modifier = { }
 		country_modifiers = {
-			adm_advisor_cost = -0.15
+			adm_advisor_cost = -0.125
 			prestige = 0.50
-			technology_cost = -0.1
+			technology_cost = -0.075
 			tolerance_own = 1
 		}
 		on_upgraded = {
@@ -356,10 +356,10 @@ gme_citadel_aleppo = {
 		area_modifier = {
 			local_autonomy = -0.05
 			local_monthly_devastation = -0.75
-			local_production_efficiency = 0.30
-			province_trade_power_modifier = 0.20
+			local_production_efficiency = 0.2
+			province_trade_power_modifier = 0.1
 			trade_goods_size = 1
-			trade_goods_size_modifier = 0.20
+			trade_goods_size_modifier = 0.1
 		}
 		region_modifier = { }
 		country_modifiers = {

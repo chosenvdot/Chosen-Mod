@@ -462,7 +462,7 @@ gme_castello_estense = {
 		}
 		region_modifier = { }
 		country_modifiers = {
-			artillery_cost = -0.05
+			artillery_cost = -0.025
 		}
 		on_upgraded = { }
 	}
@@ -480,7 +480,7 @@ gme_castello_estense = {
 		region_modifier = { }
 		country_modifiers = {
 			artillery_cost = -0.15
-			artillery_power = 0.10
+			artillery_power = 0.05
 		}
 		on_upgraded = { }
 	}
@@ -1577,7 +1577,7 @@ gme_universita_bologna = {
 		}
 		region_modifier = { }
 		country_modifiers = {
-			idea_cost = -0.10
+			idea_cost = -0.075
 		}
 		on_upgraded = {
 			owner = {
@@ -1599,7 +1599,7 @@ gme_universita_bologna = {
 		}
 		region_modifier = { }
 		country_modifiers = {
-			idea_cost = -0.15
+			idea_cost = -0.1
 		}
 		on_upgraded = {
 			if = {

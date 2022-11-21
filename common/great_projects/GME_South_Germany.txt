@@ -217,7 +217,7 @@ gme_college_geneve = {
 		country_modifiers = {
 			monthly_fervor_increase = 0.5
 			tolerance_own = 1
-			advisor_cost = -0.20
+			advisor_cost = -0.05
 		}
 		on_upgraded = {
 			owner = {
@@ -234,9 +234,9 @@ gme_college_geneve = {
 		country_modifiers = {
 			monthly_fervor_increase = 1
 			tolerance_own = 2
-			advisor_cost = -0.30
+			advisor_cost = -0.1
 			advisor_pool = 1
-			idea_cost = -0.10
+			idea_cost = -0.05
 		}
 		on_upgraded = {
 			owner = {
@@ -609,7 +609,7 @@ gme_stephansdom = {
 		country_modifiers = {
 			imperial_reform_catholic_approval = 10
 			warscore_cost_vs_other_religion = -0.10
-			manpower_in_true_faith_provinces = 0.15
+			manpower_in_true_faith_provinces = 0.1
 			papal_influence = 1
 			tolerance_own = 1
 		}
@@ -684,7 +684,7 @@ gme_stone_bridge_regensburg = {
 		}
 		area_modifier = {
 			province_trade_power_modifier = 0.75
-			local_development_cost = -0.25
+			local_development_cost = -0.15
 			local_institution_spread = 0.25
 		}
 		region_modifier = { }

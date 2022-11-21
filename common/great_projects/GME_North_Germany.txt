@@ -55,7 +55,7 @@ gme_charles_university = {
 		}
 		region_modifier = { }
 		country_modifiers = {
-			idea_cost = -0.05
+			idea_cost = -0.033
 		}
 		on_upgraded = {
 			owner = {
@@ -77,7 +77,7 @@ gme_charles_university = {
 		}
 		region_modifier = { }
 		country_modifiers = {
-			idea_cost = -0.10
+			idea_cost = -0.75
 			church_loyalty_modifier = 0.10
 			institution_spread_from_true_faith = 0.15
 		}

@@ -124,7 +124,7 @@ gme_eszterhaza = {
 		region_modifier = { }
 		country_modifiers = {
 			diplomatic_reputation = 1
-			advisor_cost = -0.15
+			advisor_cost = -0.05
 			advisor_pool = 1
 		}
 		on_upgraded = { }
@@ -137,7 +137,7 @@ gme_eszterhaza = {
 		region_modifier = { }
 		country_modifiers = {
 			diplomatic_reputation = 1
-			advisor_cost = -0.15
+			advisor_cost = -0.1
 			advisor_pool = 1
 			prestige_decay = -0.005
 		}
