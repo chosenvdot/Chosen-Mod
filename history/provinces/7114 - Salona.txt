@@ -17,7 +17,7 @@ base_manpower = 2
 trade_goods = wine			#For no special reason
 is_city = yes
 hre = no
-fort_15th = yes
+
 add_local_autonomy = 10
 
 1444.1.1 = { discovered_by = KAZ }

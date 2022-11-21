@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 6
 base_manpower = 4
 trade_goods = bt_trade_good_beer
-fort_15th = yes # Giving a bonus for without historical justification just to screw with Moscovy during the Great Feudal War =D
+ # Giving a bonus for without historical justification just to screw with Moscovy during the Great Feudal War =D
 
 discovered_by = eastern
 discovered_by = western

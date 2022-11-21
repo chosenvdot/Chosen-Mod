@@ -17,7 +17,7 @@ base_manpower = 1
 capital = "Turku"
 is_city = yes
 add_local_autonomy = 25
-fort_15th = yes			#Turun linna, Åbo Slott.
+			#Turun linna, Åbo Slott.
 
 discovered_by = western
 discovered_by = muslim

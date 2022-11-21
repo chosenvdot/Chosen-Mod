@@ -57,7 +57,7 @@ discovered_by = eastern
 } #El Jadida, previously known as Mazagan was seized in 1502 by the Portuguese and controlled until 1769
 
 1502.1.1 = {
-	fort_15th = yes
+	
 } #Fortress of Mazagan built, unknown date so choosing one randomly
 
 1769.11.1 = {

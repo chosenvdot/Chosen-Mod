@@ -15,7 +15,7 @@ trade_goods = cloth
 base_manpower = 4 
 capital = "Riga"
 is_city = yes
-fort_15th = yes
+
 
 1444.1.1 = { discovered_by = KAZ }
 1444.1.1 = { discovered_by = CRI }

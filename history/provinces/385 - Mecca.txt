@@ -13,7 +13,7 @@ base_production = 6
 base_manpower = 6 
 is_city = yes
 add_core = HED
-fort_15th = yes
+
 
 discovered_by = muslim
 discovered_by = ottoman
@@ -33,7 +33,7 @@ add_province_triggered_modifier = christian_mecca
 #1516.8.24 = {
 #} #Annexed by the Ottoman Empire along with the rest of Mamluk territory, but remains under the control of the Sharifate of Mecca
 
-1750.1.1 = { fort_15th = yes } # Qishla of Mecca and minor walls.
+1750.1.1 = {  } # Qishla of Mecca and minor walls.
 
 1770.1.1 = {
 	owner = MAM

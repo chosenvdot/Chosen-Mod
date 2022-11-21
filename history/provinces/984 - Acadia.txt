@@ -76,7 +76,7 @@ discovered_by = north_american
 } #Treaty of Utrecht gives Britain Nova Scotia but Acadians and Wabanaki not pleased about it
 
 1750.1.1 = {
-	fort_15th = yes
+	
 	capital = "Fort Edward"
 } # Fort Edward founded as part of a concentrated effort to secure NS by the British
 

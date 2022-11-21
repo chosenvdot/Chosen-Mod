@@ -28,7 +28,7 @@ discovered_by = indian
 	remove_core = BPR
 }
 
-1560.1.1 = { fort_15th = yes }
+1560.1.1 = {  }
 1745.1.1 = {
 	owner = PEG
 	controller = PEG

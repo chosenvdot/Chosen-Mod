@@ -14,7 +14,7 @@ capital = "Brest"
 is_city = yes 
 add_core = LIT
 add_local_autonomy = 25
-fort_15th = yes #City referred to as Stronghold. Also nicely encloses Ruthenia from the west, or Warsaw from the Rus.
+ #City referred to as Stronghold. Also nicely encloses Ruthenia from the west, or Warsaw from the Rus.
 
 1444.1.1 = { discovered_by = KAZ }
 1444.1.1 = { discovered_by = CRI }

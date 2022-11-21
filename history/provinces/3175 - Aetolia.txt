@@ -13,7 +13,7 @@ base_production = 3
 base_manpower = 2
 is_city = yes
 add_core = EPI
-fort_15th = yes
+
 
 1444.1.1 = { discovered_by = KAZ }
 1444.1.1 = { discovered_by = CRI }

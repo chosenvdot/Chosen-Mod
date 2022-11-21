@@ -27,7 +27,7 @@ add_core = MRV
 hre = yes
 
 #Fort/Other Buildings
-fort_15th = yes #Znojmo castle, Premyslid holding.
+ #Znojmo castle, Premyslid holding.
 
 #Special Modifiers
 

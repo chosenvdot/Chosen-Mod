@@ -15,7 +15,7 @@ base_production = 7
 base_manpower = 6
 is_city = yes
 add_core = HAM
-fort_15th = yes
+
 add_local_autonomy = 50
 
 extra_cost = 20

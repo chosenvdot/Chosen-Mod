@@ -17,7 +17,7 @@ base_manpower = 1
 add_core = JER
 add_core = ENG
 add_core = NRM
-#fort_15th = yes
+#
 
 discovered_by = western
 discovered_by = muslim

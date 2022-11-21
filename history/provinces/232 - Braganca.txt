@@ -15,7 +15,7 @@ base_production = 3
 base_manpower = 2 
 is_city = yes
 add_core = POR
-fort_15th = yes			#Portuguese forts moved around for gameplay reasons
+			#Portuguese forts moved around for gameplay reasons
 
 discovered_by = western
 discovered_by = muslim

@@ -14,7 +14,7 @@ base_manpower = 2
 trade_goods = cloth
 is_city = yes
 hre = no
-fort_15th = yes #Chateauroux castle
+ #Chateauroux castle
 
 discovered_by = western
 discovered_by = muslim

@@ -13,7 +13,7 @@ base_manpower = 1
 trade_goods = grain			#semi-generic, though seems like good land.
 is_city = yes
 hre = no
-fort_15th = yes
+
 
 1444.1.1 = { discovered_by = KAZ }
 1444.1.1 = { discovered_by = CRI }

@@ -15,7 +15,7 @@ base_production = 7			#Considering later importance as well, I'm willing to fudg
 base_manpower = 4			#With reoverhaul, lost a bit of its dev against to suit 1444 reality a bit better
 trade_goods = naval_supplies
 add_core = ANJ
-fort_15th = yes
+
 
 extra_cost = 20
 center_of_trade = 2

@@ -12,7 +12,7 @@ capital = "Koblenz"
 base_tax = 7
 base_production = 6
 is_city = yes
-fort_15th = yes #Eltz & Stolzenfels Castles
+ #Eltz & Stolzenfels Castles
 add_core = TRI
 base_manpower = 5
 hre = yes

@@ -27,7 +27,7 @@ discovered_by = chinese
 	remove_core = ASK
 } # Hojo Soun took Izu
 1495.1.1 = {
-	fort_15th = yes
+	
 	capital = "Odawara"
 } # Odawara Castle
 1542.1.1 = { discovered_by = POR }

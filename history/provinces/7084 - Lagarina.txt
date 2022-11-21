@@ -42,7 +42,7 @@ discovered_by = eastern
 	base_tax = 4
 	base_production = 4
 	base_manpower = 3
-	fort_15th = yes
+	
 } # Venice fortifies the area as a border stronghold and strongly encourages its industry
 1433.1.1 = { hre = no } # Treaty between Doge Francesco Foscari and Emperor Sigismund of the HRE
 

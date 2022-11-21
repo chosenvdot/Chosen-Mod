@@ -14,7 +14,7 @@ base_manpower = 3
 is_city = yes
 add_core = ORM
 add_core = OMA
-fort_15th = yes		#Nakhal Fort represented? Decided yes
+		#Nakhal Fort represented? Decided yes
 
 discovered_by = muslim
 discovered_by = ottoman

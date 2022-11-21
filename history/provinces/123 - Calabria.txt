@@ -15,7 +15,7 @@ base_manpower = 2
 capital = "Reggio" # Reggio di Calabria was only used after Italian Unification
 is_city = yes 
 add_core = NAP
-fort_15th = yes # Fort build 540AD and enlarged by Normans
+ # Fort build 540AD and enlarged by Normans
 
 discovered_by = western
 discovered_by = eastern

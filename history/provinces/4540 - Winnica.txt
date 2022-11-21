@@ -12,7 +12,7 @@ trade_goods = gems
 base_manpower = 1
 capital = "Vinnytsia"
 is_city = yes
-#fort_15th = yes #Bratslav Castle
+# #Bratslav Castle
 add_local_autonomy = 25
 add_core = KIE
 

@@ -14,7 +14,7 @@ base_manpower = 2
 is_city = yes
 add_core = HUN
 add_core = TRA
-fort_15th = yes #Fortified city, Teutonic knights came to fortify the Burzenland in the area, this province basically demands a fort.
+ #Fortified city, Teutonic knights came to fortify the Burzenland in the area, this province basically demands a fort.
 
 extra_cost = 7
 center_of_trade = 1

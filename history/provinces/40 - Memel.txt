@@ -13,7 +13,7 @@ base_tax = 6 # Threats and attacks by Lithuanians greatly thwarted the town's de
 base_production = 6
 base_manpower = 3
 trade_goods = bt_trade_good_beer
-#fort_15th = yes
+#
 center_of_trade = 1
 extra_cost = 20
 

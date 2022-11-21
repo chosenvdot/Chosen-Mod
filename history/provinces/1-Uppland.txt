@@ -15,7 +15,7 @@ trade_goods = cloth			#rich city good, with links to Hanse
 base_manpower = 3
 capital = "Stockholm"
 is_city = yes
-fort_15th = yes
+ = yes
 
 extra_cost = 15
 
@@ -51,7 +51,7 @@ discovered_by = eastern
 1598.8.12 = { controller = PLC } # Sigismund tries to reconquer his crown
 1598.12.15 = { controller = SWE } # Duke Karl get it back
 1600.1.1 = {
-	fort_15th = no
+	 = no
 	fort_16th = yes
 }
 1617.1.1 = {

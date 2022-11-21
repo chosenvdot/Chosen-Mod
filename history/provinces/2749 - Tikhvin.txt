@@ -15,7 +15,7 @@ base_manpower = 1
 capital = "Tikhvin"
 is_city = yes
 add_core = NOV
-#fort_15th = yes			#ahistorical fort here for gameplay reasons, guarding Novgorod's east approach.
+#			#ahistorical fort here for gameplay reasons, guarding Novgorod's east approach.
 add_local_autonomy = 10
 
 discovered_by = eastern

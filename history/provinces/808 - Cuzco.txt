@@ -13,7 +13,7 @@ base_production = 1
 base_manpower = 1
 is_city = yes
  
-fort_15th = yes
+
 discovered_by = south_american
 discovered_by = andean
 extra_cost = 8

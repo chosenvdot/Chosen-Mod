@@ -14,7 +14,7 @@ trade_goods = grain #Was fish
 base_manpower = 2 
 capital = "Dingwall"
 is_city = yes
-fort_15th = yes #Dingwall castle, supposedly biggest castle north of Stirling.
+ #Dingwall castle, supposedly biggest castle north of Stirling.
 
 add_core = LOI
 add_core = SCO

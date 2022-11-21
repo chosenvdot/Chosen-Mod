@@ -15,7 +15,7 @@ trade_goods = paper
 base_manpower = 5
 capital = "Treviso" 
 is_city = yes	# Estimated #um....
-fort_15th = yes
+
 
 discovered_by = western
 discovered_by = eastern

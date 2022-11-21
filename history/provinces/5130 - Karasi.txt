@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-fort_15th = yes			#the capital of the region, known for a strong fort, as well. Also strategic, nice when it just works out.....
+			#the capital of the region, known for a strong fort, as well. Also strategic, nice when it just works out.....
 
 discovered_by = western
 discovered_by = eastern

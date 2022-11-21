@@ -22,7 +22,7 @@ discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern
 
-1560.1.1 = { fort_15th = yes }
+1560.1.1 = {  }
 1631.12.22 = { controller = SWE }
 1635.1.1 = {
 	controller = MAI

@@ -16,7 +16,7 @@ controller = JNN
 add_core = JNN
 native_hostileness = 7
 discovered_by = sub_saharan
-fort_15th = yes
+
 extra_cost = 16
 center_of_trade = 2
 

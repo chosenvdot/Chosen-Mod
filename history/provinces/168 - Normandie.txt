@@ -17,7 +17,7 @@ base_manpower = 1
 add_core = FRA
 add_local_autonomy = 70
 add_core = NRM
-fort_15th = yes
+
 
 discovered_by = eastern
 discovered_by = western

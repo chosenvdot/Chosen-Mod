@@ -16,7 +16,7 @@ capital = "Olonets"
 is_city = yes
 add_core = NOV
 add_local_autonomy = 65
-#fort_15th = yes
+#
 
 discovered_by = western
 discovered_by = eastern

@@ -45,5 +45,5 @@ discovered_by = nomad_group
 	controller = AFG
 	add_core = AFG
 	remove_core = PER
-	fort_15th = yes
+	
 } # Ahmad Shah established the Durrani empire

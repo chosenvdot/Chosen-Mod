@@ -14,7 +14,7 @@ trade_goods = grain
 base_manpower = 2 
 capital = "Kiev"
 is_city = yes
-fort_15th = yes
+
 add_core = KIE
 
 discovered_by = western

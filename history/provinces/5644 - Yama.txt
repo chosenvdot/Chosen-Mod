@@ -15,7 +15,7 @@ trade_goods = glass
 base_manpower = 2 
 capital = "Yama"
 is_city = yes
-fort_15th = yes
+
 add_local_autonomy = 25
 
 discovered_by = western

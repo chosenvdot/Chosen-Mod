@@ -12,7 +12,7 @@ trade_goods = cloth			#Centre of resin & tar trade. Also wax, honey, and fur... 
 base_manpower = 4
 capital = "Smolensk"
 is_city = yes	 
-fort_15th = yes
+
 add_core = SMO
 
 extra_cost = 16

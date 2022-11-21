@@ -14,7 +14,7 @@ trade_goods = cloth # apparently famous for draperies, and generally a wealthy c
 base_manpower = 4
 capital = "Ferrara" 
 is_city = yes
-fort_15th = yes
+
 add_core = FER
 
 discovered_by = western

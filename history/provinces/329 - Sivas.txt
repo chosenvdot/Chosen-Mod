@@ -14,7 +14,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-fort_15th = yes			#Mostly strategic, but also the capital of the region, and there were fortifications
+			#Mostly strategic, but also the capital of the region, and there were fortifications
 
 extra_cost = 16
 center_of_trade = 2

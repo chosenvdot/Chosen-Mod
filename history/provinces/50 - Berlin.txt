@@ -13,7 +13,7 @@ base_tax = 6			#Okay, Brandenburg's population was minute and the little wealth 
 base_production = 5			#Population estimates for the period are around 10k, growing rapidly only at the end of the 17th century. Not going as low for dev as would be historical, in order to keep Brandenburg with some dev.
 trade_goods = cloth			#(JP) Lowering dev as dev moved around to new provinces
 base_manpower = 4
-fort_15th = yes
+
 capital = "Berlin"
 is_city = yes
 

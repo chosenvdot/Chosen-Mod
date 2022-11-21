@@ -14,7 +14,7 @@ base_tax = 2
 base_production = 3 
 trade_goods = livestock
 base_manpower = 2
-fort_15th = yes
+
 add_core = FRA
 add_core = ENG
 add_core = GUY

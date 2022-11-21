@@ -14,7 +14,7 @@ base_manpower = 6
 is_city = yes
 
 add_core = RTT
-fort_15th = yes #Mandla fort + lots of minor forts
+ #Mandla fort + lots of minor forts
 discovered_by = indian
 discovered_by = muslim 
 discovered_by = ottoman

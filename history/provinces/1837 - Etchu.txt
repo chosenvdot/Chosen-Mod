@@ -13,7 +13,7 @@ base_production = 1
 base_manpower = 1
 is_city = yes
 add_core = SBA
-fort_15th = yes #Nanao Castle
+ #Nanao Castle
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }

@@ -16,7 +16,7 @@ trade_goods = naval_supplies
 base_manpower = 2 
 capital = "Reval"
 is_city = yes
-#fort_15th = yes #Fortifications of Reval, Wesenberg, Toompea Castle
+# #Fortifications of Reval, Wesenberg, Toompea Castle
 
 1444.1.1 = { discovered_by = KAZ }
 1444.1.1 = { discovered_by = CRI }

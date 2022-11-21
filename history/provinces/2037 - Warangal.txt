@@ -14,7 +14,7 @@ base_manpower = 4
 is_city = yes
 add_core = GOC
  
-fort_15th = yes #Warangal Fort
+ #Warangal Fort
 add_brahmins_or_church_effect = yes
 discovered_by = indian
 discovered_by = muslim

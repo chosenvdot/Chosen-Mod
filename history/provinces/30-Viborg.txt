@@ -15,7 +15,7 @@ trade_goods = fish
 base_manpower = 1 
 capital = "Viipuri"
 is_city = yes
-fort_15th = yes
+
 add_local_autonomy = 50
 
 discovered_by = eastern

@@ -35,7 +35,7 @@ discovered_by = nomad_group
 
 #1444 onwards
 #Copied from 2296 for now, with a few adjustments
-#1462.1.1 = { fort_15th = yes } #Kala-i Sultaniye was completed
+#1462.1.1 = {  } #Kala-i Sultaniye was completed
 1482.7.26 = { revolt = {} controller = TUR } # Jem escapes to Rhodes
 1509.1.1 = { revolt = { type = revolutionary_rebels size = 0 } controller = REB } # Civil war
 1513.1.1 = { revolt = {} controller = TUR }

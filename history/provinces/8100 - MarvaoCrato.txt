@@ -13,7 +13,7 @@ base_manpower = 1
 trade_goods = wool
 is_city = yes
 hre = no
-fort_15th = yes #Marvao castle
+ #Marvao castle
 
 discovered_by = western
 discovered_by = muslim

@@ -12,7 +12,7 @@ base_tax = 5
 base_production = 5
 base_manpower = 2
 trade_goods = grain # Well known as the only route by which grain was imported into the north, to the extent that famines in Novgorod often followed its conquest or raiding.
-#fort_15th = yes
+#
 center_of_trade = 2 # A key trade route between Moscow and Novgorod and an important (if often destroyed and rebuilt) town in its own right.
 add_local_autonomy = 25 # The important trade town so far from Novgorod had a small amount of autonomy
 extra_cost = 15

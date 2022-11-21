@@ -17,7 +17,7 @@ trade_goods = glass
 base_manpower = 2 
 capital = "Caceres"
 is_city = yes
-fort_15th = yes
+
 
 discovered_by = western
 discovered_by = muslim

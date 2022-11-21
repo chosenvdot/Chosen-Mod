@@ -13,7 +13,7 @@ base_manpower = 1
 capital = "Mozhaisk"
 is_city = yes
 add_core = MOS
-fort_15th = yes
+
 
 discovered_by = eastern
 discovered_by = western

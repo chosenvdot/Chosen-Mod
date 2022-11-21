@@ -26,7 +26,7 @@ add_core = ENG
 hre = no
 
 #Fort/Other Buildings
-fort_15th = yes #Royal residence apparently
+ #Royal residence apparently
 
 #Special Modifiers
 

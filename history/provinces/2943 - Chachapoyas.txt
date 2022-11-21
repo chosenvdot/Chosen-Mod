@@ -20,7 +20,7 @@ discovered_by = south_american
 discovered_by = andean
 1444.1.1 = { discovered_by = CHM }
 
-fort_15th = yes
+
 
 1472.1.1 = {
 	owner = INC

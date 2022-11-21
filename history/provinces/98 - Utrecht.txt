@@ -15,7 +15,7 @@ base_production = 3			#Was considered by far the richest city in the Netherlands
 trade_goods = bt_trade_good_books			#Hard to pin down a single good for this rich trading city, but its wharfs, docks, & canals were of huge economic importance early on. Later on, various institutions, banks, and universities make me think books are also a valid option... in fact... it was also an ecclesiastical centre known for its scribes... yeah books it is. 2nd choice was naval supplies
 base_manpower = 3
 add_core = HOL
-fort_15th = yes
+
 
 discovered_by = eastern
 discovered_by = western

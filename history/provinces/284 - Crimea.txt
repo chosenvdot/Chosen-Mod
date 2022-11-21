@@ -12,7 +12,7 @@ trade_goods = salt
 base_manpower = 5
 capital = "Qirq-Yer"
 is_city = yes
-fort_15th = yes #Qirq-Yer Fortress
+ #Qirq-Yer Fortress
 add_core = CRI
 
 extra_cost = 8

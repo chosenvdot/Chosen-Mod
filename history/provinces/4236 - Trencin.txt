@@ -14,7 +14,7 @@ base_manpower = 2
 is_city = yes
 add_core = HUN
 add_core = LHU
-fort_15th = yes
+
 
 1444.1.1 = { discovered_by = KAZ }
 1444.1.1 = { discovered_by = CRI }

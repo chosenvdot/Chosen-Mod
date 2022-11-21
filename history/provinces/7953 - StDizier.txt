@@ -14,7 +14,7 @@ base_manpower = 2
 trade_goods = iron
 is_city = yes
 hre = no
-fort_15th = yes #Fortress guarding French estates apparently.
+ #Fortress guarding French estates apparently.
 
 discovered_by = western
 discovered_by = muslim

@@ -15,7 +15,7 @@ trade_goods = naval_supplies
 base_manpower = 1 
 capital = "Korela"			#Name Priozersk came later
 is_city = yes
-fort_15th = yes #Kexholm fortress
+ #Kexholm fortress
 add_local_autonomy = 25
 
 discovered_by = eastern

@@ -13,7 +13,7 @@ hre = no
 base_tax = 4
 base_production = 4 # BT; 3
 base_manpower = 3
-fort_15th = yes #Doan Thanh Citadel
+ #Doan Thanh Citadel
 trade_goods = grain
 
 discovered_by = chinese

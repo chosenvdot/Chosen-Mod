@@ -11,7 +11,7 @@ hre = no
 base_tax = 8
 base_production = 8
 base_manpower = 6
-fort_15th = yes #Seringapatanam Fort
+ #Seringapatanam Fort
 is_city = yes
  
 add_jains_or_burghers_effect = yes

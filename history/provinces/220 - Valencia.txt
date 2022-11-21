@@ -14,7 +14,7 @@ base_tax = 3
 base_production = 3
 trade_goods = bt_trade_good_books
 base_manpower = 3
-fort_15th = yes
+
 capital = "València" 
 is_city = yes
 

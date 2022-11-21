@@ -17,7 +17,7 @@ capital = "Dublin"
 is_city = yes
 
 add_core = MTH
-fort_15th = yes
+
 extra_cost = 10
 
 discovered_by = western

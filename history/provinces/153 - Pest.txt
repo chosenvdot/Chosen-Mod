@@ -14,7 +14,7 @@ base_tax = 3
 base_production = 2
 base_manpower = 3
 is_city = yes
-fort_15th = yes
+
 add_core = HUN
 center_of_trade = 1
 

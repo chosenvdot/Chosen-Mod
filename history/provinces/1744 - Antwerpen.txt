@@ -15,7 +15,7 @@ base_tax = 5
 base_production = 3
 base_manpower = 5 
 trade_goods = naval_supplies			#Particularly tough case.... Not much of anything in the early period. Diamond trade started 1450s, but didn't really flourish until mid 1600s. Briefly after silting of the Zwin in Bruges, Antwerp became the sugar capital of Europe, processing most Spanish & Portuguese sugar, before falling to the Spanish Fury in 1576, and seeing the diamond business begin in earnest in 1580s.
-fort_15th = yes
+
 
 discovered_by = western
 discovered_by = muslim

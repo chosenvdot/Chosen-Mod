@@ -15,7 +15,7 @@ base_production = 7
 trade_goods = wine
 base_manpower = 4
 add_core = BUR
-fort_15th = yes
+
 
 
 

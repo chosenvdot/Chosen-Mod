@@ -15,7 +15,7 @@ base_production = 5
 trade_goods = glass			#Clock making, apparently quite the business
 base_manpower = 3
 add_core = BUR
-fort_15th = yes
+
 
 discovered_by = western
 discovered_by = muslim

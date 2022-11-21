@@ -14,7 +14,7 @@ trade_goods = iron
 base_manpower = 1 
 capital = "Belgorod"
 is_city = yes
-#fort_15th = yes
+#
 add_core = CHR
 add_local_autonomy = 75
 

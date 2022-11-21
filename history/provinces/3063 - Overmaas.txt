@@ -19,7 +19,7 @@ base_tax = 4 		#On the banks of the Meuse. Recently joined the Hansa and was an 
 base_production = 4
 trade_goods = bt_trade_good_beer			#Major commercial centre of Guelders for virtually the entire period, and a key chokepoint between Low Countries and Germany. Coal and peat eventually became the 2 main industries in the region, but for base going beer, because why not? Beer was a big deal here.
 base_manpower = 2 
-fort_15th = yes
+
 
 discovered_by = western
 discovered_by = muslim

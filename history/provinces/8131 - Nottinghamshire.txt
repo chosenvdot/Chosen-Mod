@@ -27,7 +27,7 @@ add_core = ENG
 hre = no
 
 #Fort/Other Buildings
-fort_15th = yes #Nottingham Castle. 
+ #Nottingham Castle. 
 
 #Special Modifiers
 

@@ -11,7 +11,7 @@ hre = no
 base_tax = 2
 base_production = 2
 base_manpower = 1 
-#fort_15th = yes			#Moving this fort to Kotor
+#			#Moving this fort to Kotor
 is_city = yes
 add_core = ALB
 

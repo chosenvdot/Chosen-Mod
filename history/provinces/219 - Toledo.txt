@@ -16,7 +16,7 @@ trade_goods = iron
 base_manpower = 3
 capital = "Toledo" 
 is_city = yes
-fort_15th = yes
+
 
 
 

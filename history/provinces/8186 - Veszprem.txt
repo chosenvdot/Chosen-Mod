@@ -26,7 +26,7 @@ add_core = HUN
 hre = no
 
 #Fort/Other Buildings
-fort_15th = yes #Veszprem castle, one of the three early Hungarian castles, along with Esztergom and Szekesfehervar.
+ #Veszprem castle, one of the three early Hungarian castles, along with Esztergom and Szekesfehervar.
 
 #Special Modifiers
 

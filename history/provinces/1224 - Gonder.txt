@@ -40,7 +40,7 @@ center_of_trade = 2
 1632.8.1 = { revolt = {} controller = ETH } #Suseynos abdicates in favor of Fasilidos
 1636.1.1 = {
 	capital = "Gonder"
-	fort_15th = yes
+	
 } #Royal center of Gonder established
 1658.1.1 = { unrest = 5 } #Invasion by Oromo
 1659.1.1 = { unrest = 0 } #Fasilidos defeats Oromo incursions

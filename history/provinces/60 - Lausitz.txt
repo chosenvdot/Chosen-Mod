@@ -14,7 +14,7 @@ base_tax = 2
 base_production = 2
 base_manpower = 1
 is_city = yes
-fort_15th = yes #Ortensburg on the hill in old Bautzen. Seems to have been fortified and besieged until finally destroyed in the 100 years war.
+ #Ortensburg on the hill in old Bautzen. Seems to have been fortified and besieged until finally destroyed in the 100 years war.
 
 discovered_by = western
 discovered_by = muslim

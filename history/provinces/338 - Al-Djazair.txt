@@ -52,7 +52,7 @@ discovered_by = eastern
 	controller = ARA
 	add_core = ARA
 }	#Reconquista pushes Spanish to north Africa, where they sieze Bejaia
-1512.1.1 = { fort_15th = yes } # Fortified by Spaniards
+1512.1.1 = {  } # Fortified by Spaniards
 1516.1.1 = {
 	controller = ALG
 	owner = ALG

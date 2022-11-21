@@ -20,7 +20,7 @@ add_core = LCA
 
 
 add_local_autonomy = 75
-fort_15th = yes #Lancaster Castle
+ #Lancaster Castle
 
 center_of_trade = 1
 discovered_by = western

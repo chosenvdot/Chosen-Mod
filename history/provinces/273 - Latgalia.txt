@@ -9,7 +9,7 @@ add_core = LIV
 culture = latvian
 religion = catholic
 capital = "Daugpils"			#DE Dünaburg
-#fort_15th = yes #Dünaburg
+# #Dünaburg
 trade_goods = grain
 hre = no
 base_tax = 2 

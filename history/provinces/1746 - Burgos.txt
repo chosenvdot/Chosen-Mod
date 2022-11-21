@@ -13,7 +13,7 @@ base_tax = 1
 base_production = 1
 trade_goods = wool 
 base_manpower = 1 
-fort_15th = yes
+
 capital = "Burgos"
 is_city = yes
 

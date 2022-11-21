@@ -15,7 +15,7 @@ base_manpower = 5
 capital = "Vladimir"
 is_city = yes
 add_core = MOS
-fort_15th = yes
+
 
 discovered_by = eastern
 discovered_by = western

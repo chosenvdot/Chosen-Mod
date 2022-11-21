@@ -21,4 +21,4 @@ discovered_by = chinese
 
 1542.1.1 = { discovered_by = POR }
 
-1550.1.1 = { fort_15th = yes } # Uchi Castle, the capital of the Shimazu clan
+1550.1.1 = {  } # Uchi Castle, the capital of the Shimazu clan

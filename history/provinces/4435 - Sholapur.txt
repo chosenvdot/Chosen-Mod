@@ -25,7 +25,7 @@ discovered_by = chinese
 	remove_core = BAH
 } # The Breakup of the Bahmani sultanate
 1498.1.1 = { discovered_by = POR }
-1565.1.1 = { fort_15th = yes }
+1565.1.1 = {  }
 1650.1.1 = { add_core = MAR }
 1685.1.1 = { controller = MUG }
 1686.1.1 = {

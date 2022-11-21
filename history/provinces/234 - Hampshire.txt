@@ -16,7 +16,7 @@ capital = "Winchester" #Keeping at Winchester for now, though it will become Sou
 is_city = yes
 add_core = ENG
  #Salisbury and Winchester Cathedrals
-#fort_15th = yes #Cutting in favour of Windsor castle representation, request by JP.
+# #Cutting in favour of Windsor castle representation, request by JP.
 center_of_trade = 1
 
 discovered_by = western

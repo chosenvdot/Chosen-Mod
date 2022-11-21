@@ -25,7 +25,7 @@ add_core = HUN
 hre = no
 
 #Fort/Other Buildings
-fort_15th = yes
+
 
 #Special Modifiers
 

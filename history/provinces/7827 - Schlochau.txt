@@ -13,7 +13,7 @@ base_manpower = 4			#Massive fort
 trade_goods = glass
 is_city = yes
 hre = no
-fort_15th = yes
+
 
 discovered_by = muslim
 discovered_by = ottoman

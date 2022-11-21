@@ -13,14 +13,14 @@ base_production = 1
 base_manpower = 1
 is_city = yes
 add_core = MRI
-fort_15th = yes #Gassantoda Castle
+ #Gassantoda Castle
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }
 1444.1.1 = { discovered_by = KHA }
 1444.1.1 = { discovered_by = OIR }
 1444.1.1 = { discovered_by = QNG }
 
-1486.1.1 = { fort_15th = yes } # Gassan Toda Castle
+1486.1.1 = {  } # Gassan Toda Castle
 1542.1.1 = { discovered_by = POR }
 1558.1.1 = { add_core = MRI }
 1566.11.28 = { owner = MRI controller = MRI remove_core = AMA }

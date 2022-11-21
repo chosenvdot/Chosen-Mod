@@ -15,7 +15,7 @@ base_production = 12
 base_manpower = 6
 is_city = yes
 add_core = POR
-fort_15th = yes
+
 
 discovered_by = western
 discovered_by = eastern

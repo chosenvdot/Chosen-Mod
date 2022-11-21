@@ -17,7 +17,7 @@ is_city = yes
 add_core = ENG
 #add_core = LOD
 seat_in_parliament = yes
-fort_15th = yes
+
 
 
 

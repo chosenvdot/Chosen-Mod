@@ -16,7 +16,7 @@ trade_goods = bt_trade_good_fruit			#Nuts
 base_manpower = 1 
 add_core = BOU
 add_core = AUV
-fort_15th = yes #Withstood several sieges against the English, so there clearly was a castle here, but I cannot find the name of said castle.
+ #Withstood several sieges against the English, so there clearly was a castle here, but I cannot find the name of said castle.
 
 discovered_by = western
 discovered_by = muslim

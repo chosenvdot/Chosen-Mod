@@ -12,7 +12,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-fort_15th = yes # Klis Fortress
+ # Klis Fortress
 add_core = CRO
 #add_core = CRO #Removed because this province was not owned by Hungary since 1200-1240ish. Hungarian core is removed by 1420, so no need to remove that, although it should really be a Neapolitan core.
 

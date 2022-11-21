@@ -27,7 +27,7 @@ hre = no
 add_local_autonomy = 25
 
 #Fort/Other Buildings
-fort_15th = yes
+
 
 #Special Modifiers
 

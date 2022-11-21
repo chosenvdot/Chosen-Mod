@@ -16,7 +16,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-fort_15th = yes #Tachibanayama Castle
+ #Tachibanayama Castle
 add_core = SMZ
 discovered_by = chinese
 1444.1.1 = { discovered_by = MCH }

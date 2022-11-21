@@ -27,7 +27,7 @@ add_core = NOL
 hre = no
 
 #Fort/Other Buildings
-fort_15th = yes #Richmond Castle, Richard III's main residence and a key site in the War of the Roses
+ #Richmond Castle, Richard III's main residence and a key site in the War of the Roses
 
 #Special Modifiers
 

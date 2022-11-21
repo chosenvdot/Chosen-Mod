@@ -14,7 +14,7 @@ base_manpower = 1
 is_city = yes
  
 discovered_by = mesoamerican
-fort_15th = yes
+
 
 1519.1.1 = { discovered_by = SPA } # Hern�n Cort�s
 1520.1.1 = { owner = SPA controller = SPA add_core = SPA remove_core = TLX} #Form a strong and long-lasting alliance with Spain

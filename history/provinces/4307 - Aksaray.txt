@@ -14,7 +14,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 3
 is_city = yes
-fort_15th = yes			#purely strategic, though not a horrible choice
+			#purely strategic, though not a horrible choice
 
 
 discovered_by = western

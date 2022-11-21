@@ -14,7 +14,7 @@ base_tax = 2
 base_production = 3 
 trade_goods = wine 			#also corks
 base_manpower = 2 
-fort_15th = yes #Ciutadella de Roses
+ #Ciutadella de Roses
 capital = "Girona" 
 is_city = yes		# census of 1462, also includes the town of Figueres 
 

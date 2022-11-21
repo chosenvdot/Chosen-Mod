@@ -27,7 +27,7 @@ hre = no
 seat_in_parliament = yes
 
 #Fort/Other Buildings
-fort_15th = yes #Windsor Castle
+ #Windsor Castle
 
 #Special Modifiers
 

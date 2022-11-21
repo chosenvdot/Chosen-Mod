@@ -14,7 +14,7 @@ base_manpower = 1
 is_city = yes
 add_core = HUN
 add_core = TRA
-fort_15th = yes #Same argument as Brasov, albeit not as strong a reason. Mainly to help fortify the Carpathian mountains.
+ #Same argument as Brasov, albeit not as strong a reason. Mainly to help fortify the Carpathian mountains.
 
 1444.1.1 = { discovered_by = KAZ }
 1444.1.1 = { discovered_by = CRI }

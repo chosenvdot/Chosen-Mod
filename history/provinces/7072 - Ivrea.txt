@@ -50,7 +50,7 @@ discovered_by = eastern
 	add_core = SAV
 } #Swears loyalty to Savoy
 1357.1.1 = {
-	fort_15th = yes
+	
 } #Savoy fortifies the area
 1395.1.1 = { revolt = { type = anti_tax_rebels size = 1 } controller = REB } # Violent peasant revolt against heavy taxation
 1397.1.1 = { revolt = {} controller = SAV } # Unclear date

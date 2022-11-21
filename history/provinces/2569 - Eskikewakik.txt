@@ -43,7 +43,7 @@ discovered_by = north_american
 	base_tax = 2
 	base_production = 2
 	capital = "Fort Ste. Marie de Grace"
-	fort_15th = yes
+	
 } # Treaty of Saint-Germain-en-Laye retutns land to the French and Isaac de Razilly founds settlement as a new capital of Acadia grows very fast
 
 1635.12.1 = {

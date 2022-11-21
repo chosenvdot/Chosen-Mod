@@ -16,7 +16,7 @@ add_core = TMB
 native_ferocity = 4
 discovered_by = sub_saharan
 1444.1.1 = { discovered_by = MOR }
-fort_15th = yes
+
 extra_cost = 16
 center_of_trade = 2
 

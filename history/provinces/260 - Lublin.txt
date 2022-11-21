@@ -19,7 +19,7 @@ extra_cost = 8
 center_of_trade = 1
 is_city = yes
 add_core = POL
-fort_15th = yes #Castle hill of Lublin. Mainly serves a 2nd line of defense to Warsaw from the south.
+ #Castle hill of Lublin. Mainly serves a 2nd line of defense to Warsaw from the south.
 
 1444.1.1 = { discovered_by = KAZ }
 1444.1.1 = { discovered_by = CRI }

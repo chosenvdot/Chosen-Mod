@@ -51,7 +51,7 @@ center_of_trade = 2
 	add_core = PER
 	remove_core = AKK
 } # The Safavids took over
-1580.1.1 = { fort_15th = yes } #Refortified.
+1580.1.1 = {  } #Refortified.
 1650.1.1 = { trade_goods = spices }
 1673.1.1 = { discovered_by = ENG }
 1707.5.12 = { discovered_by = GBR }

@@ -15,7 +15,7 @@ base_production = 8			#Old centre of Angevin powers, and a considerable power in
 trade_goods = bt_trade_good_books			#Major university, and an important cultural and literary centre
 base_manpower = 5
 add_core = PRO
-fort_15th = yes
+
 
 extra_cost = 20
 center_of_trade = 2

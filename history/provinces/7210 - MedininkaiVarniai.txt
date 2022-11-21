@@ -13,7 +13,7 @@ base_manpower = 2
 trade_goods = grain
 is_city = yes
 hre = no
-fort_15th = yes #Medininkai Castle
+ #Medininkai Castle
 
 1444.1.1 = { discovered_by = KAZ }
 1444.1.1 = { discovered_by = CRI }

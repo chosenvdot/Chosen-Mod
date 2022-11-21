@@ -12,7 +12,7 @@ base_tax = 8					#Despite Vienna's wealth and importance as almost invariably th
 base_production = 7			#or Prague, and less than 1/10th of Paris or Milan. Notably, it was considerably smaller than some other HRE cities, like Breslau/Vratislav and Koeln, moving some dev out to the suburbs, as it were.
 trade_goods = wine 
 base_manpower = 7				
-fort_15th = yes #Vienna + Outer ring of fortifications
+ #Vienna + Outer ring of fortifications
 capital = "Wien" 
 is_city = yes
 hre = yes

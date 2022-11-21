@@ -13,7 +13,7 @@ base_tax = 7
 base_production = 5
 trade_goods = glass
 base_manpower = 4
-fort_15th = yes
+
 capital = "Mantova" 
 is_city = yes
 

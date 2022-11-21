@@ -61,7 +61,7 @@ discovered_by = north_american
 } #First settlements reach modern day Moncton
 
 1752.1.1 = {
-	fort_15th = yes
+	
 } #Fort Beauséjour
 
 1755.6.16 = {
