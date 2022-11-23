@@ -16,7 +16,6 @@ base_manpower = 1
 trade_goods = grain
 add_core = FRA
 add_core = NRM
-add_core = ENG
 
 discovered_by = western
 discovered_by = muslim
