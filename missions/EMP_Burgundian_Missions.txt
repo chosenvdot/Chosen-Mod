@@ -585,9 +585,9 @@ emp_burgundy_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			add_country_modifier {
+			add_country_modifier = {
 				name = "bur_sub_placated"
-				duration = 8000
+				duration = 7300
 			}
 	}
 	
