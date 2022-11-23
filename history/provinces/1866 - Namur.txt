@@ -7,9 +7,9 @@ latent_trade_goods = {
 	coal
 }
 
-owner = BRB			#I had Namur with Luxembourg for a while because it joined the Burgundian hegemony at a similar time, and like Luxembourg, was purchased, not inherited, but Brabant is really more accurate.
-controller = BRB
-add_core = BRB
+owner = LIE			#I had Namur with Luxembourg for a while because it joined the Burgundian hegemony at a similar time, and like Luxembourg, was purchased, not inherited, but Brabant is really more accurate.
+controller = LIE
+add_core = LIE
 capital = "Namur"
 is_city = yes
 culture = wallonian

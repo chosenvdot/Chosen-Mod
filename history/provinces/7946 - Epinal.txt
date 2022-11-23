@@ -13,7 +13,7 @@ base_production = 3
 base_manpower = 2
 trade_goods = glass
 is_city = yes
-hre = yes
+
 
 discovered_by = western
 discovered_by = muslim

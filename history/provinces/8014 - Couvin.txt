@@ -12,6 +12,7 @@ base_production = 3
 base_manpower = 2
 trade_goods = copper			#major mining and metal working area dating to antiquity. Brass and bronze, especially, were worked in Dinant and Chimay (near Couvin and in this province)
 is_city = yes
+hre = yes
 
 discovered_by = western
 discovered_by = muslim

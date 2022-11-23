@@ -22,7 +22,6 @@ trade_goods = livestock
 add_core = BUR
 
 #Other Political
-hre = yes
 
 #Fort/Other Buildings
 

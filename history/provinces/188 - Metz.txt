@@ -13,7 +13,6 @@ capital = "Metz"
 is_city = yes
 culture = lorraine_culture
 religion = catholic
-hre = yes
 base_tax = 7
 base_production = 7			#Centre of population in Gall, with a population of 40k all the way back in 1st century, but seemed to shrink with the fall of Rome. Wiki (I know) estimates population well under 10k until at least 18th century, grows more important later, though
 trade_goods = bt_trade_good_fruit
