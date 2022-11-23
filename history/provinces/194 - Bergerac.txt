@@ -16,7 +16,6 @@ trade_goods = livestock
 base_manpower = 2
 
 add_core = FRA
-add_core = ENG
 add_core = GUY
 
 discovered_by = western

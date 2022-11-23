@@ -4,7 +4,6 @@
 owner = FOI
 controller = FOI
 add_core = FOI
-add_core = ENG
 add_core = GUY
 culture = gascon
 religion = catholic

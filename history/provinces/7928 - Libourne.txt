@@ -3,7 +3,6 @@
 
 owner = GUY
 controller = GUY
-add_core = ENG
 add_core = FRA
 add_core = GUY
 culture = gascon

@@ -16,7 +16,6 @@ trade_goods = livestock
 base_manpower = 1 
 add_core = FOI
 add_core = GUY
-add_core = ENG
 #add_local_autonomy = 25
 fort_15th = yes
 

@@ -3,7 +3,6 @@
 
 owner = FRA
 controller = FRA
-add_core = ENG
 add_core = FRA
 add_core = GUY
 culture = occitain
