@@ -9,7 +9,6 @@ capital = "Besançon"
 is_city = yes
 culture = burgundian
 religion = catholic
-hre = yes
 base_tax = 5
 base_production = 5
 trade_goods = glass			#Clock making, apparently quite the business

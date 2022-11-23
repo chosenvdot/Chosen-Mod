@@ -13,7 +13,6 @@ base_production = 4
 base_manpower = 2
 trade_goods = bt_trade_good_fruit			#Because it is funny. Also not horrible, as leading suggestions otherwise would be either wine or salt.
 is_city = yes
-hre = yes
 
 discovered_by = western
 discovered_by = muslim
