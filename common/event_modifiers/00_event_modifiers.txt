@@ -12260,6 +12260,6 @@ third_temple_country_modifier = {
 }
  
 bur_sub_placated = {
-	vassal_forcelimit_bonus = 0.5
+	vassal_forcelimit_bonus = 1
 	reduced_liberty_desire = 70
 }
