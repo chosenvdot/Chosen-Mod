@@ -444,10 +444,13 @@ emp_france_missions_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = normandy_area
-				area = lower_normandy_area
-				province_id = 177
-				province_id = 7980
-				NOT = { province_id = 3110 }
+				province_id = 7983
+				province_id = 7985
+				province_id = 7986
+				province_id = 7987
+				province_id = 7984
+				province_id = 168
+				province_id = 4385
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -464,11 +467,28 @@ emp_france_missions_2 = {
 			7980 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			lower_normandy_area	= {
-				type = all
+			7983 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			NOT = { province_id = 3110 }
+			7985 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			7987 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			7984 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			168 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4385 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			7986 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
 		}
 		effect = {
 			if = {
