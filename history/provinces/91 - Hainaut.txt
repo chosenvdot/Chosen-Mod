@@ -14,7 +14,6 @@ capital = "Mons"
 is_city = yes
 culture = picard_culture
 religion = catholic
-hre = yes
 base_tax = 6
 base_production = 6
 trade_goods = cloth

@@ -16,7 +16,7 @@ base_production = 5
 base_manpower = 3
 trade_goods = cloth			#Historically famous for fine lace. Also very industrial reason later, with heavu industry and coal
 is_city = yes
-hre = yes
+hre = no
 
 discovered_by = western
 discovered_by = muslim
