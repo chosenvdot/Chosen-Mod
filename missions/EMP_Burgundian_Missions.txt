@@ -589,6 +589,7 @@ emp_burgundy_3 = {
 				name = "bur_sub_placated"
 				duration = 7300
 			}
+		}
 	}
 	
 	emp_bur_lorraine = {

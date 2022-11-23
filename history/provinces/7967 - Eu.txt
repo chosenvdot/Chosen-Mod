@@ -3,9 +3,7 @@
 
 owner = NRM
 controller = NRM
-add_core = ENG
 add_core = NRM
-# add_core = FRA
 add_core = FRA
 add_local_autonomy = 70
 culture = normand
