@@ -9,7 +9,7 @@ capital = 192	# Dijon
 add_army_professionalism = 0.1
 
 
-1440.1.1 = { leader = {	name = "Jean de Pressy"   	type = general	fire = 2	shock = 6	manuever = 2	siege = 4 } }
+1440.1.1 = { leader = {	name = "Michael 'AlphA' De Nigger"   	type = general	fire = 2	shock = 6	manuever = 2	siege = 4 } }
 
 1444.1.1 = {
 	monarch = {
@@ -27,7 +27,7 @@ add_army_professionalism = 0.1
 	add_heir_personality = bold_fighter_personality
 }
 
-1444.1.1 = {
+1439.11.10 = {
 	heir = {
 		name = "Charles"
 		monarch_name = "Charles I"
