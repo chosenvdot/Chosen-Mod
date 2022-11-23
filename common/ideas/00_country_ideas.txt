@@ -391,25 +391,25 @@ HOL_ideas = { #chosen
 	}
 	free = yes
 	
-	golden_fleece = {
+	HOL_1 = {
 		prestige = 1
 	}
-	compagnies_ordonnance = {
+	HOL_2 = {
 		merchants = 1
 	}
-	bur_estates_general = {
+	HOL_3 = {
 		colonists = 1
 	}
-	reform_of_feudal_army = {
+	HOL_4 = {
 		discipline = 0.05
 	}
-	integrated_towns = {
+	HOL_5 = {
 		trade_efficiency = 0.10
 	}
-	freedom_of_worship = {
+	HOL_6 = {
 		tolerance_heretic = 2
 	}
-	bur_regimental_system = {
+	HOL_7 = {
 		global_manpower_modifier = 0.25
 	}
 }
