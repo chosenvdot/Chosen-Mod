@@ -12258,3 +12258,8 @@ third_temple_country_modifier = {
 	missionaries = 1
 	religion = yes
 }
+ 
+bur_sub_placated = {
+	vassal_forcelimit_bonus = 0.5
+	reduced_liberty_desire = 70
+}
