@@ -4050,12 +4050,12 @@ GEO_ideas = {
 
 AFG_ideas = {
 	start = {
-		army_tradition = 0.5
+		shock_damage = 0.15
 		land_morale = 0.15
 	}
 	
 	bonus = {
-		general_cost = -0.33
+		yearly_army_professionalism = 0.5
 	}
 	
 	trigger = {
@@ -4064,7 +4064,7 @@ AFG_ideas = {
 	free = yes
 	
 	pashtunwali = {
-		war_exhaustion_cost = -0.10
+		global_tax_modifier = 0.2
 	}
 	shadows_of_the_hindu_kush = {
 		defensiveness = 0.25
@@ -4076,14 +4076,14 @@ AFG_ideas = {
 		diplomatic_reputation = 1
 	}
 	durrani_imperialism = {
-		cavalry_power = 0.15
+		cavalry_power = 0.25
 		cav_to_inf_ratio = 0.3
 	}
 	institutionalized_loya_jirga = {
-		legitimacy = 1
+		global_trade_goods_size = 0.2
 	}
 	graveyard_of_empires = {
-		hostile_attrition = 1
+		cavalry_fire = 1
 	}
 }
 
