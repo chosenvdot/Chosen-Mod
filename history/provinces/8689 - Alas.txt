@@ -11,9 +11,9 @@ base_production = 2
 base_manpower = 1
 is_city = yes
 
-add_core =  
-controller =  
-owner =  
+add_core = ATJ
+controller = ATJ
+owner = ATJ
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
@@ -22,7 +22,7 @@ discovered_by = ottoman
 1405.1.1 = { discovered_by = MNG }
 1509.1.1 = { discovered_by = POR }
 1521.1.1 = {
-	owner =  
-	controller =  
-	add_core =  
+	owner = ATJ
+	controller = ATJ
+	add_core = ATJ
 }

@@ -13,12 +13,18 @@ base_production = 3
 base_manpower = 1
 is_city = yes
 <<<<<<< HEAD
+<<<<<<< HEAD
 controller =  
 owner =  
 add_core =  
 =======
 add_core = AYU
 >>>>>>> parent of d421fe7a (MORE ASIA PURGE)
+=======
+controller = KED
+owner = KED
+add_core = KED
+>>>>>>> parent of 2a36030d (1)
 
 
 

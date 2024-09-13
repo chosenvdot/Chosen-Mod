@@ -1,8 +1,13 @@
 
 #Dindings
 
+<<<<<<< HEAD
 #owner =  
 #ontroller =  
+=======
+owner = MLC
+controller = MLC
+>>>>>>> parent of 2a36030d (1)
 culture = malayan
 religion = sunni
 capital = "Lumut" #Not sure if this town existed at the time
@@ -12,7 +17,11 @@ base_tax = 2
 base_production = 2
 base_manpower = 1
 is_city = yes
+<<<<<<< HEAD
 # add_core =  
+=======
+add_core = MLC
+>>>>>>> parent of 2a36030d (1)
 add_core = PRK
 
 discovered_by = chinese

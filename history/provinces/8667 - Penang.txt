@@ -1,8 +1,8 @@
 
 #Penang
 
-owner =  
-controller =  
+owner = KED
+controller = KED
 culture = malayan
 religion = sunni
 capital = "Penang"
@@ -12,7 +12,7 @@ base_tax = 2
 base_production = 2
 base_manpower = 1
 is_city = yes
-add_core =  
+add_core = KED
 
 discovered_by = chinese
 discovered_by = indian
@@ -29,7 +29,7 @@ discovered_by = ottoman
 	owner = GBR
 	controller = GBR
         add_core = GBR
-        remove_core =  
+        remove_core = KED
         capital = "George Town"
         base_tax = 3
         base_production = 3

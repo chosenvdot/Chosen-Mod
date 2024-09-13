@@ -1,8 +1,8 @@
  
 #2686 - Bintan
 
-owner =  
-controller =  
+owner = MLC
+controller = MLC
 culture = malayan
 religion = sunni
 capital = "Tanjung Pinang"
@@ -12,8 +12,8 @@ base_tax = 4
 base_production = 4
 base_manpower = 2
 is_city = yes
-add_core =  
-add_core =  
+add_core = MLC
+add_core = JOH
 add_core = RIA
 
 discovered_by = chinese
@@ -25,6 +25,6 @@ discovered_by = ottoman
 1521.1.1 = { discovered_by = SPA }
 
 1528.1.1 = {
-	owner =  
-	controller =  
+	owner = JOH
+	controller = JOH
 }

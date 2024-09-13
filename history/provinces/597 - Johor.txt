@@ -1,8 +1,8 @@
  
 #597 - Johor
 
-owner =  
-controller =  
+owner = MLC
+controller = MLC
 culture = malayan
 religion = sunni
 capital = "Johor"
@@ -12,8 +12,8 @@ base_tax = 7
 base_production = 7
 base_manpower = 4
 is_city = yes
-add_core =  
-add_core =  
+add_core = MLC
+add_core = JOH
 
 discovered_by = chinese
 discovered_by = indian
@@ -24,7 +24,7 @@ discovered_by = ottoman
 1521.1.1 = { discovered_by = SPA }
 
 1528.1.1 = {
-	owner =  
-	controller =  
+	owner = JOH
+	controller = JOH
 }
 1528.1.1 = { capital = "Kota Tingi" } # Alauddin Riayat Shah moved the capital

@@ -10,9 +10,9 @@ base_tax = 1
 base_production = 1
 base_manpower = 2
 is_city = yes
-add_core =  
-owner =  
-controller =  
+add_core = JOH
+owner = JOH
+controller = JOH
 
 discovered_by = chinese
 discovered_by = indian
@@ -22,14 +22,14 @@ discovered_by = ottoman
 1405.1.1 = { discovered_by = MNG }
 1509.1.1 = { discovered_by = POR }
 1528.1.1 = {
-	owner =  
-	controller =  
+	owner = JOH
+	controller = JOH
 }
 
 1725.1.1 = {
 	controller = SAK
 	owner = SAK
-	remove_core =  
-        remove_core =  
+	remove_core = JOH
+        remove_core = MLC
 }
 

@@ -10,9 +10,9 @@ base_production = 2
 base_manpower = 1
 trade_goods = spices
 is_city = yes
-add_core =  
-controller =  
-owner =  
+add_core = SUN
+controller = SUN
+owner = SUN
 
 
 
@@ -27,7 +27,7 @@ discovered_by = ottoman
 1527.1.1 = {
 	owner = BAN
 	controller = BAN
-        remove_core =  
+        remove_core = SUN
 	
 } # Banten Sultanate expanded the influence in South Sumatra
 1752.1.1 = {

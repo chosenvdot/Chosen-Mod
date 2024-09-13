@@ -17,9 +17,9 @@ discovered_by = muslim
 discovered_by = ottoman
 
 1482.1.1 = {
-	owner =  
-	controller =  
-	add_core =  
+	owner = SUN
+	controller = SUN
+	add_core = SUN
 	remove_core = GLU
 } # Conquered by the Cirebonese Army
 
@@ -28,6 +28,6 @@ discovered_by = ottoman
 	owner = CRB
 	controller = CRB
 	add_core = CRB
-	remove_core =  
+	remove_core = SUN
 } # Conquered by the Cirebonese Army
 1550.1.1 = { religion = sunni }

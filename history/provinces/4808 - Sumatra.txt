@@ -10,9 +10,9 @@ hre = no
 base_tax = 1
 base_production = 1
 base_manpower = 2
-add_core =  
-controller =  
-owner =  
+add_core = ATJ
+controller = ATJ
+owner = ATJ
 trade_goods = livestock
 
 discovered_by = chinese
@@ -23,7 +23,7 @@ discovered_by = ottoman
 1405.1.1 = { discovered_by = MNG }
 1509.1.1 = { discovered_by = POR }
 1521.1.1 = {
-	owner =  
-	controller =  
-	add_core =  
+	owner = ATJ
+	controller = ATJ
+	add_core = ATJ
 }

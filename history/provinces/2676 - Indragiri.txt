@@ -11,9 +11,9 @@ base_tax = 2 # BT; 2
 base_production = 1 # BT; 2
 base_manpower = 3
 trade_goods = copper # ???
-add_core =  
-owner =  
-controller =  
+add_core = JOH
+owner = JOH
+controller = JOH
 
 discovered_by = chinese
 discovered_by = indian

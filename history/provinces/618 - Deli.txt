@@ -10,9 +10,9 @@ base_tax = 2
 base_production = 1
 base_manpower = 4
 is_city = yes
-add_core =  
-controller =  
-owner =  
+add_core = ATJ
+controller = ATJ
+owner = ATJ
 
 discovered_by = chinese
 discovered_by = indian
@@ -26,13 +26,13 @@ center_of_trade = 1
 
 1509.1.1 = { discovered_by = POR }
 1523.1.1 = {
-	owner =  
-	controller =  
-	add_core =  
+	owner = ATJ
+	controller = ATJ
+	add_core = ATJ
 }
 
 1632.1.1 = {
 	owner = ARU
 	controller = ARU
-	remove_core =  
+	remove_core = ATJ
 }

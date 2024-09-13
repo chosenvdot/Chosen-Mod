@@ -1,8 +1,8 @@
  
 #2392 - Selangor
 
-owner =  
-controller =  
+owner = MLC
+controller = MLC
 culture = malayan
 religion = sunni
 capital = "Kuala Selangor"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 2
 is_city = yes
-add_core =  
+add_core = MLC
 add_core = PRK
 
 discovered_by = chinese
