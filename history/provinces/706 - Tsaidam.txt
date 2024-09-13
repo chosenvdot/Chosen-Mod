@@ -1,9 +1,9 @@
  
 #706 - Amdo
 
- 
- 
- 
+owner = MNG
+controller = MNG
+add_core = MNG
 culture = oirats
 religion = vajrayana
 capital = "Tsaidam"

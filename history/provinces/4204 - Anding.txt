@@ -1,9 +1,9 @@
  
 #4204 - Anding
 
- 
-controller =  
- 
+owner = MNG
+controller = MNG
+add_core = MNG
 culture = oirats
 religion = vajrayana
 capital = "Anding"

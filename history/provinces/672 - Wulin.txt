@@ -1,9 +1,9 @@
  
 #672 - Chenzhou
 
- 
- 
- 
+owner = MNG
+controller = MNG
+add_core = MNG
 culture = xiang
 religion = confucianism
 capital = "Wulin"
@@ -27,10 +27,10 @@ center_of_trade = 1
 	controller = CXI
 } #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
 1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
-	 
+	add_core = MNG
 	add_core = CHC
-	 
-	 
+	owner = MNG
+	controller = MNG
 } #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
 
 #1444 onwards
@@ -41,8 +41,8 @@ center_of_trade = 1
 	add_core = QNG
 }
 1648.11.1 = { 
-	  
-	 
+	controller = MNG 
+	owner = MNG
 }
 1649.1.1 = {
 	owner = QNG

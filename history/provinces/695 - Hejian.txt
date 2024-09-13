@@ -1,9 +1,9 @@
  
 #695 - Hebei
 
- 
- 
- 
+owner = MNG
+controller = MNG
+add_core = MNG
 culture = chihan
 religion = confucianism
 capital = "Hejian"
@@ -21,7 +21,7 @@ discovered_by = chinese
 discovered_by = nomad_group
 
 
-1402.7.13 = { revolt = {}   }
+1402.7.13 = { revolt = {} controller = MNG }
 
 #2nd Shattering
 1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
@@ -30,9 +30,9 @@ discovered_by = nomad_group
 	controller = YAN
 } #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
 1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
-	 
-	 
-	 
+	add_core = MNG
+	owner = MNG
+	controller = MNG
 } #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
 
 #1444 onwards

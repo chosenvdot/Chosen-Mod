@@ -1,9 +1,9 @@
  
 # 2142 - Huai'an
 
- 
-controller =  
- 
+owner = MNG
+controller = MNG
+add_core = MNG
 culture = jianghuai
 religion = confucianism
 capital = "Huai'an"

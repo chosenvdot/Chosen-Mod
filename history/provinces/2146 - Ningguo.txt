@@ -1,9 +1,9 @@
  
 # 2144 - Ningguo
 
- 
-controller =  
- 
+owner = MNG
+controller = MNG
+add_core = MNG
 culture = wu
 religion = confucianism
 capital = "Ningguo"

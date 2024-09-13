@@ -1,9 +1,9 @@
  
 # 2174 - Hengyang
 
- 
-controller =  
- 
+owner = MNG
+controller = MNG
+add_core = MNG
 add_core = CMI
 culture = xiang
 religion = animism
@@ -22,16 +22,16 @@ discovered_by = chinese
 discovered_by = nomad_group
 
 1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
-	remove_core =  
+	remove_core = MNG
 	remove_core = CHC
 	owner = CMI
 	controller = CMI
 } #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
 1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
-	 
+	add_core = MNG
 	add_core = CHC
-	 
-	controller =  
+	owner = MNG
+	controller = MNG
 } #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
 
 #1444 onwards
@@ -44,14 +44,14 @@ discovered_by = nomad_group
 	add_core = QNG
 }
 1648.11.1 = {
- 	controller =   
-	 
+ 	controller = MNG 
+	owner = MNG
 }
 1649.1.1 = {
 	owner = QNG
 	controller = QNG
 }
-1652.4.1 = { controller =   }
+1652.4.1 = { controller = MNG }
 1658.1.1 = { controller = QNG }
 1659.1.1 = {
 	owner = QNG

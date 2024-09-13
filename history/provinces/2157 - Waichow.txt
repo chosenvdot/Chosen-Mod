@@ -1,9 +1,9 @@
  
 # 2157 - Waichow
 
- 
-controller =  
- 
+owner = MNG
+controller = MNG
+add_core = MNG
 culture = hakka
 religion = confucianism
 capital = "Waichow"
@@ -22,18 +22,18 @@ discovered_by = nomad_group
 discovered_by = indian
 
 1444.11.13 = { #BeyondTypus batch edit shortcut the second shattering begins
-	remove_core =  
+	remove_core = MNG
 	remove_core = YUE
 	add_core = MIN
 	owner = MIN
 	controller = MIN
 } #Fantasy/alt-history tags for gameplay & multiplayer balance in SE. Please also remember to cut any cores from original larger tags then readd below.
 1444.11.15 = { #BeyondTypus batch edit shortcut the second shattering ends
-	 
+	add_core = MNG
 	add_core = YUE
 	remove_core = MIN
-	 
-	controller =  
+	owner = MNG
+	controller = MNG
 } #End of shattered history. Please revert owner to historical and cut any fantasy cores. Also don't forget to readd any cut historical cores
 
 #1444 onwards
@@ -45,8 +45,8 @@ discovered_by = indian
 	add_core = QNG
 }
 1648.4.15 = { 
-	controller =   
-	 
+	controller = MNG 
+	owner = MNG
 }
 1650.11.11 = {
 	owner = QNG
