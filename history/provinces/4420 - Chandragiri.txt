@@ -1,8 +1,8 @@
  
 #1949 - Penukonda
 
- 
- 
+owner = YOR
+controller = YOR
 culture = telegu
 religion = hinduism
 capital = "Chandragiri"
@@ -12,8 +12,13 @@ base_tax = 8
 base_production = 6
 base_manpower = 4
 is_city = yes
+<<<<<<< HEAD
  
  
+=======
+add_core = KRK
+add_core = YOR
+>>>>>>> parent of 7d55feb5 (INDIA WIIPPINGGG)
 add_brahmins_or_church_effect = yes #Tirupati
 # #One of the great forts of the East
 discovered_by = indian

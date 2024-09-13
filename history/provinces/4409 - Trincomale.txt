@@ -1,8 +1,8 @@
  
 #4409 - Trincomale
 
- 
- 
+owner = CEY
+controller = CEY
 culture = sinhala
 religion = buddhism
 capital = "Trincomale"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 2 
 is_city = yes
- 
+add_core = CEY
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = indian

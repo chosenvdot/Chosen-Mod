@@ -1,8 +1,8 @@
  
 #533 - Mysore
 
- 
- 
+owner = VND
+controller = VND
 culture = kannada
 religion = hinduism
 capital = "Ummatur"

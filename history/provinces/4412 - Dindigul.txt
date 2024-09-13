@@ -1,8 +1,8 @@
  
 #4412 - Dindigul
 
- 
- 
+owner = VND
+controller = VND
 culture = tamil
 religion = hinduism
 capital = "Dindigul"

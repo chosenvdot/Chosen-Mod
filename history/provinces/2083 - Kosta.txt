@@ -1,8 +1,8 @@
  
 #2083 - Kosta
 
- 
- 
+owner = YOR
+controller = YOR
 culture = telegu
 religion = hinduism
 capital = "Udayagiri"
@@ -12,8 +12,13 @@ base_tax = 4
 base_production = 8
 base_manpower = 4
 is_city = yes
+<<<<<<< HEAD
  
  #The Great Forts of the East - Udayagiri fort
+=======
+add_core = YOR
+fort_15th = yes #The Great Forts of the East - Udayagiri fort
+>>>>>>> parent of 7d55feb5 (INDIA WIIPPINGGG)
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
