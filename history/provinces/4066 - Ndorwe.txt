@@ -1,6 +1,9 @@
  
 #Ndorwe
 
+owner = NKO
+controller = NKO
+add_core = NKO
 culture = ganda
 religion = shamanism #Fetishism
 capital = "Nkore"

@@ -1,6 +1,8 @@
  
 # - Mpangu
 
+owner = KON
+controller = KON 
 culture = kongolese
 religion = shamanism #Fetishism
 capital = "Sundi"
@@ -11,6 +13,7 @@ base_production = 4
 base_manpower = 4
 is_city = yes
 add_local_autonomy = 50
+add_core = KON
 
 discovered_by = central_african
 

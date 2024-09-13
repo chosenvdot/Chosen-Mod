@@ -1,4 +1,7 @@
-
+ 
+owner = YAK
+controller = YAK
+add_core = YAK
 culture = yaka
 religion = shamanism #Fetishism
 capital = "Yaka"
