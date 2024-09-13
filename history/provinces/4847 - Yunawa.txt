@@ -1,25 +1,27 @@
-#4847 - Yunawa
+ 
+# new in 1.31
 
-
+owner = YNU
+controller = YNU
+add_core = YNU
 culture = paman
 religion = dreamtime
 capital = "Yunawa"
+is_city = yes
 hre = no
-
-trade_goods = fish
-base_manpower = 1
 base_tax = 1
 base_production = 1
+base_manpower = 1
+trade_goods = fish
 native_size = 2
 native_ferocity = 1
 native_hostileness = 2
+
 discovered_by = aboriginal_tech
-
-
-
-discovered_by = MKS
-discovered_by = TER
-discovered_by = TID
+1400.1.1 = { # Brian fixed
+	discovered_by = MKS
+	discovered_by = TER
+	discovered_by = TID
+}
 
 1642.11.24 = { discovered_by = NED } # Abel Tasman
-

@@ -1,17 +1,17 @@
+ 
 # No previous file for Mandan
 
-
-culture = arapaho
+culture = crow_culture
 religion = totemism
-capital = "Mandan"
+capital = "Awati"			#'Missouri'. Would love a settlement name, especially if I could find a name for the 1740s settlement of Big Hidatsa, but I'll have to return later with more info
 trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
-native_size = 5
+native_size = 10
 native_ferocity = 1
-native_hostileness = 2
+native_hostileness = 3
 
 
 
@@ -25,7 +25,6 @@ discovered_by = north_american
 	owner = ASI
 	controller = ASI
 	add_core = ASI
-	culture = nakota
 	trade_goods = fur
 	is_city = yes
 } #19th century native expansion

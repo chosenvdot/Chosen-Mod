@@ -1,26 +1,19 @@
+ 
 #2006 - Apsáalooke
 
-culture = blackfoot
+culture = crow_culture
 religion = totemism
 capital = "Apsáalooke"
-trade_goods = fur
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
-native_size = 1
+is_city = yes
+native_size = 10
 native_ferocity = 1
-native_hostileness = 1
+native_hostileness = 3
 
 
 
 discovered_by = north_american
-
-
-1710.1.1 = {
-	owner = ---
-	controller = ---
-	is_city = no
-	remove_core = COM 
-} #Horses cause waves of migration on the Great Plains
-
