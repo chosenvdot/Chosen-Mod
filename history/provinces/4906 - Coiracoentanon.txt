@@ -1,7 +1,7 @@
  
 # new in 1.31
 
-  = CAO # ???
+tribal_owner = CAO # ???
 culture = illini
 religion = totemism
 capital = "Coiracoentanon"

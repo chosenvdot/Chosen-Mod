@@ -2,9 +2,9 @@
 # No previous file for Coyolapan
 
 culture = mixtec
- 
- 
- 
+owner = AZT
+controller = AZT
+add_core = AZT
 is_city = yes
 religion = nahuatl
 capital = "Coyolapan"
@@ -23,9 +23,9 @@ discovered_by = mesoamerican
 
 
 1475.1.1 = {
- 	 
-	  
-	 
+ 	owner = AZT
+	controller = AZT 
+	add_core = AZT
 } #Estimated; occured during Ahuizotl's reign
 1521.8.13 = { owner = MIX
 	controller = MIX } #Aztec collapse. 

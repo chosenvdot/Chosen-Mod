@@ -17,7 +17,7 @@ native_hostileness = 3
 discovered_by = north_american
 
 
-1444.1.1 = {   = YKT }
+1444.1.1 = { tribal_owner = YKT }
 1444.11.15 = { #BeyondTypus batch edit shortcut no native start date begin
 	owner = XXX
 	controller = XXX

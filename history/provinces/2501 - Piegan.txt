@@ -22,7 +22,7 @@ native_hostileness = 2
 
 discovered_by = north_american
 
-1444.1.1 = {  
+1444.1.1 = { tribal_owner = BLA }
 1444.11.12 = { #BeyondTypus batch edit shortcut native start date begin
 	owner = QQN			#Pikani
 	controller = QQN

@@ -1,8 +1,8 @@
 
 #844 - Zapotec
 
- 
- 
+owner = AZT
+controller = AZT
 culture = zapotek
 religion = nahuatl
 capital = "Zaachila"
@@ -12,16 +12,16 @@ base_tax = 4
 base_production = 4
 base_manpower = 2
 is_city = yes
- 
+add_core = AZT
 
 
 
 discovered_by = mesoamerican
 
 1490.1.1 = {
-	 
-	 
-	 
+	owner = AZT
+	controller = AZT
+	add_core = AZT
 } #estmated, sometime during the reign of Ahuizotl
 1524.1.1 = {
 	discovered_by = SPA 

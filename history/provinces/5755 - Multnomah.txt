@@ -22,7 +22,7 @@ extra_cost = 20
 center_of_trade = 2
 
 
-1444.1.1 = {  
+1444.1.1 = { tribal_owner = CNK }
 1444.11.15 = { #BeyondTypus batch edit shortcut no native start date begin
 	owner = XXX
 	controller = XXX

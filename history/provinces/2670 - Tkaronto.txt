@@ -41,6 +41,7 @@ discovered_by = north_american
 	controller = ---
 	remove_core = TAH
 	culture = iroquois
+<<<<<<< HEAD
 	 
 =======
  	owner = IRO
@@ -49,6 +50,9 @@ discovered_by = north_american
 	is_city = yes
 	trade_goods = fur		#Beaver pelts obviously
 >>>>>>> parent of e2ff5649 (nonatives1)
+=======
+	tribal_owner = SEN
+>>>>>>> parent of 98aee8ee (COLONY MUTTS GONE)
 } #Taken by Iroquois in Beaver Wars.
 
 1660.1.1 = {

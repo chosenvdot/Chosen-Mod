@@ -1,7 +1,7 @@
  
 # new in 1.31
 
-  = MAH # ???
+tribal_owner = MAH # ???
 culture = mahican
 religion = totemism
 capital = "Westenhuck"

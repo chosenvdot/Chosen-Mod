@@ -56,7 +56,11 @@ discovered_by = north_american
 	add_core = ENG
 	culture = anishinabe
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 
+=======
+	tribal_owner = MSG
+>>>>>>> parent of 98aee8ee (COLONY MUTTS GONE)
 } #Anishinabe expands post-beaver wars in deserted huron lands. n
 1707.5.12 = { discovered_by = GBR }
 =======

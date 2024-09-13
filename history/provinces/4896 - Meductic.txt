@@ -1,7 +1,7 @@
  
 # ex 5046
 
- ?
+tribal_owner = MLS # ???
 culture = maliseet
 religion = totemism
 capital = "Aucpaque" # BT; "Meductic"

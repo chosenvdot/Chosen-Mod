@@ -3,6 +3,7 @@
 # vanilla uncolonised
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # ? 1.31
 =======
 owner = ALQ
@@ -10,6 +11,9 @@ controller = ALQ
 add_core = ALQ
 #tribal_owner = AGQ # ??? 1.31
 >>>>>>> parent of c016ec3b (natives gotta go mang pt 2)
+=======
+#tribal_owner = AGQ # ??? 1.31
+>>>>>>> parent of 98aee8ee (COLONY MUTTS GONE)
 culture = anishinabe # BT; algonquin
 religion = totemism
 capital = "Kitcisìpi" # BT; "Ottagotouemin"; Not a good name, just the name of the river. All names I found came from the story of an explorer who lost some matches downstream, and I'm no using that
