@@ -1,8 +1,8 @@
  
 #606 - Panduranga
 
- 
- 
+owner = CHA
+controller = CHA
 culture = cham
 religion = sunni
 capital = "Panduranga"
@@ -12,7 +12,7 @@ base_tax = 5
 base_production = 5
 base_manpower = 3
 is_city = yes
- 
+add_core = CHA
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim

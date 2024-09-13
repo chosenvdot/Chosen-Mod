@@ -1,8 +1,8 @@
  
 #2400 - Hsipaw
 
- 
- 
+owner = HSE
+controller = HSE
 culture = shan
 religion = buddhism
 capital = "Hsipaw"
@@ -12,10 +12,14 @@ base_tax = 4
 base_production = 4
 base_manpower = 3
 is_city = yes
+<<<<<<< HEAD
  
  
  
  
+=======
+add_core = HSE
+>>>>>>> parent of d421fe7a (MORE ASIA PURGE)
 add_core = HSI
 
 

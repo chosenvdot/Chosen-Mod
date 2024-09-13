@@ -1,8 +1,8 @@
 
 #Khamkeut
 
- 
- 
+owner = LXA
+controller = LXA
 culture = lao
 religion = buddhism
 capital = "Khamkeut"
@@ -12,7 +12,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
- 
+add_core = LXA
 add_core = VIE
 
 
@@ -21,7 +21,7 @@ discovered_by = chinese
 discovered_by = indian
 
 
-1483.1.1 = {   } # Vietnamese Invasion
+1483.1.1 = { add_core = DAI } # Vietnamese Invasion
 1535.1.1 = { discovered_by = POR }
 1694.1.1 = { add_core = TOK } # Vietnamese Intervention
 1707.1.1 = {

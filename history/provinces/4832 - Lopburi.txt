@@ -2,9 +2,9 @@
 # filename fixed
 # ex 8567
 
- 
- 
- 
+owner = AYU 
+controller = AYU
+add_core = AYU
 culture = central_thai
 religion = mahayana # BT; buddhism
 capital = "Lawo" # BT; "Lopburi"

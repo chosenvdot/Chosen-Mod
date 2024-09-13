@@ -1,8 +1,8 @@
  
 #2372 - An Bang
 
- 
- 
+owner = DAI
+controller = DAI
 culture = vietnamese
 religion = mahayana
 capital = "An Bang"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 3
 is_city = yes
- 
+add_core = DAI
 
 
 
@@ -28,8 +28,13 @@ discovered_by = indian
 1427.1.1 = {
 	revolt = {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 
 	 
+=======
+	owner = DAI
+	controller = DAI
+>>>>>>> parent of d421fe7a (MORE ASIA PURGE)
 	remove_core =  
 =======
 	owner = DAI

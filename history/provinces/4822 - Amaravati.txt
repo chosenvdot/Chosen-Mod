@@ -1,9 +1,9 @@
  
 # ex 8628
 
- 
- 
- 
+owner = CHA
+controller = CHA
+add_core = CHA
 culture = cham
 religion = hinduism
 capital = "Amaravati"
@@ -20,9 +20,9 @@ discovered_by = muslim
 discovered_by = ottoman
 
 1472.1.1 = {
-	 
-	 
-	 
+	owner = DAI
+	controller = DAI
+	add_core = DAI
 	add_core = ANN
 } # Severe defeat against the Vietnamese, Amaravati is annexed
 1527.1.1 = {
@@ -47,8 +47,8 @@ discovered_by = ottoman
 1773.1.1 = { controller = REB }
 1776.1.1 = {
 	unrest = 0
-	 
-	 
+	owner = DAI
+	controller = DAI
 } # Tay Son Dynasty conquered the Nguyen Lords
 1786.1.1 = { unrest = 5 } # Unsuccessful revolt
 1787.1.1 = { unrest = 0 }

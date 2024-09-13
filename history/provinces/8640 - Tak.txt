@@ -1,8 +1,8 @@
 
 #Tak
 
- 
- 
+owner = LNA
+controller = LNA
 culture = central_thai
 religion = buddhism
 capital = "Tak"
@@ -12,7 +12,7 @@ base_tax = 2
 base_production = 2
 base_manpower = 2
 is_city = yes
- 
+add_core = LNA
 
 
 
@@ -20,12 +20,12 @@ discovered_by = chinese
 discovered_by = indian
 
 
-1456.1.1 = {   } # Lan Na Invasion of Sukhothai
+1456.1.1 = { add_core = LNA } # Lan Na Invasion of Sukhothai
 1474.1.1 = { remove_core = LNA }
 1530.1.1 = { 
-         
-	 
-         
+        owner = AYU
+	controller = AYU
+        add_core = AYU
 } # Completely annexed by Ayutthaya
 1535.1.1 = { discovered_by = POR }
 1564.1.2 = { 
@@ -33,14 +33,14 @@ discovered_by = indian
 	controller = SUK
 } # Sukhothai established as Burmese vassal
 1569.9.29 = { 
-         
-	 
+        owner = AYU
+	controller = AYU
 } # Maha Thammaracha becomes king of Ayutthaya
 1767.4.1 = { # Fall of Ayutthaya, Phitsanulok declares independence
         owner = SUK
 	controller = SUK
 }
 1770.1.1 = { # Annexed by Ayutthaya
-         
-	 
+        owner = AYU
+	controller = AYU
 }

@@ -1,8 +1,8 @@
 
 #4545 - South Hsenwi
 
- 
- 
+owner = HSE
+controller = HSE
 culture = shan
 religion = buddhism
 capital = "Mong Yai"
@@ -12,10 +12,14 @@ base_tax = 2
 base_production = 2
 base_manpower = 1
 is_city = yes
+<<<<<<< HEAD
  
  
  
  
+=======
+add_core = HSE
+>>>>>>> parent of d421fe7a (MORE ASIA PURGE)
 
 
 

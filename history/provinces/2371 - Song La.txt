@@ -1,8 +1,8 @@
  
 #2371 - Song La
 
- 
- 
+owner = DAI
+controller = DAI
 culture = tai
 religion = animism
 capital = "Muong La"
@@ -12,7 +12,7 @@ base_tax = 2
 base_production = 2
 base_manpower = 2
 is_city = yes
- 
+add_core = DAI
 add_core = SSC
 
 
@@ -30,8 +30,13 @@ discovered_by = indian
 1427.1.1 = {
 	revolt = {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 
 	 
+=======
+	owner = DAI
+	controller = DAI
+>>>>>>> parent of d421fe7a (MORE ASIA PURGE)
 	remove_core =  
 =======
 	owner = DAI

@@ -1,8 +1,8 @@
  
 #1016 - Ha Tinh
 
- 
- 
+owner = DAI
+controller = DAI
 culture = vietnamese
 religion = mahayana
 capital = "Ha Tinh"
@@ -12,7 +12,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
- 
+add_core = DAI
 add_core = TOK
 
 
@@ -32,8 +32,13 @@ discovered_by = ottoman
 1427.1.1 = {
 	revolt = {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 
 	 
+=======
+	owner = DAI
+	controller = DAI
+>>>>>>> parent of d421fe7a (MORE ASIA PURGE)
 	remove_core =  
 =======
 	owner = DAI
@@ -49,8 +54,8 @@ discovered_by = ottoman
 	controller = TOK
 }
 1786.6.1 = {
-	 
-	 
+	owner = DAI
+	controller = DAI
 	remove_core = TOK
 } # Tai Son and Le dynasty annexed the Trinh Lords
 1802.7.22 = {

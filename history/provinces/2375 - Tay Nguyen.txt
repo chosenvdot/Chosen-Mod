@@ -1,9 +1,9 @@
  
 # ex 8629
 
- 
- 
- 
+owner = CHA
+controller = CHA
+add_core = CHA
 culture = degar # BT; cham
 religion = animism
 capital = "Da Lach" # BT; "Tay Nguyen"
@@ -27,9 +27,9 @@ discovered_by = ottoman
 	add_core = ANN
 } # Vietnamese control
 1776.1.1 = {
-	 
-	 
-	 
+	owner = DAI
+	controller = DAI
+	add_core = DAI
 } # Tay Son Dynasty annexed the Nguyen Lords
 1788.9.1 = {
 	owner = ANN

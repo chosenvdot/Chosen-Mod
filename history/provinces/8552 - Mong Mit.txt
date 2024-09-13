@@ -1,8 +1,8 @@
 
 #4524 - Mong Mit
 
- 
- 
+owner = HSE
+controller = HSE
 culture = shan
 religion = buddhism
 capital = "Mong Mit"
@@ -12,10 +12,14 @@ base_tax = 5
 base_production = 5
 base_manpower = 2
 is_city = yes
+<<<<<<< HEAD
  
  
  
  
+=======
+add_core = HSE
+>>>>>>> parent of d421fe7a (MORE ASIA PURGE)
 
 
 

@@ -12,9 +12,12 @@ hre = no
 base_tax = 2  
 base_production = 2 
 base_manpower = 4
+<<<<<<< HEAD
  
  
  
+=======
+>>>>>>> parent of d421fe7a (MORE ASIA PURGE)
 is_city = yes
 discovered_by = chinese
 discovered_by = indian

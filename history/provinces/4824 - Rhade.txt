@@ -1,9 +1,9 @@
  
 # ex 8596
 
-  # BT; RHA
- 
-  # BT; RHA
+owner = CHA # BT; RHA
+controller = CHA # BT; RHA
+add_core = CHA # BT; RHA
 culture = degar # BT; cham
 religion = animism
 capital = "Rhade"

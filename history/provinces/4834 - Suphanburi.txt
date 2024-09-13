@@ -1,9 +1,9 @@
  
 # ex 8568
 
- 
- 
- 
+owner = AYU
+controller = AYU
+add_core = AYU
 culture = central_thai
 religion = buddhism
 capital = "Suphanburi"

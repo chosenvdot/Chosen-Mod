@@ -1,9 +1,9 @@
  
 # ex 8586
 
- 
- 
- 
+owner = LXA
+controller = LXA
+add_core = LXA
 add_core = CHK
 add_core = VIE # BT
 culture = lao
@@ -19,7 +19,7 @@ trade_goods = livestock # BT; ivory
 discovered_by = chinese
 discovered_by = indian
 
-1483.1.1 = {   } # Vietnamese Invasion
+1483.1.1 = { add_core = DAI } # Vietnamese Invasion
 1535.1.1 = { discovered_by = POR }
 1707.1.1 = {
 	owner = VIE

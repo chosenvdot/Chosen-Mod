@@ -30,16 +30,16 @@ discovered_by = ottoman
 	 
 } # Annexed to the Kingdom of Taungoo
 1594.1.1 = {
-	 
-	 
-         
+	owner = AYU
+	controller = AYU
+        add_core = AYU
 }
 1614.1.1 = {
 	 
 	 
         remove_core = AYU
 }
-1675.1.1 = {  nvasion
+1675.1.1 = { add_core = AYU } #Siamese Invasion
 1677.1.1 = { remove_core = TAU } # Taungu Invasion
 1740.11.1 = { owner = PEG controller = PEG } # Restored Pegu Dynasty
 1757.5.6 = {  r = TAU } # Returned to Burmese control

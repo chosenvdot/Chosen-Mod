@@ -1,9 +1,9 @@
  
 # ex 8637
 
- 
- 
- 
+owner = AYU
+controller = AYU
+add_core = AYU
 culture = central_thai
 religion = buddhism
 capital = "Rayong"

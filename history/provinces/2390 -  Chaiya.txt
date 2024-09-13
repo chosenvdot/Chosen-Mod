@@ -1,8 +1,8 @@
  
 #2390 - Chaiya
 
- 
- 
+owner = AYU
+controller = AYU
 culture = central_thai
 religion = buddhism
 capital = "Chaiya"
@@ -12,9 +12,13 @@ base_tax = 3
 base_production = 3
 base_manpower = 1
 is_city = yes
+<<<<<<< HEAD
 controller =  
 owner =  
 add_core =  
+=======
+add_core = AYU
+>>>>>>> parent of d421fe7a (MORE ASIA PURGE)
 
 
 
@@ -32,6 +36,6 @@ discovered_by = ottoman
         add_core = LIG
 }
 1769.1.1 = {
-	 
-	 
+	owner = AYU
+	controller = AYU
 }

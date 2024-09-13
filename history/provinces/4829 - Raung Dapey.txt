@@ -1,9 +1,9 @@
  
 # ex 8655
 
-  # BT; KHM
-  # BT; KHM
-  # BT; KHM
+owner = CHA # BT; KHM
+controller = CHA # BT; KHM
+add_core = CHA # BT; KHM
 culture = degar # BT; khmer
 religion = buddhism # BT; hinduism
 capital = "Ma" # BT; "Raung Dapey"
@@ -27,9 +27,9 @@ discovered_by = ottoman # BT
 	add_core = ANN
 } # Vietnamese control
 1776.1.1 = {
-	 
-	 
-	 
+	owner = DAI
+	controller = DAI
+	add_core = DAI
 } # Tay Son Dynasty annexed the Nguyen Lords
 1788.9.1 = {
 	owner = ANN
