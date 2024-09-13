@@ -1,8 +1,8 @@
  
 #517 - Surat (Surat, Rander)
 
- 
- 
+owner = GUJ
+controller = GUJ
 culture = gujarati
 religion = hinduism
 capital = "Surat"
@@ -13,7 +13,7 @@ base_production = 1
 base_manpower = 1
 add_brahmins_or_church_effect = yes
 is_city = yes
- 
+add_core = GUJ
 discovered_by = east_african
 discovered_by = indian
 discovered_by = muslim 

@@ -1,7 +1,7 @@
  
 #548 - Illichpur
 
- 
+owner = BRR
 controller = BRR
 culture = marathi
 religion = hinduism
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 2 
 is_city = yes
- 
+add_core = BRR
 discovered_by = nomad_group
 discovered_by = indian
 discovered_by = muslim
@@ -20,22 +20,22 @@ discovered_by = chinese
 discovered_by = ottoman
 
 1490.1.1 = {
-	 
+	owner = BRR
 	controller = BRR
 	remove_core = BAH
 }# The Breakup of the Bahmani sultanate
 1498.1.1 = { discovered_by = POR }
-1572.1.1 = {  y Ahmednagar
+1572.1.1 = { controller = AHM } # captured by Ahmednagar
 1574.1.1 = {
-	 
-	 
+	owner = AHM
+	add_core = AHM
 } # captured by Ahmednagar
 1595.1.1 = { controller = MUG } # captured by Mughal Empire
 1596.1.1 = {
 	owner = MUG
 	add_core = MUG
 } # captured by Mughal Empire
-1615.1.1 = {   Anti-Mughal Campaign
+1615.1.1 = { controller = AHM } # Ahmednagar Anti-Mughal Campaign
 1622.1.1 = {
 	controller = MUG
 	add_core = MUG

@@ -1,8 +1,8 @@
  
 #527 - Khandesh
 
- 
- 
+owner = KHD
+controller = KHD
 culture = marathi
 religion = hinduism
 capital = "Burhanpur"
@@ -12,8 +12,13 @@ base_tax = 1
 base_production = 1
 base_manpower = 4
 is_city = yes
+<<<<<<< HEAD
 
  
+=======
+fort_15th = yes
+add_core = KHD
+>>>>>>> parent of 60294516 (india snapped)
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
@@ -23,15 +28,15 @@ extra_cost = 16
 center_of_trade = 2
 
 1498.1.1 = { discovered_by = POR }
-1508.1.1 = {  r = GUJ } # Conquered by the Ahmad Shahis
+1508.1.1 = { owner = GUJ controller = GUJ } # Conquered by the Ahmad Shahis
 1543.1.1 = {  Shah Sur
-1545.1.1 = {     } # Death of Sher Shah, governor declares independence
+1545.1.1 = { owner = KHD controller = KHD } # Death of Sher Shah, governor declares independence
 1600.4.8 = {
 	owner = MUG
 	controller = MUG
 	add_core = MUG
 } # Conquered by the Mughals
-1615.1.1 = {   } # Ahmednagar Anti-Mughal Campaign
+1615.1.1 = { controller = AHM } # Ahmednagar Anti-Mughal Campaign
 #1616.1.1 #English traders
 1622.1.1 = { controller = MUG } # Ahmednagar Anti-Mughal Campaign
 1622.3.1 = { controller = REB revolt = { type = pretender_rebels size = 0 name = "Khurrams Faction" leader = "Shah Jahan Timurid" } } #Should be named Khurram at this point

@@ -28,7 +28,7 @@ discovered_by = east_african
 	 
 	 
 } # The Vijayanagar empire collapses
-1660.1.1 = {  
+1660.1.1 = { controller = BIJ owner = BIJ }
 1686.1.1 = {
 	 
 	 

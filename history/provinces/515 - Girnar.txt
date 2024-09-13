@@ -1,8 +1,8 @@
  
 #515 - Girnar
 
- 
- 
+owner = GUJ
+controller = GUJ
 culture = saurashtri
 religion = hinduism
 capital = "Girnar"
@@ -12,8 +12,13 @@ base_tax = 6
 base_production = 6
 base_manpower = 4
 is_city = yes
+<<<<<<< HEAD
  
 
+=======
+add_core = GUJ
+fort_15th = yes
+>>>>>>> parent of 60294516 (india snapped)
 discovered_by = indian
 discovered_by = muslim 
 discovered_by = ottoman
@@ -23,9 +28,9 @@ discovered_by = east_african
 
 
 1472.1.1 = {
-	 
-	 
-	 
+	owner = GUJ
+	controller = GUJ
+	add_core = GUJ
 }
 1498.1.1 = { discovered_by = POR }
 1725.1.1 = {

@@ -1,8 +1,8 @@
  
 #551 - Mandla
 
-
-
+owner = GDW
+controller = GDW # Mandla
 culture = gondi
 religion = hinduism
 capital = "Mandla"
@@ -12,7 +12,7 @@ base_tax = 6
 base_production = 4
 base_manpower = 6
 is_city = yes
-
+add_core = GDW
 add_core = RTT
  #Mandla fort + lots of minor forts
 discovered_by = indian
@@ -29,8 +29,8 @@ discovered_by = chinese
 } #Annexed by Mughals
 1690.1.1 = { discovered_by = ENG }
 1705.1.1 = {
-	
-	
+	owner = GDW
+	controller = GDW
 }
 1707.5.12 = { discovered_by = GBR }
 1750.1.1 = {

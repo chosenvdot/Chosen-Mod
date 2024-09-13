@@ -1,8 +1,8 @@
  
 #524 - Central Doab
 
- 
- 
+owner = DLH
+controller = DLH
 culture = kanauji
 religion = hinduism
 capital = "Mathura"
@@ -13,9 +13,15 @@ base_production = 1
 base_manpower = 1
 add_brahmins_or_church_effect = yes
 is_city = yes
+<<<<<<< HEAD
  
  
  # Badalgarh
+=======
+add_core = DLH
+add_core = JNP
+fort_15th = yes # Badalgarh
+>>>>>>> parent of 60294516 (india snapped)
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
@@ -25,12 +31,12 @@ extra_cost = 16
 center_of_trade = 2
 
 1437.1.1 = {
-	 
-	 
+	owner = JNP
+	controller = JNP
 }
 1452.1.1 = {
-	 
-	 
+	owner = DLH
+	controller = DLH
 }
 1504.1.1 = { capital = "Agra" }
 1517.11.21 = { unrest = 8 } #Afghan factionalism
@@ -50,15 +56,15 @@ center_of_trade = 2
 	 
 } # Sher Shah Conquers Delhi
 1553.1.1 = {
-	 
-	 
+	owner = DLH
+	controller = DLH
 	remove_core = BNG
 } #Death of Islam Shah Sur, Suri empire split
 1555.7.23 = {
 	owner = MUG
 	controller = MUG
 } # Humayun Returns
-1556.10.7 = {  
+1556.10.7 = { controller = DLH }	# Hemu
 1556.11.5 = { controller = MUG }	#Aftermath to second battle of Panipat
 1571.1.1 = { capital = "Fatehpur Sikri" } #Jama Masjid Fatehpur Sikri
 1573.1.1 = { fort_15th = no fort_16th = yes } #New Agra Fort

@@ -1,8 +1,8 @@
  
 #2058 - Mewar (Kotharia/Udaipur)
 
- 
- 
+owner = MER
+controller = MER
 culture = rajput
 religion = hinduism
 capital = "Kotharia"
@@ -13,7 +13,7 @@ base_tax = 6
 base_production = 6
 base_manpower = 6
 is_city = yes
- 
+add_core = MER
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman

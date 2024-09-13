@@ -1,8 +1,8 @@
  
 #2064 - Shekhawati
 
- 
- 
+owner = NGA
+controller = NGA
 culture = rajput
 religion = hinduism
 capital = "Sikar"
@@ -13,7 +13,7 @@ base_production = 1
 base_manpower = 2 
 is_city = yes
 add_rajputs_or_marathas_or_nobles_effect = yes
- 
+add_core = NGA
 discovered_by = nomad_group
 discovered_by = indian
 discovered_by = muslim 

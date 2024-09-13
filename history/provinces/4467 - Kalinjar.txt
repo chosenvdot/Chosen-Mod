@@ -1,8 +1,8 @@
  
 #4467 - Kalinjar
 
-
-
+owner = KLP
+controller = KLP
 culture = vindhyan
 religion = hinduism
 capital = "Kalinjar"
@@ -12,8 +12,13 @@ base_tax = 4
 base_production = 4
 base_manpower = 2 
 is_city = yes
+<<<<<<< HEAD
 
 
+=======
+fort_15th = yes
+add_core = KLP
+>>>>>>> parent of 60294516 (india snapped)
 discovered_by = indian
 discovered_by = muslim 
 discovered_by = ottoman
@@ -21,9 +26,9 @@ discovered_by = nomad_group
 discovered_by = chinese
 
 1542.1.1 = { #Joined with Garha-Katanga
-	
-	
-	
+	owner = GDW
+	controller = GDW
+	add_core = GDW
 }
 1576.1.1 = { controller = MUG }
 1577.1.1 = {

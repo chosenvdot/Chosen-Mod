@@ -27,9 +27,9 @@ discovered_by = chinese
 	 
 	remove_core = VIJ
 } #Independent Nayaka after Talikota
-1573.1.1 = {   } #Bijapuri expansion
+1573.1.1 = { controller = BIJ } #Bijapuri expansion
 1574.1.1 = {   }
-1660.1.1 = {  r = BIJ }
+1660.1.1 = { owner = BIJ controller = BIJ }
 1685.1.1 = { controller = MUG } # Conquered by the Mughal emperor Aurangzeb
 1686.1.1 = {
 	owner = MYS	#Beaten by the mughals and sold to Mysore

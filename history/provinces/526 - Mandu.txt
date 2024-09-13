@@ -1,8 +1,8 @@
  
 #526 - Mandu
 
-owner = 
-controller = 
+owner = MLW
+controller = MLW
 culture = malvi
 religion = hinduism
 capital = "Mandu"
@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = 
+add_core = MLW
 discovered_by = indian
 discovered_by = nomad_group
 discovered_by = muslim
@@ -20,17 +20,17 @@ discovered_by = ottoman
 discovered_by = chinese
 
 1498.1.1 = { discovered_by = POR }
-1531.1.1 = {  
+1531.1.1 = { controller = GUJ } # Conquered by Ahmad Shahis
 1532.1.1 = {
-	 
-	 
+	owner = GUJ
+	add_core = GUJ
 } # Conquered by Ahmad Shahis
 1535.1.1 = {
 	controller = MUG
 } # Mughal campaign
 1537.1.1 = {
-	owner = 
-	controller = 
+	owner = MLW
+	controller = MLW
 	remove_core = GUJ
 } # Reverts to Gujarati control and granted independence
 1543.1.1 = {
@@ -38,11 +38,11 @@ discovered_by = chinese
 	 
 } # Conquered by Sher Shah Sur
 1545.5.22 = {
-	owner = 
-	controller = 
+	owner = MLW
+	controller = MLW
 } # Death of Sher Shah, governor declares independence
 1561.3.1 = { controller = MUG } #Pir Mohammad Khan
-1561.8.1 = { controller =  } #Baz Bahadur regains controll as Pir Mohammad Khan is recalled
+1561.8.1 = { controller = MLW } #Baz Bahadur regains controll as Pir Mohammad Khan is recalled
 1562.5.1 = { controller = MUG } #Reconquered by Akbar
 1562.6.1 = {
 	owner = MUG

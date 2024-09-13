@@ -1,8 +1,8 @@
  
 #4457 - Cambay/Khambhat
 
- 
- 
+owner = GUJ
+controller = GUJ
 culture = gujarati
 religion = hinduism
 capital = "Khambhat"
@@ -12,7 +12,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
- 
+add_core = GUJ
 add_jains_or_burghers_effect = yes
 discovered_by = east_african
 discovered_by = indian
@@ -30,8 +30,8 @@ center_of_trade = 3
 	add_core = MUG
 } # Conquered by Akbar
 1725.1.1 = {
-	 
-	 
+	owner = GUJ
+	controller = GUJ
 	remove_core = MUG	
 } #Mughal governor
 1757.1.1 = {

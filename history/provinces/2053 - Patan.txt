@@ -1,8 +1,8 @@
  
 #2053 - Patan
 
- 
- 
+owner = MER
+controller = MER
 culture = gujarati
 religion = hinduism
 capital = "Patan"
@@ -13,7 +13,7 @@ base_production = 6
 base_manpower = 2 
 is_city = yes
 add_jains_or_burghers_effect = yes
- 	
+add_core = MER	
 discovered_by = indian
 discovered_by = muslim 
 discovered_by = ottoman
@@ -33,8 +33,8 @@ discovered_by = chinese
 	remove_core = MUG
 }
 1802.1.1 = {
-	 
-	 
-	 
+	owner = KAT
+	controller = KAT
+	add_core = KAT
 	remove_core = BDA
 }

@@ -32,9 +32,9 @@ discovered_by = chinese
 	remove_core = VIJ
 } #After the death of Krishna raja the Wodeyar cheifs slipped central obligations and ruled with increasing independence
 1662.1.1 = {
-	 
-	 
-	 
+	controller = BIJ
+	owner = BIJ
+	add_core = BIJ
 } #Bijapuri Expansion
 1684.1.1 = {
 	owner = MYS

@@ -1,8 +1,8 @@
  
 #2078 - Bannu
 
- 
- 
+owner = MUL
+controller = MUL
 culture = panjabi
 religion = sunni
 capital = "Bannu"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 2 
 is_city = yes
- 
+add_core = MUL
 add_core = PUN
 discovered_by = indian
 discovered_by = muslim
@@ -21,16 +21,16 @@ discovered_by = nomad_group
 discovered_by = chinese
 
 1414.1.1 = {
-	 
-	 
+	owner = DLH
+	controller = DLH
 }
 1437.1.1 = {
-	 
-	 
+	owner = MUL
+	controller = MUL
 } # Captured by Langas and separated from Sultanate
 1526.1.1 = {
-	 
-	 
+	owner = SND
+	controller = SND
 } # Conquered by Arguns
 1527.1.1 = {
 	owner = MUG
@@ -43,8 +43,8 @@ discovered_by = chinese
 	 
 } # Sur expansion
 1553.1.1 = {
-	 
-	 
+	owner = MUL
+	controller = MUL
 	capital = "Dera Ismail Khan"
 	remove_core = BNG
 } # Independent

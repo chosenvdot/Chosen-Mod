@@ -29,9 +29,9 @@ center_of_trade = 2
 1550.1.1 = { controller = VIJ revolt = { } }
 1565.7.1 = {     } # The Vijayanagar empire collapses
 1662.1.1 = {
-	 
-	 
-	 
+	controller = BIJ
+	owner = BIJ
+	add_core = BIJ
 }
 1678.1.1 = {
 	owner = MAR

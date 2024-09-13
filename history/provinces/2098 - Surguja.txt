@@ -11,9 +11,9 @@ hre = no
 base_tax = 2  
 base_production = 2 
 base_manpower = 2 
- 
- 
- 
+owner = JNP
+controller = JNP
+add_core = JNP
 is_city = yes
 
 discovered_by = indian

@@ -1,8 +1,8 @@
  
 #2086 - Cholistan
 
- 
- 
+owner = MUL
+controller = MUL
 culture = panjabi
 religion = sunni
 capital = "Uch"
@@ -12,7 +12,7 @@ base_tax = 4
 base_production = 4
 base_manpower = 2 
 is_city = yes
- 
+add_core = MUL
 discovered_by = indian
 discovered_by = muslim 
 discovered_by = ottoman
@@ -21,25 +21,25 @@ discovered_by = chinese
 
 
 1414.1.1 = {
-	 
-	 
+	owner = DLH
+	controller = DLH
 }
 1437.1.1 = {
-	 
-	 
+	owner = MUL
+	controller = MUL
 } # Captured by Langas and separated from Sultanate
 1526.1.1 = {
-	 
-	 
-	 
+	owner = SND
+	controller = SND
+	add_core = SND
 } # Conquered by Arguns
 1544.1.1 = {
 	 
 	 
 } # Sur Expansionism
 1545.1.1 = {
-	 
-	 
+	owner = SND
+	controller = SND
 } # Sher Shah dies
 1574.1.1 = {
 	owner = MUG
