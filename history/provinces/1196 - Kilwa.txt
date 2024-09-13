@@ -10,9 +10,9 @@ trade_goods = gold
 hre = no
 base_tax = 1
 base_production = 1
- 
- 
- 
+owner = ZAN
+controller = ZAN
+add_core = ZAN
 discovered_by = east_african
 discovered_by = indian
 discovered_by = muslim

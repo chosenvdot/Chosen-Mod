@@ -15,9 +15,9 @@ native_size = 120
 
 extra_cost = 8
 center_of_trade = 1
- 
- 
- 
+owner = ZAN
+controller = ZAN
+add_core = ZAN
 
 
 1497.1.1 = { discovered_by = POR } # Vasco da Gama

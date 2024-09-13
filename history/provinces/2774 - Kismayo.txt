@@ -6,9 +6,9 @@ religion = sunni
 capital = "Kismayo"
 trade_goods = fish
 is_city = yes
- 
- 
- 
+owner = ZAN
+controller = ZAN
+add_core = ZAN
 hre = no
 base_tax = 4  
 base_production = 4

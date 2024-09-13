@@ -10,9 +10,9 @@ add_local_autonomy = 35
 trade_goods = ivory
 hre = no
 base_tax = 2 
- 
- 
- 
+owner = ZAN
+controller = ZAN
+add_core = ZAN
 base_production = 2
 
 discovered_by = east_african
@@ -24,9 +24,9 @@ discovered_by = central_african
 
 1498.4.1 = { discovered_by = POR } #Vasco Da Gama
 1589.6.1 = {
-	 
-	 
-	 
+	owner = ZAN
+	controller = ZAN
+	add_core = ZAN
 } #Mombasa collapses
 1600.1.1 = { discovered_by = TUR }
 1730.1.1 = {
