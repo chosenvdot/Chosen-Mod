@@ -1,6 +1,9 @@
  
 # No previous file for Beyond Typus province
 
+owner = SLV			#Neprut's old Slavey tag repurposed to Sahtu Dene
+controller = SLV
+add_core = SLV
 is_city = yes
 culture = sahtu
 religion = totemism 

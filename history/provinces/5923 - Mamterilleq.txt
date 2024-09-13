@@ -1,6 +1,9 @@
  
 # ex 4923
 
+owner = YPK
+controller = YPK
+add_core = YPK
 culture = yupik
 religion = totemism
 capital = "Mamterillermiut"

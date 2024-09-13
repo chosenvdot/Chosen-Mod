@@ -1,5 +1,8 @@
 #875 - Canyon
 
+owner = HOP			#Hopi not included yet
+controller = HOP
+add_core = HOP
 is_city = yes
 culture = hopi 
 religion = totemism

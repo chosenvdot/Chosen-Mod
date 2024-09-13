@@ -1,4 +1,7 @@
 # No previous file for Wahpekute
+owner = WCY
+controller = WCY
+add_core = WCY
 culture = dakota
 religion = totemism
 capital = "Wahpekute"

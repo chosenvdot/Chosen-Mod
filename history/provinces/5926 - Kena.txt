@@ -1,6 +1,9 @@
  
 # ex 4926
 
+owner = YYA
+controller = YYA
+add_core = YYA
 culture = denaina
 religion = totemism
 capital = "Shk'ituk't"

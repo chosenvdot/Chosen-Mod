@@ -1,6 +1,9 @@
  
 # No previous file for Beyond Typus province
 
+owner = CNK
+controller = CNK
+add_core = CNK
 is_city = yes
 culture = chinook
 religion = totemism 
@@ -31,7 +34,9 @@ center_of_trade = 2
 	trade_goods = unknown
 }
 1444.11.17 = { #BeyondTypus batch edit shortcut no native start date end
-
+	owner = CNK
+	controller = CNK
+	add_core = CNK
 	is_city = yes
 	trade_goods = fur
 }

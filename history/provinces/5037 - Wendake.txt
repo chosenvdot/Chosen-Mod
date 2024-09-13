@@ -1,6 +1,9 @@
  
 # No previous file for Beyond Typus province
 
+owner = HUR
+controller = HUR
+add_core = HUR
 is_city = yes
 culture = huron
 religion = totemism 

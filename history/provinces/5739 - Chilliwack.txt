@@ -1,6 +1,9 @@
  
 # No previous file for Beyond Typus province
 
+owner = STL
+controller = STL
+add_core = STL
 is_city = yes
 culture = halkomelem
 religion = totemism 

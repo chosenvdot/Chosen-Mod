@@ -1,6 +1,9 @@
  
 # No previous file for Beyond Typus province
 
+owner = YYI			#Flatheads
+controller = YYI
+add_core = YYI
 is_city = yes
 culture = interior_salish
 religion = totemism 

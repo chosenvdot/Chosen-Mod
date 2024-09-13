@@ -1,6 +1,9 @@
  
 #1001 - Sault
 
+owner = OJI
+controller = OJI
+add_core = OJI
 is_city = yes
 culture = anishinabe
 religion = totemism

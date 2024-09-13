@@ -1,6 +1,9 @@
  
 # No previous file for Beyond Typus province
 
+owner = YZC			#Salteaux
+controller = YZC
+add_core = YZC
 is_city = yes
 culture = anishinabe
 religion = totemism 
